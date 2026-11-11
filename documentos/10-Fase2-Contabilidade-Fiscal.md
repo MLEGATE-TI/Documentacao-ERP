@@ -7,6 +7,24 @@ retenções na fonte, provisão para devedores duvidosos, variação cambial
 e obrigações acessórias --- sobre o plano de contas e o lançamento
 contábil já definidos na Fase 0*
 
+*Revisão 58 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 25 entidades novas (anexo, seção 53); 2 entidades existentes alteradas; 25 entidades novas (documentos 204, 206 e 209), o campo Dispositivo_Inaplicabilidade_St e os textos de Cad_Habilitacao_Regime_Especial.Numero_Habilitacao e Mov_Credito_Fiscal.Origem.*
+
+*Revisão 57 --- consolidação da revisão 39 do dicionário (documento 202 e ajuste A1 do documento 205, com as respostas de Alberto de 10/11/2026): 8 entidades novas (anexo, seção 52); 2 entidades existentes alteradas; 8 entidades novas do B6 (documento 202, com o ajuste A1 do documento 205) e o texto de Cad_Habilitacao_Regime_Especial.Numero_Habilitacao.*
+
+*Revisão 56 --- consolidação da revisão 38 do dicionário (documentos 200 e 201, com as respostas de Alberto de 10/11/2026): 8 entidades novas (anexo, seção 51); 3 entidades existentes alteradas; 8 entidades novas do B0b-2 e da documentação dos parâmetros (documentos 200 e 201), com textos de Cad_Criterio_Uso_Preponderante e Cad_Obrigacao_Parametro_Definicao.*
+
+*Revisão 55 --- consolidação da revisão 37 do dicionário (documentos 198 e 160, com as respostas de Alberto de 10/11/2026): 11 entidades novas (anexo, seção 50); 5 entidades existentes alteradas; 11 entidades novas do B4 (apuração mensal da DeRE dos regimes específicos de serviços financeiros, seguro e plano de saúde; documento 198), com ID_Componente_Base_Regime em Cad_Cod_Trib_Dere e textos de Cad_Participante_Regime_Especifico, Cad_Redutor_Base_Dere, Cad_Obrigacao_Parametro_Definicao e Cad_Contribuinte_Reinf (documentos 198 e 160).*
+
+*Revisão 54 --- consolidação da revisão 36 do dicionário (documentos 159 e 196, com as respostas de Alberto de 10/11/2026, e a D-N523): 3 entidades novas (anexo, seção 49); 3 entidades existentes alteradas; ordem de aplicação dos institutos do art. 7º-A, parâmetros legais do IBS e da CBS, benefícios dos programas de conformidade, multas dos arts. 341-F a 341-H no auto de infração, ente federativo do lançamento e hipótese e base do Imposto Seletivo no item da apuração (documentos 159 e 196).*
+
+*Revisão 53 --- consolidação da revisão 35 do dicionário (documentos 185, 187 e 189 a 192, com as respostas de Alberto de 09/11/2026): 2 entidades novas (anexo, seção 48); 4 entidades existentes alteradas; o período da ECF (registro 0000, documento 192); a ciência do indício de infração (documentos 185 e 187); Y520 com o corte de R$ 120.000 de volta e IND_ATIV_EXT por recebíveis e contas no exterior (D-N504 e D-N507); datas do Confia e do REIDI (documento 191).*
+
+*Revisão 52 --- consolidação da revisão 34 do dicionário (documentos 158, 177, 183 e 184, com as respostas de Alberto de 09/11/2026): 28 entidades novas (anexo, seção 47); 7 entidades existentes alteradas; o núcleo da ECD (leiaute 9), moeda funcional, subcontas e razão auxiliar, mudança do plano, histórico padrão, relacionamento e bloco K (documentos 183 e 184); compras governamentais e Zona Franca de Manaus e áreas de livre comércio (documento 158); a transação de cartão (documento 177); e a carga do cClass da NFGás (Q184-14).*
+
+*Revisão 51 --- consolidação da revisão 33 do dicionário (documentos 180 e 181, com a resposta de Alberto de 06/11/2026): 1 entidades existentes alteradas; o bônus de adimplência da CSLL ligado à baixa do título e ao desconto para a ECF (documentos 180 e 181).*
+
+*Revisão 50 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 32 entidades novas (anexo, seção 46); 13 entidades existentes alteradas; os 4 catálogos do validador da EFD-ICMS/IPI, as 27 entidades das lacunas setoriais G15 a G19 e a regra do 1601 por UF (documentos 172, 175 e 176).*
+
 *Revisão 49 --- consolidação da revisão 31 do dicionário (documentos 150, 157, 170 e 173, com as respostas de Alberto de 04/11/2026): 19 entidades novas (anexo, seção 45); 20 entidades existentes alteradas; o fato gerador, o ajuste da operação, os acréscimos do art. 27, a locação, a transição de 2026, a entrega do arquivo e o cadastro da filial (B0a, 13 entidades novas, documento 157); os regimes setoriais (B5, 5 entidades novas, documento 150: gorjeta, cooperativa, locação por temporada e agência de turismo); a autorização da ANP (1 entidade nova, documento 170); as correções de texto do excesso da antecipação, do ajuste do adiantamento, do espelho da Apuração Assistida e do pedido de ressarcimento; e o código reducao_cbs_transicao.*
 
 *Revisão 48 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 28 entidades novas (anexo, seção 44); 26 entidades existentes alteradas; o art. 5º (operação equiparada, 5 entidades), o art. 57 (uso e consumo pessoal), o art. 12 (base de cálculo, valor de mercado, câmbio e energia da CCEE) do documento 156; o BP-e, modelo 63 (4 entidades, documento 164); as lacunas G1 a G14 da EFD-ICMS/IPI (11 entidades novas, documento 168); 2 campos em Cad_Cclasstrib (Q161-1 e Q161-2); e a correção do texto do split simplificado (Q138-3).*
@@ -410,7 +428,8 @@ Carga inicial: séries anuais (39 linhas). Todos os valores já constavam do dic
 | fase_transicao | fase | 2026 teste; 2027 e 2028 transicao_federal; 2029 a 2032 transicao_estadual_municipal; 2033 pleno | antigo cronograma geral, campo Fase |
 | cobranca_efetiva | booleano | 2026 falso; 2027 a 2033 verdadeiro | antigo cronograma geral, campo Cobranca_Efetiva |
 | percentual_icms_iss_vigente | percentual | 2027 100; 2028 100; 2029 90; 2030 80; 2031 70; 2032 60; 2033 0 | antigo cronograma geral |
-| percentual_credito_zfm | percentual | 2026 a 2028 100; 2029 90; 2030 80; 2031 70; 2032 60; 2033 100 (2026 parâmetro, Q72-2) | antigo cronograma da ZFM, art. 474 |
+| percentual_credito_zfm | percentual | 2026 a 2028 100; 2029 90; 2030 80; 2031 70; 2032 60; 2033 100 (2026 parâmetro, Q72-2) | antigo cronograma da ZFM, art. 474 (revisão 34, documento 158, seção 5.5: o fator de 2029 a 2032 vale só para os créditos dos arts. 447, 449 e 465 da LC 214; os valores da série não mudam) |
+| redutor_compras_governamentais | percentual | 2027 a 2033; de 2034 em diante vale o de 2033 (LC 214, art. 472, II); sem linhas até a resolução do Senado (Q158-2) | revisão 34, documento 158, seção 3.6: percentual do redutor da compra governamental (LC 214, art. 472; Decreto 12.955, arts. 442, 443 e 601) |
 | fator_deducao_imobiliaria | fator | 2027 e 2028 1; 2029 0,9; 2030 0,8; 2031 0,7; 2032 0,6 | antigo fator da dedução imobiliária, art. 488, § 3º |
 | reducao_cbs_transicao | pontos_percentuais | 2027 e 2028 0,1 | LC 214, art. 347; Decreto 12.955/2026, art. 585 (revisão 31, documento 157: o código era reducao_cbs_art_585 e prendia a regra à numeração do Decreto; a fórmula é (P menos t) vezes (1 menos r), leitura minha, Q157-C11) |
 | percentual_cbs_vigente e percentual_ibs_vigente | percentual | sem linhas; parâmetros ajustados ao longo do tempo (Q72-3) | substituem o antigo percentual único de IBS e CBS, que misturava dois tributos |
@@ -534,6 +553,8 @@ de \"nunca editar um evento\" já usado em todo o dicionário.*
 | **Reducao_Transicao_Pontos** | *número, opcional* | Revisão 31 (documento 157, seções 3.3 e 7.6, Q157-1 e Q157-11; D-N466 e D-N469): O ponto percentual da redução de 2027 e 2028 de fato abatido na linha da CBS (LC 214, art. 347; Decreto, art. 585). Leitura minha: alíquota efetiva = (P menos t) vezes (1 menos r), Q157-C11. Vazio quando não se aplica; sem padrão escondido. |
 | **ID_Calendario_Reducao** | *referência (Cad_Calendario_Transicao), opcional* | Revisão 31 (documento 157, seções 3.3 e 7.6, Q157-1 e Q157-11; D-N466 e D-N469): A linha do calendário (reducao_cbs_transicao) que deu o ponto percentual. |
 | **ID_Aliquota_Combustivel** | *referência (Cad_Aliquota_Combustivel), opcional* | Revisão 31 (documento 170, seção 8, Q170-5; D-N470 e D-N471): Só na tributação monofásica: a linha e a versão da alíquota específica aplicada, para a auditoria. A Aliquota_Nominal do item continua sendo a percentual; no regime monofásico vale Valor_Especifico_Unidade. |
+| **ID_Is_Hipotese_Base** | *referência (Cad_Is_Hipotese_Base), opcional* | Revisão 36 (documento 196, seção 5.4; D-N526: Q196-7 e Q196-9): Só quando ID_Imposto = imposto_seletivo: a linha da hipótese e da base aplicada, para a auditoria. |
+| **Valor_Referencia_Informado** | *número, opcional* | Revisão 36 (documento 196, seção 5.4; D-N526: Q196-7 e Q196-9): Só quando a base é o valor de referência (art. 414, III): o valor informado pelo usuário ou sugerido pelo Motor. O ERP avisa se estiver vazio; enquanto não houver ato do Poder Executivo com a metodologia (art. 414, § 2º), o valor é digitado. |
 
 *Revisão 3 --- campos novos (documento 42): ID_Estado_Devedor; campos novos (documento 34): ID_Beneficio_Fiscal_Icms_Rbc, Percentual_Base_Operacao_Propria; campos novos (documento 35): Memoria_Calculo, Referencia_Normativa, Valor_Tributo_Calculadora; campos novos (documento 44): Classe_Receita_Efd, Compoe_Receita_Bruta, ID_Titulo_Recolhimento, ID_Entidade_Ligada; campos alterados (documento 44): Origem_Tipo; campos alterados (documento 43): ID_Item_Origem.*
 
@@ -546,6 +567,8 @@ de \"nunca editar um evento\" já usado em todo o dicionário.*
 *Revisão 30 --- campos novos: Aliquota_St; valores de enumeração novos: Origem_Tipo (+bpe_evento).*
 
 *Revisão 31 --- campos novos: Competencia_Debito, Reducao_Transicao_Pontos, ID_Calendario_Reducao, ID_Aliquota_Combustivel.*
+
+*Revisão 36 --- campos novos: ID_Is_Hipotese_Base, Valor_Referencia_Informado.*
 
 *No ano de teste (Cad_Calendario_Transicao, parâmetro fase_transicao = teste, 2026),
 Mov_Apuracao_Tributo_Item continua sendo gerada normalmente para
@@ -622,7 +645,7 @@ livre.*
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Credito** | *identificador* | --- |
 | **ID_Imposto** | *referência (Cad_Imposto, Fase 0)* | Adicionado nesta revisão, a pedido de Alberto --- decide se este crédito é de icms, pis, cofins, cbs ou ibs, todos com o mesmo ciclo de vida abaixo. Revisão 13: aponta para Cad_Imposto, o catálogo único de tributos da Fase 0 --- antes apontava para o domínio tipo_tributo de Cad_Classe_Sistema, aposentado (eram dois catálogos do mesmo dado). |
-| **Origem** | *enumeração {apuracao_automatica, cadastro_manual, evento_dfe, subvencao_investimento, estoque_abertura, transicao_cbs, ajuste_operacao, restabelecimento}* | Alterado na revisão 3 (documento 44). Decide quais campos são preenchidos: ID_Apuracao_Origem/ID_Baixa_Origem (apuracao_automatica), Descricao_Origem/Data_Registro (cadastro_manual) ou a origem em Mov_Subvencao_Investimento_Periodo (subvencao_investimento, doc 46). Os campos novos do doc 44 são acrescentados pelo agente 44. Revisão 7 (documento 61, D-N156): transicao_cbs é o crédito presumido de CBS da transição (devolução, cota do ativo imobilizado e estoque de abertura da CBS); ID_Natureza_Saldo diz qual. Revisão 31 (documento 157, seção 4.6): ajuste_operacao é o crédito que o fornecedor apropria no ajuste; restabelecimento é o crédito de volta com a data original. |
+| **Origem** | *enumeração {apuracao_automatica, cadastro_manual, evento_dfe, subvencao_investimento, estoque_abertura, transicao_cbs, ajuste_operacao, restabelecimento, transferencia_icms_recebida, presumido_zfm_alc, servico_financeiro_tomador, beneficio_empregado, presumido_automotivo, credito_financeiro_mover}* | Alterado na revisão 3 (documento 44). Decide quais campos são preenchidos: ID_Apuracao_Origem/ID_Baixa_Origem (apuracao_automatica), Descricao_Origem/Data_Registro (cadastro_manual) ou a origem em Mov_Subvencao_Investimento_Periodo (subvencao_investimento, doc 46). Os campos novos do doc 44 são acrescentados pelo agente 44. Revisão 7 (documento 61, D-N156): transicao_cbs é o crédito presumido de CBS da transição (devolução, cota do ativo imobilizado e estoque de abertura da CBS); ID_Natureza_Saldo diz qual. Revisão 31 (documento 157, seção 4.6): ajuste_operacao é o crédito que o fornecedor apropria no ajuste; restabelecimento é o crédito de volta com a data original. Revisão 32 (documento 175, seção 4.2): transferencia_icms_recebida é o crédito de ICMS recebido em transferência (CRED_RECEB do 1200). Revisão 34 (documento 158, seção 5.5; D-N478): presumido_zfm_alc é o crédito presumido de CBS e de IBS da Zona Franca de Manaus e das áreas de livre comércio (`Mov_Credito_Presumido_Zfm.ID_Credito`). Revisão 38 (documento 200, seção 5.3, Q200-7 e Q200-8; D-N533 e D-N534): servico_financeiro_tomador é o crédito de CBS de quem compra o serviço financeiro de fornecedor em regime específico (empréstimo, título de dívida, desconto, arrendamento, tarifa); beneficio_empregado é o crédito do plano de saúde dos empregados. O crédito usa o mesmo ciclo de estados; a memória de cálculo está em Mov_Credito_Servico_Regime_Especifico e Mov_Rh_Beneficio_Credito_Cbs. Revisão 39 (documento 202, seção 5.3, Q202-4; D-N541): presumido_automotivo é o crédito presumido de CBS do regime automotivo (LC 214, arts. 309 a 315; Decreto 12.955, arts. 518 a 527). Usa o mesmo ciclo de estados; não tem prazo de utilização na lei, então Data_Limite_Utilizacao fica vazia; a memória de cálculo está em Mov_Credito_Automotivo_Apuracao. O crédito não pode ser ressarcido nem transferido a outro estabelecimento (art. 523, § 1º). Revisão 40 (documento 206, seção 5.6, Q206-4; D-N548): credito_financeiro_mover é o crédito de CSLL do Programa Mover (Lei 14.902, art. 17), no mesmo ciclo de estados dos demais; a compensação ou o ressarcimento passa por Mov_Perdcomp; não tem prazo de utilização na lei, então Data_Limite_Utilizacao fica vazia. |
 | **ID_Apuracao_Origem** | *referência (Mov_Apuracao_Tributo_Item, seção 3, opcional)* | Preenchido só quando Origem=apuracao_automatica --- a linha de apuração de uma nota de entrada com Gera_Credito=verdadeiro que deu origem a este crédito. |
 | **ID_Baixa_Origem** | *referência (Mov_Titulo_Baixa, Contas a Pagar/Receber, opcional)* | Preenchido só quando Origem=apuracao_automatica --- o crédito nasce vinculado ao efetivo RECEBIMENTO/liquidação financeira dos valores, não à simples emissão da nota fiscal de entrada. É esta baixa que dispara Status=escriturado automaticamente, sem depender de a operação ter passado por split payment (seção 10). |
 | **Descricao_Origem** | *texto, opcional* | Adicionado nesta revisão (3) --- preenchido só quando Origem=cadastro_manual: a justificativa do crédito (saldo credor de ICMS/PIS-COFINS remanescente da transição para o IBS/CBS, decisão administrativa/judicial, entre outros). |
@@ -641,7 +664,7 @@ livre.*
 | **Origem_Credito_Efd** | *enumeração {operacoes_proprias, sucessao}* | Novo na revisão 3 (documento 44). Origem do crédito na EFD-Contribuições (IND_CRED_ORI): operações próprias ou sucessão (incorporação, cisão ou fusão). |
 | **ID_Origem_Evento** | *referência genérica, opcional* | Novo na revisão 3 (documento 44). Aponta o estoque de abertura (Mov_Credito_Estoque_Abertura) que originou o crédito, quando Origem = estoque_abertura. Revisão 7 (documento 61): com Origem=transicao_cbs aponta a devolução, o direito de crédito do imobilizado (Cad_Ativo_Direito_Credito_Pis_Cofins) ou o Mov_Estoque_Abertura_Cbs. |
 | **ID_Documento_Fiscal_Venda_Origem** | *referência (Mov_Documento_Fiscal, opcional)* | Novo na revisão 8 (documento 65, D-N164). Venda original cuja devolução, recebida a partir de 1º/1/2027, gerou o crédito (art. 379 da LC 214). Obrigatório quando ID_Natureza_Saldo = devolucao_cbs: a venda é anterior a 1º/1/2027 e o valor do crédito é o PIS/Pasep e a Cofins que incidiram nela, proporcionais à quantidade devolvida, item a item. |
-| **ID_Participante_Cedente** | *referência (Cad_Participante, opcional)* | Novo na revisão 3 (documento 44). Pessoa jurídica sucedida que cedeu o crédito (CNPJ_SUC); só com Origem_Credito_Efd = sucessao. |
+| **ID_Participante_Cedente** | *referência (Cad_Participante, opcional)* | Novo na revisão 3 (documento 44). Pessoa jurídica sucedida que cedeu o crédito (CNPJ_SUC); só com Origem_Credito_Efd = sucessao. Revisão 32 (documento 175, seção 4.2): cobre também a transferência de crédito entre estabelecimentos e a terceiros (Origem = transferencia_icms_recebida), além da sucessão. |
 | **ID_Ato_Societario_Sucessao** | *referência (Mov_Ato_Societario, opcional)* | Novo na revisão 3 (documento 44). Ato societário (cisão, fusão ou incorporação) que transferiu o crédito. |
 | **Competencia_Escrituracao** | *competência, opcional* | Novo na revisão 3 (documento 44). Competência em que o crédito extemporâneo foi escriturado; só para importar histórico (1101 e 1501), pois os extemporâneos não são gerados (D-N87). |
 | **ID_Natureza_Saldo** | *referência (Cad_Classe_Sistema, domínio = natureza_saldo_transicao_cbs, opcional)* | Novo na revisão 7 (documento 61, D-N156). Natureza do saldo na transição de PIS/Cofins para a CBS (saldo acumulado, devolução, cota do imobilizado ou estoque de abertura); vazio no crédito comum. Decide as regras de uso em Cad_Regra_Utilizacao_Credito_Transicao. |
@@ -650,6 +673,7 @@ livre.*
 | **ID_Reducao_Beneficio** | *referência (Cad_Reducao_Beneficio_Federal, opcional)* | Novo na revisão 5 (documento 53, D-N127). A linha de redução do art. 4º da LC 224 que limitou o aproveitamento do crédito. |
 | **Valor_Cancelado_Reducao** | *número, opcional* | Novo na revisão 5 (documento 53, D-N127). A parte dos 10% que não pode ser aproveitada e é cancelada (Decreto 12.808/2025, art. 8º). |
 | **ID_Cbs_Ajuste_Operacao_Efeito** | *referência (Mov_Cbs_Ajuste_Operacao_Efeito), opcional* | Revisão 31 (documento 157, seção 4.6, Q157-2; D-N466 e D-N469): O efeito do ajuste da operação que gerou o crédito (origem ajuste_operacao ou restabelecimento). No restabelecimento, Data_Apropriacao é a da original, para preservar o prazo de cinco anos (Decreto, art. 54). |
+| **ID_Icms_Codigo_Ajuste** | *referência (Cad_Icms_Codigo_Ajuste), opcional* | Revisão 32 (documento 175, seção 4.2; D-N480; Q175-1 a Q175-9 pela recomendação): COD_AJ_APUR do 1200: o código da tabela 5.1.1 que identifica o crédito controlado fora da apuração (natureza `controle_extra_apuracao`). Obrigatório quando `ID_Imposto` é ICMS e o estabelecimento escritura o 1200. |
 
 *Revisão 7 --- campos novos: ID_Natureza_Saldo, Data_Apropriacao, Data_Limite_Utilizacao; campos alterados: ID_Origem_Evento; valores de enumeração novos: Origem (+transicao_cbs); Status (+expirado).*
 
@@ -662,6 +686,16 @@ livre.*
 *Revisão 3 --- campos novos (documento 35): Modalidade_Extincao_Debito; campos novos (documento 42): ID_Dfe_Evento_Origem; campos novos (documento 44): ID_Empresa, Competencia_Apuracao, ID_Tipo_Credito, Origem_Credito_Efd, ID_Origem_Evento, ID_Participante_Cedente, ID_Ato_Societario_Sucessao, Competencia_Escrituracao; campos alterados (documento 44): Origem; campos alterados (documento 35): Status.*
 
 *Revisão 31 --- campos novos: ID_Cbs_Ajuste_Operacao_Efeito; valores de enumeração novos: Origem (+ajuste_operacao, restabelecimento); Status (+estornado); Modalidade_Extincao_Debito (+compensacao, responsavel).*
+
+*Revisão 32 --- campos novos: ID_Icms_Codigo_Ajuste; campos alterados: ID_Participante_Cedente; valores de enumeração novos: Origem (+transferencia_icms_recebida).*
+
+*Revisão 34 --- valores de enumeração novos: Origem (+presumido_zfm_alc).*
+
+*Revisão 38 --- valores de enumeração novos: Origem (+servico_financeiro_tomador, beneficio_empregado).*
+
+*Revisão 39 --- valores de enumeração novos: Origem (+presumido_automotivo).*
+
+*Revisão 40 --- valores de enumeração novos: Origem (+credito_financeiro_mover).*
 
 Mov_Credito_Fiscal_Aplicacao
 
@@ -688,6 +722,10 @@ períodos, até esgotar Valor_Credito.
 | **ID_Participante_Sucessora** | *referência (Cad_Participante, opcional)* | Novo na revisão 3 (documento 44). Pessoa jurídica sucessora que recebeu o crédito; só com Forma_Utilizacao = transferencia_sucessao. |
 | **ID_Apuracao_Tef** | *referência (Mov_Apuracao_Tef), opcional* | Revisão 27 (documento 147, seção 6): a apuração do TEF que o crédito abateu (crédito de CBS da SAF na aquisição de direitos desportivos). O valor usado soma em Valor_Credito_Cbs_Utilizado da apuração; o que passar da CBS do mês fica como saldo pelas regras gerais de uso (Q147-13 espera o contador). |
 | **ID_Transferencia_Credito** | *referência (Mov_Cooperativa_Transferencia_Credito), opcional* | Revisão 31 (documento 150, seção 4.5, Q150-6; D-N468 e D-N469): A transferência que consumiu o crédito, só com Forma_Utilizacao = transferencia_cooperativa. |
+| **ID_Efd_Codigo_Estadual_Tipo_Utilizacao** | *referência (Cad_Efd_Codigo_Estadual), opcional* | Revisão 32 (documento 175, seção 4.2; D-N480; Q175-1 a Q175-9 pela recomendação): TIPO_UTIL do 1210: o tipo de utilização da tabela 5.5 (`tp_util_cred_fiscais`: UF01 dedução, UF21 compensação, UF41 transferência, UF61 restituição, UF81 estorno, UF99 outros e os da UF). |
+| **Numero_Documento_Baixa** | *código (até 60), opcional* | Revisão 32 (documento 175, seção 4.2; D-N480; Q175-1 a Q175-9 pela recomendação): NR_DOC: número do documento usado na baixa do crédito. |
+| **Chave_Documento_Eletronico** | *código (44), opcional* | Revisão 32 (documento 175, seção 4.2; D-N480; Q175-1 a Q175-9 pela recomendação): CHV_DOCe: chave da NF-e, do CT-e ou do CT-e OS usada na baixa. |
+| **ID_Credito_Automotivo_Debitos_Proprios** | *referência (Mov_Credito_Automotivo_Debitos_Proprios), opcional* | Revisão 39 (documento 202, seção 5.3; D-N541: Q202-6): O limite mensal que o uso do crédito presumido automotivo consumiu. Só quando o crédito tem `Origem` = `presumido_automotivo`. Aviso quando o uso passa do limite. |
 
 *Revisão 7 --- campos novos: ID_Imposto_Destino, ID_Espelho_Conta, ID_Parcela, ID_Pedido_Item; valores de enumeração novos: Forma_Utilizacao (+compensacao_cbs).*
 
@@ -696,6 +734,10 @@ períodos, até esgotar Valor_Credito.
 *Revisão 27 --- campos novos: ID_Apuracao_Tef.*
 
 *Revisão 31 --- campos novos: ID_Transferencia_Credito; valores de enumeração novos: Forma_Utilizacao (+transferencia_cooperativa).*
+
+*Revisão 32 --- campos novos: ID_Efd_Codigo_Estadual_Tipo_Utilizacao, Numero_Documento_Baixa, Chave_Documento_Eletronico.*
+
+*Revisão 39 --- campos novos: ID_Credito_Automotivo_Debitos_Proprios.*
 
 *Saldo disponível de um crédito individual --- fórmula, sem campo
 próprio: Valor_Credito menos a soma de Valor_Aplicado de todas as suas
@@ -902,6 +944,8 @@ novo é sempre registro novo, ligado por sucessão (Fase 0, seção 2.3).*
 | **Indicador_Grupo_Biocombustivel_Diferenca** | *booleano* | Revisão 30 (documento 161, Q161-1 e Q161-2, aprovadas por Alberto, N2; D-N465): ind_gpBioDiferenca (IT 2025.002 v1.60): o classificador exige o grupo da diferença do biocombustível. Marca da classificação, como as demais; a regra de preenchimento do grupo na NF-e depende da NT 2025.002, que ainda não foi lida. |
 | **Codigo_Anexo_Tecnico** | *código (5), opcional* | Revisão 30 (documento 161, Q161-1 e Q161-2, aprovadas por Alberto, N4; D-N465): A coluna ANEXO da tabela cClassTrib no formato do anexo técnico ZXXXY (Z = 9: artigo da LC 214; Z = 8: artigo do regulamento do IBS ou da CBS; XXX o número do artigo; Y o sequencial; IT 2025.002 v1.70). É o elo entre a classificação e a lista de NCM/NBS que o Motor usa; a lista legal (Cad_Lista_Legal_Item) é achada por esse código na carga, sem chave nova. |
 | **Aplica_Reducao_Transicao_Cbs** | *booleano, opcional* | Revisão 31 (documento 157, seção 7.6, Q157-11; D-N466 e D-N469): Diz se a classificação recebe a redução de 0,1 ponto da CBS em 2027 e 2028 (LC 214, art. 347). Preenchido na carga. A exceção dos combustíveis do regime específico (LC, arts. 172 a 180) fica nesta coluna por ora e passa ao catálogo de combustíveis depois (Q157-C11). |
+| **ID_Instituto_Beneficio** | *referência (Cad_Classe_Sistema, domínio = instituto_beneficio_ibs_cbs), opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O instituto que a classificação aplica (redução a zero, suspensão com conversão, isenção, diferimento ou redução distinta). Vazio na classificação de tributação regular. Dá ao Motor a ordem do art. 7º-A por Cad_Instituto_Beneficio_Ordem. |
+| **Admite_Cumulacao_Reducao** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): Verdadeiro só quando a lei prevê expressamente a cumulação desta redução com outra (art. 7º-A, parágrafo único, I). Sem previsão, prevalece a maior redução (II). Vazio no que não é redução. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
@@ -913,6 +957,8 @@ novo é sempre registro novo, ligado por sucessão (Fase 0, seção 2.3).*
 *Revisão 30 --- campos novos: Indicador_Grupo_Biocombustivel_Diferenca, Codigo_Anexo_Tecnico; campos alterados: Indicador_Mono_Dif.*
 
 *Revisão 31 --- campos novos: Aplica_Reducao_Transicao_Cbs.*
+
+*Revisão 36 --- campos novos: ID_Instituto_Beneficio, Admite_Cumulacao_Reducao.*
 
 Cad_Cclasstrib_Documento
 
@@ -1167,7 +1213,7 @@ participante muda(m).*
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Regime_Especifico** | *identificador* | --- |
 | **ID_Participante** | *referência (Cad_Participante, Fase 0)* | Normalmente a matriz (CNPJ raiz) --- a DeRE consolida filiais. |
-| **Tipo_Regime_Especifico** | *enumeração {instituicao_financeira, plano_saude, plano_funerario, plano_pet, concurso_prognostico, emissor_cartao_credito, turismo_hotelaria, outro, sociedade_cooperativa, sociedade_anonima_futebol}* | Alterado na revisão 3 (documento 35). Acrescenta sociedade_cooperativa antes de outro. Revisão 27 (documento 147, seção 4.1): sociedade_anonima_futebol marca a SAF como fornecedor; é o que o ERP do adquirente lê para vedar o crédito (Credito_Vedado_Adquirente), salvo na aquisição de direitos desportivos. |
+| **Tipo_Regime_Especifico** | *enumeração {instituicao_financeira, plano_saude, plano_funerario, plano_pet, concurso_prognostico, emissor_cartao_credito, turismo_hotelaria, outro, sociedade_cooperativa, sociedade_anonima_futebol}* | Alterado na revisão 3 (documento 35). Acrescenta sociedade_cooperativa antes de outro. Revisão 27 (documento 147, seção 4.1): sociedade_anonima_futebol marca a SAF como fornecedor; é o que o ERP do adquirente lê para vedar o crédito (Credito_Vedado_Adquirente), salvo na aquisição de direitos desportivos. Revisão 37 (documento 198, seção 5.3, Q198-11; D-N530): seguradora, entidade de previdência e sociedade de capitalização entram como instituicao_financeira, sem valor novo; quem distingue as bases em que cada uma atua é Cad_Participante_Regime_Base (leitura minha, a confirmar). |
 | **Papel** | *enumeração {principal, secundario}* | A pesquisa encontrou regra de desempate por órgão regulador (Bacen/ANS/Susep) ou, na ausência, por preponderância de receita, quando um participante se enquadra em mais de um regime --- \"principal\" decide qual prevalece nesse desempate. |
 | **ID_Tipo_Cooperativa** | *referência (Cad_Classe_Sistema, domínio = tipo_sociedade_cooperativa), opcional* | Revisão 31 (documento 150, seção 4.5, Q150-5; D-N468 e D-N469): Só quando Tipo_Regime_Especifico é sociedade_cooperativa. O mesmo domínio do IND_TIP_COOP da EFD-Contribuições: 01 (produção agropecuária) liga o regime do art. 391, § 2º, II. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
@@ -1179,6 +1225,8 @@ participante muda(m).*
 *Revisão 27 --- valores de enumeração novos: Tipo_Regime_Especifico (+sociedade_anonima_futebol).*
 
 *Revisão 31 --- campos novos: ID_Tipo_Cooperativa.*
+
+*Revisão 37 --- campos alterados: Tipo_Regime_Especifico.*
 
 Cad_Cod_Trib_Dere
 
@@ -1196,76 +1244,20 @@ Codigo já era texto livre.
 *Vigência: sim --- a Tabela 11 pode ser atualizada por ato do Comitê
 Gestor/RFB.*
 
-  ------------------------ ------------------ ----------------------------------------
-  **Campo**                **Tipo lógico**    **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Cod_Trib** | *identificador* | --- |
+| **ID_Cod_Trib_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Cod_Trib_Dere_Versao). ID_Cod_Trib é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (6 a 12)* | O codTrib oficial, conforme a Tabela 11 --- hierárquico: quanto mais dígitos, mais específico. Corrigido nesta revisão (7) de \"9 dígitos\" fixos para o tamanho variável real, confirmado pela pesquisa. |
+| **Serie** | *código (2), opcional* | Adicionado nesta revisão (7): a Tabela 11 é organizada em séries por regime --- Série 10 (comum a TODOS os regimes específicos: crédito, câmbio, TVM, securitização/faturização, arrendamento mercantil, administração de consórcios, gestão de fundos, arranjos de pagamento, seguros/resseguros, previdência complementar, capitalização --- ex.: 110112001 = crédito em moeda nacional); Série 20 (setor financeiro --- Tabela 21 atividades de serviços financeiros, Tabela 22 plano de contas referencial COSIF, Tabela 23 plano de contas referencial SUSEP); Série 30 (saúde --- Tabela 31 atividades de planos de assistência à saúde, Tabela 32 plano de contas referencial ANS --- mecanismo DIFERENTE do plano referencial por órgão regulador da seção 14, que é do SPED ECD, não da DeRE ---, Tabela 33 coeficiente de rateio de prêmio não individualizado); Série 40 (loterias/concursos de prognósticos --- Tabela 41). Vazio para códigos fora dessa organização em série (ex.: Tabela 13 = UF, Tabela 14 = plano de contas referencial SPED geral, fora do escopo direto da DeRE). Tipo código desde a revisão 14 (antes enumeração {10, 20, 30, 40}): os valores atuais são 10, 20, 30 e 40, e a Tabela 11 pode ganhar novas séries sem mudar a estrutura. |
+| **Descricao** | *texto* | --- |
+| **Tratamento** | *enumeração {tributavel, dedutivel, fora_do_escopo}* | A classificação de alto nível que a pesquisa confirmou como o propósito central do codTrib, dentro da granularidade que a Tabela 11 já detalha por Codigo/Serie. |
+| **ID_Componente_Base_Regime** | *referência (Cad_Componente_Base_Regime), opcional* | Revisão 37 (documento 198, seção 5.3; D-N529 e D-N530: Q198-4): O componente do catálogo a que o codTrib pertence: é por ele que as linhas da DeRE (Mov_Dere_Linha_Mes) entram na aferição da base certa. Vazio até a carga da Tabela 11 completa. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
-  **ID_Cod_Trib**          *identificador*    ---
-
-  **ID_Cod_Trib_Versao**   *identificador da  Chave primária da versão (tabela física
-                           versão*            Cad_Cod_Trib_Dere_Versao). ID_Cod_Trib é
-                                              a identidade, única e referenciada pelas
-                                              outras tabelas; cada versão guarda a sua
-                                              janela de vigência --- Fase 0, seção 2.
-
-  **Codigo**               *código (6 a 12)*  O codTrib oficial, conforme a Tabela 11
-                                              --- hierárquico: quanto mais dígitos,
-                                              mais específico. Corrigido nesta revisão
-                                              (7) de \"9 dígitos\" fixos para o
-                                              tamanho variável real, confirmado pela
-                                              pesquisa.
-
-  **Serie**                *código (2),       Adicionado nesta revisão (7): a Tabela
-                           opcional*          11 é organizada em séries por regime ---
-                                              Série 10 (comum a TODOS os regimes
-                                              específicos: crédito, câmbio, TVM,
-                                              securitização/faturização, arrendamento
-                                              mercantil, administração de consórcios,
-                                              gestão de fundos, arranjos de pagamento,
-                                              seguros/resseguros, previdência
-                                              complementar, capitalização --- ex.:
-                                              110112001 = crédito em moeda nacional);
-                                              Série 20 (setor financeiro --- Tabela 21
-                                              atividades de serviços financeiros,
-                                              Tabela 22 plano de contas referencial
-                                              COSIF, Tabela 23 plano de contas
-                                              referencial SUSEP); Série 30 (saúde ---
-                                              Tabela 31 atividades de planos de
-                                              assistência à saúde, Tabela 32 plano de
-                                              contas referencial ANS --- mecanismo
-                                              DIFERENTE do plano referencial por órgão
-                                              regulador da seção 14, que é do SPED
-                                              ECD, não da DeRE ---, Tabela 33
-                                              coeficiente de rateio de prêmio não
-                                              individualizado); Série 40
-                                              (loterias/concursos de prognósticos ---
-                                              Tabela 41). Vazio para códigos fora
-                                              dessa organização em série (ex.: Tabela
-                                              13 = UF, Tabela 14 = plano de contas
-                                              referencial SPED geral, fora do escopo
-                                              direto da DeRE). Tipo código desde a
-                                              revisão 14 (antes enumeração {10, 20,
-                                              30, 40}): os valores atuais são 10, 20,
-                                              30 e 40, e a Tabela 11 pode ganhar novas
-                                              séries sem mudar a estrutura.
-
-  **Descricao**            *texto*            ---
-
-  **Tratamento**           *enumeração        A classificação de alto nível que a
-                           {tributavel,       pesquisa confirmou como o propósito
-                           dedutivel,         central do codTrib, dentro da
-                           fora_do_escopo}*   granularidade que a Tabela 11 já detalha
-                                              por Codigo/Serie.
-
-  **Vigencia_Inicio**      *data*             Primeiro dia em que esta versão vale.
-
-  **Vigencia_Fim**         *data*             Último dia em que esta versão vale
-                                              (inclusive). Sempre preenchida:
-                                              31/12/9999 quando o fim é indefinido
-                                              (versão vigente) --- convenção da Fase
-                                              0, seção 2.
-
-  **Motivo_Vigencia**      *texto, opcional*  Por que esta versão foi criada.
-  ------------------------ ------------------ ----------------------------------------
+*Revisão 37 --- campos novos: ID_Componente_Base_Regime.*
 
 *Cobertura confirmada pela pesquisa desta revisão (7), fechando também a
 pergunta de Alberto sobre regimes específicos além de financeiro/saúde:
@@ -1383,13 +1375,15 @@ anterior encerra vigência, nunca é sobrescrita.*
 | **ID_Redutor** | *identificador* | --- |
 | **Tipo_Regime_Especifico** | *enumeração {instituicao_financeira, plano_saude, plano_funerario, plano_pet, concurso_prognostico, emissor_cartao_credito, turismo_hotelaria, outro} (mesmo domínio de Cad_Participante_Regime_Especifico.Tipo_Regime_Especifico, acima; os dois mudam juntos)* | Confirmado por Alberto: a granularidade do redutor é por REGIME INTEIRO, hoje --- não varia por tipo de operação/produto dentro do mesmo regime (ex.: todo plano de saúde usa o mesmo redutor). Revisão 17 (D-N273): a confirmação da revisão 8 (redutor por regime inteiro) foi revista por Alberto em 20/10/2026: o redutor é um percentual que reduz a base de cálculo e pode variar por tipo de informação (ID_Cod_Trib) e por período (vigência). O redutor não é trocado pela fórmula "por dentro" do art. 584, que segue como parâmetro anual. |
 | **ID_Cod_Trib** | *referência (Cad_Cod_Trib_Dere, opcional)* | Revisão 17 (D-N273): o código que classifica o tipo de informação na DeRE (Tabela 11 do Anexo I, hierárquica). Vazio: o redutor vale para o regime inteiro, como antes; preenchido: vale para aquele código e os seus filhos. A busca é do mais específico para o geral: a linha do regime com o código mais longo que contém o da informação, depois a do regime sem código; só vale a linha com vigência na data da competência. A leitura de "tipo de informação" como codTrib está em confirmação com Alberto (Q86-6); se for outra classificação, o campo muda de referência. |
-| **Percentual_Redutor** | *número* | --- |
+| **Percentual_Redutor** | *número* | Revisão 37 (documento 198, seção 5.3, Q198-3; D-N530): o redutor continua como está (D-N273). O Decreto 12.955 só conhece "fator de redução" na importação de serviço financeiro (art. 328, § 5º) e não tem redutor na aferição mensal (art. 274, § 2º); por isso a aferição do B4 (Mov_Regime_Especifico_Afericao) não usa este percentual, e ele só entra nela se o contador responder à C233 que o redutor tem base em lei. |
 | **Fonte** | *texto* | A referência normativa que ampara este percentual --- mesma ideia de rastreabilidade já usada em Cad_Cclasstrib.Base_Legal e Cad_Calendario_Transicao. Fundamento_Legal. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 17 --- campos novos: ID_Cod_Trib; campos alterados: Tipo_Regime_Especifico.*
+
+*Revisão 37 --- campos alterados: Percentual_Redutor.*
 
 *Balancete mensal (evento D-1101) e apuração por Estimativa --- nenhuma
 entidade nova além das duas acima: Receita_Bruta_Agregada e
@@ -1599,14 +1593,22 @@ de crédito de IBS/CBS.
 | **Campo** | **Tipo lógico** | **Descrição / regra** |
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Credito_Zfm** | *identificador* | --- |
-| **ID_Apuracao_Origem** | *referência (Mov_Apuracao_Tributo_Item, seção 3)* | A linha de apuração de uma nota de saída de estabelecimento aprovado na ZFM/ALC. |
-| **Tipo_Area** | *enumeração {zfm, alc}* | Decide se o crédito cobre só CBS (alc) ou CBS e IBS (zfm) --- a assimetria confirmada pela pesquisa. |
-| **Percentual_Credito_Ibs** | *número, opcional* | Vazio quando Tipo_Area=alc; preenchido (55% a 100%, conforme classificação do produto) quando Tipo_Area=zfm. |
-| **Percentual_Credito_Cbs** | *número* | 6% ou 2%, conforme a categoria do produto --- presente nos dois casos. |
-| **ID_Calendario** | *referência (Cad_Calendario_Transicao)* | Revisão 11 (documento 72, D-N197): Qual linha do calendário foi usada: a do parâmetro percentual_credito_zfm do ano da operação --- mesma rastreabilidade de Mov_Apuracao_Tributo_Item.ID_Calendario. |
+| **ID_Apuracao_Origem** | *referência (Mov_Apuracao_Tributo_Item), opcional* | A linha de apuração de uma nota de saída de estabelecimento aprovado na ZFM/ALC. Revisão 34 (documento 158, seção 5.5; D-N478): passa a opcional: exatamente um entre este campo e `ID_Nota_Fiscal_Entrada_Item` (o crédito da produção nasce da saída; o de aquisição e o de importação nascem da entrada). |
+| **Tipo_Area** | *enumeração {zfm, alc}* | Decide se o crédito cobre só CBS (alc) ou CBS e IBS (zfm) --- a assimetria confirmada pela pesquisa. Revisão 34 (documento 158, seção 5.5; D-N478): "alc cobre só CBS" vale para a produção (LC 214, art. 467); o crédito de aquisição da ALC é de IBS (art. 465). |
+| **Percentual_Credito_Ibs** | *número, opcional* | Vazio quando Tipo_Area=alc na produção; preenchido (55% a 100%, conforme classificação do produto) quando Tipo_Area=zfm. Revisão 34 (documento 158, seção 5.5; D-N478): na produção da ZFM é só o grupo do art. 450, § 1º, e o valor do IBS vem do período (`Mov_Zfm_Credito_Ibs_Periodo`); `Valor_Credito` por item é a CBS. |
+| **Percentual_Credito_Cbs** | *número, opcional* | 6% ou 2%, conforme a categoria do produto. Revisão 34 (documento 158, seção 5.5; D-N478): passa a opcional: vazio no crédito de aquisição, que é de IBS. |
+| **ID_Calendario** | *referência (Cad_Calendario_Transicao), opcional* | Revisão 11 (documento 72, D-N197): Qual linha do calendário foi usada: a do parâmetro percentual_credito_zfm do ano da operação --- mesma rastreabilidade de Mov_Apuracao_Tributo_Item.ID_Calendario. Revisão 34 (documento 158, seção 5.5; D-N478): passa a opcional: só os créditos de aquisição (arts. 447, 449 e 465) apontam para a linha `percentual_credito_zfm` do ano; os da produção e da importação para revenda não têm fator. |
 | **Valor_Credito** | *número* | --- |
+| **ID_Nota_Fiscal_Entrada_Item** | *referência (Mov_Nota_Fiscal_Entrada_Item), opcional* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): O item de entrada que gerou o crédito de aquisição (LC 214, arts. 444, 447, 449, 462 e 465). Na importação, o item do documento de importação. Exatamente um entre este campo e `ID_Apuracao_Origem`: o crédito da produção nasce da saída; o de aquisição e o de importação nascem da entrada. |
+| **Origem_Credito** | *enumeração {producao, aquisicao_origem_nacional, aquisicao_intermediario_local, importacao_revenda}* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): Decide quais campos valem e se o fator do art. 474 da LC 214 se aplica: nas duas aquisições, sim; na produção e na importação para revenda, não. |
+| **ID_Zfm_Alc_Regra** | *referência (Cad_Zfm_Alc_Regra)* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): A linha do catálogo aplicada, de onde vêm percentual, base e prazo. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial)* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): A habilitação do titular do crédito. |
+| **ID_Credito** | *referência (Mov_Credito_Fiscal), opcional* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): O crédito gerado (`Origem` = presumido_zfm_alc), com a data de apropriação (`Data_Apropriacao`) e o último dia de uso (`Data_Limite_Utilizacao`, cinco anos). O saldo e as aplicações ficam em `Mov_Credito_Fiscal_Aplicacao`. |
+| **ID_Zfm_Credito_Ibs_Periodo** | *referência (Mov_Zfm_Credito_Ibs_Periodo), opcional* | Revisão 34 (documento 158, seção 5.5; D-N478: Q158-1 a Q158-13): O período em que o IBS do crédito da produção foi apurado (provisório: Q158-9). |
 
 *Revisão 11 --- campos que mudam de nome e de tipo: ID_Cronograma_Zfm → ID_Calendario.*
+
+*Revisão 34 --- campos novos: ID_Nota_Fiscal_Entrada_Item, Origem_Credito, ID_Zfm_Alc_Regra, ID_Habilitacao, ID_Credito, ID_Zfm_Credito_Ibs_Periodo; campos alterados: ID_Apuracao_Origem, Tipo_Area, Percentual_Credito_Ibs, Percentual_Credito_Cbs, ID_Calendario.*
 
 *Patch adicional, fora deste módulo, construído em Compras revisão 7 e
 CRM & Vendas revisão 6 neste mesmo \"consolidar\": a partir de agosto de
@@ -2006,11 +2008,14 @@ independentes da vigência do código referencial (acima).*
 | **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil, Fase 0)* | --- |
 | **ID_Empresa** | *referência (Cad_Empresa, Fase 0)* | A empresa para a qual este mapeamento vale. |
 | **ID_Codigo_Referencial** | *referência (Cad_Plano_Referencial_Conta)* | Só um código VIGENTE (Vigencia_Fim vazia, ou a data de referência dentro da janela) pode ser escolhido --- mesma regra que o PVA aplica na validação real. Revisão 19 (D-N337, Q91-4): o ERP bloqueia o mapeamento de código que não pertence ao plano referencial da empresa para o período (o plano que a regra do ID_Plano_Referencial de Cad_Ecf_Tabela_Dinamica devolve); não há aviso no lugar do bloqueio. Mais adiante entra uma relação dos itens ainda não referenciados, como consulta, sem campo novo agora. |
+| **ID_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | Revisão 34 (documento 183, seção 4.1; D-N495): Revisão 34 (documento 183, seção 4.1): I051: a chave desde o leiaute 9. Conta e centro de custo mapeiam para um só código referencial. Vazio: o código vale para a conta em qualquer centro de custo. |
 | **Vigencia_Inicio** | *data* | Vigência PRÓPRIA do mapeamento --- distinta da vigência do código referencial em si, acima: a empresa pode reclassificar uma conta para outro código sem que o código antigo tenha sido descontinuado. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 19 --- campos alterados: ID_Codigo_Referencial.*
+
+*Revisão 34 --- campos novos: ID_Valor_Centro_Custo.*
 
 Estrutura de Demonstrativo (Bloco J / I052)
 
@@ -2091,46 +2096,20 @@ Cad_Estrutura_Demonstrativo vigente, não editando linhas de uma
 estrutura já em uso; a vigência vive no cabeçalho, acima, não linha a
 linha.*
 
-  -------------------------------- -------------------------------- ----------------------------------------
-  **Campo**                        **Tipo lógico**                  **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Linha** | *identificador* | --- |
+| **ID_Estrutura_Demonstrativo** | *referência (Cad_Estrutura_Demonstrativo)* | --- |
+| **Codigo** | *código (até 30)* | Equivalente ao COD_AGL oficial, quando Finalidade=fiscal_sped --- permite gerar I052/J100/J150/J210 diretamente a partir desta tabela, sem redigitação. |
+| **Descricao** | *texto* | Ex.: \"Receita Bruta\", \"Ativo Circulante\", \"Lucro Líquido do Exercício\". |
+| **ID_Linha_Pai** | *referência (esta mesma entidade, opcional)* | Vazio só na(s) linha(s) de topo (ex.: \"Ativo\", \"Passivo e Patrimônio Líquido\"). |
+| **Nivel** | *número* | Profundidade na hierarquia --- equivalente a NIVEL_AGL. |
+| **Ordem** | *número* | Ordem de exibição dentro do mesmo nível/pai --- equivalente a NU_ORDEM (DRE) e à ordem implícita do Balanço/DMPL. |
+| **Tipo_Linha** | *enumeração {totalizador, detalhe}* | \"totalizador\" soma as linhas-filhas (equivalente a IND_COD_AGL=T); \"detalhe\" é uma linha lançável, que recebe mapeamento de conta contábil, abaixo (equivalente a IND_COD_AGL=D). |
+| **Sinal** | *enumeração {soma, subtrai}* | Como esta linha entra no totalizador do nível acima --- ex.: \"Deduções da Receita\" tem Sinal=subtrai dentro do totalizador \"Receita Líquida\". |
+| **Referencia_Nota_Explicativa** | *código (até 12), opcional* | Revisão 34 (documento 183, seção 4.1; D-N495): Revisão 34 (documento 183, seção 4.1): `NOTA_EXP_REF` do J100, J150 e J210. |
 
-  **ID_Linha**                     *identificador*                  ---
-
-  **ID_Estrutura_Demonstrativo**   *referência                      ---
-                                   (Cad_Estrutura_Demonstrativo)*   
-
-  **Codigo**                       *código (até 30)*                Equivalente ao COD_AGL oficial, quando
-                                                                    Finalidade=fiscal_sped --- permite gerar
-                                                                    I052/J100/J150/J210 diretamente a partir
-                                                                    desta tabela, sem redigitação.
-
-  **Descricao**                    *texto*                          Ex.: \"Receita Bruta\", \"Ativo
-                                                                    Circulante\", \"Lucro Líquido do
-                                                                    Exercício\".
-
-  **ID_Linha_Pai**                 *referência (esta mesma          Vazio só na(s) linha(s) de topo (ex.:
-                                   entidade, opcional)*             \"Ativo\", \"Passivo e Patrimônio
-                                                                    Líquido\").
-
-  **Nivel**                        *número*                         Profundidade na hierarquia ---
-                                                                    equivalente a NIVEL_AGL.
-
-  **Ordem**                        *número*                         Ordem de exibição dentro do mesmo
-                                                                    nível/pai --- equivalente a NU_ORDEM
-                                                                    (DRE) e à ordem implícita do
-                                                                    Balanço/DMPL.
-
-  **Tipo_Linha**                   *enumeração {totalizador,        \"totalizador\" soma as linhas-filhas
-                                   detalhe}*                        (equivalente a IND_COD_AGL=T);
-                                                                    \"detalhe\" é uma linha lançável, que
-                                                                    recebe mapeamento de conta contábil,
-                                                                    abaixo (equivalente a IND_COD_AGL=D).
-
-  **Sinal**                        *enumeração {soma, subtrai}*     Como esta linha entra no totalizador do
-                                                                    nível acima --- ex.: \"Deduções da
-                                                                    Receita\" tem Sinal=subtrai dentro do
-                                                                    totalizador \"Receita Líquida\".
-  -------------------------------- -------------------------------- ----------------------------------------
+*Revisão 34 --- campos novos: Referencia_Nota_Explicativa.*
 
 Cad_Estrutura_Demonstrativo_Linha_Conta
 
@@ -2782,6 +2761,7 @@ Nova na revisão 15 (Bloco 2). Parâmetros fiscais do estabelecimento.
 | **Tipo_Leiaute_Bloco_K** | *enumeração {simplificado, completo, restrito_saldos}, opcional* | Novo na revisão 3 (documento 37). K010.IND_TP_LEIAUTE: 0 simplificado, 1 completo, 2 restrito aos saldos de estoque; vazio quando o estabelecimento não entrega o Bloco K (Simples Nacional é dispensado). Perfil A, B ou C não decide. |
 | **ID_Classe_Estabelecimento_Industrial** | *referência (Cad_Classe_Sistema, domínio = classe_estabelecimento_industrial_efd, opcional)* | Novo na revisão 3 (documento 37). CLAS_ESTAB_IND do registro 0002 (tabela 4.5.5): só para estabelecimento industrial ou equiparado (IND_ATIV = 0). |
 | **Numero_Tar** | *código (até 20), opcional* | Revisão 30 (documento 164, seção 7, Q164-9; D-N462): emit/TAR: o Termo de Autorização de Serviço Regular, registro obrigatório do emitente do BP-e junto à ANTT (ou à agência estadual). Dado do emitente, com a vigência do perfil; o bilhete só o copia no XML. |
+| **Informa_Ordem_Producao_Bloco_K** | *booleano* | Revisão 32 (documento 176, seção 7.1, Q176-8; D-N482 e D-N484): Obrigatório, sem valor padrão (carga provisória pelo contador). Falso: o estabelecimento não controla o processo por ordem de produção e o Motor gera DT_INI_OP, DT_FIN_OP e COD_DOC_OP do K230 em branco, agrupando a produção do período por item (FAQ 16.5.1.6). Verdadeiro: o comportamento anterior (Mov_Ordem_Producao.Codigo_Op_Sped; vazio usa o número interno da ordem). O perfil tem vigência, e a mudança de política fica no histórico. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
@@ -2789,6 +2769,8 @@ Nova na revisão 15 (Bloco 2). Parâmetros fiscais do estabelecimento.
 *Revisão 3 --- campos novos (documento 37): Tipo_Leiaute_Bloco_K, ID_Classe_Estabelecimento_Industrial.*
 
 *Revisão 30 --- campos novos: Numero_Tar.*
+
+*Revisão 32 --- campos novos: Informa_Ordem_Producao_Bloco_K.*
 
 Cad_Filial_Regime_Icms
 
@@ -4592,77 +4574,26 @@ mês e o fim, quando existe, o último dia do mês.
 decisão da empresa ou da lei; o histórico serve à retificação de
 períodos passados.*
 
-  ---------------------------------------- ----------------------------------------- ----------------------------------------
-  **Campo**                                **Tipo lógico**                           **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Contribuinte_Reinf** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | --- |
+| **ID_Classificacao_Tributaria** | *referência (Cad_Classe_Sistema, domínio = classificacao_tributaria_contribuinte)* | classTrib, Tabela 08, o mesmo domínio do S-1000. |
+| **Obrigada_Ecd** | *booleano* | indEscrituracao: a empresa é obrigada à Escrituração Contábil Digital. Revisão 37 (documento 160, seção 6.1, Q160-6; D-N528 e D-N531): o valor é copiado, na geração do evento de cadastro, da linha obrigada_ecd do catálogo de parâmetros da ECD (Cad_Obrigacao_Parametro_Definicao); o perfil fiscal da empresa não tem esse campo, e o texto anterior ("vem do perfil fiscal da empresa") estava errado. O campo continua, porque o evento guarda a cópia do valor de quando foi gerado. |
+| **Indicador_Desoneracao_Folha** | *enumeração {nao_aplicavel, empresa_enquadrada}* | indDesoneracao, artigos 7º a 9º da Lei 12.546/2011. O valor empresa_enquadrada só vale para as classificações 02, 03 e 99. |
+| **Acordo_Isencao_Multa** | *booleano* | indAcordoIsenMulta: existe acordo internacional para isenção de multa. |
+| **Situacao_Pj** | *enumeração {normal, extincao, fusao, cisao, incorporacao}, opcional* | indSitPJ. Obrigatório e exclusivo para pessoa jurídica. |
+| **Vinculada_Uniao** | *booleano, opcional* | indUniao: órgão da administração federal direta, autarquia, fundação, empresa pública, sociedade de economia mista ou entidade em que a União tem a maioria do capital com voto, que recebe recursos do Tesouro e registra a execução orçamentária no Siafi. Obrigatório e exclusivo para as naturezas 101-5, 104-0, 107-4, 110-4, 113-9, 116-3, 121-0, 122-8, 125-2, 126-0, 128-7, 131-7, 201-1 e 203-8. |
+| **Data_Transformacao_Fins_Lucrativos** | *data, opcional* | dtTransfFinsLucr: transformação de entidade beneficente de assistência social isenta em sociedade com fins lucrativos. |
+| **Pertence_Irrf** | *booleano, opcional* | indPertIRRF. Exclusivo para as naturezas 126-0, 127-9, 129-5 e 130-9. |
+| **Indicador_Efr** | *booleano, opcional* | ideEFR: verdadeiro quando o órgão é o próprio EFR; falso quando é unidade administrativa autônoma vinculada a um EFR. A Receita valida a informação no cadastro do CNPJ. |
+| **ID_Ente_Federativo_Responsavel** | *referência (Cad_Ente_Federativo_Responsavel, opcional)* | cnpjEFR. Obrigatório e exclusivo quando Indicador_Efr é falso. |
+| **ID_Participante_Contato** | *referência (Cad_Participante)* | A pessoa de contato para assuntos da Reinf (nmCtt, cpfCtt, foneFixo, foneCel e email). O leiaute exige nome e CPF e ao menos um telefone; o sistema lê tudo do cadastro do participante e barra o envio se algo faltar. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente). |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
-  **ID_Contribuinte_Reinf**                *identificador*                           ---
-
-  **ID_Empresa**                           *referência (Cad_Empresa) --- identidade* ---
-
-  **ID_Classificacao_Tributaria**          *referência (Cad_Classe_Sistema, domínio  classTrib, Tabela 08, o mesmo domínio do
-                                           = classificacao_tributaria_contribuinte)* S-1000.
-
-  **Obrigada_Ecd**                         *booleano*                                indEscrituracao: a empresa é obrigada à
-                                                                                     Escrituração Contábil Digital. Vem do
-                                                                                     perfil fiscal da empresa.
-
-  **Indicador_Desoneracao_Folha**          *enumeração {nao_aplicavel,               indDesoneracao, artigos 7º a 9º da Lei
-                                           empresa_enquadrada}*                      12.546/2011. O valor empresa_enquadrada
-                                                                                     só vale para as classificações 02, 03 e
-                                                                                     99.
-
-  **Acordo_Isencao_Multa**                 *booleano*                                indAcordoIsenMulta: existe acordo
-                                                                                     internacional para isenção de multa.
-
-  **Situacao_Pj**                          *enumeração {normal, extincao, fusao,     indSitPJ. Obrigatório e exclusivo para
-                                           cisao, incorporacao}, opcional*           pessoa jurídica.
-
-  **Vinculada_Uniao**                      *booleano, opcional*                      indUniao: órgão da administração federal
-                                                                                     direta, autarquia, fundação, empresa
-                                                                                     pública, sociedade de economia mista ou
-                                                                                     entidade em que a União tem a maioria do
-                                                                                     capital com voto, que recebe recursos do
-                                                                                     Tesouro e registra a execução
-                                                                                     orçamentária no Siafi. Obrigatório e
-                                                                                     exclusivo para as naturezas 101-5,
-                                                                                     104-0, 107-4, 110-4, 113-9, 116-3,
-                                                                                     121-0, 122-8, 125-2, 126-0, 128-7,
-                                                                                     131-7, 201-1 e 203-8.
-
-  **Data_Transformacao_Fins_Lucrativos**   *data, opcional*                          dtTransfFinsLucr: transformação de
-                                                                                     entidade beneficente de assistência
-                                                                                     social isenta em sociedade com fins
-                                                                                     lucrativos.
-
-  **Pertence_Irrf**                        *booleano, opcional*                      indPertIRRF. Exclusivo para as naturezas
-                                                                                     126-0, 127-9, 129-5 e 130-9.
-
-  **Indicador_Efr**                        *booleano, opcional*                      ideEFR: verdadeiro quando o órgão é o
-                                                                                     próprio EFR; falso quando é unidade
-                                                                                     administrativa autônoma vinculada a um
-                                                                                     EFR. A Receita valida a informação no
-                                                                                     cadastro do CNPJ.
-
-  **ID_Ente_Federativo_Responsavel**       *referência                               cnpjEFR. Obrigatório e exclusivo quando
-                                           (Cad_Ente_Federativo_Responsavel,         Indicador_Efr é falso.
-                                           opcional)*                                
-
-  **ID_Participante_Contato**              *referência (Cad_Participante)*           A pessoa de contato para assuntos da
-                                                                                     Reinf (nmCtt, cpfCtt, foneFixo, foneCel
-                                                                                     e email). O leiaute exige nome e CPF e
-                                                                                     ao menos um telefone; o sistema lê tudo
-                                                                                     do cadastro do participante e barra o
-                                                                                     envio se algo faltar.
-
-  **Vigencia_Inicio**                      *data*                                    Primeiro dia em que esta versão vale.
-
-  **Vigencia_Fim**                         *data*                                    Último dia em que esta versão vale
-                                                                                     (inclusive). Sempre preenchida:
-                                                                                     31/12/9999 quando o fim é indefinido
-                                                                                     (versão vigente).
-
-  **Motivo_Vigencia**                      *texto, opcional*                         Por que esta versão foi criada.
-  ---------------------------------------- ----------------------------------------- ----------------------------------------
+*Revisão 37 --- campos alterados: Obrigada_Ecd.*
 
 Cad_Contribuinte_Reinf_Software_House
 
@@ -8310,8 +8241,11 @@ Grupo de pagamento (detPag): forma, valor, cartão e troco. Obrigatório na NF-e
 | **Numero_Nsu_Host** | *código (até 20), opcional* | Revisão 30 (documento 164, seção 7, Q164-4; D-N462): nsuHost: número sequencial único do host (BP-e). |
 | **Numero_Parcelas** | *número, opcional* | Revisão 30 (documento 164, seção 7, Q164-4; D-N462): nParcelas: número de parcelas do cartão (até 3 posições; BP-e). |
 | **Informacoes_Adicionais_Cartao** | *texto (2000), opcional* | Revisão 30 (documento 164, seção 7, Q164-4; D-N462): infAdCard: informações adicionais operacionais para a integração do cartão de crédito (BP-e). |
+| **ID_Transacao_Cartao** | *referência (Mov_Transacao_Cartao), opcional* | Revisão 34 (documento 177, seção 3; D-N485: Q177-1 a Q177-5): Revisão 34 (documento 177, seção 3.1): a transação que pagou este grupo de pagamento da nota. Vazio quando a forma de pagamento não é cartão. Várias notas podem apontar a mesma transação. |
 
 *Revisão 30 --- campos novos: Numero_Documento_Pagamento, Descricao_Forma_Pagamento, Descricao_Bandeira, Numero_Nsu_Transacao, Numero_Nsu_Host, Numero_Parcelas, Informacoes_Adicionais_Cartao; campos alterados: ID_Forma_Pagamento.*
+
+*Revisão 34 --- campos novos: ID_Transacao_Cartao.*
 
 Mov_Nota_Fiscal_Saida_Local
 
@@ -8384,6 +8318,11 @@ Exportação por item: drawback, registro de exportação e a nota de exportaç�
 | **Numero_Registro_Exportacao** | *código (até 12), opcional* | Número do registro de exportação (nRE). |
 | **Chave_Nota_Exportacao** | *código (44), opcional* | Chave da NF-e recebida com fim específico de exportação (chNFe), na exportação indireta. |
 | **Quantidade_Exportada** | *número, opcional* | Quantidade do item efetivamente exportada (qExport). |
+| **ID_Exportacao_Declaracao** | *referência (Mov_Exportacao_Declaracao), opcional* | Revisão 32 (documento 175, seção 4.1; D-N480; Q175-1 a Q175-9 pela recomendação): A declaração (1100) a que o item pertence. É o que liga a nota ao 1100 e dá o 1105 por derivação. |
+| **ID_Nota_Fiscal_Entrada** | *referência (Mov_Nota_Fiscal_Entrada), opcional* | Revisão 32 (documento 175, seção 4.1; D-N480; Q175-1 a Q175-9 pela recomendação): Na exportação indireta, a nota recebida com fim específico de exportação (1110): cobre as notas sem chave (modelos 01, 1B e 04), em que a `Chave_Nota_Exportacao` não existe. |
+| **Numero_Memorando_Exportacao** | *código (até 20), opcional* | Revisão 32 (documento 175, seção 4.1; D-N480; Q175-1 a Q175-9 pela recomendação): NR_MEMO do 1110. |
+
+*Revisão 32 --- campos novos: ID_Exportacao_Declaracao, ID_Nota_Fiscal_Entrada, Numero_Memorando_Exportacao.*
 
 Mov_Nota_Fiscal_Saida_Item_Importacao
 
@@ -8502,8 +8441,14 @@ Dados próprios do CT-e, emitido ou recebido: tipo, modal, tomador, remetente, d
 | **Indicador_Altera_Tomador** | *booleano, opcional* | infCteSub/indAlteraToma: o CT-e de substituição altera o tomador. |
 | **Outras_Caracteristicas_Carga** | *texto, opcional* | infCarga/xOutCat (até 30 caracteres): outras características da carga. |
 | **Valor_Carga_Averbacao** | *número, opcional* | infCarga/vCargaAverb: valor da carga para efeito de averbação (pode diferir do valor declarado). |
+| **Numero_Despacho** | *código (até 30), opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): DESPACHO do D160: número do despacho, nos conhecimentos em papel (modelos 08 e 8B). |
+| **ID_Tipo_Transporte_Carga** | *referência (Cad_Classe_Sistema, domínio = tipo_transporte_carga_efd), opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): IND_CARGA do D161: rodoviário, ferroviário, rodo-ferroviário, aquaviário, dutoviário, aéreo e outros (0 a 5 e 9). Não casa com o `Modal` do CT-e, que não tem "rodo-ferroviário". |
+| **ID_Municipio_Coleta** | *referência (Cad_Municipio), opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_MUN_COL do D161 (9999999 no exterior). |
+| **ID_Municipio_Entrega** | *referência (Cad_Municipio), opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_MUN_ENTG do D161 (9999999 no exterior). |
 
 *Revisão 30 --- campos alterados: ID_Municipio_Envio.*
+
+*Revisão 32 --- campos novos: Numero_Despacho, ID_Tipo_Transporte_Carga, ID_Municipio_Coleta, ID_Municipio_Entrega.*
 
 Mov_Cte_Componente_Valor
 
@@ -8564,9 +8509,13 @@ NF-e e outros documentos transportados pelo CT-e (grupo infDoc), com a ligação
 | **Valor_Produtos** | *número, opcional* | infNF/vProd: valor total dos produtos da NF em papel. |
 | **Valor_Documento** | *número, opcional* | infNF/vNF ou infOutros/vDocFisc: valor total do documento. |
 | **ID_CFOP** | *referência (Cad_CFOP, opcional)* | infNF/nCFOP: CFOP predominante da NF em papel. |
-| **Peso_Kg** | *número, opcional* | infNF/nPeso: peso total em quilogramas da NF em papel. |
+| **Peso_Kg** | *número, opcional* | infNF/nPeso: peso total em quilogramas da NF em papel. Revisão 32 (documento 175, seção 7.3): vale também como PESO_BRT do D162. |
 | **Pin_Suframa** | *código (até 9), opcional* | infNF/PIN e infNFe/PIN: PIN atribuído pela SUFRAMA para a operação. |
 | **Data_Prevista_Entrega** | *data, opcional* | dPrev: data prevista de entrega da mercadoria deste documento. |
+| **Quantidade_Volumes** | *número, opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): QTD_VOL do D162: obrigatório no conhecimento em papel. |
+| **Peso_Liquido_Kg** | *número, opcional* | Revisão 32 (documento 175, seção 7.3; D-N480; Q175-1 a Q175-9 pela recomendação): PESO_LIQ do D162, em quilogramas. |
+
+*Revisão 32 --- campos novos: Quantidade_Volumes, Peso_Liquido_Kg; campos alterados: Peso_Kg.*
 
 Mov_Mdfe
 
@@ -9235,16 +9184,21 @@ Catálogo dos códigos de ajuste da apuração do ICMS e do IPI (tabela 5.1.1 da
 | **ID_Estado** | *referência (Cad_Estado, opcional) --- identidade* | Estado do código de ajuste; vazio nos códigos genéricos da tb1875, que valem para todas as UFs. |
 | **Codigo** | *código (até 10) --- identidade* | Código do ajuste como a tabela 5.1.1 e a UF o publicam (UF + tipo + natureza + sequência); vai ao campo COD_AJ_APUR dos registros E111, E220, E311 e E530. |
 | **Descricao** | *texto* | Descrição oficial do ajuste. |
-| **Tipo_Apuracao** | *enumeração {icms_proprio, icms_st, difal_fcp, ipi, difal, fcp}* | Apuração a que o ajuste se refere; difal e fcp são separados (a proposta do doc 33 os juntava em difal_fcp). |
-| **Natureza** | *enumeração {debito, credito, estorno_debito, estorno_credito, deducao, debito_especial, controle_extra_apuracao}* | Natureza do ajuste; controle_extra_apuracao é o código UF099999 da tb1875. |
-| **Tabela_Origem** | *enumeração {apuracao_5_1_1, documento_5_3}* | Tabela do código: 5.1.1 (ajustes da apuração: E111, E220, E311) ou 5.3 (ajustes provenientes de documento fiscal: C197, C597, D197, D737). O terceiro caractere de um código da 5.3 diz em qual campo do E110/E210 o valor entra. |
-| **Indicador_Subapuracao** | *código (1), opcional* | Quarto caractere do código (3 a 8) quando o ajuste alimenta a sub-apuração do 1900; vazio nos demais. |
+| **Tipo_Apuracao** | *enumeração {icms_proprio, icms_st, difal_fcp, ipi, difal, fcp}* | Apuração a que o ajuste se refere; difal e fcp são separados (a proposta do doc 33 os juntava em difal_fcp). Revisão 32 (documento 172, seção 5.1): na carga do validador vem do 3º caractere do código nas linhas de UF (0 icms_proprio, 1 icms_st, 2 difal, 3 fcp); nas 13 linhas de IPI (sem UF) é ipi. |
+| **Natureza** | *enumeração {debito, credito, estorno_debito, estorno_credito, deducao, debito_especial, controle_extra_apuracao}* | Natureza do ajuste; controle_extra_apuracao é o código UF099999 da tb1875. Revisão 32 (documento 172, seção 5.1): na carga vem do 4º caractere (0 debito, 1 estorno_credito, 2 credito, 3 estorno_debito, 4 deducao, 5 debito_especial, 9 controle_extra_apuracao); nos códigos de IPI vem da letra C (crédito) ou D (débito) do texto. |
+| **Tabela_Origem** | *enumeração {apuracao_5_1_1, documento_5_3}, opcional* | Tabela do código: 5.1.1 (ajustes da apuração: E111, E220, E311) ou 5.3 (ajustes provenientes de documento fiscal: C197, C597, D197, D737). O terceiro caractere de um código da 5.3 diz em qual campo do E110/E210 o valor entra. Revisão 32 (documento 172, seção 5.1, Q172-3 e Q172-C1; D-N479): passa a opcional. O arquivo do validador não distingue a 5.1.1 da 5.3; a carga deixa o campo vazio e a classificação vem só do Guia (por ora). O ERP avisa quando um ajuste de documento (C197) usa código sem classificação. |
+| **Indicador_Subapuracao** | *código (1), opcional* | Quarto caractere do código (3 a 8) quando o ajuste alimenta a sub-apuração do 1900; vazio nos demais. Revisão 32 (documento 172, seção 5.1, C2): conferência: nas 10.626 linhas de UF do validador o 4º caractere vai de 0 a 5 e 9 e é o tipo do ajuste; o texto "3 a 8" não bate com a tabela e segue ao contador (C2). O campo não muda. |
 | **ID_Indicador_Beneficio_Padrao** | *referência (Cad_Classe_Sistema, domínio = indicador_beneficio_icms), opcional* | Revisão 30 (documento 168, seção 3.1, G1; D-N460 e D-N461): Sugestão do indicador para este código de ajuste. O usuário confirma no lançamento. A sugestão muda por versão (vigência), porque a UF pode reclassificar o código. Vazio nos códigos cujo terceiro dígito é 9 (não exigem o indicador). |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Revisão 32 (documento 172, seção 5.1; D-N474 e D-N479): provisorio na carga do validador; validado quando o contador aprova a tabela da UF. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | Revisão 32 (documento 172, seção 5.1; D-N474 e D-N479): A validação do contador (área validacao_dado_legal). |
+| **Alerta_Carga** | *texto, opcional* | Revisão 32 (documento 172, seção 5.1; D-N474 e D-N479): O aviso da carga, por extenso (vigência de um dia, texto truncado, aspas ou tabulação no texto). O aviso nunca bloqueia. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 30 --- campos novos: ID_Indicador_Beneficio_Padrao.*
+
+*Revisão 32 --- campos novos: Situacao_Dado, ID_Instancia_Aprovacao, Alerta_Carga; campos alterados: Tabela_Origem, Tipo_Apuracao, Natureza, Indicador_Subapuracao.*
 
 Cad_Icms_Obrigacao_Recolher
 
@@ -9256,13 +9210,20 @@ Catálogo dos códigos de obrigação a recolher da EFD ICMS/IPI (tabela 5.4) co
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Icms_Obrigacao_Recolher** | *identificador* | --- |
 | **ID_Icms_Obrigacao_Recolher_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_Obrigacao_Recolher_Versao). ID_Icms_Obrigacao_Recolher é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
-| **ID_Estado** | *referência (Cad_Estado)* | Estado do Codigo_Receita; a obrigação em si é nacional. |
-| **ID_Obrigacao_Recolher** | *referência (Cad_Classe_Sistema, domínio = obrigacao_icms_recolher) --- identidade* | Código nacional da obrigação de ICMS a recolher (tb19). |
+| **ID_Estado** | *referência (Cad_Estado, opcional) --- identidade* | Estado do Codigo_Receita; a obrigação em si é nacional. Revisão 32 (documento 172, seção 6; D-N474): passa a opcional e entra na identidade (UF mais Codigo_Receita mais início da vigência); vazio nos 16 códigos da GENERICA (códigos nacionais de 6 dígitos). |
+| **ID_Obrigacao_Recolher** | *referência (Cad_Classe_Sistema, domínio = obrigacao_icms_recolher), opcional* | Código nacional da obrigação de ICMS a recolher (tb19). Revisão 32 (documento 172, seção 6; D-N474): sai da identidade e passa a opcional, porque o arquivo de códigos de receita do validador não traz a obrigação nacional (só 34% das linhas têm um único termo reconhecível); vazio na carga. |
 | **Descricao** | *texto* | Descrição da obrigação (ICMS a recolher, ICMS-ST, antecipação, DIFAL, FCP e demais). |
-| **Codigo_Receita** | *código (até 20)* | Código de receita da UF para o documento de arrecadação (campo COD_REC). |
+| **Codigo_Receita** | *código (até 20) --- identidade* | Código de receita da UF para o documento de arrecadação (campo COD_REC). Revisão 32 (documento 172, seção 6): entra na identidade. O formato varia por UF (SP e ES "NNN-N", SC 9 dígitos); no SC o dia do vencimento vem no texto e fica só no texto (Q172-C6). |
+| **ID_Natureza_Receita** | *referência (Cad_Classe_Sistema, domínio = natureza_receita_icms_uf), opcional* | Revisão 32 (documento 172, seção 6; D-N474 e D-N479): O que a receita é (icms_normal, icms_st, difal, fcp, antecipacao, importacao, simples_nacional, divida_ativa, parcelamento, autuacao_fiscal, autorregularizacao, multa, juros, taxa, ipva, itcd, irrf, receita_patrimonial e outra). Sugerida por palavra no texto só nas 730 das 2.162 linhas de receita cujo texto traz um único termo reconhecível, como provisorio e visível; as demais 1.432 ficam vazias até uma pessoa classificar (Q172-6). |
+| **Forma_Recolhimento** | *enumeração {por_apuracao, por_operacao}, opcional* | Revisão 32 (documento 172, seção 6; D-N474 e D-N479): Só quando o texto do código de receita diz "por Apuração" ou "por Operação". |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Revisão 32 (documento 172, seção 6; D-N474 e D-N479): provisorio na carga do validador. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | Revisão 32 (documento 172, seção 6; D-N474 e D-N479): A validação do contador. |
+| **Alerta_Carga** | *texto, opcional* | Revisão 32 (documento 172, seção 6; D-N474 e D-N479): O aviso da carga, por extenso. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 32 --- campos novos: ID_Natureza_Receita, Forma_Recolhimento, Situacao_Dado, ID_Instancia_Aprovacao, Alerta_Carga; campos alterados: ID_Estado, ID_Obrigacao_Recolher, Codigo_Receita.*
 
 Mov_Apuracao_Icms_Proprio
 
@@ -9591,8 +9552,8 @@ Arquivo gerado de uma escrituração ou declaração (EFD ICMS/IPI, EFD-Contribu
 | **Periodo_Fim** | *data* | Último dia do período escriturado. |
 | **Numero_Versao** | *número* | Novo na revisão 7 (documento 59, D-N140). Ordem do arquivo na escrituração daquela obrigação, empresa, filial, SCP e período: 1, 2, 3... Conta também as tentativas rejeitadas. Entra na identidade (empresa, filial, SCP, obrigação, período e versão). |
 | **Finalidade** | *enumeração {original, substituta, cancelamento, evento_especial}* | Original ou retificadora (substituta); cancelamento = retificadora sem valores para cancelar a DIMOB entregue indevidamente; evento_especial = entrega por extinção, fusão, incorporação ou cisão total, com prazo no último dia útil do mês seguinte ao evento. Revisão 7 (documento 59, D-N140): original vale para a primeira versão aceita ou ainda não aceita; substituta, para as que retificam um arquivo aceito. |
-| **ID_Tipo_Evento_Especial** | *referência (Cad_Classe_Sistema, domínio = tipo_evento_especial_escrituracao, opcional)* | Preenchido quando Finalidade = evento_especial: o tipo do evento (extinção, fusão, incorporação ou cisão total). |
-| **Data_Evento_Especial** | *data, opcional* | Data do evento especial; o prazo de entrega é calculado a partir do mês seguinte a ela. |
+| **ID_Tipo_Evento_Especial** | *referência (Cad_Classe_Sistema, domínio = tipo_evento_especial_escrituracao, opcional)* | Preenchido quando Finalidade = evento_especial: o tipo do evento (extinção, fusão, incorporação ou cisão total). Revisão 35 (documento 192, Q192-4; D-N519): na ECF fica vazio; a situação especial da ECF mora só em Mov_Ecf_Periodo. |
+| **Data_Evento_Especial** | *data, opcional* | Data do evento especial; o prazo de entrega é calculado a partir do mês seguinte a ela. Revisão 35 (documento 192, Q192-4; D-N519): na ECF fica vazio; o prazo da situação especial da ECF lê Mov_Ecf_Periodo.Data_Situacao_Especial pela regra de vencimento com vigência (Cad_Regra_Vencimento). |
 | **Versao_Leiaute** | *código (até 20)* | Versão do leiaute do arquivo (por exemplo, a versão do Guia Prático da EFD ou do leiaute da ECD); vem de parâmetro com vigência. |
 | **ID_Documento_Arquivo** | *referência (Cad_Documento, opcional)* | O arquivo gerado, guardado no GED. Alterado na revisão 7 (documento 59, D-N140): passa a opcional, vazio enquanto o arquivo está em preparação (o retrato existe antes do arquivo); obrigatório quando o status passa de em_preparacao. |
 | **ID_Documento_Assinado** | *referência (Cad_Documento, opcional)* | Arquivo assinado em p7s com o conteúdo atachado (DES-IF), distinto do TXT de ID_Documento_Arquivo. |
@@ -9605,16 +9566,18 @@ Arquivo gerado de uma escrituração ou declaração (EFD ICMS/IPI, EFD-Contribu
 | **ID_Arquivo_Substituido** | *referência (Mov_Escrituracao_Arquivo, opcional)* | O arquivo que esta retificadora substitui. |
 | **ID_Certificado** | *referência (Cad_Certificado_Digital, opcional)* | O certificado usado para assinar ou transmitir (por exemplo, o Receitanet da DIMOB, exceto optantes do Simples). |
 | **Status** | *enumeração {em_preparacao, fechada, transmitida, pendente_recibo, aceita, rejeitada, substituida, descartada}* | Alterado na revisão 7 (documento 59, D-N140): lista de valores e transições. em_preparacao (retrato recalculável, arquivo regerável) vai para fechada ou descartada; fechada para transmitida; transmitida para aceita, rejeitada ou pendente_recibo; pendente_recibo para aceita ou rejeitada; aceita para substituida. pendente_recibo é o arquivo transmitido sem recibo gravado, que não pode ser substituído por retificadora (documento 46, seção 8.2). rejeitada: a próxima tentativa é uma nova versão. Resultado_Validador continua separado: é o resultado técnico do PVA antes do envio. |
-| **Hash_Escrituracao** | *código (até 64), opcional* | O hash que consta do recibo da Receita para a escrituração aceita, distinto de Hash; a retificadora usa este (D-N104, doc 46 §8.2). |
+| **Hash_Escrituracao** | *código (até 64), opcional* | O hash que consta do recibo da Receita para a escrituração aceita, distinto de Hash; a retificadora usa este (D-N104, doc 46 §8.2). Revisão 35 (documento 192, Q192-6; D-N519): na ECF, o hash da ECF aceita do período anterior vai para Mov_Ecf_Periodo.Hash_Ecf_Anterior da ECF seguinte (0010, HASH_ECF_ANTERIOR). |
 | **ID_Documento_Recibo** | *referência (Cad_Documento, opcional)* | O recibo de entrega em PDF ou XML, como veio da Receita. |
 | **Data_Hora_Recibo** | *data/hora, opcional* | Quando a Receita aceitou a escrituração. |
 | **Numero_Recibo_Anterior** | *código (até 60), opcional* | Cópia do recibo do arquivo substituído, gravada na criação da retificadora. |
 | **Hash_Escrituracao_Anterior** | *código (até 64), opcional* | Cópia do hash do arquivo substituído, gravada na criação da retificadora. |
-| **Situacao_Especial** | *enumeração {abertura, cisao, fusao, incorporacao, encerramento}, opcional* | Situação especial da escrituração (0000.IND_SIT_ESP). |
+| **Situacao_Especial** | *enumeração {abertura, cisao, fusao, incorporacao, encerramento}, opcional* | Situação especial da escrituração (0000.IND_SIT_ESP). Revisão 35 (documento 192, Q192-4; D-N519): na ECF fica vazio; vale Mov_Ecf_Periodo.ID_Situacao_Especial. A Finalidade da ECF é original ou substituta. |
 | **ID_Entidade_Ligada** | *referência (Cad_Entidade_Ligada_Reinf, opcional)* | SCP a que o arquivo pertence (0000 e 0035); cada SCP gera uma EFD separada. |
 | **ID_Criterio_Detalhe_Receita_Recebida** | *referência (Cad_Classe_Sistema, domínio = indicador_composicao_receita_recebida, opcional)* | Critério usado na geração para abrir a receita recebida (F525.IND_REC). |
 
 *Revisão 7 --- campos novos: Numero_Versao, Data_Hora_Fechamento, ID_Usuario_Fechamento; campos alterados: ID_Documento_Arquivo, Finalidade, Hash, Status; campo removido: ID_Periodo_Efd.*
+
+*Revisão 35 --- campos alterados: ID_Tipo_Evento_Especial, Data_Evento_Especial, Situacao_Especial, Hash_Escrituracao.*
 
 Mov_Escrituracao_Arquivo_Ocorrencia
 
@@ -9863,10 +9826,15 @@ Grupo de compra governamental da nota (gCompraGov da NF-e e do CT-e/NFCom; pRedu
 | **ID_Nota_Fiscal_Entrada** | *referência (Mov_Nota_Fiscal_Entrada, opcional)* | Nota recebida a que o grupo pertence (D-N15: a nota recebida guarda os mesmos campos novos); vazio quando o grupo é de nota emitida. |
 | **ID_Nfeabi** | *referência (Mov_Nfeabi, opcional)* | Novo na revisão 6 (documento 62, D-N148 a D-N153). A NF-e ABI a que o grupo gCompraGov pertence (emitida ou recebida); vazio nos grupos de nota de saída ou de entrada comuns. |
 | **Tipo_Ente** | *enumeração {uniao, estados, distrito_federal, municipios, consorcio_publico, comite_gestor_ibs}, opcional* | gCompraGov/tpEnteGov: ente da administração pública direta, autarquias e fundações (1 a 6; a NFS-e usa 1 a 4 e guarda o tipo em Mov_Nfse_Dps.Tipo_Ente_Governamental). |
-| **Percentual_Redutor** | *número* | gCompraGov/pRedutor (NFS-e: IBSCBS/pRedutor): percentual de redução de alíquota em compra governamental (art. 473 da LC 214/2025). |
+| **Percentual_Redutor** | *número* | gCompraGov/pRedutor (NFS-e: IBSCBS/pRedutor): percentual de redução de alíquota em compra governamental (LC 214/2025, art. 472 e Decreto 12.955, arts. 442, 443 e 601; o art. 473 é a destinação do produto). Revisão 34 (documento 158, seção 3.6; D-N478): o percentual aplicado vem de `redutor_compras_governamentais` no calendário de transição.. |
 | **Tipo_Operacao** | *enumeração {fornecimento_pagamento_posterior, recebimento_fornecimento_realizado, fornecimento_pagamento_realizado, recebimento_fornecimento_posterior}, opcional* | gCompraGov/tpOperGov: 1 fornecimento com pagamento posterior; 2 recebimento com fornecimento já realizado; 3 fornecimento com pagamento já realizado; 4 recebimento com fornecimento posterior. Os tipos 2 e 3 exigem a chave do documento anterior em Mov_Nota_Fiscal_Saida_Referenciada. |
+| **ID_Regra_Compra_Governamental** | *referência (Cad_Regra_Compra_Governamental), opcional* | Revisão 34 (documento 158, seção 3.6; D-N478: Q158-1 a Q158-13): A versão da regra aplicada na data do pagamento. |
+| **Indicador_Aquisicao_Presencial** | *booleano, opcional* | Revisão 34 (documento 158, seção 3.6; D-N478: Q158-1 a Q158-13): Presencial é uma das duas condições da exceção (LC 214, art. 473, § 2º). |
+| **Indicador_Dispensa_Licitacao** | *booleano, opcional* | Revisão 34 (documento 158, seção 3.6; D-N478: Q158-1 a Q158-13): A dispensa de licitação é a outra condição da exceção. O ERP só registra; quem informa é o usuário. |
 
 *Revisão 6 --- campos novos: ID_Nfeabi; campos alterados: ID_Nota.*
+
+*Revisão 34 --- campos novos: ID_Regra_Compra_Governamental, Indicador_Aquisicao_Presencial, Indicador_Dispensa_Licitacao; campos alterados: Percentual_Redutor.*
 
 Mov_Nota_Fiscal_Saida_Item_Referencia
 
@@ -10449,9 +10417,11 @@ Informação adicional da apuração em valores (registros E115 e 1925): código
 | **ID_Apuracao_Informacao_Adicional** | *identificador* | --- |
 | **Tipo_Apuracao** | *enumeração {icms_proprio, icms_subapuracao}* | Apuração a que a informação pertence: E110 (E115) ou sub-apuração (1925). |
 | **ID_Apuracao** | *referência genérica* | Conforme Tipo_Apuracao: ID_Apuracao_Icms_Proprio ou ID_Apuracao_Icms_Subapuracao. |
-| **ID_Codigo_Informacao_Adicional** | *referência (Cad_Classe_Sistema, domínio = codigo_informacao_adicional_apuracao_icms)* | COD_INF_ADIC: código da tabela 5.2, publicada por cada SEFAZ. |
+| **ID_Codigo_Informacao_Adicional** | *referência (Cad_Icms_Informacao_Adicional_Codigo)* | COD_INF_ADIC: código da tabela 5.2, publicada por cada SEFAZ. Revisão 32 (documento 172, seção 5.3; D-N474): deixa de apontar para o domínio de Cad_Classe_Sistema e passa a apontar para Cad_Icms_Informacao_Adicional_Codigo, que traz UF e vigência. |
 | **Valor_Informacao** | *número* | VL_INF_ADIC: valor referente à informação adicional. |
 | **Descricao_Complementar** | *texto, opcional* | DESCR_COMPL_AJ: descrição complementar. |
+
+*Revisão 32 --- campos alterados: ID_Codigo_Informacao_Adicional.*
 
 Mov_Inventario_Item_Complemento_St
 
@@ -14836,7 +14806,7 @@ Parâmetros legais com vigência da ECF, em domínio fechado (parametro_ecf), no
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Parametro_Ecf** | *identificador* | --- |
 | **ID_Parametro_Ecf_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Ecf_Parametro_Versao). ID_Parametro_Ecf é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
-| **ID_Parametro** | *referência (Cad_Classe_Sistema, domínio = parametro_ecf)* | Qual parâmetro: limite_ativo_exterior ou limiar_receita_grupo_pais_a_pais. Revisão 17 (D-N310): o domínio ganha limite_cartao_exterior_anual (R$ 120.000 por ano, equivalentes a R$ 10.000 por mês, em cartão de crédito no exterior; campos 15 e 17 do registro 0020, que decidem o Y520). |
+| **ID_Parametro** | *referência (Cad_Classe_Sistema, domínio = parametro_ecf)* | Qual parâmetro: limite_ativo_exterior ou limiar_receita_grupo_pais_a_pais. Revisão 17 (D-N310): o domínio ganha limite_cartao_exterior_anual (R$ 120.000 por ano, equivalentes a R$ 10.000 por mês, em cartão de crédito no exterior; campos 15 e 17 do registro 0020, que decidem o Y520). Revisão 35 (D-N504 e D-N507, Q188-3 e Q188-4): limite_cartao_exterior_anual deixa de ser só conferência e passa a cortar o Y520 de cartão; o domínio ganha limite_moeda_exterior_anual (R$ 120.000 por ano, Q110-5), com a mesma carga de partida (vigência 01/01/2026, provisório). limite_ativo_exterior decide o IND_ATIV_EXT do 0020: sim quando os recebíveis de não residentes em aberto mais o saldo das contas bancárias no exterior somarem R$ 100.000 ou mais, em reais, no fim do período, pela taxa de fechamento (documento 112); o ERP calcula e o contador revisa. |
 | **Valor_Numerico** | *número* | O valor em reais. Revisão 17 (D-N323): os três valores (R$ 100.000 de ativos no exterior, R$ 2,26 bilhões ou € 750 milhões do país a país, R$ 120.000 por ano em cartão) valem para o ano-calendário 2026, com Vigencia_Inicio = 01/01/2026 e sem histórico anterior (decisão de Alberto, 20/10/2026). O valor em euros e a data de conversão ficam no texto do fundamento; não há campo de moeda. Quando sair o leiaute do ano-calendário 2026, os valores são conferidos de novo e, se mudarem, entra versão nova da linha. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | Fase 0, seção 9 (validação de dados legais provisórios). A carga entra provisória e só passa a validada com a aprovação do contador. |
 | **Fundamento_Legal** | *texto* | A norma do valor (Y590: instrução do leiaute; W: IN RFB 1.681/2016). Revisão 17 (D-N310): a fonte dos três limites passa a ser o Manual da ECF, leiaute 12 (edição de 23/07/2026; ativos no exterior e cartão no registro 0020, p. 84; país a país na p. 427, IN RFB 1.681/2016). A situação segue provisório até o contador aprovar. |
@@ -14845,6 +14815,8 @@ Parâmetros legais com vigência da ECF, em domínio fechado (parametro_ecf), no
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 17 --- campos alterados: ID_Parametro, Valor_Numerico, Fundamento_Legal.*
+
+*Revisão 35 --- campos alterados: ID_Parametro.*
 
 
 
@@ -15150,11 +15122,22 @@ Auto de infração e procedimento fiscal (D-N284; documento 90, seção 5.1). O 
 | **Situacao** | *enumeração {ativo, encerrado}* | Ativo ou encerrado. |
 | **Data_Encerramento** | *data, opcional* | **Obrigatória** se encerrado e **vazia** se ativo; o ERP rejeita encerrado sem data e ativo com data. |
 | **Regime_Suprimento_2026** | *booleano, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469): O auto é de obrigação acessória descumprida em 2026. |
-| **Data_Intimacao_Suprimento** | *data, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469):  |
-| **Data_Atendimento_Suprimento** | *data, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469):  |
+| **Data_Intimacao_Suprimento** | *data, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469): |
+| **Data_Atendimento_Suprimento** | *data, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469): |
 | **Penalidade_Extinta** | *booleano, opcional* | Revisão 31 (documento 157, seção 7.4, Q157-10; D-N466 e D-N469): Marcado pelo usuário. O prazo (intimação mais 60 dias) se deriva do parâmetro de 7.5; aviso se o atendimento passa do prazo. |
+| **ID_Tipo_Penalidade** | *referência (Cad_Classe_Sistema, domínio = tipo_penalidade_ibs_cbs), opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): A penalidade aplicada, entre as 29 dos arts. 341-F e 341-G (anexo A do documento 159, com a de 50% do art. 341-F, § 3º, acrescentada pelo documento 196, Q196-2). Registro do que o auto diz; o ERP não calcula a multa (D-N284). |
+| **Percentual_Multa_Aplicado** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): Quando o auto aplica percentual (50, 75, 100 ou 150 no art. 341-F; 33, 66 ou 100 no art. 341-G). |
+| **Valor_Penalidade** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O valor da penalidade como consta do auto, em reais. |
+| **Reincidencia_Especifica** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O auto aplicou a majoração de 50% do art. 341-G, § 1º. |
+| **Em_Regime_Especial_Fiscalizacao** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): A infração foi cometida durante o regime especial de fiscalização; a multa de ofício do IBS e da CBS fica duplicada (art. 341, § 1º). |
+| **ID_Hipotese_Reducao** | *referência (Cad_Classe_Sistema, domínio = hipotese_reducao_multa), opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): A hipótese do art. 341-H em que a multa foi paga com redução: pagamento ou parcelamento, antes ou depois do prazo de impugnação. Domínio novo, quatro valores. |
+| **Percentual_Reducao_Aplicado** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O percentual da redução, como o pagamento a aplicou. O ERP compara com o valor de Cad_Parametro_Legal_Ibs_Cbs (50, 40, 30 e 20; ou 60, 50, 40 e 30 com PNCT ou bons antecedentes) e avisa se diferir. |
+| **Valor_Penalidade_Paga** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O valor efetivamente pago da penalidade, depois da redução. |
+| **Ente_Federativo_Lancamento** | *enumeração {uniao, estado, distrito_federal, municipio}, opcional* | Revisão 36 (documento 196, seção 3.3; D-N526: Q196-3): Art. 330, § 1º, VII: o auto de infração do IBS traz o ente federativo responsável pelo lançamento. Quem autuou (nome do órgão) continua em Orgao_Autuante. |
 
 *Revisão 31 --- campos novos: Regime_Suprimento_2026, Data_Intimacao_Suprimento, Data_Atendimento_Suprimento, Penalidade_Extinta.*
+
+*Revisão 36 --- campos novos: ID_Tipo_Penalidade, Percentual_Multa_Aplicado, Valor_Penalidade, Reincidencia_Especifica, Em_Regime_Especial_Fiscalizacao, ID_Hipotese_Reducao, Percentual_Reducao_Aplicado, Valor_Penalidade_Paga, Ente_Federativo_Lancamento.*
 
 Cad_Regra_Operacao_Equiparada_Cbs
 
@@ -15271,12 +15254,14 @@ O Y520 consolidado, com a origem de cada valor (D-N345; documento 100, seção 6
 | **Valor_Importado** | *número* | O valor do Y520 que veio da **importação complementar** (o da importação validada mais recente do ano, D-N317). |
 | **ID_Importacao_Bloco** | *referência (Mov_Ecf_Importacao_Bloco), opcional* | A importação de onde veio o Valor_Importado; vazio quando não há. |
 | **Valor_Total** | *número* | A soma dos três. É o VL_PERIODO do Y520. |
-| **Situacao** | *enumeração {gerada, substituida}* | Revisão 22 (D-N356, documento 110, seção 0.2, decisão de Alberto de 26/10/2026): todo pagamento ou recebimento com não residente vai ao Y520, de qualquer valor; o valor abaixo_do_limite, que marcava cartão e moeda abaixo do limite anual, saiu. gerada é a geração vigente; substituida é a anterior, quando há nova geração. O limite de R$ 120.000 é só conferência no ERP, na geração do bloco. |
+| **Situacao** | *enumeração {gerada, substituida, abaixo_do_limite}* | Revisão 22 (D-N356, documento 110, seção 0.2, decisão de Alberto de 26/10/2026): todo pagamento ou recebimento com não residente ia ao Y520, de qualquer valor, e o valor abaixo_do_limite tinha saído; **a revisão 35 (D-N504 e D-N507, Q188-3) substitui a D-N356 e devolve o valor abaixo_do_limite**: cartão e moeda com total do ano abaixo de R$ 120.000 não saem no Y520 (linha com Situacao = abaixo_do_limite, guardada para conferência); a partir de R$ 120.000 saem com a forma e o total da forma; câmbio, transferência internacional em reais e depósito ou recursos no exterior saem sempre; a forma segue guardada em toda baixa; teste anual fixo por tipo e forma (respostas de 23/10/2026). O indicador do 0020 conta só as linhas que vão ao arquivo (regra 11 do documento 100). gerada é a geração vigente; substituida é a anterior, quando há nova geração. O limite de R$ 120.000 (limite_cartao_exterior_anual para cartão; limite_moeda_exterior_anual para moeda) decide, na geração do bloco, se a linha vai ao arquivo. Revisão 35: abaixo_do_limite = cartão ou moeda com total do ano abaixo do limite; a linha não vai ao Y520. |
 | **Data_Hora_Geracao** | *data/hora* | Quando foi gerada. |
 | **ID_Usuario_Geracao** | *referência (Cad_Usuario)* | Quem mandou gerar. |
 | **Observacao** | *texto, opcional* | Texto livre; o ERP escreve aqui o aviso de possível duplicidade. |
 
 *Revisão 22 --- campos alterados: Situacao.*
+
+*Revisão 35 --- campos alterados: Situacao; valores de enumeração novos: Situacao (+abaixo_do_limite).*
 
 Cad_Natureza_Operacao_Sugestao
 
@@ -16841,13 +16826,13 @@ Revisão 29 (documento 155, Q155-1 a Q155-5, aprovadas por Alberto em 29/10/2026
 | **ID_Obrigacao** | *referência (Cad_Obrigacao_Acessoria) --- identidade* | A obrigação dona do parâmetro. |
 | **Codigo** | *código (60) --- identidade* | Estável, em minúsculas, por exemplo presumido_somente_por_refis. É o que o motor e a apuração leem. |
 | **Rotulo** | *texto* | O nome na tela. |
-| **Ajuda** | *texto, opcional* | O que o parâmetro faz, onde a lei ou o manual o cita. |
+| **Ajuda** | *texto, opcional* | O que o parâmetro faz, onde a lei ou o manual o cita. Revisão 38 (documento 201, seção 5.2, Q201-5; D-N535 e D-N536): este texto é o resumo; o efeito completo, por valor e por obrigação, está em Cad_Parametro_Documentacao e Cad_Parametro_Efeito_Obrigacao. |
 | **Tipo_Valor** | *enumeração {booleano, numero, texto, data, lista, cadastro}* | Decide qual coluna de Cad_Obrigacao_Parametro_Valor vale e como a tela desenha o campo. |
 | **Dominio_Lista** | *código (60), opcional* | Quando Tipo_Valor = lista: o domínio de Cad_Classe_Sistema. |
 | **Entidade_Referencia** | *código (80), opcional* | Quando Tipo_Valor = cadastro: a entidade referenciada. |
 | **Nivel** | *enumeração {global, empresa, filial}* | Em que nível o valor é dado. Os parâmetros de nível global (limites e tabelas legais) aparecem em leitura, com o link para a tabela própria. |
 | **Obrigatorio** | *booleano* | Sem valor, o ERP avisa; não bloqueia e não presume padrão. |
-| **Armazenamento** | *enumeração {central, campo_existente}* | Onde o valor mora (Q155-2): na tabela central ou num campo que já existe. |
+| **Armazenamento** | *enumeração {central, campo_existente, tabela_propria}* | Onde o valor mora (Q155-2): na tabela central ou num campo que já existe. Revisão 37 (documento 160, seção 4.5, Q160-3; D-N528 e D-N531): terceiro valor tabela_propria, para as 11 tabelas em leitura da classe c (a tabela inteira é o parâmetro): Tipo_Valor = cadastro, Entidade_Referencia com o nome da tabela, e Entidade_Alvo e Campo_Alvo vazios. Convenções da Q160-2, sem estrutura nova: a linha de módulo usa o Codigo igual ao código do módulo e Campo_Alvo = Habilitado; a enumeração do perfil entra como lista sem Dominio_Lista; Obrigatorio é verdadeiro só onde o campo do perfil não é opcional; gravar um campo da classe campo_existente cria a versão nova do registro dono. |
 | **Entidade_Alvo** | *código (80), opcional* | Quando campo_existente: a entidade cujo campo a tela lê e grava. |
 | **Campo_Alvo** | *código (80), opcional* | Quando campo_existente: o campo. |
 | **Grupo_Tela** | *texto, opcional* | Agrupamento na tela. |
@@ -16856,6 +16841,10 @@ Revisão 29 (documento 155, Q155-1 a Q155-5, aprovadas por Alberto em 29/10/2026
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 37 --- valores de enumeração novos: Armazenamento (+tabela_propria).*
+
+*Revisão 38 --- campos alterados: Ajuda.*
 
 Cad_Obrigacao_Parametro_Valor
 
@@ -16919,7 +16908,7 @@ Revisão 29 (documento 140, seção 5.1, Q140-1 e Q140-3, aprovadas por Alberto;
 | **Campo** | **Tipo lógico** | **Descrição / regra** |
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Empresa_Programa** | *identificador* | --- |
-| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa admitida ou certificada. |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa admitida (a IN RFB 2.328/2026 trocou "certificação" por "admissão" no Confia; revisão 35, documento 191, Q191-2). |
 | **ID_Programa** | *referência (Cad_Classe_Sistema, domínio = programa_conformidade)* | Confia, Sintonia ou OEA (LC 225, art. 18). Domínio aberto, porque o art. 18, § 2º, deixa Estados, DF e Municípios regulamentarem programas próprios. |
 | **Esfera** | *enumeração {federal, estadual, municipal}* | Quem administra o programa. Os três programas da LC 225 são federais (RFB). |
 | **ID_Estado** | *referência (Cad_Estado), opcional* | Só em programa estadual. |
@@ -16927,8 +16916,10 @@ Revisão 29 (documento 140, seção 5.1, Q140-1 e Q140-3, aprovadas por Alberto;
 | **Situacao** | *enumeração {admitida, em_processo_de_exclusao, excluida}* | Em processo de exclusão: o OEA fica sem as facilitações desde a ciência da abertura (art. 36, § 3º). |
 | **ID_Classificacao** | *referência (Cad_Classe_Sistema, domínio = classificacao_programa_conformidade), opcional* | Grau de classificação no Sintonia (o selo só vem no maior grau, art. 40, II) ou modalidade e nível do OEA (art. 37, I, b). Domínio aberto e sem carga: quem define os valores é ato da RFB que não li. |
 | **Numero_Ato_Admissao** | *código (até 40), opcional* | Número do ato ou protocolo da admissão, digitado. |
+| **Data_Ato_Admissao** | *data, opcional* | Revisão 35 (documento 191, seção 4.2; D-N515: Q191-2): A data da publicação do ADE de admissão no DOU (IN RFB 2.295/2025, art. 21). O primeiro bônus do Confia só vem depois de 12 meses dela (art. 5º, § 4º, III); o Motor avisa se há bônus antes disso. Em até 60 dias dela o contribuinte pode confessar crédito não constituído sem multa (art. 21, § 3º): o ERP avisa o prazo. |
 | **Numero_Ato_Exclusao** | *código (até 40), opcional* | Número do ato declaratório executivo de exclusão (art. 28, § 3º) ou do ato do OEA. |
-| **Data_Ato_Exclusao** | *data, opcional* | Data do ato. Difere de Vigencia_Fim: a exclusão do Confia tem termo inicial na data do fato (art. 28, § 3º). |
+| **Data_Ato_Exclusao** | *data, opcional* | Data da publicação do ADE de exclusão; a data do fato que motivou a exclusão fica em Data_Fato_Exclusao (revisão 35, documento 191, Q191-2). Difere de Vigencia_Fim: a exclusão do Confia tem termo inicial na data do fato (art. 28, § 3º). |
+| **Data_Fato_Exclusao** | *data, opcional* | Revisão 35 (documento 191, seção 4.2; D-N515: Q191-2): A data do fato que motivou a exclusão (IN RFB 2.295/2025, art. 47, caput e § 1º, na redação da IN 2.317): a exclusão produz efeitos desde ela, formalizada pelo ADE. A publicação do ADE fica em Data_Ato_Exclusao. O Motor avisa a readmissão antes de 2 anos do ADE (art. 47, § 3º; LC 225, art. 28, § 7º). |
 | **ID_Motivo_Exclusao** | *referência (Cad_Classe_Sistema, domínio = motivo_exclusao_programa), opcional* | Cargas iniciais no anexo desta revisão. |
 | **Observacao** | *texto, opcional* | --- |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | Padrão da Fase 0, seção 9: entra provisório até o contador validar. |
@@ -16936,6 +16927,8 @@ Revisão 29 (documento 140, seção 5.1, Q140-1 e Q140-3, aprovadas por Alberto;
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 35 --- campos novos: Data_Ato_Admissao, Data_Fato_Exclusao; campos alterados: ID_Empresa, Data_Ato_Exclusao.*
 
 Mov_Selo_Conformidade
 
@@ -17010,7 +17003,7 @@ Revisão 29 (documento 140, seção 5.4, Q140-1; D-N447): os números do art. 41
 
 Mov_Bonus_Adimplencia_Csll
 
-Revisão 29 (documento 140, seção 5.5, Q140-1; D-N447): o bônus de adimplência de uma apuração de CSLL (LC 225, art. 41). Calculado pelo ERP a partir da linha de CSLL que ele já tem, entra provisório e só vale com a aprovação. Só vale com o título pago à vista até o vencimento; senão o valor concedido fica zero e a situação vira perdido. Não vale no Simples Nacional. O primeiro bônus só pode existir a partir de abril de 2027 (conta minha, arts. 40 a 47 em vigor desde 09/04/2026 e 12 meses de selo). O bônus não entra na base de tributo algum (art. 41, § 5º); o tratamento contábil e na ECF é ponto do contador (Q140-6). Aguardam resposta Q140-5 (cada recolhimento ou só a apuração final; como o desconto chega ao pagamento) e Q140-6.
+Revisão 29 (documento 140, seção 5.5, Q140-1; D-N447): o bônus de adimplência de uma apuração de CSLL (LC 225, art. 41). Calculado pelo ERP a partir da linha de CSLL que ele já tem, entra provisório e só vale com a aprovação. Só vale com o título pago à vista até o vencimento; senão o valor concedido fica zero e a situação vira perdido. Não vale no Simples Nacional. O primeiro bônus só pode existir a partir de abril de 2027 (conta minha, arts. 40 a 47 em vigor desde 09/04/2026 e 12 meses de selo). O bônus não entra na base de tributo algum (art. 41, § 5º); o tratamento contábil e na ECF é ponto do contador (Q140-6). Revisão 33 (documentos 180 e 181; D-N491 e D-N492): a Q140-5 foi respondida para o ERP: cada apuração de CSLL (estimativa mensal, trimestre e ajuste anual) calcula o seu bônus pelo próprio período; a guia entra pelo valor total e, na baixa, Valor_Baixado é o valor total do título, com Valor_Desconto (o desconto) e o dinheiro (Valor_Financeiro) separados; o desconto fica registrado em Valor_Desconto_Na_Baixa para a ECF; no ajuste anual as estimativas pagas com bônus abatem o valor total da guia (Q181-3). Três avisos do Motor (sem bloqueio, ainda não programados): baixa de título de CSLL com desconto e sem bônus previsto; bônus calculado e baixa sem desconto até o vencimento (situação perdido); desconto da baixa diferente do calculado. A chave Vale_Estimativa_Mensal não é criada (Q181-4). Aguardam o contador a Q140-6 (conta do bônus, exclusão na Parte A e linha da ECF) e a Receita as dúvidas 5b, 5d e 5e (pergunta 26 do documento 179); o ERP não lança o bônus até o contador responder (Q180-2).
 
 *Vigência: não.*
 
@@ -17029,11 +17022,15 @@ Revisão 29 (documento 140, seção 5.5, Q140-1; D-N447): o bônus de adimplênc
 | **Valor_Bonus_Ja_Concedido_No_Ano** | *número* | Soma do que já foi concedido no mesmo ano do benefício. |
 | **Valor_Bonus_Concedido** | *número* | O menor entre o teórico e o que sobra do limite anual. Zero se não pagou à vista até o vencimento. |
 | **Valor_Bonus_Nao_Aproveitado** | *número* | Parcela perdida: não passa para outro período (art. 41, § 4º). Informativo. |
-| **Pago_A_Vista_Ate_Vencimento** | *booleano* | O bônus só vale no pagamento à vista até o vencimento (art. 41, I). Preenchido pela baixa do título; pode ser corrigido pelo contador. |
+| **Pago_A_Vista_Ate_Vencimento** | *booleano* | O bônus só vale no pagamento à vista até o vencimento (art. 41, I). Preenchido pela baixa do título; pode ser corrigido pelo contador. Revisão 33 (documento 181; D-N491): vem da baixa ligada (ID_Baixa), e não de outra fonte. |
 | **Data_Pagamento** | *data, opcional* | --- |
-| **Situacao** | *enumeração {calculado, confirmado, perdido}* | Confirmado depois que o contador aprova (o mecanismo do desconto não está na lei: Q140-5). |
+| **ID_Baixa** | *referência (Mov_Titulo_Baixa), opcional* | Revisão 33 (documento 181, seção 2; D-N491 e D-N492): A baixa em que o desconto da CSLL foi dado. Vazia até a baixa. Valida: a baixa é de um título cuja origem é a guia da CSLL da apuração do bônus (ID_Apuracao_Item). Na baixa, Valor_Baixado é o valor total do título, com o desconto e o dinheiro separados (Q181-1); o campo liga o bônus à baixa e não duplica valor. |
+| **Valor_Desconto_Na_Baixa** | *número, opcional* | Revisão 33 (documento 181, seção 2; D-N491 e D-N492): Cópia do Valor_Desconto da baixa ligada (ID_Baixa). **É o valor que a ECF usa** (Q181-2): o desconto real é o do pagamento, e não o calculado. Diferente de Valor_Bonus_Concedido (o calculado) gera aviso do Motor, nunca bloqueio. |
+| **Situacao** | *enumeração {calculado, confirmado, perdido}* | Confirmado depois que o contador aprova (Q140-5, respondida em 06/11/2026: a guia entra pelo valor total e o desconto aparece na baixa; revisão 33). calculado: o ERP calculou o bônus da linha de CSLL; confirmado: a baixa ligada (ID_Baixa) tem desconto e o contador aprovou; perdido: o título foi pago sem desconto ou depois do vencimento.. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | --- |
 | **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | --- |
+
+*Revisão 33 --- campos novos: ID_Baixa, Valor_Desconto_Na_Baixa; campos alterados: Situacao, Pago_A_Vista_Ate_Vencimento.*
 
 43.5. Evento 412140 do fisco: Simples Nacional por item (NT 2026.005; documento 163)
 
@@ -17421,7 +17418,7 @@ Revisão 30 (documento 156, Q156-3, aprovada por Alberto em 04/11/2026; D-N463 e
 | **Exige_Compatibilidade_Funcao_E_Quantidade** | *booleano* | As características e a quantidade do bem são compatíveis com as funções do empregado (veículo, informática, comunicação, transporte, telefonia, dados). |
 | **Percentual_Desconto_Maximo** | *número, opcional* | Desconto especial a pessoas do inciso II do caput: até 25% (Decreto, art. 63, § 2º, IV, b). |
 | **Exige_Preco_Nao_Inferior_Custo** | *booleano* | Revenda de bem material: preço não inferior ao custo de aquisição (Decreto, art. 63, § 2º, IV, a). |
-| **Credito_Igual_Debito_Fornecedor** | *booleano* | O crédito do adquirente é igual ao débito do fornecedor, apurado e extinto no regime específico de planos de saúde ou de serviços financeiros (plano de saúde e vales). Liga ao B0b-2 e ao B4. |
+| **Credito_Igual_Debito_Fornecedor** | *booleano* | O crédito do adquirente é igual ao débito do fornecedor, apurado e extinto no regime específico de planos de saúde ou de serviços financeiros (plano de saúde e vales). Liga ao B0b-2 e ao B4. Revisão 38 (documento 200, seção 5.3, Q200-8; D-N533 e D-N534): o cálculo do crédito do plano de saúde dos empregados está em Mov_Rh_Beneficio_Credito_Cbs (art. 337 do Decreto 12.955); este campo só marca o critério. |
 | **Origem_Regra** | *enumeração {lei, decreto, ato_conjunto}* | De onde vem o critério. O que só o Decreto traz vai para o contador. |
 | **Fundamento_Legal** | *texto* | Os dois artigos, LC e Decreto. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória. |
@@ -17429,6 +17426,8 @@ Revisão 30 (documento 156, Q156-3, aprovada por Alberto em 04/11/2026; D-N463 e
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 38 --- campos alterados: Credito_Igual_Debito_Fornecedor.*
 
 Cad_Regra_Uso_Consumo_Pessoal
 
@@ -17825,7 +17824,7 @@ Revisão 30 (documento 168, G6, registro C181, Q167-1 e Q168-1 a Q168-5, aprovad
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Icms_St_Complemento_Devolucao_Saida** | *identificador* | --- |
 | **ID_Item_Entrada** | *referência (Mov_Nota_Fiscal_Entrada_Item)* | O item da nota de devolução. |
-| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Classe_Sistema, domínio = motivo_restituicao_complemento_icms_st)* | COD_MOT_REST_COMPL, tabela 5.7. |
+| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Efd_Codigo_Estadual), opcional* | COD_MOT_REST_COMPL: o motivo da tabela 5.7 (Cad_Efd_Codigo_Estadual, tabela cod_mot_rest_compl_st). Revisão 32 (documento 172, seção 7, Q172-9; D-N474 e D-N479): deixa de apontar para o domínio motivo_restituicao_complemento_icms_st. A carga cobre as 7 UFs que publicam a tabela (MG, MS, PA, RJ, RO, RS e SE); nas demais o ERP avisa, como a Q167-5 previa. Por isso o campo passa a opcional. |
 | **Quantidade_Convertida** | *número* | QUANT_CONV (6 decimais). |
 | **ID_Unidade_Conversao** | *referência (Cad_Unidade_Medida)* | UNID: a unidade usada em QUANT_CONV. |
 | **ID_Item_Saida** | *referência (Mov_Nota_Fiscal_Saida_Item), opcional* | O item da saída devolvida, quando está no ERP. |
@@ -17838,6 +17837,8 @@ Revisão 30 (documento 168, G6, registro C181, Q167-1 e Q168-1 a Q168-5, aprovad
 | **Numero_Fabricacao_Ecf_Saida** | *código (até 20), opcional* | ECF_FAB_SAIDA: só quando ID_Item_Saida está vazio. |
 | **Valor_Unitario_Convertido_Saida** | *número* | VL_UNIT_CONV_SAIDA. |
 
+*Revisão 32 --- campos alterados: ID_Motivo_Restituicao_Complemento.*
+
 Mov_Icms_St_Complemento_Saida
 
 Revisão 30 (documento 168, G6, registro C185, Q167-1 e Q168-1 a Q168-5, aprovadas por Alberto em 03/11/2026; D-N460 e D-N461): o complemento da nota de saída de mercadoria com ST (C185), filho 1:1 do item de saída; NUM_ITEM, COD_ITEM, CST_ICMS e CFOP vêm do item. Habilitação: valor efd_c185.
@@ -17848,7 +17849,7 @@ Revisão 30 (documento 168, G6, registro C185, Q167-1 e Q168-1 a Q168-5, aprovad
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Icms_St_Complemento_Saida** | *identificador* | --- |
 | **ID_Item_Saida** | *referência (Mov_Nota_Fiscal_Saida_Item)* | O item (1:1). NUM_ITEM, COD_ITEM, CST_ICMS e CFOP vêm dele. |
-| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Classe_Sistema, domínio = motivo_restituicao_complemento_icms_st)* | COD_MOT_REST_COMPL. |
+| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Efd_Codigo_Estadual), opcional* | COD_MOT_REST_COMPL: o motivo da tabela 5.7 (Cad_Efd_Codigo_Estadual, tabela cod_mot_rest_compl_st). Revisão 32 (documento 172, seção 7, Q172-9; D-N474 e D-N479): deixa de apontar para o domínio motivo_restituicao_complemento_icms_st. A carga cobre as 7 UFs que publicam a tabela (MG, MS, PA, RJ, RO, RS e SE); nas demais o ERP avisa, como a Q167-5 previa. Por isso o campo passa a opcional. |
 | **Quantidade_Convertida** | *número* | QUANT_CONV (6 decimais). |
 | **ID_Unidade_Conversao** | *referência (Cad_Unidade_Medida)* | UNID: a unidade usada em QUANT_CONV. |
 | **Valor_Unitario_Convertido** | *número* | VL_UNIT_CONV. |
@@ -17862,6 +17863,8 @@ Revisão 30 (documento 168, G6, registro C185, Q167-1 e Q168-1 a Q168-5, aprovad
 | **Icms_St_Complemento_Unitario** | *número* | VL_UNIT_ICMS_ST_CONV_COMPL (complemento). |
 | **Fcp_St_Complemento_Unitario** | *número* | VL_UNIT_FCP_ST_CONV_COMPL (complemento). |
 
+*Revisão 32 --- campos alterados: ID_Motivo_Restituicao_Complemento.*
+
 Mov_Icms_St_Complemento_Saida_Entrada
 
 Revisão 30 (documento 168, G6, registro C186, Q167-1 e Q168-1 a Q168-5, aprovadas por Alberto em 03/11/2026; D-N460 e D-N461): as entradas ligadas à saída do C185 (C186), filho 1:N. Quando a entrada não está no ERP, os campos de identificação dela ficam preenchidos à mão. Habilitação: valor efd_c186.
@@ -17873,7 +17876,7 @@ Revisão 30 (documento 168, G6, registro C186, Q167-1 e Q168-1 a Q168-5, aprovad
 | **ID_Icms_St_Complemento_Saida_Entrada** | *identificador* | --- |
 | **ID_Icms_St_Complemento_Saida** | *referência (Mov_Icms_St_Complemento_Saida)* | O C185 pai. |
 | **ID_Item_Entrada** | *referência (Mov_Nota_Fiscal_Entrada_Item), opcional* | A entrada, quando está no ERP. |
-| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Classe_Sistema, domínio = motivo_restituicao_complemento_icms_st)* | COD_MOT_REST_COMPL (tabela 5.7; a carga depende da tabela, Q167-5; até lá o ERP avisa). |
+| **ID_Motivo_Restituicao_Complemento** | *referência (Cad_Efd_Codigo_Estadual), opcional* | COD_MOT_REST_COMPL: o motivo da tabela 5.7 (Cad_Efd_Codigo_Estadual, tabela cod_mot_rest_compl_st). Revisão 32 (documento 172, seção 7, Q172-9; D-N474 e D-N479): deixa de apontar para o domínio motivo_restituicao_complemento_icms_st. A carga cobre as 7 UFs que publicam a tabela (MG, MS, PA, RJ, RO, RS e SE); nas demais o ERP avisa, como a Q167-5 previa. Por isso o campo passa a opcional. |
 | **Quantidade_Convertida** | *número* | QUANT_CONV (6 decimais). |
 | **ID_Unidade_Conversao** | *referência (Cad_Unidade_Medida)* | UNID: a unidade usada em QUANT_CONV. |
 | **ID_Modelo_Documento_Entrada** | *referência (Cad_Modelo_Documento_Fiscal), opcional* | COD_MOD_ENTRADA: só quando ID_Item_Entrada está vazio. |
@@ -17887,6 +17890,8 @@ Revisão 30 (documento 168, G6, registro C186, Q167-1 e Q168-1 a Q168-5, aprovad
 | **Base_St_Unitaria** | *número* | VL_UNIT_BC_ICMS_ST_ENTRADA. |
 | **Icms_St_Unitario_Entrada** | *número* | VL_UNIT_ICMS_ST_CONV_ENTRADA. |
 | **Fcp_St_Unitario_Entrada** | *número* | VL_UNIT_FCP_ST_CONV_ENTRADA. |
+
+*Revisão 32 --- campos alterados: ID_Motivo_Restituicao_Complemento.*
 
 Mov_Ciap_Movimentacao_Documento
 
@@ -17987,11 +17992,17 @@ Revisão 30 (documento 168, G14, Q167-1 e Q168-1 a Q168-5, aprovadas por Alberto
 | **ID_Utilidade_Classificacao_Efd_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Utilidade_Classificacao_Efd_Versao). ID_Utilidade_Classificacao_Efd é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
 | **Documento** | *enumeração {nf3e, nfgas} --- identidade* | Qual nota. |
 | **Grupo_Classificacao** | *código (3) --- identidade* | Os três primeiros dígitos do cClass (o grupo). |
-| **Campo_Efd_Destino** | *enumeração {fornecimento, servico_nao_tributado, terceiros, despesas_acessorias, energia_injetada, outras_deducoes}* | O campo do C500 que recebe a soma do grupo (VL_FORN, VL_SERV_NT, VL_TERC, VL_DA, ENER_INJET, OUTRAS_DED). |
+| **Campo_Efd_Destino** | *enumeração {fornecimento, servico_nao_tributado, terceiros, despesas_acessorias, energia_injetada, outras_deducoes} --- identidade* | O campo do C500 que recebe a soma do grupo (VL_FORN, VL_SERV_NT, VL_TERC, VL_DA, ENER_INJET, OUTRAS_DED). Revisão 32 (documento 175, seção 9.2, Q175-9; D-N480): entra na identidade (documento, grupo e campo de destino): o grupo de cClass 085 e o 087 da NF3e alimentam cinco campos do C500 (VL_FORN, VL_SERV_NT, VL_TERC, ENER_INJET e OUTRAS_DED). A carga é só a da NF3e (23 linhas); a NFGás fica sem carga, com aviso do Motor. |
 | **Natureza_Valor** | *enumeração {soma, deducao}* | Sinal do item nos totais. |
+| **Cbs_Zero_Zfm_Alc** | *booleano, opcional* | Revisão 34 (documento 184, seção 11; D-N498: Q184-14): Revisão 34 (documento 184, seção 11; Q184-14): a marca do grupo na tabela de cClass da NFGás (coluna "CBS zero ZFM/ALC": grupos 021, 070, 073 e 500). Vazio onde a tabela não traz marca (NF3e). O Motor avisa quando a marca vale e o destinatário está em área incentivada; o ERP só registra. |
+| **Fatura_Agregadora** | *booleano, opcional* | Revisão 34 (documento 184, seção 11; D-N498: Q184-14): Revisão 34 (documento 184, seção 11; Q184-14): a marca do grupo 060 (fatura agregadora) na tabela de cClass da NFGás. Vazio nos demais grupos e na NF3e. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 32 --- campos alterados: Campo_Efd_Destino.*
+
+*Revisão 34 --- campos novos: Cbs_Zero_Zfm_Alc, Fatura_Agregadora.*
 
 **Cargas de partida da revisão 30 (linhas de tabela, não campos)**
 
@@ -18003,7 +18014,7 @@ Revisão 30 (documento 168, G14, Q167-1 e Q168-1 a Q168-5, aprovadas por Alberto
 | Cad_Regra_Base_Calculo_Cbs (19 linhas) | Anexo D do documento 156, com Vigencia_Inicio de partida 01/01/2026 (a confirmar pelo contador) e a janela de 01/01/2026 a 31/12/2032 na linha 13 (ICMS, ISS, PIS e Cofins) |
 | Cad_Regra_Valor_Mercado (8 linhas) | Anexo E do documento 156 (Decreto 12.955, art. 14); bolsa e ativo virtual com Depende_De_Ato_Conjunto |
 | Cad_Regra_Conversao_Cambial_Base (2 linhas) | operacao_geral (PTAX de venda do dólar do dia anterior ao fato gerador, última taxa disponível, conversão via dólar) e importacao_bens_materiais (taxa do Imposto de Importação, Decreto art. 81). A variação cambial da venda é o valor convertido na data; a da baixa vem da baixa do contas a pagar ou a receber, com a taxa do contrato de câmbio (Q156-8, resposta de Alberto) |
-| Cad_Classe_Sistema, domínios novos (todos abertos) | Os 19 domínios listados na descrição de Dominio, com os valores dos documentos 156, 164 e 168; motivo_restituicao_complemento_icms_st (tabela 5.7 da EFD) e Cad_Utilidade_Classificacao_Efd (cClass) ficam sem carga até haver tabela oficial (Q167-5) |
+| Cad_Classe_Sistema, domínios novos (todos abertos) | Os 19 domínios listados na descrição de Dominio, com os valores dos documentos 156, 164 e 168; a tabela 5.7 da EFD (antes o domínio motivo_restituicao_complemento_icms_st, que saiu da lista na revisão 32) é carregada em Cad_Efd_Codigo_Estadual para as 7 UFs que a publicam, e Cad_Utilidade_Classificacao_Efd (cClass) recebe a carga da NF3e (23 linhas), enquanto a NFGás segue sem carga (revisão 32, documentos 172 e 175; Q167-5) |
 | Cad_Classe_Sistema, domínios existentes | modulo_fiscal_opcional ganha efd_c176, efd_c180, efd_c181, efd_c185, efd_c186 e efd_1250_1255; situacao_documento_fiscal ganha 09 e 10; modelo_documento_fiscal ganha 63; qualificacao_cbs ganha agente_ccee; tipo_operacao_equiparada ganha os dois valores do art. 5º |
 | Cad_Dfe_Evento_Tipo (BP-e, modelo 63) | 110111 (cancelamento), 110115 (não embarque), 110116 (alteração de poltrona), 110117 (excesso de bagagem), 110300, 110301, 412140 e 412141, só com o que o documento 164 confirma; os demais campos ficam sem valor, provisórios |
 | Cad_Dfe_Leiaute (BP-e) | BPe, BPeTA e BPeTM, versão 1.00, sem as datas (a NT 2026.004 v1.01 e a NT 2026.005 não vieram; Q164-12) |
@@ -18502,3 +18513,2895 @@ Revisão 31 (documento 170, Q170-6, "Sim para Todos" de Alberto em 04/11/2026; D
 | Acréscimos do art. 27 | O Decreto tem 22 artigos que remetem ao art. 27, e não "mais de dez" |
 | Espelho da Apuração Assistida | O espelho é o da Plataforma; a competência do ERP segue o fato gerador (Mov_Apuracao_Tributo_Item.Competencia_Debito) |
 | Saldo de 2026 | Não passa a 2027 (Decreto, art. 465); Mov_Cbs_Pedido_Ressarcimento não aceita período de 2026 para saldo da apuração informativa |
+
+
+
+46\. Anexo --- Entidades novas da revisão 32 (tabelas do validador da EFD-ICMS/IPI, lacunas setoriais G15 a G19, FAQ da Receita e registro 1601) e cargas de partida
+
+Revisão 32 do dicionário (consolidação de 05/11/2026, com o escopo "também 175 e 176 completos"): 32 entidades novas neste módulo (272 campos declarados nas tabelas; o dicionário acrescenta as colunas de vigência e as chaves de versão dos mestres). Documento 172 (D-N474 e D-N479): 4 entidades. Documento 175 (D-N480): 27 entidades, depois de o C171 sair (Mov_Nota_Fiscal_Entrada_Item_Tanque vai ao Bloco 1 de combustíveis, que fica para um bloco próprio; Q167-6). Documento 176 (D-N482 e D-N484): 1 entidade. Todas ficam na Contabilidade & Fiscal e, como são registros que o ERP lê ou grava para gerar a EFD-ICMS/IPI, entram todas (D-N68: nenhuma é de regime que só vale com cliente). As lacunas G15 a G19 ficam atrás de habilitação por empresa (Cad_Empresa_Modulo_Opcional), nenhuma ligada por padrão.
+
+46.1. Tabelas do validador da EFD-ICMS/IPI por UF (documento 172)
+
+Cad_Icms_Beneficio_Ajuste_Codigo
+
+Revisão 32 (documento 172, seção 5.2, Q172-1; D-N474 e D-N479): o catálogo do ajuste de benefício da EFD-ICMS/IPI (AJ_BENEF_INCENTIVO): 3.383 linhas lidas, todas no formato UF mais 8 dígitos, com carga provisória. O vínculo com o ajuste da apuração (Cad_Icms_Codigo_Ajuste) não está no arquivo e só é preenchido por pessoa. Não é a tabela 5.1.2 do Guia (que é da CPRB na EFD-Contribuições; documento 175, seção 9.4).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_Beneficio_Ajuste_Codigo** | *identificador* | --- |
+| **ID_Icms_Beneficio_Ajuste_Codigo_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_Beneficio_Ajuste_Codigo_Versao). ID_Icms_Beneficio_Ajuste_Codigo é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | A UF do arquivo. |
+| **Codigo** | *código (10) --- identidade* | O código como a UF o publica. Mais o início da vigência, a chave de cada versão. |
+| **Descricao** | *texto* | Como veio, sem limpeza. |
+| **ID_Icms_Codigo_Ajuste** | *referência (Cad_Icms_Codigo_Ajuste), opcional* | O ajuste da 5.1.1 a que o benefício se liga. Só preenchido por pessoa. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | provisorio na carga. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Alerta_Carga** | *texto, opcional* | O aviso da carga. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_Informacao_Adicional_Codigo
+
+Revisão 32 (documento 172, seção 5.3, Q172-1; D-N474 e D-N479): o catálogo da informação adicional da apuração (INF_ADIC_APUR, COD_INF_ADIC do E115 e do 1925): 6.831 linhas, em UF mais 6 dígitos. Em ES e DF é o catálogo de benefícios; em AL traz 2.304 códigos de parcela. Guarda só o código e o texto, com ligação opcional ao cBenef, só quando uma pessoa liga.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_Informacao_Adicional_Codigo** | *identificador* | --- |
+| **ID_Icms_Informacao_Adicional_Codigo_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_Informacao_Adicional_Codigo_Versao). ID_Icms_Informacao_Adicional_Codigo é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | A UF do arquivo. |
+| **Codigo** | *código (8) --- identidade* | O código como a UF o publica; com o início da vigência, a chave. |
+| **Descricao** | *texto* | Como veio. |
+| **ID_Beneficio_Fiscal_Icms** | *referência (Cad_Beneficio_Fiscal_Icms), opcional* | O cBenef correspondente, só quando uma pessoa liga. Nenhuma ligação por igualdade de código. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | provisorio na carga. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Alerta_Carga** | *texto, opcional* | O aviso da carga. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Efd_Codigo_Estadual
+
+Revisão 32 (documento 172, seção 7, Q172-9; D-N474 e D-N479): as listas pequenas por UF da EFD-ICMS/IPI numa só entidade (o tipo da lista é o campo ID_Tabela_Oficial, que entra na identidade): utilização de crédito fiscal (1200), itens do IPM (1400), produtos de usina, motivo de restituição ou complemento do ICMS-ST (tabela 5.7), informação do item de PE e sub-apuração de PE, com 1.226 linhas; a tabela 4.4.6 dos totalizadores parciais da Redução Z (21 padrões, sem UF) entra aqui pelo documento 175. Catálogo provisório; as três entidades de complemento do ICMS-ST apontam para ele.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Efd_Codigo_Estadual** | *identificador* | --- |
+| **ID_Efd_Codigo_Estadual_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Efd_Codigo_Estadual_Versao). ID_Efd_Codigo_Estadual é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Tabela_Oficial** | *referência (Cad_Tabela_Oficial) --- identidade* | Qual das sete tabelas (tp_util_cred_fiscais, cod_item_ipm, cod_prod_usinas, cod_mot_rest_compl_st, cod_inf_item, ind_subap). |
+| **ID_Estado** | *referência (Cad_Estado), opcional --- identidade* | A UF; vazio na GENERICA. |
+| **Codigo** | *código (40) --- identidade* | Como a UF publica; com o início da vigência, a chave. |
+| **Descricao** | *texto* | Como veio. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | provisorio na carga. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Alerta_Carga** | *texto, opcional* | O aviso da carga. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Iss_Df_Valor_Uniprofissional
+
+Revisão 32 (documento 172, seção 8.1, Q172-10; D-N474 e D-N479): o valor fixo anual do ISS por profissional da sociedade uniprofissional do DF (ISS_UNIPROF: 297,04 em 2019 a 358,42 em 2022), como número. O ERP não o usa em cálculo (a relação com Mov_Apuracao_Iss_Df.Valor_Iss_Recolher_Unico não está no arquivo; Q172-E2).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Iss_Df_Valor_Uniprofissional** | *identificador* | --- |
+| **ID_Iss_Df_Valor_Uniprofissional_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Iss_Df_Valor_Uniprofissional_Versao). ID_Iss_Df_Valor_Uniprofissional é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | O DF. |
+| **Valor_Por_Profissional** | *número* | O valor do ano, em número (a vírgula do arquivo vira ponto na carga; os valores lidos são 297,04 em 2019, 307,05 em 2020, 323,02 em 2021 e 358,42 em 2022). |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | provisorio na carga. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Alerta_Carga** | *texto, opcional* | O aviso da carga. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+46.2. G15: Bloco 1 sem combustíveis e usina (1100 a 1110, 1200 a 1210, 1400, 1700 a 1710, 1800 e GIAF de Pernambuco; documento 175)
+
+Mov_Exportacao_Declaracao
+
+Revisão 32 (documento 175, seção 4.1; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A declaração de exportação concluída no mês, uma linha por registro de exportação (RE) quando há mais de um para a mesma declaração (registro 1100). A nota de saída de exportação liga-se a ela pelo item (`Mov_Nota_Fiscal_Saida_Item_Exportacao.ID_Exportacao_Declaracao`); com isso o 1105 e o 1110 saem por derivação, sem entidade própria. Só existe para quem exporta (habilitação `efd_exportacao_1100`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Exportacao_Declaracao** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento efetivo exportador, direto ou indireto. |
+| **Competencia** | *competência* | O mês em que a exportação se concluiu, e em que o 1100 sai (o Guia manda preencher "no mês em que se concluir a exportação"). |
+| **Tipo_Documento** | *enumeração {declaracao_exportacao, declaracao_simplificada, declaracao_unica}* | IND_DOC 0, 1 e 2 (DE, DSE e DU-E). |
+| **Numero_Declaracao** | *código (até 14)* | NRO_DE. A DU-E tem 14 posições; já existe em `Mov_Dfe_Evento_Item.Numero_Due` quando o evento de averbação 790700 foi recebido. |
+| **Data_Declaracao** | *data* | DT_DE. |
+| **Natureza_Exportacao** | *enumeração {direta, indireta}* | NAT_EXP 0 e 1. Na indireta o item da nota traz a nota de origem (1110). |
+| **Numero_Registro_Exportacao** | *código (até 12), opcional* | NRO_RE: obrigatório quando o tipo é declaração de exportação (IND_DOC 0). |
+| **Data_Registro_Exportacao** | *data, opcional* | DT_RE. |
+| **Numero_Conhecimento_Embarque** | *código (até 18), opcional* | CHC_EMB. |
+| **Data_Conhecimento_Embarque** | *data, opcional* | DT_CHC. |
+| **Data_Averbacao** | *data* | DT_AVB. Quando o evento 790700 existe (`Mov_Dfe_Evento_Item.Data_Hora_Averbacao`), a data é copiada dele e o usuário confirma. |
+| **ID_Tipo_Conhecimento_Embarque** | *referência (Cad_Classe_Sistema, domínio = tipo_conhecimento_embarque)* | TP_CHC: AWB, MAWB, HAWB, BL, CRT e os demais 22 códigos do Guia. |
+| **ID_Pais_Destino** | *referência (Cad_Pais)* | PAIS: país de destino da mercadoria, pela tabela do Siscomex (`Cad_Pais`). |
+| **ID_Dfe_Evento_Item** | *referência (Mov_Dfe_Evento_Item), opcional* | O evento de averbação de onde vieram a DU-E e a data, quando existe. |
+
+Mov_Valor_Agregado_Municipio
+
+Revisão 32 (documento 175, seção 4.3; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O valor mensal por município e por item do índice de participação dos municípios (registro 1400), exigido só pela UF que o pede. A tabela de itens (5.9.1 e 5.9.2) é o catálogo `Cad_Efd_Codigo_Estadual` (`cod_item_ipm`, 568 linhas do documento 172); a regra de cálculo de cada UF (de qual CFOP e produto vem o valor, e qual município conta, origem ou destino) **não está no Guia**, então o valor é informado e não calculado (Q175-C1).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Valor_Agregado_Municipio** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento declarante, ou com inscrição de substituto tributário na UF. |
+| **Competencia** | *competência* | O mês. |
+| **ID_Efd_Codigo_Estadual** | *referência (Cad_Efd_Codigo_Estadual), opcional* | COD_ITEM_IPM quando é código da tabela 5.9.1 (ou 5.9.2, no ST). Exatamente um entre este campo e `ID_Produto_Servico`. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico), opcional* | COD_ITEM_IPM quando é o código do item do registro 0200. |
+| **ID_Municipio** | *referência (Cad_Municipio)* | MUN: município de origem ou destino, conforme a regra da UF. |
+| **Valor_Agregado** | *número* | VALOR: valor mensal do município. |
+| **Origem_Valor** | *enumeração {informado, calculado_pelo_erp}* | `informado` hoje. `calculado_pelo_erp` fica reservado para quando o contador trouxer a regra da UF (Q175-C1). |
+
+Mov_Documento_Dispositivo_Utilizado
+
+Revisão 32 (documento 175, seção 4.5; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A faixa de dispositivos autorizados e utilizados na emissão de documentos fiscais em papel no mês (registro 1700), exigida só pela UF que controla a utilização (a UF diz). O número da autorização de impressão (NUM_AUT, até 60 posições) e o tipo do dispositivo não estão em `Cad_Serie_Documento_Fiscal`, que só guarda série e numeração.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Documento_Dispositivo_Utilizado** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento. |
+| **Competencia** | *competência* | O mês da EFD. |
+| **ID_Serie_Documento_Fiscal** | *referência (Cad_Serie_Documento_Fiscal)* | COD_MOD e SER saem da série. |
+| **Subserie** | *código (até 3), opcional* | SUB do dispositivo autorizado. |
+| **ID_Tipo_Dispositivo** | *referência (Cad_Classe_Sistema, domínio = tipo_dispositivo_documento_fiscal)* | COD_DISP 00 a 05: formulário de segurança (impressor autônomo), FS-DA, formulário de segurança da NF-e, formulário contínuo, blocos e jogos soltos. |
+| **Numero_Inicial** | *número* | NUM_DOC_INI: primeiro número utilizado (12 posições). |
+| **Numero_Final** | *número* | NUM_DOC_FIN: último número utilizado. |
+| **Numero_Autorizacao** | *código (até 60)* | NUM_AUT: número da autorização do dispositivo. |
+
+Mov_Documento_Dispositivo_Cancelado
+
+Revisão 32 (documento 175, seção 4.5; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A faixa cancelada ou inutilizada dentro da faixa utilizada (registro 1710). Os documentos eletrônicos inutilizados ficam em `Mov_Dfe_Inutilizacao`; esta entidade é só para o papel.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Documento_Dispositivo_Cancelado** | *identificador* | --- |
+| **ID_Documento_Dispositivo_Utilizado** | *referência (Mov_Documento_Dispositivo_Utilizado)* | A faixa utilizada (1700) que contém a faixa cancelada. |
+| **Numero_Inicial** | *número* | NUM_DOC_INI do 1710. |
+| **Numero_Final** | *número* | NUM_DOC_FIN do 1710. |
+
+Mov_Dcta_Apuracao
+
+Revisão 32 (documento 175, seção 4.6; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O demonstrativo de crédito do ICMS sobre o transporte aéreo (DCTA, registro 1800), um por estabelecimento e mês. Guarda só as **quatro entradas**; o faturamento, o índice de rateio, o crédito e a base apurados e a diferença são cálculo do Motor. A diferença (VL_DIF) vira o estorno de crédito da apuração, ligado em `ID_Apuracao_Ajuste`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Dcta_Apuracao** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | A empresa de transporte aéreo. |
+| **Competencia** | *competência* | O mês. |
+| **Valor_Prestacao_Carga_Tributada** | *número* | VL_CARGA: valor das prestações de carga (tributado). |
+| **Valor_Prestacao_Passageiro_Nao_Tributada** | *número* | VL_PASS: valor das prestações de passageiros e cargas (não tributado). |
+| **Valor_Creditos_Icms** | *número* | VL_ICMS_ANT: total dos créditos do ICMS. |
+| **Valor_Base_Calculo_Icms** | *número* | VL_BC_ICMS: valor da base de cálculo do ICMS. |
+| **ID_Apuracao_Ajuste** | *referência (Mov_Apuracao_Ajuste), opcional* | O ajuste de estorno de crédito (E111) que recebe a diferença VL_DIF. Vazio até o Motor gerá-lo. |
+
+Cad_Efd_Giaf_Campo
+
+Revisão 32 (documento 175, seção 4.7; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O catálogo dos campos das GIAF 1, 3 e 4 (registros 1960, 1970, 1975 e 1980), **exclusivos de contribuintes de Pernambuco** (Guia, seção 3). Os campos são numerados `G1_01` a `G4_12`, com descrição e sem fórmula no Guia; por isso entram como catálogo com vigência, e o valor de cada um é informado. Carga provisória do Guia (Anexo A.1).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Efd_Giaf_Campo** | *identificador* | --- |
+| **ID_Efd_Giaf_Campo_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Efd_Giaf_Campo_Versao). ID_Efd_Giaf_Campo é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Modelo_Giaf** | *enumeração {giaf_1_industria, giaf_3_importacao, giaf_4_central_distribuicao} --- identidade* | GIAF 1 (1960), GIAF 3 (1970 e 1975) ou GIAF 4 (1980). |
+| **Codigo_Campo** | *código (até 6) --- identidade* | G1_01, G3_T, G4_12 etc., como no Guia. |
+| **Descricao** | *texto* | Como no Guia. |
+| **Tipo_Valor** | *enumeração {valor, percentual}* | `percentual` nos campos que o Guia chama de percentual (G1_01, G3_04, G4_01 e G4_04). |
+| **Registro_Efd** | *enumeração {r1960, r1970, r1975, r1980}* | O registro que traz o campo; o G3_10 a G3_12 saem no 1975, por alíquota. |
+| **Ordem** | *número* | A posição do campo no registro. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Efd_Giaf_Apuracao
+
+Revisão 32 (documento 175, seção 4.7; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Uma GIAF do mês por estabelecimento, modelo e indicador de sub-apuração por tipo de benefício (IND_AP, tabela 4.7.1): é o cabeçalho de 1960, 1970 e 1980. Habilitação `efd_giaf_pe`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Efd_Giaf_Apuracao** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial) --- identidade* | O estabelecimento de Pernambuco. |
+| **Competencia** | *competência --- identidade* | O mês. |
+| **Modelo_Giaf** | *enumeração {giaf_1_industria, giaf_3_importacao, giaf_4_central_distribuicao} --- identidade* | Qual GIAF. |
+| **ID_Efd_Codigo_Estadual** | *referência (Cad_Efd_Codigo_Estadual) --- identidade* | IND_AP: a linha de `ind_subap` (49 linhas de PE, documento 172) que o Guia chama de tabela 4.7.1. |
+
+Mov_Efd_Giaf_Valor
+
+Revisão 32 (documento 175, seção 4.7; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O valor de cada campo da GIAF. No 1975 há uma linha por alíquota das importações-base (até quatro), com os campos G3_10 a G3_12.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Efd_Giaf_Valor** | *identificador* | --- |
+| **ID_Efd_Giaf_Apuracao** | *referência (Mov_Efd_Giaf_Apuracao) --- identidade* | A GIAF. |
+| **ID_Efd_Giaf_Campo** | *referência (Cad_Efd_Giaf_Campo) --- identidade* | O campo. |
+| **Aliquota_Importacao_Base** | *número, opcional --- identidade* | ALIQ_IMP_BASE do 1975. Obrigatório nos campos G3_10 a G3_12; vazio nos demais. |
+| **Valor** | *número* | O valor informado, ou o percentual quando `Tipo_Valor` é `percentual`. |
+
+46.3. G16: Redução Z, Convênio ICMS 115/03 e resumo do SAT (documento 175)
+
+Mov_Ecf_Reducao_Z_Totalizador
+
+Revisão 32 (documento 175, seção 5.2; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Os totalizadores parciais da Redução Z (registro C420, e D365 no ECF de bilhete): o ICMS e o ISSQN da Redução Z não estavam em lugar nenhum (`Mov_Ecf_Reducao_Z_Tributo` só tem PIS e Cofins). O código é do padrão da tabela 4.4.6 (Tnnnn, xxTnnnn, Fn, In, Nn, Snnnn, DT, AT, CAN-T e os demais), e o "nnnn" é a carga tributária efetiva em duas casas.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Reducao_Z_Totalizador** | *identificador* | --- |
+| **ID_Reducao_Z** | *referência (Mov_Ecf_Reducao_Z)* | A Redução Z do equipamento (de mercadoria ou de bilhete). |
+| **ID_Efd_Codigo_Estadual** | *referência (Cad_Efd_Codigo_Estadual)* | O padrão da tabela 4.4.6 (`tot_parc_redz`, 21 linhas) a que o código obedece. |
+| **Codigo_Totalizador** | *código (até 7)* | COD_TOT_PAR como o equipamento o grava (T1800, 02T1800, F1, I1, S0500, OPNF, DT...). O Motor confere o código contra o padrão e avisa quando não confere. |
+| **Numero_Totalizador** | *número, opcional* | NR_TOT: o número do totalizador (01 a 30) quando há mais de um para a mesma situação tributária ou alíquota. Regra de validação (FAQ 11.15.2.1; documento 176, seção 4.5): quando o código segue o padrão xxTnnnn o número é obrigatório, e o Motor avisa se vier vazio ou fora de 01 a 30. |
+| **Descricao_Situacao_Tributaria** | *texto, opcional* | DESCR_NR_TOT: descrição da situação tributária do totalizador. |
+| **Valor_Acumulado** | *número* | VLR_ACUM_TOT: valor acumulado no totalizador, relativo à Redução Z. |
+
+Mov_Ecf_Reducao_Z_Totalizador_Item
+
+Revisão 32 (documento 175, seção 5.2; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O resumo de itens do movimento diário (registro C425): o item, a quantidade e o valor por totalizador. É obrigatório quando o totalizador é Tnnnn, xxTnnnn, Fn, In ou Nn, e não se informa para OPNF nem para cancelamentos (Guia, C425); o item não repete dentro do mesmo totalizador. O PIS e a Cofins do item continuam em `Mov_Ecf_Reducao_Z_Tributo`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Reducao_Z_Totalizador_Item** | *identificador* | --- |
+| **ID_Reducao_Z_Totalizador** | *referência (Mov_Ecf_Reducao_Z_Totalizador) --- identidade* | O totalizador (C420) a que o item pertence. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico) --- identidade* | COD_ITEM. |
+| **Quantidade** | *número* | QTD: quantidade acumulada do item. Só existia `Quantidade_Base_Calculo`, que é outra coisa. |
+| **ID_Unidade_Medida** | *referência (Cad_Unidade_Medida)* | UNID. |
+| **Valor_Item** | *número* | VL_ITEM: valor acumulado do item. |
+
+Mov_Ecf_Reducao_Z_Analitico
+
+Revisão 32 (documento 175, seção 5.2; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O registro analítico do movimento diário por CST, CFOP e alíquota (C490, e D390 no ECF de bilhete). Não se deriva de documentos: a fonte é a Redução Z, que totaliza por situação tributária, e o CST e o CFOP que classificam cada totalizador dependem do cadastro do produto **no dia**; guardar evita reescrever a história quando o cadastro muda (regra da seção 2).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Reducao_Z_Analitico** | *identificador* | --- |
+| **ID_Reducao_Z** | *referência (Mov_Ecf_Reducao_Z)* | A Redução Z. |
+| **ID_Cst** | *referência (Cad_Cst)* | CST_ICMS. |
+| **ID_CFOP** | *referência (Cad_CFOP)* | CFOP. |
+| **Aliquota_Icms** | *número, opcional* | ALIQ_ICMS. |
+| **Valor_Operacao** | *número* | VL_OPR: valor da operação na combinação. |
+| **Base_Calculo_Icms** | *número* | VL_BC_ICMS. |
+| **Valor_Icms** | *número* | VL_ICMS. |
+| **Base_Calculo_Iss** | *número, opcional* | VL_BC_ISSQN: só no D390 (ECF de bilhete). |
+| **Aliquota_Iss** | *número, opcional* | ALIQ_ISSQN: só no D390. |
+| **Valor_Iss** | *número, opcional* | VL_ISSQN: só no D390. |
+| **ID_Observacao_Lancamento** | *referência (Cad_Observacao_Lancamento_Fiscal), opcional* | COD_OBS da combinação (tabela 0460). |
+
+Mov_Convenio115_Consolidacao
+
+Revisão 32 (documento 175, seção 5.4; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A consolidação do arquivo mestre do Convênio ICMS 115/03 por série e faixa de ordem: energia, gás e NF3e (C700, modelos 06, 28 e 66) e comunicação e telecomunicação (D695, modelos 21 e 22). Só o prestador sujeito ao convênio a escritura (habilitação `efd_convenio_115`); as notas individuais **não** ficam na EFD, só o mestre.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Convenio115_Consolidacao** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento prestador. |
+| **Competencia** | *competência* | O mês da EFD em que o arquivo mestre é escriturado. |
+| **ID_Modelo_Documento** | *referência (Cad_Modelo_Documento_Fiscal)* | COD_MOD: 06, 28 ou 66 (C700); 21 ou 22 (D695). O modelo decide o registro. |
+| **Serie** | *código (até 4), opcional* | SER. |
+| **Numero_Ordem_Inicial** | *número* | NRO_ORD_INI. |
+| **Numero_Ordem_Final** | *número* | NRO_ORD_FIN. |
+| **Data_Emissao_Inicial** | *data* | DT_DOC_INI. |
+| **Data_Emissao_Final** | *data* | DT_DOC_FIN. |
+| **Nome_Arquivo_Mestre** | *código (até 33), opcional* | NOM_MEST: nome do arquivo mestre de documento fiscal. |
+| **Chave_Codificacao_Digital** | *código (até 32), opcional* | CHV_COD_DIG: chave de codificação digital do arquivo mestre (hash de 32 posições). Não é a `Hash_Convenio_115` da nota referenciada. |
+
+Mov_Convenio115_Consolidacao_Analitico
+
+Revisão 32 (documento 175, seção 5.4; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O registro analítico da consolidação (C790 e D696) por CST, CFOP e alíquota. Guardado porque as notas do mestre não estão no ERP: não há de onde derivar.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Convenio115_Consolidacao_Analitico** | *identificador* | --- |
+| **ID_Convenio115_Consolidacao** | *referência (Mov_Convenio115_Consolidacao)* | A consolidação. |
+| **ID_Cst** | *referência (Cad_Cst)* | CST_ICMS. |
+| **ID_CFOP** | *referência (Cad_CFOP)* | CFOP. |
+| **Aliquota_Icms** | *número, opcional* | ALIQ_ICMS. |
+| **Valor_Operacao** | *número* | VL_OPR. |
+| **Base_Calculo_Icms** | *número* | VL_BC_ICMS. |
+| **Valor_Icms** | *número* | VL_ICMS. |
+| **Base_Calculo_Icms_St** | *número, opcional* | VL_BC_ICMS_ST: só no C790. |
+| **Valor_Icms_St** | *número, opcional* | VL_ICMS_ST: só no C790. |
+| **Base_Calculo_Icms_Outras_Ufs** | *número, opcional* | VL_BC_ICMS_UF: só no D696. |
+| **Valor_Icms_Outras_Ufs** | *número, opcional* | VL_ICMS_UF: só no D696. |
+| **Valor_Reducao_Base_Calculo** | *número* | VL_RED_BC. |
+| **ID_Observacao_Lancamento** | *referência (Cad_Observacao_Lancamento_Fiscal), opcional* | COD_OBS. |
+
+Mov_Convenio115_Consolidacao_Uf
+
+Revisão 32 (documento 175, seção 5.4; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Os valores por UF da consolidação: ICMS ST por UF nas energias e na NF3e (C791) e ICMS de outras UFs na TV por assinatura via satélite, serviço não medido (D697, Convênio ICMS 52/05).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Convenio115_Consolidacao_Uf** | *identificador* | --- |
+| **ID_Convenio115_Consolidacao** | *referência (Mov_Convenio115_Consolidacao)* | A consolidação. |
+| **ID_Estado** | *referência (Cad_Estado)* | UF. |
+| **Base_Calculo_Icms** | *número, opcional* | VL_BC_ICMS do D697. |
+| **Valor_Icms** | *número, opcional* | VL_ICMS do D697. |
+| **Base_Calculo_Icms_St** | *número, opcional* | VL_BC_ICMS_ST do C791. |
+| **Valor_Icms_St** | *número, opcional* | VL_ICMS_ST do C791. |
+
+Mov_Sat_Resumo_Observacao
+
+Revisão 32 (documento 175, seção 5.5; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A observação do lançamento do resumo diário do CF-e-SAT por equipamento (registro C895, filho do C890). O C890 é derivado das notas; a observação não pode ficar na nota porque pertence à combinação de equipamento, dia, CST, CFOP e alíquota.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Sat_Resumo_Observacao** | *identificador* | --- |
+| **ID_Equipamento_Fiscal** | *referência (Cad_Equipamento_Fiscal)* | O SAT. |
+| **Data_Movimento** | *data* | O dia do resumo. |
+| **ID_Cst** | *referência (Cad_Cst)* | CST da linha do C890. |
+| **ID_CFOP** | *referência (Cad_CFOP)* | CFOP da linha. |
+| **Aliquota_Icms** | *número, opcional* | Alíquota da linha. |
+| **ID_Observacao_Lancamento** | *referência (Cad_Observacao_Lancamento_Fiscal)* | COD_OBS. |
+| **Texto_Complementar** | *texto, opcional* | TXT_COMPL. |
+
+Mov_Sat_Resumo_Ajuste
+
+Revisão 32 (documento 175, seção 5.5; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O ajuste que vem da observação do resumo diário do SAT (registro C897). Mesmos campos de `Mov_Nota_Ajuste_Documento`, com o item pelo produto, porque o resumo não tem item de nota. O valor soma direto na apuração (E110 ou sub-apuração) pelas mesmas regras do C197.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Sat_Resumo_Ajuste** | *identificador* | --- |
+| **ID_Sat_Resumo_Observacao** | *referência (Mov_Sat_Resumo_Observacao)* | A observação (C895) a que o ajuste pertence. |
+| **ID_Codigo_Ajuste** | *referência (Cad_Icms_Codigo_Ajuste)* | COD_AJ: código da tabela 5.3 da UF. |
+| **Descricao_Complementar** | *texto, opcional* | DESCR_COMPL_AJ. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico), opcional* | COD_ITEM. |
+| **Base_Calculo_Icms** | *número, opcional* | VL_BC_ICMS. |
+| **Aliquota_Icms** | *número, opcional* | ALIQ_ICMS. |
+| **Valor_Icms** | *número, opcional* | VL_ICMS: soma direto na apuração quando o ajuste não é só informativo. |
+| **Valor_Outros** | *número, opcional* | VL_OUTROS. |
+| **ID_Subapuracao** | *referência (Mov_Apuracao_Icms_Subapuracao), opcional* | A sub-apuração que recebe o valor quando o quarto caractere do código é 3 a 8. |
+
+46.4. G17: campos do Bloco C (C105, C112, C130, C140, C165, C173 e C179; documento 175)
+
+Mov_Nota_Fiscal_Documento_Arrecadacao
+
+Revisão 32 (documento 175, seção 6.1; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O documento de arrecadação citado nas informações complementares da nota (registro C112): guia estadual ou GNRE. Obrigatório quando a nota cita a guia. É referência da nota; **não** substitui a guia do módulo de obrigações, a que se liga quando ela está no ERP.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Documento_Arrecadacao** | *identificador* | --- |
+| **Origem_Tipo** | *enumeração {nota_fiscal_entrada, nota_fiscal_saida}* | Direção da nota: o C112 vale em entrada e em saída. |
+| **ID_Nota** | *referência genérica* | A nota de entrada ou de saída, conforme `Origem_Tipo`. |
+| **Tipo_Documento_Arrecadacao** | *enumeração {estadual, gnre}* | COD_DA 0 e 1. |
+| **ID_Estado** | *referência (Cad_Estado)* | UF: a unidade federada beneficiária do recolhimento. |
+| **Numero_Documento_Arrecadacao** | *código (até 60), opcional* | NUM_DA. |
+| **Codigo_Autenticacao_Bancaria** | *código (até 60), opcional* | COD_AUT: código completo da autenticação bancária. |
+| **Valor_Documento** | *número* | VL_DA: valor total do documento (principal, atualização monetária, juros e multa). |
+| **Data_Vencimento** | *data* | DT_VCTO. |
+| **Data_Pagamento** | *data* | DT_PGTO; no ICMS antecipado a recolher, a data do vencimento (regra do Guia). |
+| **ID_Apuracao_Obrigacao_Recolher** | *referência (Mov_Apuracao_Obrigacao_Recolher), opcional* | A guia do módulo de obrigações, quando existe. |
+
+Mov_Nota_Fiscal_Fatura_Comercial
+
+Revisão 32 (documento 175, seção 6.2; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A fatura comercial das notas modelo 01 e 1A (registro C140): o tipo e o número do título de crédito. A quantidade de parcelas sai de `Mov_Titulo` (um título por parcela); o valor da fatura é o `Valor_Titulo_Original`, como está no documento, sem rateio (FAQ 11.7; documento 176, seção 4.4). Só na fatura de uma nota o Motor deriva o valor de `Mov_Titulo` e o emitente do título sai da nota; os vencimentos (C141) já saem de `Mov_Titulo`. Não é `Mov_Nota_Fiscal_Entrada_Fatura`, que é da NFCom e da NFAg.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Fatura_Comercial** | *identificador* | --- |
+| **Origem_Tipo** | *enumeração {nota_fiscal_entrada, nota_fiscal_saida}* | Direção da nota. |
+| **ID_Nota** | *referência genérica* | A nota, conforme `Origem_Tipo`. |
+| **Tipo_Titulo_Credito** | *enumeração {duplicata, cheque, promissoria, recibo, outros}* | IND_TIT 00, 01, 02, 03 e 99. Havendo mais de um tipo de título na fatura, `outros`. |
+| **Descricao_Titulo** | *texto, opcional* | DESC_TIT: obrigatório quando `outros`, com os números e os valores de cada título. |
+| **Numero_Titulo** | *código (até 60)* | NUM_TIT: número ou código identificador do título. |
+| **Valor_Titulo_Original** | *número, opcional* | VL_TIT: o valor da fatura inteira como está no documento, sem rateio (FAQ 11.7.1.3). Obrigatório quando a fatura cobre mais de uma nota ou quando o tipo é `outros` (a soma dos títulos); vazio na fatura de uma nota só, em que o Motor deriva o valor de `Mov_Titulo` (documento 176, seção 4.4; D-N482). |
+
+Mov_Nota_Fiscal_Saida_Servico_Nao_Icms
+
+Revisão 32 (documento 175, seção 6.3; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O serviço sem ICMS e as retenções destacadas na nota de saída (registro C130): o ISSQN sai da apuração do ISS do item (`Mov_Apuracao_Tributo_Item`, imposto ISS); o IRRF e a previdência, **como estão destacados no documento**, não existiam (o ERP guarda a retenção na baixa do título, não o destaque da nota). Valores como emitidos, nunca recalculados. **Regra de geração (documento 176, seção 4.1; D-N487):** o C130 é 1:1 com o C100 de saída e o Motor só o gera quando há ao menos um dos valores (VL_SERV_NT, ISSQN, IRRF ou previdência); o contribuinte do DF não o preenche (usa o Bloco B); na entrada o Guia diz "não apresentar", e por isso a entidade é só da saída.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Saida_Servico_Nao_Icms** | *identificador* | --- |
+| **ID_Nota** | *referência (Mov_Nota_Fiscal_Saida) --- identidade* | A nota de saída (1:1, opcional). |
+| **Valor_Servico_Nao_Tributado_Icms** | *número, opcional* | VL_SERV_NT: valor dos serviços sob não incidência ou não tributados pelo ICMS. |
+| **Base_Calculo_Irrf** | *número, opcional* | VL_BC_IRRF. |
+| **Valor_Irrf** | *número, opcional* | VL_IRRF. |
+| **Base_Calculo_Previdencia** | *número, opcional* | VL_BC_PREV. |
+| **Valor_Previdencia** | *número, opcional* | VL_PREV. |
+
+Mov_Nota_Fiscal_Saida_Combustivel_Transporte
+
+Revisão 32 (documento 175, seção 6.4; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Os dados de transporte da nota de combustível (registro C165): passe fiscal, temperatura e motorista. A placa, a UF da placa, o transportador, a hora, os volumes e os pesos já existem na nota; o código de autorização (COD_AUT) é o `Combustivel_Codigo_Codif` do item. Habilitação `efd_combustivel_c165`: só distribuidora, refinaria e revendedora, na nota de saída; o posto de combustível não apresenta o C165 (FAQ 11.8.1.1; documento 176, seção 4.2).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Saida_Combustivel_Transporte** | *identificador* | --- |
+| **ID_Nota** | *referência (Mov_Nota_Fiscal_Saida) --- identidade* | A nota de saída (1:1, opcional). |
+| **Numero_Passe_Fiscal** | *código (até 30), opcional* | NR_PASSE. |
+| **Temperatura_Celsius** | *número, opcional* | TEMPER: temperatura em graus Celsius usada para o cálculo do volume (uma casa decimal). Não é a `Combustivel_Quantidade_Temperatura_Ambiente` (qTemp), que é uma quantidade. |
+| **Nome_Motorista** | *texto (até 60), opcional* | NOM_MOT. |
+| **Cpf_Motorista** | *código (11), opcional* | CPF do motorista. |
+
+Mov_Nota_Fiscal_Entrada_Item_Lote
+
+Revisão 32 (documento 175, seção 6.5; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O lote do item recebido (para o C173 de medicamentos na entrada: lote, quantidade, fabricação e validade). A saída já tem `Mov_Nota_Fiscal_Saida_Item_Lote`; a entrada só tinha o lote no movimento de estoque. Fabricação e validade saem de `Cad_Lote_Produto`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Entrada_Item_Lote** | *identificador* | --- |
+| **ID_Item_Entrada** | *referência (Mov_Nota_Fiscal_Entrada_Item)* | O item recebido. |
+| **ID_Lote** | *referência (Cad_Lote_Produto)* | O lote: LOTE_MED, DT_FAB e DT_VAL. |
+| **Quantidade_Lote** | *número* | QTD_ITEM: quantidade do item no lote. |
+
+Mov_Nota_Fiscal_Saida_Item_St_Informacao
+
+Revisão 32 (documento 175, seção 6.6; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): As informações complementares do ICMS ST do item da nota de saída (registro C179): base na origem e no destino, repasse ou dedução, complemento, e a retenção em remessa por substituído. Só existiam a base e o valor retido da operação própria.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Saida_Item_St_Informacao** | *identificador* | --- |
+| **ID_Item** | *referência (Mov_Nota_Fiscal_Saida_Item) --- identidade* | O item de saída (1:1, opcional). |
+| **Base_Calculo_St_Origem_Destino** | *número* | BC_ST_ORIG_DEST: base de cálculo do ICMS ST na origem ou no destino, nas operações interestaduais. |
+| **Valor_Icms_St_Repasse_Deducao** | *número* | ICMS_ST_REP: valor do ICMS ST a repassar ou deduzir. |
+| **Valor_Icms_St_Complemento** | *número, opcional* | ICMS_ST_COMPL: valor do ICMS ST a complementar à UF. |
+| **Base_Calculo_Retencao_Remessa** | *número, opcional* | BC_RET: base de retenção em remessa. |
+| **Valor_Icms_Retido_Remessa** | *número, opcional* | ICMS_RET: parcela do imposto retido em remessa promovida por substituído. |
+| **Dispositivo_Inaplicabilidade_St** | *texto, opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): O dispositivo do Convênio 142 que afasta a ST (cláusula nona, I ou III), que a cláusula vigésima, § 2º, manda pôr em "Informações Complementares". |
+
+*Revisão 40 --- campos novos: Dispositivo_Inaplicabilidade_St.*
+
+Mov_Nota_Fiscal_Icms_St_Uf_Recolhimento
+
+Revisão 32 (documento 175, seção 6.7; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): A UF a que o ICMS ST é recolhido quando é diversa da do destinatário (registro C105): combustíveis e lubrificantes, leasing ou faturamento direto, e recusa de recebimento. Para os dois primeiros o Motor **copia** a UF no momento da emissão (UF de consumo do item; local de retirada); só no leasing ela é digitada. Vale em entrada e saída.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Icms_St_Uf_Recolhimento** | *identificador* | --- |
+| **Origem_Tipo** | *enumeração {nota_fiscal_entrada, nota_fiscal_saida}* | Direção da nota. |
+| **ID_Nota** | *referência genérica* | A nota (modelo 55), conforme `Origem_Tipo`. |
+| **Tipo_Operacao** | *enumeração {combustiveis_lubrificantes, leasing_faturamento_direto, recusa_recebimento}* | OPER 0, 1 e 2. |
+| **ID_Estado** | *referência (Cad_Estado)* | UF: sigla da UF de destino do ICMS ST. |
+| **Origem_Dado** | *enumeração {copiado_da_nota, informado}* | `copiado_da_nota` quando o Motor copiou a UF de consumo ou do local de retirada. |
+
+46.5. G18: bilhetes de passagem e comunicação na saída (documento 175)
+
+Mov_Bilhete_Passagem_Consolidado
+
+Revisão 32 (documento 175, seção 7.1; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Os bilhetes de passagem (rodoviário 13, aquaviário 14, bagagem 15 e ferroviário 16) **consolidados** por série, faixa, CST, CFOP e alíquota (D300 e D410). Existe porque a catraca não emite bilhete individual (série 9999, a quantidade do dia na faixa final) e porque o resumo pode vir importado; se cada bilhete for nota de saída, o D300 sai por derivação e esta linha não se cria. Com `ID_Nota_Rmd` preenchido é o D410; sem, o D300. Habilitação `efd_bilhete_passagem`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Bilhete_Passagem_Consolidado** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento. |
+| **ID_Nota_Rmd** | *referência (Mov_Nota_Fiscal_Saida), opcional* | O RMD (modelo 18, D400) que reúne esta linha. Preenchido = D410; vazio = D300. O bilhete do D400 não pode aparecer no D300. |
+| **ID_Modelo_Documento** | *referência (Cad_Modelo_Documento_Fiscal)* | COD_MOD: 13, 14, 15 ou 16. |
+| **Serie** | *código (até 4)* | SER; "9999" quando a catraca conta os passageiros. |
+| **Subserie** | *código (até 3), opcional* | SUB. |
+| **Numero_Inicial** | *número* | NUM_DOC_INI; zero na catraca. |
+| **Numero_Final** | *número* | NUM_DOC_FIN; na catraca, a quantidade diária de passageiros. |
+| **Data_Emissao** | *data* | DT_DOC; no D410 igual à do RMD. |
+| **ID_Cst** | *referência (Cad_Cst)* | CST_ICMS. |
+| **ID_CFOP** | *referência (Cad_CFOP)* | CFOP. |
+| **Aliquota_Icms** | *número, opcional* | ALIQ_ICMS. |
+| **Valor_Operacao** | *número* | VL_OPR. |
+| **Valor_Desconto** | *número, opcional* | VL_DESC. |
+| **Valor_Servico** | *número* | VL_SERV. |
+| **Valor_Seguro** | *número, opcional* | VL_SEG (só no D300). |
+| **Valor_Outras_Despesas** | *número, opcional* | VL_OUT_DESP (só no D300). |
+| **Base_Calculo_Icms** | *número, opcional* | VL_BC_ICMS. |
+| **Valor_Icms** | *número, opcional* | VL_ICMS. |
+| **Valor_Reducao_Base_Calculo** | *número, opcional* | VL_RED_BC (só no D300). |
+| **ID_Observacao_Lancamento** | *referência (Cad_Observacao_Lancamento_Fiscal), opcional* | COD_OBS (só no D300). |
+| **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil), opcional* | COD_CTA (só no D300). |
+| **Origem_Dado** | *enumeração {catraca, resumo_importado, lancamento_manual}* | De onde veio a linha. |
+
+Mov_Bilhete_Passagem_Cancelado
+
+Revisão 32 (documento 175, seção 7.1; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): Os bilhetes cancelados da linha consolidada (D301 e D411).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Bilhete_Passagem_Cancelado** | *identificador* | --- |
+| **ID_Bilhete_Passagem_Consolidado** | *referência (Mov_Bilhete_Passagem_Consolidado)* | A linha consolidada. |
+| **Numero_Documento_Cancelado** | *número* | NUM_DOC_CANC. |
+
+Mov_Bilhete_Passagem_Municipio
+
+Revisão 32 (documento 175, seção 7.1; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O complemento por município de origem do serviço (D310, D370 e D420). Pertence a uma linha consolidada (D310 e D420) **ou** a uma Redução Z do ECF de bilhete modelo 2E (D370): exatamente um dos dois pais.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Bilhete_Passagem_Municipio** | *identificador* | --- |
+| **ID_Bilhete_Passagem_Consolidado** | *referência (Mov_Bilhete_Passagem_Consolidado), opcional* | O pai no D300 ou no D410. |
+| **ID_Reducao_Z** | *referência (Mov_Ecf_Reducao_Z), opcional* | O pai no ECF de bilhete (D370). |
+| **ID_Municipio_Origem** | *referência (Cad_Municipio) --- identidade* | COD_MUN_ORIG. |
+| **Valor_Servico** | *número* | VL_SERV. |
+| **Quantidade_Bilhetes** | *número, opcional* | QTD_BILH: só no D370. |
+| **Base_Calculo_Icms** | *número, opcional* | VL_BC_ICMS. |
+| **Valor_Icms** | *número, opcional* | VL_ICMS. |
+
+Mov_Nota_Fiscal_Saida_Terminal_Faturado
+
+Revisão 32 (documento 175, seção 7.2; D-N480, Q175-1 a Q175-9, com os ajustes do documento 176): O terminal faturado das notas de comunicação (21) e telecomunicação (22) de saída (registro D530). Hoje o terminal existe só no pacote da NFCom (`Cad_Nfcom_Assinante`). Habilitação `efd_comunicacao_saida`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Saida_Terminal_Faturado** | *identificador* | --- |
+| **ID_Nota** | *referência (Mov_Nota_Fiscal_Saida)* | A nota de saída (modelos 21 e 22). |
+| **ID_Tipo_Servico_Terminal** | *referência (Cad_Classe_Sistema, domínio = tipo_servico_terminal_efd)* | IND_SERV: telefonia, comunicação de dados, TV por assinatura, acesso à Internet, multimídia e outros (0 a 4 e 9). Não casa um a um com o `tpServUtil` da NFCom. |
+| **Data_Inicio_Servico** | *data, opcional* | DT_INI_SERV. |
+| **Data_Fim_Servico** | *data, opcional* | DT_FIN_SERV. |
+| **Periodo_Fiscal** | *competência* | PER_FISCAL (MMAAAA, 6 posições). |
+| **Codigo_Area** | *código (até 4), opcional* | COD_AREA: código de área do terminal. |
+| **Numero_Terminal** | *código (até 12), opcional* | TERMINAL. |
+
+46.6. Registro 1601 (instrumentos de pagamento; documento 176)
+
+Cad_Efd_1601_Regra_Uf
+
+Revisão 32 (documento 176, seção 5.4, Q176-3; D-N482 e D-N484): a regra do registro 1601 por UF: se a UF obriga a entrega, como se escolhe a data do valor e qual estabelecimento informa quando o recebimento é centralizado. Carga provisória só do que o FAQ da Receita diz (AL, CE, PB, RN, MG, SC e PR); as demais UFs não ganham linha e o Motor avisa. O 1601 em si não se grava: é derivado das baixas de título (domínio bloco_destino_baixa, valor efd_1601).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Efd_1601_Regra_Uf** | *identificador* | --- |
+| **ID_Efd_1601_Regra_Uf_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Efd_1601_Regra_Uf_Versao). ID_Efd_1601_Regra_Uf é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | A UF a que a regra se aplica. |
+| **Obrigatorio** | *booleano* | Se a UF obriga a entrega do 1601 (FAQ 17.6.1.9 e 17.6.1.10: MG e SC obrigam; o PR desobriga algumas empresas, e o critério que as separa não foi dado: o Motor não gera o 1601 para filial do PR e avisa; D-N484). Produtor rural segue a UF. |
+| **Criterio_Reconhecimento** | *enumeração {competencia_da_transacao, cartao_competencia_demais_caixa}, opcional* | Como se escolhe a data do valor: pela transação financeira entre o cliente e o contribuinte, ou pela regra geral do FAQ (cartão de crédito pela competência, o resto pelo caixa). Vazio quando a UF não obriga o 1601 (PR, D-N484). |
+| **Estabelecimento_Informante** | *enumeração {quem_vendeu, quem_recebeu}, opcional* | Qual estabelecimento escritura quando o recebimento é centralizado. quem_recebeu: a filial titular da conta bancária onde o dinheiro caiu (Cad_Conta_Bancaria.ID_Filial; D-N484). quem_vendeu: a filial que emitiu o documento (as respostas do FAQ de AL, CE, RN e MG; leitura da Q176-11: a regra de D-N484 vale para as UFs sem linha na carga, e essas quatro ficam com quem_vendeu até o contador confirmar). Vazio no PR (sem obrigação) e na PB, onde o FAQ não diz. |
+| **Fonte** | *texto* | A resposta do FAQ ou a norma da UF que sustenta a linha. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Padrão do dicionário. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A aprovação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+**Cargas de partida da revisão 32 na Contabilidade & Fiscal (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Icms_Codigo_Ajuste (10.670 linhas) | AJ_APUR_DED das 26 UFs e da GENERICA (10.657) mais os 13 códigos de IPI (AJ_APUR_IPI); versão mais nova de cada arquivo; Tipo_Apuracao e Natureza decodificados do código; Tabela_Origem vazia (só o Guia; Q172-C1); provisória; avisos em Alerta_Carga (documento 172, seção 5.1) |
+| Cad_Icms_Beneficio_Ajuste_Codigo (3.376 linhas) | AJ_BENEF_INCENTIVO: 3.383 linhas menos as 7 de teste da própria fonte (RO TESTE_ED e TESTE_EC; cinco do RS), que **não carregam** e ficam no registro da carga com o motivo "linha de teste da fonte" (Q172-5) |
+| Cad_Icms_Informacao_Adicional_Codigo (6.831 linhas) | INF_ADIC_APUR das UFs; textos como vieram; o vínculo ao cBenef só por pessoa |
+| Cad_Icms_Obrigacao_Recolher (2.162 linhas) | REC_REF_OBRIGACAO (26 UFs e GENERICA); obrigação nacional vazia; ID_Natureza_Receita sugerida só nas 730 linhas com um único termo reconhecível, as outras 1.432 vazias (Q172-6); o dia do vencimento do SC fica só no texto (Q172-C6) |
+| Cad_Efd_Codigo_Estadual (1.247 linhas) | 1.226 das listas por UF (tp_util_cred_fiscais 257, cod_item_ipm e cod_item_ipm_st 568, cod_prod_usinas 39, cod_mot_rest_compl_st 117, cod_inf_item 196 e ind_subap 49) mais os 21 padrões da tabela 4.4.6 (tot_parc_redz, sem UF, vigência desde 01/01/2009; documento 175, seção 9.1), que revogam a decisão antiga do documento 43 de tratá-la como legado |
+| Cad_Iss_Df_Valor_Uniprofissional (4 linhas) | 2019 a 2022: 297,04; 307,05; 323,02 e 358,42, como número (a vírgula do arquivo vira ponto) |
+| Cad_Classe_Sistema, domínios novos | natureza_receita_icms_uf (19 valores), classe_enquadramento_ipi (31), selo_controle_ipi (50), classificacao_contribuinte_ipi (10) e tipo_documento_iss_df (8), mais tipo_dispositivo_documento_fiscal (6), tipo_transporte_carga_efd (7), tipo_assinante_comunicacao_efd (6) e tipo_servico_terminal_efd (6) (o tipo_conhecimento_embarque, de 22 valores, já existia desde o documento 43 e é reaproveitado, sem carga nova); os de IPI entram como catálogo, sem uso até o contador dizer onde se aplicam (Q172-C7) |
+| Cad_Classe_Sistema, modulo_fiscal_opcional (13 valores) | efd_exportacao_1100, efd_credito_icms_1200, efd_valor_agregado_1400, efd_energia_1500, efd_documento_utilizado_1700, efd_dcta_1800, efd_giaf_pe, efd_cupom_ecf, efd_convenio_115, efd_sat_resumo_obs, efd_combustivel_c165 (C165, combustível na nota de saída: distribuidora, refinaria e revendedora; não posto), efd_bilhete_passagem e efd_comunicacao_saida; nenhum ligado por padrão (Q175-6) |
+| Cad_Classe_Sistema, bloco_destino_baixa | efd_1601 (documento 176, seção 5.3); Cad_Tipo_Baixa_Bloco ganha, por tipo de baixa, a linha do efd_1601: recebimento por cartão, Pix, TED, boleto, cheque depositado, dinheiro depositado e adiantamento entram (valor_bruto); encontro de contas, compensação, desconto e cancelamento não entram (nao_entra); como os tipos de baixa são cadastro do usuário, a carga é uma regra e não linhas (arquivo REGRA) |
+| Cad_Efd_1601_Regra_Uf (7 linhas) | AL, CE, PB e RN (competência da transação; AL, CE e RN quem vendeu); MG (regra geral, quem vendeu); SC (regra geral, quem recebeu); PR com Obrigatorio = falso (D-N484); as demais UFs sem linha, com aviso do Motor; provisória |
+| Cad_Efd_Giaf_Campo (36 linhas) | Os campos das GIAF 1, 3 e 4 do Guia 3.2.4 (G1_01 a G4_12), só Pernambuco; provisória (documento 175, Anexo A.1) |
+| Cad_Utilidade_Classificacao_Efd (23 linhas, NF3e) | O mapa de grupos de cClass da NF3e para os cinco campos do C500 (VL_FORN, VL_SERV_NT, VL_TERC, ENER_INJET e OUTRAS_DED); a NFGás fica sem carga, com aviso do Motor (Q175-9) |
+| Cad_Tabela_Oficial e Mov_Carga_Tabela_Oficial | As 197 tabelas distintas do validador (204 arquivos lidos) ficam registradas, com versão, linhas lidas e vigentes, hash e o resultado (carregada, conferência ou não carrega); as 7 linhas de teste constam com o motivo. As tabelas nacionais (CFOP, CEST, municípios, ANP, países, UF, versões de leiaute, tipo de item, CARDOC, CLASCONS e situações tributárias) só conferem com o documento 43; os países ligam o Bacen ao Siscomex por nome normalizado, provisório (Q172-8; P43-06 segue aberta na ligação por código) |
+| Cad_Pais | Ligação Bacen e Siscomex por nome normalizado; o que não tem par fica sem o código Siscomex e entra no relatório de conferência |
+
+**Regras de texto da revisão 32 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Chave da carga do validador | Tabela, UF, código e início da vigência; a versão mais nova do arquivo substitui a anterior (nenhuma chave some, só fecha fim de vigência ou acrescenta código); o texto vai como veio, com aviso em Alerta_Carga (vigência de um dia, texto truncado, aspas ou tabulação); as linhas de um dia do MT e do RS carregam como vieram (Q172-C4) |
+| UF sem tabela no validador (RR) | O ERP avisa e pede o código (Q172-4) |
+| Tabela 5.1.2 | É a da CPRB (P110) da EFD-Contribuições, e não o ajuste de benefício da EFD-ICMS/IPI: o rótulo do documento 172 estava errado (documento 175, seção 9.4; Q175-7). O catálogo AJ_BENEF_INCENTIVO fica sem número de tabela do Guia |
+| C197 | Só se gera em UF que publicou a tabela 5.3 (FAQ 11.14): o Motor só gera o C197 quando existe a carga da tabela 5.3 da UF em Cad_Efd_Codigo_Estadual; sem ela, aviso e o ajuste vai na apuração (E111, tabela 5.1.1) |
+| C130 | Só na saída (Guia 3.2.4: na entrada, "não apresentar"); 1:1 com o C100; gerado só quando há ao menos um dos valores (serviço não tributado, ISSQN, IRRF ou previdência); o DF não preenche (usa o Bloco B) (D-N487; Q176-12) |
+| C171 e Bloco 1 de combustíveis | O C171 e o Bloco 1 (1300 a 1391) ficam para um bloco próprio (Q167-6). O C165 é de distribuidora, refinaria e revendedora, e não de posto (FAQ 11.8.1.1) |
+| C170: COD_ENQ e custo | COD_ENQ sai sempre vazio (a Receita não publicou a tabela); ID_Enquadramento_Ipi (cEnq da NF-e) nunca o alimenta. O adquirente sem direito a crédito de IPI ou de ICMS-ST soma esses valores ao VL_MERC do C100 e ao VL_ITEM do C170 e não informa VL_IPI e VL_ICMS_ST nos C100, C170 e C190 (FAQ 11.13.2.1): é regra de geração do arquivo, e o valor da nota continua guardado como veio |
+| C178 | CL_ENQ do C178 é opcional e sem habilitação (os setores do C178 usam a NF-e e a Receita diz que o registro não é preenchido; Q176-7) |
+| C500 | VL_TERC inclui a taxa de iluminação pública, e o Motor avisa se a taxa vier em grupo de cClass fora do mapa; o campo de informação complementar aceita um só código, cuja descrição vai no 0450 com as observações de interesse fiscal concatenadas; a água canalizada (modelo 29) vai no C500 e no C590 (FAQ 11.17) |
+| Valores brutos (FAQ 19.2 e 19.3) | VL_DOC = vNF, VL_MERC = vProd e VL_ITEM = vProd do item; CT-e, NF3e, NFCom, BP-e e NFGás também pelo valor bruto. Valor_Total_Liquido e Valor_Unitario_Liquido (NT 2026.008) nunca alimentam o C100 nem o C170; CBS, IBS e IS não são apurados na EFD-ICMS/IPI |
+| 1601 | Não se grava: deriva das baixas de título (efd_1601 no mecanismo de blocos da baixa); o estabelecimento que informa é a filial titular da conta bancária onde o dinheiro caiu (Cad_Conta_Bancaria.ID_Filial, ligada à baixa pela conta contábil), e não a que emitiu a nota (D-N484); o Motor não gera o 1601 para filial do PR e avisa, porque a dispensa vale só para algumas empresas e o critério não foi dado (Q176-C8); TOT_OUTROS tem origem na nota sem CST; o recebimento sem nota usa Classe_Incidencia_1601 |
+| Bloco K | Nenhum registro do Bloco K ficou sem entidade (confronto com o FAQ). COD_INS_SUBST não é criado no K235, no K255 nem no K275 (D-N483; K275: escolha de Alberto, a frase "não preencher" não existe no Guia). A correção de apontamento em ordem aberta aceita as duas vias (K270/K275 e K230/K235), sem aviso por UF (D-N486). Estabelecimento que não controla por ordem de produção: DT_INI_OP, DT_FIN_OP e COD_DOC_OP em branco (Cad_Filial_Perfil_Fiscal.Informa_Ordem_Producao_Bloco_K). Três regras de geração sem aviso: a transferência entre filiais entra no estoque da filial de destino quando entra no C170; a ordem reaberta em outro período é nova ordem; o K200 de quem não teve movimento repete o saldo do mês anterior |
+| Registros derivados | Os indicadores do 1010 e o H005 são derivados e não se gravam; o C591 (FCP) sai por derivação de Mov_Apuracao_Tributo_Item_Parcela_Icms (o documento 167 estava errado ao dizer que não havia campo); o 1400 é informado e não calculado (a regra de cada UF não está no Guia; Q175-C1) |
+| Avisos do Motor da revisão 32 (18, sem bloqueio: 14 do documento 176, 2 da D-N484 e 2 do documento 175) | Bloco K (9): insumo igual ao produto no mesmo K230/K235; reprocesso em outra fase ou com código diferente; desmontagem encerrada sem item de destino; item tipo 06 em estrutura de produção ou consumo; produção em elaboração no K200; K270 de origem K220 sem K275 filho; K280 que ajusta diferença entre o K200 e o inventário; correção conhecida no próprio mês por K270; nota de ajuste de inventário com data diferente da do inventário. 1601 (4): baixa de tipo que entra no 1601 sem instituição de pagamento; UF sem linha em Cad_Efd_1601_Regra_Uf; filial da conta diferente da filial da nota; filial do PR (não gera). C420 (2): código xxTnnnn com NR_TOT vazio ou fora de 01 a 30, e código que não casa com o padrão da 4.4.6 ou com a alíquota do C490. C197 (1) sem tabela 5.3 da UF. C500 (1) taxa de iluminação fora do mapa. NFGás sem carga de cClass (1) |
+
+
+
+47\. Anexo --- Entidades novas da revisão 34 (ECD, transação de cartão e B3: compras governamentais, Zona Franca de Manaus e áreas de livre comércio) e cargas de partida
+
+Revisão 34 do dicionário (consolidação de 09/11/2026): 28 entidades novas neste módulo (282 campos declarados nas tabelas; o dicionário acrescenta as colunas de vigência e as chaves de versão dos mestres). Documento 183 (D-N495: Q183-1, Q183-2, Q183-9 e Q183-10), documento 184 (D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"), documento 177 (D-N485: Q177-1 a Q177-5) e documento 158 (D-N478: Q158-1 a Q158-13). Em módulos de outros números ficam só os campos novos e os valores de domínio.
+
+47.1. Núcleo da ECD (leiaute 9): identificação do arquivo e documentos complementares (documento 183, seção 4.1)
+
+Mov_Ecd_Periodo
+
+Revisão 34 (documento 183, seção 4.1; D-N495: Q183-1, Q183-2, Q183-9 e Q183-10; campos de mudança de plano e de escrituração consolidada: documento 184, D-N496 e D-N498): identificação da ECD de um arquivo. É para a ECD o que `Mov_Efd_Contribuicoes_Periodo` é para a EFD-Contribuições: guarda os dados de abertura que o arquivo precisa e não pertencem ao cadastro. Uma linha por linha de `Mov_Escrituracao_Arquivo` com `ID_Obrigacao` = ECD. Sem vigência.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ecd_Periodo** | *identificador* | --- |
+| **ID_Escrituracao_Arquivo** | *referência (Mov_Escrituracao_Arquivo)* | Um por arquivo; só arquivo da ECD. |
+| **Forma_Escrituracao** | *enumeração {diario_geral, diario_resumido, diario_auxiliar, balancetes_balancos, razao_auxiliar}* | I010 (G, R, A, B, Z). Sem valor oculto: o usuário escolhe. |
+| **Numero_Ordem_Livro** | *número* | I030 e J900. Aviso se já existe outro arquivo da empresa com o mesmo número. |
+| **Natureza_Livro** | *texto (até 80)* | I030 e J900 (por exemplo, "Livro Diário"). |
+| **Situacao_Inicio_Periodo** | *enumeração {normal, abertura, resultante_cisao_fusao_ou_incorporadora, inicio_obrigatoriedade}* | 0000, campo 12. A situação especial (cisão, fusão, incorporação e extinção) fica em Mov_Escrituracao_Arquivo.Situacao_Especial; "abertura" ali é da EFD e na ECD vale aqui. |
+| **Data_Encerramento_Exercicio_Social** | *data* | I030. Decide se o bloco J é obrigatório (aviso). Informada na ECD, sem valor sugerido escondido (Q183-9). |
+| **Data_Arquivamento_Atos_Constitutivos** | *data, opcional* | I030, DT_ARQ. |
+| **Data_Arquivamento_Conversao** | *data, opcional* | I030, DT_ARQ_CONV: conversão de sociedade simples em empresária. |
+| **Indicador_Grande_Porte** | *booleano* | 0000: ativo total acima de R$ 240 milhões ou receita bruta anual acima de R$ 300 milhões. Informado; aviso quando difere do que os saldos mostram (Q183-9). |
+| **Tipo_Ecd** | *enumeração {empresa_sem_scp, socio_ostensivo_de_scp, scp}* | 0000, TIP_ECD. |
+| **Indicador_Moeda_Funcional** | *booleano* | 0000, `IDENT_MF`. Verdadeiro quando a empresa escritura em moeda funcional diferente do real (Q183-3: sim, a empresas que usam outra moeda; habilitação `ecd_moeda_funcional`, documento 184). Informado, sem valor oculto. Aviso do Motor: `Cad_Empresa.ID_Moeda_Funcional` diferente do real e este indicador falso, ou o contrário. |
+| **Indicador_Escrituracao_Descentralizada** | *booleano* | 0000, `IND_CENTRALIZADA`. Informado pelo usuário, sem valor oculto. |
+| **ID_Tipo_Plano_Referencial** | *referência (Cad_Classe_Sistema, domínio = plano_referencial_ecd), opcional* | 0000, COD_PLAN_REF (1 a 10: PJ em geral lucro real e presumido, financeiras, seguradoras, imunes e isentas, previdência, partidos). Não é Cad_Plano_Referencial (essa é a edição publicada por leiaute). |
+| **ID_Motivo_Substituicao** | *referência (Cad_Classe_Sistema, domínio = motivo_substituicao_ecd), opcional* | J801, COD_MOT_SUBS (001, 002, 003, 004, 005 e 099). Obrigatório quando Finalidade é substituta. |
+| **ID_Documento_Termo_Verificacao** | *referência (Cad_Documento), opcional* | J801: o termo em RTF, no GED. Obrigatório com o motivo. |
+| **ID_Plano_Empresa** | *referência (Cad_Plano_de_Contas_Empresa)* | O plano de contas usado no arquivo (documento 184, seção 4; Q183-5). Aviso do Motor: o período do arquivo não coincide com a vigência do plano. |
+| **Indicador_Mudanca_Plano_Contas** | *booleano* | 0000, `IND_MUDANC_PC` (documento 184, seção 4). Verdadeiro na segunda ECD do exercício, que começa na `Data_Implantacao` do plano novo e leva o I157 (`Cad_Plano_Contas_De_Para`); a primeira ECD vai do início até a véspera da implantação, com o plano antigo. |
+| **ID_Ecd_Periodo_Anterior** | *referência (Mov_Ecd_Periodo), opcional* | Autorreferência que liga as duas ECD do mesmo exercício quando o plano mudou no meio do período (documento 184, seção 4). |
+| **Indicador_Escrituracao_Consolidada** | *booleano* | 0000, `IND_ESC_CONS` (documento 184, seção 7.3; Q183-8). Verdadeiro quando o arquivo leva o bloco K (habilitação `ecd_consolidada`). |
+
+Mov_Ecd_Documento_Complementar
+
+Revisão 34 (documento 183, seção 4.1; D-N495: Q183-1, Q183-2, Q183-9 e Q183-10; campos de mudança de plano e de escrituração consolidada: documento 184, D-N496 e D-N498): os arquivos do J800, um por documento (resultado abrangente, fluxos de caixa, valor adicionado, notas explicativas, relatório da administração, parecer dos auditores e outros). Sem vigência.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Documento_Complementar** | *identificador* | --- |
+| **ID_Escrituracao_Arquivo** | *referência (Mov_Escrituracao_Arquivo)* | O arquivo da ECD. |
+| **ID_Tipo_Documento** | *referência (Cad_Classe_Sistema, domínio = tipo_documento_ecd)* | 001 resultado abrangente, 002 fluxos de caixa, 003 valor adicionado, 010 notas explicativas, 011 relatório da administração, 012 parecer dos auditores, 099 outros. |
+| **Descricao** | *texto, opcional* | DESC_RTF. |
+| **ID_Documento** | *referência (Cad_Documento)* | O RTF no GED (até 30 MB). O hash do RTF é calculado na geração, não é digitado. |
+
+47.2. Moeda funcional (Q183-3; documento 184, seção 2)
+
+Mov_Saldo_Contabil_Base
+
+Revisão 34 (documento 184, seção 2.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o retrato do saldo da conta, e da abertura por centro de custo, em cada base de mensuração (nacional e funcional em reais), para a empresa com moeda funcional diferente do real. `Mov_Saldo_Contabil` não muda: continua na moeda funcional da empresa. Sem vigência (é fato). Habilitada por empresa (`ecd_moeda_funcional`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Saldo_Contabil_Base** | *identificador* | --- |
+| **ID_Saldo_Contabil** | *referência (Mov_Saldo_Contabil)* | A conta, a filial e a competência |
+| **ID_Saldo_Contabil_Dimensao** | *referência (Mov_Saldo_Contabil_Dimensao), opcional* | Preenchido quando o saldo é da abertura por centro de custo (I155 com COD_CCUS); vazio quando é da conta |
+| **Base_Mensuracao** | *enumeração {nacional, funcional_em_reais}* | Qual conjunto. Único por (ID_Saldo_Contabil, ID_Saldo_Contabil_Dimensao, Base_Mensuracao) |
+| **Saldo_Inicial** | *número* | Com sinal, como Mov_Saldo_Contabil (positivo é devedor) |
+| **Total_Debitos** | *número* | --- |
+| **Total_Creditos** | *número* | --- |
+| **Saldo_Final** | *número* | Saldo_Inicial + Total_Debitos − Total_Creditos |
+| **Saldo_Final_Antes_Encerramento** | *número, opcional* | Para o I355 (VL_CTA e VL_CTA_MF) |
+
+47.3. Subcontas, ágio e razão auxiliar das subcontas (Q183-4; documento 184, seção 3)
+
+Cad_Subconta_Contabil
+
+Revisão 34 (documento 184, seção 3.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): a subconta da Lei 12.973 (I053 da ECD): uma conta analítica do próprio plano, ligada a uma única conta principal, com a natureza da tabela de 25 do manual. Mestre com vigência. Habilitada por empresa (`ecd_subcontas_ras`).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Subconta** | *identificador* | --- |
+| **ID_Subconta_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Subconta_Contabil_Versao). ID_Subconta é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Conta_Principal** | *referência (Cad_Conta_Contabil)* | A conta analítica principal do grupo (a conta controlada pelo RAS) |
+| **ID_Conta_Subconta** | *referência (Cad_Conta_Contabil) --- identidade* | A conta analítica que é a subconta (COD_CNT_CORR). Uma subconta só pertence a um grupo |
+| **Codigo_Grupo** | *código (até 6)* | COD_IDT: identifica o grupo conta e subcontas; único por conta principal |
+| **ID_Natureza_Subconta** | *referência (Cad_Classe_Sistema, domínio = natureza_subconta_ecd)* | A natureza da tabela do manual |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Agio_Composicao
+
+Revisão 34 (documento 184, seção 3.4; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): abre o ágio (`Mov_Agio`) em mais valia, menos valia e goodwill, cada parte com a sua subconta (Lei 12.973; Decreto-Lei 1.598, art. 20). Aviso do Motor: a soma da composição difere de `Valor_Agio`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Agio_Composicao** | *identificador* | --- |
+| **ID_Agio** | *referência (Mov_Agio)* | O ágio apurado |
+| **ID_Natureza_Subconta** | *referência (Cad_Classe_Sistema, domínio = natureza_subconta_ecd)* | Só 10, 11, 12 e, nos estágios anteriores, 80 a 86 |
+| **ID_Item_Subconta** | *referência (Mov_Item_Subconta), opcional* | O item (bem ou direito) a que a mais ou menos valia se refere; vazio no goodwill |
+| **Valor_Composicao** | *número* | Com sinal: mais valia positiva, menos valia negativa |
+| **Data_Laudo** | *data, opcional* | Data do laudo que sustenta a divisão |
+| **ID_Documento_Laudo** | *referência (Cad_Documento), opcional* | O laudo no GED |
+
+Mov_Item_Subconta
+
+Revisão 34 (documento 184, seção 3.5; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o item do I510 do razão auxiliar das subcontas (livro Z): uma linha por item (bem, direito ou obrigação) de uma subconta. Habilitada por empresa (`ecd_subcontas_ras`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item_Subconta** | *identificador* | --- |
+| **ID_Subconta** | *referência (Cad_Subconta_Contabil)* | A subconta (identidade) |
+| **ID_Conta_Item** | *referência (Cad_Conta_Contabil), opcional* | A conta que registra o item (ativo ou passivo), de onde saem SLD_ITEM_INI e SLD_ITEM_FIN |
+| **ID_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | COD_CCUS, quando aplicável |
+| **ID_Investida_Detentora** | *referência (Cad_Investida), opcional* | CNPJ_INVTD; só nas naturezas 60 e 65, e diferente do declarante |
+| **Codigo_Item_Patrimonial** | *código (até 10)* | COD_PATR_ITEM |
+| **Quantidade** | *número, opcional* | QTD |
+| **Identificacao_Item** | *texto (até 30), opcional* | IDENT_ITEM: placa, matrícula, série |
+| **Descricao_Item** | *texto (até 50)* | DESCR_ITEM |
+| **Data_Reconhecimento** | *data* | DATA_RECT_INI; admite 31/12 do ano quando não se sabe a data |
+| **Observacao** | *texto, opcional* | Livre |
+
+Mov_Subconta_Movimento
+
+Revisão 34 (documento 184, seção 3.5; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o I550 do razão auxiliar das subcontas: uma linha por lançamento que mexe no item. I500, I510, I555 e o I053 são derivados; no livro Z, I012 e I015 saem derivados de `Cad_Subconta_Contabil.ID_Conta_Principal`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Movimento_Subconta** | *identificador* | --- |
+| **ID_Item_Subconta** | *referência (Mov_Item_Subconta)* | O item |
+| **ID_Lancamento** | *referência (Mov_Lancamento)* | A partida da subconta: dela saem DATA_LCTO, NR_LCTO, VLR_LCTO e o indicador |
+| **Base_Mensuracao** | *enumeração {nacional, funcional_em_reais}* | Só importa com moeda funcional (livro _MF); sem ela, sempre nacional |
+| **Saldo_Conta_Inicial** | *número* | SLD_ITEM_INI com sinal (positivo é devedor) |
+| **Realizacao_Item** | *número, opcional* | REAL_ITEM: depreciação, alienação, integralização |
+| **Saldo_Conta_Final** | *número* | SLD_ITEM_FIN |
+| **Saldo_Subconta_Inicial** | *número* | SLD_SCNT_INI: a parcela atribuível ao item |
+| **Debito_Subconta** | *número* | DEB_SCNT |
+| **Credito_Subconta** | *número* | CRED_SCNT |
+| **Saldo_Subconta_Final** | *número* | SLD_SCNT_FIN |
+| **Indicador_Adocao_Inicial** | *booleano* | IND_ADOC_INI |
+
+47.4. Mudança do plano de contas (Q183-5; documento 184, seção 4)
+
+Cad_Plano_Contas_De_Para
+
+Revisão 34 (documento 184, seção 4; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o de-para do I157 (leiaute 9): uma linha por conta nova que recebe saldo de conta antiga na implantação de um plano de contas novo. Mesmo código no plano antigo e no novo: sem linha. Sem vigência (a data é `Data_Implantacao`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Conta_De_Para** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | --- |
+| **ID_Plano_Empresa** | *referência (Cad_Plano_de_Contas_Empresa)* | O plano novo, na empresa (a vigência dele dá a data) |
+| **ID_Plano_Empresa_Anterior** | *referência (Cad_Plano_de_Contas_Empresa)* | O plano antigo |
+| **ID_Conta_Anterior** | *referência (Cad_Conta_Contabil)* | A conta do plano antigo que cede o saldo (COD_CTA antiga fica no I157 como origem) |
+| **ID_Conta_Nova** | *referência (Cad_Conta_Contabil)* | A conta do plano novo que recebe |
+| **ID_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | COD_CCUS |
+| **Data_Implantacao** | *data* | Primeiro dia do plano novo |
+| **Valor_Saldo_Transferido** | *número* | VL_SLD_INI e IND_DC_INI (positivo é devedor); em uma conta antiga dividida em várias novas, a parcela de cada |
+| **Valor_Saldo_Transferido_Funcional_Em_Reais** | *número, opcional* | VL_SLD_INI_MF e IND_DC_INI_MF, só com moeda funcional |
+
+47.5. Histórico padronizado e relacionamento com o participante (Q183-6 e Q183-7; documento 184, seções 5 e 6)
+
+Cad_Historico_Padrao
+
+Revisão 34 (documento 184, seção 5; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o histórico padronizado do I075 da ECD, por empresa: código e descrição que o lançamento escolhe (`Mov_Lancamento.ID_Historico_Padrao`). O I075 é derivado dos históricos usados no arquivo. Mestre com vigência.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Historico_Padrao** | *identificador* | --- |
+| **ID_Historico_Padrao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Historico_Padrao_Versao). ID_Historico_Padrao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A empresa dona do histórico. |
+| **Codigo** | *código (até 60) --- identidade* | `COD_HIST` do I075. |
+| **Descricao** | *texto* | `DESCR_HIST` do I075. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Participante_Relacionamento
+
+Revisão 34 (documento 184, seção 6; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o relacionamento da empresa declarante com o participante (0180 da ECD): matriz, filial, coligada, controladora e os demais 11 códigos do domínio `relacionamento_ecd`. **A vigência da versão é o período do relacionamento:** `Vigencia_Inicio` vira `DT_INI_REL` e `Vigencia_Fim` (31/12/9999 em aberto) vira `DT_FIN_REL` vazio; mudou a relação, nasce versão nova. O 0150 sai de `Cad_Participante`. Aviso do Motor: há `Cad_Participacao_Societaria` sem relacionamento correspondente.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Relacionamento** | *identificador* | --- |
+| **ID_Relacionamento_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Participante_Relacionamento_Versao). ID_Relacionamento é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A empresa declarante. |
+| **ID_Participante** | *referência (Cad_Participante) --- identidade* | O participante relacionado. |
+| **ID_Tipo_Relacionamento** | *referência (Cad_Classe_Sistema, domínio = relacionamento_ecd) --- identidade* | Um dos 11 códigos do 0180 (COD_REL): 01 matriz no exterior, 02 filial no exterior, 03 coligada, 04 controladora, 05 controlada, 06 subsidiária integral, 07 controlada em conjunto, 08 entidade de propósito específico, 09 participante do conglomerado, 10 vinculadas do art. 23 da Lei 9.430, 11 localizada em país de tributação favorecida do art. 24. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+47.6. Escrituração consolidada, bloco K (Q183-8; documento 184, seção 7)
+
+Cad_Conta_Consolidada_Mapa
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K210 da ECD: o mapa da conta de cada empresa do conglomerado para a conta do plano consolidado. Mestre com vigência. A conta da empresa pode não existir no ERP (investida no exterior, por exemplo): o código fica em texto.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mapa** | *identificador* | --- |
+| **ID_Mapa_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Conta_Consolidada_Mapa_Versao). ID_Mapa é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Conta_Consolidada** | *referência (Cad_Conta_Contabil) --- identidade* | A conta do plano consolidado (`Cad_Plano_de_Contas.Finalidade` = consolidado). |
+| **ID_Investida** | *referência (Cad_Investida) --- identidade* | A empresa do conglomerado. |
+| **Codigo_Conta_Empresa** | *texto --- identidade* | O código da conta na empresa, que pode não estar no ERP. |
+| **ID_Conta_Empresa** | *referência (Cad_Conta_Contabil), opcional* | A conta da empresa, quando existe no ERP. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Ecd_Consolidacao_Empresa
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K100: as empresas do conglomerado no arquivo da ECD consolidada. País, CNPJ básico e nome saem de `Cad_Investida`; o indicador `EVENTO` (S ou N) é derivado da existência de evento. Habilitada por empresa (`ecd_consolidada`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ecd_Consolidacao_Empresa** | *identificador* | --- |
+| **ID_Ecd_Periodo** | *referência (Mov_Ecd_Periodo)* | O arquivo da ECD. |
+| **Codigo_Empresa** | *código (até 4)* | `EMP_COD`: código interno de até 4 dígitos, único no arquivo. |
+| **ID_Investida** | *referência (Cad_Investida)* | A empresa do conglomerado. |
+| **ID_Participacao** | *referência (Cad_Participacao_Societaria), opcional* | A participação que dá os percentuais, quando existe. |
+| **Percentual_Participacao** | *número* | `PER_PART`. |
+| **Percentual_Consolidado** | *número* | `PER_CONS`. |
+| **Data_Inicio_Empresa** | *data* | Data de entrada da empresa no conglomerado. |
+| **Data_Fim_Empresa** | *data, opcional* | Data de saída da empresa do conglomerado. |
+
+Mov_Ecd_Consolidacao_Evento
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K110: os eventos societários do período (1 aquisição, 2 alienação, 3 fusão, 4 cisão parcial, 5 cisão total, 6 incorporação, 7 extinção, 8 constituição).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Evento** | *identificador* | --- |
+| **ID_Ecd_Consolidacao_Empresa** | *referência (Mov_Ecd_Consolidacao_Empresa)* | A empresa do evento. |
+| **Evento** | *enumeração {aquisicao, alienacao, fusao, cisao_parcial, cisao_total, incorporacao, extincao, constituicao}* | O tipo do evento (K110). |
+| **Data_Evento** | *data* | Dentro do ano do período do arquivo. |
+| **ID_Ato_Societario** | *referência (Mov_Ato_Societario), opcional* | O ato societário que sustenta o evento. |
+
+Mov_Ecd_Consolidacao_Evento_Participante
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K115: as empresas envolvidas em cada evento, com a condição e o percentual. Só para os eventos 1 a 6; a soma dos percentuais do evento não passa de 100.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Evento_Participante** | *identificador* | --- |
+| **ID_Evento** | *referência (Mov_Ecd_Consolidacao_Evento)* | O evento. |
+| **ID_Ecd_Consolidacao_Empresa** | *referência (Mov_Ecd_Consolidacao_Empresa)* | A empresa envolvida (deve estar no K100 do arquivo). |
+| **Condicao_Participacao** | *enumeração {sucessora, adquirente, alienante}* | `COND_PART` (1, 2 e 3). |
+| **Percentual_Evento** | *número* | Percentual do evento. |
+
+Mov_Ecd_Consolidacao_Saldo
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K300: o saldo consolidado de cada conta do plano consolidado, em agregado, eliminações e consolidado, todos com sinal (positivo é devedor).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Consolidacao_Saldo** | *identificador* | --- |
+| **ID_Ecd_Periodo** | *referência (Mov_Ecd_Periodo)* | O arquivo da ECD. |
+| **ID_Conta_Consolidada** | *referência (Cad_Conta_Contabil)* | A conta do plano consolidado. |
+| **Valor_Agregado** | *número* | `VAL_AG`: soma das partes (K310). |
+| **Valor_Eliminacoes** | *número* | `VAL_EL`: soma das eliminações (K315). |
+| **Valor_Consolidado** | *número* | `VAL_CS`. |
+
+Mov_Ecd_Consolidacao_Saldo_Parte
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K310: a parcela de cada empresa no saldo agregado de uma conta consolidada. Gravado, e não calculado: a empresa do conglomerado sem plano no ERP (investida no exterior) só entra por lançamento manual. A soma das partes é o `Valor_Agregado`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Saldo_Parte** | *identificador* | --- |
+| **ID_Consolidacao_Saldo** | *referência (Mov_Ecd_Consolidacao_Saldo)* | O saldo consolidado da conta. |
+| **ID_Ecd_Consolidacao_Empresa** | *referência (Mov_Ecd_Consolidacao_Empresa)* | A empresa. |
+| **Valor** | *número* | Com sinal (positivo é devedor). |
+
+Mov_Ecd_Consolidacao_Eliminacao
+
+Revisão 34 (documento 184, seção 7.3; D-N496 e D-N498: Q184-1 a Q184-14 "Sim para todos"): o K315: a parcela de cada eliminação no saldo consolidado, com a empresa e a conta de contrapartida. A soma das eliminações é o `Valor_Eliminacoes`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Eliminacao** | *identificador* | --- |
+| **ID_Consolidacao_Saldo** | *referência (Mov_Ecd_Consolidacao_Saldo)* | O saldo consolidado da conta. |
+| **ID_Ecd_Consolidacao_Empresa** | *referência (Mov_Ecd_Consolidacao_Empresa)* | A empresa da eliminação. |
+| **Codigo_Conta_Contrapartida** | *texto* | `COD_CONTRA`: a conta de contrapartida, como código. |
+| **Valor** | *número* | Com sinal (positivo é devedor). |
+| **ID_Lancamento_Consolidacao** | *referência (Mov_Lancamento_Consolidacao), opcional* | A origem da eliminação, para rastrear. |
+
+47.7. Transação de cartão (documento 177)
+
+Mov_Transacao_Cartao
+
+Revisão 34 (documento 177, seção 3; D-N485: Q177-1 a Q177-5 "Sim para todas"): uma linha por **autorização** do cartão (crédito, débito ou loja). Sem vigência (é fato). O 1601 da EFD-ICMS/IPI usa `Data_Autorizacao` e `Valor_Bruto` (o total, sem parcelas); a data prevista de repasse é o vencimento do título da parcela (`Mov_Titulo.Data_Vencimento`) e a de crédito é a da baixa: nenhuma das duas ganha campo. Habilitada pela habilitação do 1601 da empresa.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Transacao_Cartao** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | A filial que realizou a venda (a titular do contrato com a credenciadora). Quem informa o 1601 não é esta, e sim a titular da conta bancária onde o dinheiro cai (D-N484). |
+| **ID_Participante_Credenciadora** | *referência (Cad_Participante)* | A credenciadora ou instituição de pagamento que liquida a transação: o COD_PART_IP do 1601 quando o recebimento é por cartão. |
+| **Tipo_Cartao** | *enumeração {credito, debito, loja}* | Crédito, débito ou cartão de loja (private label), como o FAQ 17.6.1.1 lista. |
+| **Bandeira** | *código (2), opcional* | Bandeira da operadora (tabela da NF-e). |
+| **Numero_Autorizacao** | *código (até 128)* | O número que o emissor devolveu na autorização. Mesmo conteúdo de cAut da nota, mas da operadora. |
+| **Numero_Nsu_Transacao** | *código (até 20), opcional* | O NSU da transação. |
+| **Numero_Parcelas** | *número* | Quantidade de parcelas (1 para débito e crédito à vista). |
+| **Valor_Bruto** | *número* | Valor total da transação, sem considerar as parcelas (é o valor que o 1601 informa, FAQ 17.6.1.5). |
+| **Data_Venda** | *data, opcional* | Dia da compra. Só quando não há nota (venda sem documento, adiantamento): com nota, a data sai da nota e o campo fica vazio, para não gravar duas vezes. |
+| **Data_Autorizacao** | *data* | Quando o banco emissor aprovou a transação e reservou o limite. É a data que o 1601 usa para cartão de crédito e de débito. |
+| **Data_Captura** | *data, opcional* | Quando a venda foi registrada para cobrança; pode ser depois da venda (venda futura ou recorrente). |
+| **Data_Fechamento_Lote** | *data, opcional* | Fechamento do dia ou do período de vendas enviado para processamento. |
+| **Data_Fatura_Cliente** | *data, opcional* | Quando a compra entra na fatura do consumidor. Não é data de recebimento do lojista; serve à conciliação e ao tratamento de reclamação, não ao 1601. |
+
+47.8. Compras governamentais: destinação do produto da CBS e do IBS e redutor (documento 158, seção 3)
+
+Cad_Regra_Compra_Governamental
+
+Revisão 34 (documento 158, seção 3.5; D-N478: Q158-1 a Q158-13 "Sim para todas"): A regra de destinação do produto da CBS e do IBS por tipo de ente comprador e por janela de vigência (LC 214, arts. 372, 472 e 473; Decreto 12.955, arts. 439 a 443): quais alíquotas vão a zero, qual tributo recebe a soma, a proporção da CBS que segue o regime na transição, se o redutor se aplica e as exceções (compra presencial dispensada de licitação, alíquota uniforme, Simples e MEI). Uma linha por tipo de ente e período; vale a linha vigente na data do fato gerador (o pagamento, art. 439, § 6º). 42 linhas de carga provisória (Anexo A).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Regra_Compra_Governamental** | *identificador* | --- |
+| **ID_Regra_Compra_Governamental_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Regra_Compra_Governamental_Versao). ID_Regra_Compra_Governamental é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Tipo_Ente** | *enumeração {uniao, estados, distrito_federal, municipios, consorcio_publico, comite_gestor_ibs} --- identidade* | Mesmos valores do grupo da nota (`Mov_Nota_Fiscal_Saida_Compra_Governamental.Tipo_Ente`). Parte da identidade: uma linha vigente por tipo de ente. |
+| **Equiparado_A** | *enumeração {municipio_sede, consorcio_publico}, opcional* | Consórcio público: a aquisição se equipara à do município da sede (LC, art. 473, § 4º, I; Decreto, art. 439, § 3º, I). Comitê Gestor do IBS: recebe o tratamento do consórcio (LC, art. 473, § 6º; Decreto, art. 439, § 5º). Vazio nos demais tipos. |
+| **Aplica_Destinacao_Cbs** | *booleano* | Se, na janela, o regime de destinação da CBS ao ente contratante se aplica (LC, art. 372; Decreto, art. 441). Falso em 2026 e em 2027 e 2028; verdadeiro de 2029 em diante, na proporção de Percentual_Aplicacao_Cbs. |
+| **Percentual_Aplicacao_Cbs** | *número, opcional* | A proporção da CBS que segue o regime na janela: 10, 20, 30 e 40 de 2029 a 2032 (LC, art. 372, parágrafo único; Decreto, art. 441, § 2º) e 100 a partir de 2033. Vazio quando Aplica_Destinacao_Cbs é falso. |
+| **Aplica_Destinacao_Ibs** | *booleano* | Se a destinação integral do IBS se aplica na janela: falso em 2026 e verdadeiro desde 2027 (LC, art. 372, I, a, e II, a). Fonte só a LC; o regulamento do IBS não está no Project. |
+| **Tributo_Que_Recebe_O_Total** | *enumeração {cbs, ibs_estadual, ibs_municipal, ibs_distrital}, opcional* | O tributo cuja alíquota sobe para a soma das alíquotas da CBS e do IBS, depois do redutor (art. 439, § 1º): CBS na União, IBS estadual no estado, IBS municipal no município, IBS distrital no Distrito Federal. |
+| **Zera_Cbs** | *booleano* | A alíquota da CBS vai a zero, na proporção de Percentual_Aplicacao_Cbs (estado, Distrito Federal e município; LC, art. 473, § 1º, II a IV). |
+| **Zera_Ibs_Estadual** | *booleano* | A alíquota estadual do IBS vai a zero (União e município). |
+| **Zera_Ibs_Municipal** | *booleano* | A alíquota municipal do IBS vai a zero (União e estado). |
+| **Afasta_Se_Presencial_E_Dispensada** | *booleano* | Verdadeiro: o regime não se aplica à aquisição que, cumulativamente, é presencial e dispensada de licitação (LC, arts. 472, parágrafo único, I, e 473, § 2º; Decreto, arts. 439, § 2º, e 442, § 1º, I). O Motor lê as duas marcas do grupo da nota. |
+| **Aplica_Redutor** | *booleano* | Se o redutor se aplica na janela: desde 01/01/2027 (LC, art. 472; Decreto, art. 442). O percentual do ano é parâmetro do calendário (`redutor_compras_governamentais`), fixado por resolução do Senado. |
+| **Afasta_Redutor_Se_Aliquota_Uniforme** | *booleano* | Verdadeiro: o redutor não se aplica a aquisição sujeita a alíquota nacionalmente uniforme (LC, art. 472, parágrafo único, II; Decreto, art. 442, § 1º, II). |
+| **Afasta_Redutor_Se_Simples_Mei** | *booleano* | Verdadeiro: o redutor não se aplica a aquisição sujeita ao Simples Nacional ou ao MEI (LC, art. 472, parágrafo único, III; Decreto, art. 442, § 1º, III). |
+| **Alcanca_Importacao** | *booleano* | Verdadeiro: a importação do ente, direta ou por conta e ordem, segue o mesmo regime (LC, art. 473, § 3º; Decreto, art. 440). |
+| **Fundamento_Legal** | *texto* | Artigos da LC e do Decreto que sustentam a linha. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+47.9. Zona Franca de Manaus e áreas de livre comércio: áreas, habilitação da Suframa e catálogo de benefícios (documento 158, seção 4)
+
+Cad_Area_Incentivada
+
+Revisão 34 (documento 158, seção 4.4; D-N478: Q158-1 a Q158-13 "Sim para todas"): O catálogo das áreas incentivadas: a Zona Franca de Manaus e as seis áreas de livre comércio (Decreto, arts. 433 e 437; LC, arts. 440 e 459). É mestre porque a habilitação, o internamento e a suspensão da importação apontam para a área. Carga provisória de 7 linhas (Anexo A).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Area_Incentivada** | *identificador* | --- |
+| **ID_Area_Incentivada_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Area_Incentivada_Versao). ID_Area_Incentivada é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Area** | *código (até 30) --- identidade* | ZFM, ALC-TABATINGA, ALC-GUAJARA-MIRIM, ALC-BOA-VISTA-BONFIM, ALC-MACAPA-SANTANA, ALC-BRASILEIA-EPITACIOLANDIA e ALC-CRUZEIRO-DO-SUL. |
+| **Nome** | *texto* | Nome da área como na lei. |
+| **Tipo_Area** | *enumeração {zfm, alc}* | Decide quais benefícios valem (Cad_Zfm_Alc_Regra.Tipo_Area). |
+| **ID_Estado** | *referência (Cad_Estado)* | O estado da área (cada área de livre comércio fica num só estado). |
+| **Norma_Criacao** | *texto, opcional* | A lei ou o decreto que criou ou regulamentou a área (art. 437). |
+| **Data_Fim_Beneficios** | *data, opcional* | Último dia dos benefícios (art. 92-A do ADCT; Decreto, arts. 432 e 436). A carga traz 31/12/2073, provisório (leitura do documento 10, seção 9). |
+| **Fundamento_Legal** | *texto* | Artigo que lista a área. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Area_Incentivada_Municipio
+
+Revisão 34 (documento 158, seção 4.5; D-N478: Q158-1 a Q158-13 "Sim para todas"): Os municípios de cada área incentivada, com vigência. A Zona Franca de Manaus compreende parte de Manaus, Rio Preto da Eva e Itacoatiara (art. 433, I); cada área de livre comércio traz os seus. Serve ao Motor para decidir se o endereço do destinatário está dentro da área. Tabela de janela de vigência, sem identidade separada. Carga provisória de 12 linhas.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Area_Incentivada_Municipio** | *identificador* | --- |
+| **ID_Area_Incentivada** | *referência (Cad_Area_Incentivada) --- identidade* | A área. |
+| **ID_Municipio** | *referência (Cad_Municipio) --- identidade* | O município. |
+| **Eh_Parcial** | *booleano* | Verdadeiro quando só parte do município está na área (os três da Zona Franca de Manaus). O endereço dentro da parte demarcada é dado do usuário (Q158-E2). |
+| **Fundamento_Legal** | *texto, opcional* | Artigo ou lei. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Habilitacao_Suframa
+
+Revisão 34 (documento 158, seção 4.6; D-N478: Q158-1 a Q158-13 "Sim para todas"): O detalhe de Suframa da habilitação (`Cad_Habilitacao_Regime_Especial`, com o novo valor `suframa_zfm_alc` no domínio `tipo_regime_especial_federal`): a área, a atividade habilitada, o número da inscrição específica que a nota do remetente tem de citar (art. 529, § 2º) e o projeto técnico-econômico da indústria incentivada (art. 435, II). A habilitação em si (titular, número, situação) continua no cadastro que já existe. Tabela de janela de vigência. Carga vazia: cadastro do usuário.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Habilitacao_Suframa** | *identificador* | --- |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial) --- identidade* | A habilitação de tipo `suframa_zfm_alc`; o titular é o participante habilitado. |
+| **ID_Area_Incentivada** | *referência (Cad_Area_Incentivada)* | A área em que o contribuinte está estabelecido. |
+| **Atividade_Habilitada** | *enumeração {comercial_servicos, industria_incentivada}* | Inciso I (inscrição) ou inciso II (inscrição mais projeto aprovado) do art. 435 e do art. 438. |
+| **ID_Participante_Inscricao** | *referência (Cad_Participante_Inscricao)* | A inscrição específica no cadastro da Suframa (`Tipo_Inscricao` = suframa), que a nota do remetente leva em campo próprio (Decreto, art. 529, § 2º). O número fica no cadastro de inscrições, e não aqui. |
+| **Numero_Projeto_Tecnico_Economico** | *código (até 30), opcional* | O projeto aprovado pelo Conselho de Administração da Suframa. Obrigatório na indústria incentivada. |
+| **Data_Aprovacao_Projeto** | *data, opcional* | Data da aprovação do projeto. |
+| **Situacao_Convalidacao** | *enumeração {nao_aplicavel, pendente, convalidado}* | Projeto aprovado antes da LC: permanece válido para a CBS, desde que o Conselho o convalide nos prazos do ato conjunto da RFB, da Suframa e do CGIBS (art. 435, § 6º, II; art. 438, § 7º, II). |
+| **Data_Convalidacao** | *data, opcional* | Quando o Conselho convalidou. |
+| **Fundamento_Legal** | *texto, opcional* | --- |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Habilitacao_Suframa_Produto
+
+Revisão 34 (documento 158, seção 4.7; D-N478: Q158-1 a Q158-13 "Sim para todas"): O produto do projeto técnico-econômico aprovado: a NCM, o processo produtivo básico e a categoria que decide o percentual do crédito presumido (art. 531; LC, art. 450). O crédito é "nos termos do projeto aprovado": o percentual depende do produto da habilitação, e não só da NCM. Tabela de janela de vigência. Carga vazia.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Habilitacao_Suframa_Produto** | *identificador* | --- |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial) --- identidade* | A habilitação da indústria incentivada. |
+| **ID_Classificacao_Mercadoria** | *referência (Cad_Classificacao_Mercadoria) --- identidade* | A NCM do produto no projeto. |
+| **Numero_Ppb** | *código (até 30), opcional* | O processo produtivo básico do produto (art. 435, § 6º, III). |
+| **Categoria_Credito_Ibs** | *enumeração {bem_consumo_final, bem_capital, bem_intermediario, informatica_ou_estimulo_cem}, opcional* | Grupo do art. 450, § 1º, da LC: 55%, 75%, 90,25% e 100% (informática e produtos com crédito estímulo de ICMS de 100% até 2023). O percentual vem de Cad_Zfm_Alc_Regra. |
+| **Eh_Produto_Art_454** | *booleano* | Verdadeiro: crédito presumido da CBS de 6% (produto do art. 454 da LC); falso: 2% (art. 531, § 1º). A lista dos produtos é divulgada pelo Poder Executivo (art. 454, § 3º). |
+| **Eh_Sem_Similar_Nacional** | *booleano* | Verdadeiro: bem sem similar nacional instalado na ZFM, com o tratamento do art. 455 da LC. |
+| **Descricao_No_Projeto** | *texto, opcional* | O produto como o projeto o descreve. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Habilitacao_Suframa_Ocorrencia
+
+Revisão 34 (documento 158, seção 4.8; D-N478: Q158-1 a Q158-13 "Sim para todas"): As comunicações da Suframa sobre a habilitação (art. 435, § 7º; art. 438, § 8º): bloqueio da inscrição, suspensão do licenciamento de importação, suspensão ou cancelamento dos incentivos de um bem, incentivo auferido indevidamente e descumprimento do processo produtivo básico ou dos compromissos do projeto. O ERP registra e avisa; a situação da habilitação é mudada pelo usuário.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ocorrencia_Suframa** | *identificador* | --- |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial)* | A habilitação alcançada. |
+| **Tipo_Ocorrencia** | *enumeração {bloqueio_inscricao, suspensao_licenciamento_importacao, suspensao_incentivos_bem, cancelamento_incentivos_bem, incentivo_indevido, descumprimento_ppb_ou_compromissos}* | Os seis incisos do § 7º do art. 435 (ZFM) e do § 8º do art. 438 (ALC). |
+| **Data_Comunicacao** | *data* | Quando a Suframa comunicou. |
+| **Data_Inicio_Efeito** | *data* | Início do efeito: as administrações suspendem os incentivos (I a III) ou cancelam (IV). |
+| **Data_Fim_Efeito** | *data, opcional* | Fim da suspensão, na regularização. |
+| **ID_Classificacao_Mercadoria** | *referência (Cad_Classificacao_Mercadoria), opcional* | O bem, nas ocorrências de suspensão e cancelamento dos incentivos do bem. |
+| **Numero_Comunicado** | *código (até 40), opcional* | O número do comunicado ou do ato. |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O arquivo da comunicação. |
+| **Situacao_Ocorrencia** | *enumeração {vigente, regularizada, cancelada}* | --- |
+| **Observacao** | *texto, opcional* | --- |
+
+Cad_Zfm_Alc_Regra
+
+Revisão 34 (documento 158, seção 4.9; D-N478: Q158-1 a Q158-13 "Sim para todas"): O catálogo dos benefícios da Zona Franca de Manaus e das áreas de livre comércio: uma linha por benefício e, quando o percentual difere, por categoria do produto ou região de origem. Guarda o tributo, a forma, a base e o percentual, os prazos (comprovação do internamento, prorrogação, conversão da suspensão, retorno, expiração do crédito) e se o fator de transição do art. 474 se aplica. Substitui os nomes `Cad_Regra_Zfm_Alc_Cbs`, `Cad_Zfm_Alc_Produto_Regra` e `Cad_Cronograma_Transicao_Zfm` do documento 94. É mestre porque o crédito, o internamento e a suspensão apontam para a linha aplicada. 23 linhas de carga provisória (Anexo A).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Zfm_Alc_Regra** | *identificador* | --- |
+| **ID_Zfm_Alc_Regra_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Zfm_Alc_Regra_Versao). ID_Zfm_Alc_Regra é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Regra** | *código (até 40) --- identidade* | Por exemplo ZFM-CRED-IBS-PRODUCAO-CONSUMO-FINAL. |
+| **ID_Tipo_Beneficio** | *referência (Cad_Classe_Sistema, domínio = beneficio_zfm_alc)* | Domínio novo, aberto, com 10 valores (Anexo A). |
+| **Tipo_Area** | *enumeração {zfm, alc}* | A área a que a linha se aplica. |
+| **Tributo_Alcancado** | *enumeração {cbs, ibs, cbs_e_ibs}* | Onde a linha vale para os dois, o IBS vem só da LC (Fonte_Normativa). |
+| **Forma_Beneficio** | *enumeração {suspensao, aliquota_zero, credito_presumido, incidencia_ibs_entrada}* | O mecanismo. |
+| **Categoria_Produto** | *enumeração {bem_consumo_final, bem_capital, bem_intermediario, informatica_ou_estimulo_cem, produto_art_454, demais_produtos}, opcional* | Quando o percentual depende do produto. Casa com Cad_Habilitacao_Suframa_Produto. |
+| **Regiao_Origem** | *enumeração {sul_sudeste_exceto_es, demais_regioes_e_es}, opcional* | Origem do bem nos créditos de aquisição (7,5% e 13,5%). |
+| **Base_Do_Percentual** | *enumeração {valor_operacao, saldo_devedor_ibs_periodo, aliquota_ibs_importacao, aliquota_que_incidiria}, opcional* | Sobre o que o percentual incide. |
+| **Percentual** | *número, opcional* | O percentual da lei. Vazio na suspensão e na alíquota zero. |
+| **Sujeito_Fator_Transicao_Art_474** | *booleano* | Verdadeiro nos créditos de aquisição dos arts. 447, 449 e 465 da LC, que de 2029 a 2032 caem a 9/10, 8/10, 7/10 e 6/10. Falso nos créditos da produção (arts. 450 e 467). |
+| **Exige_Inscricao_Suframa_No_Documento** | *booleano* | Verdadeiro: a alíquota zero depende da inscrição do destinatário no documento (arts. 529, § 2º, e 537, § 2º). |
+| **Exige_Internamento** | *booleano* | Verdadeiro: a alíquota zero depende do internamento (arts. 529, § 6º, e 537, § 6º; art. 548). |
+| **Prazo_Comprovacao_Dias** | *número, opcional* | 120 dias da emissão do documento. |
+| **Prazo_Prorrogado_Dias** | *número, opcional* | Até 210 dias, com requerimento justificado antes do vencimento (art. 529, § 7º). |
+| **Prazo_Conversao_Meses** | *número, opcional* | 48 meses, da emissão do documento de importação, para a suspensão virar isenção (art. 528, § 2º). |
+| **Prazo_Retorno_Dias** | *número, opcional* | 180 dias para o retorno do bem que saiu para conserto, revisão e semelhantes (art. 528, § 5º). |
+| **Prazo_Utilizacao_Meses** | *número, opcional* | 60 meses, do primeiro dia do mês seguinte ao da apropriação, para usar o crédito presumido (art. 533, parágrafo único; art. 540). |
+| **Permite_Ressarcimento** | *booleano* | Falso nos créditos presumidos: só compensam o mesmo tributo, sem ressarcimento em dinheiro nem compensação com outro tributo (arts. 533 e 540). |
+| **Fonte_Normativa** | *enumeração {lc_e_decreto, so_lc}* | `so_lc`: só a LC 214 (o regulamento do IBS não está no Project). |
+| **Fundamento_Legal** | *texto* | Artigos da LC e do Decreto. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+47.10. Zona Franca de Manaus e áreas de livre comércio: internamento, importação com suspensão e crédito de IBS por período (documento 158, seção 5)
+
+Mov_Zfm_Alc_Internamento
+
+Revisão 34 (documento 158, seção 5.2; D-N478: Q158-1 a Q158-13 "Sim para todas"): O controle do internamento da venda com alíquota zero para a ZFM ou a ALC (Decreto, arts. 543 a 548): o protocolo, o evento de internamento da Suframa, o evento de conclusão do desembaraço do destino e o prazo de 120 dias (210 com prorrogação). Sem o evento de internamento no prazo, o fornecedor declara a CBS que seria devida com os acréscimos do art. 27 pelo evento de não internamento. O ERP registra, calcula o prazo, avisa e nunca bloqueia. Um registro por documento.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Internamento** | *identificador* | --- |
+| **ID_Nota** | *referência (Mov_Nota_Fiscal_Saida) --- identidade* | O documento fiscal da venda. |
+| **ID_Area_Incentivada** | *referência (Cad_Area_Incentivada)* | A área de destino. |
+| **ID_Habilitacao_Destinatario** | *referência (Cad_Habilitacao_Regime_Especial), opcional* | A habilitação do destinatário, de onde vem a inscrição citada no documento. |
+| **ID_Zfm_Alc_Regra** | *referência (Cad_Zfm_Alc_Regra)* | A linha aplicada (os prazos vêm dela). |
+| **Situacao_Internamento** | *enumeração {aguardando, internado, nao_internado, prorrogado}* | `internado` com o evento da Suframa e o do desembaraço (Decreto, art. 548); `nao_internado` na falta do evento depois do prazo (parágrafo único). |
+| **Data_Prazo_Final** | *data* | Calculado e armazenado: emissão mais o prazo da regra, mais a prorrogação. Fica gravado porque uma mudança de vigência não reescreve a venda já feita. |
+| **Data_Requerimento_Prorrogacao** | *data, opcional* | Requerimento à Suframa, feito antes do vencimento do prazo original (§ 7º). |
+| **Numero_Protocolo_Suframa** | *código (até 40), opcional* | O protocolo eletrônico de ingresso (art. 543). |
+| **ID_Dfe_Evento_Internamento** | *referência (Mov_Dfe_Evento), opcional* | O evento de internamento registrado pela Suframa no documento (art. 548). |
+| **ID_Dfe_Evento_Desembaraco** | *referência (Mov_Dfe_Evento), opcional* | O evento de conclusão do desembaraço das administrações do destino. |
+| **ID_Dfe_Evento_Nao_Internamento** | *referência (Mov_Dfe_Evento), opcional* | O evento de não internamento que o fornecedor registra. |
+| **Motivo_Nao_Comprovacao** | *enumeração {nao_ingressou, nao_desembaracado_destino, prazo_vencido, descumprimento_etapas, vicio_simulacao_fraude}, opcional* | Os cinco casos do art. 547. |
+| **Valor_Cbs_Declarado_Nao_Internamento** | *número, opcional* | Informado: a CBS que seria devida sem a alíquota zero, declarada no evento. Os acréscimos seguem Cad_Acrescimo_Legal_Cbs (hipóteses `zfm_nao_internamento_120_dias` e `alc_nao_internamento`). |
+| **Data_Conclusao** | *data, opcional* | Quando o internamento ou o não internamento fechou o controle. |
+| **Observacao** | *texto, opcional* | --- |
+
+Mov_Zfm_Alc_Importacao_Suspensao
+
+Revisão 34 (documento 158, seção 5.3; D-N478: Q158-1 a Q158-13 "Sim para todas"): A importação com suspensão da CBS por indústria incentivada (Decreto, arts. 528 e 536), por item: o prazo de 48 meses, a conversão em isenção (consumo ou incorporação no processo produtivo, depreciação integral ou permanência de 48 meses no ativo imobilizado, o que ocorrer primeiro) e a saída para fora da área antes da conversão, que obriga a declarar a CBS suspensa com os acréscimos do art. 27 pelo evento no documento de importação. Seis saídas físicas não obrigam (conserto, revisão, limpeza, recondicionamento, demonstração e industrialização por encomenda), com retorno em 180 dias. O ERP registra e avisa.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Importacao_Suspensao** | *identificador* | --- |
+| **ID_Duimp_Item** | *referência (Mov_Duimp_Item), opcional* | O item da Duimp. Exatamente um entre este e o item da nota de entrada. |
+| **ID_Nota_Fiscal_Entrada_Item** | *referência (Mov_Nota_Fiscal_Entrada_Item), opcional* | O item do documento fiscal de importação. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial)* | A habilitação da indústria incentivada importadora. |
+| **ID_Area_Incentivada** | *referência (Cad_Area_Incentivada)* | --- |
+| **ID_Zfm_Alc_Regra** | *referência (Cad_Zfm_Alc_Regra)* | A linha aplicada (prazos de 48 meses e 180 dias). |
+| **Numero_Licenca_Suframa** | *código (até 30), opcional* | A licença prévia da Suframa para a importação de procedência estrangeira (Decreto, art. 550). |
+| **Data_Documento_Importacao** | *data* | A emissão do documento fiscal de importação: de onde correm os 48 meses e os acréscimos. |
+| **Valor_Cbs_Suspensa** | *número* | Informado ou lido da Duimp (`Mov_Duimp_Item_Tributo.Valor_Suspenso`). |
+| **Valor_Ibs_Suspenso** | *número, opcional* | Só pela LC (art. 443); o regulamento do IBS não está no Project. |
+| **Situacao_Suspensao** | *enumeração {suspensa, convertida_em_isencao, saida_declarada, saida_excecionada, cancelada}* | --- |
+| **Motivo_Conversao** | *enumeração {consumido_ou_incorporado, depreciacao_integral, permanencia_48_meses}, opcional* | Os três motivos do § 2º. |
+| **Data_Conversao** | *data, opcional* | --- |
+| **ID_Ativo_Imobilizado** | *referência (Cad_Ativo_Imobilizado), opcional* | O bem no ativo imobilizado, de onde vêm a depreciação integral e a permanência. |
+| **Data_Saida_Para_Fora** | *data, opcional* | A remessa para fora da área antes da conversão. |
+| **Motivo_Excecao_Saida** | *enumeração {conserto_reparo, revisao, limpeza, recondicionamento, demonstracao_feira, industrializacao_encomenda}, opcional* | As seis saídas do § 4º. A industrialização por encomenda fora da área só se o processo produtivo básico autorizar (§ 6º). |
+| **Data_Retorno** | *data, opcional* | Retorno dentro de 180 dias da emissão do documento (§ 5º). |
+| **ID_Dfe_Evento_Declaracao** | *referência (Mov_Dfe_Evento), opcional* | O evento que declara a CBS suspensa com acréscimos no documento de importação (§ 3º). |
+| **Observacao** | *texto, opcional* | --- |
+
+Mov_Zfm_Credito_Ibs_Periodo
+
+Revisão 34 (documento 158, seção 5.4; D-N478: Q158-1 a Q158-13 "Sim para todas"): A apuração mensal do crédito presumido de IBS da indústria incentivada (LC, art. 450, §§ 1º e 6º): o percentual (55%, 75%, 90,25% ou 100%) incide sobre o saldo devedor do IBS do período de cada grupo, e não sobre cada nota. Uma linha por empresa, competência e percentual. Fonte só a LC 214: o regulamento do IBS não está no Project, e todo o desenho é provisório (Q158-9).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Zfm_Credito_Ibs_Periodo** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A indústria incentivada. |
+| **Competencia** | *competência --- identidade* | O mês de apuração. |
+| **Percentual_Incentivo** | *número --- identidade* | O percentual do grupo (art. 450, § 1º). |
+| **ID_Zfm_Alc_Regra** | *referência (Cad_Zfm_Alc_Regra)* | A linha do percentual. |
+| **Valor_Saldo_Devedor_Ibs_Grupo** | *número* | Calculado e armazenado: o saldo devedor do IBS do período dos débitos do grupo, sem o crédito presumido (§ 6º, I). |
+| **Valor_Credito_Presumido_Ibs** | *número* | Calculado e armazenado: o saldo do grupo vezes o percentual. Vale como compensação do IBS do mesmo contribuinte, sem ressarcimento (art. 452). |
+| **Valor_Saldo_A_Recuperar** | *número, opcional* | O saldo a recuperar do período (art. 45, § 3º), quando há (§ 6º, IV). |
+| **Valor_Transferido** | *número, opcional* | O valor dos débitos extintos transferido à indústria, até o limite do saldo a recuperar, em até 3 dias úteis da conclusão da apuração (§ 6º, IV). |
+| **Data_Transferencia** | *data, opcional* | --- |
+| **Situacao_Apuracao** | *enumeração {calculada, concluida}* | `concluida` quando o período fecha no Comitê Gestor do IBS. |
+| **Origem_Calculo** | *enumeração {calculado_pelo_erp, informado_comite_gestor}* | O ERP calcula para conferir; o valor oficial é o do Comitê Gestor. |
+
+**Cargas de partida da revisão 34 na Contabilidade & Fiscal (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Regra_Compra_Governamental (42 linhas) | 6 tipos de ente em 7 janelas (2026; 2027 e 2028; 2029; 2030; 2031; 2032; 2033 em diante), pela LC 214, art. 372, para todos os entes; provisória (documento 158, Q158-C1) |
+| Cad_Area_Incentivada (7 linhas) | A Zona Franca de Manaus e as seis áreas de livre comércio; fim dos benefícios em 31/12/2073, provisório (Q158-C10) |
+| Cad_Area_Incentivada_Municipio (12 linhas) | Três municípios da ZFM (parciais) e nove das áreas de livre comércio; provisória |
+| Cad_Zfm_Alc_Regra (23 linhas) | 15 benefícios da ZFM e 8 das áreas de livre comércio; provisória |
+| Cad_Classe_Sistema, domínios novos | beneficio_zfm_alc (10 valores), natureza_subconta_ecd (25), relacionamento_ecd (11), tipo_documento_ecd (7), motivo_substituicao_ecd (6) e plano_referencial_ecd (10) |
+| Cad_Classe_Sistema, valores novos em domínios existentes | tipo_regime_especial_federal (suframa_zfm_alc), tipo_lista_legal (zfm_alc_bens_excluidos), parametro_transicao (redutor_compras_governamentais, sem linha no calendário até a resolução do Senado) e campo_criterio_regra (7 critérios do Motor do documento 158); modulo_fiscal_opcional (ecd_moeda_funcional, ecd_subcontas_ras e ecd_consolidada; nenhum ligado por padrão) |
+| Cad_Classe_Sistema, classificacao_item_nfgas (46 linhas) | Os 46 códigos de cClass da NFGás (11 grupos), com a continuidade (0 não se aplica, 1 continuada, 2 não continuada, 3 ambos) e as marcas do grupo (valor deduzido, CBS zero na ZFM e nas ALC, fatura agregadora) no texto da descrição; provisória |
+| Cad_Utilidade_Classificacao_Efd (8 linhas, NFGás) | Mapa provisório do grupo para o campo do C500: 010, 011 e 020 em fornecimento; 021 e 070 a 072 em despesas acessórias; 500 em outras deduções (dedução). Os grupos 030, 060 e 073 ficam **sem linha**, com aviso do Motor. Cbs_Zero_Zfm_Alc = verdadeiro nas linhas dos grupos 021, 070 e 500; o mapa é inferência minha, o contador valida (Q184-C3) |
+| Cad_Participante_Inscricao.Tipo_Inscricao | Cinco valores novos na enumeração: bacen, susep, cvm, antt e tse (registro 0007 da ECD) |
+
+**Regras de texto da revisão 34 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Moeda funcional | Em cada lote, débitos e créditos fecham em cada base (moeda funcional, valor nacional e valor funcional em reais): aviso, nunca bloqueio. VL_LCTO_MF do I200 deriva da soma dos débitos da base funcional em reais. Os sete campos do I020 e o IDENT_MF do 0000 são derivados. Cad_Empresa.ID_Moeda_Funcional diferente do real com Indicador_Moeda_Funcional falso, ou o contrário: aviso |
+| Subcontas e RAS | A conta principal de cada natureza da subconta (coluna do manual) entra como regra de validação do Motor, em aviso. O livro Z leva I012 e I015, derivados de Cad_Subconta_Contabil.ID_Conta_Principal, sem entidade; no livro G continuam fora (Q183-2). O AVP só se registra, sem cálculo (Q184-6). Aviso: a soma de Mov_Agio_Composicao difere de Mov_Agio.Valor_Agio |
+| Mudança do plano | Com mudança no meio do período, a primeira ECD vai do início até a véspera da Data_Implantacao, com o plano antigo, e a segunda começa nela, com o plano novo e o I157. Avisos: período do arquivo diferente da vigência do plano; I157 faltando onde o código mudou; saldo inicial do plano novo que não fecha com o final do antigo |
+| Bloco K | O K030 sai do período do arquivo e o K200 do plano consolidado (Cad_Plano_de_Contas.Finalidade = consolidado). Avisos: conglomerado no mês 12 (REGRA_CONGLOMERADO_MES_12); K115 faltando em evento 1 a 6; evento 7 ou 8 com K115; empresa do K115 fora do K100; conta do K210 fora do K200; agregado diferente da soma das partes |
+| COD_PART por partida (I250) | Não se grava (Q184-9): o participante da partida continua pela origem (lote, nota, título) |
+| Compras governamentais | O Motor lê as duas marcas da nota (aquisição presencial e dispensa de licitação) e a regra vigente na data do pagamento; o redutor do ano vem do calendário. O lado comprador do ente público fica fora (D-N68). O crédito de IBS da produção é provisório (Q158-9) |
+| Cartão e 1601 | Para cartão de crédito e de débito, o Motor usa Mov_Transacao_Cartao.Data_Autorizacao e Valor_Bruto (total, sem parcelas); a data prevista de repasse é o vencimento do título da parcela e a de crédito é a da baixa. A baixa só carrega ID_Participante_Instituicao_Pagamento quando o recebimento não é por cartão |
+
+
+48\. Anexo --- Entidades novas da revisão 35 (período da ECF e ciência do indício de infração) e cargas de partida
+
+Revisão 35 do dicionário (consolidação de 09/11/2026): 2 entidades novas neste módulo (19 campos declarados nas tabelas; o dicionário acrescenta as colunas de vigência e as chaves de versão dos mestres). Documento 192 (D-N519: Q192-1 a Q192-7), documentos 185 e 187 (D-N500 e D-N516: Q185-1 a Q185-3, Q187-1 e Q187-2) e as respostas à Q188-3 e Q188-4 (D-N507).
+
+48.1. Ciência do indício de infração (Q185-2; documentos 185 e 187)
+
+Mov_Ciencia_Indicio_Infracao
+
+Revisão 35 (documento 185, Q185-2; documento 187; D-N500: "Q185-1 a Q185-3 Sim para todas"): a ciência do indício de infração que o detentor de selo Confia ou Sintonia recebe antes da autuação (art. 42 da LC 225/2026; art. 14 da IN RFB 2.316/2026), com 60 dias da ciência para regularizar sem a multa de mora do art. 61 da Lei 9.430. O ERP só registra, no padrão de `Mov_Condicao_Devedor_Contumaz`: o prazo vem do ato e é digitado, o ERP não conta. Não vale nos indícios de sonegação, fraude ou conluio nem nos pedidos de restituição ou compensação com indício de falsidade (art. 14, § 3º, da IN).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ciencia_Indicio** | *identificador* | --- |
+| **ID_Empresa_Programa** | *referência (Cad_Empresa_Programa_Conformidade)* | O selo (Confia ou Sintonia) cujo detentor recebeu a ciência. |
+| **Data_Ciencia** | *data* | Início dos 60 dias do art. 42, § 1º, da LC 225 (art. 14 da IN 2.316). |
+| **Data_Limite_Regularizacao** | *data, opcional* | Digitada (padrão D-N284): o prazo de 60 dias vem do ato; o ERP não conta. |
+| **Situacao** | *enumeração {aberta, regularizada_no_prazo, vencida_sem_regularizacao, sem_direito_ao_prazo}* | aberta: dentro do prazo; regularizada_no_prazo: sem a multa de mora; vencida_sem_regularizacao: a multa corre desde o vencimento original (art. 42, § 2º, ressalvadas as disposições específicas do Confia); sem_direito_ao_prazo: indício de sonegação, fraude ou conluio, ou pedido de restituição ou compensação com indício de falsidade (art. 14, § 3º). |
+| **Numero_Processo** | *código (até 40), opcional* | Número do processo ou da notificação. Referência à entidade do processo da Fase 8 só depois de você dizer que quer. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Padrão da Fase 0, seção 9. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Observacao** | *texto, opcional* | --- |
+
+48.2. Período da ECF: registro 0000 (Q192-1 a Q192-6; documento 192, seção 4)
+
+Mov_Ecf_Periodo
+
+Revisão 35 (documento 192, seção 4; D-N519: Q192-1 a Q192-7): os campos do registro 0000 (e o hash do 0010) da ECF, uma linha por arquivo, no padrão de `Mov_Ecd_Periodo`. Como o arquivo fechado é um retrato congelado, os campos ficam gravados aqui e o arquivo sai sempre igual ao que foi fechado. Os campos genéricos de situação especial de `Mov_Escrituracao_Arquivo` ficam vazios na ECF (Q192-4), para não haver duas verdades. Valores dos três domínios: carga provisória até o contador validar (Q192-2). Onde a tabela e a lista do manual divergem (incorporadora, desenquadramento de imune ou isenta, valor 7), o ERP segue a lista do campo 6 e avisa o contador, até a resposta da Receita (pergunta 27).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ecf_Periodo** | *identificador* | --- |
+| **ID_Escrituracao_Arquivo** | *referência (Mov_Escrituracao_Arquivo)* | 1:1. O arquivo da ECF a que o período pertence. |
+| **ID_Situacao_Inicio_Periodo** | *referência (Cad_Classe_Sistema, domínio = ecf_situacao_inicio_periodo)* | 0000, campo 6 (IND_SIT_INI_PER). |
+| **ID_Situacao_Especial** | *referência (Cad_Classe_Sistema, domínio = ecf_situacao_especial)* | 0000, campo 7 (SIT_ESPECIAL). |
+| **Data_Situacao_Especial** | *data, opcional* | 0000, campo 9 (DT_SIT_ESP); vazia quando a situação é normal. O prazo de entrega da situação especial lê este campo. |
+| **Percentual_Patrimonio_Remanescente_Cisao** | *número, opcional* | 0000, campo 8 (PAT_REMAN_CIS), de 0 a 100, com 4 casas decimais; só na cisão parcial; alimenta o controle de saldos da parte B. |
+| **Tipo_Ecf** | *enumeração {empresa_sem_scp, socio_ostensivo_de_scp, scp}* | 0000, campo 14 (TIP_ECF); o ERP sugere a partir das entidades ligadas e o contador confirma. |
+| **ID_Evento_Scp** | *referência (Cad_Classe_Sistema, domínio = ecf_evento_scp), opcional* | 0000, campo 16 (EVENTO_SCP); só na ECF da SCP. |
+| **Mudanca_Forma_Tributacao** | *booleano* | RETIFICADORA = "F": ECF original com mudança de forma de tributação; exige o recibo anterior. |
+| **Hash_Ecf_Anterior** | *código (até 40), opcional* | 0010, campo 2 (HASH_ECF_ANTERIOR): o Hash_Escrituracao da ECF aceita do período anterior. No lucro real, com situação de início 0, 3 ou 6, o programa da ECF exige recuperar a ECF anterior; os saldos iniciais da parte B e das contas referenciais dependem dela. |
+
+**Cargas de partida da revisão 35 na Contabilidade & Fiscal (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Classe_Sistema, ecf_situacao_inicio_periodo (9), ecf_situacao_especial (10) e ecf_evento_scp (2) | 21 valores do registro 0000 da ECF (leiaute 12), com o número do manual como código; provisória até o contador validar |
+| Cad_Classe_Sistema, classificacao_programa_conformidade (5 linhas) | As cinco classificações do Sintonia (A+, A, B, C e D) com a faixa da nota no texto; provisória |
+| Cad_Classe_Sistema, valores novos em domínios existentes | motivo_exclusao_programa (4), origem_parcelamento_tributario (plano_regularizacao_confia) e parametro_ecf (limite_moeda_exterior_anual) |
+| Cad_Ecf_Parametro (1 linha) | limite_moeda_exterior_anual = R$ 120.000, vigência 01/01/2026, provisório (mesma carga de partida do cartão; Q110-5) |
+
+**Regras de texto da revisão 35 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Avisos do Motor da ECF (documento 192, seção 7) | 11 avisos do registro 0000: DT_INI antes de 2014; situação 0 sem 01/01; DT_FIN fora de 31/12 ou de DT_SIT_ESP; datas de anos diferentes; DT_SIT_ESP vazia ou preenchida errada; PAT_REMAN_CIS na cisão parcial; EVENTO_SCP; recibo da retificadora; abertura diferente da data de abertura do CNPJ e retorno de inativa; lucro real sem hash da ECF anterior |
+| Prazo da situação especial da ECF | Situações 1 a 6: último dia útil do 3º mês depois do evento (evento de janeiro a abril: último dia útil de julho); incorporadora e cisão parcial têm duas ECFs, a segunda no prazo normal; situações 7, 8 e 9 no prazo normal; lido de Data_Situacao_Especial por Cad_Regra_Vencimento |
+| Y520 e IND_ATIV_EXT (D-N504 e D-N507) | Cartão e moeda abaixo de R$ 120.000 por ano não saem no Y520 nem ligam o indicador do 0020; câmbio, transferência internacional em reais e depósito ou recursos no exterior saem sempre. IND_ATIV_EXT = sim quando recebíveis de não residentes em aberto mais saldo das contas bancárias no exterior somam R$ 100.000 ou mais, na data de encerramento, pela taxa de fechamento; o ERP calcula e o contador revisa |
+| Confia e Sintonia (D-N500, D-N515 e D-N516) | Avisos, sem bloqueio: sem bônus em estimativa mensal (Confia e Sintonia); Sintonia: o selo vale até o fim do mês do cancelamento ou da expiração; Confia: o bônus acaba no período de apuração do ADE de exclusão e o primeiro bônus só vem 12 meses depois do ADE de admissão; empresa com Confia admitido e condição de contumácia aberta; readmissão no Confia antes de 2 anos da exclusão (art. 28, § 7º da LC 225); 60 dias da admissão para confissão sem multa; indicadores do Sintonia como nota estimada por mês, sem programar (Q185-3) |
+| REIDI | Aviso do prazo de 30 dias para pedir o cancelamento depois da conclusão do projeto (Data_Conclusao_Projeto); o ERP não pede o cancelamento |
+
+
+49\. Anexo --- Entidades novas da revisão 36 (ordem do art. 7º-A, parâmetros legais e benefícios do PNCT) e cargas de partida
+
+Revisão 36 do dicionário (consolidação de 10/11/2026): 3 entidades novas neste módulo (documento 159, D-N524 e D-N525: Q159-2, Q159-3 e Q159-5) e as alterações em Cad_Cclasstrib, Mov_Auto_Infracao e Mov_Apuracao_Tributo_Item (documentos 159 e 196).
+
+49.1. Ordem de aplicação dos institutos do art. 7º-A (Q159-2; documento 159, seção 4.1)
+
+Cad_Instituto_Beneficio_Ordem
+
+Revisão 36 (documento 159, seção 4.1; D-N524 e D-N525: Q159-2, Q159-3 e Q159-5): A ordem em que os cinco institutos que mudam a tributação de uma operação se aplicam quando mais de um cabe (LC 214, art. 7º-A, incluído pela LC 227): redução a zero, suspensão com conversão em alíquota zero, isenção, diferimento e redução de alíquota distinta. Cinco linhas de carga. O Motor lê a ordem desta tabela para desempatar regras que se sobrepõem; a `Prioridade` do `Cad_Motor_Regra` continua sendo o desempate dentro do mesmo instituto.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Instituto_Beneficio_Ordem** | *identificador* | --- |
+| **ID_Instituto_Beneficio_Ordem_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Instituto_Beneficio_Ordem_Versao). ID_Instituto_Beneficio_Ordem é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Instituto** | *referência (Cad_Classe_Sistema, domínio = instituto_beneficio_ibs_cbs) --- identidade* | reducao_a_zero, suspensao_com_conversao, isencao, diferimento, reducao_de_aliquota_distinta. Domínio novo, cinco valores. |
+| **Ordem** | *número* | 1 a 5, na ordem do art. 7º-A (incisos I a V). Menor número prevalece. |
+| **Fundamento_Legal** | *texto* | LC 214, art. 7º-A, incisos I a V. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+49.2. Parâmetros legais do IBS e da CBS (Q159-3; documento 159, seção 4.2)
+
+Cad_Parametro_Legal_Ibs_Cbs
+
+Revisão 36 (documento 159, seção 4.2; D-N524 e D-N525: Q159-2, Q159-3 e Q159-5): Um catálogo único dos números de lei do IBS e da CBS que não pertencem a nenhuma obrigação acessória (os que pertencem ficam em `Cad_Obrigacao_Parametro_Definicao`, documento 155): prazos do processo (consulta, recurso especial, harmonização), limites do automóvel de pessoa com deficiência e do táxi, e os percentuais de redução da multa. Uma linha por número, com vigência; quem precisar de um número novo cria uma linha, e não uma tabela. Carga provisória de 16 linhas (seção 4.2).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Parametro_Legal_Ibs_Cbs** | *identificador* | --- |
+| **ID_Parametro_Legal_Ibs_Cbs_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Parametro_Legal_Ibs_Cbs_Versao). ID_Parametro_Legal_Ibs_Cbs é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (60) --- identidade* | Estável, em minúsculas, por exemplo prazo_consulta_pagamento_sem_penalidade. É o que o Motor e as telas leem. |
+| **Rotulo** | *texto* | O nome na tela. |
+| **Valor_Numerico** | *número* | O valor, na unidade abaixo. |
+| **Unidade** | *enumeração {dias_corridos, dias_uteis, anos, reais, percentual}* | Decide como a tela mostra o valor e como o Motor o lê. |
+| **Fundamento_Legal** | *texto* | Artigo, parágrafo e inciso de onde vem o número. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+49.3. Benefícios dos programas de conformidade e PNCT (Q159-5; documento 159, seção 4.5)
+
+Cad_Programa_Conformidade_Beneficio
+
+Revisão 36 (documento 159, seção 4.5; D-N524 e D-N525: Q159-2, Q159-3 e Q159-5): O que cada programa de conformidade pode dar a quem participa dele, uma linha por programa e tipo de benefício. Serve ao PNCT (LC 214, arts. 471-A a 471-C, incluídos pela LC 227), cujo art. 471-C diz que o programa "poderá prever" sete tipos de benefício e deixa o resto para ato conjunto do CGIBS e da RFB que ainda não existe; serve também ao Confia, ao Sintonia e ao OEA quando o contador mapear os benefícios deles. A carga fica vazia até o ato sair; as linhas nascem provisórias e o contador valida. A participação da empresa é de `Cad_Empresa_Programa_Conformidade` (programa = pnct).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Programa_Conformidade_Beneficio** | *identificador* | --- |
+| **ID_Programa_Conformidade_Beneficio_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Programa_Conformidade_Beneficio_Versao). ID_Programa_Conformidade_Beneficio é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Programa** | *referência (Cad_Classe_Sistema, domínio = programa_conformidade) --- identidade* | confia, sintonia, oea e, com este documento, pnct. |
+| **ID_Tipo_Beneficio** | *referência (Cad_Classe_Sistema, domínio = tipo_beneficio_programa_conformidade) --- identidade* | Domínio novo, sete valores do art. 471-C: prazo ampliado de obrigação acessória; prioridade em pedido de ressarcimento; redução de penalidade; análise prioritária de consulta; menos exigência documental; flexibilização da verificação do valor de mercado entre partes relacionadas (art. 5º, § 7º); outro, por regulamento. |
+| **Descricao** | *texto* | O benefício como o ato o descreve. |
+| **Percentual_Beneficio** | *número, opcional* | Quando o benefício é um percentual (por exemplo, as reduções maiores da multa do art. 341-H, § 1º, que ficam em Cad_Parametro_Legal_Ibs_Cbs). |
+| **Ato_Regulamentador** | *texto, opcional* | O ato conjunto que regulamentou o benefício. Vazio enquanto o ato não existe. |
+| **Fundamento_Legal** | *texto* | LC 214, art. 471-C, inciso e parágrafo. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+**Cargas de partida da revisão 36 na Contabilidade & Fiscal (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Instituto_Beneficio_Ordem (5 linhas) | Ordem do art. 7º-A: redução a zero (1), suspensão com conversão (2), isenção (3), diferimento (4) e redução de alíquota distinta (5); provisória |
+| Cad_Parametro_Legal_Ibs_Cbs (16 linhas) | Prazos do processo (15 dias corridos, 10 e 90 dias úteis, 30 dias), limites do automóvel do art. 149, § 2º, II (R$ 200.000 e R$ 100.000), intervalos do art. 152 (3 e 2 anos) e as oito reduções do art. 341-H (50, 40, 30 e 20; 60, 50, 40 e 30); provisória |
+| Cad_Classe_Sistema, 5 domínios novos (51 linhas) | instituto_beneficio_ibs_cbs (5), motivo_ineficacia_consulta (6), tipo_beneficio_programa_conformidade (7), tipo_penalidade_ibs_cbs (29) e hipotese_reducao_multa (4); provisória |
+| Cad_Aliquota_Combustivel (8 linhas de CBS, D-N523) | Só o texto: a observação passa de "fonte secundária" a "texto oficial lido" e a Portaria Conjunta MF/CGIBS 14/2026 entra no fundamento; valores iguais, provisórios; início 08/01/2027 até a C161 |
+
+**As 29 penalidades dos arts. 341-F e 341-G (domínio tipo_penalidade_ibs_cbs, provisório)**
+
+| **Código** | **Dispositivo** | **Penalidade** |
+|---|---|---|
+| oficio_75_tributo_nao_pago | 341-F, I | 75% do tributo não declarado ou declarado a menor e não pago |
+| oficio_75_credito_indevido | 341-F, II | 75% do crédito indevido |
+| oficio_50_declaracao_correta | 341-F, § 3º | 50% do tributo (ou do crédito) quando a declaração descreve corretamente o bem ou serviço, as quantidades e o valor da operação (documento 196, Q196-2) |
+| oficio_100_sonegacao_fraude | 341-F, § 1º, I | 100% (sonegação, fraude, simulação ou conluio) |
+| oficio_150_reincidente | 341-F, § 1º, II | 150% (reincidência) |
+| inscricao_cadastro_nao_feita | 341-G, I | 10 UPF |
+| domicilio_nao_atualizado | 341-G, II | 10 UPF por infração |
+| estabelecimento_nao_comunicado | 341-G, III | 10 UPF por infração |
+| arquivo_atraso_sem_intimacao | 341-G, IV, a | 20 UPF por período de apuração |
+| arquivo_atraso_com_intimacao | 341-G, IV, b | 30 UPF por período e por intimação |
+| software_fiscal_irregular_uso | 341-G, V | 100 UPF por equipamento |
+| software_fiscal_irregular | 341-G, VI | 150 UPF por equipamento |
+| medicao_volume_irregular | 341-G, VII | 100 UPF por equipamento |
+| inutilizacao_nao_comunicada | 341-G, VIII | 1 UPF por número |
+| confirmacao_operacao_omitida | 341-G, IX | 1 UPF por documento |
+| embaraco_fiscalizacao | 341-G, X | 50 UPF por evento |
+| bem_sem_documento_fiscal | 341-G, XI | 100% do tributo de referência |
+| documento_usado_mais_de_1_vez | 341-G, XII | 100% do tributo de referência |
+| documento_nao_idoneo | 341-G, XIII | 66% do tributo de referência |
+| documento_falsificado_extravio | 341-G, XIV | 100% do tributo de referência |
+| credito_indevido_nao_estornado | 341-G, XV | 66% do crédito |
+| documento_entrada_nao_emitido | 341-G, XVI | 100% do tributo de referência |
+| cancelamento_apos_fato_gerador | 341-G, XVII, a | 66% do tributo de referência |
+| cancelamento_apos_prazo | 341-G, XVII, b | 33% do tributo de referência |
+| dpec_valor_divergente | 341-G, XVIII | 33% do valor da diferença |
+| info_comercio_exterior_omitida | 341-G, XIX | 100 UPF por informação; teto de 1% do valor da operação, piso de 50 UPF (§ 7º, III) |
+| dispositivo_seguranca_violado | 341-G, XX | 10 UPF por dispositivo |
+| controle_zfm_alc_descumprido | 341-G, XXI | 66% do tributo de referência |
+| instalacao_zfm_sem_requisito | 341-G, XXII | 20 UPF por requisito exigido |
+
+**Regras de texto da revisão 36 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Multas (D-N284 mantida; opção A+, Q196-1) | O ERP só registra a penalidade do auto (Mov_Auto_Infracao) e não calcula a multa; a opção B (catálogo, UPF e simulação) não entra |
+| Nove avisos do Motor (Q196-4) | Texto, sem programar: (1) cancelamento depois do fato gerador ou do prazo (art. 341-G, XVII); (2) documento recebido sem manifestação do adquirente (IX); (3) inutilização não comunicada (VIII); (4) arquivo ou declaração em atraso (IV); (5) crédito de documento não idôneo (XIII e XV); (6) estorno omitido (XV); (7) documento de entrada não emitido (XVI); (8) DPEC com valor divergente (XVIII); (9) informação de comércio exterior incompleta (XIX). O aviso cita a multa e não a calcula |
+| Redução da multa (art. 341-H) | Ao pagar com redução, o ERP compara Percentual_Reducao_Aplicado com o parâmetro e avisa se diferir; "bons antecedentes" dependem de regulamento inexistente (C226) |
+| Documento fiscal consolidado (Q196-5) | Sem campo agora. Dez pontos para ler o ato conjunto quando sair (quem emite, critério de agrupamento, relatório, várias origens, classificações, quem recebe, cancelamento por operação, prazo, modelo e leiaute) e o gatilho: ato ou nota técnica publicado, ou cliente que emita consolidado; o esboço de 1 entidade não foi preparado |
+| Art. 348 e suprimento em 2026 | Já desenhado no documento 157, seção 7.4; sem mudança |
+| PNCT (Q159-5) | Participa_Pnct não existe: a participação é uma linha de Cad_Empresa_Programa_Conformidade com programa pnct; Cad_Programa_Conformidade_Beneficio com carga vazia até o ato conjunto |
+
+
+50\. Anexo --- Entidades novas da revisão 37 (B4: regimes específicos de serviços financeiros, seguro e plano de saúde) e cargas de partida
+
+Revisão 37 do dicionário (consolidação de 10/11/2026): 11 entidades novas neste módulo (documento 198, D-N529 e D-N530: Q198-1 a Q198-12), os campos ID_Componente_Base_Regime em Cad_Cod_Trib_Dere e ID_Base_Regime em Cad_Aliquota, e os textos de campo do documento 160 (D-N531).
+
+50.1. Regimes específicos de serviços financeiros, seguro e plano de saúde: apuração mensal da DeRE (B4; documento 198, seção 5.2)
+
+Cad_Participante_Regime_Base
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-11): Em quais bases de cálculo do regime o participante atua, com vigência. Uma linha por regime do participante e base.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Participante_Regime_Base** | *identificador* | --- |
+| **ID_Participante_Regime_Base_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Participante_Regime_Base_Versao). ID_Participante_Regime_Base é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Regime_Especifico** | *referência (Cad_Participante_Regime_Especifico)* | O regime do participante (D-1001). Identidade, junto com a base. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base de cálculo em que atua. Identidade. Uma seguradora de saúde e vida, por exemplo, tem linhas em seguro, previdência e plano de saúde. |
+| **Dispensa_Dere** | *enumeração {nenhuma, parcial, total}* | Dispensa de entrega da DeRE por ato da RFB e do CGIBS (art. 344, § 2º, para autogestão; outras por ato). Padrão nenhuma. O ERP só avisa. |
+| **Fundamento_Dispensa** | *texto, opcional* | O ato que dispensa. Obrigatório quando a dispensa não é nenhuma (aviso). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Componente_Base_Regime
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-4): Catálogo legal do que entra na base de cada regime (receita), do que se deduz e do que não integra a base, com as condições de cada item. Substitui o nome Cad_Deducao_Regime_Especifico do documento 70.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Componente_Base_Regime** | *identificador* | --- |
+| **ID_Componente_Base_Regime_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Componente_Base_Regime_Versao). ID_Componente_Base_Regime é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (até 30) --- identidade* | Estável, em minúsculas, com o prefixo da base (por exemplo, seg_indenizacao). |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base em que o componente vale. |
+| **Descricao** | *texto* | O que a lei diz, em palavras do dicionário. |
+| **Natureza** | *enumeração {receita, deducao, nao_integra_base}* | Receita compõe a base; dedução a reduz; nao_integra_base é o que a lei tira expressamente da base (rendimentos de aplicações, por exemplo). |
+| **Regime_Caixa** | *booleano* | Entra ou sai só no efetivo recebimento ou pagamento. |
+| **Exige_Documento_Fiscal_Idoneo** | *booleano* | A dedução só vale com documento fiscal idôneo (D-N272). O ERP avisa quando a linha não tem documento. |
+| **Exige_Individualizacao_Destinatario** | *booleano* | Quando o adquirente é contribuinte do regime regular, a dedução depende de ele estar individualizado na DeRE (Decreto, arts. 299, § 2º, 319, § 7º, 323, § 5º, e 325, §§ 2º e 3º). |
+| **Limitada_A_Receita_Vinculada** | *booleano* | A dedução só vale para a receita a que está ligada (Decreto, art. 273, § 3º); vale para todas as deduções, e o campo existe para a carga marcar a exceção, se houver. |
+| **Rateio_Por_Natureza_Receita** | *booleano* | Despesa de captação rateada entre as naturezas de receita (LC 214, art. 202; Decreto, art. 277). |
+| **Admite_Saldo_Excedente** | *booleano* | O que passa do valor tributável do período fica como saldo para os períodos seguintes (LC 214, arts. 193, § 3º, e 219, § 3º). |
+| **Base_Agregada** | *booleano* | Dedução calculada sobre o conjunto da carteira (provisões de seguro resgatável e de previdência). |
+| **Restringe_Adquirente_Nao_Regular** | *booleano* | Vale só para operações cujo adquirente não é contribuinte do regime regular (indenização de seguro; captação e despesa do arrendamento operacional). |
+| **Considerada_No_Fator_Importacao** | *booleano, opcional* | Só nas deduções: se entra no fator de redução da importação de serviço financeiro (Decreto, art. 328, § 5º). Falso nas listadas no inciso I; vazio nas receitas. |
+| **Condicao_Texto** | *texto, opcional* | A condição que o Motor mostra ao usuário (por exemplo, a reversão de provisão só entra se a provisão foi deduzida antes). |
+| **Origem_Regra** | *enumeração {lei, decreto, ato_conjunto}* | De onde vem o componente. O que só o Decreto traz vai para o contador. |
+| **Fundamento_Legal** | *texto* | Os artigos, da LC e do Decreto. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Regime_Aliquota_Soma
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-5): A regra legal de alíquota do regime, com vigência: a soma de IBS e CBS (art. 233), a redução sobre a referência (saúde, funerário e pet) ou a alíquota zero.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Regime_Aliquota_Soma** | *identificador* | --- |
+| **ID_Regime_Aliquota_Soma_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Regime_Aliquota_Soma_Versao). ID_Regime_Aliquota_Soma é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico), opcional* | Vazio: a linha vale para todas as bases de serviço financeiro sem regra própria (art. 189). Preenchido: regra própria da base, que vence a linha geral. |
+| **Forma_Fixacao** | *enumeração {soma_fixa, reducao_sobre_referencia, aliquota_do_bem}* | soma_fixa: a lei fixa a soma de IBS e CBS. reducao_sobre_referencia: a alíquota é a de referência de cada ente menos um percentual. aliquota_do_bem: a base usa a alíquota da locação ou da venda do bem (arrendamento operacional e valor residual); o Motor lê a alíquota do bem, e os números desta linha ficam vazios. |
+| **Soma_Aliquotas** | *número, opcional* | A soma de IBS e CBS, em pontos percentuais, sobre o valor sem IBS, CBS e ISS (art. 233, § 9º). Só em soma_fixa. |
+| **Percentual_Reducao_Referencia** | *número, opcional* | 60 na saúde e no funerário, 30 no pet. Só em reducao_sobre_referencia. |
+| **Reducao_Soma_Com_Iss_Pontos** | *número, opcional* | Pontos percentuais tirados da soma quando o serviço também sofre ISS (art. 233, § 10). Vazio onde a lei não reduz. |
+| **Fundamento_Legal** | *texto* | O artigo que fixa o número. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Provisória até o contador validar; a CBS e o IBS publicados podem diferir (art. 233, § 6º). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Coeficiente_Rateio_Plano_Saude
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-7): Os dez coeficientes por faixa etária que o decreto manda usar para repartir o valor de um plano coletivo sem valor por titular (art. 339, § 2º, II).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Coeficiente_Rateio** | *identificador* | --- |
+| **ID_Coeficiente_Rateio_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Coeficiente_Rateio_Plano_Saude_Versao). ID_Coeficiente_Rateio é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Idade_Inicial** | *número* | Primeira idade da faixa, em anos completos. |
+| **Idade_Final** | *número, opcional* | Última idade da faixa; vazia na faixa de 59 anos ou mais. |
+| **Coeficiente** | *número* | O coeficiente de alocação (0,17 a 1). |
+| **Fundamento_Legal** | *texto* | Decreto 12.955, art. 339, § 2º, II, alíneas a a j. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Provisório até o contador validar. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Regime_Especifico_Afericao
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-2 e Q198-3): A aferição mensal de uma base do regime: receitas contra deduções, base negativa, base final e débito de CBS e IBS. Uma linha por empresa, mês e base.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Afericao** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | Identidade. |
+| **ID_Periodo_Referencia** | *referência (Cad_Periodo_Fechamento, ID_Bloco = contabilidade) --- identidade* | Identidade. O mês da aferição. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico) --- identidade* | Identidade. A base de cálculo aferida. |
+| **Valor_Faturamento_Bruto** | *número* | Calculado: soma dos valores base das linhas de receita da base (Mov_Dere_Linha_Mes), como o usuário informou, já com IBS e CBS (Decreto, art. 274, § 2º). |
+| **Valor_Deducoes_Previstas** | *número* | Calculado: soma das deduções da base. Só as deduções do catálogo; a diferença com a conta aparece na conferência da linha. |
+| **Valor_Iss_Operacao** | *número* | O ISS devido no fornecimento, informado pelo usuário. Zero quando a base não sofre ISS. |
+| **Valor_Pis_Cofins_Periodo** | *número* | Só em 2026 (Decreto, art. 584): o PIS e a COFINS apurados no período para a base, que saem do valor aferido. Zero de 2027 em diante. Parâmetro anual (D-N273). |
+| **Aliquota_Ibs_Aplicada** | *número* | Gravada na aferição: a alíquota do IBS do mês (Cad_Aliquota da base, ou a soma do art. 233 repartida pela proporção das referências). |
+| **Aliquota_Cbs_Aplicada** | *número* | Idem, para a CBS. |
+| **Valor_Base_Calculo** | *número* | Calculado: [(Faturamento bruto − receita de exportação) − (deduções − reversão) − ISS − PIS e COFINS (só 2026)] ÷ (1 + alíquota do IBS + alíquota da CBS) (Decreto, arts. 274, § 2º, e 584). Sem dedução prevista na base, o resultado é o do art. 13, § 2º. Pode ficar negativo; não leva Com_Sinal (o sufixo vale só para a ECF, D-N326). Leitura minha da exportação: contador, C233. |
+| **Valor_Base_Negativa_Gerada** | *número* | Calculado: o valor negativo da base do mês, que vira saldo (Mov_Regime_Especifico_Saldo_Dedutivel). Zero quando a base é positiva. |
+| **Valor_Saldo_Base_Negativa_Utilizado** | *número* | Calculado: soma das utilizações de base negativa neste mês. Não passa da base positiva (aviso). |
+| **Valor_Perda_Excedente_Gerada** | *número* | Calculado: a perda de crédito que passou do valor tributável do mês, nas bases que admitem saldo (securitização, faturização e recebíveis de arranjos). |
+| **Valor_Saldo_Perda_Utilizado** | *número* | Calculado: soma das utilizações de perda excedente neste mês. |
+| **Valor_Base_Final** | *número* | Calculado: base do mês menos as utilizações de base negativa e de perda excedente; nunca abaixo de zero. |
+| **Valor_Cbs_Debito** | *número* | Calculado: base final vezes a alíquota da CBS. |
+| **Valor_Ibs_Debito** | *número* | Calculado: base final vezes a alíquota do IBS. |
+| **Valor_Receita_Exportacao** | *número* | Parte da receita que é exportação de serviço financeiro (imune; LC 214, art. 232). |
+| **Proporcao_Exportacao** | *número* | Calculado: receita de exportação sobre a receita total da base. |
+| **Valor_Deducao_Direta_Exportacao** | *número, opcional* | Só na base de seguro: a dedução ligada às prestações a residentes no exterior, informada pelo usuário (Decreto, art. 329, § 1º, II). Vazio nas demais bases, que usam a proporção. |
+| **Valor_Reversao_Deducoes_Exportacao** | *número* | Calculado: nas bases de crédito, câmbio, valores mobiliários, securitização, faturização, arrendamento e demais, as deduções vezes a proporção de exportação; no seguro, a dedução direta. O efeito dessa parte das deduções é revertido (LC 214, art. 232, § 1º; Decreto, art. 329, § 1º). |
+| **Valor_Provisoes_Tecnicas_Periodo** | *número, opcional* | Total das provisões técnicas no fim do período; só nos planos de saúde, para a regra da receita financeira liquidada. |
+| **Valor_Provisoes_Tecnicas_Anterior** | *número, opcional* | Total das provisões técnicas no período imediatamente anterior. |
+| **Valor_Total_Individualizado** | *número* | Calculado: soma de Valor_Operacao das individualizações da base no mês. |
+| **Valor_Diferenca_Individualizacao** | *número* | Calculado: total individualizado menos a receita da base. Só avisa. |
+| **Possui_Diferenca_Individualizacao** | *booleano* | Ligado quando a diferença não é zero e a base exige individualização. |
+| **Tem_Parametro_Provisorio** | *booleano* | Verdadeiro se algum componente ou alíquota usado está provisório. |
+| **Situacao** | *enumeração {em_elaboracao, calculada, fechada}* | fechada é a confissão do valor do débito no fechamento mensal da DeRE. |
+| **Data_Hora_Calculo** | *data/hora, opcional* | Quando o ERP calculou. |
+| **ID_Escrituracao_Arquivo** | *referência (Mov_Escrituracao_Arquivo), opcional* | O arquivo da DeRE que levou esta aferição, com o recibo. |
+| **ID_Usuario_Fechamento** | *referência (Cad_Usuario), opcional* | Quem fechou. |
+| **Data_Hora_Fechamento** | *data/hora, opcional* | Quando fechou. |
+
+Mov_Regime_Especifico_Saldo_Dedutivel
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-6): O saldo que uma aferição deixa para os meses seguintes: a base negativa (cinco anos, sem atualização) e a perda que passou do valor tributável.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Saldo** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base do saldo; o saldo só abate a mesma base (Decreto, art. 273, § 3º, lido com o art. 278). |
+| **Tipo_Saldo** | *enumeração {base_negativa, perda_excedente}* | base_negativa: Decreto, arts. 278 e 333. perda_excedente: LC 214, arts. 193, § 3º, e 219, § 3º. |
+| **ID_Afericao_Origem** | *referência (Mov_Regime_Especifico_Afericao)* | A aferição que gerou o saldo. |
+| **Valor_Original** | *número* | O valor gerado, sem atualização. |
+| **Valor_Utilizado** | *número* | Calculado: soma das utilizações. |
+| **Valor_Saldo** | *número* | Calculado: original menos utilizado. |
+| **Data_Limite_Aproveitamento** | *data, opcional* | Base negativa: cinco anos a partir do último dia útil do período (parâmetro com vigência). Vazia na perda excedente, que a lei não limita. |
+| **Situacao** | *enumeração {aberto, esgotado, expirado}* | expirado: passou a data limite com saldo. |
+
+Mov_Regime_Especifico_Saldo_Utilizacao
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-6): O uso de um saldo numa aferição posterior.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Saldo_Utilizacao** | *identificador* | --- |
+| **ID_Saldo** | *referência (Mov_Regime_Especifico_Saldo_Dedutivel)* | O saldo usado. |
+| **ID_Afericao_Destino** | *referência (Mov_Regime_Especifico_Afericao)* | A aferição que abateu o saldo. |
+| **Valor_Utilizado** | *número* | Quanto abateu. Não passa do saldo nem da base positiva (aviso). |
+| **Origem_Alocacao** | *enumeração {sugerida_mais_antiga, manual}* | A lei diz "poderá deduzir"; o ERP sugere o saldo mais antigo primeiro e o usuário pode trocar. |
+| **ID_Usuario_Informacao** | *referência (Cad_Usuario)* | Quem confirmou. |
+| **Data_Hora_Informacao** | *data/hora* | Quando confirmou. |
+
+Mov_Dere_Individualizacao
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-7): O valor da operação por pessoa que a lei manda informar na DeRE: segurado, participante, titular, cotista, consorciado e outros. Uma linha por empresa, mês, base, pessoa e relação.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Dere_Individualizacao** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | Identidade. |
+| **ID_Periodo_Referencia** | *referência (Cad_Periodo_Fechamento, ID_Bloco = contabilidade) --- identidade* | Identidade. O mês. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico) --- identidade* | Identidade. |
+| **ID_Participante** | *referência (Cad_Participante) --- identidade* | A pessoa identificada. |
+| **ID_Tipo_Relacao** | *referência (Cad_Classe_Sistema, domínio = tipo_relacao_dere) --- identidade* | O papel da pessoa (segurado, titular de plano de saúde e os demais do domínio). |
+| **ID_Participante_Contratante** | *referência (Cad_Participante), opcional* | O estipulante da apólice coletiva ou o contratante do plano coletivo. É por ele que o empregador identifica o crédito do plano de saúde dos empregados (B0b-2). |
+| **Numero_Contrato** | *código (até 60), opcional* | Apólice, contrato, título ou plano. |
+| **Papel_Cosseguro** | *enumeração {lider, aceitante}, opcional* | No cosseguro, quem individualiza é a seguradora líder (Decreto, art. 324, § 1º). Vazio fora do cosseguro. |
+| **Valor_Operacao** | *número* | O prêmio, a contribuição, a arrecadação ou a contraprestação da pessoa no mês. |
+| **Valor_Deducao_Vinculada** | *número, opcional* | A dedução (intermediação) ligada a esta pessoa, quando o componente exige individualização. |
+| **Valor_Cbs_Equivalente** | *número, opcional* | A CBS que corresponde à operação, para o crédito do adquirente (LC 214, art. 190). Vazio quando o adquirente não toma crédito. |
+| **Valor_Ibs_Equivalente** | *número, opcional* | Idem, para o IBS. |
+| **Adquirente_Regime_Regular** | *booleano* | Gravado no momento: o adquirente é contribuinte do regime regular (lido de Cad_Participante_Qualificacao_Cbs e do perfil fiscal). Decide a dedução da intermediação e a indenização do seguro. |
+| **Adquirente_Direito_Publico** | *booleano* | Gravado no momento: pessoa jurídica de direito público (entra na conta do fator de redução da importação, art. 328, § 5º). |
+| **Origem_Valor** | *enumeração {individual, alocado_por_coeficiente, alocado_proporcional}* | Plano coletivo sem valor por titular: alocado_por_coeficiente (faixa etária). Contrato sem individualização: alocado_proporcional. |
+| **Data_Nascimento_Considerada** | *data, opcional* | Gravada na alocação por coeficiente, para a conta poder ser refeita. |
+| **ID_Coeficiente_Rateio** | *referência (Cad_Coeficiente_Rateio_Plano_Saude), opcional* | A faixa usada no titular. |
+| **ID_Usuario_Informacao** | *referência (Cad_Usuario)* | Quem informou. |
+| **Data_Hora_Informacao** | *data/hora* | Quando informou. |
+
+Mov_Dere_Individualizacao_Dependente
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-7): Os dependentes do titular na alocação por coeficiente de um plano coletivo.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Individualizacao_Dependente** | *identificador* | --- |
+| **ID_Dere_Individualizacao** | *referência (Mov_Dere_Individualizacao)* | A linha do titular. |
+| **ID_Dependente** | *referência (Cad_Participante_Dependente)* | O dependente. A mesma entidade do REINF (Mov_Reinf_Rendimento_Plano_Saude_Dependente). |
+| **Data_Nascimento_Considerada** | *data* | Gravada na alocação. |
+| **ID_Coeficiente_Rateio** | *referência (Cad_Coeficiente_Rateio_Plano_Saude)* | A faixa do dependente. |
+| **Valor_Alocado** | *número* | A parte do valor do contrato que cabe ao dependente. |
+
+Mov_Dere_Ativo_Garantidor_Mes
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-8): O ativo que garante a provisão técnica e o que ele rendeu no mês, para a receita financeira tributada na liquidação ou no resgate (evento D-1106, só por fonte secundária).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Ativo_Garantidor_Mes** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | Identidade. |
+| **ID_Periodo_Referencia** | *referência (Cad_Periodo_Fechamento, ID_Bloco = contabilidade) --- identidade* | Identidade. |
+| **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil) --- identidade* | A conta do ativo. |
+| **Identificacao_Ativo** | *texto (60) --- identidade* | O código do título, do fundo ou da aplicação, como a empresa o identifica. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base cuja provisão o ativo garante (seguro, previdência, capitalização ou plano de saúde). |
+| **Valor_Saldo_Inicial** | *número* | Saldo no começo do mês. |
+| **Valor_Rendimento_Periodico** | *número* | Rendimentos periódicos recebidos; contam como resgate parcial. |
+| **Valor_Variacao_Mensal** | *número* | Variação do valor no mês. |
+| **Valor_Principal_Liquidado** | *número* | Principal liquidado ou resgatado. |
+| **Valor_Rendimento_Liquidacao** | *número* | Rendimento na liquidação ou no resgate. |
+| **Valor_Saldo_Final** | *número* | Calculado: saldo inicial mais variação menos principal liquidado. |
+| **Proporcao_Premios_Sem_Credito** | *número, opcional* | Só na base de seguro: prêmios de operações que não geram crédito ao segurado sobre o total dos prêmios do período (Decreto, art. 319, I, b). Vazio nas demais bases. |
+| **Valor_Apurado** | *número* | Calculado: rendimentos periódicos mais rendimento na liquidação, vezes a proporção no seguro. O usuário leva este valor à linha da DeRE da receita financeira; só avisa se diferente. |
+
+Mov_Dere_Deducao_Documento
+
+Revisão 37 (documento 198, seção 5.2; D-N529 e D-N530: Q198-9): O documento fiscal que comprova uma dedução do regime, com a pessoa individualizada quando a lei exige.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Dere_Deducao_Documento** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa. |
+| **ID_Periodo_Referencia** | *referência (Cad_Periodo_Fechamento, ID_Bloco = contabilidade)* | O mês. |
+| **ID_Componente_Base_Regime** | *referência (Cad_Componente_Base_Regime)* | A dedução do catálogo. |
+| **ID_Documento_Fiscal** | *referência (Mov_Documento_Fiscal), opcional* | O documento que comprova. Vazio quando o comprovante não está no ERP (reembolso a beneficiário); nesse caso vale a descrição. |
+| **Descricao_Comprovante** | *texto, opcional* | O comprovante, quando não há documento no ERP. Obrigatória sem documento (aviso). |
+| **Valor_Deduzido** | *número* | A parte do documento que entra como dedução. |
+| **ID_Participante_Destinatario** | *referência (Cad_Participante), opcional* | Quando o componente exige individualização, o adquirente a quem a dedução se liga. |
+| **Documento_Idoneo_No_Registro** | *booleano, opcional* | Gravado no momento: a situação de idoneidade do documento (Situacao_Idoneidade_Federal). Vazio sem documento. |
+| **ID_Usuario_Informacao** | *referência (Cad_Usuario)* | Quem informou. |
+| **Data_Hora_Informacao** | *data/hora* | Quando informou. |
+
+**Cargas de partida da revisão 37 na Contabilidade & Fiscal (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Classe_Sistema, 2 domínios novos (34 linhas) | base_regime_especifico (23) e tipo_relacao_dere (11); provisória |
+| Cad_Componente_Base_Regime (92 linhas) | Catálogo legal de 34 receitas, 50 deduções e 8 itens que a lei tira da base, em 19 das 23 bases (resseguro, intermediação, FGTS e proteção mutualista ficam sem componente); 88 de lei e 4 só do decreto; provisória |
+| Cad_Regime_Aliquota_Soma (14 linhas) | Soma de IBS e CBS do art. 233 (10,85% em 2027 e 2028 até 12,50% em 2033 e 2034 em diante), reduções com ISS, resseguro zero, saúde e funerário com redução de 60%, pet com 30% e as três bases de alíquota do bem; vigência desde 01/01/2027; provisória |
+| Cad_Coeficiente_Rateio_Plano_Saude (10 linhas) | Os dez coeficientes por faixa etária do art. 339, § 2º, II (0,17 a 1,00); provisória |
+| Cad_Obrigacao_Acessoria (1 linha) | DERE: início em 01/01/2026 (uso no ERP, não a data legal) |
+| Cad_Parametro_Legal_Ibs_Cbs (1 linha) | prazo_base_negativa_regime_anos = 5 anos (Decreto, arts. 278 e 333, parágrafo único); provisória |
+
+**Componentes do catálogo por base (documento 198, Anexo A)**
+
+| **Base** | **Componentes** | **Receitas** | **Deduções** | **Fora da base** |
+|---|---|---|---|---|
+| credito_cambio_tvm | 10 | 3 | 6 | 1 |
+| securitizacao_faturizacao | 4 | 1 | 3 | 0 |
+| arrend_oper_locacao | 3 | 1 | 2 | 0 |
+| arrend_oper_alienacao | 2 | 1 | 1 | 0 |
+| arrend_fin_parcelas | 2 | 1 | 1 | 0 |
+| arrend_fin_residual | 1 | 1 | 0 | 0 |
+| consorcio | 2 | 1 | 1 | 0 |
+| gestao_recursos | 1 | 1 | 0 | 0 |
+| arranjo_pagamento | 3 | 2 | 1 | 0 |
+| antecipacao_recebivel_arranjo | 3 | 1 | 2 | 0 |
+| programa_fidelizacao | 4 | 1 | 3 | 0 |
+| mercado_organizado | 1 | 1 | 0 | 0 |
+| seguro | 8 | 3 | 5 | 0 |
+| resseguro | 0 | 0 | 0 | 0 |
+| previdencia_complementar | 11 | 5 | 4 | 2 |
+| capitalizacao | 9 | 4 | 3 | 2 |
+| intermediacao_financeira | 0 | 0 | 0 | 0 |
+| ativo_virtual | 1 | 1 | 0 | 0 |
+| fgts | 0 | 0 | 0 | 0 |
+| protecao_mutualista | 0 | 0 | 0 | 0 |
+| plano_saude | 9 | 2 | 6 | 1 |
+| plano_funerario | 9 | 2 | 6 | 1 |
+| plano_pet | 9 | 2 | 6 | 1 |
+
+**Regras de texto da revisão 37 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Aferição mensal (Q198-3; D-N273 mantida) | Base = [(faturamento bruto − receita de exportação) − (deduções − reversão) − ISS − PIS e COFINS (só 2026)] ÷ (1 + alíquota do IBS + alíquota da CBS); o redutor e a Estimativa da revisão 8 ficam como estão e o redutor não entra na aferição até o contador responder a C233 |
+| Base negativa e perda excedente (Q198-6) | Saldo único por empresa e base; a base negativa vale cinco anos do último dia útil do período, sem atualização; a perda excedente não tem prazo; uso sugerido do mais antigo para o mais novo, com troca manual |
+| Débito (Q198-10) | A aferição entrega o débito de CBS e IBS por base e mês; compensação, pagamento e split ficam no espelho e na Plataforma, e o ERP não gera guia própria até um ato mandar |
+| Avisos do Motor (documento 198, seção 6) | Texto, sem programar: o ERP avisa, nunca bloqueia |
+| DeRE oficial (Q198-12) | O leiaute da DeRE vem de fonte secundária até Alberto enviar o manual oficial (1.3.0, Anexo I e Tabelas 11 e 12) e o ato conjunto do fator de redução da importação |
+
+
+51\. Anexo --- Entidades novas da revisão 38 (B0b-2: crédito do tomador do serviço financeiro; documentação dos parâmetros) e cargas de partida
+
+Revisão 38 do dicionário (consolidação de 10/11/2026): 8 entidades novas neste módulo (6 do documento 200, D-N533 e D-N534, Q200-1 a Q200-11; 2 do documento 201, D-N535 e D-N536, Q201-1 a Q201-10), os 3 campos novos em Mov_Emprestimo e os 2 em Cad_Serie_Cotacao, e as cargas de partida abaixo.
+
+51.1. Crédito de quem compra o serviço financeiro, arrendamento, antecipação de recebíveis e plano de saúde dos empregados (B0b-2; documento 200, seção 5.2)
+
+Cad_Regra_Credito_Tomador
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-2): O catálogo legal do crédito de quem compra o serviço do regime específico: para cada situação (empréstimo, título de dívida, desconto, arrendamento, tarifa, plano de saúde dos empregados e as demais), se há crédito, como se calcula e quais vedações valem. Com vigência.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Regra_Credito_Tomador** | *identificador* | --- |
+| **ID_Regra_Credito_Tomador_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Regra_Credito_Tomador_Versao). ID_Regra_Credito_Tomador é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (até 30) --- identidade* | Estável, em minúsculas, com o prefixo cred_ (por exemplo, cred_operacao_credito). |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base de cálculo do fornecedor a que a regra se liga (a mesma lista do B4). |
+| **Descricao** | *texto* | A situação do tomador em palavras do dicionário. |
+| **Forma_Calculo** | *enumeração {excedente_principal_selic, excedente_curva_di, parcela_pela_aliquota, valor_pago_pelo_fornecedor, proporcao_debito_fornecedor, sem_credito}* | Como o crédito nasce. excedente_principal_selic: despesa financeira paga menos o principal e a Selic sobre o principal (LC 214, art. 194). excedente_curva_di: parcela do deságio que passa da curva DI (arts. 196 e 219, § 5º). parcela_pela_aliquota: a parcela paga vezes a alíquota da receita do fornecedor (art. 203). valor_pago_pelo_fornecedor: o crédito é o tributo que o fornecedor informou ter pago (arts. 190, 198, 205, 218, 221 e outros). proporcao_debito_fornecedor: o débito do fornecedor vezes uma proporção (plano de saúde e capitalização). sem_credito: a lei veda. |
+| **Regime_Caixa** | *booleano* | O crédito nasce no efetivo pagamento. |
+| **Aplica_Proporcao_Extincao** | *booleano* | O crédito segue a parte da CBS que o fornecedor extinguiu: integral se a base dele foi zero ou negativa, proporcional se a extinção foi parcial, nenhum se não pagou (Decreto, art. 291). Vale só para empréstimo, título de dívida e desconto. |
+| **Veda_Associado_Cooperativa** | *booleano* | Não dá crédito ao associado de cooperativa de crédito que exerceu a opção do art. 271 (LC 214, art. 197, I; Decreto, art. 284, I). |
+| **Veda_Referenciado_Moeda_Estrangeira** | *booleano* | Não dá crédito a operação de crédito nem a título de dívida referenciados em moeda estrangeira (LC 214, art. 197, II; Decreto, art. 284, II). Tarifas e comissões continuam com crédito (art. 198). |
+| **Admite_Tomador_Regime_Especifico** | *booleano* | O tomador que também está em regime específico pode tomar o crédito (tarifas e comissões, desde que a despesa não seja deduzida da base dele: LC 214, art. 198, parágrafo único). Falso: só quem está fora do regime específico da seção toma o crédito. |
+| **Exige_Acordo_Coletivo** | *booleano* | O crédito depende de acordo ou convenção coletiva com cláusula compulsória (plano de saúde dos empregados: Decreto, art. 63, § 1º, VI). |
+| **Exige_Declaracao_Rfb** | *booleano* | O tomador deve declarar à RFB a condição e o prazo do acordo ou da convenção (Decreto, art. 337, § 2º). |
+| **Condicao_Texto** | *texto, opcional* | A condição que o Motor mostra ao usuário. |
+| **Origem_Regra** | *enumeração {lei, decreto, ato_conjunto}* | De onde vem a regra. O que só o Decreto traz vai para o contador. |
+| **Fundamento_Legal** | *texto* | Os artigos, da LC e do Decreto. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Arrendamento_Mercantil
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-5): O contrato de arrendamento mercantil em que a empresa é a arrendatária (leasing de frota, de equipamentos ou de imóvel): o tipo, o bem, os prazos e o valor residual. Especializa o contrato de Gestão de Contratos.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Arrendamento_Mercantil** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | A filial arrendatária. |
+| **ID_Participante_Arrendador** | *referência (Cad_Participante)* | A arrendadora. Se ela está em regime específico (Cad_Participante_Regime_Base) é o Motor que lê; o campo não repete isso. |
+| **ID_Contrato** | *referência (Cad_Gestao_Contrato), opcional* | O contrato geral, quando a empresa o controla em Gestão de Contratos (aditivos, garantias, penalidades). |
+| **Numero_Contrato** | *código (até 60)* | O número do contrato de arrendamento. |
+| **Tipo_Arrendamento** | *enumeração {operacional, financeiro}* | Decide as bases do fornecedor (quatro, no B4) e a regra de crédito do arrendatário (Decreto, arts. 296 e 298). |
+| **Natureza_Bem** | *enumeração {movel, imovel}* | O imóvel tem alíquota própria de locação e de venda, no regime específico imobiliário (LC 214, art. 201, I, a, 1, b, 1 e d, 1). |
+| **Descricao_Bem** | *texto* | O bem arrendado. |
+| **ID_Cclasstrib_Bem** | *referência (Cad_Cclasstrib), opcional* | A classificação tributária do bem, de onde o Motor lê a alíquota de locação e de venda quando o bem não é imóvel (arrendamento operacional e valor residual). |
+| **Data_Assinatura** | *data* | Quando o contrato foi assinado. |
+| **Data_Inicio** | *data* | Início do arrendamento. |
+| **Data_Fim_Prevista** | *data, opcional* | Fim previsto, quando há. |
+| **Numero_Parcelas_Contratadas** | *número* | Quantidade de contraprestações pactuadas. |
+| **Valor_Bem_Arrendado** | *número, opcional* | O custo de aquisição do bem pela arrendadora, quando o contrato o diz (o valor residual tributado não pode ficar abaixo dele, Decreto, art. 297, § 2º, II). |
+| **Valor_Residual_Garantido** | *número, opcional* | O valor residual garantido pactuado no arrendamento financeiro, ainda que parcelado (art. 297, II). |
+| **Taxa_Encargos_Financeiros** | *número, opcional* | A taxa de encargos financeiros do contrato (informativa; o ajuste a valor presente é do arrendador, art. 297, § 1º, I). |
+| **Opcao_Compra_Exercida** | *booleano* | Verdadeiro quando a empresa exerceu a opção de compra (o valor residual pago no exercício é parcela com crédito). |
+| **Data_Opcao_Compra** | *data, opcional* | Quando exerceu a opção de compra. |
+| **Situacao** | *enumeração {vigente, encerrado, rescindido}* | A situação do contrato. |
+
+Mov_Arrendamento_Parcela
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-5): Cada pagamento do arrendamento: contraprestação, valor residual ou alienação do bem, com o título a pagar. É o que o crédito do arrendatário usa, no regime de caixa.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Arrendamento_Parcela** | *identificador* | --- |
+| **ID_Arrendamento_Mercantil** | *referência (Cad_Arrendamento_Mercantil)* | O contrato. |
+| **Numero_Parcela** | *número* | A ordem do pagamento dentro do contrato (única por contrato e tipo). |
+| **Tipo_Pagamento** | *enumeração {contraprestacao, valor_residual, alienacao_bem}* | contraprestacao: parcela periódica. valor_residual: o pago no exercício da opção de compra (financeiro). alienacao_bem: o valor de alienação do bem no arrendamento operacional (Decreto, art. 296). |
+| **Data_Vencimento** | *data* | O vencimento. |
+| **Valor_Parcela** | *número* | O valor total da parcela, com tarifas e comissões incluídas. |
+| **Valor_Encargos_Financeiros** | *número, opcional* | A parte de encargos financeiros da parcela, quando o arrendador a informa. Serve à leitura alternativa do crédito (C241): o fornecedor tributa só essa parte no arrendamento financeiro (Decreto, art. 297, § 1º). |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a pagar da parcela (Origem_Tipo = arrendamento_parcela). O pagamento é a baixa dele. |
+
+Mov_Antecipacao_Recebivel
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-6): A operação em que a empresa recebe antes o que tem a receber (desconto de duplicatas, cessão, factoring, securitização ou antecipação de recebíveis de cartão e outros arranjos): o cessionário, o deságio e as tarifas.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Antecipacao_Recebivel** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | A filial que antecipou (a tomadora do serviço). |
+| **ID_Participante_Cessionario** | *referência (Cad_Participante)* | O banco, o factoring, o fundo, a credenciadora ou a instituição de pagamento que antecipou. |
+| **ID_Base_Regime** | *referência (Cad_Classe_Sistema, domínio = base_regime_especifico)* | A base do fornecedor: credito_cambio_tvm (desconto, cessão e antecipação de crédito), securitizacao_faturizacao ou antecipacao_recebivel_arranjo. |
+| **Modalidade** | *enumeração {desconto_duplicata, cessao_recebivel, factoring, securitizacao, antecipacao_arranjo, outra}* | Como a operação é chamada. A base é a que decide a regra de crédito; a modalidade serve à tela e ao relatório. |
+| **Numero_Bordero** | *código (até 60), opcional* | O borderô ou o número da operação no cessionário. |
+| **Data_Operacao** | *data* | A data da liquidação antecipada: é a do crédito, no regime de caixa (LC 214, arts. 196 e 219, § 5º). |
+| **Valor_Face_Total** | *número* | Calculado: a soma do valor de face dos itens. |
+| **Valor_Liquido_Recebido** | *número* | Calculado: a soma do valor líquido dos itens, sem as tarifas. |
+| **Valor_Desagio_Total** | *número* | Calculado: face menos líquido (o deságio ou desconto da operação). |
+| **Valor_Tarifas_Comissoes** | *número, opcional* | Tarifas e comissões cobradas à parte. Dão crédito pela regra cred_tarifa_comissao, com base no que o fornecedor pagou (LC 214, art. 198). |
+| **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil, ID_Tipo_Conta = Banco/Caixa/Aplicação)* | Onde o dinheiro entrou. |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O borderô ou o contrato, guardado no GED. |
+| **Situacao** | *enumeração {efetivada, estornada}* | estornada quando a operação foi desfeita; o crédito é estornado junto. |
+
+Mov_Antecipacao_Recebivel_Item
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-6): Cada recebível antecipado: o título ou a parcela de cartão, o valor de face, o líquido, o contrato de DI usado e a parte do deságio que passa da curva DI. O prazo e a taxa ficam gravados para a conta poder ser refeita.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Antecipacao_Item** | *identificador* | --- |
+| **ID_Antecipacao_Recebivel** | *referência (Mov_Antecipacao_Recebivel)* | A operação. |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a receber antecipado (duplicata, boleto). Um dos dois, este ou a transação de cartão. |
+| **ID_Transacao_Cartao** | *referência (Mov_Transacao_Cartao), opcional* | A transação de cartão cuja parcela foi antecipada. |
+| **Numero_Parcela_Cartao** | *número, opcional* | A parcela da transação antecipada, quando o item é de cartão. |
+| **ID_Baixa** | *referência (Mov_Titulo_Baixa), opcional* | A baixa do recebível pela antecipação (tipo de baixa cadastrado pelo usuário; o deságio vai em Valor_Desconto). Vazia até a baixa. |
+| **Data_Vencimento_Recebivel** | *data* | O vencimento original do recebível. |
+| **Valor_Face** | *número* | O valor do recebível. |
+| **Valor_Liquido_Antecipado** | *número* | O valor recebido na antecipação. |
+| **Valor_Desagio** | *número* | Calculado: face menos líquido. |
+| **ID_Serie_Di** | *referência (Cad_Serie_Cotacao), opcional* | A série do contrato de DI futuro cujo vencimento é o mais próximo do vencimento do recebível (Decreto, art. 290, parágrafo único, e art. 314, § 2º). |
+| **Taxa_Di_Aplicada** | *número, opcional* | A taxa do contrato na data da operação, gravada. |
+| **Prazo_Dias_Uteis** | *número, opcional* | O prazo da antecipação, da data da operação ao vencimento. |
+| **Valor_Curva_Di** | *número, opcional* | Calculado: o valor correspondente à curva DI pelo prazo (leitura do documento 200, seção 5.4; C242). Gravado, porque a taxa muda. |
+| **Valor_Desagio_Excedente** | *número, opcional* | Calculado: o deságio menos a curva DI, nunca negativo. É a base do crédito. |
+
+Mov_Credito_Servico_Regime_Especifico
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-7): O registro único do crédito de quem compra o serviço: a regra usada, o que foi pago, as deduções, a base, as alíquotas gravadas, a proporção do art. 291, as marcas das vedações e o crédito escriturável que nasce em Mov_Credito_Fiscal.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Servico** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa tomadora, titular do crédito. |
+| **ID_Regra_Credito_Tomador** | *referência (Cad_Regra_Credito_Tomador)* | A regra usada; a versão vigente na data do pagamento fica gravada pela data. |
+| **Competencia_Apuracao** | *competência* | A competência do pagamento (regime de caixa). |
+| **Origem_Tipo** | *enumeração {emprestimo_parcela, arrendamento_parcela, antecipacao_recebivel, titulo_baixa, informacao_fornecedor, beneficio_empregado}* | O que gerou o registro. titulo_baixa: a baixa de um título de tarifa, comissão ou serviço. informacao_fornecedor: o crédito veio da Plataforma, sem cálculo próprio. beneficio_empregado: o registro de Mov_Rh_Beneficio_Credito_Cbs. |
+| **ID_Origem** | *referência genérica* | A parcela do empréstimo, a parcela do arrendamento, a antecipação, a baixa ou o crédito do benefício, conforme Origem_Tipo. |
+| **ID_Participante_Fornecedor** | *referência (Cad_Participante)* | O prestador do serviço financeiro, a operadora do plano ou a arrendadora. |
+| **ID_Titulo_Baixa** | *referência (Mov_Titulo_Baixa), opcional* | O pagamento que gerou o crédito. |
+| **Data_Pagamento** | *data* | O dia do efetivo pagamento. |
+| **Valor_Pago** | *número* | O que foi pago: a parcela, o deságio ou a tarifa. Na proporção de débito, o débito do fornecedor. |
+| **Valor_Principal_Deduzido** | *número, opcional* | Calculado, só no empréstimo: o principal contido na parcela paga (LC 214, art. 194, I). |
+| **ID_Serie_Selic** | *referência (Cad_Serie_Cotacao), opcional* | A série da Selic usada na dedução do art. 194, II. |
+| **Saldo_Principal_Periodo** | *número, opcional* | Calculado: o saldo do principal sobre o qual a Selic foi aplicada (leitura do documento 200, seção 5.4; C239). |
+| **Percentual_Selic_Periodo** | *número, opcional* | Calculado: a Selic acumulada no período, em percentual, com 8 casas. |
+| **Valor_Selic_Deduzido** | *número, opcional* | Calculado: a Selic aplicada sobre o principal (art. 194, II). |
+| **Valor_Curva_Di_Deduzido** | *número, opcional* | Só na antecipação: a soma da curva DI dos itens (arts. 196 e 219, § 5º). |
+| **Fator_Proporcional** | *número, opcional* | Só na proporção de débito (plano de saúde): a proporção dos empregados vezes a parte que a empresa custeia. |
+| **Valor_Base_Credito** | *número* | Calculado: a base sobre a qual a alíquota incide, ou o débito do fornecedor na proporção de débito. Zero quando não há crédito. |
+| **Aliquota_Cbs_Aplicada** | *número, opcional* | Gravada no momento: a alíquota da CBS do fornecedor (a mesma devida por ele). |
+| **Aliquota_Ibs_Aplicada** | *número, opcional* | Gravada no momento: a alíquota do IBS do fornecedor. |
+| **Valor_Credito_Cbs_Calculado** | *número* | Calculado: o crédito de CBS antes da proporção do art. 291. |
+| **Valor_Credito_Ibs_Calculado** | *número* | Calculado: o crédito de IBS antes da proporção do art. 291. |
+| **Proporcao_Extincao_Debito** | *número, opcional* | A parte da CBS do fornecedor que foi extinta, em percentual (Decreto, art. 291). Vazia até a Plataforma informar; vazia também onde a regra não aplica a proporção. |
+| **Valor_Credito_Cbs_Apropriavel** | *número, opcional* | Calculado: o crédito de CBS depois da proporção. |
+| **Valor_Credito_Ibs_Apropriavel** | *número, opcional* | Calculado: o crédito de IBS depois da proporção. |
+| **Detentor_Regime_Especifico** | *booleano, opcional* | Só no título de dívida: o detentor do título, no período, é contribuinte do regime específico (LC 214, art. 195). Informado pela Plataforma ou confirmado pelo usuário. |
+| **Associado_Cooperativa_Opcao** | *booleano* | Gravado no momento: o tomador é associado de cooperativa de crédito que exerceu a opção do art. 271 (art. 197, I). |
+| **Referenciado_Moeda_Estrangeira** | *booleano* | Gravado no momento: a operação ou o título é referenciado em moeda estrangeira (art. 197, II). |
+| **Tomador_Regime_Especifico** | *booleano* | Gravado no momento: a empresa está em regime específico da seção (Cad_Participante_Regime_Base). |
+| **Motivo_Sem_Credito** | *enumeração {regra_veda, cooperativa, moeda_estrangeira, oferta_publica, tomador_regime_especifico, fornecedor_inadimplente, fornecedor_sem_informacao, fornecedor_fora_regime, sem_excedente, fora_vigencia}, opcional* | Por que o crédito é zero. fornecedor_fora_regime: o credor ou o prestador não está em regime específico na data, e não há débito do qual nasça crédito. |
+| **Origem_Valor** | *enumeração {calculado_pelo_erp, informado_pelo_fornecedor, ajustado_pelo_usuario}* | Quem fixou o valor. O usuário pode ajustar com motivo; o ERP avisa e não bloqueia. |
+| **ID_Espelho_Conta** | *referência (Mov_Cbs_Apuracao_Espelho_Conta), opcional* | A linha da aba de créditos da Plataforma que corresponde a este registro, para a conferência. |
+| **ID_Credito_Fiscal_Cbs** | *referência (Mov_Credito_Fiscal), opcional* | O crédito de CBS escriturado (Origem = servico_financeiro_tomador ou beneficio_empregado). |
+| **ID_Credito_Fiscal_Ibs** | *referência (Mov_Credito_Fiscal), opcional* | O crédito de IBS escriturado. |
+| **Regra_Provisoria** | *booleano* | Gravado no momento: a regra usada ainda não tinha sido validada pelo contador. |
+| **ID_Usuario_Ajuste** | *referência (Cad_Usuario), opcional* | Quem ajustou o valor. |
+| **Motivo_Ajuste** | *texto, opcional* | Obrigatório quando Origem_Valor = ajustado_pelo_usuario (aviso). |
+| **Data_Hora_Calculo** | *data/hora* | Quando o Motor calculou ou recebeu o valor. |
+
+51.2. Documentação dos parâmetros e do efeito em cada obrigação (documento 201, seção 5.1)
+
+Cad_Parametro_Documentacao
+
+Revisão 38 (documento 201, seção 5.1; D-N535 e D-N536: Q201-2): A documentação de cada parâmetro ou chave de decisão: o que é, os valores possíveis, o padrão, o que acontece sem valor, quem altera e o fundamento legal. Uma linha por parâmetro, esteja ele no catálogo central de parâmetros por obrigação ou numa coluna de uma tabela legal ou de um contrato. O efeito em cada obrigação está em `Cad_Parametro_Efeito_Obrigacao`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Parametro_Documentacao** | *identificador* | --- |
+| **ID_Parametro_Documentacao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Parametro_Documentacao_Versao). ID_Parametro_Documentacao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Parametro** | *código (60) --- identidade* | Estável, em minúsculas. Igual ao `Codigo` do catálogo central quando a origem é `catalogo_central`; nas demais, um código curto que o dicionário escolhe (por exemplo, `credito_forma_calculo`). |
+| **Rotulo** | *texto* | O nome do parâmetro na tela. |
+| **Origem_Parametro** | *enumeração {catalogo_central, campo_de_tabela}* | Onde o valor mora: no catálogo central de parâmetros por obrigação (D-N440), ou numa coluna de tabela legal, de cadastro ou de movimento, que a tela mostra com a documentação. |
+| **Papel** | *enumeração {parametro, chave_de_decisao}* | `parametro`: valor que o contador ou o gestor ajusta para mudar o comportamento. `chave_de_decisao`: campo de contrato ou de movimento que o Motor lê para escolher a regra (por exemplo, o tipo de arrendamento). |
+| **ID_Obrigacao_Parametro_Definicao** | *referência (Cad_Obrigacao_Parametro_Definicao), opcional* | A linha do catálogo central, quando a origem é `catalogo_central`. |
+| **Entidade_Alvo** | *código (80), opcional* | Quando a origem é `campo_de_tabela`: a entidade da coluna. |
+| **Campo_Alvo** | *código (80), opcional* | Quando a origem é `campo_de_tabela`: a coluna. |
+| **Grupo** | *texto, opcional* | Agrupamento na tela de documentação (por exemplo, "Parâmetros da regra", "Chaves de decisão"). |
+| **Descricao** | *texto* | O que o parâmetro é e o que ele decide, em palavras do dicionário. |
+| **Valores_Possiveis** | *texto* | Os valores que o parâmetro aceita, com o que cada um significa quando o efeito difere (o efeito por valor está em `Cad_Parametro_Efeito_Obrigacao.Quando_Valor`). |
+| **Valor_Padrao** | *texto, opcional* | O valor que o Motor usa enquanto ninguém respondeu, quando existe. Sempre marcado como provisório e sempre acompanhado de aviso. |
+| **Efeito_Sem_Valor** | *texto* | O que o ERP faz quando o parâmetro está vazio: avisa, usa o padrão provisório ou deixa de calcular. |
+| **Quem_Altera** | *enumeração {contador, usuario_do_contrato, plataforma, carga_do_sistema}* | Quem dá o valor. `contador`: parâmetro com a permissão "Parametrizar obrigação" (Q155-4). `usuario_do_contrato`: quem cadastra o contrato ou o movimento. `plataforma`: informado pela Plataforma da Receita. `carga_do_sistema`: lido ou gravado pelo Motor. |
+| **Fundamento_Legal** | *texto* | Os artigos da LC, do decreto ou do ato de onde vem o parâmetro. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Parametro_Efeito_Obrigacao
+
+Revisão 38 (documento 201, seção 5.1; D-N535 e D-N536: Q201-2): O efeito de um parâmetro em uma obrigação: uma linha por parâmetro, obrigação e, quando o efeito depende do valor, por valor. Diz o tipo do efeito, o local da obrigação em que ele aparece e o que muda. Um parâmetro pode atuar em mais de uma obrigação, e uma obrigação recebe efeito de muitos parâmetros; a tela mostra os dois sentidos.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Parametro_Efeito_Obrigacao** | *identificador* | --- |
+| **ID_Parametro_Efeito_Obrigacao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Parametro_Efeito_Obrigacao_Versao). ID_Parametro_Efeito_Obrigacao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Parametro_Documentacao** | *referência (Cad_Parametro_Documentacao) --- identidade* | O parâmetro documentado. |
+| **ID_Obrigacao** | *referência (Cad_Obrigacao_Acessoria) --- identidade* | A obrigação em que o efeito aparece. |
+| **Quando_Valor** | *texto, opcional --- identidade* | O valor do parâmetro a que o efeito se refere; vazio quando o efeito vale para qualquer valor. |
+| **Tipo_Efeito** | *enumeração {calcula_valor, seleciona_regra, condiciona_credito, veda_credito, define_fonte_do_dado, define_vigencia, gera_aviso}* | `calcula_valor`: entra na conta do valor. `seleciona_regra`: escolhe a regra ou a linha de parâmetro. `condiciona_credito`: o crédito só existe ou só vale quando a condição é atendida. `veda_credito`: o crédito sai zero. `define_fonte_do_dado`: diz de onde vem o dado. `define_vigencia`: fixa a data em que passa a valer. `gera_aviso`: só avisa, sem mudar o valor. |
+| **Local_Do_Efeito** | *texto* | Onde o efeito aparece na obrigação: a apuração, a conta, o registro ou o campo do arquivo, ou a tela. Onde o leiaute oficial ainda não existe, descreve o ponto da obrigação. |
+| **Efeito** | *texto* | O que muda quando o parâmetro tem este valor. |
+| **Leiaute_Referencia** | *texto, opcional* | O registro ou o campo oficial da obrigação, quando o leiaute existe; "a conferir" quando não foi lido ou não foi publicado. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+**Cargas de partida da revisão 38 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Regra_Credito_Tomador (28 linhas) | Catálogo legal do crédito do tomador de serviço financeiro: 26 regras de lei e 2 de decreto, nove vedações (sem_credito); vigência desde 01/01/2027; provisória até o contador validar (C239 a C245) |
+| Cad_Classe_Sistema (2 valores) | tipo_emprestimo ganha debenture e nota_comercial (domínio aberto; documento 200, Q200-4) |
+| Cad_Serie_Cotacao (1 linha) | Selic diária das compromissadas de um dia (Uso_Legal_Cbs = selic_diaria); criar só se a série ainda não existir. As séries de DI futuro são cadastradas pelo usuário |
+| Cad_Parametro_Documentacao (41 linhas) | 12 parâmetros da regra, 20 chaves de decisão, 4 parâmetros existentes que o B0b-2 lê e 5 leituras provisórias; provisória (documento 201) |
+| Cad_Parametro_Efeito_Obrigacao (58 linhas) | Efeito de cada valor em ESCRITURACAO_IBS_CBS (51), DERE (6) e ESOCIAL (1); provisória (documento 201) |
+| Cad_Obrigacao_Parametro_Definicao (6 linhas) | Uma linha para o catálogo das 28 regras (armazenamento tabela_propria) e cinco para as leituras provisórias por empresa, com o padrão visível e aviso a cada uso (Q201-4 e Q201-5) |
+| Cad_Obrigacao_Acessoria (1 linha) | ESOCIAL: início em 01/01/2026 (uso no ERP, não a data legal; D-N323; Q201-6) |
+
+**Regras que o Motor segue (documentos 200 e 201)**
+
+| **Regra** | **Texto** |
+|---|---|
+| Crédito do tomador (Q200-2 e Q200-7) | Regime de caixa: o crédito nasce no pagamento efetivo; a proporção do art. 291 vale só nas regras de empréstimo, título e desconto; a alíquota vem de Cad_Regime_Aliquota_Soma (B4) |
+| Avisos (Q200-10) | Pagamento anterior a 01/01/2027: o ERP avisa, nunca bloqueia (D-N284) |
+| Parâmetros (Q201-3 e Q201-4) | Nenhum parâmetro entra no dicionário sem documentação do efeito e da obrigação; leitura provisória é parâmetro por empresa com padrão visível e aviso a cada uso |
+| Declaração à RFB (Q200-11 e Q201-7) | Só registrada (situação, data, protocolo, documento); a emissão espera o ato conjunto; fica documentada em ESCRITURACAO_IBS_CBS com a anotação "ato conjunto não publicado" |
+| Chave adiada (documento 200, seção 5.3) | Cad_Arrendamento_Mercantil.ID_Contrato aponta Cad_Gestao_Contrato, da onda de Gestão de Contratos |
+
+
+52\. Anexo --- Entidades novas da revisão 39 (B6: crédito presumido da CBS do regime automotivo) e cargas de partida
+
+Revisão 39 do dicionário (consolidação de 10/11/2026): 8 entidades novas neste módulo (documento 202, D-N541, Q202-1 a Q202-11; a de compromissos já com o ajuste A1 do documento 205, D-N544, Q205-3), o campo novo em Mov_Credito_Fiscal_Aplicacao, os valores novos de Mov_Credito_Fiscal.Origem e Mov_Titulo.Origem_Tipo, e as cargas de partida abaixo.
+
+52.1. Crédito presumido da CBS do regime automotivo dos projetos habilitados (B6; documento 202, seção 5.2)
+
+Cad_Habilitacao_Automotiva
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-2): A parte automotiva da habilitação: o projeto aprovado nos termos do art. 11-C da Lei 9.440/1997 ou dos arts. 1º a 4º da Lei 9.826/1999, o estabelecimento incentivado, o ato concessório, o início da fruição e o período do crédito. Especializa `Cad_Habilitacao_Regime_Especial` (tipo `regime_automotivo`) do mesmo jeito que `Cad_Habilitacao_Suframa` o faz para a Suframa. O titular, a situação (ativa, suspensa, cancelada) e o número do ato ficam na habilitação geral.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Habilitacao_Automotiva** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Habilitacao_Automotiva_Versao). ID_Habilitacao_Automotiva é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial) --- identidade* | A habilitação de tipo `regime_automotivo` (valor novo em `tipo_regime_especial_federal`). O titular é a pessoa jurídica habilitada. |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento incentivado, na região incentivada. O crédito só se usa para os débitos próprios dele (Decreto 12.955, art. 523, § 1º, II). |
+| **Lei_Origem** | *enumeração {lei_9440_art_11c, lei_9826_arts_1_a_4}* | De qual lei vem o projeto. Decide a fórmula: percentual sobre as vendas (Lei 9.440, art. 11-C; Decreto, art. 521) ou a fórmula do IPI (Lei 9.826; Decreto, art. 522). |
+| **Condicao_Projeto** | *enumeração {projeto_aprovado_ate_2024, novo_projeto_aprovado_ate_2025}* | Projeto aprovado até 31/12/2024 de pessoa jurídica habilitada em 20/12/2023, ou novo projeto aprovado até 31/12/2025 que amplia ou reinicia produção em planta já habilitada (art. 518, § 1º, II). |
+| **Abrange_Veiculo_Eletrico** | *booleano* | O projeto produz veículos com motor elétrico capaz de tracionar sozinho, com ou sem motor a combustão a biocombustível (art. 518, § 2º, I). |
+| **Abrange_Veiculo_Combustao_Biocombustivel** | *booleano* | O projeto produz veículos de motor a combustão com biocombustível (art. 518, § 2º, II). |
+| **Abrange_Partes_Pecas_Pneumaticos** | *booleano* | O projeto produz partes, peças, conjuntos, subconjuntos e pneumáticos para veículos elétricos (art. 518, § 2º, III). Não achei esta alínea no texto do art. 309 da LC 214 que li (C253). |
+| **Numero_Ato_Concessorio** | *código (até 40)* | O número do ato concessório do benefício, que fixa os compromissos e o período do crédito. |
+| **Data_Ato_Concessorio** | *data* | A data do ato concessório. |
+| **Data_Aprovacao_Projeto** | *data* | A data da aprovação do projeto, que decide a condição do projeto. |
+| **Data_Inicio_Fruicao** | *data* | O primeiro mês de fruição do benefício. O Motor conta daqui o mês de fruição das faixas do art. 521 (leitura minha, C248). |
+| **Periodo_Credito_Inicio** | *competência* | Primeiro mês do período do crédito fixado no ato concessório; é a base da devolução do art. 526. |
+| **Periodo_Credito_Fim** | *competência* | Último mês do período do crédito. |
+| **Data_Limite_Inicio_Producao** | *data* | O prazo para iniciar a produção de veículos no estabelecimento incentivado: 01/01/2028 (art. 518, § 3º, I). |
+| **Data_Inicio_Producao_Veiculos** | *data, opcional* | Quando a produção de veículos de fato começou. Vazia depois do prazo gera aviso. |
+| **Normas_Anteriores_Vigentes** | *booleano* | Verdadeiro enquanto o ato do Poder Executivo do § 4º não sair e o ato concessório segue o Decreto 10.457/2020 ou o Decreto 7.422/2010 (art. 518, § 5º). |
+| **Fundamento_Legal** | *texto, opcional* | Os artigos da LC 214 e do Decreto. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Habilitacao_Automotiva_Produto
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-2): Os produtos do projeto: o que a habilitação alcança, por NCM. É a lista que o Motor usa para marcar os itens de venda (`Mov_Nota_Fiscal_Saida_Item.ID_Habilitacao`) e, no projeto da Lei 9.826, a alíquota de IPI de cada posição.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Habilitacao_Automotiva_Produto** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva** | *referência (Cad_Habilitacao_Automotiva)* | A habilitação automotiva a que o produto pertence. |
+| **ID_Classificacao** | *referência (Cad_Classificacao_Mercadoria)* | A NCM do produto. Na Lei 9.826 vale a posição 8702, 8703 ou 8704 (Decreto, art. 522). |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico), opcional* | O produto do cadastro, quando o projeto aponta um item específico. |
+| **Descricao_No_Projeto** | *texto, opcional* | Como o produto aparece no ato concessório. |
+| **Aliquota_Ipi_Referencia** | *número, opcional* | A alíquota de IPI vigente em 31/12/2025 conforme a Tipi, com as Notas Complementares. Vazia: o Motor lê `Cad_Classificacao_Mercadoria.Aliquota_Ipi` da versão da data de referência. Informar aqui congela o valor do ato (C252). |
+| **Origem_Aliquota_Ipi** | *enumeração {tipi_na_data_referencia, informada}, opcional* | De onde vem a alíquota usada: da Tipi na data de referência ou informada por quem cadastra. |
+| **Data_Inclusao** | *data* | Desde quando o produto está no projeto. |
+| **Data_Exclusao** | *data, opcional* | Até quando; vazia enquanto o produto estiver no projeto. |
+| **Observacao** | *texto, opcional* | Anotação livre. |
+
+Cad_Credito_Automotivo_Parametro
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-3): Os parâmetros legais do crédito presumido automotivo: os percentuais por faixa do mês de fruição (art. 521), os fatores multiplicadores da fórmula do IPI (art. 522), a data de referência da alíquota de IPI e o percentual mínimo de pesquisa e desenvolvimento (art. 518, § 3º, II, e). Uma linha por valor, com vigência, como `Cad_Zfm_Alc_Regra`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Automotivo_Parametro** | *identificador* | --- |
+| **ID_Credito_Automotivo_Parametro_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Credito_Automotivo_Parametro_Versao). ID_Credito_Automotivo_Parametro é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (até 60) --- identidade* | Estável, em minúsculas (por exemplo, `auto_pct_faixa_1_2027`). |
+| **Tipo_Parametro** | *enumeração {percentual_faixa_fruicao, fator_multiplicador_ipi, data_referencia_aliquota_ipi, pdi_minimo_sobre_credito}* | `percentual_faixa_fruicao`: percentual do art. 521. `fator_multiplicador_ipi`: fator F do art. 522. `data_referencia_aliquota_ipi`: a data da alíquota de IPI (31/12/2025). `pdi_minimo_sobre_credito`: o mínimo de pesquisa e desenvolvimento, 10% do crédito apurado. |
+| **Lei_Origem** | *enumeração {lei_9440_art_11c, lei_9826_arts_1_a_4, ambas}* | A lei do projeto a que o parâmetro se aplica. |
+| **Mes_Fruicao_Inicial** | *número inteiro, opcional* | Primeiro mês de fruição da faixa (1, 13 ou 49). Só no percentual por faixa. |
+| **Mes_Fruicao_Final** | *número inteiro, opcional* | Último mês de fruição da faixa (12, 48 ou 60). Só no percentual por faixa. |
+| **Valor_Percentual** | *número, opcional* | O percentual ou o fator, em pontos percentuais (11,60 é onze inteiros e sessenta centésimos). Vazio na data de referência. |
+| **Data_Referencia** | *data, opcional* | Só no tipo `data_referencia_aliquota_ipi`. |
+| **Origem_Regra** | *enumeração {lei, decreto}* | `lei` quando a LC 214 e o Decreto dizem o mesmo; `decreto` quando só o Decreto traz o número. Os percentuais de 2029 a 2032 são `lei` pela conta do art. 311, § 3º, da LC 214, que bate com as tabelas do art. 521. |
+| **Fundamento_Legal** | *texto* | Os artigos da LC 214 e do Decreto. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Credito_Automotivo_Apuracao
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-4): A apuração mensal do crédito presumido de um estabelecimento habilitado: a base (vendas no mercado interno com CBS integral, menos as exclusões), o mês de fruição, o percentual ou o fator, o crédito calculado e a data a partir da qual ele pode ser usado. Guarda a memória de cálculo que o auditor pede. O crédito nasce em `Mov_Credito_Fiscal` com origem `presumido_automotivo`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Automotivo_Apuracao** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva** | *referência (Cad_Habilitacao_Automotiva)* | A habilitação apurada. |
+| **Competencia** | *competência* | O mês das vendas. |
+| **Lei_Origem** | *enumeração {lei_9440_art_11c, lei_9826_arts_1_a_4}* | Copiada da habilitação na data da apuração, para a memória de cálculo. |
+| **Mes_Fruicao_Calculado** | *número inteiro, opcional* | O mês de fruição da competência, contado de `Cad_Habilitacao_Automotiva.Data_Inicio_Fruicao` (ou de 01/2027, conforme o parâmetro de contagem). Só na Lei 9.440. |
+| **Mes_Fruicao_Informado** | *número inteiro, opcional* | O mês de fruição que o usuário informa quando discorda do calculado (por exemplo, pelo ato concessório). Quando preenchido, vale no lugar do calculado, e o Motor avisa. |
+| **ID_Credito_Automotivo_Parametro** | *referência (Cad_Credito_Automotivo_Parametro), opcional* | A linha do percentual por faixa usada. Só na Lei 9.440; na Lei 9.826 a linha é a do fator, na linha de cada NCM. |
+| **Valor_Vendas_Projeto** | *número* | As vendas dos produtos do projeto no mercado interno no mês (itens com `Mov_Nota_Fiscal_Saida_Item.ID_Habilitacao` da habilitação). |
+| **Valor_Vendas_Sem_Cbs_Integral** | *número* | As vendas isentas, imunes, fora da incidência, com alíquota zero, com redução de alíquota ou de base, ou com suspensão: saem da base (art. 521, § 2º, I). |
+| **Valor_Vendas_Canceladas_Devolvidas** | *número* | As vendas canceladas e as devolvidas: saem da base (art. 521, § 2º, II). |
+| **Valor_Tributos_Excluidos** | *número* | ICMS, ICMS substituição, ISS, CBS, IBS e Imposto Seletivo da operação: saem da base (art. 521, § 1º, I). O IPI só sai se o parâmetro mandar (C249). |
+| **Valor_Descontos_Incondicionais** | *número* | Os descontos incondicionais: saem da base (art. 521, § 1º, II). Desconto condicional não sai. |
+| **Valor_Base_Calculo** | *número* | Calculado: as vendas menos as quatro exclusões acima. Na Lei 9.826 é a soma das bases por NCM. |
+| **Percentual_Aplicado** | *número, opcional* | Na Lei 9.440: o percentual da faixa do mês de fruição. Vazio na Lei 9.826. |
+| **Valor_Credito_Calculado** | *número* | Calculado. Lei 9.440: base × percentual. Lei 9.826: soma dos créditos por NCM (`Mov_Credito_Automotivo_Apuracao_Ncm`). Zero depois de 2032 e quando a habilitação está cancelada. |
+| **Data_Disponivel_Uso** | *data* | O primeiro dia do mês seguinte à competência: o crédito só se usa a partir daí (art. 523, § 1º, II). |
+| **ID_Credito** | *referência (Mov_Credito_Fiscal), opcional* | O crédito gerado (`Origem` = `presumido_automotivo`, CBS). |
+| **Regra_Provisoria** | *booleano* | Verdadeiro quando o cálculo usou parâmetro provisório ou padrão visível (todas as linhas de `Cad_Credito_Automotivo_Parametro` nascem provisórias). |
+| **Memoria_Calculo** | *texto* | O cálculo escrito: vendas, exclusões, base, mês de fruição, percentual ou fator, crédito. |
+| **Aviso** | *texto, opcional* | Os avisos da seção 6 que valeram para esta apuração. |
+
+Mov_Credito_Automotivo_Apuracao_Ncm
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-4): A base por NCM do mês, para a fórmula do IPI da Lei 9.826 (`CP = V × Al × (1 − Al) × F`): a alíquota de IPI é a de cada posição, por isso a conta é por NCM. Na Lei 9.440 a linha não é usada.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Automotivo_Apuracao_Ncm** | *identificador* | --- |
+| **ID_Credito_Automotivo_Apuracao** | *referência (Mov_Credito_Automotivo_Apuracao)* | A apuração do mês. |
+| **ID_Classificacao** | *referência (Cad_Classificacao_Mercadoria)* | A NCM (posição 8702 a 8704). |
+| **Valor_Base_Ncm** | *número* | A base da NCM no mês, depois das mesmas exclusões da apuração. |
+| **Aliquota_Ipi_Referencia** | *número* | Al: a alíquota de IPI vigente em 31/12/2025 da NCM, gravada na apuração. |
+| **Origem_Aliquota_Ipi** | *enumeração {tipi_na_data_referencia, informada_no_projeto}* | De onde veio Al: da Tipi na data de referência ou do produto do projeto. |
+| **Fator_Multiplicador** | *número* | F do ano (32%, 25,60%, 19,20%, 12,80% ou 6,40%), lido de `Cad_Credito_Automotivo_Parametro`. |
+| **ID_Credito_Automotivo_Parametro** | *referência (Cad_Credito_Automotivo_Parametro)* | A linha do fator usada. |
+| **Valor_Credito_Ncm** | *número* | Calculado: `Valor_Base_Ncm × Al × (1 − Al) × F`, com Al e F em fração. |
+
+Mov_Credito_Automotivo_Debitos_Proprios
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-6): O limite mensal de uso do crédito: os débitos federais do mês multiplicados pela fração entre as vendas de veículos do estabelecimento habilitado e as de todos os estabelecimentos da pessoa jurídica nos três meses anteriores (art. 523, §§ 2º e 3º). Cada uso do crédito consome este limite.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Automotivo_Debitos_Proprios** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva** | *referência (Cad_Habilitacao_Automotiva)* | A habilitação. |
+| **Competencia** | *competência* | O mês do fato gerador dos tributos que se quer compensar. |
+| **Competencia_Base_Inicio** | *competência* | Primeiro dos três meses anteriores. |
+| **Competencia_Base_Fim** | *competência* | Último dos três meses anteriores (o mês imediatamente anterior ao fato gerador). |
+| **Valor_Vendas_Veiculos_Habilitado** | *número* | As vendas de veículos produzidos no estabelecimento habilitado nos três meses, pelas notas fiscais eletrônicas, sem canceladas, devolvidas, tributos e descontos incondicionais (art. 523, § 3º). |
+| **Valor_Vendas_Veiculos_Total** | *número* | As vendas de veículos de todos os estabelecimentos da pessoa jurídica nos mesmos três meses, com as mesmas exclusões. |
+| **Fracao_Debitos_Proprios** | *número, opcional* | Calculado: habilitado ÷ total. Vazio quando o total é zero; aí o limite é zero e o ERP avisa. |
+| **Valor_Debitos_Federais_Mes** | *número* | Os débitos da pessoa jurídica nos impostos e contribuições federais do mês, com os acréscimos legais, dos tributos que o parâmetro de composição manda somar (C250). |
+| **Valor_Limite_Uso** | *número* | Calculado: débitos federais do mês × fração. O máximo que o crédito pode abater no mês. |
+| **Valor_Utilizado_Mes** | *número* | Calculado: a soma dos usos do mês (`Mov_Credito_Fiscal_Aplicacao` ligados a esta linha), na compensação com a CBS e na declaração de compensação. |
+| **Saldo_Limite_Mes** | *número* | Calculado: limite menos utilizado. Negativo gera aviso. |
+| **Regra_Provisoria** | *booleano* | Verdadeiro quando a composição dos débitos usou o padrão visível. |
+| **Memoria_Calculo** | *texto* | O cálculo escrito. |
+
+Mov_Habilitacao_Automotiva_Compromisso
+
+Revisão 39 (documento 202, seção 5.2; D-N541 e D-N544: Q202-7 e Q205-3): Os compromissos do ato concessório e o que se cumpriu: investimento mínimo, produção mínima, processo produtivo básico, manutenção da produção e pesquisa, desenvolvimento e inovação de 10% do crédito. Alimenta os fatores F1, F2 e F3 da devolução e os avisos. O ERP só registra o que o ato e a auditoria do MDIC dizem (D-N284). Revisão 39: ganha a informação anual de pesquisa e a intimação com prazo de regularização (ajuste A1 do documento 205, Q205-3), que são as condições dos Decretos 10.457/2020 e 7.422/2010 que o Decreto 12.955, art. 518, § 5º, manda continuar valendo.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Habilitacao_Automotiva_Compromisso** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva** | *referência (Cad_Habilitacao_Automotiva)* | A habilitação. |
+| **Tipo_Compromisso** | *enumeração {investimento_minimo, producao_minima, processo_produtivo_basico, manutencao_producao, pdi_sobre_credito, informacao_anual_pdi}* | Os cinco compromissos do art. 518, § 3º, II, e a informação anual dos investimentos em pesquisa, desenvolvimento e inovação (`informacao_anual_pdi`: Decreto 10.457, art. 3º, III, e Decreto 7.422, art. 4º, III; documento 205, A1, Q205-3). |
+| **Periodo_Inicio** | *data* | Início do período a que o mínimo e o realizado se referem. |
+| **Periodo_Fim** | *data* | Fim do período. |
+| **Unidade_Medida** | *texto, opcional* | Reais, unidades, meses ou "cumprido" (processo produtivo básico). |
+| **Valor_Minimo_Ato** | *número, opcional* | O mínimo fixado no ato concessório. No `pdi_sobre_credito`, o Motor calcula 10% do crédito apurado e grava aqui. |
+| **Valor_Realizado** | *número, opcional* | O que se realizou no período. |
+| **Percentual_Cumprimento** | *número, opcional* | Calculado: realizado ÷ mínimo, limitado a 100% (art. 526, § 1º, II). |
+| **Fonte** | *enumeração {ato_concessorio, auditoria_mdic, informado_usuario}* | De onde vem o dado. |
+| **Data_Auditoria** | *data, opcional* | Quando o MDIC auditou e mandou o resultado à RFB (art. 519, parágrafo único). |
+| **Data_Limite_Cumprimento** | *data, opcional* | Quando o compromisso deve estar cumprido. Na `informacao_anual_pdi`, o Motor sugere 31/07 do ano seguinte ao do crédito; o usuário pode mudar quando o ato disser outra data (documento 205, A1, Q205-3). |
+| **Data_Intimacao** | *data, opcional* | A intimação para regularizar a regularidade fiscal ou a informação anual (Decreto 10.457, art. 3º, e Decreto 7.422, art. 4º; documento 205, A1, Q205-3). |
+| **Data_Limite_Regularizacao** | *data, opcional* | Calculada: `Data_Intimacao` mais 30 dias corridos (leitura minha, C267 (d); documento 205, A1, Q205-3). |
+| **Situacao** | *enumeração {em_andamento, cumprido, descumprido}* | O estado do compromisso, informado ou conferido. |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O ato, o laudo ou a auditoria. |
+| **Observacao** | *texto, opcional* | Anotação livre. |
+
+Mov_Credito_Automotivo_Devolucao
+
+Revisão 39 (documento 202, seção 5.2; D-N541: Q202-8): A devolução do crédito quando a habilitação é cancelada (art. 526): o crédito apurado no período vezes 100% menos o produto de F1, F2 e F3. O MDIC apura o valor; o ERP guarda o que o MDIC apurou, calcula a conta como conferência, avisa da divergência, gera o título a pagar e conta o prazo de cinco anos.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Credito_Automotivo_Devolucao** | *identificador* | --- |
+| **ID_Habilitacao_Automotiva** | *referência (Cad_Habilitacao_Automotiva)* | A habilitação cancelada. |
+| **Data_Ciencia_Descumprimento** | *data* | A ciência do descumprimento; o processo de cancelamento começa em até cinco anos dela (art. 527, I). |
+| **Data_Cancelamento** | *data* | O cancelamento da habilitação; o recolhimento vence no último dia útil do mês seguinte (art. 527, III). |
+| **Periodo_Credito_Inicio** | *competência* | Início do período do crédito fixado no ato concessório. |
+| **Periodo_Credito_Fim** | *competência* | Fim do período. |
+| **Valor_Credito_Apurado_Periodo** | *número* | Calculado: a soma de `Valor_Credito_Calculado` das apurações do período. |
+| **Valor_Investimentos_Realizados** | *número* | Somatório dos investimentos realizados no período do crédito (de `Mov_Habilitacao_Automotiva_Compromisso`). |
+| **Valor_Investimentos_Minimo** | *número* | O volume mínimo de investimentos do ato. |
+| **Fator_F1** | *número* | Calculado: investimentos realizados ÷ mínimo, no máximo 100%. |
+| **Valor_Producao_Realizada** | *número* | Somatório dos volumes de produção realizados no período do crédito. |
+| **Valor_Producao_Minima** | *número* | O volume mínimo de produção do ato. |
+| **Fator_F2** | *número* | Calculado: produção realizada ÷ mínima, no máximo 100%. |
+| **Prazo_Manutencao_Realizado_Meses** | *número inteiro* | O prazo em que a produção se manteve no estabelecimento, inclusive depois do fim do benefício. |
+| **Prazo_Manutencao_Minimo_Meses** | *número inteiro* | O prazo mínimo do ato, inclusive o período depois do fim do benefício. |
+| **Fator_F3** | *número* | Calculado: prazo realizado ÷ mínimo, no máximo 100%. |
+| **Percentual_Devolucao** | *número* | Calculado: 100% menos F1 × F2 × F3. |
+| **Valor_Devolucao_Calculado** | *número* | Calculado: crédito apurado no período × percentual de devolução. |
+| **Valor_Devolucao_Apurado_Mdic** | *número, opcional* | O valor que o MDIC apurou no encerramento do processo (art. 527, I). É o que vale; o calculado confere. |
+| **Valor_Juros_Mora** | *número, opcional* | Os juros de mora informados, na forma dos tributos federais, contados do período em que ocorreu o fato do cancelamento (art. 527, II). O ERP não os calcula. |
+| **Divergencia_Mdic** | *booleano* | Calculado: o apurado pelo MDIC difere do calculado. |
+| **Data_Vencimento_Recolhimento** | *data* | O último dia útil do mês seguinte ao cancelamento (art. 527, III). |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a pagar da devolução (`Origem_Tipo` = `devolucao_credito_automotivo`). |
+| **Data_Limite_Cobranca** | *data* | Cinco anos a partir do primeiro dia do mês seguinte àquele em que o recolhimento deveria ter sido feito (art. 527, parágrafo único). |
+| **Situacao** | *enumeração {em_apuracao, apurada, titulo_gerado, recolhida, prescrita}* | O estado da devolução. |
+| **Memoria_Calculo** | *texto* | A conta escrita. |
+
+**Cargas de partida da revisão 39 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Credito_Automotivo_Parametro (22 linhas) | 15 percentuais por faixa do mês de fruição (art. 521), 5 fatores do IPI (art. 522), a data de referência da alíquota de IPI (31/12/2025) e o mínimo de 10% de pesquisa e desenvolvimento; provisória até o contador validar (C248 a C255) |
+| Cad_Classe_Sistema (1 valor) | tipo_regime_especial_federal ganha regime_automotivo (domínio aberto; documento 202, Q202-2) |
+| Cad_Parametro_Documentacao (25 linhas) | 7 parâmetros legais do crédito, 14 chaves de decisão e 4 leituras provisórias; provisória (documento 201, regra da Q201-3; documento 202, Q202-9) |
+| Cad_Parametro_Efeito_Obrigacao (34 linhas) | Efeito de cada valor na ESCRITURACAO_IBS_CBS; ECD, ECF, DCTFWeb e demais ficam sem efeito documentado até a C251; provisória |
+| Cad_Obrigacao_Parametro_Definicao (5 linhas) | Uma linha para o catálogo legal (armazenamento tabela_propria) e quatro para as leituras provisórias por empresa, com o padrão visível e aviso a cada uso (Q202-5) |
+
+**Regras que o Motor segue (documento 202)**
+
+| **Regra** | **Texto** |
+|---|---|
+| Cálculo (Q202-4) | Lei 9.440: base × percentual da faixa do mês de fruição; Lei 9.826: soma por NCM de V × Al × (1 − Al) × F, com Al a alíquota de IPI de 31/12/2025 (Tipi com as Notas Complementares) ou a informada no produto; o crédito nasce em Mov_Credito_Fiscal (CBS) e vale a partir do primeiro dia do mês seguinte |
+| Período (Q202-10) | Crédito de 01/01/2027 a 31/12/2032; venda fora do período gera aviso; não há parâmetro de 2033 em diante |
+| Uso (Q202-6) | Limite mensal pelos débitos federais do mês vezes a fração das vendas de veículos do estabelecimento habilitado nos três meses anteriores; não ressarcível nem transferível; o ERP avisa, nunca bloqueia (D-N284) |
+| Compromissos e devolução (Q202-7, Q202-8, Q205-3) | O ERP só registra o que o ato e a auditoria do MDIC dizem; F1, F2 e F3 conferem o valor que o MDIC apurar; título a pagar e prazo de cinco anos; sem cálculo de juros de mora |
+| Leituras provisórias (Q202-5) | Mês de fruição contado do início da fruição (C248), IPI na base (C249), débitos próprios com os tributos federais que o ERP apura e limite que não acumula (C250): parâmetros por empresa com padrão visível e aviso a cada uso |
+| Partes, peças e pneumáticos (Q202-11) | Marca Abrange_Partes_Pecas_Pneumaticos e aviso permanente até o contador responder (C253) |
+
+
+53\. Anexo --- Entidades novas da revisão 40 (veículo, Mover e Rota 2030 e autopeças por destinação) e cargas de partida
+
+Revisão 40 do dicionário (consolidação de 11/11/2026): 25 entidades novas neste módulo (6 do documento 204, com o B1 do documento 205; 18 do documento 206; 1 do documento 209; D-N548), os campos novos em Cad_NCM_Imposto_Seletivo, nas notas de entrada e saída, no pedido de venda e na informação de ST, os valores novos de Mov_Credito_Fiscal.Origem e Mov_Titulo.Origem_Tipo, os 5 domínios novos e as cargas de partida abaixo.
+
+53.1. Tributação do veículo por combustível, potência e art. 149 da LC 214 (documento 204, seção 5.2; B1 do documento 205)
+
+Cad_Veiculo_Versao
+
+Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A ficha técnica da versão do veículo (marca, modelo e versão do CAT/Renavam): o que a lei usa para graduar o Imposto Seletivo, o IPI até 2026 e as condições do art. 149 da LC 214. Liga-se ao produto vendido ou importado; a NCM do produto continua dando o grupo e a alíquota-base.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Veiculo_Versao** | *identificador* | Chave. |
+| **ID_Veiculo_Versao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Veiculo_Versao_Versao). ID_Veiculo_Versao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico) --- identidade* | O produto (veículo) que a empresa fabrica, importa ou revende. A NCM dele dá o grupo do IS (Cad_NCM_Imposto_Seletivo). |
+| **Codigo_Marca_Modelo** | *código (até 6), opcional* | O código de marca e modelo do Denatran/Senatran, o mesmo que a nota leva em `Veiculo_Codigo_Marca_Modelo`. |
+| **Codigo_Versao_Cat** | *código (até 20), opcional* | A versão no CAT/Renavam (Decreto 12.549, Anexo IV, itens 4 e 5: o critério vale para o código de marca/modelo/versão). |
+| **Numero_Cat** | *código (até 30), opcional* | Número do Certificado de Adequação à Legislação de Trânsito. |
+| **ID_Categoria_Veiculo_Eficiencia** | *referência (Cad_Classe_Sistema, domínio = categoria_veiculo_eficiencia)* | A categoria do Anexo III do Decreto 12.549 (item 1), que decide qual fórmula de consumo energético vale (itens 5, 6 e 7). |
+| **ID_Tecnologia_Propulsao** | *referência (Cad_Classe_Sistema, domínio = tecnologia_propulsao_veiculo)* | A fonte de energia e tecnologia de propulsão (critério 1): 14 valores, com as definições da ABNT NBR 16567 (Decreto 12.549, Anexo II). |
+| **Potencia_Kw** | *número* | A potência do sistema de propulsão, em quilowatts, medida pela norma de `Norma_Medicao_Potencia`. Com dois combustíveis vale a mais alta (ISO 1585:2020). |
+| **Norma_Medicao_Potencia** | *enumeração {iso_1585_2020, unece_r85, gtr_21, metodologia_mdic}* | Combustão interna: ISO 1585:2020; elétrico de motor único: UNECE R85; elétrico ou híbrido de motores múltiplos: UN GTR 21 ou metodologia do MDIC. |
+| **Cilindrada_Cc** | *número, opcional* | Cilindrada do motor a combustão, em cm³. Entra na condição do táxi (art. 149, § 2º, I: até 2.000 cm³). |
+| **Numero_Portas** | *número, opcional* | Número de portas, contando a de acesso ao bagageiro (art. 149, caput: no mínimo quatro). |
+| **Massa_Ordem_Marcha_Kg** | *número, opcional* | Massa em ordem de marcha (ABNT NBR ISO 1176), base das fórmulas de consumo máximo CE2 e CE3. |
+| **Peso_Bruto_Total_Kg** | *número, opcional* | Peso bruto total. Decide o caminhão (PBT de 3.500 kg ou mais, MP 1.399, art. 5º, § 1º, I). |
+| **Consumo_Energetico_Mj_Km** | *número, opcional* | Consumo energético medido no ciclo combinado (dado do Ibama), guardado para conferir o nível informado. |
+| **Nivel_Eficiencia_Energetica** | *enumeração {item_2, item_3, nao_atende}* | Atende ao item 2 do Anexo III do Decreto 12.549 (redução de 2 pontos), ao item 3 (1 ponto) ou a nenhum. |
+| **Atende_Desempenho_Estrutural** | *booleano* | Cumpre, de série, todos os requisitos dos Grupos A e B do Anexo IV do Decreto 12.549, com a substituição pelo Grupo C quando regulamentada. A MP fala em "item 2" e o Decreto em "item 5" (C257). |
+| **Nivel_Reciclabilidade** | *enumeração {item_17_nivel_2, item_18_nivel_1, nao_atende}* | Atende ao item 17 (nível 2: um veículo em fim de vida para cada cinco) ou ao item 18 (nível 1: um para cada dez) do Anexo III do Decreto 12.435. |
+| **Eh_Picape** | *booleano* | Picape: compartimento de passageiros ligado de fábrica a área aberta de carga, qualquer que seja o PBT. A picape nunca é caminhão (MP 1.399, art. 5º, § 1º, II). |
+| **Uso_Operacional_Forcas_Seguranca** | *booleano* | Versão com características técnicas para uso operacional exclusivo das Forças Armadas ou dos órgãos de segurança pública (MP 1.399, art. 5º, II e § 2º): o IS não incide. |
+| **Documento_Comprovacao** | *texto, opcional* | Onde está a prova: CAT, laudo do Ibama, atestado do fabricante. |
+| **Fundamento_Legal** | *texto, opcional* | Artigos que sustentam os níveis informados. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Como nos parâmetros legais: a ficha entra provisória até o contador ou o responsável técnico validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Veiculo_Versao_Sustentavel
+
+Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): O registro de versão sustentável concedido pelo MDIC (Lei 14.902, art. 11; Decreto 12.549, art. 4º). Dá alíquota zero de IS (MP 1.399, art. 4º, II) e, até 31/12/2026, IPI zero (NC 87-15).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Veiculo_Versao_Sustentavel** | *identificador* | Chave. |
+| **ID_Veiculo_Versao_Sustentavel_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Veiculo_Versao_Sustentavel_Versao). ID_Veiculo_Versao_Sustentavel é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao) --- identidade* | A versão registrada. O registro é pedido por marca e modelo (Decreto 12.549, art. 4º, I); aqui fica por versão para a conta do item. |
+| **Numero_Registro_Mdic** | *código (até 40)* | Número do registro concedido pelo MDIC. |
+| **Data_Registro** | *data* | Data do registro. |
+| **Numero_Ato_Compromissos** | *código (até 40), opcional* | O ato de registro dos compromissos do art. 2º, § 2º, da Lei 14.902, exigido pelo art. 4º, II, do Decreto. |
+| **ID_Mover_Ato_Registro** | *referência (Cad_Mover_Ato_Registro), opcional* | O ato de registro de compromissos do titular, exigido para o registro de versão sustentável (Decreto 12.549, art. 4º, II). O `Numero_Ato_Compromissos` do documento 204 continua como o número citado no registro do MDIC. |
+| **Emissao_Co2_Poco_Roda_G_Km** | *número* | Emissão de CO₂ do poço à roda, em g/km. O limite do Decreto é 83. |
+| **Percentual_Reciclabilidade** | *número* | Reciclabilidade ou reutilização de materiais. O mínimo do Decreto é 80%. |
+| **Atende_Etapas_Fabris_Pais** | *booleano* | Cumpre o Processo Produtivo Básico: estampagem de painéis externos, soldagem, pintura, fabricação de motor e montagem. |
+| **Categoria_Sustentavel** | *enumeração {subcompacto, compacto, utilitario_esportivo_compacto, picape_compacta, outra}* | A categoria exigida pelo Decreto: subcompacto, compacto, utilitário esportivo compacto ou picape compacta. `outra` não dá o benefício. |
+| **Situacao_Registro** | *enumeração {ativo, suspenso, cancelado}* | Só o registro ativo dá o benefício. |
+| **Fundamento_Legal** | *texto, opcional* | Lei 14.902, art. 11; Decreto 12.549, arts. 4º e 6º; MP 1.399, art. 4º, II. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | O ato do MDIC sobre o requerimento ainda não está no Projeto (Q204-11). |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Is_Veiculo_Ajuste
+
+Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A tabela dos ajustes de alíquota por critério: as cinco tabelas dos Anexos II e III da MP 1.399 (Imposto Seletivo, desde 02/02/2027) e as das Notas Complementares NC (87-13) e NC (87-14) da Tipi (IPI, até 31/12/2026). Os valores são idênticos; muda o imposto e a vigência.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Veiculo_Ajuste** | *identificador* | Chave. |
+| **ID_Is_Veiculo_Ajuste_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Is_Veiculo_Ajuste_Versao). ID_Is_Veiculo_Ajuste é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Imposto** | *referência (Cad_Imposto, Fase 0) --- identidade* | Imposto Seletivo ou IPI. |
+| **Tabela_Ajuste** | *enumeração {tabela_87_03, tabela_8704} --- identidade* | Anexo II da MP (NC 87-13) para a posição 87.03; Anexo III (NC 87-14) para as posições 8704 listadas. |
+| **Criterio** | *enumeração {propulsao, eficiencia_energetica, potencia, desempenho_estrutural, reciclabilidade} --- identidade* | Os cinco critérios. |
+| **ID_Tecnologia_Propulsao** | *referência (Cad_Classe_Sistema, domínio = tecnologia_propulsao_veiculo), opcional --- identidade* | Só no critério propulsão. |
+| **Nivel_Chave** | *código (até 30), opcional --- identidade* | O nível dos critérios de eficiência (`item_2`, `item_3`, `nao_atende`), desempenho estrutural (`atende`, `nao_atende`) e reciclabilidade (`item_17_nivel_2`, `item_18_nivel_1`, `nao_atende`). |
+| **Potencia_Ate_Kw** | *número, opcional* | Limite superior da faixa de potência, inclusive. Vazio na última faixa. |
+| **Faixa_Aberta_Superior** | *booleano* | Verdadeiro na linha "acima de 290 kW", que não tem limite superior. |
+| **Ajuste_Pontos** | *número* | O ajuste, em pontos percentuais (negativo reduz). |
+| **Fundamento_Legal** | *texto* | O anexo e o artigo (por exemplo, "MP 1.399/2026, Anexo II, critério 3"). |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória: a MP precisa ser convertida e o contador valida (C265). |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Is_Veiculo_Apuracao
+
+Revisão 40 (documento 204, seção 5.2 e documento 205, B1; D-N548: Q204-1 a Q204-10): A memória do Imposto Seletivo (ou do IPI até 2026) de um item de veículo: cada ajuste lido, a alíquota inicial, os fatores, a alíquota final e a hipótese de alíquota zero ou de não incidência. A linha de `Mov_Apuracao_Tributo_Item` guarda o resultado; esta guarda a conta.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Veiculo_Apuracao** | *identificador* | Chave. |
+| **ID_Apuracao** | *referência (Mov_Apuracao_Tributo_Item)* | A linha de apuração do item que recebeu o resultado. |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao)* | A ficha usada, na versão vigente na data do fato gerador. |
+| **ID_NCM_Imposto_Seletivo** | *referência (Cad_NCM_Imposto_Seletivo)* | A linha da NCM que deu a alíquota-base e os fatores. |
+| **ID_Veiculo_Versao_Sustentavel** | *referência (Cad_Veiculo_Versao_Sustentavel), opcional* | O registro usado quando a hipótese é a versão sustentável. |
+| **ID_Beneficio_Veiculo_Utilizacao** | *referência (Mov_Beneficio_Veiculo_Utilizacao), opcional* | A utilização do benefício do art. 149, quando a hipótese é PcD, TEA ou táxi. |
+| **Data_Fato_Gerador** | *data* | Data que escolhe as linhas vigentes. |
+| **Operacao** | *enumeração {saida_fabricante, importacao}* | Na importação entra o fator de ajuste. |
+| **Aliquota_Base_Anexo** | *número* | A alíquota-base do Anexo I (6,3 ou 3,9). |
+| **Ajuste_Propulsao** | *número* | Pontos do critério 1. |
+| **Ajuste_Eficiencia** | *número* | Pontos do critério 2. |
+| **Ajuste_Potencia** | *número* | Pontos do critério 3. |
+| **Ajuste_Desempenho_Estrutural** | *número* | Pontos do critério 4. |
+| **Ajuste_Reciclabilidade** | *número* | Pontos do critério 5. |
+| **Aliquota_Inicial** | *número* | Base mais ajustes, com o piso de zero (Decreto 12.549, art. 3º, parágrafo único, por remissão da MP, art. 3º, § 2º, I). |
+| **Fator_Conversao** | *número* | O fator do Anexo V (1,21 nos veículos). |
+| **Fator_Ajuste_Importacao** | *número, opcional* | O fator do art. 8º (1,17), cumulativo com o de conversão. Vazio na saída do fabricante. |
+| **Aliquota_Final_Aplicada** | *número* | Inicial × conversão × importação, com o arredondamento do parâmetro da empresa (C256). |
+| **Potencia_Kw_Usada** | *número* | A potência que escolheu a faixa, copiada da ficha. |
+| **Hipotese_Excecao** | *enumeração {nenhuma, aliquota_zero_pcd_tea, aliquota_zero_taxi, aliquota_zero_versao_sustentavel, aliquota_zero_nota_complementar_tipi, reducao_50_nota_complementar_tipi, nao_incide_caminhao, nao_incide_uso_operacional}* | Quando diferente de `nenhuma`, a alíquota final é zero (ou 50% na nota 88-2) ou o imposto não incide, e o item guarda o motivo. |
+| **Condicao_Nota_Complementar** | *enumeração {nc_87_2_ambulancia_carro_celular_funerario, nc_88_1_a_concessionaria_linha_regular, nc_88_1_b_aerofotogrametria, nc_88_1_c_aviao_agricola, nc_88_2_taxi_aereo, nc_89_1_empresa_turismo}, opcional* | A nota complementar da Tipi em que a venda se enquadra. Preenchido quando `Hipotese_Excecao` é `aliquota_zero_nota_complementar_tipi` ou `reducao_50_nota_complementar_tipi`. O Motor só aceita a hipótese com este campo preenchido, confere a NCM (87.03 para a NC 87-2; 88.02, exceto 8802.60.00, para a NC 88-1 e a NC 88-2; 8903.2 e 8903.3 para a NC 89-1) e só vale na data da venda até 31/12/2027 (MP 1.399, art. 6º); a NC 88-2 reduz em 50% e as demais zeram. A NC 88-3 não tem valor na lista até o complemento da C267/C263 (documento 205, B1, Q205-2). |
+| **ID_Documento_Condicao** | *referência (Cad_Documento), opcional* | O documento que prova a condição do adquirente: concessão de linha aérea, autorização da Defesa, inscrição no RAB, cadastro de turismo ou laudo do tipo de veículo (documento 205, B1, Q205-2). |
+| **Dados_Provisorios** | *booleano* | Verdadeiro se alguma linha usada está `provisorio`: o relatório avisa. |
+| **Memoria_Calculo** | *texto* | O texto da conta, para auditoria. |
+
+Cad_Beneficio_Veiculo_Reconhecimento
+
+Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): O direito reconhecido a quem compra automóvel com alíquota zero de IBS e CBS (art. 149 da LC 214): o táxi, a pessoa com deficiência e a pessoa com transtorno do espectro autista. O mesmo reconhecimento dá alíquota zero de IS (MP 1.399, art. 4º, I). O reconhecimento é pela administração estadual ou distrital do domicílio e pela RFB (art. 153).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Beneficio_Veiculo_Reconhecimento** | *identificador* | Chave. |
+| **ID_Participante** | *referência (Cad_Participante)* | O adquirente beneficiário. |
+| **Tipo_Beneficio** | *enumeração {taxi, pessoa_com_deficiencia, transtorno_espectro_autista}* | O inciso do art. 149. |
+| **ID_Deficiencia** | *referência (Cad_Participante_Deficiencia), opcional* | A deficiência cadastrada, nos dois últimos tipos. |
+| **Tipo_Laudo** | *enumeração {servico_publico_saude, servico_privado_sus, detran_clinica_credenciada}, opcional* | Quem emitiu o laudo (art. 151). Vazio no táxi. |
+| **Numero_Laudo** | *código (até 40), opcional* | Número do laudo. |
+| **Data_Laudo** | *data, opcional* | Data do laudo. |
+| **Numero_Autorizacao_Taxi** | *código (até 40), opcional* | Autorização, permissão ou concessão do poder público ao motorista profissional (art. 149, I). |
+| **Numero_Reconhecimento_Rfb** | *código (até 40)* | O reconhecimento pela RFB (art. 153). |
+| **Data_Reconhecimento_Rfb** | *data* | Data. |
+| **ID_Estado_Reconhecimento** | *referência (Cad_Estado), opcional* | O estado ou o Distrito Federal do domicílio. |
+| **Numero_Reconhecimento_Estadual** | *código (até 40), opcional* | O reconhecimento da administração estadual ou distrital. |
+| **Data_Reconhecimento_Estadual** | *data, opcional* | Data. |
+| **ID_Participante_Representante** | *referência (Cad_Participante), opcional* | Representante legal ou mandatário, solidariamente responsável (art. 149, §§ 4º e 5º). |
+| **Situacao** | *enumeração {reconhecido, utilizado, cancelado}* | `utilizado` depois da compra; o intervalo mínimo é conferido na utilização. |
+| **Observacao** | *texto, opcional* | Livre. |
+
+Mov_Beneficio_Veiculo_Utilizacao
+
+Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A compra com o benefício: o item vendido, as condições conferidas (preço máximo, quatro portas, fabricação nacional, motorização do táxi, intervalo mínimo), o valor dispensado de IBS, CBS e IS e, se houver alienação antes do intervalo, o tributo que o alienante deve pagar (art. 155).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Beneficio_Veiculo_Utilizacao** | *identificador* | Chave. |
+| **ID_Beneficio_Veiculo_Reconhecimento** | *referência (Cad_Beneficio_Veiculo_Reconhecimento)* | O direito usado. |
+| **ID_Nota_Fiscal_Saida_Item** | *referência (Mov_Nota_Fiscal_Saida_Item), opcional* | O item da venda. |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao)* | A versão comprada: dela vêm portas, cilindrada e propulsão. |
+| **Data_Aquisicao** | *data* | Conta o intervalo do art. 152 (2 anos no táxi, 3 anos na PcD e no TEA). |
+| **Preco_Venda_Consumidor** | *número, opcional* | Preço ao consumidor com os tributos que incidiriam sem a redução e sem a adaptação (art. 149, § 2º, II). Só PcD e TEA. |
+| **Valor_Operacao** | *número* | Valor da operação. |
+| **Valor_Base_Beneficio** | *número* | O valor da operação limitado ao teto do benefício (R$ 100.000,00 na PcD e no TEA; `Cad_Parametro_Legal_Ibs_Cbs`). |
+| **Atende_Preco_Maximo** | *booleano, opcional* | Preço de venda até R$ 200.000,00 (PcD e TEA). |
+| **Atende_Quatro_Portas** | *booleano* | No mínimo quatro portas, com a de acesso ao bagageiro. |
+| **Atende_Fabricacao_Nacional** | *booleano* | Automóvel de passageiros de fabricação nacional. |
+| **Atende_Motorizacao_Taxi** | *booleano, opcional* | Elétrico, ou cilindrada até 2.000 cm³ e combustível renovável, sistema reversível ou híbrido (art. 149, § 2º, I). Só táxi. |
+| **Atende_Intervalo_Minimo** | *booleano* | Passou o intervalo desde a compra anterior com o benefício. |
+| **Perda_Total_Furto_Roubo** | *booleano* | Perda total, furto ou roubo do automóvel anterior: o benefício vale a qualquer tempo (art. 152, parágrafo único). |
+| **Valor_Ibs_Cbs_Dispensado** | *número* | IBS e CBS que seriam devidos sem o benefício. |
+| **Valor_Is_Dispensado** | *número, opcional* | IS que seria devido sem a alíquota zero. |
+| **Data_Alienacao** | *data, opcional* | Venda do automóvel pelo beneficiário. |
+| **Alienacao_Antecipada** | *booleano, opcional* | Alienação antes do intervalo, a quem não tem o reconhecimento (art. 155). |
+| **Excecao_Alienacao** | *enumeração {nenhuma, seguradora_perda_total, falecimento_beneficiario, alienacao_fiduciaria}, opcional* | Os casos do art. 155, § 2º, em que não se cobra. |
+| **Valor_Tributo_A_Recolher_Alienante** | *número, opcional* | Os tributos dispensados, atualizados, mais multa e juros (art. 155, caput e § 1º). |
+| **Observacao** | *texto, opcional* | Livre. |
+
+53.2. Programa Mover, grupo 1: ato de registro de compromissos (documento 206, seção 5.2)
+
+Cad_Mover_Ato_Registro
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O ato de registro de compromissos que o MDIC emite ao fabricante ou ao importador de veículos novos (Decreto 12.435, art. 2º). Sem ele, a empresa não cumpre a condição do art. 1º para comercializar veículo produzido no País nem para importar veículo dos códigos do Anexo I; a importação sem o ato paga a multa de 20% do art. 7º. Substitui, desde 01/06/2025, os atos do art. 2º do Decreto 9.557 (Decreto 12.435, art. 14).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Ato_Registro** | *identificador* | Chave. |
+| **ID_Mover_Ato_Registro_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Mover_Ato_Registro_Versao). ID_Mover_Ato_Registro é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A empresa titular do ato (CNPJ da matriz, como no requerimento). |
+| **Numero_Ato** | *código (até 40)* | O número do ato publicado pelo MDIC. A nota e o Duimp do veículo podem citá-lo. |
+| **Data_Ato** | *data* | A data de emissão do ato, assinado pelo Secretário de Desenvolvimento Industrial, Inovação, Comércio e Serviços (art. 2º, § 1º, II). |
+| **Tipo_Requerente** | *enumeração {fabricante, importador, fabricante_e_importador}* | Quem o ato alcança. O importador sem vínculo direto com o fabricante fica dispensado do ato (Lei 14.902, art. 4º) e paga a multa do art. 7º do Decreto na importação (C269). |
+| **Abrange_Veiculos_Leves** | *booleano* | O ato cobre os códigos da seção A do Anexo I (veículos leves): metas de eficiência, reciclabilidade, rotulagem e desempenho estrutural (art. 1º, I). |
+| **Abrange_Veiculos_Pesados** | *booleano* | O ato cobre os códigos da seção B (veículos pesados): relatório de eficiência, reciclabilidade, rotulagem e desempenho estrutural (art. 1º, II). |
+| **Producao_Sob_Licenca_Encomenda** | *booleano* | Verdadeiro quando a empresa produz sob licença ou encomenda. Se ela não tem ato, os requisitos recaem sobre o licenciante ou o encomendante (art. 1º, §§ 4º e 5º). |
+| **ID_Participante_Licenciante_Encomendante** | *referência (Cad_Participante), opcional* | O licenciante ou encomendante a quem os requisitos recaem. Obrigatório quando `Producao_Sob_Licenca_Encomenda` é verdadeiro e a empresa não tem ato. |
+| **Tem_Autorizacao_Assistencia_Rede** | *booleano* | A empresa está formalmente autorizada a prestar assistência técnica e a organizar rede de distribuição no País (art. 2º, § 2º, III, a). |
+| **Tem_Autorizacao_Marca** | *booleano* | A empresa está autorizada a usar as marcas do fabricante nos veículos comercializados no País, por documento válido no Brasil (art. 2º, § 2º, III, b). |
+| **Situacao_Ato** | *enumeração {solicitado, vigente, cancelado, revogado}* | Só `vigente` cumpre a condição do art. 1º. `revogado` é o ato do Decreto 9.557 extinto em 01/06/2025. |
+| **Motivo_Cancelamento** | *enumeração {a_pedido, descumprimento_reciclabilidade, descumprimento_rotulagem, outro}, opcional* | O cancelamento é consequência do não cumprimento das metas de reciclabilidade ou de rotulagem (art. 4º) ou é pedido a qualquer tempo pelo titular (art. 2º, § 5º). |
+| **Data_Solicitacao_Cancelamento** | *data, opcional* | A data em que a empresa pediu o cancelamento. |
+| **Janela_Residual_Inicio** | *data, opcional* | Calculada: 12 meses antes de `Data_Solicitacao_Cancelamento`. O cancelamento não dispensa os requisitos, calculados nos 12 meses anteriores ao pedido ou nos últimos 12 meses de atividade (art. 2º, § 6º). |
+| **Janela_Residual_Fim** | *data, opcional* | Calculada: a data do pedido de cancelamento (ou o último dia de atividade). |
+| **ID_Documento_Solicitacao** | *referência (Cad_Documento), opcional* | O requerimento e os anexos: contrato social, procuração, autorizações e declaração de compromisso (art. 2º, § 2º). |
+| **Numero_Ato_Rota_2030_Revogado** | *código (até 40), opcional* | O número do ato emitido pelo art. 2º do Decreto 9.557, quando a empresa tinha um; fica só como histórico. |
+| **Fundamento_Legal** | *texto, opcional* | Lei 14.902, art. 2º; Decreto 12.435, arts. 1º a 7º. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Mover_Requisito_Ano
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): Cada requisito do art. 1º do Decreto 12.435 em cada ano-calendário: a meta, o resultado informado, a situação e a sanção prevista. O ERP registra o que o MDIC e a auditoria credenciada apuram e avisa; não calcula a média ponderada da frota (D-N284).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Requisito_Ano** | *identificador* | Chave. |
+| **ID_Mover_Ato_Registro** | *referência (Cad_Mover_Ato_Registro)* | O ato a que o requisito pertence. |
+| **Ano_Calendario** | *número* | O ano da meta. |
+| **Tipo_Requisito** | *enumeração {eficiencia_energetica_leves, relatorio_eficiencia_pesados, reciclabilidade, rotulagem, desempenho_estrutural, pegada_carbono, inventario_carbono}* | Os requisitos do art. 1º, I e II; a pegada de carbono vale a partir de 01/01/2027 (art. 1º, § 1º); o inventário, a apresentar até 31/12/2026 (art. 2º, § 2º, V). |
+| **Meta_Valor** | *número, opcional* | A meta numérica do ano, quando existe (por exemplo, o consumo energético máximo em MJ/km). A meta vem dos Anexos II a IV; o ERP guarda o número informado. |
+| **Unidade_Meta** | *texto (30), opcional* | A unidade da meta: MJ/km, gCO₂e/km, razão de reciclabilidade, percentual de modelos etiquetados. |
+| **Resultado_Valor** | *número, opcional* | O resultado atingido, informado a partir do relatório ao MDIC ou do relatório da auditoria. |
+| **Situacao_Requisito** | *enumeração {a_apurar, em_acompanhamento, cumprido, nao_cumprido, dispensado}* | `dispensado` para os produtos do art. 3º (aplicação especial, uso bélico, pequena série, quadriciclos e triciclos). |
+| **Sancao_Prevista** | *enumeração {nenhuma, multa_compensatoria, cancelamento_do_ato}* | Preenchida pelo Motor pela tabela do tipo: eficiência energética e desempenho estrutural geram multa compensatória (arts. 5º e 6º do Decreto; arts. 6º e 7º da Lei); reciclabilidade e rotulagem geram o cancelamento (art. 4º). |
+| **Valor_Multa_Compensatoria** | *número, opcional* | O valor que o MDIC apurou. O ERP não recalcula as faixas por centésimo e por grama (C270); só registra e confere o aporte. |
+| **ID_Mover_Aporte** | *referência (Mov_Mover_Aporte), opcional* | O aporte ao FNDIT que pagou a multa. |
+| **Verificado_Por** | *enumeração {mdic, auditoria_credenciada}, opcional* | Quem verificou o atendimento: o MDIC diretamente ou entidade credenciada contratada pela empresa (art. 2º, § 4º; art. 11). |
+| **ID_Documento_Verificacao** | *referência (Cad_Documento), opcional* | O relatório do MDIC ou da auditoria. |
+| **Observacao** | *texto, opcional* | Anotação livre. |
+
+Mov_Mover_Importacao_Sem_Ato
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A importação de veículo por quem não tem ato de registro de compromissos: a multa compensatória de 20% sobre o valor aduaneiro mais os tributos da nacionalização mais a margem de 20%, recolhida como aporte ao FNDIT, e a informação ao importador autorizado da marca (Decreto 12.435, art. 7º). O comprovante é condição para nacionalizar o veículo.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Importacao_Sem_Ato** | *identificador* | Chave. |
+| **ID_Duimp** | *referência (Mov_Duimp)* | A declaração de importação do veículo. |
+| **ID_Duimp_Item** | *referência (Mov_Duimp_Item), opcional* | O item (veículo) da declaração, quando a declaração tem mais de um. |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa importadora. |
+| **Valor_Aduaneiro** | *número* | O valor aduaneiro do veículo, em reais. |
+| **Valor_Tributos_Nacionalizacao** | *número* | Os tributos incidentes na nacionalização (II, IPI, PIS, Cofins, IS e demais). A leitura de quais entram é minha (C271). |
+| **Percentual_Margem_Comercializacao** | *número* | 20, do parâmetro `importacao_sem_ato_margem` (art. 7º, I e § 3º). |
+| **Base_Multa** | *número* | Calculada: (`Valor_Aduaneiro` + `Valor_Tributos_Nacionalizacao`) × (1 + margem). Leitura minha do § 3º (C271). |
+| **Percentual_Multa** | *número* | 20, do parâmetro `importacao_sem_ato_multa`. |
+| **Valor_Multa** | *número* | Calculada: `Base_Multa` × `Percentual_Multa`. |
+| **ID_Mover_Aporte** | *referência (Mov_Mover_Aporte), opcional* | O aporte ao FNDIT que pagou a multa (art. 7º, § 1º). |
+| **Data_Informacao_Importador_Autorizado** | *data, opcional* | A data em que a empresa informou a entrada do veículo ao importador autorizado da marca. Deve ser anterior à homologação do veículo (art. 7º, II e § 4º). |
+| **ID_Participante_Importador_Autorizado** | *referência (Cad_Participante), opcional* | O importador autorizado da marca, quando há. |
+| **Situacao** | *enumeração {a_pagar, paga, ato_vigente_na_data}* | `ato_vigente_na_data`: havia ato vigente e a multa não se aplica. |
+
+53.3. Programa Mover, grupo 2: habilitação, projeto, dispêndio e crédito financeiro (documento 206, seção 5.3)
+
+Cad_Mover_Habilitacao
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A habilitação da empresa ao regime de incentivos à pesquisa, ao desenvolvimento e à produção tecnológica do Programa Mover (Lei 14.902, arts. 12 a 14), concedida por ato do Secretário do MDIC, com comprovação anual. Especializa `Cad_Habilitacao_Regime_Especial` (tipo `mover`), como `Cad_Habilitacao_Automotiva` o faz para o regime automotivo. Com `Programa` = `rota_2030`, guarda a habilitação antiga (Decreto 9.557, art. 13), que cessou em 30/11/2023 e só mantém os direitos adquiridos.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Habilitacao** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Mover_Habilitacao_Versao). ID_Mover_Habilitacao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial) --- identidade* | A habilitação de tipo `mover` (valor novo em `tipo_regime_especial_federal`). O titular é a pessoa jurídica habilitada; o número do ato e a situação ficam lá. |
+| **Programa** | *enumeração {mover, rota_2030}* | `rota_2030` só para a habilitação antiga, que mantém os direitos adquiridos (Decreto 9.557, art. 14, § 4º). |
+| **Modalidade_Habilitacao** | *enumeração {producao_automotiva, projeto_desenvolvimento_producao, servicos_pd_engenharia}* | As três do art. 13: (I) produção de produtos automotivos, sistemas e soluções estratégicas; (II) projeto de desenvolvimento e produção tecnológica aprovado; (III) serviços de pesquisa, desenvolvimento, inovação ou engenharia. No Rota 2030 as modalidades eram outras (Decreto 9.557, art. 13). |
+| **Segmento_Empresa** | *enumeração {automoveis_comerciais_leves, caminhoes_onibus, autopecas_sistemas}* | Decide o dispêndio mínimo: 0,6%, 0,3% ou 0,3% da receita bruta (art. 16, § 4º). Uma empresa com mais de um segmento tem uma habilitação por segmento (C272). |
+| **ID_Filial** | *referência (Cad_Filial), opcional* | O estabelecimento da fábrica, planta ou linha: a habilitação do projeto é específica para cada uma (art. 13, § 4º, III). |
+| **Descricao_Planta_Linha** | *texto, opcional* | A fábrica, a planta industrial ou a linha de produção que o projeto instala. |
+| **Tipo_Projeto_Especial** | *enumeração {nova_producao, relocalizacao_unidade, reciclagem_economia_circular, infraestrutura_gnl_baixo_carbono}, opcional* | Os projetos do art. 13, § 4º, I: relocalização de unidade, linha ou célula; unidade de reciclagem ou economia circular; infraestrutura de postos de GNL e fontes de baixa emissão. |
+| **Data_Ato_Habilitacao** | *data* | A data do ato do Secretário. |
+| **Prorrogada** | *booleano* | A habilitação do projeto só pode ser prorrogada uma vez, se o cronograma foi cumprido (art. 13, § 4º, III). |
+| **Data_Fim_Prorrogacao** | *data, opcional* | O novo fim da habilitação, quando prorrogada. |
+| **ID_Dimensao_Valor_Centro_Custo_Pd** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | O centro de custo de pesquisa e desenvolvimento que a lei exige (art. 13, § 1º, II). |
+| **Marca_Propria_Tecnologia_Global** | *booleano* | A empresa faz no País o desenvolvimento e a gestão global de tecnologia e de marca própria de veículo ou autopeça: o limite do art. 18, § 4º sobe de 13% para 16% (art. 18, § 5º). |
+| **Data_Ultima_Comprovacao_Anual** | *data, opcional* | A última comprovação anual do atendimento aos compromissos (art. 13, § 2º, I). |
+| **Fundamento_Legal** | *texto, opcional* | Lei 14.902, arts. 12 a 14 e 18; Decreto 9.557, arts. 13 a 18, no Rota 2030. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Mover_Projeto
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O projeto com autorização prévia do MDIC que sustenta os créditos financeiros: de pesquisa e desenvolvimento (art. 16), de investimento em ativos fixos e P&D (art. 19) e de importação de equipamento ou de exportação (art. 20). Sem a autorização prévia e o cronograma, o crédito não se forma (art. 15, § 1º).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Projeto** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação do projeto. |
+| **Codigo_Projeto_Mdic** | *código (até 40)* | O código ou número do projeto no MDIC. |
+| **Nome_Projeto** | *texto* | O nome do projeto. |
+| **Tipo_Beneficio** | *enumeração {pesquisa_desenvolvimento_art16, investimento_producao_art19, importacao_equipamento_art20, exportacao_art20}* | Qual crédito o projeto sustenta. |
+| **Categoria_Investimento** | *enumeração {veiculos_automotores, autopecas_sistemas_estrategicos}, opcional* | Decide o percentual do art. 19: 12,5% dos investimentos em veículos; 25% em autopeças ou sistemas e soluções estratégicas. |
+| **Numero_Autorizacao_Previa** | *código (até 40)* | O número da autorização prévia do projeto (art. 15, § 1º, II; art. 19, § 1º, II, a). |
+| **Data_Autorizacao_Previa** | *data* | A data da autorização. |
+| **Data_Inicio_Execucao** | *data, opcional* | O início da execução. |
+| **Data_Fim_Prevista** | *data, opcional* | O fim previsto no cronograma. |
+| **Valor_Investimento_Ativo_Fixo_Previsto** | *número, opcional* | O investimento em ativos fixos previsto no projeto. |
+| **Valor_Dispendio_Pd_Previsto** | *número, opcional* | O dispêndio em pesquisa e desenvolvimento previsto, inclusive engenharia automotiva. |
+| **Situacao_Projeto** | *enumeração {proposto, autorizado, em_execucao, concluido, cancelado}* | Só `autorizado` e `em_execucao` formam crédito. |
+| **ID_Documento_Projeto** | *referência (Cad_Documento), opcional* | O projeto e a autorização. |
+
+Mov_Mover_Projeto_Cronograma
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O cronograma físico-financeiro e de produção do projeto (art. 15, § 1º, III; art. 19, § 1º, II, b): o previsto e o realizado por competência. O descumprimento do cronograma é motivo de aviso e de possível suspensão ou cancelamento.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Projeto_Cronograma** | *identificador* | Chave. |
+| **ID_Mover_Projeto** | *referência (Cad_Mover_Projeto)* | O projeto. |
+| **Competencia** | *competência* | O mês da etapa. |
+| **Etapa** | *texto, opcional* | A etapa física do cronograma. |
+| **Valor_Previsto** | *número* | O valor físico-financeiro previsto. |
+| **Valor_Realizado** | *número, opcional* | O valor realizado. |
+| **Producao_Prevista_Unidades** | *número, opcional* | A produção prevista, em unidades. |
+| **Producao_Realizada_Unidades** | *número, opcional* | A produção realizada. |
+| **Situacao_Etapa** | *enumeração {no_prazo, atrasada, concluida}* | O Motor avisa a etapa atrasada. |
+
+Mov_Mover_Credito_Autorizacao_Ano
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O valor de crédito financeiro que o MDIC autoriza ao projeto em cada ano-calendário, dentro do teto global da lei (R$ 3,5 bilhões em 2024 a R$ 4,1 bilhões em 2028, art. 15, § 2º); a autorização pode alcançar anos seguintes, nos projetos plurianuais (§ 3º).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Credito_Autorizacao_Ano** | *identificador* | Chave. |
+| **ID_Mover_Projeto** | *referência (Cad_Mover_Projeto)* | O projeto. |
+| **Ano_Calendario** | *número* | O ano da autorização. Único por projeto. |
+| **Valor_Autorizado** | *número* | O crédito autorizado no ano. |
+| **Valor_Utilizado** | *número, calculado* | Soma de `Mov_Mover_Credito_Apuracao.Credito_Calculado` do projeto no ano. |
+| **Saldo_Autorizado** | *número, calculado* | `Valor_Autorizado` menos `Valor_Utilizado`. O Motor avisa quando o crédito apurado passa do saldo. |
+| **Data_Autorizacao** | *data, opcional* | A data do ato de autorização. |
+| **Numero_Ato_Autorizacao** | *código (até 40), opcional* | O número do ato. |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O ato de autorização. |
+
+Mov_Mover_Dispendio
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): Cada dispêndio de pesquisa e desenvolvimento, de engenharia ou de investimento em ativo fixo que a empresa lança no Mover: o valor, a atividade, a forma de execução, a prova e a elegibilidade. É a base do dispêndio mínimo e do crédito financeiro.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Dispendio** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação. |
+| **ID_Mover_Projeto** | *referência (Cad_Mover_Projeto), opcional* | O projeto, quando o dispêndio é de projeto autorizado. |
+| **Data_Dispendio** | *data* | A data do dispêndio. |
+| **Competencia** | *competência* | O mês em que o dispêndio entra na apuração. |
+| **Valor_Dispendio** | *número* | O valor do dispêndio, em reais. |
+| **ID_Filial** | *referência (Cad_Filial)* | O estabelecimento que realizou o dispêndio. A lei exige que seja realizado no País. |
+| **ID_Dimensao_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | O centro de custo de pesquisa e desenvolvimento. |
+| **ID_Lancamento** | *referência (Mov_Lancamento), opcional* | O lançamento contábil do dispêndio. |
+| **ID_Tipo_Atividade** | *referência (Cad_Classe_Sistema, domínio = tipo_atividade_pd_mover)* | Pesquisa básica dirigida, pesquisa aplicada, desenvolvimento experimental, projeto estruturante, engenharia automotiva e ativo fixo de produção. Domínio aberto; a carga de partida usa as definições do Decreto 9.557, arts. 22 e 23 (C273). |
+| **Forma_Execucao** | *enumeração {direta, fornecedor_contratado, universidade_ict_empresa_especializada, aporte_programa_prioritario, aporte_fndit}* | Como o dispêndio foi feito (Decreto 9.557, art. 15, § 1º, II; Lei 14.902, art. 14, § 1º). |
+| **ID_Participante_Executor** | *referência (Cad_Participante), opcional* | O fornecedor, a universidade, a ICT ou a instituição do programa prioritário. |
+| **ID_Documento_Comprovacao** | *referência (Cad_Documento), opcional* | Nota, contrato ou comprovante. |
+| **Situacao_Elegibilidade** | *enumeração {informado, submetido, aprovado, glosado}* | O MDIC ou a auditoria aprova ou glosa. A glosa pode ser complementada por aporte ao FNDIT (art. 14, § 3º). |
+| **Valor_Glosado** | *número, opcional* | A parte glosada. |
+| **Motivo_Glosa** | *texto, opcional* | O motivo da glosa. |
+
+Mov_Mover_Dispendio_Minimo_Ano
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O dispêndio mínimo do ano: o percentual da receita bruta, o realizado, o resíduo que passa ao ano seguinte, o excesso dos dois anos anteriores e o complemento por aporte (Lei 14.902, art. 16, § 3º; art. 14, § 3º). Só o que passa do mínimo gera crédito financeiro (art. 16, § 4º).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Dispendio_Minimo_Ano** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação. |
+| **Ano_Calendario** | *número* | O ano. Único por habilitação. |
+| **Receita_Bruta_Base** | *número* | A receita bruta total de venda de bens e serviços do ano, sem os impostos e contribuições sobre a venda. Vem de `Mov_Apuracao_Tributo_Item`. |
+| **Percentual_Minimo** | *número* | 0,6, 0,3 ou 0,3, do parâmetro do `Segmento_Empresa`. |
+| **Dispendio_Minimo_Exigido** | *número, calculado* | `Receita_Bruta_Base` × `Percentual_Minimo` mais o resíduo do ano anterior. |
+| **Dispendio_Realizado** | *número, calculado* | Soma dos dispêndios aprovados do ano (`Mov_Mover_Dispendio`). |
+| **Residuo_Ano_Anterior** | *número, opcional* | O que faltou no ano anterior e se soma ao mínimo deste (art. 16, § 3º, I). |
+| **Excesso_Anos_Anteriores_Usado** | *número, opcional* | O excesso dos dois anos anteriores usado para cumprir o mínimo (art. 16, § 3º, II). |
+| **Complemento_Aporte_Fndit** | *número, opcional* | O complemento do mínimo por aporte ao FNDIT (art. 14, § 3º). |
+| **Situacao** | *enumeração {a_apurar, cumprido, residual_transferido, descumprido}* | O Motor avisa o `descumprido` e o `residual_transferido`. |
+
+Mov_Mover_Credito_Apuracao
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A apuração mensal do crédito financeiro do Mover, por habilitação e por tipo de crédito: a base de dispêndios, o saldo não utilizado, o limite sobre a receita bruta do segundo mês anterior, o percentual e o crédito calculado. O crédito é crédito de CSLL (art. 17) e nasce em `Mov_Credito_Fiscal` com origem `credito_financeiro_mover`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Credito_Apuracao** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação. |
+| **ID_Mover_Projeto** | *referência (Cad_Mover_Projeto), opcional* | O projeto autorizado, quando o crédito é de projeto. |
+| **Competencia** | *competência* | O mês de apuração. |
+| **Tipo_Credito** | *enumeração {pd_art16, investimento_art19, importacao_equipamento_art20_i, exportacao_art20_ii}* | O crédito apurado. Os indicadores do art. 18 acrescem o `pd_art16` e ficam em `Mov_Mover_Credito_Indicador`. |
+| **Base_Dispendios_Elegiveis** | *número* | Os dispêndios aprovados do mês acima do mínimo (art. 16, § 4º) ou o investimento do art. 19. |
+| **Saldo_Dispendio_Nao_Utilizado_Anterior** | *número* | O dispêndio que ficou sem uso por causa do limite e pode ser usado nos meses seguintes (art. 16, § 1º). |
+| **Receita_Bruta_Segundo_Mes_Anterior** | *número* | A receita bruta total de venda de bens e serviços do segundo mês-calendário anterior, sem impostos (art. 16, II). No limite do art. 18, § 4º, é só a receita dos produtos do inciso III. |
+| **Percentual_Credito** | *número* | 50% sobre o dispêndio (art. 16, I) mais os pontos dos indicadores; 12,5% ou 25% no art. 19. |
+| **Limite_Percentual_Receita** | *número* | 5%, ou 7%, 13% ou 16% com os indicadores (arts. 16, II, e 18, §§ 2º, 4º e 5º). |
+| **Limite_Valor** | *número, calculado* | `Receita_Bruta_Segundo_Mes_Anterior` × `Limite_Percentual_Receita`. |
+| **Credito_Calculado** | *número, calculado* | O menor entre `Percentual_Credito` × (`Base_Dispendios_Elegiveis` + `Saldo_Dispendio_Nao_Utilizado_Anterior`) e `Limite_Valor`. A leitura da soma de indicadores é minha (C274). |
+| **Limitado_Por** | *enumeração {dispendio, limite_receita, autorizacao_anual, nenhum}* | O que travou o crédito do mês. O `autorizacao_anual` vem do saldo de `Mov_Mover_Credito_Autorizacao_Ano`. |
+| **Saldo_Dispendio_Nao_Utilizado_Final** | *número, calculado* | O dispêndio que sobra por causa do limite e passa ao mês seguinte. |
+| **Ajuste_Periodo_Cumulativo** | *número, opcional* | O ajuste do cálculo em períodos cumulativos, abatidos os créditos já pedidos para ressarcimento ou compensação (art. 16, § 2º). |
+| **ID_Credito_Fiscal** | *referência (Mov_Credito_Fiscal), opcional* | O crédito financeiro gerado. Origem `credito_financeiro_mover`. |
+| **Situacao_Apuracao** | *enumeração {calculada, conferida, autorizada_mdic, cancelada}* | `autorizada_mdic` quando o MDIC reconheceu o valor. |
+
+Mov_Mover_Credito_Indicador
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): Os pontos percentuais que cada indicador do art. 18 acrescenta ao crédito de pesquisa e desenvolvimento: atividade fabril e de engenharia no País, diversificação de mercados, produção de tecnologias de propulsão avançada, veículos e sistemas eletrônicos embarcados, volume de investimentos. O ERP guarda os pontos que o ato do MDIC fixa e confere os tetos da lei.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Credito_Indicador** | *identificador* | Chave. |
+| **ID_Mover_Credito_Apuracao** | *referência (Mov_Mover_Credito_Apuracao)* | A apuração acrescida. |
+| **Indicador** | *enumeração {atividade_fabril_engenharia, diversificacao_mercados, propulsao_avancada, veiculo_propulsao_avancada_ou_recarga, sistemas_eletronicos_autonomos, volume_investimento}* | Os indicadores do art. 18, I, II, III (a, b, c) e § 8º. |
+| **Pontos_Percentuais** | *número* | Os pontos que o indicador soma. Tetos: 20 pontos para os dois primeiros somados (§ 1º); 250 para o inciso III (§ 3º); 20 para o volume de investimento (§ 8º). |
+| **Peso_Metodologia** | *número, opcional* | O peso da metodologia do MDIC que pondera os pontos (§ 1º). |
+| **Nivel_Mrl** | *número, opcional* | O nível de maturidade da manufatura (escala MRL) que pondera o inciso III (§§ 3º e 7º). |
+| **ID_Documento_Metodologia** | *referência (Cad_Documento), opcional* | O ato ou a planilha de metodologia do MDIC. |
+
+Mov_Mover_Aporte
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): Todo aporte ao FNDIT ou a conta de programa prioritário: o dispêndio feito sob a forma de aporte, o complemento de glosa, a contrapartida de 2% das autopeças e as multas pagas por aporte. Gera título a pagar em `Mov_Titulo`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Aporte** | *identificador* | Chave. |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa que paga. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao), opcional* | A habilitação do Mover, quando o aporte é dela. |
+| **ID_Habilitacao_Autopecas** | *referência (Cad_Habilitacao_Regime_Especial), opcional* | A habilitação do regime de autopeças, quando é o caso. |
+| **ID_Autopecas_Contrapartida** | *referência (Mov_Autopecas_Contrapartida), opcional* | A contrapartida de 2% que o aporte paga. |
+| **Origem_Aporte** | *enumeração {dispendio_pd_fndit, complemento_glosa, autopecas_contrapartida, multa_importacao_sem_ato, multa_eficiencia_energetica, multa_desempenho_estrutural, multa_autopecas}* | Lei 14.902, arts. 14, §§ 1º e 3º, 27 e 28; Decreto 12.435, arts. 5º a 7º. |
+| **Destino** | *enumeração {fndit, conta_programa_prioritario}* | Se o FNDIT não funciona, o aporte vai a conta específica da instituição coordenadora (Lei 14.902, art. 29, § 6º). |
+| **Competencia_Referencia** | *competência, opcional* | O mês a que o aporte se refere (por exemplo, o do desembaraço, nas autopeças). |
+| **Data_Aporte** | *data, opcional* | A data do pagamento. |
+| **Valor_Aporte** | *número* | O valor aportado. |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a pagar do aporte (valor novo `aporte_mover` em `Origem_Tipo`). |
+| **ID_Documento_Comprovante** | *referência (Cad_Documento), opcional* | O comprovante do aporte. |
+| **Situacao_Aporte** | *enumeração {previsto, realizado, comprovado, glosado}* | `comprovado` quando o MDIC ou a auditoria aceitou. |
+
+Mov_Mover_Habilitacao_Ocorrencia
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A prorrogação, a suspensão, o cancelamento e o restabelecimento da habilitação, com a consequência de cada um: o cancelamento retroage ao início do ano-calendário do fato e obriga a recolher os créditos ressarcidos ou compensados, ou a estorná-los, até o último dia útil do mês seguinte (Lei 14.902, arts. 23 a 25).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Habilitacao_Ocorrencia** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação. O cancelamento de uma não afeta as outras da mesma empresa (art. 24, § 1º). |
+| **Tipo_Ocorrencia** | *enumeração {prorrogacao, suspensao, cancelamento, restabelecimento}* | O que aconteceu. |
+| **Motivo_Legal** | *enumeração {descumprimento_requisitos_art14, nao_realizacao_projeto, condicao_art13_1_iii, obrigacao_acessoria_3_meses, outro}, opcional* | Os motivos dos arts. 24 e 25. |
+| **Data_Ocorrencia** | *data* | A data do ato. |
+| **Retroage_Desde** | *data, opcional* | O início do ano-calendário em que ocorreu o fato que causou o cancelamento (art. 24, § 2º). |
+| **Valor_A_Recolher** | *número, opcional* | O valor dos créditos ressarcidos ou compensados que se recolhe, ou dos créditos formados que se estornam (art. 24, II). Cálculo do ERP: soma de `Mov_Mover_Credito_Apuracao.Credito_Calculado` desde `Retroage_Desde`. |
+| **Prazo_Recolhimento** | *data, opcional* | O último dia útil do mês seguinte ao cancelamento. |
+| **Tratamento_Credito** | *enumeração {nao_se_aplica, recolher, estornar}* | Recolher o que já foi ressarcido ou compensado; estornar o que ainda é saldo. |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título do recolhimento (valor novo `recolhimento_mover` em `Origem_Tipo`). |
+| **ID_Documento_Ato** | *referência (Cad_Documento), opcional* | O ato do MDIC. |
+| **Situacao_Recolhimento** | *enumeração {nao_se_aplica, a_recolher, recolhido, estornado}* | O Motor avisa o prazo. |
+
+53.4. Programa Mover, grupo 3: regime de autopeças não produzidas (documento 206, seção 5.4)
+
+Mov_Autopecas_Importacao_Item
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): O item importado no regime de autopeças não produzidas (isenção do Imposto de Importação das partes, peças, componentes, conjuntos, subconjuntos e pneumáticos sem produção nacional equivalente: Lei 14.902, art. 26; Decreto 9.557, art. 34). Liga o item do Duimp à habilitação, à contrapartida de 2% e ao prazo de três anos para aplicar o bem na industrialização.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Autopecas_Importacao_Item** | *identificador* | Chave. |
+| **ID_Duimp_Item** | *referência (Mov_Duimp_Item)* | O item da declaração de importação. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial)* | A habilitação de tipo `autopecas_nao_produzidas` (valor novo em `tipo_regime_especial_federal`). |
+| **Modalidade_Importacao** | *enumeração {direta, por_encomenda, por_conta_e_ordem}* | A importação pode ser direta, por encomenda ou por conta e ordem, com o mesmo tratamento tributário (Lei 14.902, art. 26, § 6º). |
+| **ID_Participante_Encomendante_Adquirente** | *referência (Cad_Participante), opcional* | Na encomenda e na conta e ordem, a empresa habilitada que encomenda ou adquire, sobre quem recai a contrapartida (art. 26, § 7º). |
+| **Valor_Aduaneiro** | *número* | O valor aduaneiro do item, base da contrapartida de 2%. |
+| **Valor_Ii_Isentado** | *número* | O Imposto de Importação que seria devido sem a isenção (`Mov_Duimp_Item_Tributo`). |
+| **Data_Fato_Gerador_Ii** | *data* | A data de desembaraço (fato gerador do II). |
+| **Data_Limite_Industrializacao** | *data, calculada* | `Data_Fato_Gerador_Ii` mais 3 anos (Decreto 9.557, art. 37). |
+| **Quantidade_Importada** | *número* | A quantidade do item. |
+| **Quantidade_Aplicada** | *número, opcional* | A quantidade já aplicada na industrialização de produtos automotivos. |
+| **Percentual_Perda_Inevitavel** | *número, opcional* | A perda inevitável do processo, declarada na EFD e tolerada (Decreto 9.557, art. 37, § 2º). |
+| **ID_Autopecas_Contrapartida** | *referência (Mov_Autopecas_Contrapartida), opcional* | A contrapartida do mês do desembaraço. |
+| **Situacao_Aplicacao** | *enumeração {a_aplicar, aplicada, vencida_sem_aplicacao}* | `vencida_sem_aplicacao`: o II isentado passa a ser devido com juros e multa de mora desde o fato gerador (Decreto 9.557, art. 37, § 1º). |
+
+Mov_Autopecas_Contrapartida
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A contrapartida de 2% do valor aduaneiro em pesquisa, desenvolvimento e inovação e programas prioritários, por habilitação e mês de desembaraço, com o prazo (último dia útil do segundo mês seguinte), a multa sancionatória e a multa de mora (Lei 14.902, arts. 27 e 28; Decreto 9.557, art. 36, § 3º).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Autopecas_Contrapartida** | *identificador* | Chave. |
+| **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial)* | A habilitação. |
+| **Competencia_Desembaraco** | *competência* | O mês dos desembaraços cobertos. Único por habilitação. |
+| **Valor_Aduaneiro_Total** | *número, calculado* | Soma de `Mov_Autopecas_Importacao_Item.Valor_Aduaneiro` do mês. |
+| **Percentual_Contrapartida** | *número* | 2, do parâmetro `autopecas_contrapartida`. |
+| **Valor_Obrigacao** | *número, calculado* | `Valor_Aduaneiro_Total` × `Percentual_Contrapartida`. |
+| **Data_Limite_Aporte** | *data, calculada* | O último dia útil do segundo mês-calendário posterior ao mês do desembaraço (Decreto 9.557, art. 36, § 3º). |
+| **Valor_Aportado** | *número, calculado* | Soma dos `Mov_Mover_Aporte` ligados à contrapartida. |
+| **Diferenca_A_Menor** | *número, calculado* | `Valor_Obrigacao` menos `Valor_Aportado`, quando positivo. |
+| **Percentual_Multa_Sancionatoria** | *número* | 30, do parâmetro `autopecas_multa_sancionatoria`. O Decreto 9.557, art. 38, § 3º, diz 100%; a lei posterior fixou 30% (C275). |
+| **Valor_Multa_Sancionatoria** | *número, calculado* | `Diferenca_A_Menor` × `Percentual_Multa_Sancionatoria`. |
+| **Data_Termo_Inicio_Fiscalizacao** | *data, opcional* | O recebimento do termo de início de fiscalização: nos 20 dias seguintes a multa cai pela metade se o devido é pago (art. 28, § 3º). |
+| **Multa_Mora_Calculada** | *número, opcional* | 0,33% por dia de atraso, limitada a 20%, desde o primeiro dia útil depois do prazo (art. 28, §§ 5º e 6º). |
+| **Situacao** | *enumeração {a_aportar, cumprida, aporte_a_menor, pago_espontaneamente, em_fiscalizacao}* | O Motor avisa o prazo e o aporte a menor. |
+
+53.5. Programa Mover, grupo 4: obrigações acessórias e legado do Rota 2030 (documento 206, seção 5.5)
+
+Mov_Mover_Obrigacao_Acessoria
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): As obrigações de prestar informação ao MDIC que a lei e o decreto criam: relatório de acompanhamento do ato, comprovação anual da habilitação e dos dispêndios, inventário e pegada de carbono, comprovação do aporte das autopeças. A obrigação descumprida por mais de três meses seguidos pode suspender a habilitação (Lei 14.902, art. 25, II; Decreto 9.557, art. 27, II).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Obrigacao_Acessoria** | *identificador* | Chave. |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa obrigada. |
+| **ID_Mover_Ato_Registro** | *referência (Cad_Mover_Ato_Registro), opcional* | O ato de registro, nas obrigações dele. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao), opcional* | A habilitação do Mover. |
+| **ID_Habilitacao_Autopecas** | *referência (Cad_Habilitacao_Regime_Especial), opcional* | A habilitação das autopeças. |
+| **Tipo_Obrigacao** | *enumeração {relatorio_acompanhamento_requisitos, comprovacao_anual_habilitacao, comprovacao_dispendios_pd, comprovacao_aporte_autopecas, inventario_carbono, pegada_carbono, informacao_importador_autorizado, registro_mensal_beneficio_rota_2030}* | Decreto 12.435, arts. 2º, §§ 2º, V, e 3º, e 7º, II; Lei 14.902, arts. 13, § 2º, 14, § 4º, e 28; Decreto 9.557, art. 30, § 1º. |
+| **Competencia_Referencia** | *competência, opcional* | O mês ou o ano a que a obrigação se refere. |
+| **Data_Limite** | *data, opcional* | O prazo. O ato do MDIC fixa os prazos e modelos; sem o ato, o campo fica vazio e o Motor não avisa vencimento. |
+| **Data_Entrega** | *data, opcional* | Quando foi entregue. |
+| **Numero_Protocolo** | *código (até 40), opcional* | O protocolo do MDIC ou do Siscomex. |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O relatório entregue. |
+| **Situacao** | *enumeração {a_entregar, entregue, em_atraso}* | `em_atraso` quando passou a `Data_Limite` sem entrega. |
+| **Meses_Consecutivos_Atraso** | *número, calculado* | Contagem para o aviso de suspensão: mais de três meses seguidos (Lei 14.902, art. 25, II). |
+
+Mov_Rota_2030_Deducao
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): A dedução do IRPJ e da CSLL devidos da empresa habilitada ao Rota 2030: 30% dos dispêndios de pesquisa e desenvolvimento, mais até 15% sobre os estratégicos (limite de 45%), com o excedente levado aos períodos seguintes (Decreto 9.557, art. 19). A habilitação cessou em 30/11/2023; o legado fica para o excedente e os direitos adquiridos (C276).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Rota_2030_Deducao** | *identificador* | Chave. |
+| **ID_Mover_Habilitacao** | *referência (Cad_Mover_Habilitacao)* | A habilitação com `Programa` = `rota_2030`. |
+| **ID_Apuracao_Irpj** | *referência (Mov_Apuracao_Irpj_Csll)* | A apuração do IRPJ e da CSLL em que a dedução entra. |
+| **ID_Imposto** | *referência (Cad_Imposto, Fase 0)* | IRPJ ou CSLL. |
+| **Dispendio_Base_Deducao** | *número* | Os dispêndios do período, no País, classificáveis como despesa operacional, até o limite da base. |
+| **Dispendio_Estrategico** | *número, opcional* | Os dispêndios estratégicos do art. 24. |
+| **Deducao_Basica_Calculada** | *número, calculado* | Alíquota e adicional do IRPJ (ou alíquota da CSLL) × 30% × `Dispendio_Base_Deducao`. |
+| **Deducao_Adicional_Calculada** | *número, calculado* | Alíquota × até 15% × `Dispendio_Estrategico`, limitada a 45% da base do caput. |
+| **Limite_Imposto_Devido** | *número, calculado* | O imposto devido do período: a dedução não passa dele (art. 19, § 1º). |
+| **Deducao_Utilizada** | *número, calculado* | O menor entre a dedução calculada mais o excedente anterior usado e o limite. |
+| **Excedente_Anterior_Utilizado** | *número, opcional* | O excedente de períodos anteriores, usado até 30% do tributo (art. 19, § 3º). |
+| **Excedente_A_Carregar** | *número, calculado* | O que passou do limite e segue para os períodos seguintes. |
+| **ID_Apuracao_Item** | *referência (Mov_Apuracao_Irpj_Csll_Item), opcional* | A linha da apuração cujo `Valor_Deducoes` recebe a dedução. |
+
+53.6. Programa Mover: parâmetros legais (documento 206, seção 5.1)
+
+Cad_Mover_Parametro
+
+Revisão 40 (documento 206, seção 5; D-N548: Q206-1 a Q206-12): Os parâmetros legais do Programa Mover e do regime de autopeças: percentuais, limites, prazos e tetos. Uma linha por parâmetro. Cada um tem documentação própria (regra da Q201-3; Anexo A) e a carga entra provisória.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Mover_Parametro** | *identificador* | Chave. |
+| **ID_Mover_Parametro_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Mover_Parametro_Versao). ID_Mover_Parametro é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Parametro** | *código (até 60) --- identidade* | O código do parâmetro (Anexo A). |
+| **Segmento_Empresa** | *enumeração {automoveis_comerciais_leves, caminhoes_onibus, autopecas_sistemas}, opcional --- identidade* | Vazio quando o valor vale para todos; preenchido no dispêndio mínimo por segmento. |
+| **Ano_Referencia** | *número, opcional --- identidade* | O ano, nos tetos globais anuais de crédito (2024 a 2028). |
+| **Valor_Numerico** | *número* | O valor do parâmetro. |
+| **Unidade** | *enumeração {percentual, pontos_percentuais, reais, meses, anos, dias}* | A unidade de `Valor_Numerico`. |
+| **Descricao** | *texto* | O que o parâmetro é. |
+| **Fundamento_Legal** | *texto* | O artigo da lei ou do decreto. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga entra provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+53.7. Perfil de autopeças por destinação (documento 209, seção 5.2)
+
+Cad_Autopecas_Perfil
+
+Revisão 40 (documento 209, seção 5.2; D-N548: Q209-1 a Q209-11): O perfil de uma pessoa (participante ou a própria empresa) perante a Lei 10.485, a Lei 9.826 e o Convênio ICMS 142: tipo de pessoa, se o estabelecimento é industrial, se comercializa o mesmo bem e a declaração que prova isso. Existe porque o dicionário não tem o campo que diz "este comprador é fabricante de veículos" nem "este industrial também revende a peça", e porque a mesma pessoa pode mudar de perfil no tempo. Não substitui nenhuma entidade; é lida pelo Motor.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Autopecas_Perfil** | *identificador* | Chave. |
+| **ID_Autopecas_Perfil_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Autopecas_Perfil_Versao). ID_Autopecas_Perfil é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Participante** | *referência (Cad_Participante), opcional* | O comprador ou fornecedor. Exatamente um entre este campo e `ID_Empresa` é preenchido. |
+| **ID_Empresa** | *referência (Cad_Empresa), opcional* | A própria empresa do ERP, quando ela é a vendedora ou a pagadora da retenção. |
+| **ID_Tipo_Perfil** | *referência (Cad_Classe_Sistema, domínio = tipo_perfil_autopecas)* | O tipo da pessoa (Anexo B): fabricante de veículo ou máquina do art. 1º, fabricante de autopeças, importador, atacadista, varejista, consumidor final, filial ou controlada de reposição, fabricante de pneus e câmaras. |
+| **Estabelecimento_Industrial** | *booleano* | O estabelecimento é industrial ou equiparado (condição da suspensão do IPI e da inaplicabilidade da ST). |
+| **Comercializa_Mesmo_Item** | *booleano* | O estabelecimento também vende, sem industrializar, o mesmo bem (Lei 10.485, art. 3º, § 6º; Convênio 142, cláusula nona, III). O padrão é falso e o aviso 8 lembra de conferir. |
+| **Origem_Declaracao** | *enumeração {declaracao_do_comprador, consulta_cadastral, informado_pelo_usuario}* | De onde veio a informação. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | A declaração do comprador sobre o uso das peças. O ERP guarda e não valida. |
+| **Data_Validade** | *data, opcional* | Até quando a declaração vale; depois disso, o Motor avisa. |
+| **Fundamento_Legal** | *texto, opcional* | A norma ou o documento que sustenta o perfil. |
+| **ID_Usuario_Registro** | *referência (Cad_Usuario), opcional* | Quem registrou. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Provisório até o contador ou o usuário validar. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+**Cargas de partida da revisão 40 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Is_Veiculo_Ajuste (124 linhas) | 62 do Imposto Seletivo (MP 1.399, Anexos II e III) e 62 do IPI (NC 87-13 e 87-14, até 31/12/2026); provisória até a MP 1.399 ser convertida e o contador validar (C256 a C265) |
+| Cad_NCM_Imposto_Seletivo (10 linhas) | Anexos I e V da MP 1.399: veículos (8703 e 8704), aeronaves (8802) e embarcações (8903); os veículos com modo composta_por_versao e a alíquota montada pelo Motor |
+| Cad_Classe_Sistema (domínios e valores) | 5 domínios novos (43 valores: tecnologia_propulsao_veiculo 14, categoria_veiculo_eficiencia 8, tipo_atividade_pd_mover 6, destinacao_autopeca_venda 7 e tipo_perfil_autopecas 8), 4 valores em domínios existentes do documento 206 e os valores do documento 209 (tipo_lista_legal e 4 critérios do Motor) |
+| Cad_Mover_Parametro (34 linhas) | 28 códigos de parâmetros do Mover por segmento e ano; provisória (C269 a C277) |
+| Cad_Lista_Legal_Item (80 + 2 linhas) | 80 linhas do Anexo I do Decreto 12.435 (tipo mover_requisitos_anexo_i) e 2 de pneus (NCM 4011 e 4013, tipo pneus_lei_10485); a lista de autopeças não produzidas fica sem carga (Q206-10) |
+| Cad_Obrigacao_Acessoria (4 linhas) | MDIC_MOVER, MDIC_AUTOPECAS, PERDCOMP e DUIMP |
+| Cad_Parametro_Documentacao e Cad_Parametro_Efeito_Obrigacao (28 + 28 linhas) | Documentação dos parâmetros do Mover pela regra da Q201-3 |
+| Cad_Motor_Regra (18 regras do documento 209) | R1 a R18 de PIS e Cofins, retenção, IPI, ICMS ST e CBS e IBS, provisórias; a retenção (R9) espera o código de receita (C278) |
+
+**Regras que o Motor segue (documentos 204, 206 e 209)**
+
+| **Regra** | **Texto** |
+|---|---|
+| IS do veículo (documento 204) | A alíquota nasce de Cad_NCM_Imposto_Seletivo (base e fatores) mais os cinco ajustes da ficha do veículo (propulsão, eficiência, potência, desempenho estrutural e reciclabilidade), com piso zero; a nota complementar vale só até 31/12/2027 (B1) |
+| Art. 149 da LC 214 (documento 204) | Benefício de PcD, TEA e táxi: reconhecimento, utilização e conferência da condição; o ERP registra e avisa |
+| Mover e Rota 2030 (documento 206) | O ERP registra o ato, a habilitação, o projeto, o dispêndio e o crédito financeiro; multa das autopeças de 30%; legado do Rota 2030 só para direitos adquiridos; avisa, nunca bloqueia (D-N284) |
+| Autopeças por destinação (documento 209) | A destinação (7 valores) escolhe a alíquota de PIS e Cofins da Lei 10.485 até 31/12/2026, a suspensão do IPI (Lei 9.826, art. 5º) e a inaplicabilidade da ST (Convênio 142, cláusula nona); a partir de 01/01/2027 a destinação não muda o cálculo de CBS e IBS (LC 214, art. 542, XVI) |

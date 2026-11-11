@@ -7,6 +7,8 @@
 societário e distribuição de lucros, beneficiário final, LGPD, regras de
 uso de equipamentos, certificados digitais e procurações.*
 
+*Revisão 8 --- consolidação da revisão 36 do dicionário (documentos 159 e 196, com as respostas de Alberto de 10/11/2026, e a D-N523): 2 entidades novas (anexo, seção 19); consulta tributária e uniformização da jurisprudência administrativa (documento 159).*
+
 *Revisão 7 --- consolidação da revisão 16 do dicionário (documentos 80 e 82, decisões D-N236 a D-N240 e D-N243 a D-N248, aprovadas por Alberto em 19/10/2026): 1 entidades existentes alteradas; lista de indicativos de suspensão da Reinf (13 valores, sem 06 e 07) e regra por tipo de processo (documento 82, D-N246).*
 
 *Revisão 6 --- consolidação da revisão 12 do dicionário (documento 74, decisões D-N202 a D-N214, aprovadas por Alberto em 19/10/2026): 1 entidades existentes alteradas; texto de ID_Calendario_Limite_Pagamento (Q72-2 respondida).*
@@ -2031,3 +2033,62 @@ Faixas de TJLP dentro do período do cálculo, para o "pro rata dia" do limite d
 | **Dias** | *número* | Dias da faixa. |
 | **Dias_Base_Ano** | *número* | O divisor do ano. O Mafon não diz se é 360 ou 365; confirmar na IN RFB 1.700. |
 | **Limite_Parcial** | *número* | Base vezes a taxa anual vezes Dias dividido por Dias_Base_Ano. |
+
+
+
+19\. Anexo --- Entidades novas da revisão 36 (consulta tributária e uniformização)
+
+Revisão 36 do dicionário (consolidação de 10/11/2026): 2 entidades novas neste módulo (documento 159, D-N525: Q159-3).
+
+19.1. Consulta tributária e uniformização (Q159-3; documento 159, seções 4.3 e 4.4)
+
+Mov_Processo_Consulta_Tributaria
+
+Revisão 36 (documento 159, seção 4.3; D-N524 e D-N525: Q159-2, Q159-3 e Q159-5): A consulta sobre a legislação do IBS e da CBS que a empresa formula (LC 214, arts. 323-A a 323-F, incluídos pela LC 227), 1:1 com o `Cad_Processo` (Tipo_Processo = administrativo, área tributária). O processo guarda número, partes, andamento e prazos; esta extensão guarda o que é próprio da consulta e que decide os efeitos do art. 323-C (nenhum procedimento fiscal sobre a espécie consultada e pagamento sem penalidade em 15 dias) e do art. 323-D (consulta que não produz efeito). A consulta não suspende o prazo de recolhimento (art. 323-D); por isso a estrutura não tem campo de suspensão.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Consulta** | *identificador* | --- |
+| **ID_Processo** | *referência (Cad_Processo)* | 1:1. O processo administrativo a que a consulta pertence (relação 1:1). |
+| **Tributos_Consultados** | *enumeração {cbs, ibs, ibs_e_cbs}* | O art. 323-B prevê a resposta conjunta da RFB e do CGIBS quando há matéria comum. |
+| **Orgao_Competente** | *enumeração {rfb, cgibs, conjunto}* | Quem emite a solução (art. 323-B). |
+| **Materia_De_Direito** | *texto* | A matéria de direito objeto da dúvida (art. 323-A, § 1º, II). Cada consulta trata de uma só matéria, salvo questões conexas (§ 2º). |
+| **Descricao_Do_Fato** | *texto* | O fato determinado, completa e exatamente descrito (art. 323-A, caput). A descrição incompleta tira o efeito da consulta (art. 323-D, II). |
+| **Data_Fato_Gerador** | *data, opcional* | Se o fato gerador já ocorreu (art. 323-A, § 1º, III). |
+| **Declarou_Procedimento_Fiscal** | *booleano* | A declaração de existência ou não de procedimento fiscal contra o consulente (art. 323-A, § 1º, IV). Consulta feita depois de iniciado o procedimento não produz efeito (art. 323-D, VI). |
+| **Data_Protocolo** | *data* | A data do protocolo. Os efeitos do art. 323-C exigem protocolo até o vencimento da obrigação a que a consulta se refere. |
+| **Data_Vencimento_Obrigacao** | *data, opcional* | O vencimento da obrigação a que a consulta se refere; com a data do protocolo, o ERP avisa se os efeitos do art. 323-C estão em risco. Aviso, não bloqueio. |
+| **Situacao** | *enumeração {protocolada, em_harmonizacao, respondida, ineficaz, revogada}* | em_harmonizacao: a minuta foi ao Comitê de Harmonização e a consulta fica suspensa até a resolução (art. 323-B, § 2º). ineficaz: o motivo vai no campo abaixo. A solução é definitiva e não admite recurso (art. 323-F). |
+| **Data_Ciencia_Resposta** | *data, opcional* | A ciência da solução. Dela contam os 15 dias de pagamento sem penalidade (art. 323-C, parágrafo único, I; prazo em Cad_Parametro_Legal_Ibs_Cbs). |
+| **Aceitacao_Tacita** | *booleano, opcional* | Verdadeiro quando a solução saiu em conjunto por aceitação tácita de um dos órgãos, passados 30 dias sem manifestação (art. 323-B, § 3º). |
+| **ID_Motivo_Ineficacia** | *referência (Cad_Classe_Sistema, domínio = motivo_ineficacia_consulta), opcional* | Só quando Situacao = ineficaz: dados inexatos, fato não descrito exata e completamente, protelatória, exigência formal não suprida, inconstitucionalidade ou negativa de aplicação, formulada após o início de procedimento fiscal (art. 323-D, parágrafo único, I a VI). Domínio novo, seis valores. |
+| **Data_Pagamento_Conforme_Resposta** | *data, opcional* | Quando o tributo devido segundo a resposta foi pago. O ERP compara com o prazo de 15 dias e avisa; a perda da isenção de penalidade é conclusão do contador. |
+| **Observacao** | *texto, opcional* | --- |
+
+Mov_Processo_Uniformizacao
+
+Revisão 36 (documento 159, seção 4.4; D-N524 e D-N525: Q159-2, Q159-3 e Q159-5): O recurso especial e os incidentes de uniformização da jurisprudência administrativa comum ao IBS e à CBS (LC 214, arts. 323-G a 323-M, incluídos pela LC 227), ligados ao `Cad_Processo` em que a decisão foi proferida. A Câmara Nacional de Integração do Contencioso, o CGIBS e o Carf são órgãos públicos e ficam fora (D-N68); a empresa registra só o que ela, ou a Fazenda contra ela, propõe. O efeito sobre a exigibilidade é regra de Tipo, e não campo: o recurso especial suspende a exigibilidade (art. 323-G, § 4º); o incidente de matéria repetitiva não suspende (art. 323-J, parágrafo único); o incidente contra a decisão que deixou de aplicar provimento vinculante suspende (art. 323-L, parágrafo único).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Uniformizacao** | *identificador* | --- |
+| **ID_Processo** | *referência (Cad_Processo)* | O processo cuja decisão se ataca ou cujo julgamento gera o incidente. |
+| **Tipo** | *enumeração {recurso_especial, incidente_materia_repetitiva, incidente_provimento_vinculante}* | Decide o efeito sobre a exigibilidade do crédito (descrição da entidade). O ERP avisa que a exigibilidade está suspensa; a suspensão é regra do Tipo e não se grava em Mov_Processo_Suspensao (Q159-E1). |
+| **Quem_Propos** | *enumeração {fazenda_publica, sujeito_passivo, presidente_de_orgao}* | Arts. 323-G, § 3º, 323-J e 323-L. O sujeito passivo só propõe o recurso especial e o incidente contra a decisão que deixou de aplicar provimento vinculante. |
+| **Data_Interposicao** | *data* | --- |
+| **Data_Ciencia_Decisao_Recorrida** | *data, opcional* | Do recurso especial: o prazo é de 10 dias úteis (art. 323-G; Cad_Parametro_Legal_Ibs_Cbs). O ERP avisa o prazo; não bloqueia. |
+| **Numero_Decisao_Paradigma** | *texto, opcional* | A decisão paradigma, cuja ementa a petição deve transcrever (art. 323-G, § 2º). |
+| **Situacao** | *enumeração {interposto, admitido, julgado, nao_conhecido}* | --- |
+| **Data_Julgamento** | *data, opcional* | --- |
+| **Numero_Sumula** | *texto, opcional* | A súmula de caráter vinculante publicada no DOU, quando o incidente de matéria repetitiva fixa tese (art. 323-H, § 1º). |
+| **Observacao** | *texto, opcional* | --- |
+
+**Regras de texto da revisão 36 (sem campo)**
+
+| **Regra** | **Conteúdo** |
+|---|---|
+| Consulta e uniformização (Q159-3) | Ligadas ao Cad_Processo (processo administrativo, área tributária); o ERP avisa os 15 dias de pagamento sem penalidade e a exigibilidade suspensa; a conclusão é do contador. O lado dos órgãos públicos fica fora (D-N68) |

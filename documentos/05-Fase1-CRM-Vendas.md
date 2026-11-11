@@ -6,6 +6,10 @@
 pedido de venda com histórico de status por item, reserva de estoque,
 nota fiscal de saída e devolução de cliente*
 
+*Revisão 24 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 2 entidades existentes alteradas; campos de destinação de autopeça no pedido e na nota de saída e ID_Veiculo_Versao na nota de saída (documentos 204 e 209).*
+
+*Revisão 23 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 2 entidades existentes alteradas; campos da nota de saída para o cupom e a Redução Z, o bilhete de passagem, o RMD e a energia (C460, C465, C470, D400, D500 e 1510), e as descrições do valor líquido (documentos 175 e 176).*
+
 *Revisão 22 --- consolidação da revisão 31 do dicionário (documentos 150, 157, 170 e 173, com as respostas de Alberto de 04/11/2026): 3 entidades existentes alteradas; data do fato gerador no item da nota de saída, gorjeta, fornecimento sob contrato e tipo de serviço da agência (documento 150) e ligação da devolução de venda ao ajuste da operação (documento 157).*
 
 *Revisão 21 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 2 entidades existentes alteradas; Escriturada_Como_Entrada na nota de saída (documento 168, G2), Valor_Desconto_Condicional_Item no item e a taxa de câmbio da base (documento 156).*
@@ -881,8 +885,13 @@ instante do nascimento.
 | **ID_Endereco_Contratante** | *referência (Cad_Participante_Endereco, opcional)* | Adicionado na revisão 12 (Bloco 2). A versão do endereço do contratante usada; preenchida quando Local_Na_Contratante = sim. |
 | **ID_Local_Operacao** | *referência (Cad_Local_Operacao, opcional)* | Adicionado na revisão 12 (Bloco 2). Obrigatória quando Local_Na_Contratante = não; vazia quando = sim. |
 | **ID_Habilitacao** | *referência (Cad_Habilitacao_Regime_Especial, opcional)* | Adicionado na revisão 12 (Bloco 2). Habilitação do cliente, informada por ele para essa linha (confirmado por Alberto). |
+| **ID_Destinacao_Autopeca** | *referência (Cad_Classe_Sistema, domínio = destinacao_autopeca_venda), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Para que o comprador vai usar a peça (7 valores, Anexo B). |
+| **Origem_Destinacao_Autopeca** | *enumeração {perfil_do_comprador, declaracao_do_item, informado_pelo_usuario}, opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): De onde veio o valor; só a declaração do item prova a destinação. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): A declaração do comprador para aquele item ou pedido. |
 
 *Revisão 28 --- campos novos: ID_Natureza_Operacao_Cambial_Royalty.*
+
+*Revisão 40 --- campos novos: ID_Destinacao_Autopeca, Origem_Destinacao_Autopeca, ID_Documento_Declaracao.*
 
 Mov_Pedido_Venda_Item_Comissao
 
@@ -1217,12 +1226,20 @@ O cabeçalho da nota fiscal de saída.
 | **Data_Cotacao_Base** | *data, opcional* | Revisão 30 (documento 156, seção 5.5, Q156-8; D-N463 e D-N465): A data da cotação (o dia anterior ao fato gerador, ou a última disponível). |
 | **ID_Serie_Cotacao_Base** | *referência (Cad_Serie_Cotacao), opcional* | Revisão 30 (documento 156, seção 5.5, Q156-8; D-N463 e D-N465): A série usada. |
 | **Indicador_Fornecimento_Sob_Contrato** | *booleano, opcional* | Revisão 31 (documento 150, seção 3.6, Q150-3; D-N468 e D-N469): Alimentação a pessoa jurídica sob contrato, ainda que não formalizado (art. 397, I). O usuário marca; o Motor lê (critério fornecimento_sob_contrato). Vazio: o Motor trata como falso e avisa quando o cliente é pessoa jurídica. |
+| **Numero_Contador_Cupom_Fiscal** | *número, opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): NUM_CCF do C465: contador de cupom fiscal do CF-e-ECF (modelo 60). |
+| **ID_Reducao_Z** | *referência (Mov_Ecf_Reducao_Z), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): A Redução Z do dia a que o cupom emitido por ECF pertence (C460 filho do C405). Preenchido só nos modelos 02, 2D e 60. |
+| **ID_Tipo_Assinante** | *referência (Cad_Classe_Sistema, domínio = tipo_assinante_comunicacao_efd), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): TP_ASSINANTE do D500 (nota 21 e 22 de saída): comercial/industrial, poder público, residencial, público, semi-público e outros. Não é o `tipo_assinante_nfcom`. |
+| **ID_Municipio_Origem_Servico** | *referência (Cad_Municipio), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_MUN_ORIG do bilhete de passagem (modelos 13 a 16), para o D310 e o D420 quando o bilhete é nota. |
+| **ID_Participante_Agencia** | *referência (Cad_Participante), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_PART do D400: a agência, filial ou posto do resumo de movimento diário (modelo 18). A nota só tinha o cliente. |
+| **ID_Nota_Rmd** | *referência (Mov_Nota_Fiscal_Saida), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): O RMD (modelo 18) que reúne o bilhete (D410). O bilhete do D400 não pode repetir no D300. |
 
 *Revisão 3 --- campos novos (documento 33): ID_Documento_Fiscal, Tipo_Operacao, Documento_Consumidor, Nome_Consumidor, ID_Expedicao; campos novos (documento 34): Data_Previsao_Entrega, ID_Tipo_Nota_Debito, ID_Tipo_Nota_Credito, Indicador_Intermediador, ID_Participante_Intermediador, Identificador_Cadastro_Intermediador, ID_Participante_Transportadora, Informacoes_Complementares, Informacoes_Fisco, Numero_Nota_Empenho, Numero_Pedido_Compra, Numero_Contrato, ID_Estado_Saida_Pais, Local_Exportacao, Local_Despacho, ID_Indicador_Operacao, Safra_Cana, Competencia_Cana, Quantidade_Total_Mes_Cana, Quantidade_Total_Anterior_Cana, Quantidade_Total_Geral_Cana, Valor_Fornecimentos_Cana, Valor_Total_Deducoes_Cana, Valor_Liquido_Fornecimentos_Cana; campos novos (documento 35): Indicador_Destinatario; campos novos (documento 44): ID_Entidade_Ligada, Valor_Abatimento_Nao_Tributado, Subserie, ID_Equipamento_Fiscal; campos alterados (documento 33): ID_Participante_Cliente; campos alterados (documento ?): Chave_Acesso; campos alterados (documento 43): ID_Modelo_Documento; campos alterados (documento 41): Finalidade, Protocolo_Autorizacao.*
 
 *Revisão 30 --- campos novos: ID_Moeda_Operacao, Valor_Operacao_Moeda, Taxa_Cambio_Base, Data_Cotacao_Base, ID_Serie_Cotacao_Base, Escriturada_Como_Entrada.*
 
 *Revisão 31 --- campos novos: Indicador_Fornecimento_Sob_Contrato.*
+
+*Revisão 32 --- campos novos: Numero_Contador_Cupom_Fiscal, ID_Reducao_Z, ID_Tipo_Assinante, ID_Municipio_Origem_Servico, ID_Participante_Agencia, ID_Nota_Rmd.*
 
 *Comportamento de aplicação (não é um campo novo de dados): pelo mesmo
 motor transversal da Fase 0 (seção 10), nenhuma Mov_Nota_Fiscal_Saida
@@ -1303,8 +1320,8 @@ Uma linha da nota fiscal de saída.
 | **Informacoes_Adicionais_Item** | *texto, opcional* | Novo na revisão 3 (documento 34). det/infAdProd: informações adicionais do produto (até 500 posições). |
 | **Percentual_Devolvido** | *número, opcional* | Novo na revisão 3 (documento 34). det/impostoDevol/pDevol: percentual da mercadoria devolvida. |
 | **Valor_Ipi_Devolvido** | *número, opcional* | Novo na revisão 3 (documento 34). det/impostoDevol/IPI/vIPIDevol: valor do IPI devolvido. |
-| **Valor_Unitario_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vUnComLiq (NT 2026.008): valor unitário líquido, sem IBS, CBS e Imposto Seletivo. Produção em 03/11/2026. |
-| **Valor_Total_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vProdLiq (NT 2026.008): valor total líquido do item; o total da nota (vProdLiqTot) é derivado. |
+| **Valor_Unitario_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vUnComLiq (NT 2026.008): valor unitário líquido, sem IBS, CBS e Imposto Seletivo. Produção em 03/11/2026. Revisão 32 (documento 176, seção 6; Q176-10): não vai para a EFD-ICMS/IPI: o arquivo usa o valor bruto (vUnCom), FAQ 19.2. |
+| **Valor_Total_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vProdLiq (NT 2026.008): valor total líquido do item; o total da nota (vProdLiqTot) é derivado. Revisão 32 (documento 176, seção 6; Q176-10): não vai para a EFD-ICMS/IPI: o arquivo usa o valor bruto (vProd), FAQ 19.2. |
 | **ID_Indicador_Operacao** | *referência (Cad_Indicador_Operacao, opcional)* | Alterado na revisão 3 (documento 41). cIndOp (P-19 do doc 34): passa a apontar para o catálogo Cad_Indicador_Operacao, no lugar do domínio indicador_operacao_nfse de Cad_Classe_Sistema. O critério de local (ID_Criterio_Local_Operacao) deixa de ser digitado e é derivado do código. |
 | **Codigo_Tipo_Credito_Presumido_Zfm** | *código (1), opcional* | Novo na revisão 3 (documento 34). det/prod/tpCredPresIBSZFM: classificação para subapuração do IBS na ZFM (0 a 4, NT 2025.002). |
 | **Numero_Recopi** | *código (20), opcional* | Novo na revisão 3 (documento 34). det/prod/nRECOPI: número do RECOPI (papel imprensa) (D-N12). |
@@ -1368,6 +1385,16 @@ Uma linha da nota fiscal de saída.
 | **Data_Fato_Gerador** | *data, opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): A data que o ERP usou. Vazia quando não há linha de regra vigente (e então há aviso). |
 | **Criterio_Data_Fato_Gerador** | *enumeração {data_previsao_entrega, data_emissao_documento, data_entrega_comprovada, data_inicio_transporte, data_termino_transporte, data_termino_servico, data_ato, data_pagamento, data_emissao_fatura, data_liberacao_aduaneira, data_constatacao, data_aquisicao}, opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): De onde a data veio. Com prova em contrário da data prevista (Decreto, art. 11, § 8º), passa a data_entrega_comprovada e o usuário informa a data. |
 | **ID_Regra_Fato_Gerador** | *referência (Cad_Regra_Fato_Gerador), opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): A versão da regra usada. |
+| **Indicador_Receita_Energia** | *enumeração {propria, terceiros}, opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): IND_REC do 1510 (energia, saída interestadual): 0 receita própria e 1 de terceiros. Domínio próprio: o `ID_Tipo_Receita_Comunicacao` é do D600 e tem sete valores. |
+| **ID_Participante_Receita_Terceiro** | *referência (Cad_Participante), opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): COD_PART do 1510 e do D510: o terceiro que recebe a receita. Obrigatório quando a receita é de terceiros. |
+| **Quantidade_Cancelada** | *número, opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): QTD_CANC do C470: quantidade cancelada no cupom emitido por ECF. |
+| **Medicamento_Indicador_Base_Calculo** | *enumeração {preco, margem_valor, lista_negativa, lista_positiva, lista_neutra}, opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): IND_MED do C173: o tipo de referência da base do ICMS (0 a 4). |
+| **Medicamento_Tipo_Produto** | *enumeração {similar, generico, etico_ou_marca}, opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): TP_PROD do C173 (0 a 2). |
+| **ID_Classe_Enquadramento_Ipi** | *referência (Cad_Classe_Sistema, domínio = classe_enquadramento_ipi), opcional* | Revisão 32 (documento 175, seção 4.4; D-N480; Q175-1 a Q175-9 pela recomendação): CL_ENQ do C178: a classe de enquadramento do IPI (5 posições; 31 linhas do documento 172). **Não é** o `ID_Enquadramento_Ipi` (cEnq, 3 dígitos). |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao), opcional* | Revisão 40 (documento 204, seção 5.3; D-N548: Q204-1 a Q204-10): A ficha do veículo do item. A nota continua levando os campos do XML (cv, cm³, combustível); o Motor confere kW contra cv e avisa. |
+| **ID_Destinacao_Autopeca** | *referência (Cad_Classe_Sistema, domínio = destinacao_autopeca_venda), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Copiado do pedido; a nota guarda o que valeu na emissão. |
+| **Origem_Destinacao_Autopeca** | *enumeração {perfil_do_comprador, declaracao_do_item, informado_pelo_usuario}, opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Idem. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Idem. |
 
 *Revisão 3 --- campos novos (documento 33): ID_Imovel; campos novos (documento 34): ID_Unidade_Tributavel, Quantidade_Tributavel, Valor_Unitario_Tributavel, Gtin_Tributavel, Indicador_Bem_Movel_Usado, Numero_Pedido_Cliente, Item_Pedido_Cliente, Numero_Fci, Indicador_Doacao, Informacoes_Adicionais_Item, Percentual_Devolvido, Valor_Ipi_Devolvido, Valor_Unitario_Liquido, Valor_Total_Liquido, Codigo_Tipo_Credito_Presumido_Zfm, Numero_Recopi, Veiculo_Tipo_Operacao, Veiculo_Chassi, Veiculo_Codigo_Cor, Veiculo_Descricao_Cor, Veiculo_Potencia_Cv, Veiculo_Cilindrada_Cc, Veiculo_Peso_Liquido, Veiculo_Peso_Bruto, Veiculo_Numero_Serie, Veiculo_Codigo_Combustivel, Veiculo_Numero_Motor, Veiculo_Capacidade_Tracao, Veiculo_Distancia_Eixos, Veiculo_Ano_Modelo, Veiculo_Ano_Fabricacao, Veiculo_Tipo_Pintura, Veiculo_Codigo_Tipo, Veiculo_Codigo_Especie, Veiculo_Vin_Remarcado, Veiculo_Condicao, Veiculo_Codigo_Marca_Modelo, Veiculo_Codigo_Cor_Denatran, Veiculo_Lotacao, Veiculo_Restricao, Medicamento_Registro_Anvisa, Medicamento_Motivo_Isencao, Medicamento_Preco_Maximo_Consumidor, Arma_Tipo, Arma_Numero_Serie, Arma_Numero_Cano, Arma_Descricao, Combustivel_Codigo_Anp, Combustivel_Descricao_Anp, Combustivel_Percentual_Glp, Combustivel_Percentual_Gas_Natural_Nacional, Combustivel_Percentual_Gas_Natural_Importado, Combustivel_Valor_Partida, Combustivel_Codigo_Codif, Combustivel_Quantidade_Temperatura_Ambiente, ID_Estado_Consumo_Combustivel, Combustivel_Cide_Base, Combustivel_Cide_Aliquota, Combustivel_Cide_Valor, Combustivel_Numero_Bico, Combustivel_Numero_Bomba, Combustivel_Numero_Tanque, Combustivel_Encerrante_Inicial, Combustivel_Encerrante_Final, Combustivel_Percentual_Biodiesel, Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem; campos novos (documento 41): ID_Indicador_Operacao; campos novos (documento 44): Natureza_Operacao, ID_Conta_Contabil, ID_Tipo_Receita_Comunicacao, ID_Classificacao_Item_Utilidade; campos alterados (documento 41): ID_CFOP_Saida.*
 
@@ -1380,6 +1407,10 @@ Uma linha da nota fiscal de saída.
 *Revisão 30 --- campos novos: Valor_Desconto_Condicional_Item; campos alterados: Valor_Desconto_Item; valores de enumeração novos: Tipo_Onerosidade (+valor_inferior_mercado).*
 
 *Revisão 31 --- campos novos: Tipo_Servico_Agencia, Data_Fato_Gerador, Criterio_Data_Fato_Gerador, ID_Regra_Fato_Gerador.*
+
+*Revisão 32 --- campos novos: Indicador_Receita_Energia, ID_Participante_Receita_Terceiro, Quantidade_Cancelada, Medicamento_Indicador_Base_Calculo, Medicamento_Tipo_Produto, ID_Classe_Enquadramento_Ipi; campos alterados: Valor_Total_Liquido, Valor_Unitario_Liquido.*
+
+*Revisão 40 --- campos novos: ID_Veiculo_Versao, ID_Destinacao_Autopeca, Origem_Destinacao_Autopeca, ID_Documento_Declaracao.*
 
 *Comportamento de aplicação (não é um campo novo de dados): emitir a
 nota (Status=emitida) gera, para cada linha COM ID_Item_Pedido

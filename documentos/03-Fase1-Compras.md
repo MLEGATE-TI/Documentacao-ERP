@@ -7,6 +7,10 @@ contrato de fornecimento contínuo, aprovação, vínculo com o orçamento,
 nota fiscal de entrada via Motor de Regras, devolução e recusa de
 recebimento*
 
+*Revisão 29 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 1 entidades existentes alteradas; campo ID_Veiculo_Versao em Mov_Nota_Fiscal_Entrada_Item (documento 204).*
+
+*Revisão 28 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 1 entidades existentes alteradas; os dois campos de medicamento (C173) na entrada e as notas de entrada: o valor líquido da NT 2026.008 não vai à EFD (documentos 175 e 176).*
+
 *Revisão 27 --- consolidação da revisão 31 do dicionário (documentos 150, 157, 170 e 173, com as respostas de Alberto de 04/11/2026): 2 entidades existentes alteradas; data do fato gerador no item da nota de entrada e ligação da devolução de compra ao ajuste da operação (documento 157, Q157-1 e Q157-2).*
 
 *Revisão 26 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 2 entidades existentes alteradas; Finalidade credito e debito, Escriturada_Como_Saida e a quantidade zero na nota de entrada (documento 168, G2), e Valor_Desconto_Condicional_Item no item (documento 156, Q156-13).*
@@ -826,8 +830,8 @@ Motor de Regras e o CFOP tratado por conversão.
 | **Informacoes_Adicionais_Item** | *texto, opcional* | Novo na revisão 3 (documento 34). det/infAdProd: informações adicionais do produto (até 500 posições). |
 | **Percentual_Devolvido** | *número, opcional* | Novo na revisão 3 (documento 34). det/impostoDevol/pDevol: percentual da mercadoria devolvida. |
 | **Valor_Ipi_Devolvido** | *número, opcional* | Novo na revisão 3 (documento 34). det/impostoDevol/IPI/vIPIDevol: valor do IPI devolvido. |
-| **Valor_Unitario_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vUnComLiq (NT 2026.008): valor unitário líquido, sem IBS, CBS e Imposto Seletivo. Produção em 03/11/2026. |
-| **Valor_Total_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vProdLiq (NT 2026.008): valor total líquido do item; o total da nota (vProdLiqTot) é derivado. |
+| **Valor_Unitario_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vUnComLiq (NT 2026.008): valor unitário líquido, sem IBS, CBS e Imposto Seletivo. Produção em 03/11/2026. Revisão 32 (documento 176, seção 6; Q176-10): não vai para a EFD-ICMS/IPI: o arquivo usa o valor bruto (vUnCom), FAQ 19.2. |
+| **Valor_Total_Liquido** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vProdLiq (NT 2026.008): valor total líquido do item; o total da nota (vProdLiqTot) é derivado. Revisão 32 (documento 176, seção 6; Q176-10): não vai para a EFD-ICMS/IPI: o arquivo usa o valor bruto (vProd), FAQ 19.2. |
 | **ID_Indicador_Operacao** | *referência (Cad_Indicador_Operacao, opcional)* | Novo na revisão 3 (documento 34). IBSCBS/cIndOp: indicador da operação de fornecimento (6 dígitos; tabela do Anexo C, 27 códigos); o critério de local de operação passa a derivado dele. |
 | **Codigo_Tipo_Credito_Presumido_Zfm** | *código (1), opcional* | Novo na revisão 3 (documento 34). det/prod/tpCredPresIBSZFM: classificação para subapuração do IBS na ZFM (0 a 4, NT 2025.002). |
 | **Numero_Recopi** | *código (20), opcional* | Novo na revisão 3 (documento 34). det/prod/nRECOPI: número do RECOPI (papel imprensa) (D-N12). |
@@ -891,6 +895,9 @@ Motor de Regras e o CFOP tratado por conversão.
 | **Data_Fato_Gerador** | *data, opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): A data que o ERP usou. Vazia quando não há linha de regra vigente (e então há aviso). |
 | **Criterio_Data_Fato_Gerador** | *enumeração {data_previsao_entrega, data_emissao_documento, data_entrega_comprovada, data_inicio_transporte, data_termino_transporte, data_termino_servico, data_ato, data_pagamento, data_emissao_fatura, data_liberacao_aduaneira, data_constatacao, data_aquisicao}, opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): De onde a data veio. Com prova em contrário da data prevista (Decreto, art. 11, § 8º), passa a data_entrega_comprovada e o usuário informa a data. |
 | **ID_Regra_Fato_Gerador** | *referência (Cad_Regra_Fato_Gerador), opcional* | Revisão 31 (documento 157, seção 3.3, Q157-1; D-N466 e D-N469): A versão da regra usada. |
+| **Medicamento_Indicador_Base_Calculo** | *enumeração {preco, margem_valor, lista_negativa, lista_positiva, lista_neutra}, opcional* | Revisão 32 (documento 175, seção 6.5; D-N480; Q175-1 a Q175-9 pela recomendação): IND_MED do C173 na entrada (NF-e de terceiros). |
+| **Medicamento_Tipo_Produto** | *enumeração {similar, generico, etico_ou_marca}, opcional* | Revisão 32 (documento 175, seção 6.5; D-N480; Q175-1 a Q175-9 pela recomendação): TP_PROD do C173 na entrada. |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao), opcional* | Revisão 40 (documento 204, seção 5.3; D-N548: Q204-1 a Q204-10): Idem, na entrada do importador ou do revendedor. |
 
 *Revisão 3 --- campos novos (documento 34): ID_Unidade_Tributavel, Quantidade_Tributavel, Valor_Unitario_Tributavel, Gtin_Tributavel, Indicador_Bem_Movel_Usado, Numero_Pedido_Cliente, Item_Pedido_Cliente, Numero_Fci, Indicador_Doacao, Informacoes_Adicionais_Item, Percentual_Devolvido, Valor_Ipi_Devolvido, Valor_Unitario_Liquido, Valor_Total_Liquido, ID_Indicador_Operacao, Codigo_Tipo_Credito_Presumido_Zfm, Numero_Recopi, Veiculo_Tipo_Operacao, Veiculo_Chassi, Veiculo_Codigo_Cor, Veiculo_Descricao_Cor, Veiculo_Potencia_Cv, Veiculo_Cilindrada_Cc, Veiculo_Peso_Liquido, Veiculo_Peso_Bruto, Veiculo_Numero_Serie, Veiculo_Codigo_Combustivel, Veiculo_Numero_Motor, Veiculo_Capacidade_Tracao, Veiculo_Distancia_Eixos, Veiculo_Ano_Modelo, Veiculo_Ano_Fabricacao, Veiculo_Tipo_Pintura, Veiculo_Codigo_Tipo, Veiculo_Codigo_Especie, Veiculo_Vin_Remarcado, Veiculo_Condicao, Veiculo_Codigo_Marca_Modelo, Veiculo_Codigo_Cor_Denatran, Veiculo_Lotacao, Veiculo_Restricao, Medicamento_Registro_Anvisa, Medicamento_Motivo_Isencao, Medicamento_Preco_Maximo_Consumidor, Arma_Tipo, Arma_Numero_Serie, Arma_Numero_Cano, Arma_Descricao, Combustivel_Codigo_Anp, Combustivel_Descricao_Anp, Combustivel_Percentual_Glp, Combustivel_Percentual_Gas_Natural_Nacional, Combustivel_Percentual_Gas_Natural_Importado, Combustivel_Valor_Partida, Combustivel_Codigo_Codif, Combustivel_Quantidade_Temperatura_Ambiente, ID_Estado_Consumo_Combustivel, Combustivel_Cide_Base, Combustivel_Cide_Aliquota, Combustivel_Cide_Valor, Combustivel_Numero_Bico, Combustivel_Numero_Bomba, Combustivel_Numero_Tanque, Combustivel_Encerrante_Inicial, Combustivel_Encerrante_Final, Combustivel_Percentual_Biodiesel, Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem; campos novos (documento 44): Natureza_Operacao, ID_Conta_Contabil, ID_Natureza_Frete_Efd.*
 
@@ -899,6 +906,10 @@ Motor de Regras e o CFOP tratado por conversão.
 *Revisão 30 --- campos novos: Valor_Desconto_Condicional_Item; campos alterados: Valor_Desconto_Item, Quantidade.*
 
 *Revisão 31 --- campos novos: Data_Fato_Gerador, Criterio_Data_Fato_Gerador, ID_Regra_Fato_Gerador.*
+
+*Revisão 32 --- campos novos: Medicamento_Indicador_Base_Calculo, Medicamento_Tipo_Produto; campos alterados: Valor_Total_Liquido, Valor_Unitario_Liquido.*
+
+*Revisão 40 --- campos novos: ID_Veiculo_Versao.*
 
 *Comportamento de aplicação (não é um campo novo de dados): toda vez que
 o usuário confirma ou corrige a sugestão de ID_CFOP_Entrada, essa

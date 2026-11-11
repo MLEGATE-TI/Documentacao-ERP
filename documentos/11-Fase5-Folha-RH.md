@@ -9,6 +9,8 @@ risco e segurança do trabalho, compliance eSocial (envio de eventos e
 caixa de mensagens), transparência salarial (Lei 14.611/2023), categoria
 sindical e benefícios, portal do colaborador e tabela salarial*
 
+*Revisão 29 --- consolidação da revisão 38 do dicionário (documentos 200 e 201, com as respostas de Alberto de 10/11/2026): 2 entidades novas (anexo, seção 29); 2 entidades novas do B0b-2 (plano de saúde dos empregados; documento 200).*
+
 *Revisão 28 --- consolidação da revisão 19 do dicionário (documento 90 aprovado por Alberto em 21/10/2026 e decisões do documento 91 respondidas): 2 entidades novas (anexo, seção 28); 3 entidades existentes alteradas; ocorrências do eSocial, indicador da prorrogação noturna e saída do modo de composição da hora extra noturna (documento 90, D-N335 e D-N339).*
 
 *Revisão 27 --- consolidação da revisão 17 do dicionário (documentos 84 a 88, decisões D-N259 a D-N262, D-N264 a D-N266, D-N270 a D-N277, D-N279, D-N291 a D-N294, D-N297 a D-N300, D-N304 a D-N315 e D-N317 a D-N325, aprovadas por Alberto em 20/10/2026): 7 entidades existentes alteradas; parâmetros de jornada por filial, hora extra noturna composta, hora noturna reduzida e hora-aula, cota de pessoa com deficiência derivada e domínios do eSocial (documento 87).*
@@ -8001,3 +8003,61 @@ Um retorno do eSocial traz várias ocorrências; cada uma é uma linha, com o te
 | **Data_Hora_Tratamento** | *data/hora, opcional* | Quando tratou. |
 | **Decisao_Matricula** | *enumeração {ajustou_erp, corrigiu_esocial}, opcional* | Escolha do RH nos casos de matrícula diferente. |
 | **Data_Hora_Recebimento** | *data/hora* | Quando o retorno chegou. |
+
+
+
+29\. Anexo --- Entidades novas da revisão 38 (B0b-2: plano de saúde dos empregados)
+
+Revisão 38 do dicionário (consolidação de 10/11/2026): 2 entidades novas neste módulo (documento 200, D-N533 e D-N534, Q200-8): o acordo coletivo do plano de saúde dos empregados e o crédito de CBS do benefício. O crédito nasce em Mov_Credito_Fiscal com Origem = beneficio_empregado.
+
+29.1. Crédito de quem compra o serviço financeiro, arrendamento, antecipação de recebíveis e plano de saúde dos empregados (B0b-2; documento 200, seção 5.2)
+
+Mov_Rh_Beneficio_Acordo_Coletivo
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-8): O acordo ou a convenção coletiva que obriga a empresa a dar o benefício (plano de saúde), com a vigência e a declaração à RFB. A janela de seis meses depois do fim do acordo sai do parâmetro, e não de um campo.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Acordo_Coletivo** | *identificador* | --- |
+| **ID_Beneficio** | *referência (Cad_Rh_Beneficio)* | O benefício, do tipo plano_saude. |
+| **Tipo_Instrumento** | *enumeração {acordo_coletivo, convencao_coletiva}* | O instrumento. |
+| **Numero_Registro** | *código (até 60), opcional* | O número do registro do instrumento. |
+| **Clausula_Compulsoria** | *booleano* | O instrumento traz cláusula compulsória para o plano (Decreto, art. 63, § 1º, VI). Falso: o benefício não dá crédito. |
+| **Data_Inicio_Vigencia** | *data* | O primeiro dia de vigência do instrumento. |
+| **Data_Fim_Vigencia** | *data, opcional* | O último dia; vazio enquanto vigente. O crédito vale até seis meses depois dele (art. 63, § 5º). |
+| **ID_Documento** | *referência (Cad_Documento), opcional* | O instrumento, guardado no GED. |
+| **Situacao_Declaracao** | *enumeração {nao_declarado, declarado, rejeitado}* | A declaração à RFB do art. 337, § 2º. O ERP só registra, porque o ato conjunto que a regulamenta não foi publicado. |
+| **Data_Declaracao** | *data, opcional* | Quando declarou. |
+| **Numero_Protocolo_Declaracao** | *código (até 60), opcional* | O protocolo da declaração. |
+
+Mov_Rh_Beneficio_Credito_Cbs
+
+Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-8): O crédito mensal da empresa que paga plano de saúde aos empregados: o que ela pagou, o que descontou da folha, o que a operadora informou e a proporção dos empregados. O valor do crédito sai em Mov_Credito_Servico_Regime_Especifico.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Beneficio_Credito** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa contratante. |
+| **ID_Beneficio** | *referência (Cad_Rh_Beneficio)* | O benefício (plano_saude). |
+| **Competencia** | *competência* | O mês. |
+| **ID_Acordo_Coletivo** | *referência (Mov_Rh_Beneficio_Acordo_Coletivo), opcional* | O instrumento que dá a cláusula compulsória. Sem ele, o ERP avisa que não há crédito. |
+| **ID_Participante_Operadora** | *referência (Cad_Participante)* | A operadora ou a administradora de benefícios. |
+| **Valor_Premio_Pago_Total** | *número* | O que a empresa pagou à operadora no mês pelo contrato (prêmio e contraprestação). |
+| **Valor_Premio_Empregados** | *número* | A parte do pagamento que cobre os empregados titulares e os dependentes deles. O que cobre sócios ou outros fica fora (art. 63, § 1º, VI). |
+| **Valor_Descontado_Empregados** | *número* | O que a folha descontou dos empregados no mês (art. 337, I, II e § 1º). |
+| **Origem_Desconto** | *enumeração {folha_erp, esocial, documento_fiscal}* | De onde vem o desconto: da folha do ERP, do e-Social por convênio (art. 337, § 3º) ou do documento fiscal da empresa (§ 5º). |
+| **Valor_Premios_Entidade_Total** | *número, opcional* | O total de prêmios e contraprestações arrecadados pela operadora no período, informado por ela na DeRE. |
+| **Valor_Debito_Cbs_Entidade** | *número, opcional* | O débito de CBS pago pela operadora no período (base do crédito). |
+| **Valor_Debito_Ibs_Entidade** | *número, opcional* | O débito de IBS pago pela operadora no período. |
+| **Fonte_Informacao_Operadora** | *enumeração {dere_rfb, informado_usuario}* | Se o dado da operadora veio da RFB (§ 4º) ou foi digitado. |
+| **Proporcao_Empregados** | *número, opcional* | Calculado: Valor_Premio_Empregados dividido por Valor_Premios_Entidade_Total (art. 337, I, b). |
+| **Percentual_Custeio_Empresa** | *número, opcional* | Calculado: o que a empresa suportou (pago menos descontado) sobre o pago (art. 337, II e § 1º). |
+| **Dentro_Janela_Acordo** | *booleano* | Calculado: o mês está dentro da vigência do instrumento ou até seis meses depois (art. 63, § 5º). |
+| **ID_Documento_Fiscal** | *referência (Mov_Documento_Fiscal), opcional* | O documento fiscal do art. 337, § 5º, com o desconto de cada empregado, quando o e-Social não está disponível. O ato conjunto não saiu; o campo só guarda a referência. |
+| **ID_Credito_Servico** | *referência (Mov_Credito_Servico_Regime_Especifico), opcional* | O registro de crédito que o Motor gerou. |
+| **Situacao** | *enumeração {calculado, sem_credito}* | sem_credito quando falta acordo com cláusula compulsória, o mês está fora da janela ou a operadora não informou. |
+| **Motivo_Sem_Credito** | *texto, opcional* | Por que o crédito é zero. |

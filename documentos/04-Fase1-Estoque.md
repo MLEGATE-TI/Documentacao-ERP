@@ -5,6 +5,10 @@
 *Locais de estoque, tipos de movimento parametrizáveis, movimentação,
 posição física, custo médio (diário/mensal) e inventário*
 
+*Revisão 18 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 2 entidades existentes alteradas; texto e conta contábil do item do inventário (H010) e os quatro motivos novos da reclassificação do K220 (documentos 175 e 176).*
+
+*Revisão 17 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 3 entidades existentes alteradas; material de terceiros sem valor: Propriedade_Movimento no tipo de movimento, Propriedade e participante proprietário no movimento e no saldo (documento 168, G10; Q168-2).*
+
 *Revisão 16 --- consolidação da revisão 27 do dicionário (documentos 146, 147, 148 e 149, com as respostas de Alberto de 29/10/2026): 1 entidades existentes alteradas; valor consumo_servico na origem do movimento de estoque (documento 148, Q148-12).*
 
 *Revisão 15 --- consolidação da revisão 3 do dicionário (documentos 33 a 46, aprovada por Alberto em 12/10/2026): 1 entidades novas (anexo, seção 17); 3 entidades existentes alteradas. O dicionário passa de 543 para 829 entidades, construída junto com a Fase 0 e os demais módulos alterados.*
@@ -335,52 +339,16 @@ fizer sentido para sua operação.
 *Vigência: não --- parametrização de configuração, não histórico de
 valor.*
 
-  ------------------------- ------------------------- --------------------------------------------------------
-  **Campo**                 **Tipo lógico**           **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Tipo_Movimento** | *identificador* | --- |
+| **ID_Empresa_Criadora** | *referência (Cad_Empresa, Fase 0)* | Adicionado nesta revisão: a empresa onde este tipo foi criado --- dona por padrão. Um tipo pode valer só para ela ou ser estendido a outras empresas do mesmo grupo societário, via Cad_Tipo_Movimento_Estoque_Empresa, abaixo. |
+| **Nome** | *texto* | Ex.: \"Envio para Produção\", \"Entrada por Compras\", \"Devolução de Produção\", \"Devolução de Compra\", \"Devolução de Cliente\", \"Entrada por Bonificação\" --- nomes livres, definidos pela empresa. |
+| **Direcao** | *enumeração {entrada, saida, transferencia, ajuste_positivo, ajuste_negativo}* | O efeito estrutural sobre o saldo --- mesmo enum que era fixo em Mov_Estoque_Movimento na Revisão 1, agora parametrizado por tipo em vez de fixo no cabeçalho do movimento: entrada soma; saída subtrai; transferência subtrai de um local/posição e soma em outro. Alterado nesta revisão: o valor único \"ajuste\" foi desmembrado em ajuste_positivo (sobra apurada em inventário, seção 10) e ajuste_negativo (falta apurada) --- cada um pode ter Método de Valorização próprio, já que a natureza econômica de um ganho e de uma perda/quebra costuma ser diferente. |
+| **Metodo_Valoracao** | *enumeração {custo_medio, valor_documento_origem, valor_movimento_origem, informado_manualmente, sem_valor}* | Define de onde vem o valor do movimento. \"custo_medio\": a saída é valorizada pelo custo médio vigente da filial (ex.: Envio para Produção). \"valor_documento_origem\": o valor vem de um documento externo, via ID_Valor_Referencia (ex.: Entrada por Compras → Mov_Nota_Fiscal_Entrada_Item.Valor_Total; Entrada por Bonificação → Mov_Nota_Fiscal_Entrada_Item.Valor_Credito_Tributario, não o Valor_Total do item). \"valor_movimento_origem\": o valor é o mesmo pelo qual o material tinha saído/entrado antes, via ID_Valor_Referencia apontando para o movimento original --- cobre as três devoluções (Produção, Compra, Cliente) com a MESMA regra, não três regras distintas: nenhuma delas recalcula, todas reusam o valor do movimento de origem. \"informado_manualmente\": o usuário digita o valor no lançamento --- cobre casos residuais de ajuste avulso. Revisão 30 (documento 168, seção 3.10, G10; Q167-3, opção a): "sem_valor": o movimento não tem valor (Valor_Total é zero) e não entra no custo médio, no saldo de valor nem na contabilidade; só para os tipos de material de terceiros. |
+| **Propriedade_Movimento** | *enumeração {proprio, de_terceiros_em_poder_da_empresa}* | Revisão 30 (documento 168, seção 3.10, G10; D-N460 e D-N461): De quem é o material que o tipo movimenta. A carga dos tipos existentes é proprio. A remessa da Mlegate para terceiros continua sendo transferência para um local Tipo = terceiros (que já tem o participante do operador), e o saldo dela é derivado do local, sem tipo próprio. Tipos novos de carga (nomes livres): "Entrada de material de terceiros (remessa para industrialização)", "Consumo de material de terceiros" e "Retorno de material de terceiros". |
 
-  **ID_Tipo_Movimento**     *identificador*           ---
-
-  **ID_Empresa_Criadora**   *referência (Cad_Empresa, Adicionado nesta revisão: a empresa onde este tipo foi
-                            Fase 0)*                  criado --- dona por padrão. Um tipo pode valer só para
-                                                      ela ou ser estendido a outras empresas do mesmo grupo
-                                                      societário, via Cad_Tipo_Movimento_Estoque_Empresa,
-                                                      abaixo.
-
-  **Nome**                  *texto*                   Ex.: \"Envio para Produção\", \"Entrada por Compras\",
-                                                      \"Devolução de Produção\", \"Devolução de Compra\",
-                                                      \"Devolução de Cliente\", \"Entrada por Bonificação\"
-                                                      --- nomes livres, definidos pela empresa.
-
-  **Direcao**               *enumeração {entrada,     O efeito estrutural sobre o saldo --- mesmo enum que era
-                            saida, transferencia,     fixo em Mov_Estoque_Movimento na Revisão 1, agora
-                            ajuste_positivo,          parametrizado por tipo em vez de fixo no cabeçalho do
-                            ajuste_negativo}*         movimento: entrada soma; saída subtrai; transferência
-                                                      subtrai de um local/posição e soma em outro. Alterado
-                                                      nesta revisão: o valor único \"ajuste\" foi desmembrado
-                                                      em ajuste_positivo (sobra apurada em inventário, seção
-                                                      10) e ajuste_negativo (falta apurada) --- cada um pode
-                                                      ter Método de Valorização próprio, já que a natureza
-                                                      econômica de um ganho e de uma perda/quebra costuma ser
-                                                      diferente.
-
-  **Metodo_Valoracao**      *enumeração {custo_medio, Define de onde vem o valor do movimento.
-                            valor_documento_origem,   \"custo_medio\": a saída é valorizada pelo custo médio
-                            valor_movimento_origem,   vigente da filial (ex.: Envio para Produção).
-                            informado_manualmente}*   \"valor_documento_origem\": o valor vem de um documento
-                                                      externo, via ID_Valor_Referencia (ex.: Entrada por
-                                                      Compras → Mov_Nota_Fiscal_Entrada_Item.Valor_Total;
-                                                      Entrada por Bonificação →
-                                                      Mov_Nota_Fiscal_Entrada_Item.Valor_Credito_Tributario,
-                                                      não o Valor_Total do item). \"valor_movimento_origem\":
-                                                      o valor é o mesmo pelo qual o material tinha
-                                                      saído/entrado antes, via ID_Valor_Referencia apontando
-                                                      para o movimento original --- cobre as três devoluções
-                                                      (Produção, Compra, Cliente) com a MESMA regra, não três
-                                                      regras distintas: nenhuma delas recalcula, todas reusam
-                                                      o valor do movimento de origem.
-                                                      \"informado_manualmente\": o usuário digita o valor no
-                                                      lançamento --- cobre casos residuais de ajuste avulso.
-  ------------------------- ------------------------- --------------------------------------------------------
+*Revisão 30 --- campos novos: Propriedade_Movimento; valores de enumeração novos: Metodo_Valoracao (+sem_valor).*
 
 Cad_Tipo_Movimento_Estoque_Empresa
 
@@ -472,83 +440,24 @@ as posições envolvidas.
 
 *Vigência: não.*
 
-  -------------------------------- ------------------------------- --------------------------------------------------------
-  **Campo**                        **Tipo lógico**                 **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item** | *identificador* | --- |
+| **ID_Movimento** | *referência (Mov_Estoque_Movimento)* | --- |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico)* | --- |
+| **ID_Local_Estoque_Origem** | *referência (Cad_Local_Estoque, opcional)* | Vazio para entrada pura (nada saiu de um local --- veio de fora). |
+| **ID_Local_Estoque_Destino** | *referência (Cad_Local_Estoque, opcional)* | Vazio para saída pura (nada foi guardado --- saiu de vez). Numa transferência, origem e destino são preenchidos juntos (ver seção 9). |
+| **ID_Posicao_Estoque_Origem** | *referência (Cad_Posicao_Estoque, opcional)* | Adicionado nesta revisão: posição física dentro do local de origem, mais granular que o local sozinho (ver seção 6). |
+| **ID_Posicao_Estoque_Destino** | *referência (Cad_Posicao_Estoque, opcional)* | Idem, para o local de destino. |
+| **Quantidade** | *número, opcional* | Passou a ser opcional nesta revisão: um movimento pode ser só de valor, sem quantidade --- ex.: entrada de custo de importação que chegou depois da nota fiscal de entrada já lançada. Quando preenchida, é sempre positiva --- o efeito sobre o saldo vem da Direção do Tipo de Movimento, nunca do sinal aqui, exceto o caso de bonificação abaixo, em que a quantidade é positiva mas o Valor_Total é negativo. |
+| **Valor_Total** | *número* | Substituiu Custo_Unitario (Revisão 1). Campo principal, sempre presente e não recalculado a partir de Quantidade × custo unitário --- mesmo princípio de fidelidade ao valor real já usado em Compras --- EXCETO na saída valorizada por Metodo_Valoracao=custo_medio, em que não existe documento externo e o valor É genuinamente calculado: Quantidade × custo médio vigente (seção 7). Pode ser negativo mesmo numa entrada --- caso de bonificação, ver exemplo abaixo. |
+| **ID_Valor_Referencia_Tipo** | *enumeração {nota_fiscal_entrada_item, movimento_estoque_item, ordem_producao_custo_apurado, nenhum}* | Adicionado nesta revisão: de onde vem o Valor_Total, quando Metodo_Valoracao=valor_documento_origem ou valor_movimento_origem --- mesmo padrão de referência genérica já usado em Mov_Aprovacao_Instancia (Fase 0). \"ordem_producao_custo_apurado\" foi adicionado na revisão 8, pedido pela especificação do módulo Fase 1 Produção: a entrada de produto acabado (Tipo_Movimento \"Entrada de Produção\", Metodo_Valoracao=valor_documento_origem) não tem nota fiscal de origem nem reusa um movimento anterior --- o valor vem do custo total apurado daquela ordem (materiais diretos/indiretos, mão de obra direta/indireta, serviços de terceiros, industrialização em terceiros), calculado pelo próprio módulo de Produção. |
+| **ID_Valor_Referencia** | *identificador do registro de referência, opcional* | Ex.: o ID_Item de Mov_Nota_Fiscal_Entrada_Item (compra: Valor_Total; bonificação: Valor_Credito_Tributario --- Fase 1, Compras), o ID_Item de um Mov_Estoque_Movimento_Item anterior (as três devoluções, que reusam o valor do movimento de origem), ou o ID_Custo_Apurado de Mov_Ordem_Producao_Custo_Apurado (Fase 1 --- Produção) quando ID_Valor_Referencia_Tipo=ordem_producao_custo_apurado. |
+| **ID_Lote** | *referência (Cad_Lote_Produto, opcional)* | Controle de lote --- Cad_Lote_Produto modelado nesta revisão (abaixo). Vazio para produtos sem controle de lote; preenchido quando o produto exige rastreabilidade por lote, tipicamente um Produto_Controlado (Fase 0). Participa do saldo derivado (ver acima) e do custo médio por lote (seção 7). |
+| **Propriedade** | *enumeração {proprio, de_terceiros_em_poder_da_empresa}* | Revisão 30 (documento 168, seção 3.10, G10; D-N460 e D-N461): Copiado do tipo de movimento no lançamento, e guardado para que a mudança futura do tipo não reescreva o passado. |
+| **ID_Participante_Proprietario** | *referência (Cad_Participante), opcional* | Revisão 30 (documento 168, seção 3.10, G10; D-N460 e D-N461): O dono do material. Obrigatório (aviso) quando Propriedade não é proprio. |
 
-  **ID_Item**                      *identificador*                 ---
-
-  **ID_Movimento**                 *referência                     ---
-                                   (Mov_Estoque_Movimento)*        
-
-  **ID_Produto_Servico**           *referência                     ---
-                                   (Cad_Produto_Servico)*          
-
-  **ID_Local_Estoque_Origem**      *referência (Cad_Local_Estoque, Vazio para entrada pura (nada saiu de um local --- veio
-                                   opcional)*                      de fora).
-
-  **ID_Local_Estoque_Destino**     *referência (Cad_Local_Estoque, Vazio para saída pura (nada foi guardado --- saiu de
-                                   opcional)*                      vez). Numa transferência, origem e destino são
-                                                                   preenchidos juntos (ver seção 9).
-
-  **ID_Posicao_Estoque_Origem**    *referência                     Adicionado nesta revisão: posição física dentro do local
-                                   (Cad_Posicao_Estoque,           de origem, mais granular que o local sozinho (ver seção
-                                   opcional)*                      6).
-
-  **ID_Posicao_Estoque_Destino**   *referência                     Idem, para o local de destino.
-                                   (Cad_Posicao_Estoque,           
-                                   opcional)*                      
-
-  **Quantidade**                   *número, opcional*              Passou a ser opcional nesta revisão: um movimento pode
-                                                                   ser só de valor, sem quantidade --- ex.: entrada de
-                                                                   custo de importação que chegou depois da nota fiscal de
-                                                                   entrada já lançada. Quando preenchida, é sempre positiva
-                                                                   --- o efeito sobre o saldo vem da Direção do Tipo de
-                                                                   Movimento, nunca do sinal aqui, exceto o caso de
-                                                                   bonificação abaixo, em que a quantidade é positiva mas o
-                                                                   Valor_Total é negativo.
-
-  **Valor_Total**                  *número*                        Substituiu Custo_Unitario (Revisão 1). Campo principal,
-                                                                   sempre presente e não recalculado a partir de Quantidade
-                                                                   × custo unitário --- mesmo princípio de fidelidade ao
-                                                                   valor real já usado em Compras --- EXCETO na saída
-                                                                   valorizada por Metodo_Valoracao=custo_medio, em que não
-                                                                   existe documento externo e o valor É genuinamente
-                                                                   calculado: Quantidade × custo médio vigente (seção 7).
-                                                                   Pode ser negativo mesmo numa entrada --- caso de
-                                                                   bonificação, ver exemplo abaixo.
-
-  **ID_Valor_Referencia_Tipo**     *enumeração                     Adicionado nesta revisão: de onde vem o Valor_Total,
-                                   {nota_fiscal_entrada_item,      quando Metodo_Valoracao=valor_documento_origem ou
-                                   movimento_estoque_item,         valor_movimento_origem --- mesmo padrão de referência
-                                   ordem_producao_custo_apurado,   genérica já usado em Mov_Aprovacao_Instancia (Fase 0).
-                                   nenhum}*                        \"ordem_producao_custo_apurado\" foi adicionado na
-                                                                   revisão 8, pedido pela especificação do módulo Fase 1
-                                                                   Produção: a entrada de produto acabado (Tipo_Movimento
-                                                                   \"Entrada de Produção\",
-                                                                   Metodo_Valoracao=valor_documento_origem) não tem nota
-                                                                   fiscal de origem nem reusa um movimento anterior --- o
-                                                                   valor vem do custo total apurado daquela ordem
-                                                                   (materiais diretos/indiretos, mão de obra
-                                                                   direta/indireta, serviços de terceiros, industrialização
-                                                                   em terceiros), calculado pelo próprio módulo de
-                                                                   Produção.
-
-  **ID_Valor_Referencia**          *identificador do registro de   Ex.: o ID_Item de Mov_Nota_Fiscal_Entrada_Item (compra:
-                                   referência, opcional*           Valor_Total; bonificação: Valor_Credito_Tributario ---
-                                                                   Fase 1, Compras), o ID_Item de um
-                                                                   Mov_Estoque_Movimento_Item anterior (as três devoluções,
-                                                                   que reusam o valor do movimento de origem), ou o
-                                                                   ID_Custo_Apurado de Mov_Ordem_Producao_Custo_Apurado
-                                                                   (Fase 1 --- Produção) quando
-                                                                   ID_Valor_Referencia_Tipo=ordem_producao_custo_apurado.
-
-  **ID_Lote**                      *referência (Cad_Lote_Produto,  Controle de lote --- Cad_Lote_Produto modelado nesta
-                                   opcional)*                      revisão (abaixo). Vazio para produtos sem controle de
-                                                                   lote; preenchido quando o produto exige rastreabilidade
-                                                                   por lote, tipicamente um Produto_Controlado (Fase 0).
-                                                                   Participa do saldo derivado (ver acima) e do custo médio
-                                                                   por lote (seção 7).
-  -------------------------------- ------------------------------- --------------------------------------------------------
+*Revisão 30 --- campos novos: Propriedade, ID_Participante_Proprietario.*
 
 *Comportamento de aplicação --- travamento por competência fechada
 (adicionado na Revisão 10): a confirmação de qualquer
@@ -846,10 +755,12 @@ fechamento. Nunca digitada nem editada.
 | **Quantidade_Saidas** | *número* | --- |
 | **Quantidade_Final** | *número* | --- |
 | **Data_Hora_Geracao** | *data/hora* | Quando foi gravado, ou regravado depois de uma reabertura. |
-| **Propriedade** | *enumeração {proprio, de_terceiros_em_poder_da_empresa, da_empresa_em_poder_de_terceiros}* | Novo na revisão 3 (documento 37). IND_EST do K200 e IND_PROP do H010; mesma lista de Mov_Inventario_Item.Propriedade (documento 33). O material do encomendante (de terceiros em poder) entra no saldo sem valorização. |
-| **ID_Participante_Proprietario** | *referência (Cad_Participante, opcional)* | Novo na revisão 3 (documento 37). COD_PART do K200: dono ou possuidor do item; obrigatório quando a propriedade não é própria em poder da empresa. |
+| **Propriedade** | *enumeração {proprio, de_terceiros_em_poder_da_empresa, da_empresa_em_poder_de_terceiros}* | Novo na revisão 3 (documento 37). IND_EST do K200 e IND_PROP do H010; mesma lista de Mov_Inventario_Item.Propriedade (documento 33). O material do encomendante (de terceiros em poder) entra no saldo sem valorização. Revisão 30 (documento 168, seção 3.10, G10; Q168-2): o saldo passa a ser único por local, posição, produto, lote, competência, propriedade e participante; o K200 e o H010 saem do saldo por propriedade, e o custo médio (Mov_Estoque_Custo_Medio) ignora tudo o que não é proprio. O material do encomendante em poder da Mlegate é controlado no estoque de terceiros, sem valor, como movimento de propriedade de terceiros (corrige o documento 06, seção 8.2). |
+| **ID_Participante_Proprietario** | *referência (Cad_Participante, opcional)* | Novo na revisão 3 (documento 37). COD_PART do K200: dono ou possuidor do item; obrigatório quando a propriedade não é própria em poder da empresa. Revisão 30 (documento 168, Q168-2): faz parte da unicidade do saldo, junto com Propriedade. |
 
 *Revisão 3 --- campos novos (documento 37): Propriedade, ID_Participante_Proprietario.*
+
+*Revisão 30 --- campos alterados: Propriedade, ID_Participante_Proprietario.*
 
 Mov_Saldo_Estoque_Valor
 
@@ -1109,8 +1020,12 @@ indicavam no momento da contagem.
 | **Valor_Unitario** | *número* | Novo na revisão 3 (documento 33). Valor unitário do item no inventário (VL_UNIT). |
 | **Valor_Item** | *número* | Novo na revisão 3 (documento 33). Valor do item (VL_ITEM = quantidade x valor unitário). |
 | **Valor_Item_Ir** | *número, opcional* | Novo na revisão 3 (documento 33). Valor do item para efeito do Imposto de Renda (VL_ITEM_IR). |
+| **Texto_Complementar** | *texto, opcional* | Revisão 32 (documento 175, seção 8.2; D-N480; Q175-1 a Q175-9 pela recomendação): TXT_COMPL do H010. |
+| **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil), opcional* | Revisão 32 (documento 175, seção 8.2; D-N480; Q175-1 a Q175-9 pela recomendação): COD_CTA do H010: a conta contábil do item. Sem o campo o dado só se deduzia do lançamento do fechamento de estoque. |
 
 *Revisão 3 --- campos novos (documento 33): Propriedade, ID_Participante_Proprietario, Valor_Unitario, Valor_Item, Valor_Item_Ir.*
+
+*Revisão 32 --- campos novos: Texto_Complementar, ID_Conta_Contabil.*
 
 Mov_Inventario_Contagem
 
@@ -1759,6 +1674,8 @@ Reclassificação de item em estoque, quando o código muda por pedido do client
 | **ID_Produto_Servico_Destino** | *referência (Cad_Produto_Servico)* | COD_ITEM_DEST: item que entra no estoque, diferente do de origem. |
 | **Quantidade_Origem** | *número* | QTD_ORI: quantidade do item de origem, maior que zero. |
 | **Quantidade_Destino** | *número* | QTD_DEST: quantidade do item de destino, maior que zero. |
-| **Motivo_Reclassificacao** | *enumeração {solicitacao_cliente, controle_qualidade, outro}* | Por que o código mudou, conforme o Guia. |
+| **Motivo_Reclassificacao** | *enumeração {solicitacao_cliente, controle_qualidade, outro, deterioracao, obsolescencia_reaproveitamento, estoque_por_cliente, aglutinacao_insumo}* | Por que o código mudou, conforme o Guia. Revisão 32 (documento 176, seção 7.2, Q176-9; D-N482): deterioracao (item deteriorado que passa a subproduto vendável, FAQ 16.4.1.21), obsolescencia_reaproveitamento (16.4.1.15), estoque_por_cliente (estoque segregado por cliente com código próprio, 16.4.1.20) e aglutinacao_insumo (insumos de cores diferentes num código único, 16.4.1.18). O campo é interno (não vai ao arquivo); outro continua para o que não couber. |
 | **ID_Movimento_Estoque_Item_Saida** | *referência (Mov_Estoque_Movimento_Item, opcional)* | Saída do item de origem. |
 | **ID_Movimento_Estoque_Item_Entrada** | *referência (Mov_Estoque_Movimento_Item, opcional)* | Entrada do item de destino. |
+
+*Revisão 32 --- valores de enumeração novos: Motivo_Reclassificacao (+deterioracao, obsolescencia_reaproveitamento, estoque_por_cliente, aglutinacao_insumo).*
