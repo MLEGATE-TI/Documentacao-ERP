@@ -7,6 +7,16 @@ retenções na fonte, provisão para devedores duvidosos, variação cambial
 e obrigações acessórias --- sobre o plano de contas e o lançamento
 contábil já definidos na Fase 0*
 
+*Revisão 63 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 8 entidades novas (anexo, seção 58); 6 entidades existentes alteradas; Cad_Cclasstrib com Tipo_Aliquota e Numero_Anexo_Lc_214 e sem Indicador_Duimp (Q221-2, Q221-3 e Q221-5); crédito presumido com dois valores (Q221-7); opção de escrituração por empresa (Q188-8); campos de descarte no arquivo (Q188-7).*
+
+*Revisão 62 --- consolidação da revisão 44 do dicionário (documento 218 (Bloco 1 de combustíveis e usina, versão 2.2), com as respostas de Alberto de 12/11/2026 (Q218-1 a Q218-17)): 9 entidades novas (anexo, seção 57); 9 entidades novas do documento 218 (Bloco 1 de combustíveis e usina; 107 campos).*
+
+*Revisão 61 --- consolidação da revisão 43 do dicionário (documentos 215 (ST de autopeças e variações por UF, versão 2.1) e 216 (Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos), com as respostas de Alberto de 12/11/2026): 14 entidades novas (anexo, seção 56); 2 entidades existentes alteradas; 14 entidades novas (documentos 215 e 216) e 6 campos novos em Cad_Autopecas_Perfil e Cad_Filial_Regime_Icms (documento 215).*
+
+*Revisão 60 --- consolidação da revisão 42 do dicionário (documentos 210 (dedução de material na base das retenções, IN RFB 2.110 e 1.234) e 207 (alíquota de IPI de 31/12/2025 das posições 8702 a 8704), com as respostas de Alberto de 11/11/2026): 4 entidades novas (anexo, seção 55); 3 entidades existentes alteradas; Mov_Titulo_Retencao com 1 campo novo (Enquadramento_Emprego_Materiais), Mov_Reinf_Servico_Previdenciario_Tipo com a descrição de Valor_Base_Retencao mudada e Mov_Credito_Automotivo_Apuracao_Ncm com 1 valor de enumeração novo e a descrição de Aliquota_Ipi_Referencia mudada (documentos 210 e 207).*
+
+*Revisão 59 --- consolidação da revisão 41 do dicionário (documento 212 (B7, marketplace e plataformas digitais), com as respostas de Alberto de 11/11/2026): 3 entidades novas (anexo, seção 54); 1 entidades existentes alteradas.*
+
 *Revisão 58 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 25 entidades novas (anexo, seção 53); 2 entidades existentes alteradas; 25 entidades novas (documentos 204, 206 e 209), o campo Dispositivo_Inaplicabilidade_St e os textos de Cad_Habilitacao_Regime_Especial.Numero_Habilitacao e Mov_Credito_Fiscal.Origem.*
 
 *Revisão 57 --- consolidação da revisão 39 do dicionário (documento 202 e ajuste A1 do documento 205, com as respostas de Alberto de 10/11/2026): 8 entidades novas (anexo, seção 52); 2 entidades existentes alteradas; 8 entidades novas do B6 (documento 202, com o ajuste A1 do documento 205) e o texto de Cad_Habilitacao_Regime_Especial.Numero_Habilitacao.*
@@ -507,7 +517,7 @@ de \"nunca editar um evento\" já usado em todo o dicionário.*
 | **Origem_Tipo** | *enumeração {nota_fiscal_entrada, nota_fiscal_saida, evento_conta_financeira, pagamento_imobiliario, operacao_fiscal_diversa, depreciacao_ativo, aquisicao_ativo, baixa_titulo_receber, adiantamento_cliente, bpe_evento}* | Alterado na revisão 3 (documento 44). "evento_conta_financeira" aponta para Mov_Conta_Contabil_Evento em vez de um item de nota fiscal, mas deixa de ser usado para PIS e Cofins (D-N100): o rendimento de aplicação nasce de operacao_fiscal_diversa (Mov_Operacao_Fiscal_Diversa, gerada do razão). Revisão 15 (Bloco 2): pagamento_imobiliario aponta para Mov_Operacao_Imobiliaria_Pagamento. Os demais valores novos do doc 44 (depreciacao_ativo, aquisicao_ativo, baixa_titulo_receber, receita_deducao_setorial, receita_comunicacao_complementar) são acrescentados pelo agente 44. Revisão 28 (documento 153, Q153-3, aprovada): adiantamento_cliente é o IBS e a CBS cobrados no recebimento de um adiantamento de cliente; ID_Item_Origem aponta a linha de Mov_Credito_Destino_Item; a linha nasce uma por tributo (CBS, IBS estadual e IBS municipal), com a alíquota do local copiado e a data do fato = Mov_Credito.Data_Credito. Revisão 30 (documento 164, Q164-7): bpe_evento é a tributação do excesso de bagagem do evento 110117 do BP-e, um serviço que não é item da nota; leitura minha: ID_Item_Origem aponta Mov_Bpe_Evento. |
 | **ID_Item_Origem** | *referência genérica* | Alterado na revisão 3 (documento 43). O item de Mov_Nota_Fiscal_Entrada ou Mov_Nota_Fiscal_Saida conforme Origem_Tipo; quando operacao_fiscal_diversa, o ID da Mov_Operacao_Fiscal_Diversa; quando pagamento_imobiliario, o ID_Operacao_Pagamento de Mov_Operacao_Imobiliaria_Pagamento. O evento_conta_financeira não é mais usado para PIS e Cofins (D-N100). |
 | **ID_Imposto** | *referência (Cad_Imposto, Fase 0)* | {icms, ipi, pis, cofins, iss, cbs, ibs, imposto_seletivo, outro} --- os tributos antigos e novos convivendo no mesmo domínio, um valor cada, sem tabela separada por sistema. Revisão 13: aponta para Cad_Imposto, o catálogo único de tributos da Fase 0 --- antes apontava para o domínio tipo_tributo de Cad_Classe_Sistema, aposentado (eram dois catálogos do mesmo dado). |
-| **ID_Cst** | *referência (Cad_Cst, seção 6)* | Adicionado nesta revisão (2): o código oficial de situação tributária do item PARA ESTE TRIBUTO --- cada tributo tem sua própria tabela de CST (ICMS pelo CONFAZ; IPI e PIS/COFINS pela Receita Federal; um CST próprio de 19 códigos para IBS/CBS, publicado pelo Portal Nacional da NF-e). Campo obrigatório --- sem ele, esta linha não tem como ser lida pelas obrigações acessórias (seção 16). |
+| **ID_Cst** | *referência (Cad_Cst, seção 6)* | Adicionado nesta revisão (2): o código oficial de situação tributária do item PARA ESTE TRIBUTO --- cada tributo tem sua própria tabela de CST (ICMS pelo CONFAZ; IPI e PIS/COFINS pela Receita Federal; um CST próprio de 18 códigos (corrigido na revisão 45, D-N588: Q221-1; a tabela da IT 2025.002 v1.71 tem 18) para IBS/CBS, publicado pelo Portal Nacional da NF-e). Campo obrigatório --- sem ele, esta linha não tem como ser lida pelas obrigações acessórias (seção 16). |
 | **ID_Cclasstrib** | *referência (Cad_Cclasstrib, seção 6, opcional)* | Adicionado nesta revisão (2): só preenchido quando ID_Imposto = CBS ou IBS --- o código de classificação tributária granular (6 dígitos, os 3 primeiros = o próprio ID_Cst) que carrega o percentual de redução específico. Vazio para tributos antigos, que não têm este segundo nível. |
 | **ID_Calendario** | *referência (Cad_Calendario_Transicao)* | Revisão 11 (documento 72, D-N197): Qual linha do calendário foi usada: a do parâmetro fase_transicao do ano da operação (antes a chave apontava para uma linha que reunia todos os valores do ano). Rastreabilidade/auditoria: o motor lê os demais parâmetros do mesmo ano (percentual_icms_iss_vigente, cobranca_efetiva e outros) pela data da operação, e como cada linha tem versões com vigência a data reconstitui o conjunto vigente, mesmo que o calendário seja corrigido depois. Aliquota_Nominal e Aliquota_Efetiva seguem gravadas no próprio item. |
 | **Forma_Tributacao** | *enumeração {ad_valorem, especifica_por_unidade, pauta_fiscal}* | Adicionado nesta revisão (2), a pedido de Alberto. \"ad_valorem\" = o caso comum, percentual sobre valor monetário (Base_Calculo_Efetiva × Aliquota_Nominal). \"especifica_por_unidade\" = valor fixo em R\$ por unidade de medida (litro, m³, kg) --- regime do IBS/CBS sobre combustíveis (art. 172 da LC 214/2025, monofásico na refinaria/importador/formulador, sem crédito na distribuição/revenda) e de PIS/COFINS monofásico sobre bebidas frias (CST 02/04, Tabela 4.3.10 do Guia Prático da EFD Contribuições). \"pauta_fiscal\" = a base não vem do valor da nota nem de uma quantidade × valor fixo, e sim de uma tabela de preços de referência publicada pela SEFAZ (usada sobretudo em substituição tributária --- seção 8). |
@@ -569,6 +579,8 @@ de \"nunca editar um evento\" já usado em todo o dicionário.*
 *Revisão 31 --- campos novos: Competencia_Debito, Reducao_Transicao_Pontos, ID_Calendario_Reducao, ID_Aliquota_Combustivel.*
 
 *Revisão 36 --- campos novos: ID_Is_Hipotese_Base, Valor_Referencia_Informado.*
+
+*Revisão 45 --- campos alterados: ID_Cst.*
 
 *No ano de teste (Cad_Calendario_Transicao, parâmetro fase_transicao = teste, 2026),
 Mov_Apuracao_Tributo_Item continua sendo gerada normalmente para
@@ -936,7 +948,6 @@ novo é sempre registro novo, ligado por sucessão (Fase 0, seção 2.3).*
 | **Indicador_Credito_Presumido_Operacao** | *booleano* | Novo na revisão 3 (documento 41). ind_gCredPresOper: o classificador admite crédito presumido da operação (regra de IBS/CBS: crédito presumido). |
 | **Tipo_Receita_Bruta_Sn** | *código (1), opcional* | Novo na revisão 3 (documento 41). tpRBSN: tipo de receita bruta do Simples Nacional; decide vReceitaBrutaSN (vale zero quando é 0) e gTribSN. |
 | **Tipo_Doacao** | *código (1), opcional* | Novo na revisão 3 (documento 41). tpDoacao: tipo de doação do classificador; decide a regra de indDoacao (1056: veda; 1057: exige). |
-| **Indicador_Duimp** | *booleano* | Novo na revisão 3 (documento 41). ind_DUIMP: o classificador exige o número da DUIMP. |
 | **Indicador_Mono_Padrao** | *booleano* | Novo na revisão 7 (documento 60, D-N146 e D-N147). ind_gMonoPadrao (IT 2025.002): o classificador exige o grupo de monofasia padrão. As marcas por modelo (NF-e, NFS-e, NFS-e Via, NFCom e as demais da IT) migraram para Cad_Cclasstrib_Modelo. |
 | **Indicador_Mono_Reten** | *booleano* | Novo na revisão 7 (documento 60, D-N147). ind_gMonoReten (IT 2025.002): o classificador exige o grupo de monofasia com retenção. |
 | **Indicador_Mono_Ret** | *booleano* | Novo na revisão 7 (documento 60, D-N147). ind_gMonoRet (IT 2025.002): o classificador exige o grupo de monofasia retida anteriormente. |
@@ -946,6 +957,8 @@ novo é sempre registro novo, ligado por sucessão (Fase 0, seção 2.3).*
 | **Aplica_Reducao_Transicao_Cbs** | *booleano, opcional* | Revisão 31 (documento 157, seção 7.6, Q157-11; D-N466 e D-N469): Diz se a classificação recebe a redução de 0,1 ponto da CBS em 2027 e 2028 (LC 214, art. 347). Preenchido na carga. A exceção dos combustíveis do regime específico (LC, arts. 172 a 180) fica nesta coluna por ora e passa ao catálogo de combustíveis depois (Q157-C11). |
 | **ID_Instituto_Beneficio** | *referência (Cad_Classe_Sistema, domínio = instituto_beneficio_ibs_cbs), opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O instituto que a classificação aplica (redução a zero, suspensão com conversão, isenção, diferimento ou redução distinta). Vazio na classificação de tributação regular. Dá ao Motor a ordem do art. 7º-A por Cad_Instituto_Beneficio_Ordem. |
 | **Admite_Cumulacao_Reducao** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): Verdadeiro só quando a lei prevê expressamente a cumulação desta redução com outra (art. 7º-A, parágrafo único, I). Sem previsão, prevalece a maior redução (II). Vazio no que não é redução. |
+| **Tipo_Aliquota** | *enumeração {sem_aliquota, padrao, uniforme_setorial, fixa, uniforme_nacional_referencia}, opcional* | Revisão 45 (documento 222; D-N588): Coluna "Tipo de Alíquota" da tabela cClassTrib (IT 2025.002 v1.71; D-N588: Q221-2): sem alíquota (89 classificações), padrão (64), uniforme setorial (8), fixa (7) e uniforme nacional de referência (5). |
+| **Numero_Anexo_Lc_214** | *código (até 2), opcional* | Revisão 45 (documento 222; D-N588): Coluna ANEXO quando traz só o número do anexo da LC 214 (1 a 15; 19 classificações; D-N588: Q221-3). O `Codigo_Anexo_Tecnico` (5 posições) continua para o anexo técnico ZXXXY. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
@@ -959,6 +972,8 @@ novo é sempre registro novo, ligado por sucessão (Fase 0, seção 2.3).*
 *Revisão 31 --- campos novos: Aplica_Reducao_Transicao_Cbs.*
 
 *Revisão 36 --- campos novos: ID_Instituto_Beneficio, Admite_Cumulacao_Reducao.*
+
+*Revisão 45 --- campos novos: Tipo_Aliquota, Numero_Anexo_Lc_214; campos que saem: Indicador_Duimp.*
 
 Cad_Cclasstrib_Documento
 
@@ -1768,12 +1783,15 @@ simultaneamente.
 | **ID_Natureza_Retencao_Efd** | *referência (Cad_Classe_Sistema, domínio = natureza_retencao_pis_cofins, opcional)* | Novo na revisão 3 (documento 44). Natureza da retenção na EFD-Contribuições (IND_NAT_RET) em F600, 1300 e 1700. |
 | **Valor_Retido_Pis_Pasep** | *número, opcional* | Novo na revisão 3 (documento 44). Parcela do PIS/Pasep quando a retenção é agregada (código 5952); alimenta o F600. |
 | **Valor_Retido_Cofins** | *número, opcional* | Novo na revisão 3 (documento 44). Parcela da Cofins quando a retenção é agregada (código 5952); alimenta o F600. |
+| **Enquadramento_Emprego_Materiais** | *enumeração {atende, nao_atende_contrato, nao_atende_nota, nao_atende_essencialidade, servico_de_saude_excluido}, opcional* | Revisão 42 (documento 210, seção 5.3; D-N561): O resultado da verificação dos requisitos da IN 1.234, art. 2º, § 7º, I: (1) o contrato prevê o fornecimento, (2) os materiais estão no contrato ou na planilha integrante e são essenciais ao serviço (esse requisito é da SC Cosit 220/2026, não do texto da IN), (3) estão na nota ou fatura. `servico_de_saude_excluido` é o § 8º. Preenchido na retenção `retido_pelo_cliente` de órgão público federal. |
 
 *Revisão 3 --- campos novos (documento 35): ID_Guia_Iss, Responsavel_Retencao; campos novos (documento 37): Ente_Pagador_Retencao, ID_Retencao_Federal_Parametro; campos novos (documento 44): ID_Natureza_Retencao_Efd, Valor_Retido_Pis_Pasep, Valor_Retido_Cofins.*
 
 *Revisão 18 (Bloco 4): ID_Tipo_Retencao troca o valor
 
 *Revisão 23 --- campos alterados: ID_Baixa.*
+
+*Revisão 42 --- campos novos: Enquadramento_Emprego_Materiais.*
 pis_cofins_csll_retido por csll, cofins, pis_pasep e
 agregado_csll_cofins_pis, porque o R-4020 informa base e valor de cada
 tributo ou do conjunto agregado. APOSENTADOS nesta revisão:
@@ -2679,6 +2697,12 @@ mudar com data.*
 | **Criterio_Reconhecimento_Receita** | *enumeração {caixa, competencia}, opcional* | Revisão 25 (D-N373 e D-N374, documentos 126 e 127, Q126-3, respondida por Alberto em 27/10/2026): o critério de reconhecimento da receita no lucro presumido (campo IND_REC_RECEITA do registro 0010 da ECF; RIR, art. 215, § 9º: competência ou caixa). Obrigatório quando a forma de tributação é lucro presumido. Com caixa, a receita por percentual sai das baixas dos títulos a receber, repartidas entre as atividades pelos itens da nota (desenho no documento 127, que ainda espera as Q127-2 a Q127-5); o adiantamento de cliente só conta na aplicação contra o título da nota (Q127-6). Revisão 28 (documentos 127 e 152): na mudança de critério o ERP indica o que deveria ser ajustado e o usuário confirma; nunca altera a receita por caixa sozinho (Q127-4). |
 | **Sujeita_Tef_Saf** | *booleano* | Revisão 27 (documento 147, Q147-1): a empresa é SAF e paga pelo TEF (Tributação Específica do Futebol). Não é opção: o art. 421 do Decreto 12.955 diz que as operações da SAF ficam sujeitas ao regime (substitui o Opcao_Tef_Saf dos documentos 70 e 94). Quem marca é o contador, e a mudança é versão nova do perfil, com vigência. Com o campo verdadeiro, o ERP não apura IRPJ, CSLL nem a contribuição previdenciária patronal pelos caminhos do lucro real ou presumido: a apuração é a de Mov_Apuracao_Tef; apurações antigas de IRPJ e CSLL no mesmo período geram aviso, não bloqueio. O valor tef_saf da forma de tributação da ECF é o que a ECF lê; a conferência entre os dois campos é aviso. |
 | **Atividade_Principal_Family_Office** | *booleano, opcional* | Revisão 30 (documento 156, seção 4.6, Q156-11; D-N463 e D-N465): Verdadeiro quando a atividade principal da sociedade é a gestão de bens e ativos financeiros de pessoas físicas (art. 57, § 2º da LC 214; Decreto, art. 63, § 4º). Vazio quer dizer que a empresa não declarou. A hipótese de family office de Cad_Regra_Uso_Consumo_Pessoal só vale com ele verdadeiro. |
+| **Eh_Plataforma_Digital** | *booleano* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): A empresa é plataforma digital (LC 214, art. 22, § 1º). Liga os demais campos e o aviso de inscrição (art. 23). Padrão falso. |
+| **Controla_Cobranca** | *booleano, opcional* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): O elemento essencial "cobrança" (§ 1º, II, "a"). Vazio quando não é plataforma. |
+| **Controla_Pagamento** | *booleano, opcional* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): "Pagamento" (§ 1º, II, "b"). |
+| **Controla_Termos_Condicoes** | *booleano, opcional* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): "Definição dos termos e condições" (§ 1º, II, "c"). |
+| **Controla_Entrega** | *booleano, opcional* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): "Entrega" (§ 1º, II, "d"). |
+| **Atividade_Unica_Excluida** | *enumeração {nenhuma, acesso_internet, servico_pagamento, publicidade, busca_comparacao_sem_cobranca_por_venda}, opcional* | Revisão 41 (documento 212, seção 5.3; D-N553: Q212-3): A única atividade que, sozinha, **tira** a empresa do conceito de plataforma (§ 2º). Vazio quando não é plataforma. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
@@ -2698,6 +2722,8 @@ mudar com data.*
 *Revisão 28 --- campos alterados: Criterio_Reconhecimento_Receita.*
 
 *Revisão 30 --- campos novos: Atividade_Principal_Family_Office.*
+
+*Revisão 41 --- campos novos: Eh_Plataforma_Digital, Controla_Cobranca, Controla_Pagamento, Controla_Termos_Condicoes, Controla_Entrega, Atividade_Unica_Excluida.*
 
 Cad_Empresa_Perfil_Fiscal_Uf
 
@@ -2782,38 +2808,22 @@ concessão vem por ato, com prazo.
 
 *Vigência: sim --- a concessão tem prazo.*
 
-  --------------------------- ---------------------- ----------------------------------------
-  **Campo**                   **Tipo lógico**        **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Filial_Regime_Icms** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial)* | --- |
+| **ID_Estado** | *referência (Cad_Estado)* | A UF que concedeu. |
+| **ID_Tipo_Regime_Icms** | *referência (Cad_Classe_Sistema, domínio = tipo_regime_icms)* | Domínio aberto. |
+| **Numero_Ato** | *código (até 30)* | Ato ou processo da concessão. |
+| **Fundamento_Legal** | *texto, opcional* | --- |
+| **Natureza_Regime** | *enumeração {tributo, obrigacao_acessoria}, opcional* | Revisão 43 (documento 215, seção 6.3; D-N571): Distingue o regime de imposto (credenciamento de AL, dispensa de MG) do de obrigação acessória (substituir documento, centralizar escrita, dispensa, do MS). Vazio nas linhas anteriores. |
+| **Renovacao_Automatica** | *booleano, opcional* | Revisão 43 (documento 215, seção 6.3; D-N571): O regime se renova sozinho se o contribuinte não tem pendência (MS). |
+| **Prazo_Meses** | *número, opcional* | Revisão 43 (documento 215, seção 6.3; D-N571): O prazo da concessão, quando a UF o fixa (MS: 6 meses). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
-  **ID_Filial_Regime_Icms**   *identificador*        ---
-
-  **ID_Filial**               *referência            ---
-                              (Cad_Filial)*          
-
-  **ID_Estado**               *referência            A UF que concedeu.
-                              (Cad_Estado)*          
-
-  **ID_Tipo_Regime_Icms**     *referência            Domínio aberto.
-                              (Cad_Classe_Sistema,   
-                              domínio =              
-                              tipo_regime_icms)*     
-
-  **Numero_Ato**              *código (até 30)*      Ato ou processo da concessão.
-
-  **Fundamento_Legal**        *texto, opcional*      ---
-
-  **Vigencia_Inicio**         *data*                 Primeiro dia em que esta versão vale.
-
-  **Vigencia_Fim**            *data*                 Último dia em que esta versão vale
-                                                     (inclusive). Sempre preenchida:
-                                                     31/12/9999 quando o fim é indefinido
-                                                     (versão vigente). Sempre preenchida:
-                                                     31/12/9999 quando o fim é indefinido
-                                                     (versão vigente) --- convenção da Fase
-                                                     0, seção 2.
-
-  **Motivo_Vigencia**         *texto, opcional*      Por que esta versão foi criada.
-  --------------------------- ---------------------- ----------------------------------------
+*Revisão 43 --- campos novos: Natureza_Regime, Renovacao_Automatica, Prazo_Meses.*
 
 Cad_Filial_Beneficio_Fiscal
 
@@ -4958,43 +4968,22 @@ com a base, a retenção e o adicional.
 
 *Vigência: não --- é um fato ligado à nota.*
 
-  ---------------------------------- ------------------------------------- ----------------------------------------
-  **Campo**                          **Tipo lógico**                       **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Servico_Tipo** | *identificador* | --- |
+| **ID_Servico_Previdenciario** | *referência (Mov_Reinf_Servico_Previdenciario)* | --- |
+| **ID_Tipo_Servico** | *referência (Cad_Classe_Sistema, domínio = tipo_servico_reinf)* | tpServico, Tabela 06. |
+| **Valor_Base_Retencao** | *número* | vlrBaseRet. Revisão 42 (documento 210, seção 5.3; D-N561): é o rateio, entre os tipos de serviço, de Mov_Retencao_Inss_Base_Apuracao.Valor_Base_Final; a soma dos tipos é a base final. |
+| **Valor_Retencao** | *número* | vlrRetencao: 11% ou 3,5% da base, e nunca mais que 11%. |
+| **Valor_Retencao_Subcontratada** | *número, opcional* | vlrRetSub. Não pode ser maior que Valor_Retencao. |
+| **Valor_Nao_Retido_Principal** | *número, opcional* | vlrNRetPrinc: a retenção principal que deixou de ser feita, ou foi depositada em juízo, por decisão. A decisão fica em Mov_Reinf_Suspensao. |
+| **Valor_Servicos_15** | *número, opcional* | vlrServicos15: serviços de segurados que dão aposentadoria especial aos 15 anos. |
+| **Valor_Servicos_20** | *número, opcional* | vlrServicos20. |
+| **Valor_Servicos_25** | *número, opcional* | vlrServicos25. A soma dos três não pode ser maior que Valor_Base_Retencao. |
+| **Valor_Adicional** | *número, opcional* | vlrAdicional: 4% do de 15 anos mais 3% do de 20 mais 2% do de 25. |
+| **Valor_Nao_Retido_Adicional** | *número, opcional* | vlrNRetAdic. |
 
-  **ID_Servico_Tipo**                *identificador*                       ---
-
-  **ID_Servico_Previdenciario**      *referência                           ---
-                                     (Mov_Reinf_Servico_Previdenciario)*   
-
-  **ID_Tipo_Servico**                *referência (Cad_Classe_Sistema,      tpServico, Tabela 06.
-                                     domínio = tipo_servico_reinf)*        
-
-  **Valor_Base_Retencao**            *número*                              vlrBaseRet.
-
-  **Valor_Retencao**                 *número*                              vlrRetencao: 11% ou 3,5% da base, e
-                                                                           nunca mais que 11%.
-
-  **Valor_Retencao_Subcontratada**   *número, opcional*                    vlrRetSub. Não pode ser maior que
-                                                                           Valor_Retencao.
-
-  **Valor_Nao_Retido_Principal**     *número, opcional*                    vlrNRetPrinc: a retenção principal que
-                                                                           deixou de ser feita, ou foi depositada
-                                                                           em juízo, por decisão. A decisão fica em
-                                                                           Mov_Reinf_Suspensao.
-
-  **Valor_Servicos_15**              *número, opcional*                    vlrServicos15: serviços de segurados que
-                                                                           dão aposentadoria especial aos 15 anos.
-
-  **Valor_Servicos_20**              *número, opcional*                    vlrServicos20.
-
-  **Valor_Servicos_25**              *número, opcional*                    vlrServicos25. A soma dos três não pode
-                                                                           ser maior que Valor_Base_Retencao.
-
-  **Valor_Adicional**                *número, opcional*                    vlrAdicional: 4% do de 15 anos mais 3%
-                                                                           do de 20 mais 2% do de 25.
-
-  **Valor_Nao_Retido_Adicional**     *número, opcional*                    vlrNRetAdic.
-  ---------------------------------- ------------------------------------- ----------------------------------------
+*Revisão 42 --- campos alterados: Valor_Base_Retencao.*
 
 21.3.2. Recursos de associação desportiva (R-2030 e R-2040)
 
@@ -9574,10 +9563,14 @@ Arquivo gerado de uma escrituração ou declaração (EFD ICMS/IPI, EFD-Contribu
 | **Situacao_Especial** | *enumeração {abertura, cisao, fusao, incorporacao, encerramento}, opcional* | Situação especial da escrituração (0000.IND_SIT_ESP). Revisão 35 (documento 192, Q192-4; D-N519): na ECF fica vazio; vale Mov_Ecf_Periodo.ID_Situacao_Especial. A Finalidade da ECF é original ou substituta. |
 | **ID_Entidade_Ligada** | *referência (Cad_Entidade_Ligada_Reinf, opcional)* | SCP a que o arquivo pertence (0000 e 0035); cada SCP gera uma EFD separada. |
 | **ID_Criterio_Detalhe_Receita_Recebida** | *referência (Cad_Classe_Sistema, domínio = indicador_composicao_receita_recebida, opcional)* | Critério usado na geração para abrir a receita recebida (F525.IND_REC). |
+| **Data_Descarte_Prevista** | *data, opcional* | Revisão 45 (documento 222; D-N584): Última transmissão aceita da escrituração do período (empresa, filial, obrigação, SCP e período) mais `Anos_Guarda` de `Cad_Obrigacao_Guarda_Arquivo`; recalculada a cada retificadora, em todas as versões do período. Vazio enquanto nada foi transmitido (D-N584: Q188-7). Provisório até o contador (C27). |
+| **Retido_Por_Fiscalizacao** | *booleano* | Revisão 45 (documento 222; D-N584): Calculado: verdadeiro quando há linha de `Mov_Escrituracao_Retencao_Fiscalizacao` em curso que cobre a empresa, a obrigação e o período. Suspende o descarte (a data prevista deixa de valer) até o fim da retenção. Guardado porque é o filtro do descarte (D-N584: Q188-7). |
 
 *Revisão 7 --- campos novos: Numero_Versao, Data_Hora_Fechamento, ID_Usuario_Fechamento; campos alterados: ID_Documento_Arquivo, Finalidade, Hash, Status; campo removido: ID_Periodo_Efd.*
 
 *Revisão 35 --- campos alterados: ID_Tipo_Evento_Especial, Data_Evento_Especial, Situacao_Especial, Hash_Escrituracao.*
+
+*Revisão 45 --- campos novos: Data_Descarte_Prevista, Retido_Por_Fiscalizacao.*
 
 Mov_Escrituracao_Arquivo_Ocorrencia
 
@@ -12237,8 +12230,8 @@ Catálogo do código de crédito presumido (cCredPres, 13 códigos da planilha d
 | **Indicador_Apropriacao_Por_Nota** | *booleano, opcional* | Coluna "Apropria via NF?" da planilha: o crédito é apropriado pela própria nota. |
 | **Indicador_Apropriacao_Por_Evento** | *booleano* | Verdadeiro quando o crédito é apropriado por evento (211110); regra 1062. |
 | **Indicador_Deduz_Credito_Presumido** | *booleano, opcional* | indDeduzCredPres da planilha: o crédito presumido é deduzido do valor da operação. |
-| **Indicador_Credito_Ibs** | *enumeração {nao_permite, permite, exige}* | Grupo de IBS do crédito presumido (gIBSCredPres): não permitido, permitido ou exigido; regras 1064 e 1065. |
-| **Indicador_Credito_Cbs** | *enumeração {nao_permite, permite, exige}* | Grupo de CBS do crédito presumido (gCBSCredPres): não permitido, permitido ou exigido; regras 1067 e 1068. |
+| **Indicador_Credito_Ibs** | *enumeração {nao_permite, exige}* | Grupo de IBS do crédito presumido (gIBSCredPres, `ind_gIBSCredPres` da planilha): `exige` (marca 1) ou `nao_permite` (marca 0); regras 1064 e 1065. O valor `permite` saiu na revisão 45 (D-N588: Q221-7), porque a planilha da IT 2025.002 v1.70 só traz sim ou não. |
+| **Indicador_Credito_Cbs** | *enumeração {nao_permite, exige}* | Grupo de CBS do crédito presumido (gCBSCredPres, `ind_gCBSCredPres` da planilha): `exige` (marca 1) ou `nao_permite` (marca 0); regras 1067 e 1068. O valor `permite` saiu na revisão 45 (D-N588: Q221-7). |
 | **Indicador_Declaracao_Pagamento** | *enumeração {nao_permite, exige}* | Indicador ind_xDecPag/indDecPag: a declaração de pagamento ao TAC ou MEI (xDecPag) é exigida ou vedada; regras 1070 e 1071. |
 | **Percentual_Referencia_Ibs** | *número, opcional* | Percentual de referência do crédito de IBS (pAliqCredPresIBS), quando fixo; nos códigos de alíquota calculada ou efetiva vem do documento. |
 | **Percentual_Referencia_Cbs** | *número, opcional* | Percentual de referência do crédito de CBS (pAliqCredPresCBS), quando fixo; nos códigos de alíquota calculada ou efetiva vem do documento. |
@@ -12257,6 +12250,8 @@ Catálogo do código de crédito presumido (cCredPres, 13 códigos da planilha d
 *Revisão 19 --- campos novos: ID_Categoria_Credito_Presumido.*
 
 *Revisão 24 --- campos alterados: ID_Categoria_Credito_Presumido.*
+
+*Revisão 45 --- campos alterados: Indicador_Credito_Ibs, Indicador_Credito_Cbs.*
 
 Mov_Mdfe_Contratante
 
@@ -12543,13 +12538,15 @@ Parâmetro do prazo de decadência: quantos anos e contados de quando, por obrig
 | **ID_Obrigacao** | *referência (Cad_Obrigacao_Acessoria, opcional)* | Obrigação a que a regra se aplica; vazio quando vale por tributo. |
 | **ID_Imposto** | *referência (Cad_Imposto, opcional)* | Vazio quando vale para a obrigação inteira. |
 | **Anos_Decadencia** | *número* | 5 nos arquivos. |
-| **Base_Contagem** | *enumeração {ano_do_prazo_de_entrega, exercicio_seguinte_ao_fato_gerador, data_do_fato_gerador}* | A regra observada nos arquivos é ano_do_prazo_de_entrega: 31/12 do quinto ano depois do ano do prazo. |
+| **Base_Contagem** | *enumeração {ano_do_prazo_de_entrega, exercicio_seguinte_ao_fato_gerador, data_do_fato_gerador}* | A regra observada nos arquivos é ano_do_prazo_de_entrega: 31/12 do quinto ano depois do ano do prazo. Revisão 45 (D-N584: Q188-7): este campo é a decadência do tributo; o prazo de guarda do arquivo transmitido (5 anos da última transmissão) está em `Cad_Obrigacao_Guarda_Arquivo`. |
 | **Fundamento_Legal** | *texto, opcional* | O contador informa; o arquivo não traz. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga inicial sai provisória até o contador validar (mecanismo do Bloco 3, área de aprovação validacao_dado_legal). |
 | **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia, opcional)* | A validação do contador. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale (DT_INI da tabela oficial). |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale; 31/12/9999 quando o DT_FIM vem vazio. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada (por exemplo, "correção da fonte, versão 38 para 39"). |
+
+*Revisão 45 --- campos alterados: Base_Contagem.*
 
 Cad_Conta_Contabil_Papel_Efd
 
@@ -12867,13 +12864,14 @@ Parâmetro por filial e grupo de documento, com vigência, que diz se a EFD-Cont
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Opcao_Escrituracao** | *identificador* | --- |
 | **ID_Opcao_Escrituracao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Efd_Contribuicoes_Opcao_Escrituracao_Versao). ID_Opcao_Escrituracao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
-| **ID_Filial** | *referência (Cad_Filial) --- identidade* | Estabelecimento do C010. |
-| **Grupo_Documento** | *enumeração {nfe_vendas, nfce_vendas, nfe_aquisicoes, nota_consumidor_02, ecf, cfe_sat} --- identidade* | Grupo de documentos a que a opção se aplica. |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A empresa. Alterado na revisão 45 (documento 222; D-N584: Q188-8, resposta do contador à C33): a escolha entre escrituração consolidada e individualizada vale para a empresa inteira, e não por filial e grupo de documento. Na individualizada, todas as filiais entregam a escrituração, mesmo sem movimento, informando que não houve (aviso do Motor). |
 | **Forma_Escrituracao** | *enumeração {individualizada, consolidada}* | Individualizada = um registro por documento; consolidada = por agrupamento. |
 | **Limite_Tamanho_Arquivo_Mb** | *número, opcional* | Regra do Guia: NFC-e só pode ser consolidada se o arquivo individualizado passasse de 1 GB (parâmetro, não código). |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 45 --- campos que saem: Grupo_Documento; campos renomeados: ID_Filial para ID_Empresa.*
 
 Cad_Informacao_Complementar_Fiscal
 
@@ -19141,7 +19139,7 @@ Revisão 32 (documento 176, seção 5.4, Q176-3; D-N482 e D-N484): a regra do re
 | Tabela 5.1.2 | É a da CPRB (P110) da EFD-Contribuições, e não o ajuste de benefício da EFD-ICMS/IPI: o rótulo do documento 172 estava errado (documento 175, seção 9.4; Q175-7). O catálogo AJ_BENEF_INCENTIVO fica sem número de tabela do Guia |
 | C197 | Só se gera em UF que publicou a tabela 5.3 (FAQ 11.14): o Motor só gera o C197 quando existe a carga da tabela 5.3 da UF em Cad_Efd_Codigo_Estadual; sem ela, aviso e o ajuste vai na apuração (E111, tabela 5.1.1) |
 | C130 | Só na saída (Guia 3.2.4: na entrada, "não apresentar"); 1:1 com o C100; gerado só quando há ao menos um dos valores (serviço não tributado, ISSQN, IRRF ou previdência); o DF não preenche (usa o Bloco B) (D-N487; Q176-12) |
-| C171 e Bloco 1 de combustíveis | O C171 e o Bloco 1 (1300 a 1391) ficam para um bloco próprio (Q167-6). O C165 é de distribuidora, refinaria e revendedora, e não de posto (FAQ 11.8.1.1) |
+| C171 e Bloco 1 de combustíveis | Desenhados no documento 218 (revisão 44; anexo 57 deste documento): o C171 em `Mov_Nota_Fiscal_Entrada_Item_Tanque` e o Bloco 1 (1300 a 1391) nas outras oito entidades, atrás da habilitação `efd_combustivel_lmc_1300` (posto) ou `efd_usina_1390` (usina). O C165 é de distribuidora, refinaria e revendedora, e não de posto (FAQ 11.8.1.1) |
 | C170: COD_ENQ e custo | COD_ENQ sai sempre vazio (a Receita não publicou a tabela); ID_Enquadramento_Ipi (cEnq da NF-e) nunca o alimenta. O adquirente sem direito a crédito de IPI ou de ICMS-ST soma esses valores ao VL_MERC do C100 e ao VL_ITEM do C170 e não informa VL_IPI e VL_ICMS_ST nos C100, C170 e C190 (FAQ 11.13.2.1): é regra de geração do arquivo, e o valor da nota continua guardado como veio |
 | C178 | CL_ENQ do C178 é opcional e sem habilitação (os setores do C178 usam a NF-e e a Receita diz que o registro não é preenchido; Q176-7) |
 | C500 | VL_TERC inclui a taxa de iluminação pública, e o Motor avisa se a taxa vier em grupo de cClass fora do mapa; o campo de informação complementar aceita um só código, cuja descrição vai no 0450 com as observações de interesse fiscal concatenadas; a água canalizada (modelo 29) vai no C500 e no C590 (FAQ 11.17) |
@@ -20645,11 +20643,13 @@ Revisão 39 (documento 202, seção 5.2; D-N541: Q202-4): A base por NCM do mês
 | **ID_Credito_Automotivo_Apuracao** | *referência (Mov_Credito_Automotivo_Apuracao)* | A apuração do mês. |
 | **ID_Classificacao** | *referência (Cad_Classificacao_Mercadoria)* | A NCM (posição 8702 a 8704). |
 | **Valor_Base_Ncm** | *número* | A base da NCM no mês, depois das mesmas exclusões da apuração. |
-| **Aliquota_Ipi_Referencia** | *número* | Al: a alíquota de IPI vigente em 31/12/2025 da NCM, gravada na apuração. |
-| **Origem_Aliquota_Ipi** | *enumeração {tipi_na_data_referencia, informada_no_projeto}* | De onde veio Al: da Tipi na data de referência ou do produto do projeto. |
+| **Aliquota_Ipi_Referencia** | *número* | Al: a alíquota de IPI vigente em 31/12/2025 da NCM, gravada na apuração. Revisão 42 (documento 207, seção 5.4; D-N566): a linha é por NCM e por Al; o Motor soma as bases dos itens que têm a mesma Al. |
+| **Origem_Aliquota_Ipi** | *enumeração {tipi_na_data_referencia, informada_no_projeto, calculada_pelo_motor}* | De onde veio Al: da Tipi na data de referência ou do produto do projeto. Revisão 42 (documento 207, seção 5.4; D-N566): calculada_pelo_motor é a Al de Mov_Aliquota_Ipi_Veiculo (ficha do veículo, com as Notas Complementares). |
 | **Fator_Multiplicador** | *número* | F do ano (32%, 25,60%, 19,20%, 12,80% ou 6,40%), lido de `Cad_Credito_Automotivo_Parametro`. |
 | **ID_Credito_Automotivo_Parametro** | *referência (Cad_Credito_Automotivo_Parametro)* | A linha do fator usada. |
 | **Valor_Credito_Ncm** | *número* | Calculado: `Valor_Base_Ncm × Al × (1 − Al) × F`, com Al e F em fração. |
+
+*Revisão 42 --- campos alterados: Aliquota_Ipi_Referencia; valores de enumeração novos: Origem_Aliquota_Ipi (+calculada_pelo_motor).*
 
 Mov_Credito_Automotivo_Debitos_Proprios
 
@@ -21380,9 +21380,14 @@ Revisão 40 (documento 209, seção 5.2; D-N548: Q209-1 a Q209-11): O perfil de 
 | **Fundamento_Legal** | *texto, opcional* | A norma ou o documento que sustenta o perfil. |
 | **ID_Usuario_Registro** | *referência (Cad_Usuario), opcional* | Quem registrou. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | Provisório até o contador ou o usuário validar. |
+| **Regime_Fidelidade_Distribuicao** | *enumeração {nenhum, indice_fidelidade_lei_6729_art_8, distribuicao_exclusiva_contrato_fidelidade}* | Revisão 43 (documento 215, seção 6.3; D-N571): A condição do fabricante que dá a MVA de fidelidade (41/08, cláusula 2ª, § 2º, I, "a" e "b"). |
+| **Papel_Substituto_St** | *enumeração {nao_substituto_subsequentes, fabricante_par_4, designado_convencao_marca_par_5, atacadista_controlado_par_6}* | Revisão 43 (documento 215, seção 6.3; D-N571): Quem retém nas saídas subsequentes de todas as peças, mesmo as excetuadas (cláusula 1ª, §§ 4º a 6º). |
+| **ID_Documento_Autorizacao_Fisco** | *referência (Cad_Documento), opcional* | Revisão 43 (documento 215, seção 6.3; D-N571): A autorização do fisco de destino (41/08, § 4º, II e § 8º; BA, § 21). O ERP guarda e não valida. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 43 --- campos novos: Regime_Fidelidade_Distribuicao, Papel_Substituto_St, ID_Documento_Autorizacao_Fisco.*
 
 **Cargas de partida da revisão 40 (linhas de tabela, não campos)**
 
@@ -21405,3 +21410,1281 @@ Revisão 40 (documento 209, seção 5.2; D-N548: Q209-1 a Q209-11): O perfil de 
 | Art. 149 da LC 214 (documento 204) | Benefício de PcD, TEA e táxi: reconhecimento, utilização e conferência da condição; o ERP registra e avisa |
 | Mover e Rota 2030 (documento 206) | O ERP registra o ato, a habilitação, o projeto, o dispêndio e o crédito financeiro; multa das autopeças de 30%; legado do Rota 2030 só para direitos adquiridos; avisa, nunca bloqueia (D-N284) |
 | Autopeças por destinação (documento 209) | A destinação (7 valores) escolhe a alíquota de PIS e Cofins da Lei 10.485 até 31/12/2026, a suspensão do IPI (Lei 9.826, art. 5º) e a inaplicabilidade da ST (Convênio 142, cláusula nona); a partir de 01/01/2027 a destinação não muda o cálculo de CBS e IBS (LC 214, art. 542, XVI) |
+
+
+54\. Anexo --- Marketplace e plataformas digitais (B7): entidades novas da revisão 41, regras e avisos do Motor e cargas de partida
+
+Revisão 41 do dicionário (consolidação de 11/11/2026): 3 entidades novas neste módulo (documento 212, seção 5.2; D-N553: Q212-1 a Q212-13), os 6 campos novos de Cad_Empresa_Perfil_Fiscal (seção 5.3), os 2 valores novos de Cad_Participante_Classe.Classe e a descrição de Mov_Documento_Fiscal.ID_Participante_Emitente, na Fase 0. A responsabilidade da plataforma é da operação, e não do cadastro: o vínculo guarda a opção e a anuência; a operação guarda o fundamento (8 valores), o documento, o devido, o pago e a diferença. O ERP registra, calcula o que a lei fecha e avisa; não bloqueia (D-N284). Nada neste anexo calcula split (D-N282 e D-N391).
+
+54.1. Marketplace e plataformas digitais: o vínculo plataforma-fornecedor e a operação intermediada (documento 212, seção 5.2)
+
+Cad_Participante_Plataforma_Fornecedor
+
+Revisão 41 (documento 212, seção 5.2; D-N553: Q212-1 a Q212-13): O vínculo entre uma plataforma e um fornecedor, visto da empresa do ERP. Existe porque a opção do § 12 e do § 13 depende da **anuência do fornecedor** e dura no tempo, e porque o fornecedor precisa saber que a plataforma emite e paga em nome dele. Serve aos dois lados: a empresa que **é** a plataforma e a empresa que **vende por** ela. Não guarda a responsabilidade, que é da operação.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Participante_Plataforma_Fornecedor** | *identificador* | --- |
+| **ID_Participante_Plataforma_Fornecedor_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Participante_Plataforma_Fornecedor_Versao). ID_Participante_Plataforma_Fornecedor é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa) --- identidade* | A empresa do ERP: a plataforma ou o fornecedor, conforme `Papel_Empresa`. |
+| **Papel_Empresa** | *enumeração {plataforma, fornecedor} --- identidade* | O lado em que a empresa está neste vínculo. |
+| **ID_Participante_Contraparte** | *referência (Cad_Participante) --- identidade* | A outra ponta: o fornecedor, quando a empresa é a plataforma; a plataforma, quando a empresa é o fornecedor. |
+| **Identificador_Na_Plataforma** | *código (60), opcional* | O código do vendedor cadastrado na plataforma (a nota leva o mesmo dado em `idCadIntTran`; este fica no cadastro). |
+| **Condicao_Informada_Administracao** | *enumeração {contribuinte, nao_contribuinte}, opcional* | LC 214, art. 22, § 4º; Decreto, art. 20, § 3º: a condição do fornecedor residente no País **não inscrito**, informada pela administração à plataforma. Vazia quando o fornecedor está inscrito. |
+| **Data_Informacao_Administracao** | *data, opcional* | Quando a administração informou. |
+| **Opcao_Plataforma** | *enumeração {nenhuma, emite_e_paga, substituta_tributaria}* | `emite_e_paga`: a plataforma emite os documentos em nome do fornecedor e paga o imposto pelo valor da operação (art. 22, § 12). `substituta_tributaria`: emite, apura e paga (§ 13). Padrão `nenhuma`. Vale só para fornecedor residente no País, com anuência. |
+| **Data_Anuencia_Fornecedor** | *data, opcional* | Quando o fornecedor concordou. Obrigatória quando a opção não é `nenhuma`. |
+| **ID_Documento_Anuencia** | *referência (Cad_Documento), opcional* | A anuência do fornecedor. A forma é do ato conjunto, que não li; o ERP guarda e não valida. |
+| **Calcula_Por_Aliquota_Referencia** | *booleano* | A plataforma que optou (§§ 12 a 14) calcula pela alíquota de referência quando não tem a informação das regras do fornecedor (§ 15). A diferença vai em `Mov_Plataforma_Operacao_Tributo`. Padrão falso. |
+| **ID_Usuario_Registro** | *referência (Cad_Usuario), opcional* | Quem registrou. |
+| **Fundamento_Legal** | *texto, opcional* | O artigo ou o ato que sustenta a opção. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Plataforma_Operacao
+
+Revisão 41 (documento 212, seção 5.2; D-N553: Q212-1 a Q212-13): Uma linha por operação intermediada. Guarda quem é quem, o documento fiscal, o fundamento da responsabilidade e o que a lei exige da plataforma naquela operação. Várias linhas podem apontar para o mesmo documento (consolidado).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Plataforma_Operacao** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa do ERP na operação. |
+| **Papel_Empresa** | *enumeração {plataforma, fornecedor, adquirente}* | O lado da empresa. |
+| **ID_Participante_Plataforma** | *referência (Cad_Participante), opcional* | A plataforma. Vazio quando a empresa é a plataforma. |
+| **ID_Participante_Fornecedor** | *referência (Cad_Participante), opcional* | O fornecedor. Vazio quando a empresa é o fornecedor. |
+| **ID_Participante_Adquirente** | *referência (Cad_Participante), opcional* | O adquirente ou destinatário. Vazio quando a empresa é o adquirente ou quando é consumidor sem cadastro. |
+| **ID_Participante_Plataforma_Fornecedor** | *referência (Cad_Participante_Plataforma_Fornecedor), opcional* | O vínculo vigente na data da operação; vazio quando não há. |
+| **Identificador_Pedido_Plataforma** | *código (60), opcional* | O pedido na plataforma; liga a operação à transação de pagamento (LC 214, art. 32, § 2º-A). |
+| **Data_Operacao** | *data* | A data da operação intermediada. |
+| **Tipo_Operacao** | *enumeração {interna, importacao, remessa_internacional}* | Decide a hipótese: fornecedor no exterior é `importacao` ou `remessa_internacional` (art. 22, I; arts. 64, § 5º, IX, e 96). |
+| **Valor_Operacao** | *número* | O valor da operação intermediada, base do pagamento pela plataforma (§ 12, II). |
+| **ID_Documento_Fiscal** | *referência (Mov_Documento_Fiscal), opcional* | O documento fiscal da operação; vazio quando não foi emitido. Vários registros podem apontar o mesmo (documento consolidado, Q159-10). |
+| **Emissor_Documento** | *enumeração {fornecedor, plataforma_em_nome_do_fornecedor, nao_emitido}* | Quem emitiu (Decreto, art. 115, VII). |
+| **Data_Devida_Emissao** | *data, opcional* | A data em que o fornecedor deveria ter emitido; começa os 30 dias do § 14. Só quando o documento não foi emitido pelo fornecedor no prazo. |
+| **Fornecedor_Contribuinte** | *enumeração {contribuinte_regime_regular, contribuinte_regime_favorecido, contribuinte_nao_inscrito, nao_contribuinte, nao_informado}, opcional* | A condição do fornecedor **naquela data**, gravada na operação (lida da qualificação, do regime e da condição informada). Decide o § 10 e o inciso II, "b". |
+| **Controla_Elemento_Essencial** | *booleano* | A plataforma controla ao menos um dos quatro elementos na operação (§ 1º, II). Vem do perfil da empresa; o usuário muda por operação. Falso: § 11. |
+| **Responsabilidade_Plataforma** | *enumeração {nao_responsavel_sem_elemento_essencial, nao_responsavel_nenhuma_hipotese, solidaria_fornecedor_exterior, solidaria_sem_informacao, solidaria_sem_documento, solidaria_nao_registrada, por_opcao_emissao_e_pagamento, substituta_tributaria}* | O **fundamento principal** (Anexo B). O Motor grava pela ordem do 5.4. |
+| **Origem_Responsabilidade** | *enumeração {calculado_pelo_sistema, informado_pelo_usuario}* | Quem decidiu o valor acima. |
+| **Responde_Por_Diferenca** | *booleano, opcional* | Falso quando o § 7º se aplica (split possível e informações prestadas). Só vale para fornecedor residente no País. |
+| **Regra_Apuracao_Debito** | *enumeração {regras_do_fornecedor, regime_regular, aliquota_referencia}, opcional* | Como o débito foi apurado: pelas regras do fornecedor (§ 10, I), pelo regime regular (§ 10, II) ou pela alíquota de referência (§ 15). |
+| **Situacao_Informacao_Operacao** | *enumeração {nao_exigida, pendente, prestada}* | A informação das operações ao Comitê Gestor e à RFB (§ 5º). Sem prazo nem leiaute nas fontes lidas; o padrão é `nao_exigida`. |
+| **Split_Disponivel** | *booleano, opcional* | Marcador: o split é possível na liquidação (§ 7º, I). O ERP **não calcula** split (D-N282). |
+| **Informacao_Split_Prestada** | *booleano, opcional* | Marcador: a plataforma prestou as informações do § 6º. |
+| **Sujeito_Passivo_Acrescimos** | *enumeração {nao_se_aplica, fornecedor_exclusivamente, plataforma_e_fornecedor}* | De quem se exigem os acréscimos e a penalidade por falta de documento: só do fornecedor quando a plataforma emite em 30 dias e paga (§ 14); dos dois nos demais casos de solidariedade. O ERP só registra (D-N284). |
+| **Recolhido_Pelo_Cambio** | *booleano, opcional* | Marcador do art. 23, parágrafo único, I: o imposto foi segregado na remessa pela instituição de câmbio, pela alíquota de referência. |
+| **Situacao** | *enumeração {calculado, lancado, cancelado}* | O mesmo padrão de `Mov_Cbs_Ajuste_Operacao`. |
+| **Observacao** | *texto, opcional* | Os outros fundamentos que também se aplicam, quando há mais de um (achado 12). |
+
+Mov_Plataforma_Operacao_Tributo
+
+Revisão 41 (documento 212, seção 5.2; D-N553: Q212-1 a Q212-13): Uma linha por imposto (CBS ou IBS) da operação: o devido, o pago pela plataforma e a diferença. A base e a alíquota **nunca são digitadas**: vêm da apuração do documento.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Plataforma_Operacao_Tributo** | *identificador* | --- |
+| **ID_Plataforma_Operacao** | *referência (Mov_Plataforma_Operacao) --- identidade* | A operação. |
+| **ID_Imposto** | *referência (Cad_Imposto) --- identidade* | CBS ou IBS. |
+| **Valor_Devido_Na_Operacao** | *número* | O imposto devido na operação, pelas regras do fornecedor ou do regime regular (`Regra_Apuracao_Debito`). |
+| **Valor_Pago_Pela_Plataforma** | *número, opcional* | O que a plataforma pagou ou segregou, pelo valor e pelas informações da operação. |
+| **Percentual_Aplicado** | *número, opcional* | A alíquota usada no pagamento; a de referência, quando a regra é `aliquota_referencia`. |
+| **Valor_Diferenca** | *número, opcional* | O módulo da diferença entre o devido e o pago; o sentido está em `Sentido_Diferenca`. |
+| **Sentido_Diferenca** | *enumeração {sem_diferenca, a_pagar, a_devolver}* | `a_pagar` quando a alíquota incidente é maior que a de referência; `a_devolver` quando é menor (§ 15; art. 23, parágrafo único). |
+| **Parte_Da_Diferenca** | *enumeração {fornecedor, adquirente_ou_importador}, opcional* | Quem paga ou recebe a diferença. O art. 23 diz adquirente ou importador; o § 15 não diz (C289). |
+| **ID_Titulo_Diferenca** | *referência (Mov_Titulo), opcional* | O título a pagar ou a receber da diferença, quando o usuário o gera. |
+| **Situacao_Diferenca** | *enumeração {nao_se_aplica, aberta, liquidada, cancelada}* | O estado da diferença. |
+| **Data_Liquidacao_Diferenca** | *data, opcional* | Quando a diferença foi paga ou devolvida. |
+| **ID_Espelho_Conta** | *referência (Mov_Cbs_Apuracao_Espelho_Conta), opcional* | A linha da Plataforma da CBS que corresponde a este registro, para a conferência (só CBS; o IBS fica sem espelho até haver o regulamento do Comitê Gestor). |
+
+**Cargas de partida da revisão 41 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Parametro_Legal_Ibs_Cbs (2 linhas) | `prazo_emissao_plataforma_dias` = 30 dias corridos (LC 214, art. 22, § 14; Decreto 12.955, art. 20, § 11) e `percentual_receita_nanoempreendedor_plataforma` = 25 por cento (LC 214, art. 26, § 10; Decreto, art. 25, § 14); provisórias até o contador validar (C287 a C295) |
+| Cad_Parametro_Documentacao (2 linhas) | Documentação dos dois parâmetros, pela regra da Q201-3; o efeito por obrigação (`Cad_Parametro_Efeito_Obrigacao`) fica sem linha porque a informação das operações da plataforma (art. 22, § 5º) ainda não tem obrigação nem leiaute no Projeto |
+| Regras R1 a R12 do Motor (texto) | As 12 regras do Anexo A do documento 212, provisórias, com vigência de 01/01/2027; a gravação em `Cad_Motor_Regra` é do carregador do Motor |
+| Avisos 1 a 13 do Motor (texto) | Os 13 avisos da seção 6 do documento 212, em CSV de leitura |
+
+**Regras que o Motor segue (documento 212, Anexo A)**
+
+| **Regra** | **Se** | **Resultado** | **Fundamento** |
+|---|---|---|---|
+| R1 | `Controla_Elemento_Essencial` falso | `nao_responsavel_sem_elemento_essencial` | LC 214, art. 22, § 11 |
+| R2 | `Tipo_Operacao` é `importacao` ou `remessa_internacional` | `solidaria_fornecedor_exterior`; débito pelo regime regular; `Recolhido_Pelo_Cambio` quando a plataforma ou o fornecedor no exterior não se inscreveu | Art. 22, I e § 10, II; art. 23, parágrafo único; art. 64, § 5º, IX; art. 96 |
+| R3 | Fornecedor no País; informação do § 5º exigida e não prestada | `solidaria_sem_informacao` | Art. 22, II, "a" |
+| R4 | Vínculo com `substituta_tributaria` e anuência | `substituta_tributaria`; documento emitido pela plataforma; débito pelo § 10, I ou II | Art. 22, § 13 |
+| R5 | Vínculo com `emite_e_paga` e anuência | `por_opcao_emissao_e_pagamento` | Art. 22, § 12 |
+| R6 | Fornecedor contribuinte; documento não emitido | `solidaria_sem_documento`; se a plataforma emite em 30 dias e paga, acréscimos só do fornecedor | Art. 22, II, "b", e § 14 |
+| R7 | Operação sem documento fiscal | `solidaria_nao_registrada` | Art. 22, II, "c" |
+| R8 | Nenhuma das anteriores | `nao_responsavel_nenhuma_hipotese` | Art. 22, caput |
+| R9 | Débito do fornecedor residente no País inscrito (regular ou favorecido) | `regras_do_fornecedor`; senão `regime_regular`; `aliquota_referencia` se o vínculo permite, falta a informação e o fundamento é R4, R5 ou R6 | Art. 22, §§ 10 e 15 |
+| R10 | Alíquota incidente maior ou menor que a de referência | `a_pagar` ou `a_devolver`; parte: fornecedor (§ 15) ou adquirente ou importador (art. 23) | Art. 22, § 15; art. 23, parágrafo único |
+| R11 | Split possível, informação do § 6º prestada e do § 5º prestada, fornecedor no País | `Responde_Por_Diferenca` falso | Art. 22, § 7º |
+| R12 | Fornecedor sem inscrição e sem condição informada | Aviso 7; débito pelo regime regular | Art. 22, §§ 4º e 10, II |
+
+**Avisos do Motor (documento 212, seção 6)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| 1 | Nota com intermediador sem vínculo cadastrado | `Indicador_Intermediador` = `plataforma_terceiros` e não há vínculo vigente com o participante intermediador |
+| 2 | Opção sem anuência | `Opcao_Plataforma` diferente de `nenhuma` e `Data_Anuencia_Fornecedor` vazia |
+| 3 | Prazo de 30 dias vencendo ou vencido | `Emissor_Documento` = `nao_emitido`, fornecedor contribuinte, e passaram `prazo_emissao_plataforma_dias` de `Data_Devida_Emissao` (a plataforma perde a limitação do § 14) |
+| 4 | Documento duplicado | A empresa é fornecedora, o vínculo tem opção de emitir e a empresa emitiu documento próprio da mesma operação |
+| 5 | Plataforma sem elemento essencial | `Eh_Plataforma_Digital` verdadeiro e nenhum `Controla_*` verdadeiro, ou `Atividade_Unica_Excluida` diferente de `nenhuma` |
+| 6 | Plataforma sem inscrição no regime regular | `Eh_Plataforma_Digital` verdadeiro e sem `Cad_Participante_Qualificacao_Cbs` vigente com `contribuinte_regime_regular` (art. 23) |
+| 7 | Fornecedor não inscrito sem condição informada | Fornecedor residente no País sem inscrição e sem `Condicao_Informada_Administracao` (a plataforma não sabe se ele é contribuinte, § 4º) |
+| 8 | Diferença do adquirente ou importador | Operação de importação ou remessa com `Recolhido_Pelo_Cambio` verdadeiro e diferença em aberto |
+| 9 | Diferença sem título | `Sentido_Diferenca` diferente de `sem_diferenca`, `Situacao_Diferenca` = `aberta` e `ID_Titulo_Diferenca` vazio |
+| 10 | Informação das operações pendente | `Situacao_Informacao_Operacao` = `pendente` (só depois de o ato fixar prazo) |
+| 11 | Plataforma responde pela diferença | `Responde_Por_Diferenca` verdadeiro e `Split_Disponivel` ou `Informacao_Split_Prestada` falsos |
+| 12 | Fundamento informado diferente do calculado | `Origem_Responsabilidade` = `informado_pelo_usuario` e o Motor calcularia outro valor |
+| 13 | Fornecedor em regime favorecido e opção de substituir | `Fornecedor_Contribuinte` = `contribuinte_regime_favorecido` e fundamento `substituta_tributaria` (as regras do Simples dependem da C291) |
+
+
+55\. Anexo --- Base do INSS e enquadramento da IN 1.234 (documento 210) e alíquota de IPI por ficha de veículo (documento 207): entidades novas da revisão 42, regras e avisos do Motor e cargas de partida
+
+Revisão 42 do dicionário (consolidação de 11/11/2026): 4 entidades novas neste módulo, 3 do documento 210 (seção 5.2; D-N561: Q210-1 a Q210-12) e 1 do documento 207 (seção 5.2; D-N566: Q207-1 a Q207-6), o campo novo de Mov_Titulo_Retencao (seção 5.3 do documento 210), o valor novo de Mov_Credito_Automotivo_Apuracao_Ncm.Origem_Aliquota_Ipi e as descrições de Mov_Reinf_Servico_Previdenciario_Tipo.Valor_Base_Retencao e de Mov_Credito_Automotivo_Apuracao_Ncm.Aliquota_Ipi_Referencia. O ERP registra, calcula o que a norma fecha e avisa; não bloqueia (D-N284). A base do INSS é decidida por linha de nota (material discriminado), com o piso do art. 117 ou 118 quando o contrato prevê material sem valor; a alíquota de IPI do crédito do veículo passa a ser da ficha, com as Notas Complementares, e a carga por NCM é a alternativa provisória.
+
+55.1. Material, equipamento e gênero alimentício na base das retenções (documento 210, seção 5.2)
+
+Mov_Nota_Material_Discriminado
+
+Revisão 42 (documento 210, seção 5.2; D-N561: Q210-1 a Q210-12): Uma linha por material, equipamento ou gênero alimentício que a **nota** discrimina, com a prova e o valor que o Motor excluiu da base. O que a nota não discrimina não tem linha (e entra na base, art. 119, parágrafo único).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Material** | *identificador* | --- |
+| **ID_Nota_Fiscal_Entrada** | *referência (Mov_Nota_Fiscal_Entrada), opcional* | Obrigatório e exclusivo no sentido tomado (a mesma regra de `Mov_Reinf_Servico_Previdenciario`). |
+| **ID_Nota_Fiscal_Saida** | *referência (Mov_Nota_Fiscal_Saida), opcional* | Obrigatório e exclusivo no sentido prestado. |
+| **Numero_Linha** | *número* | A ordem da discriminação na nota. |
+| **Tipo_Material** | *enumeração {material, equipamento, genero_alimenticio}* | O mesmo domínio do contrato. |
+| **Descricao** | *texto* | Como a nota descreve o material. |
+| **ID_Contrato_Material** | *referência (Cad_Gestao_Contrato_Material), opcional* | A linha do contrato que prevê o material. **Vazio quando o contrato não o prevê**: o valor entra na base (art. 119). |
+| **Eh_Equipamento_Manual** | *booleano* | Cópia da linha do contrato, ou marcação do usuário quando não há linha. Padrão falso. |
+| **Eh_Inerente_Ao_Servico** | *booleano* | Idem, para o art. 118. Padrão falso. |
+| **Valor_Discriminado** | *número* | O valor que a nota traz para o material. |
+| **Valor_Comprovado** | *número, opcional* | O custo de aquisição ou de locação comprovado. O valor excluído nunca passa dele (art. 116, § 1º). |
+| **ID_Documento_Comprobatorio** | *referência (Mov_Documento_Fiscal), opcional* | A nota de compra do material, quando houver. |
+| **Referencia_Comprovante** | *texto, opcional* | O contrato de locação, o recibo ou outra prova que não é documento fiscal. |
+| **Regime_Aplicado** | *enumeração {art_116, art_117, art_118_i, art_118_ii, art_119}, opcional* | O dispositivo que o Motor aplicou à linha. Vazio enquanto não calculado. |
+| **Valor_Excluido_Da_Base** | *número* | O valor que sai da base: o menor entre `Valor_Discriminado` e `Valor_Comprovado`, quando a linha pode sair; zero nos demais casos. Calculado e armazenado. |
+| **Situacao_Exclusao** | *enumeração {excluido, limitado_ao_comprovado, sem_previsao_no_contrato, sem_comprovacao, equipamento_manual}* | Por que o valor saiu, saiu em parte ou não saiu. |
+| **Origem_Decisao** | *enumeração {calculado_pelo_sistema, informado_pelo_usuario}* | Quem decidiu o valor excluído. |
+| **Observacao** | *texto, opcional* | Qualquer nota do usuário. |
+
+Mov_Retencao_Inss_Base_Apuracao
+
+Revisão 42 (documento 210, seção 5.2; D-N561: Q210-1 a Q210-12): A conta da base do INSS de uma nota: o valor bruto, o que saiu pelos valores, o piso, a dedução do art. 120 (alimentação e vale-transporte) e a base final. Uma linha por serviço com retenção (`Mov_Reinf_Servico_Previdenciario`), 1:1. Deixa de existir a base "sem origem".
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Base_Apuracao** | *identificador* | --- |
+| **ID_Servico_Previdenciario** | *referência (Mov_Reinf_Servico_Previdenciario)* | O serviço com retenção (R-2010 ou R-2020). 1:1. |
+| **Valor_Bruto_Documento** | *número* | O valor bruto da nota na data do cálculo (cópia, para a conta ficar reproduzível). |
+| **Valor_Excluido_Total** | *número* | A soma de `Valor_Excluido_Da_Base` das linhas da nota. |
+| **Valor_Base_Pelos_Valores** | *número* | `Valor_Bruto_Documento` menos `Valor_Excluido_Total`. |
+| **ID_Piso_Aplicado** | *referência (Cad_Inss_Base_Piso_Percentual), opcional* | O piso que vale para a nota (o maior, quando a nota tem mais de um serviço sem valores individualizados, art. 118, § 1º). Vazio quando só o art. 116 se aplica. |
+| **Percentual_Piso** | *número, opcional* | Cópia do percentual do piso na data do cálculo. |
+| **Valor_Base_Pelo_Piso** | *número, opcional* | Pelo piso, conforme a regra R7. |
+| **Piso_Prevaleceu** | *booleano* | Verdadeiro quando a base pelo piso é maior que a base pelos valores. |
+| **Alimentacao_Paga_Em_Dinheiro** | *booleano* | Verdadeiro quando a alimentação ou o auxílio-alimentação foi pago em dinheiro: **não deduz** (art. 120, I). Padrão falso. |
+| **Valor_Alimentacao_Discriminada** | *número, opcional* | O custo da alimentação *in natura* ou do auxílio-alimentação que a nota discrimina (art. 120, I). |
+| **Valor_Vale_Transporte_Discriminado** | *número, opcional* | O vale-transporte que a nota discrimina, mesmo pago em dinheiro (art. 120, II). |
+| **Valor_Vale_Transporte_Limite** | *número, opcional* | O valor necessário ao custeio do deslocamento em transporte coletivo; o vale-transporte deduzido não passa dele (art. 120, II). |
+| **Valor_Deducao_Art120** | *número* | A dedução que o Motor aplicou (regra R13): a alimentação (se não paga em dinheiro) mais o menor entre o vale-transporte discriminado e o limite. Zero sem discriminação na nota. Calculado e armazenado. |
+| **Valor_Base_Final** | *número* | O maior entre os dois quando há piso, senão a base pelos valores; **menos** `Valor_Deducao_Art120`, com mínimo zero. A soma de `Valor_Base_Retencao` dos tipos de serviço da nota é igual a este valor. |
+| **Base_Informada_Pelo_Tomador** | *número, opcional* | **Só no sentido prestado**: a base com que o tomador reteve. Serve à conferência (aviso 9). |
+| **Origem_Decisao** | *enumeração {calculado_pelo_sistema, informado_pelo_usuario}* | Quem decidiu a base final. |
+| **ID_Usuario_Confirmacao** | *referência (Cad_Usuario), opcional* | Quem confirmou a apuração. |
+| **Observacao** | *texto, opcional* | Qualquer nota do usuário. |
+
+Cad_Inss_Base_Piso_Percentual
+
+Revisão 42 (documento 210, seção 5.2; D-N561: Q210-1 a Q210-12): Os pisos dos arts. 117 e 118 da IN 2.110. Parâmetro legal com vigência; cada linha é uma hipótese. A carga (10 linhas, provisórias) está no Anexo B.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Inss_Base_Piso_Percentual** | *identificador* | --- |
+| **ID_Inss_Base_Piso_Percentual_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Inss_Base_Piso_Percentual_Versao). ID_Inss_Base_Piso_Percentual é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Hipotese** | *código (até 30) --- identidade* | A hipótese, por exemplo ART117_III. |
+| **Dispositivo** | *texto* | O artigo, inciso e alínea da IN 2.110. |
+| **Descricao_Hipotese** | *texto* | A hipótese em palavras, por exemplo "outros serviços de limpeza". |
+| **Artigo_Origem** | *enumeração {art_117, art_118}* | Decide em que regime a linha entra. |
+| **Percentual_Minimo** | *número* | O percentual do valor bruto da nota abaixo do qual a base não pode ficar. |
+| **Exige_Equipamento_Inerente** | *booleano* | Verdadeiro nas linhas do art. 118. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até a conferência com o texto da Receita e a validação do contador. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Fundamento_Legal** | *texto* | A norma e a linha de onde veio. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+55.2. Alíquota de IPI de referência por ficha de veículo, com as Notas Complementares (documento 207, seção 5.2)
+
+Mov_Aliquota_Ipi_Veiculo
+
+Revisão 42 (documento 207, seção 5.2; D-N566: Q207-1 a Q207-6): A `Al` de uma ficha de veículo na data de referência, com a conta feita: alíquota-base, ajustes das Notas Complementares e resultado. Uma linha por ficha de veículo (e produto do projeto, quando houver) e por data de referência.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Aliquota_Ipi_Veiculo** | *identificador* | --- |
+| **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao)* | A ficha do veículo, na versão vigente na data de referência. |
+| **ID_Habilitacao_Automotiva_Produto** | *referência (Cad_Habilitacao_Automotiva_Produto), opcional* | O produto do projeto da Lei 9.826 a que a alíquota serve. |
+| **ID_Classificacao** | *referência (Cad_Classificacao_Mercadoria)* | A NCM analítica da ficha (posição 8702, 8703 ou 8704). |
+| **ID_Ex_Tipi** | *referência (Cad_NCM_Ex_Tipi), opcional* | O destaque "Ex" em que a ficha se enquadra, quando houver. |
+| **ID_Credito_Automotivo_Parametro** | *referência (Cad_Credito_Automotivo_Parametro)* | A linha `data_referencia_aliquota_ipi` que escolheu as versões lidas. |
+| **Data_Referencia** | *data* | A data lida do parâmetro (31/12/2025), copiada para a conta ficar reproduzível. |
+| **Aliquota_Base** | *número* | A alíquota do Ex, se houver, ou da NCM, na versão vigente na data de referência. |
+| **Hipotese_Nota_Complementar** | *enumeração {nenhuma, nc_87_1_ex_certificado, nc_87_2_zero, nc_87_3_fixada, nc_87_13_14_criterios, nc_87_15_versao_sustentavel}* | A Nota Complementar que decidiu a alíquota. `nenhuma`: vale a base. |
+| **Ajuste_Propulsao** | *número, opcional* | Pontos do critério 1 (NC 87-13 ou 87-14). |
+| **Ajuste_Eficiencia** | *número, opcional* | Pontos do critério 2. |
+| **Ajuste_Potencia** | *número, opcional* | Pontos do critério 3. |
+| **Ajuste_Desempenho_Estrutural** | *número, opcional* | Pontos do critério 4. |
+| **Ajuste_Reciclabilidade** | *número, opcional* | Pontos do critério 5. |
+| **Aliquota_Apos_Criterios** | *número* | Base mais os cinco ajustes, com piso de 0 (Decreto 12.549, art. 3º, parágrafo único). Igual à base quando não há critérios. |
+| **Aliquota_Referencia_Final** | *número* | A `Al`: a alíquota que vai para a apuração do crédito. |
+| **Origem_Calculo** | *enumeração {calculada_pelo_motor, informada_pelo_usuario}* | Quem decidiu a `Al`. |
+| **ID_Documento_Condicao** | *referência (Cad_Documento), opcional* | A manifestação da RFB (NC 87-1 e 87-3) ou o registro de versão sustentável do MDIC (NC 87-15). |
+| **Dados_Provisorios** | *booleano* | Verdadeiro se alguma linha lida (carga, ajuste ou ficha) está provisória; o relatório avisa. |
+| **Memoria_Calculo** | *texto* | O texto da conta, para auditoria. |
+| **ID_Usuario_Confirmacao** | *referência (Cad_Usuario), opcional* | Quem confirmou a `Al`. |
+
+**Cargas de partida da revisão 42 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Inss_Base_Piso_Percentual (10 linhas) | Os pisos dos arts. 117 e 118 da IN RFB 2.110 (Anexo B do documento 210), provisórios, com vigência de 01/11/2022 (art. 277) a 31/12/9999; o texto é o original e as alterações posteriores seguem em verificação (C302) |
+| Cad_Parametro_Documentacao (1 linha nova do documento 210, 1 linha atualizada do documento 207) | Nova: a documentação de `Cad_Inss_Base_Piso_Percentual` (o que é, os 10 valores, o padrão, o que acontece sem valor: a base é o valor bruto, quem altera, o fundamento). Atualizada: `credito_auto_aliquota_ipi_tipi` (documento 202), que passa a registrar a carga de 85 linhas, de duas fontes |
+| Cad_Parametro_Efeito_Obrigacao (1 linha nova) | O efeito dos pisos na EFD-Reinf, eventos R-2010 e R-2020 (`vlrBaseRet`) |
+| Cad_Classificacao_Mercadoria.Aliquota_Ipi (56 linhas) | Versões novas de alíquota de IPI de 31/12/2025, posições 8702 a 8704, para os códigos sem destaque "Ex" (Decreto 12.549, Anexo I, e Tipi ADE 1/2026), vigência de 01/11/2025 a 31/12/9999, provisórias |
+| Cad_NCM_Ex_Tipi (29 linhas) | Versões novas de alíquota de IPI de 31/12/2025 para os códigos com destaque "Ex" (a "Ex 01" de 8703.23.10 e 8703.23.90 fica de fora: C304), mesma vigência, provisórias |
+| Regras do Motor (texto: 15 do documento 210 e 6 do documento 207) | Em CSV de leitura; a gravação em `Cad_Motor_Regra` é do carregador do Motor |
+| Avisos do Motor (texto: 13 do documento 210 e 6 do documento 207) | Em CSV de leitura |
+
+**Pisos dos arts. 117 e 118 da IN 2.110 (documento 210, Anexo B; provisórios)**
+
+| **Código** | **Dispositivo** | **Hipótese** | **Percentual mínimo** | **Equipamento inerente** |
+|---|---|---|---|---|
+| ART117_I | art. 117, I (e art. 119, na exceção do transporte de passageiros) | Transporte de passageiros, com combustível e manutenção por conta da contratada | 30 | não |
+| ART117_II | art. 117, II | Limpeza hospitalar | 65 | não |
+| ART117_III | art. 117, III | Outros serviços de limpeza | 80 | não |
+| ART117_IV | art. 117, IV | Demais casos (inclui a copeiragem, leitura minha, C296) | 50 | não |
+| ART118_II_A | art. 118, II, "a" | Serviços em geral, com equipamento inerente e sem valores no contrato | 50 | sim |
+| ART118_II_B_1 | art. 118, II, "b", 1 | Pavimentação asfáltica | 10 | sim |
+| ART118_II_B_2 | art. 118, II, "b", 2 | Terraplenagem, aterro sanitário e dragagem | 15 | sim |
+| ART118_II_B_3 | art. 118, II, "b", 3 | Obras de arte (pontes ou viadutos) | 45 | sim |
+| ART118_II_B_4 | art. 118, II, "b", 4 | Drenagem | 50 | sim |
+| ART118_II_B_5 | art. 118, II, "b", 5 | Demais serviços de construção civil com equipamentos não manuais | 35 | sim |
+
+**Regras que o Motor segue na base das retenções (documento 210, Anexo A)**
+
+| **Regra** | **Se** | **Resultado** | **Fundamento** |
+|---|---|---|---|
+| R1 | Linha da nota sem `ID_Contrato_Material` | Regime `art_119`; excluído zero; `sem_previsao_no_contrato`. **Exceções:** equipamento inerente ao serviço, discriminado na nota: regime `art_118_ii` (vale sem previsão contratual); transporte de passageiros: base mínima de 30% | IN 2.110, art. 119 e art. 118, II |
+| R2 | `Eh_Equipamento_Manual` verdadeiro | Excluído zero; `equipamento_manual` | IN 2.110, arts. 116 e 117 (exceto equipamentos manuais) |
+| R3 | Linha do contrato `com_valor` (cláusula ou planilha integrante) | Regime `art_116` (ou `art_118_i`); excluído = menor entre discriminado e comprovado | IN 2.110, art. 116, §§ 1º a 3º; art. 118, I |
+| R4 | Linha do contrato `sem_valor` (ou planilha sem a cláusula) | Regime `art_117` (ou `art_118_ii`); excluído = menor entre discriminado e comprovado; a base final tem piso | IN 2.110, art. 117; art. 118, II |
+| R5 | Sem comprovação (`Valor_Comprovado` vazio) | Excluído zero; `sem_comprovacao` | IN 2.110, art. 116, § 2º |
+| R6 | Gênero alimentício da copeiragem | Tratado como material do art. 116 (ou do art. 117, sem valor) | SC Cosit 220/2026 |
+| R7 | Linhas `art_117` ou `art_118_ii`; base final | Base final = maior entre a base pelos valores e o piso sobre o bruto; nota com parcelas dos dois artigos: maior entre (piso da parcela mais as parcelas inteiras) e 50% do bruto | IN 2.110, arts. 117 e 118; SC Cosit 170/2026, itens 17.2 e 18.2 (leitura minha) |
+| R8 | Nota sem linha de material | Base final = valor bruto | IN 2.110, art. 119, parágrafo único |
+| R9 | Nota com mais de um serviço sem valores individualizados | Piso = o maior percentual dos serviços | IN 2.110, art. 118, § 1º |
+| R10 | `Tipo` = `retido_pelo_cliente`, órgão público federal; os três requisitos do § 7º, I valem | `atende`; linha 6147 | IN 1.234, art. 2º, § 7º, I |
+| R11 | Falta um dos três requisitos | `nao_atende_contrato`, `nao_atende_essencialidade` ou `nao_atende_nota`; linha 6190 | IN 1.234, art. 2º, § 7º, I (contrato e nota); essencialidade: SC Cosit 220/2026 |
+| R12 | Serviço hospitalar ou médico | `servico_de_saude_excluido`; fora deste desenho | IN 1.234, art. 2º, § 8º |
+| R13 | Nota com parcela de alimentação ou de vale-transporte **discriminada** | `Valor_Deducao_Art120` = alimentação (zero se `Alimentacao_Paga_Em_Dinheiro`) mais o menor entre o vale-transporte e o limite; `Valor_Base_Final` = base de R7 ou R8 menos a dedução, mínimo zero; taxa de administração nunca deduz | IN 2.110, art. 120 e § 1º; a ordem depois do piso é leitura minha (C299) |
+| R14 | Retenção federal de órgão público (`retido_pelo_cliente`) com glosa de valores da nota, sem nova nota | Base da retenção = valor **original** da nota; a glosa não reduz a retenção | IN 1.234, art. 2º, § 10 (regra do Motor, sem campo novo) |
+| R15 | Retenção federal de órgão público com juros e multa por atraso | Base da retenção = valor da nota **incluídos** os acréscimos | IN 1.234, art. 2º, § 11 (regra do Motor, sem campo novo) |
+
+**Avisos do Motor na base das retenções (documento 210, seção 6)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| 1 | Contrato prevê material sem lista | `Preve_Fornecimento_Material` verdadeiro e nenhuma linha vigente em `Cad_Gestao_Contrato_Material`: só vale o art. 117, com piso |
+| 2 | Material na nota que o contrato não prevê | `Mov_Nota_Material_Discriminado` sem `ID_Contrato_Material`: o valor entra na base (art. 119) |
+| 3 | Valor discriminado maior que o comprovado | `Valor_Discriminado` maior que `Valor_Comprovado`: o excluído fica no comprovado |
+| 4 | Material sem comprovação | `Valor_Comprovado` vazio: nada sai da base (`sem_comprovacao`) |
+| 5 | Equipamento manual discriminado | `Eh_Equipamento_Manual` verdadeiro: não sai da base nos arts. 116 e 117 |
+| 6 | Planilha sem cláusula de integração | Linha com `Origem_Previsao` = `planilha` e `Planilha_Material_Integra_Contrato` falso: tratada como `sem_valor` (art. 117) |
+| 7 | Piso maior que a base pelos valores | `Piso_Prevaleceu` verdadeiro: o material discriminado não reduz a base ao que o contrato permitiria |
+| 8 | Nota com mais de um serviço sem valores individualizados | Foi usado o maior piso (art. 118, § 1º); sugere separar os serviços na nota |
+| 9 | Base do tomador diferente da calculada | Sentido prestado, `Base_Informada_Pelo_Tomador` diferente de `Valor_Base_Final` |
+| 10 | Enquadramento da IN 1.234 não atendido | `Enquadramento_Emprego_Materiais` diferente de `atende` e o contrato prevê material: diz qual requisito falhou |
+| 11 | Prestação sem discriminar o material | A empresa presta serviço a órgão público federal, o contrato prevê material e a nota emitida não tem linha de material: perde a base reduzida do INSS e a linha 6147 |
+| 12 | Gênero alimentício sem essencialidade marcada | `Tipo_Material` = `genero_alimenticio` com `Eh_Essencial_Ao_Servico` falso na linha do contrato: a SC Cosit 220/2026 pede material essencial (o texto da IN 1.234 não usa a palavra) |
+| 13 | Dedução do art. 120 sem efeito | Alimentação paga em dinheiro (não deduz), vale-transporte acima do limite (o excedente não sai) ou parcela que a nota não discrimina (não existe dedução sem discriminação na nota) |
+
+**Ordem das condições da Al da Lei 9.826 (documento 207, seção 5.3; a primeira que vale define a alíquota)**
+
+| **Ordem** | **Condição** | **Hipotese_Nota_Complementar** | **Al** |
+|---|---|---|---|
+| 1 | A ficha é versão sustentável com registro do MDIC (NC 87-15) e a NCM está nas listas das NC (87-13) ou (87-14) | `nc_87_15_versao_sustentavel` | 0 |
+| 2 | Ambulância, carro celular ou carro funerário da 87.03, com a prova da condição (NC 87-2) | `nc_87_2_zero` | 0 |
+| 3 | 8703.22.90 com habitáculo acima de 6 m³ e manifestação da RFB (NC 87-3) | `nc_87_3_fixada` | 6,02 |
+| 4 | NCM nas listas da NC (87-13) (8703.21.00 a 8703.80.00) ou da NC (87-14) (87.04, itens listados) | `nc_87_13_14_criterios` | Máximo entre 0 e (base + cinco ajustes de `Cad_Is_Veiculo_Ajuste` do IPI vigentes na data, tabela `tabela_87_03` ou `tabela_8704`) |
+| 5 | 8702 com "Ex 01" ou "Ex 02" e manifestação da RFB (NC 87-1) | `nc_87_1_ex_certificado` | A do Ex |
+| 6 | Qualquer outro caso (8702 sem Ex, 8703.10.00, 8703.90.00, códigos de 87.04 fora da lista) | `nenhuma` | A base |
+
+**Avisos do Motor na alíquota de IPI (documento 207, seção 6)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| 1 | Ficha sem dado de critério | `Cad_Veiculo_Versao` sem potência, nível de eficiência, desempenho estrutural ou reciclabilidade: o critério entra com ajuste zero |
+| 2 | Item sem ficha de veículo | O item vendido não tem `ID_Veiculo_Versao`: a `Al` é a do produto do projeto ou a da NCM, sem Notas Complementares |
+| 3 | Ex não indicado | A NCM tem destaque "Ex" e a ficha não diz qual: vale o código sem Ex |
+| 4 | Condição sem documento | NC (87-1), (87-2), (87-3) ou (87-15) escolhida sem `ID_Documento_Condicao` |
+| 5 | `Al` zero | `Aliquota_Referencia_Final` = 0: o crédito do veículo é zero |
+| 6 | Dados provisórios | `Dados_Provisorios` verdadeiro: a carga, o ajuste ou a ficha ainda não foi validado |
+
+
+56\. Anexo --- ST de autopeças por UF (documento 215) e Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos (documento 216): entidades novas da revisão 43, regras e avisos do Motor e cargas de partida
+
+Revisão 43 do dicionário (consolidação de 12/11/2026): 14 entidades novas neste módulo, 7 do documento 215 (seção 6.2; D-N571: Q215-1 a Q215-4) e 7 do documento 216 (seção 6.2; D-N575: Q216-1 a Q216-6), os 6 campos novos em Cad_Autopecas_Perfil e Cad_Filial_Regime_Icms (documento 215, seção 6.3), os 9 domínios novos, as regras e os avisos do Motor e as cargas de partida abaixo.
+
+56.1. Substituição tributária de autopeças: regra por UF (acordo, percentual, critério da base, recolhimento, não aplicação, lista de itens) e memória do cálculo (documento 215, seção 6.2)
+
+Cad_Icms_St_Acordo_Regra
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): A regra de ST de autopeças de uma UF de destino em um acordo: o método de cálculo, a definição da alíquota interna, o tratamento do remetente do Simples, a prioridade entre acordos, a autorização do fisco, o adicional de fundo e onde a UF publica. É a cabeça das outras cinco tabelas por UF.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Acordo_Regra** | *identificador* | --- |
+| **ID_Icms_St_Acordo_Regra_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Acordo_Regra_Versao). ID_Icms_St_Acordo_Regra é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Acordo_St** | *referência (Cad_Classe_Sistema, domínio = acordo_st_icms) --- identidade* | O instrumento que cria a ST para a UF. Domínio aberto: `protocolo_icms_41_08`, `protocolo_icms_97_10`, `convenio_icms_142_18` e `legislacao_propria_uf`; os acordos que saíram em 2026 entram como valor quando houver carga. |
+| **ID_Estado_Destino** | *referência (Cad_Estado) --- identidade* | A UF de destino a que a regra vale nesta versão. Se a UF sai do acordo, a versão termina; não existe linha de "UF excluída". |
+| **Prioridade_Aplicacao** | *número* | Quando o item está na lista de dois acordos da mesma UF (MA, itens 1 a 98 em 41/08 e 97/10), vale a regra de menor número. Padrão 1. |
+| **Alcance_Operacao** | *enumeração {interestadual, interna, ambas}* | As operações a que a regra vale. O 41/08 estende à operação interna (cláusula 5ª); o PI, a MG e o MA distinguem prazo e lista. |
+| **ID_Metodo_Calculo** | *referência (Cad_Classe_Sistema, domínio = metodo_calculo_st_uf)* | Como a UF calcula: `mva_do_protocolo`, `mva_da_legislacao_uf`, `iva_st_divulgado_pela_uf` (SP até 30/09/2026), `aliquota_fixa_sobre_documento_entrada` (AL) e `percentual_na_antecipacao_entrada` (nenhuma UF conhecida hoje; ver Q215-6). Domínio aberto. |
+| **Definicao_Alq_Intra** | *enumeração {interna_ou_carga_efetiva_menor, praticada_pelo_substituto_no_destino, prevista_para_operacao_substituida}* | O que é a ALQ intra da fórmula: o 41/08 e a BA usam a primeira, o 97/10 a segunda e o 129/10 a terceira. A alíquota vem de `Cad_Aliquota` (ICMS, UF de destino). |
+| **Usa_Mva_Original_Se_Alq_Intra_Menor** | *booleano* | A ALQ intra menor que a ALQ inter leva à MVA original (41/08, cláusula 2ª, § 7º; BA, art. 289, § 15). Padrão verdadeiro. |
+| **Remetente_Simples_Usa** | *enumeração {mva_ajustada, mva_original, nao_aplica_ajuste}* | O que a UF manda usar quando o remetente é do Simples Nacional: a BA usa a MVA original (art. 295, § 3º); MG não aplica o ajuste a microempresa e EPP (art. 20, § 6º do Anexo VII). Padrão `mva_ajustada`. |
+| **Exige_Autorizacao_Fisco_Destino** | *booleano* | A UF exige a autorização prévia para a MVA de fidelidade (41/08, cláusula 2ª, § 8º; BA, art. 289, § 21: autorização do titular da inspetoria do domicílio fiscal do destinatário). Padrão falso. |
+| **Adicional_Fundo_Percentual** | *número, opcional* | O adicional de fundo (FECOEP ou FECP) que a UF soma ao imposto da ST nesta regra, quando a própria regra o fixa (AL: 1% no credenciamento). Vazio quando o fundo vem de `Cad_Aliquota`. |
+| **Fonte_Publicacao** | *enumeração {regulamento, anexo_do_regulamento, portaria, portal_sefaz, protocolo}* | Onde a UF publica o que muda: BA no portal (art. 289, § 16); MT, o PMPF e a MVA por portaria; SP, a lista por portaria da CAT. |
+| **Referencia_Publicacao** | *texto, opcional* | O ato, a portaria ou o endereço da publicação, para o contador conferir. |
+| **Observacao_Regra** | *texto, opcional* | O que a UF faz e não cabe em campo (por exemplo, o adicional de 5,39% do credenciamento de AL). Quem preenche ganha o aviso 17. |
+| **Fundamento_Legal** | *texto* | O artigo e o ato da UF ou do acordo que fixam a regra. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_St_Uf_Mva
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): O percentual da UF: a MVA, o IVA-ST ou o percentual de antecipação, por perfil do remetente, por CEST e, quando a UF publica a tabela ajustada, por alíquota interestadual.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Uf_Mva** | *identificador* | --- |
+| **ID_Icms_St_Uf_Mva_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Uf_Mva_Versao). ID_Icms_St_Uf_Mva é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Icms_St_Acordo_Regra** | *referência (Cad_Icms_St_Acordo_Regra) --- identidade* | A regra da UF e do acordo a que o percentual pertence. |
+| **ID_Perfil_Remetente_St** | *referência (Cad_Classe_Sistema, domínio = perfil_remetente_st) --- identidade* | O perfil do remetente: `fabricante_indice_fidelidade`, `distribuicao_exclusiva_contrato`, `atacadista_controlado` e `demais`. Domínio aberto: MG (art. 71) trata a montadora com contrato de fidelidade à parte. |
+| **ID_Cest** | *referência (Cad_Cest), opcional --- identidade* | O CEST a que o percentual vale; vazio quando vale para toda a lista da regra. Existe porque a lista de uma UF pode trazer percentual por item. |
+| **Tipo_Percentual** | *enumeração {mva_st, iva_st, antecipacao_entrada} --- identidade* | O que o número é: a MVA do protocolo ou da UF, o IVA-ST (SP) ou o percentual de antecipação na entrada (nenhuma UF conhecida hoje; Q215-6). |
+| **Aliquota_Interestadual_Percentual** | *número, opcional --- identidade* | A alíquota interestadual (4, 7 ou 12) quando a UF publica o percentual já ajustado por alíquota (PB, RJ, PI, MA e MG, art. 71); vazio na linha do percentual original. |
+| **Aliquota_Interna_Referencia_Percentual** | *número, opcional* | A alíquota interna com que a UF calculou o percentual ajustado publicado (17% no PI, MA e AP; 20% na PB e no RJ). O Motor confere com `Cad_Aliquota` e avisa se diferir. |
+| **Percentual** | *número* | O percentual: a MVA, o IVA-ST ou a antecipação original, ou, na linha com alíquota interestadual, o ajustado publicado. |
+| **Origem_Valor** | *enumeração {protocolo, legislacao_uf, tabela_publicada_uf}* | De onde vem o número: o protocolo (36,56 e 71,78), a legislação interna (AL, BA, MT, PR e PI desde 2023) ou a tabela que a UF publica. |
+| **Fundamento_Legal** | *texto* | O artigo, o anexo ou o item da lista que traz o número. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_St_Uf_Base_Criterio
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): A ordem dos preços com que a UF forma a base da ST: cada linha é um critério, com a ordem, a condição de uso e se o frete entra.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Uf_Base_Criterio** | *identificador* | --- |
+| **ID_Icms_St_Uf_Base_Criterio_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Uf_Base_Criterio_Versao). ID_Icms_St_Uf_Base_Criterio é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Icms_St_Acordo_Regra** | *referência (Cad_Icms_St_Acordo_Regra) --- identidade* | A regra da UF e do acordo. |
+| **Ordem** | *número --- identidade* | A posição do critério na sequência; o Motor usa o primeiro que tem valor. |
+| **Tipo_Criterio** | *enumeração {preco_maximo_orgao_publico, pmpf, preco_sugerido_fabricante, preco_praticado_com_encargos_e_mva, valor_documento_entrada, preco_efetivo_ativo_consumo, valor_operacao_mais_diferencial}* | O preço da base: o fixado por órgão público, o PMPF, o sugerido pelo fabricante ou importador, o preço do remetente com encargos e MVA, o valor da nota de entrada (AL), o preço efetivo no ativo ou consumo (41/08, cláusula 2ª, § 5º) e o valor da operação mais o diferencial de alíquotas (MT, art. 8º). |
+| **Inclui_Frete_Na_Base** | *booleano* | O frete entra na base. Quando falso e o frete não pode entrar, o destinatário recolhe o imposto do frete (R13). |
+| **Condicao_Uso** | *enumeração {sempre, somente_se_maior_que_pmpf, somente_interestadual, somente_ativo_consumo}* | Quando o critério vale: MT usa o preço praticado com MVA nas compras interestaduais quando o resultado for maior que o PMPF (art. 6º, § 4º). Padrão `sempre`. |
+| **Ato_Divulgacao** | *texto, opcional* | A portaria que divulga o PMPF ou a MVA (MT: Portarias 195/2019 e 199/2019, citadas no Anexo X). |
+| **Fundamento_Legal** | *texto* | O artigo da UF ou do acordo que fixa o critério. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_St_Uf_Recolhimento
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): O prazo, a guia, as parcelas e o código de receita da ST em uma UF, por tipo de operação.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Uf_Recolhimento** | *identificador* | --- |
+| **ID_Icms_St_Uf_Recolhimento_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Uf_Recolhimento_Versao). ID_Icms_St_Uf_Recolhimento é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Icms_St_Acordo_Regra** | *referência (Cad_Icms_St_Acordo_Regra) --- identidade* | A regra da UF e do acordo. |
+| **Tipo_Operacao** | *enumeração {interestadual_saida, interna_saida, entrada_antecipacao, importacao, ativo_consumo_diferencial, estoque_na_entrada_no_regime} --- identidade* | A operação a que o prazo vale: PI tem prazo diferente para a interna; AL, para a importação; DF e AP, para o estoque na entrada no regime. |
+| **Regra_Prazo** | *enumeração {dia_do_mes_seguinte, periodo_apuracao_da_entrada, dias_apos_desembaraco, regra_geral_da_uf}* | Como o prazo se conta: no dia tal do mês seguinte (protocolo, MG, AP), no período de apuração da entrada (SP, em uma das redações), depois do desembaraço (AL) ou pela regra geral da UF. |
+| **Dia_Numero** | *número, opcional* | O dia (9 ou 15) ou o número de dias. |
+| **Guia** | *enumeração {gnre, dae, gare, outra}* | A guia: a GNRE nas operações interestaduais; DAE, GARE ou outra na interna e na entrada. |
+| **Guia_Especifica_Por_Acordo** | *booleano* | A UF exige GNRE própria para cada convênio ou protocolo (BA, art. 295, § 2º). Padrão falso. |
+| **Numero_Parcelas_Maximo** | *número, opcional* | O número de parcelas do pagamento: 12 no estoque do DF e do AP. Vazio quando à vista. |
+| **ID_Icms_Obrigacao_Recolher** | *referência (Cad_Icms_Obrigacao_Recolher), opcional* | O código de receita da UF para esta operação; vazio até a carga. |
+| **Fundamento_Legal** | *texto* | O artigo e o ato da UF. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_St_Uf_Nao_Aplicacao
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): Uma hipótese em que a UF afasta a ST, ou a mantém quando o acordo a afastaria, com a condição.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Uf_Nao_Aplicacao** | *identificador* | --- |
+| **ID_Icms_St_Uf_Nao_Aplicacao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Uf_Nao_Aplicacao_Versao). ID_Icms_St_Uf_Nao_Aplicacao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Icms_St_Acordo_Regra** | *referência (Cad_Icms_St_Acordo_Regra) --- identidade* | A regra da UF e do acordo. |
+| **ID_Hipotese_Nao_Aplicacao** | *referência (Cad_Classe_Sistema, domínio = hipotese_nao_aplicacao_st) --- identidade* | A hipótese. Domínio aberto: `destinatario_industrial`, `mesmo_titular_nao_varejista`, `destino_fabricante_veiculo_ou_autopecas`, `remessa_industrial_insumo`, `retorno_encomendante`, `destinatario_regime_especial_substituto`, `item_com_isencao_interna`, `escala_industrial_nao_relevante` e `uso_nao_automotivo`. |
+| **Efeito** | *enumeração {afasta_st, mantem_st}* | `afasta_st`: a ST não se aplica; `mantem_st`: a UF "dispõe de forma diferente" (41/08, cláusula 1ª, § 2º) e a ST se aplica mesmo na hipótese. |
+| **Condicao_Texto** | *texto, opcional* | A condição escrita (MG: "desde que o industrial não comercialize a mesma mercadoria"). |
+| **Exige_Nao_Comercializar_Mesmo_Item** | *booleano* | A hipótese só vale se o destinatário industrial não comercializa o mesmo bem (campo `Comercializa_Mesmo_Item` do perfil, documento 209). Padrão falso. |
+| **Exige_Indicar_Dispositivo_Na_Nota** | *booleano* | A UF exige que o documento indique o dispositivo que afasta a ST (MG, art. 18, § 4º). Padrão falso. |
+| **Fundamento_Legal** | *texto* | O artigo e o ato da UF ou do acordo. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Icms_St_Lista_Item
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): O item (CEST ou NCM) que um acordo, ou uma UF dentro do acordo, alcança ou exceta, com a numeração da lista da UF. Substitui o `Cad_Icms_St_Acordo_Cest` da primeira versão, que não tinha UF.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Lista_Item** | *identificador* | --- |
+| **ID_Icms_St_Lista_Item_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_St_Lista_Item_Versao). ID_Icms_St_Lista_Item é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Acordo_St** | *referência (Cad_Classe_Sistema, domínio = acordo_st_icms) --- identidade* | O acordo a que a lista pertence. |
+| **ID_Estado_Destino** | *referência (Cad_Estado), opcional --- identidade* | A UF da lista; vazio quando a lista vale para todas as UFs do acordo (a exceção de seis CEST do 41/08). |
+| **ID_Cest** | *referência (Cad_Cest), opcional --- identidade* | O CEST do item; vazio quando a lista da UF é só por NCM (PI, MA e AP). |
+| **ID_Classificacao** | *referência (Cad_Classificacao_Mercadoria), opcional --- identidade* | A NCM do item, de qualquer nível; vazio quando o item é por CEST. |
+| **Condicao** | *enumeração {alcancado, excetuado}* | `excetuado`: o acordo ou a UF não alcança o item. O Motor trata como alcançado todo CEST do Anexo II do Convênio 142 que não tem linha `excetuado`, salvo UF que tenha lista positiva própria. |
+| **Ambito** | *enumeração {interestadual, interno, ambos}* | Onde a regra vale: MG, item 1.1 (interno e acordo) e 1.2 (só interno). |
+| **Numero_Item_Lista** | *código (até 20), opcional* | O número do item na lista da UF (MG 1.8, RJ 7.8, PB 85.0), para o contador conferir. |
+| **Condicao_Texto** | *texto, opcional* | A ressalva da lista ("exceto os itens do CEST 01.077.00"; "uso especificamente automotivo"). |
+| **Fundamento_Legal** | *texto* | O anexo, o item e o ato. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Icms_St_Base_Calculo_Item
+
+Revisão 43 (documento 215, seção 6.2; D-N571: Q215-1 a Q215-4): A memória do cálculo da base e do imposto retido de um item sob uma regra de ST: a regra que valeu, o método, o critério da base, o percentual e de onde veio, as alíquotas, a base, o imposto, o vencimento e quem recolhe. Existe para auditoria e para os avisos; o resultado alimenta `Mov_Nota_Fiscal_Saida_Item_St_Informacao` e `Mov_Apuracao_Tributo_Item.Valor_Mva`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_St_Base_Calculo_Item** | *identificador* | --- |
+| **ID_Item_Saida** | *referência (Mov_Nota_Fiscal_Saida_Item)* | O item de saída. 1:1: um item tem uma memória de ST. |
+| **ID_Icms_St_Acordo_Regra** | *referência (Cad_Icms_St_Acordo_Regra), opcional* | A regra da UF que valeu. Vazio quando o item não está sob regra carregada (aviso 1). |
+| **ID_Estado_Destino** | *referência (Cad_Estado)* | A UF de destino do imposto retido. |
+| **Tipo_Operacao** | *enumeração {interestadual_saida, interna_saida, entrada_antecipacao, importacao, ativo_consumo_diferencial, estoque_na_entrada_no_regime}* | A operação, que escolhe o prazo e a guia em `Cad_Icms_St_Uf_Recolhimento`. |
+| **ID_Metodo_Calculo** | *referência (Cad_Classe_Sistema, domínio = metodo_calculo_st_uf), opcional* | O método da regra, copiado para a memória (a regra pode mudar depois). |
+| **Criterio_Base_Aplicado** | *enumeração {preco_maximo_orgao_publico, pmpf, preco_sugerido_fabricante, preco_praticado_com_encargos_e_mva, valor_documento_entrada, preco_efetivo_ativo_consumo, valor_operacao_mais_diferencial}, opcional* | O critério de `Cad_Icms_St_Uf_Base_Criterio` que formou a base. |
+| **Valor_Preco_Referencia** | *número, opcional* | O preço máximo, o PMPF ou o sugerido, quando o critério é um deles. |
+| **Valor_Frete_Acrescido** | *número, opcional* | O frete somado à base quando não estava no preço. |
+| **Valor_Preco_Remetente_Com_Encargos** | *número, opcional* | O preço do remetente com frete, seguro, impostos e encargos, nos critérios que o usam. |
+| **ID_Icms_St_Uf_Mva** | *referência (Cad_Icms_St_Uf_Mva), opcional* | A linha de percentual que valeu. Vazia quando o método não usa percentual ou quando não há carga (aviso 3). |
+| **ID_Perfil_Remetente_St** | *referência (Cad_Classe_Sistema, domínio = perfil_remetente_st), opcional* | O perfil do remetente que escolheu a linha. |
+| **Mva_Original** | *número, opcional* | O percentual original usado, em percentual. |
+| **Aliquota_Interestadual** | *número, opcional* | A ALQ inter da operação. |
+| **Aliquota_Interna_Ou_Carga_Efetiva** | *número* | A ALQ intra, conforme `Definicao_Alq_Intra` da regra. Vale também para o imposto sobre a base. |
+| **Mva_Ajustada** | *número, opcional* | O resultado da fórmula, ou o ajustado publicado pela UF, em percentual. |
+| **Regra_Mva_Aplicada** | *enumeração {mva_ajustada, mva_ajustada_tabelada_uf, mva_original_alq_intra_menor, mva_original_remetente_simples}, opcional* | Qual regra escolheu o percentual: a fórmula, a tabela da UF, a ALQ intra menor ou o remetente do Simples. |
+| **Base_Calculo_St** | *número* | A base do imposto retido. Copiada para `Base_Calculo_St_Origem_Destino` da informação de ST do item. |
+| **Valor_Adicional_Fundo** | *número, opcional* | O adicional de fundo somado ao imposto (`Adicional_Fundo_Percentual`). |
+| **Valor_Icms_Sobre_Base** | *número* | A base vezes a ALQ intra. |
+| **Valor_Icms_Operacao_Propria** | *número* | O ICMS da operação própria, como destacado na nota. |
+| **Valor_Icms_St_Retido** | *número* | A diferença entre os dois, mais o adicional de fundo. |
+| **Data_Vencimento** | *data, opcional* | A data pela `Regra_Prazo` e `Dia_Numero` da UF. |
+| **Recolhe_Destinatario** | *booleano* | O frete não pôde entrar na base e o destinatário recolhe. Padrão falso. |
+| **ID_Apuracao** | *referência (Mov_Apuracao_Tributo_Item), opcional* | A linha de apuração que recebeu o resultado. |
+| **Dados_Provisorios** | *booleano* | Verdadeiro se a regra, o percentual ou o critério usado está `provisorio`: o relatório avisa. |
+| **Memoria_Calculo** | *texto* | O texto da conta, para auditoria. |
+
+56.2. Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos: ficha do produto, valor de referência, pequeno produtor, memória do cálculo, gás natural e receita dos concursos de prognósticos (documento 216, seção 6.2)
+
+Cad_Is_Produto_Ficha
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A ficha do produto sujeito ao Imposto Seletivo quando a linha da NCM pede dados que a NCM sozinha não traz (`Exige_Ficha_Produto`). Hoje serve às bebidas e aos fumígenos: o teor alcoólico, o volume da embalagem, as unidades por embalagem (a vintena do cigarro), a condição que escolhe a linha de alíquota, o preço de venda a varejo tabelado e a marca da embalagem primária. É o dado do produto que a NCM sozinha não traz.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Produto_Ficha** | *identificador* | --- |
+| **ID_Is_Produto_Ficha_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Is_Produto_Ficha_Versao). ID_Is_Produto_Ficha é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico) --- identidade* | O produto da ficha. Vale para qualquer produto cuja NCM tenha linha vigente em `Cad_NCM_Imposto_Seletivo`, de qualquer grupo: a ficha não é exclusiva de bebida e fumígeno. |
+| **Teor_Alcoolico_Percentual** | *número, opcional* | Teor alcoólico em % v/v a 20 °C (MP 1.399, art. 6º, § 1º, IV). Obrigatório nas bebidas alcoólicas: escolhe a linha (acima de 14%, abaixo de 8%) e calcula o litro de álcool. |
+| **Volume_Liquido_Litros** | *número, opcional* | Volume líquido da embalagem primária, em litros. |
+| **Litros_Alcool_Puro_Por_Embalagem** | *número, opcional* | Teor × volume ÷ 100. A LC 214, art. 422, § 1º, II, manda a alíquota específica considerar o produto do teor alcoólico pelo volume. Calculado e gravado. |
+| **Unidades_Por_Embalagem** | *número, opcional* | Unidades da embalagem primária. No cigarro, 20 é a vintena (o maço); a alíquota específica é por vintena. |
+| **ID_Condicao_Produto_Is** | *referência (Cad_Classe_Sistema, domínio = condicao_produto_is), opcional* | A condição do produto: vinho da madeira, do porto ou de xerez; aguardente de cana de melaço ou não; bebida refrescante; cigarro feito à mão. O Ex da Tipi do item (`ID_Ex_Tipi`) é que escolhe a linha da NCM; a condição serve de conferência (aviso 4). Domínio aberto. |
+| **Embalagem_Primaria** | *booleano* | Verdadeiro se a unidade vendida é a embalagem em contato direto com o produto e destinada ao consumidor final (LC 214, art. 409, § 2º). Falso gera o aviso 5. |
+| **Preco_Venda_Varejo_Tabelado** | *número, opcional* | Preço de venda a varejo tabelado do fumígeno, base do valor de referência de 15% (MP 1.399, art. 6º, I, a). Vazio quando não há preço tabelado. |
+| **Data_Preco_Varejo** | *data, opcional* | A data do preço tabelado. |
+| **Fonte_Preco_Varejo** | *texto, opcional* | O ato ou a lista que tabela o preço (por exemplo, o preço mínimo de venda de cigarros do art. 220-A do Decreto 7.212, que o art. 17 da MP mantém). |
+| **Atributos_Complementares** | *texto, opcional* | Atributos que uma lei futura venha a exigir de qualquer NCM (por exemplo, teor de açúcar de bebida), em pares nome=valor, até que viram campo próprio. O Motor ignora; o aviso 17 lembra de propor o campo. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A ficha nasce provisória até o responsável fiscal validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Is_Valor_Referencia_Regra
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A metodologia do valor de referência do Imposto Seletivo por grupo de produto e por hipótese: o percentual de 15% sobre o preço de varejo dos fumígenos, o valor líquido da primeira operação entre partes não relacionadas, a cotação de bolsa ou de agência dos minerais. Guarda se o ato do art. 414, § 2º, já foi publicado.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Valor_Referencia_Regra** | *identificador* | --- |
+| **ID_Is_Valor_Referencia_Regra_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Is_Valor_Referencia_Regra_Versao). ID_Is_Valor_Referencia_Regra é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Grupo_Produto_Is** | *referência (Cad_Classe_Sistema, domínio = grupo_produto_is) --- identidade* | O grupo do art. 409, § 1º, ou o grupo que lei futura acrescentar ao domínio aberto (fumígenos, bens minerais, e qualquer outro quando o ato do art. 414, § 2º, os alcançar). |
+| **ID_Hipotese_Fato_Gerador_Is** | *referência (Cad_Classe_Sistema, domínio = hipotese_fato_gerador_is) --- identidade* | A hipótese do art. 412 a que a regra vale: comercialização, importação, extração, transferência não onerosa, consumo pelo fabricante. |
+| **ID_Metodologia_Valor_Referencia** | *referência (Cad_Classe_Sistema, domínio = metodologia_valor_referencia_is) --- identidade* | A metodologia: percentual do preço de varejo, valor líquido da primeira operação, cotação ou índice de bolsa ou agência, valor de mercado, valor informado. Domínio aberto. |
+| **Condicao_Preco_Tabelado** | *enumeração {com_preco_tabelado, sem_preco_tabelado, indiferente} --- identidade* | Se o produto tem preço de venda tabelado no varejo (MP 1.399, art. 6º, I, a) ou não (alínea b). |
+| **Percentual_Sobre_Base** | *número, opcional* | O percentual aplicado à base da metodologia: 15 sobre o preço de varejo (MP, art. 6º, I, a). |
+| **ID_Serie_Cotacao** | *referência (Cad_Serie_Cotacao), opcional* | A série de cotação, índice ou preço quando a metodologia é de bolsa ou de agência (LC 214, art. 414, § 2º). |
+| **Exclui_Tributos_Do_Valor** | *booleano* | Verdadeiro quando o valor líquido exclui o ICMS, a CBS e o IBS (MP, art. 6º, I, b). |
+| **Exige_Parte_Nao_Relacionada** | *booleano* | Verdadeiro quando só vale a primeira operação entre partes não relacionadas (LC 214, art. 5º, §§ 2º a 5º, por remissão da MP). |
+| **Base_Importacao_Maior_Valor** | *booleano* | Verdadeiro nos fumígenos importados com alíquota ad valorem: a base é a maior entre o valor de referência e o valor aduaneiro mais o Imposto de Importação (LC 214, art. 434, § 2º-A). |
+| **Ato_Metodologia_Publicado** | *booleano* | Falso enquanto o ato do chefe do Poder Executivo do art. 414, § 2º, não foi publicado: a linha é a regra transitória da MP e vale até 31/12/2027 (art. 6º). |
+| **Fundamento_Legal** | *texto* | MP 1.399/2026, art. 6º, I; LC 214, arts. 414 e 434. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Is_Pequeno_Produtor_Faixa
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A tabela do Anexo VI da MP 1.399: a redução da alíquota ad valorem das bebidas alcoólicas por faixa de volume de álcool do pequeno produtor, e o limite de 250 mil litros.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Pequeno_Produtor_Faixa** | *identificador* | --- |
+| **ID_Is_Pequeno_Produtor_Faixa_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Is_Pequeno_Produtor_Faixa_Versao). ID_Is_Pequeno_Produtor_Faixa é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Volume_Alcool_Litros_Minimo** | *número --- identidade* | Início da faixa, em litros de álcool, exclusivo (0 na primeira faixa). |
+| **Volume_Alcool_Litros_Maximo** | *número --- identidade* | Fim da faixa, em litros de álcool, inclusive (50.000, 125.000 e 250.000). |
+| **Percentual_Reducao** | *número* | A redução da alíquota ad valorem: 40, 20 ou 10 (MP, Anexo VI). |
+| **Volume_Limite_Pequeno_Produtor** | *número* | O teto do conceito de pequeno produtor: 250.000 litros de álcool (MP, art. 6º, IV). |
+| **Fundamento_Legal** | *texto* | MP 1.399/2026, art. 6º, IV e § 1º, e Anexo VI. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Is_Pequeno_Produtor_Volume
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): O volume do ano-calendário anterior que enquadra a empresa como pequeno produtor de bebida alcoólica, somando todos os estabelecimentos e as partes relacionadas, e a faixa de redução que daí resulta.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Pequeno_Produtor_Volume** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | O contribuinte. O volume soma todos os seus estabelecimentos (MP, art. 6º, § 1º, II, a). |
+| **Ano_Calendario_Base** | *número* | O ano-calendário anterior ao da apuração, que é o que a MP manda considerar. |
+| **ID_Tipo_Pequeno_Produtor** | *referência (Cad_Classe_Sistema, domínio = tipo_pequeno_produtor_is)* | Cervejaria, vinícola, produtor de licores, destilaria, ou associação ou cooperativa (MP, art. 6º, § 1º, III). |
+| **Associacao_Integrada_So_Por_Pequenos** | *booleano* | Verdadeiro na associação ou cooperativa integrada exclusivamente por pequenos produtores (alínea b do inciso III). |
+| **Criterio_Volume** | *enumeração {fornecimento_art_6_iv, producao_anexo_vi}* | O texto da MP fala em volume de **fornecimento** no art. 6º, IV, e em volume de **produção acumulada** no cabeçalho do Anexo VI. Enquanto a Receita não esclarece (C329), o ERP guarda qual critério foi usado. |
+| **Volume_Proprio_Litros** | *número* | Litros de bebida fornecidos (ou produzidos, conforme o critério) pelos estabelecimentos do contribuinte no ano-calendário anterior. |
+| **Volume_Partes_Relacionadas_Litros** | *número* | Litros fornecidos pelas partes relacionadas (LC 214, art. 5º, §§ 2º a 5º). |
+| **Volume_Total_Litros_Alcool** | *número* | Soma, em litros de álcool, do produto do teor alcoólico pelo volume de cada bebida (MP, art. 6º, § 1º, I). Calculado pelas fichas. |
+| **Enquadra_Pequeno_Produtor** | *booleano* | Verdadeiro quando o volume total de álcool é inferior a 250.000 litros (alínea a do inciso III). |
+| **ID_Is_Pequeno_Produtor_Faixa** | *referência (Cad_Is_Pequeno_Produtor_Faixa), opcional* | A faixa do Anexo VI que vale para o volume. Vazio quando não enquadra. |
+| **Percentual_Reducao_Aplicado** | *número* | A redução da faixa, copiada para o cálculo. Zero quando não enquadra. |
+| **Origem_Volume** | *enumeração {calculado_pelo_erp, informado_pelo_contador}* | Se o volume saiu das notas e das fichas ou foi digitado. |
+| **Data_Calculo** | *data* | Quando o volume foi calculado. |
+| **Memoria_Calculo** | *texto* | A conta, para auditoria. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do enquadramento. |
+
+Mov_Is_Produto_Apuracao
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A memória do cálculo do Imposto Seletivo de um item de **qualquer NCM** que tenha linha em `Cad_NCM_Imposto_Seletivo` (hoje bebidas, fumígenos e minerais): a quantidade da alíquota específica, o valor de referência, as alíquotas inicial e final, os fatores, a redução do pequeno produtor, a parte ad valorem e a parte específica. Faz para esses bens o que `Mov_Is_Veiculo_Apuracao` faz para os veículos.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Produto_Apuracao** | *identificador* | --- |
+| **ID_Apuracao** | *referência (Mov_Apuracao_Tributo_Item)* | A linha de apuração do item que recebeu o resultado. |
+| **ID_NCM_Imposto_Seletivo** | *referência (Cad_NCM_Imposto_Seletivo)* | A linha da NCM que deu a alíquota inicial, o fator e a condição. |
+| **ID_Is_Produto_Ficha** | *referência (Cad_Is_Produto_Ficha), opcional* | A ficha usada (bebidas e fumígenos). |
+| **ID_Is_Valor_Referencia_Regra** | *referência (Cad_Is_Valor_Referencia_Regra), opcional* | A metodologia do valor de referência usada, quando a base é esse valor. |
+| **ID_Is_Pequeno_Produtor_Volume** | *referência (Mov_Is_Pequeno_Produtor_Volume), opcional* | O enquadramento de pequeno produtor usado. |
+| **ID_Is_Gas_Natural_Declaracao** | *referência (Mov_Is_Gas_Natural_Declaracao), opcional* | A declaração de destinação do gás natural, quando a alíquota é zero por ela. |
+| **Data_Fato_Gerador** | *data* | A data que escolhe as linhas vigentes. |
+| **Operacao** | *enumeração {saida_fabricante, importacao, extracao, transferencia_nao_onerosa, consumo_pelo_fabricante, incorporacao_ativo, arrematacao}* | A hipótese do art. 412. Na importação entra o fator de ajuste. |
+| **Quantidade_Base_Especifica** | *número, opcional* | A quantidade da alíquota específica: litros de álcool puro nas bebidas, vintenas nos cigarros. Inclui os bens dados em bonificação (LC 214, art. 417, § 3º). |
+| **ID_Unidade_Medida_Base** | *referência (Cad_Unidade_Medida), opcional* | A unidade da quantidade acima. |
+| **Valor_Base_Ad_Valorem** | *número, opcional* | A base da parte ad valorem: valor de venda, valor de referência, valor aduaneiro mais o Imposto de Importação, ou a maior entre as duas nos fumígenos importados. |
+| **Valor_Referencia_Calculado** | *número, opcional* | O valor de referência calculado pela regra, quando a base é esse valor. |
+| **Exclusao_Icms_Iss_Ate_2032** | *número, opcional* | O ICMS e o ISS que não integram a base até 31/12/2032 (LC 214, art. 417, § 4º). |
+| **Aliquota_Inicial_Ad_Valorem** | *número, opcional* | A alíquota inicial do Anexo IV, vinda da linha da NCM. |
+| **Fator_Conversao** | *número, opcional* | O fator de conversão do Anexo IV (1,00 a 1,25), vindo da linha da NCM. |
+| **Fator_Ajuste_Importacao** | *número, opcional* | O fator do art. 8º da MP (1,45 nas bebidas, 1,00 nos fumígenos e nos demais), cumulativo com o de conversão. Vazio fora da importação. |
+| **Aliquota_Final_Ad_Valorem** | *número, opcional* | Inicial × conversão × ajuste, com o arredondamento do parâmetro da empresa. |
+| **Reducao_Pequeno_Produtor_Percentual** | *número, opcional* | A redução do Anexo VI aplicada à alíquota ad valorem da bebida alcoólica. |
+| **Valor_Especifico_Unitario** | *número, opcional* | O valor específico por unidade, já atualizado pelo IPCA (R$ 3,50 por vintena; zero nas bebidas até 31/12/2027). |
+| **Valor_Ad_Valorem** | *número* | Base × alíquota final, depois da redução. |
+| **Valor_Especifico** | *número* | Quantidade × valor específico unitário. |
+| **Valor_Is_Apurado** | *número* | Soma das duas partes. É o valor gravado em `Mov_Apuracao_Tributo_Item`. |
+| **Hipotese_Excecao** | *enumeração {nenhuma, aliquota_zero_especifica_transitoria, aliquota_zero_mineral_transitoria, aliquota_zero_gas_natural, suspensao_regime_aduaneiro, suspensao_loja_franca, aliquota_zero_ou_reducao_por_lei_futura, nao_incide_exportacao, nao_incide_energia_telecom, nao_incide_aliquota_reduzida_ec_132}* | Quando diferente de `nenhuma`, o valor ou parte dele é zero, ou o imposto não incide, e o item guarda o motivo. |
+| **Fator_Reduzido_Por_Decreto** | *booleano* | Verdadeiro se o fator usado é o reduzido por decreto (MP, art. 3º, § 3º, e art. 8º, § 3º). O aviso 12 lembra que a redução só vale depois do art. 156-A, § 9º, da Constituição. |
+| **Dados_Provisorios** | *booleano* | Verdadeiro se alguma linha usada está `provisorio`: o relatório avisa. |
+| **Memoria_Calculo** | *texto* | O texto da conta, para auditoria. |
+
+Mov_Is_Gas_Natural_Declaracao
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A declaração do adquirente ou do importador de que o gás natural será usado como insumo em processo industrial ou como combustível para transporte (LC 214, art. 423), que leva a alíquota a zero, e o recolhimento quando o destino efetivo é outro.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Is_Gas_Natural_Declaracao** | *identificador* | --- |
+| **Origem_Tipo** | *enumeração {nota_fiscal_entrada, nota_fiscal_saida, duimp}* | O documento a que a declaração se refere. |
+| **ID_Item_Origem** | *referência genérica* | O item do documento (`Mov_Nota_Fiscal_Entrada_Item`, `Mov_Nota_Fiscal_Saida_Item` ou item da Duimp). |
+| **ID_Participante_Declarante** | *referência (Cad_Participante)* | O adquirente ou o importador que declara. |
+| **Papel_Declarante** | *enumeração {adquirente_responsavel, importador_contribuinte}* | O art. 423, § 2º: o adquirente responde como responsável e o importador como contribuinte. |
+| **ID_Destinacao_Gas_Natural** | *referência (Cad_Classe_Sistema, domínio = destinacao_gas_natural_is)* | Insumo em processo industrial, combustível para transporte ou outra destinação. |
+| **Data_Declaracao** | *data* | Quando a declaração foi feita (forma do regulamento, ainda não publicada). |
+| **Quantidade_Declarada** | *número* | A quantidade de gás natural declarada. |
+| **ID_Unidade_Medida** | *referência (Cad_Unidade_Medida)* | A unidade da quantidade. |
+| **Destinacao_Efetiva_Confirmada** | *booleano* | Verdadeiro quando o uso real confere com a declaração. |
+| **Data_Constatacao_Destino_Diverso** | *data, opcional* | Quando se constatou destino diferente do declarado. |
+| **Valor_Is_A_Recolher** | *número, opcional* | O imposto da alíquota do art. 422, § 2º, que passa a ser devido no destino diverso. |
+| **Valor_Multa_Juros** | *número, opcional* | Multa e juros de mora do art. 29, § 2º, da LC 214. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | O documento da declaração no GED. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A aprovação do tratamento do destino diverso. |
+
+Mov_Prognostico_Receita_Periodo
+
+Revisão 43 (documento 216, seção 6.2; D-N575: Q216-1 a Q216-6): A receita própria da entidade que opera concursos de prognósticos e fantasy sport em um período: arrecadação, premiações pagas e destinações obrigatórias. É a base do Imposto Seletivo (LC 214, art. 414, V) e também a do IBS e da CBS (art. 245). Fica previsto; nenhum cliente opera hoje.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Prognostico_Receita_Periodo** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A entidade que promove a atividade e é a contribuinte (art. 424, V). |
+| **Competencia** | *data* | O mês de apuração (LC 214, art. 430). |
+| **ID_Modalidade_Prognostico** | *referência (Cad_Classe_Sistema, domínio = modalidade_prognostico_is)* | Modalidade lotérica, aposta de quota fixa, sweepstake, aposta de turfe, demais apostas ou fantasy sport (art. 244). |
+| **Meio_Aposta** | *enumeração {fisico, virtual}* | Em meio físico ou virtual. No virtual o apostador é identificado na obrigação acessória (art. 248, parágrafo único). |
+| **Valor_Arrecadacao** | *número* | O produto da arrecadação do período. |
+| **Valor_Premiacoes_Pagas** | *número* | As premiações pagas, que saem da base e não sofrem incidência (art. 245, I e parágrafo único). |
+| **Valor_Destinacoes_Obrigatorias** | *número* | As destinações obrigatórias por lei a órgão ou fundo público e a outros beneficiários (art. 245, II). |
+| **Valor_Receita_Propria** | *número* | Arrecadação menos premiações e destinações. Calculado e gravado. |
+| **Aliquota_Is_Percentual** | *número* | A alíquota do Imposto Seletivo: 0,5% (MP, art. 7º). |
+| **Valor_Is_Apurado** | *número* | Receita própria × alíquota. |
+| **Local_Aposta_Informado** | *booleano* | Verdadeiro quando o local da aposta consta da obrigação acessória (art. 248). |
+| **Prestado_A_Residente_Exterior** | *booleano* | Verdadeiro quando o serviço virtual foi prestado a residente no exterior: exportado e imune ao IBS e à CBS (art. 250), a conferir quanto ao IS (C328). |
+| **Dados_Provisorios** | *booleano* | Verdadeiro se a alíquota usada está `provisorio`. |
+| **ID_Apuracao** | *referência (Mov_Apuracao_Tributo_Item), opcional* | A linha de apuração que recebeu o Imposto Seletivo. |
+| **Memoria_Calculo** | *texto* | A conta, para auditoria. |
+
+**Cargas de partida da revisão 43 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Classe_Sistema (9 domínios novos, 46 valores) | Documento 215: acordo_st_icms 4, metodo_calculo_st_uf 5, perfil_remetente_st 4 e hipotese_nao_aplicacao_st 9; documento 216: condicao_produto_is 5, metodologia_valor_referencia_is 5, tipo_pequeno_produtor_is 5, destinacao_gas_natural_is 3 e modalidade_prognostico_is 6; todos abertos e provisórios |
+| Cad_Classe_Sistema (6 valores novos em tipo_regime_icms) | Documento 215: credenciamento_substituto_atacadista_pecas (AL), dispensa_st_autopecas_regime_especial (MG) e quatro acessórios de obrigação do MS; provisórios |
+| Cad_NCM_Imposto_Seletivo (25 linhas) | Documento 216, Anexo B: 21 do Anexo IV da MP 1.399 (bebidas e fumígenos) e 4 de bens minerais; vigência de 02/02/2027 a 31/12/2027, sem linha para 2028; provisórias (C324 a C334) |
+| Cad_Is_Pequeno_Produtor_Faixa (3 linhas) | Anexo VI da MP 1.399: 40%, 20% e 10%, limite de 250.000 litros de álcool; provisórias |
+| Cad_Is_Valor_Referencia_Regra (4 linhas) | Valor de referência dos fumígenos (15% do preço de varejo; valor líquido da primeira operação) e dos minerais (valor informado); transitórias até 31/12/2027 |
+| Prognósticos | A alíquota de 0,5% (MP 1.399, art. 7º) fica em `Mov_Prognostico_Receita_Periodo.Aliquota_Is_Percentual`; sem linha de cadastro |
+| Cad_Motor_Regra (texto: 18 do documento 215 e 17 do documento 216) | Em CSV de leitura; a gravação em `Cad_Motor_Regra` é do carregador do Motor |
+| Avisos do Motor (texto: 18 do documento 215 e 18 do documento 216) | Em CSV de leitura |
+| Sem carga de UF (documento 215) | Percentuais, listas, prazos e critérios de base por UF ficam fora; o Anexo B do documento 215 é só referência (D-N569, Q215-3) |
+
+**Regras do Motor na ST de autopeças (documento 215, Anexo A)**
+
+| **Regra** | **Se** | **Resultado** | **Fundamento** | **Vigência** |
+|---|---|---|---|---|
+| R1 | Operação com peça de autopeça, regra vigente da UF e do tipo de operação em `Cad_Icms_St_Acordo_Regra`, item na lista (`alcancado`, ou CEST do Anexo II sem linha `excetuado`) e nenhuma hipótese de não aplicação cumprida | O **remetente** é o substituto e retém o ICMS das operações seguintes (ou o método da UF se aplica) | Protocolo 41/08, cláusula 1ª, caput e § 1º; regra da UF | conforme a regra da UF |
+| R2 | A UF tem hipótese em `Cad_Icms_St_Uf_Nao_Aplicacao` cumprida pelo destinatário | `afasta_st`: a ST não se aplica e o Motor grava o dispositivo; `mantem_st`: a ST se aplica | 41/08, cláusula 1ª, § 2º; MG, art. 18; SP, art. 313-O, § 3º | conforme a regra da UF |
+| R3 | Peça para renovação, recondicionamento ou beneficiamento, ou para ativo imobilizado ou uso e consumo | A ST se aplica; no ativo e no consumo vale o diferencial de alíquotas e o critério de base próprio | 41/08, cláusula 1ª, § 3º; cláusula 2ª, § 5º; MT, art. 8º | conforme a regra da UF |
+| R4 | Remetente com `Papel_Substituto_St` diferente de `nao_substituto_subsequentes` | Responde pela retenção das saídas seguintes de **todas** as peças do § 1º, mesmo as excetuadas no caput | 41/08, cláusula 1ª, §§ 4º a 6º | 01/02/2023 |
+| R5 | A regra tem critérios em `Cad_Icms_St_Uf_Base_Criterio` | O Motor percorre por `Ordem`, respeitando `Condicao_Uso`, e usa o primeiro critério com valor; o frete entra conforme `Inclui_Frete_Na_Base` | 41/08, cláusula 2ª; MT, art. 6º; MG, art. 20 | conforme a regra da UF |
+| R6 | O critério usa percentual | Escolhe a linha de `Cad_Icms_St_Uf_Mva` pelo perfil do remetente, pelo CEST (a linha do CEST antes da geral) e pelo `Tipo_Percentual`; se há linha com a alíquota interestadual da operação, usa o ajustado publicado; senão calcula a fórmula | 41/08, cláusula 2ª, §§ 1º e 2º; PB, Anexo 05; RJ, item 7 | conforme a regra da UF |
+| R7 | A fórmula da MVA ajustada | ALQ intra pela `Definicao_Alq_Intra` da regra, lida em `Cad_Aliquota` (ICMS, UF de destino), ou a carga efetiva se menor | 41/08, cláusula 2ª, § 1º, III; 97/10; 129/10; BA, art. 289, § 14 | conforme a regra da UF |
+| R8 | A ALQ intra é menor que a ALQ inter e `Usa_Mva_Original_Se_Alq_Intra_Menor` é verdadeiro | Usa a MVA original, sem ajuste | 41/08, cláusula 2ª, § 7º; BA, art. 289, § 15 | conforme a regra da UF |
+| R9 | O remetente é do Simples Nacional e a regra tem `Remetente_Simples_Usa` diferente de `mva_ajustada` | Usa a MVA original ou não aplica o ajuste | BA, art. 295, § 3º; MG, art. 20, § 6º | conforme a regra da UF |
+| R10 | O método da UF não é MVA (IVA-ST, alíquota fixa sobre a nota de entrada, antecipação) | Aplica o percentual da linha correspondente sobre a base do critério, sem ajuste por alíquota, salvo se a linha for ajustada | SP, SRE 16/23; AL, Decreto 99.605, art. 4º | conforme a regra da UF |
+| R11 | A base de ST foi formada | Imposto retido = base × ALQ intra, menos o ICMS da operação própria, mais o adicional de fundo, se a regra o fixa | 41/08, cláusula 3ª; AL, art. 4º, § 3º | conforme a regra da UF |
+| R12 | Há imposto retido | Vencimento pela `Regra_Prazo` e `Dia_Numero` do `Tipo_Operacao`, com a guia e o código de receita da UF; GNRE específica por acordo quando `Guia_Especifica_Por_Acordo` | 41/08, cláusula 4ª; PI, art. 5º; BA, art. 295, § 2º | conforme a regra da UF |
+| R13 | O frete não pode entrar na base | O destinatário recolhe o imposto correspondente, com o percentual | 41/08, cláusula 2ª, § 4º; MG, art. 20, § 1º, II | conforme a regra da UF |
+| R14 | Operação interna e `Alcance_Operacao` inclui a interna | ST com o percentual, o prazo e a lista da regra interna | 41/08, cláusula 5ª; PI, art. 5º | conforme a regra da UF |
+| R15 | Hipótese da cláusula nona do Convênio 142 (R14 do documento 209) | A inaplicabilidade continua valendo; o dispositivo vai à nota | Convênio 142, cláusulas 9ª e 20ª | sem fim fixado |
+| R16 | O item está na lista de duas regras da UF | Vale a regra de menor `Prioridade_Aplicacao`; aviso 13 | MA, art. 6º do Anexo 4.41; BA, art. 289, § 21 | conforme a regra da UF |
+| R17 | A UF exige autorização prévia (`Exige_Autorizacao_Fisco_Destino`) e o perfil não tem o documento | A MVA de fidelidade não vale: usa a de `demais`; aviso 5 | 41/08, cláusula 2ª, § 8º; BA, § 21 | conforme a regra da UF |
+| R18 | Estoque na entrada no regime (`Tipo_Operacao` = `estoque_na_entrada_no_regime`) | O imposto do estoque segue o prazo, a guia e o número máximo de parcelas da linha; o inventário é o do Bloco H (motivo 06) | DF, Portaria SF 198/2008; AP, Decreto 145/2009 | conforme a regra da UF |
+
+**Avisos do Motor na ST de autopeças (documento 215, seção 7)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| 1 | UF sem regra de ST carregada | Peça com CEST ou NCM de autopeça e a UF de destino não tem linha vigente em `Cad_Icms_St_Acordo_Regra` na data e na operação da nota |
+| 2 | Item fora da lista da UF | O CEST ou a NCM está como `excetuado` em `Cad_Icms_St_Lista_Item`, não está na lista positiva da UF, ou o CEST está vazio (o CEST vai em todo item: Convênio 142, cláusula 20ª) |
+| 3 | Percentual da UF sem carga | O método usa percentual e não há linha vigente em `Cad_Icms_St_Uf_Mva` para o perfil do remetente, o CEST e a alíquota interestadual |
+| 4 | Hipótese de não aplicação | A regra da UF tem hipótese com `Efeito` = `afasta_st` e o destinatário a cumpre; se `Exige_Indicar_Dispositivo_Na_Nota`, o aviso lembra de indicar o dispositivo |
+| 5 | MVA de fidelidade sem autorização | `Regime_Fidelidade_Distribuicao` é `distribuicao_exclusiva_contrato_fidelidade` e `ID_Documento_Autorizacao_Fisco` está vazio, ou a UF exige a autorização |
+| 6 | ALQ intra menor que a inter | O Motor aplicou a MVA original (`Usa_Mva_Original_Se_Alq_Intra_Menor`) |
+| 7 | Frete fora da base | `Recolhe_Destinatario` verdadeiro: o destinatário recolhe o imposto do frete |
+| 8 | UF fora do acordo | O destino saiu do acordo na data da nota (SP em 01/10/2026, RS em 01/11/2024; ES, GO e SC denunciaram): sem regra do acordo; conferir a regra própria da UF |
+| 9 | Peça sem uso automotivo comprovado | O § 1º do 41/08 (e MG, art. 73) exige uso especificamente automotivo e o destinatário não tem perfil automotivo |
+| 10 | Regra provisória | A regra, o percentual, o critério, o prazo ou a lista usada está `provisorio` |
+| 11 | Nota anterior a 01/02/2023 | A data da nota é anterior à redação do Protocolo 95/22: valia o Anexo Único, que não foi carregado |
+| 12 | Preço de referência não informado | O critério é `preco_maximo_orgao_publico`, `pmpf` ou `preco_sugerido_fabricante` e `Valor_Preco_Referencia` está vazio |
+| 13 | Item em dois acordos da mesma UF | O item está na lista de duas regras da UF (por exemplo, 41/08 e 97/10 no MA): o Motor usou a de menor `Prioridade_Aplicacao` |
+| 14 | Remetente do Simples Nacional | A regra tem `Remetente_Simples_Usa` diferente de `mva_ajustada` e o remetente é do Simples: usou a MVA original ou não ajustou |
+| 15 | Método especial sem percentual | O método é IVA-ST, alíquota fixa ou antecipação na entrada e a linha de percentual não está carregada |
+| 16 | Regime especial ativo | O remetente ou o destinatário tem em `Cad_Filial_Regime_Icms` um regime que dispensa ou altera a ST ou a obrigação acessória (credenciamento de AL, dispensa de MG, regime de MS) |
+| 17 | Variação fora de campo | A regra da UF tem `Observacao_Regra` preenchida: a variação ainda não tem campo; conferir a observação e propor o campo |
+| 18 | Regra da UF publicada fora do regulamento | `Fonte_Publicacao` é `portal_sefaz` ou `portaria`: conferir a publicação vigente na data da nota (BA, MT e SP) |
+
+**Regras do Motor no Imposto Seletivo (documento 216, Anexo A)**
+
+| **Regra** | **Se** | **Resultado** | **Fundamento** | **Vigência** |
+|---|---|---|---|---|
+| R1 | O item tem NCM com linha vigente em `Cad_NCM_Imposto_Seletivo` na data do fato gerador, **de qualquer grupo** | O IS incide. O Ex vence o código, e o código mais longo vence o mais curto. Sem linha, o IS não incide. O Motor não tem lista fixa de grupos nem de NCM | LC 214, art. 409; Anexo XVII; regra de Alberto, 12/11/2026 | sem fim fixado |
+| R2 | O item tem grupo e operação | A linha de `Cad_Is_Hipotese_Base` com grupo vale sobre a linha padrão e dá contribuinte e base | LC 214, arts. 412, 414 e 424 | sem fim fixado |
+| R3 | A base é o valor de venda | Valor da operação menos descontos incondicionais, CBS, IBS e o próprio IS; até 31/12/2032, menos também o ICMS e o ISS | LC 214, art. 417 | ICMS e ISS até 31/12/2032 |
+| R4 | A base é o valor de referência e a regra exige | Aplica `Percentual_Sobre_Base` ao preço de varejo tabelado (15%), ou usa o valor líquido da primeira operação entre partes não relacionadas | MP 1.399, art. 6º, I | até 31/12/2027 |
+| R5 | A linha é de modo fixo | Alíquota ad valorem = `Aliquota_Ad_Valorem` (a coluna Final). Na importação: inicial × conversão × ajuste, com o arredondamento do parâmetro (C256) | MP, arts. 3º e 8º; Anexo IV | conforme a linha |
+| R6 | Bebida alcoólica de pequeno produtor | Redução da faixa do Anexo VI sobre a alíquota ad valorem, só com volume do ano anterior abaixo de 250.000 litros de álcool | MP, art. 6º, IV, e Anexo VI | até 31/12/2027 |
+| R7 | A linha tem valor específico | IS específico = quantidade (litros de álcool puro ou vintenas, com a bonificação) × valor unitário atualizado pelo IPCA; zero nas bebidas e nos fumígenos (exceto cigarro e cigarrilha) até 31/12/2027 | LC 214, arts. 417, § 3º, 422 e 436; MP, art. 6º, II | até 31/12/2027 (zero) |
+| R8 | A linha é mista (cigarro) | IS = parte ad valorem + parte específica | LC 214, art. 422, § 1º; MP, Anexo IV | conforme a linha |
+| R9 | Bem mineral extraído | Alíquota zero em 2027; depois, o teto de 0,25% da linha; base = valor de referência | MP, art. 6º, III, a, 3; LC 214, arts. 414 e 422, § 2º | zero até 31/12/2027 |
+| R10 | Gás natural com declaração | Alíquota zero; se o destino efetivo for outro, recolhe pela alíquota do art. 422, § 2º, com multa e juros | LC 214, art. 423 | sem fim fixado |
+| R11 | Concurso de prognóstico | Base = arrecadação menos premiações e destinações obrigatórias; alíquota 0,5% | LC 214, arts. 245 e 414, V; MP, art. 7º | conforme a MP |
+| R12 | Operação com energia, telecomunicações ou bem com alíquota reduzida pela EC 132, ou exportação | O IS não incide; o item grava o motivo | LC 214, arts. 413, 426 e 427 | sem fim fixado |
+| R13 | Importação | Base = valor aduaneiro + II (fumígeno: a maior com o valor de referência); fator de ajuste cumulativo; pago no registro da declaração; suspensão em regime aduaneiro e loja franca | LC 214, art. 434; MP, art. 8º | conforme a MP |
+| R14 | Fator reduzido por decreto | Mínimo 1,00 e só depois do art. 156-A, § 9º, da Constituição | MP, art. 3º, §§ 3º, 6º e 7º; art. 8º, § 3º | sem fim fixado |
+| R15 | Há IS apurado no mês | Apuração mensal consolidando os estabelecimentos; pagamento, *split payment*, abatimento de devolução e compensação | LC 214, arts. 418 e 430 a 433; MP, art. 14 | sem fim fixado |
+| R16 | O valor específico venceu um ano | Atualiza pelo IPCA, em nova versão da linha | LC 214, art. 436 | anual |
+| R17 | A linha tem `Exige_Ficha_Produto` | O Motor lê a ficha vigente; sem ficha, calcula com o que tem e avisa | Regra de Alberto, 12/11/2026 | sem fim fixado |
+
+**Avisos do Motor no Imposto Seletivo (documento 216, seção 7)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| 1 | Produto sem ficha | A linha da NCM tem `Exige_Ficha_Produto` e o produto não tem linha vigente em `Cad_Is_Produto_Ficha` |
+| 2 | NCM do IS sem alíquota carregada | A NCM tem linha de IS, mas a alíquota inicial, o valor específico ou o fator está vazio na data do fato gerador (por exemplo, 2028 em diante, até a lei) |
+| 3 | Teor alcoólico ou volume ausente | Bebida alcoólica sem teor ou sem volume na ficha: a específica e o enquadramento do pequeno produtor não calculam |
+| 4 | Ficha contradiz o Ex da Tipi | O teor ou a condição da ficha está fora da faixa da linha que o Ex escolheu (por exemplo, Ex "mais de 14%" com 12%) |
+| 5 | Fora da embalagem primária | `Embalagem_Primaria` falso em bebida alcoólica ou fumígeno: o IS só incide na embalagem primária (art. 409, § 2º) |
+| 6 | Valor de referência não informado | A base é o valor de referência, não há regra aplicável (sem preço tabelado ou primeira operação) e `Valor_Referencia_Informado` está vazio |
+| 7 | Regra transitória do valor de referência | `Ato_Metodologia_Publicado` falso: vale a regra do art. 6º da MP até 31/12/2027 |
+| 8 | Específica zerada pela MP | Bebida ou fumígeno (exceto cigarro e cigarrilha) com específica em zero por força do art. 6º, II |
+| 9 | Mineral com alíquota zero transitória | Bem mineral em 2027: alíquota zero; a partir de 2028 depende da lei ordinária e o teto é 0,25% |
+| 10 | Pequeno produtor sem volume do ano anterior | Bebida alcoólica sem `Mov_Is_Pequeno_Produtor_Volume`: o Motor não aplicou a redução |
+| 11 | Critério do volume | O volume foi calculado por `fornecimento_art_6_iv` e o Anexo VI fala em produção (C329) |
+| 12 | Fator reduzido por decreto | `Fator_Reduzido_Por_Decreto` verdadeiro: a redução só vale depois do art. 156-A, § 9º, da Constituição (MP, art. 3º, § 6º) |
+| 13 | Importação com fator de ajuste | O Motor multiplicou conversão e ajuste (1,45 nas bebidas) ou usou 1,00 por ser fumígeno de base "a maior" |
+| 14 | Gás natural sem declaração | NCM 2711.11.00 ou 2711.21.00 com alíquota zero e sem `Mov_Is_Gas_Natural_Declaracao` |
+| 15 | Destino diverso do gás natural | A declaração tem `Data_Constatacao_Destino_Diverso`: recolher com a alíquota do art. 422, § 2º, multa e juros |
+| 16 | Dado provisório | A linha, a faixa, a regra ou a ficha usada está `provisorio` |
+| 17 | Variação fora de campo | `Atributos_Complementares` preenchido: a lei futura pediu um atributo que ainda não tem campo; propor o campo |
+| 18 | Bonificação na específica | Há bens dados em bonificação em item com alíquota específica: entram na quantidade (art. 417, § 3º) |
+
+
+57\. Anexo --- Bloco 1 de combustíveis e usina (documento 218): entidades novas da revisão 44, geração dos registros e avisos do Motor
+
+Revisão 44 do dicionário (consolidação de 16/11/2026): 9 entidades novas neste módulo, com 107 campos, do documento 218 (versão 2.2; seções 5, 6 e 8; D-N581: Q218-1 a Q218-17). Nenhuma entidade existente muda. Os dois valores novos de `modulo_fiscal_opcional` (domínio aberto de `Cad_Classe_Sistema`) estão no documento 01. A Q218-18 (texto do aviso A22 com a Solução de Consulta Cosit 223/2023) segue aberta e não muda campo.
+
+57.1. Bloco 1 de combustíveis e usina: livro de movimentação do posto (tanque, bomba, lacre, bico, movimento diário, intervenção e leitura), C171 por tanque e produção diária da usina (documento 218, seções 5, 6 e 8)
+
+Cad_Lmc_Tanque
+
+Revisão 44 (documento 218, seção 5.1; D-N581: Q218-1 a Q218-17): O tanque tem número (até 3 posições), capacidade e o combustível que guarda. O produto está no tanque, e não no bico: o produto do bico é o do tanque a que ele está ligado, e o 1370 repete esse valor na geração. Quando o posto troca o produto de um tanque, nasce uma versão nova; as leituras antigas continuam apontando para o mesmo tanque.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Tanque** | *identificador* | --- |
+| **ID_Lmc_Tanque_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Lmc_Tanque_Versao). ID_Lmc_Tanque é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Filial** | *referência (Cad_Filial) --- identidade* | O posto (estabelecimento) a que o tanque pertence. |
+| **Numero_Tanque** | *código (até 3) --- identidade* | NUM_TANQUE. O número que a nota de saída (`Combustivel_Numero_Tanque`), o 1310, o 1370 e o C171 usam. Único por filial. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico)* | O combustível que o tanque guarda (vira o COD_ITEM do 1300 e do 1370). O produto tem de ter `ID_Produto_Anp`; senão o ERP avisa. |
+| **ID_Local_Estoque** | *referência (Cad_Local_Estoque), opcional* | O local de estoque que representa o tanque. Preenchido, o ERP compara o estoque escritural do livro com o saldo do local no fim do dia e só avisa. |
+| **Capacidade_Litros** | *número* | CAP_TANQUE: capacidade de armazenagem em litros (até 6 dígitos, sem decimais). No grupo de tanques interligados, a capacidade do 1310 é a soma dos tanques do grupo (leitura minha, C340). |
+| **ID_Lmc_Tanque_Representante** | *referência (Cad_Lmc_Tanque), opcional* | Só nos tanques interligados: o tanque cujo número representa o grupo no 1310 e no 1370. Vazio quando o tanque vale por si. |
+| **Data_Inicio_Uso** | *data* | Quando o tanque entrou em operação no posto. |
+| **Data_Cessacao** | *data, opcional* | Quando saiu de uso. Depois dela, o ERP não espera medição diária. |
+| **Limite_Variacao_Percentual** | *número, opcional* | O limite de variação do estoque físico, em percentual, acima do qual o ERP avisa (A22). **O ERP não preenche valor**: a Resolução 884 (art. 5º) fala em 0,6% do **estoque físico** e mede a variação pelo campo 8, **por produto**; o ERP compara o saldo líquido do produto com esse percentual do estoque físico de fechamento, **leitura minha** (C349). O limite fica no tanque porque o cadastro é do tanque; o do produto é o menor valor preenchido. Vazio: sem aviso. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Lmc_Bomba
+
+Revisão 44 (documento 218, seção 5.2; D-N581: Q218-1 a Q218-17): A bomba medidora do posto, como o 1350 pede. Não uso `Cad_Equipamento_Fiscal` porque ele exige modelo de documento fiscal (ECF, SAT, MFE, NFC-e), que a bomba não tem.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Bomba** | *identificador* | --- |
+| **ID_Lmc_Bomba_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Lmc_Bomba_Versao). ID_Lmc_Bomba é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Filial** | *referência (Cad_Filial) --- identidade* | O posto a que a bomba pertence. |
+| **Numero_Serie** | *texto --- identidade* | SERIE: número de série da bomba. O Guia não fixa o tamanho. |
+| **Numero_Bomba** | *código (até 3), opcional* | O número da bomba no posto, o que a nota de saída leva em `Combustivel_Numero_Bomba` (nBomba). Serve para o ERP conferir a nota com o cadastro; o 1350 não o usa. A relação entre este número e a série vai ao contador (C341). |
+| **Fabricante** | *texto (até 60)* | FABRICANTE. |
+| **Modelo** | *texto* | MODELO. O Guia não fixa o tamanho. |
+| **Tipo_Medicao** | *enumeração {analogica, digital}* | TIPO_MEDICAO: 0 analógico, 1 digital. |
+| **Data_Inicio_Uso** | *data* | Quando a bomba entrou em operação. |
+| **Data_Retirada** | *data, opcional* | Quando saiu do posto. Depois dela, a bomba deixa de sair no 1350. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Lmc_Bomba_Lacre
+
+Revisão 44 (documento 218, seção 5.3; D-N581: Q218-1 a Q218-17): O 1360 pede "um registro para cada lacre existente na bomba": número e data de aplicação. A data de remoção é necessária para saber quais lacres existiam em cada período.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Bomba_Lacre** | *identificador* | --- |
+| **ID_Lmc_Bomba** | *referência (Cad_Lmc_Bomba) --- identidade* | A bomba lacrada. |
+| **Numero_Lacre** | *código (até 20) --- identidade* | NUM_LACRE. |
+| **Data_Aplicacao** | *data* | DT_APLICACAO: quando o lacre foi aplicado. |
+| **Data_Remocao** | *data, opcional* | Quando o lacre foi retirado. Vazia enquanto o lacre existe. O Guia não trata a remoção; leitura minha: o 1360 sai para o lacre que existiu em algum dia do período (C345). |
+
+Cad_Lmc_Bico
+
+Revisão 44 (documento 218, seção 5.4; D-N581: Q218-1 a Q218-17): O bico liga uma bomba a um tanque (1370). O número do bico (até 3 posições) é o que o 1320 e a nota de saída citam. O `Valor_Maximo_Contador` é o valor em que o contador do bico volta a zero; sem ele o ERP não sabe dividir o 1320 quando o contador passa do máximo.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Bico** | *identificador* | --- |
+| **ID_Lmc_Bico_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Lmc_Bico_Versao). ID_Lmc_Bico é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Lmc_Bomba** | *referência (Cad_Lmc_Bomba) --- identidade* | A bomba a que o bico está ligado (pai do 1370). |
+| **Numero_Bico** | *número --- identidade* | NUM_BICO (3 posições). O ERP o trata como único por filial, porque o 1320 só cita o número do bico (leitura minha, C341). Os números de 990 em diante são reservados ao tanque sem bico (seção 7). |
+| **ID_Lmc_Tanque** | *referência (Cad_Lmc_Tanque)* | O tanque que abastece o bico. O produto do bico é o do tanque. |
+| **Valor_Maximo_Contador** | *número, opcional* | A maior leitura que o contador do bico mostra antes de voltar a zero. Vazio: o ERP não divide o 1320 e avisa quando a leitura final é menor que a inicial. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Lmc_Tanque_Dia
+
+Revisão 44 (documento 218, seção 6.1; D-N581: Q218-1 a Q218-17): Uma linha por tanque e por dia. É a única peça do livro que se grava por dia. O que a pessoa (ou a automação da pista) informa é o estoque físico de fechamento medido no tanque (e o de abertura, só no primeiro dia). O resto, no dia aberto, o ERP calcula na tela e na geração; no fechamento do dia, grava-se o resultado, para o livro fechado não mudar sozinho.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Tanque_Dia** | *identificador* | --- |
+| **ID_Lmc_Tanque** | *referência (Cad_Lmc_Tanque) --- identidade* | O tanque. |
+| **Data_Fechamento** | *data --- identidade* | DT_FECH: a data do fechamento da movimentação. Tem de estar entre `DT_INI` e `DT_FIN` do 0000 do período em que sai. |
+| **Volume_Estoque_Abertura** | *número* | ESTQ_ABERT: estoque no início do dia, em litros (3 decimais), "mesmo que tenha ocorrido intervenção posterior". Herdado do físico do dia anterior; digitado no primeiro dia (pode partir do inventário) ou numa correção. |
+| **Volume_Fechamento_Fisico** | *número* | FECH_FISICO: o volume medido no tanque no fim do dia, em litros. Informado. |
+| **Origem_Dado** | *enumeração {digitacao, automacao_pista, importacao}* | De onde veio a medição. |
+| **Volume_Entrada** | *número, opcional* | VOL_ENTR. Calculado: soma dos C171 do tanque cuja nota de entrada tem `Data_Entrada` neste dia. Gravado só no fechamento do dia. |
+| **Volume_Saidas** | *número, opcional* | VOL_SAIDAS. Calculado: soma dos volumes de venda dos bicos do tanque no dia (1320). Gravado só no fechamento do dia. |
+| **Volume_Transferencia_Recebida** | *número, opcional* | Litros que o tanque recebeu de **outro tanque do mesmo posto** no dia, sem passar pela bomba. É o item que o Anexo da 884 manda anotar em Observações. Informado; **não é entrada nem venda** (seção 14.7, Q218-15). |
+| **Volume_Transferencia_Enviada** | *número, opcional* | Litros que o tanque mandou a outro tanque do posto no dia. Informado (Q218-15). |
+| **Volume_Estoque_Escritural** | *número, opcional* | ESTQ_ESCR. Calculado: abertura mais entrada mais transferência recebida menos transferência enviada menos saídas (leitura minha; o Anexo da 884 define o escritural como o volume disponível menos as vendas e não trata a transferência). Gravado só no fechamento do dia. |
+| **Volume_Perda** | *número, opcional* | VAL_AJ_PERDA. Calculado (leitura minha): escritural menos físico, quando o físico é menor; senão zero. Gravado só no fechamento do dia. |
+| **Volume_Ganho** | *número, opcional* | VAL_AJ_GANHO. Calculado (leitura minha): físico menos escritural, quando o físico é maior; senão zero. Gravado só no fechamento do dia. |
+| **Situacao** | *enumeração {em_elaboracao, fechado}* | `fechado` grava os cinco valores calculados. Mudança posterior de nota de entrada ou de leitura de bico num dia fechado: o ERP avisa e não recalcula sozinho. |
+| **ID_Usuario_Fechamento** | *referência (Cad_Usuario), opcional* | Quem fechou o dia. |
+| **Data_Hora_Fechamento** | *data/hora, opcional* | Quando fechou. |
+| **Observacao** | *texto, opcional* | Texto livre do operador. É o campo "13) Observações" do LMC da ANP: a variação acima do limite do tanque (A22) deve vir justificada aqui. |
+
+Mov_Lmc_Bomba_Intervencao
+
+Revisão 44 (documento 218, seção 6.2; D-N581: Q218-1 a Q218-17): A intervenção do técnico credenciado numa bomba (manutenção, troca de peça, lacre rompido). Ela vale para todos os bicos da bomba, por isso fica na bomba e as leituras dos bicos apontam para ela. O Guia pede o número da intervenção (do órgão competente ou, na falta, sequencial do declarante), o motivo, o nome do técnico, o CNPJ da empresa de manutenção e o CPF do técnico, estes dois quando houver.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Bomba_Intervencao** | *identificador* | --- |
+| **ID_Lmc_Bomba** | *referência (Cad_Lmc_Bomba) --- identidade* | A bomba em que houve a intervenção. |
+| **Data_Hora_Intervencao** | *data/hora --- identidade* | Quando a intervenção começou: separa o trecho antes do trecho depois no dia. |
+| **Numero_Intervencao** | *número* | NR_INTERV: número dado pelo órgão competente ou, na falta, um sequencial do posto (leitura minha, C342). |
+| **Motivo_Intervencao** | *texto (até 50)* | MOT_INTERV. O Guia descreve este campo como "nome da empresa responsável", o que parece cópia do campo seguinte (C342). |
+| **Nome_Interventor** | *texto (até 30)* | NOM_INTERV: nome do técnico autorizado pelo INMETRO (pelas unidades estaduais) para manter bombas medidoras. |
+| **Cnpj_Empresa_Interventora** | *código (14), opcional* | CNPJ_INTERV: a empresa do contrato de manutenção, quando houver. |
+| **Cpf_Tecnico** | *código (11), opcional* | CPF_INTERV: o CPF do técnico, ligado ao nome acima. |
+| **Volume_Encerrante_Substituido** | *número, opcional* | O volume marcado no encerrante que saiu, na **troca ou modificação do encerrante** (item 13.3 do Anexo da 884). O 1320 do Guia não pede (Q218-16). |
+| **Volume_Encerrante_Novo** | *número, opcional* | O volume marcado no encerrante novo. A leitura do bico no trecho seguinte parte dele. |
+| **Numero_Relatorio_Manutencao** | *texto (até 30), opcional* | O número do relatório de manutenção da empresa credenciada pelo Inmetro (item 13.3 do Anexo da 884). |
+| **Observacao** | *texto, opcional* | Texto livre. |
+
+Mov_Lmc_Bico_Leitura
+
+Revisão 44 (documento 218, seção 6.3; D-N581: Q218-1 a Q218-17): Uma linha por trecho de um bico num dia. Sem intervenção, é uma linha por bico e por dia (`Sequencia_Dia = 1`). A cada intervenção na bomba, os bicos dela ganham um trecho novo, que aponta para a intervenção. A leitura é o que o contador (encerrante) mostra, em litros com 3 decimais. O volume de vendas do trecho não se grava: é a leitura final menos (a leitura inicial mais a aferição).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lmc_Bico_Leitura** | *identificador* | --- |
+| **ID_Lmc_Bico** | *referência (Cad_Lmc_Bico) --- identidade* | O bico lido. |
+| **Data_Leitura** | *data --- identidade* | O dia a que o trecho pertence. |
+| **Sequencia_Dia** | *número --- identidade* | 1 é o trecho que abre o dia; cada intervenção na bomba abre o seguinte. |
+| **ID_Lmc_Bomba_Intervencao** | *referência (Mov_Lmc_Bomba_Intervencao), opcional* | A intervenção que abriu este trecho. Vazia no trecho 1. Os campos NR_INTERV, MOT_INTERV, NOM_INTERV, CNPJ_INTERV e CPF_INTERV do 1320 saem daqui. |
+| **Leitura_Abertura** | *número* | VAL_ABERT: leitura do contador na abertura do trecho. |
+| **Leitura_Fechamento** | *número* | VAL_FECHA: leitura do contador no fechamento do trecho. Se for menor que a de abertura e o bico tiver `Valor_Maximo_Contador`, o contador voltou a zero e o 1320 sai em dois registros (seção 7). |
+| **Volume_Afericao** | *número, opcional* | VOL_AFERI: volume aferido na bomba, em litros. |
+| **Origem_Dado** | *enumeração {digitacao, automacao_pista, sugerida_dos_documentos}* | De onde veio a leitura. `sugerida_dos_documentos` é a que o ERP propõe a partir dos encerrantes dos documentos de venda (NF-e, NFC-e e o cupom cujo item traga o bico); vale a que a pessoa confirmar. |
+| **Observacao** | *texto, opcional* | Texto livre. |
+
+Mov_Nota_Fiscal_Entrada_Item_Tanque
+
+Revisão 44 (documento 218, seção 6.4; D-N581: Q218-1 a Q218-17): Substitui o desenho da seção 5.6 do documento 175, que nunca entrou: a diferença é que o tanque agora é referência, e não código (Q175-E4 previa isso). O item de combustível recebido pode ir a vários tanques; cada linha é um tanque e a quantidade armazenada nele. Só a nota de entrada tem C171.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Nota_Fiscal_Entrada_Item_Tanque** | *identificador* | --- |
+| **ID_Item_Entrada** | *referência (Mov_Nota_Fiscal_Entrada_Item) --- identidade* | O item de combustível recebido. |
+| **ID_Lmc_Tanque** | *referência (Cad_Lmc_Tanque) --- identidade* | NUM_TANQUE: o tanque onde o combustível foi armazenado. O Guia não admite o mesmo tanque duas vezes no mesmo documento. |
+| **Quantidade_Armazenada** | *número* | QTDE: quantidade ou volume armazenado, em litros (3 decimais), maior que zero. |
+
+Mov_Usina_Producao_Dia
+
+Revisão 44 (documento 218, seção 8.1; D-N581: Q218-1 a Q218-17): O 1391 detalha, por produto da usina, por insumo e por dia, o balanço de produção e estoque. Uma linha por dia, produto e insumo. Álcool se mede em litros e açúcar em quilogramas; o esmagamento e os resíduos, em toneladas. O `COD_PROD` vem da tabela 5.8 que já está em `Cad_Efd_Codigo_Estadual` (tabela oficial `cod_prod_usinas`): a da UF da filial, ou a genérica quando a UF não tem a sua.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Usina_Producao_Dia** | *identificador* | --- |
+| **ID_Filial** | *referência (Cad_Filial) --- identidade* | A usina (estabelecimento). |
+| **ID_Efd_Codigo_Estadual** | *referência (Cad_Efd_Codigo_Estadual) --- identidade* | COD_PROD do 1390: a linha da tabela 5.8 (`cod_prod_usinas`), da UF da filial ou a genérica. |
+| **Data_Producao** | *data --- identidade* | DT_REGISTRO. Não pode passar de `DT_FIN` do 0000, e o Guia só aceita o 1390 em períodos posteriores a julho de 2012. |
+| **ID_Produto_Servico_Insumo** | *referência (Cad_Produto_Servico) --- identidade* | COD_ITEM do 1391: o insumo usado, do 0200. Não pode haver dois 1391 com o mesmo insumo na mesma data (leitura do Guia, C346). |
+| **Quantidade_Insumo_Esmagado** | *número, opcional* | QTD_MOID: insumo esmagado, em toneladas. |
+| **Estoque_Inicial** | *número* | ESTQ_INI: estoque do início do dia (litros no álcool, kg no açúcar). Em princípio é o final do dia anterior (aviso). |
+| **Quantidade_Produzida** | *número, opcional* | QTD_PRODUZ. |
+| **Entrada_Transformacao** | *número, opcional* | ENT_ANID_HID: anidro vindo da transformação do hidratado, ou hidratado vindo do anidro, em litros. Só no álcool. |
+| **Outras_Entradas** | *número, opcional* | OUTR_ENTR: recebido de terceiros, devoluções e outras entradas. |
+| **Perda** | *número, opcional* | PERDA: evaporação (litros) no álcool ou quebra de peso (kg) no açúcar. |
+| **Consumo** | *número, opcional* | CONS: consumo próprio (litros ou kg). |
+| **Saida_Transformacao** | *número, opcional* | SAI_ANI_HID: álcool usado para virar o outro tipo, em litros. Só no álcool. |
+| **Saidas** | *número, opcional* | SAIDAS: total das saídas (litros ou kg). |
+| **Estoque_Final** | *número* | ESTQ_FIN: estoque do fim do dia. |
+| **Estoque_Inicial_Mel** | *número, opcional* | ESTQ_INI_MEL: mel residual no início do dia, em kg. Só no açúcar. |
+| **Producao_Mel** | *número, opcional* | PROD_DIA_MEL: todas as entradas de mel residual (produção e demais), em kg. Só no açúcar. |
+| **Utilizacao_Mel** | *número, opcional* | UTIL_MEL: mel residual usado na produção e demais saídas, em kg. Só no açúcar. |
+| **Producao_Do_Mel** | *número, opcional* | PROD_ALC_MEL: álcool (litros) ou açúcar (kg) produzido a partir do mel residual. |
+| **Observacao** | *texto, opcional* | OBS. |
+| **Quantidade_Residuo_Ddg** | *número, opcional* | QTD_RESIDUO_DDG: resíduo seco de destilaria, em toneladas. |
+| **Quantidade_Residuo_Wdg** | *número, opcional* | QTD_RESIDUO_WDG: resíduo úmido de destilaria, em toneladas. |
+| **Quantidade_Residuo_Bagaco** | *número, opcional* | QTD_RESIDUO_CANA: bagaço de cana, em toneladas. |
+
+**Carga de partida da revisão 44 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Classe_Sistema, modulo_fiscal_opcional (2 valores) | efd_combustivel_lmc_1300 e efd_usina_1390; provisórios; nenhum ligado por padrão (a empresa liga por filial, com vigência); sem outra carga: as nove entidades são cadastros e movimentos do cliente |
+| Avisos do Motor (texto: 27 do documento 218) | Em CSV de leitura; a gravação em `Cad_Motor_Regra` é do carregador do Motor |
+
+**Como o ERP gera os registros do Bloco 1 (documento 218, seção 7)**
+
+| **Registro** | **Uma linha por** | **Como o ERP monta** |
+|---|---|---|
+| **0000.IND_COMB** | Período | `S` quando a filial está habilitada e há `Mov_Lmc_Tanque_Dia` no período (movimentação e/ou estoque); senão `N` (leitura minha, C344). |
+| **1300** | Produto e data | Soma dos 1310 do produto no dia: abertura, entrada, saídas, perda, ganho e físico. O volume disponível (abertura mais entrada) e o escritural (disponível menos saídas) saem das somas. `COD_ITEM` é o produto dos tanques; `DT_FECH`, a data do fechamento. |
+| **1310** | Tanque (ou grupo de tanques) e data | Uma linha de `Mov_Lmc_Tanque_Dia` por tanque. Nos tanques interligados, as linhas do grupo se somam (inclusive a capacidade) sob o número do tanque representante. `CAP_TANQUE` vem de `Cad_Lmc_Tanque.Capacidade_Litros`. |
+| **1320** | Trecho de bico, no 1310 do tanque do bico | Uma linha de `Mov_Lmc_Bico_Leitura`. O volume de vendas é a leitura final menos (a leitura inicial mais a aferição). Os campos de intervenção saem da intervenção ligada ao trecho; no trecho 1 ficam vazios. |
+| **1350** | Bomba | As bombas com `Data_Inicio_Uso` até o fim do período e sem `Data_Retirada` antes do início. |
+| **1360** | Lacre | Os lacres da bomba que existiram em algum dia do período (leitura minha, C345). |
+| **1370** | Bico, na bomba | Os bicos vigentes no período: número, produto (o do tanque) e número do tanque (o do representante, nos interligados). |
+| **C171** | Item da nota de entrada e tanque | Uma linha de `Mov_Nota_Fiscal_Entrada_Item_Tanque`; só nas notas de entrada (códigos 01 e 55). |
+
+**Avisos do Motor no Bloco 1 de combustíveis e usina (documento 218, seção 10)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| A1 | Item de combustível sem tanque (C171) | Nota de entrada de filial habilitada, com item cujo produto tem código da ANP e que não tem linha em `Mov_Nota_Fiscal_Entrada_Item_Tanque`. |
+| A2 | Quantidade armazenada diferente da quantidade do item | A soma dos C171 do item difere da quantidade da nota. |
+| A3 | Dia sem medição | Tanque em uso, sem `Mov_Lmc_Tanque_Dia` em dia do período; o 1300 e o 1310 daquele dia ficam de fora. |
+| A4 | Tanque sem combustível | O produto do tanque não tem `ID_Produto_Anp`, ou o tanque não tem produto vigente na data. |
+| A5 | Bico sem tanque, ou tanque diferente | O bico não tem tanque vigente; ou o tanque do bico difere do `Combustivel_Numero_Tanque` da nota de saída. |
+| A6 | Quebra de contador | A leitura de abertura do dia difere da de fechamento do dia anterior no mesmo bico, e não houve intervenção. |
+| A7 | Contador voltou sem máximo | Leitura final menor que a inicial e o bico sem `Valor_Maximo_Contador`. |
+| A8 | Volume de vendas negativo | A aferição é maior que a diferença entre as leituras. |
+| A9 | Estoque de abertura diferente | O de abertura do dia difere do físico do fechamento do dia anterior. |
+| A10 | Escritural diferente do estoque | Com `ID_Local_Estoque` informado, o escritural do livro difere do saldo do local no fim do dia. |
+| A11 | Venda do contador diferente da venda dos documentos | **Por bico e por dia** quando todos os itens do produto no dia trazem o bico; **por produto e por dia** nos demais casos. Soma dos volumes do livro contra a soma das quantidades dos itens de saída de qualquer modelo (NF-e, NFC-e, cupom); com cupom de ECF só pela Redução Z, vale a quantidade dela, **nunca as duas para o mesmo equipamento e dia** (seção 14.3). Só informa a diferença; não há tolerância (C344). |
+| A12 | Dia fechado alterado | Nota de entrada, C171 ou leitura de bico muda depois de `Situacao = fechado`. O ERP não recalcula sozinho. |
+| A13 | Número que a nota cita não existe | Número de tanque, bico ou bomba da nota de saída fora do cadastro. |
+| A14 | Tanque representante inválido | O representante não existe, não está vigente ou aponta para outro grupo. |
+| A15 | 1350 ou 1370 ausente | Há 1300 no período, mas a filial não tem bomba ou bico vigente (o Guia os exige se existir 1300). |
+| A16 | Balanço da usina não fecha | Estoque final diferente da equação da seção 8.2. |
+| A17 | Estoque inicial da usina diferente | O estoque inicial do dia difere do final do dia anterior. |
+| A18 | Campo obrigatório do 1391 sem informação, ou resíduo ambíguo | O ERP **não preenche zero sozinho** (sem valor padrão escondido). |
+| A19 | Campo fora do produto | Mel residual em produto que não é açúcar; entrada ou saída por transformação em produto que não é álcool. |
+| A20 | `COD_PROD` fora da tabela 5.8 | A linha de `Cad_Efd_Codigo_Estadual` não é da UF da filial nem da genérica. |
+| A21 | Dado do Bloco 1 em filial sem habilitação | Existe cadastro, leitura ou C171, mas a filial não tem o módulo ligado; nada sai no arquivo. |
+| A22 | Variação do estoque acima do limite | **Por produto e por dia fechado**, com `Limite_Variacao_Percentual` preenchido: o saldo líquido (estoque físico de fechamento menos escritural, somados os tanques do produto, o campo 8 do Anexo da 884) passa do percentual do estoque físico de fechamento, ou passa sem texto em `Observacao` de algum tanque do produto no dia (seção 14.5). Com a Q218-18 aprovada, o texto do aviso cita a Solução de Consulta Cosit 223/2023 (seção 14.8). |
+| A23 | Habilitação sem a autorização ANP correspondente | `efd_combustivel_lmc_1300` ligado em filial sem autorização vigente de `posto_revendedor`; `efd_combustivel_c165` ligado em filial com autorização de posto ou sem autorização de distribuidor, refinaria ou revendedora; `efd_combustivel_lmc_1300` ligado em filial só com autorização de distribuidor (seção 14.4). |
+| A24 | Posto vende combustível a outro revendedor | Item de saída com código da ANP, emitido por filial com autorização de `posto_revendedor`, para participante com autorização vigente de `posto_revendedor`. A cartilha da ANP veda, "ainda que o outro estabelecimento pertença à mesma pessoa jurídica" (C354). |
+| A25 | Entrada de combustível de emitente sem autorização de fornecedor | Nota de entrada de combustível em filial de posto, cujo emitente não tem autorização vigente de `distribuidor`, `comercializador_etanol`, `produtor_biocombustiveis` ou `transportador_revendedor_retalhista`. A lista é **leitura minha** (C350). |
+| A26 | Venda de combustível sem bico | Item de saída com código da ANP, de filial habilitada ao 1300, sem `Combustivel_Numero_Bico`, em qualquer modelo (NFC-e, cupom ou NF-e). Sem bico, o item não entra na leitura sugerida. |
+| A27 | Tanque de combustível sem bico ligado | Tanque em uso, com produto de código da ANP e sem `Cad_Lmc_Bico` vigente. A cartilha da ANP proíbe tanque não interligado a bomba, salvo óleo usado, desativação protocolada e cisterna de água de chuva; o Guia manda informá-lo com número de bico a partir de 990 (seção 7). |
+
+
+58\. Anexo --- Documento 222: tabelas do Portal da NF-e, guarda do arquivo transmitido e retenção por fiscalização (entidades novas da revisão 45)
+
+Revisão 45 do dicionário (consolidação de 16/11/2026): 9 entidades novas neste módulo, do documento 222 (Q188-7, Q221-10 e Q221-11). As demais mudanças da revisão estão nas entidades alteradas e na nota de revisão de cada módulo.
+
+58.1. Tabelas do Portal da NF-e que não tinham entidade: ICMS monofásico ad rem, mistura obrigatória, FCP por UF, prefixo GS1, tipo e espécie de veículo e padrão do regime especial (documento 222, Q221-10 e Q221-11)
+
+Cad_Icms_Monofasico_Aliquota
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): A alíquota ad rem do ICMS monofásico dos combustíveis por produto da ANP e por vigência (tabela de combustíveis monofásicos do Portal da NF-e; Convênios ICMS 199/22, 15/23 e 19/23, NT 2023.01): reais por unidade de medida do produto. O item da nota guarda o valor aplicado no complemento; esta tabela é o que o ERP usa para propor e conferir o valor, e só avisa quando diverge. A tabela de CBS e IBS é outra (`Cad_Aliquota_Combustivel`).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Icms_Monofasico_Aliquota** | *identificador* | --- |
+| **ID_Icms_Monofasico_Aliquota_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Icms_Monofasico_Aliquota_Versao). ID_Icms_Monofasico_Aliquota é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Produto_Anp** | *referência (Cad_Produto_Anp) --- identidade* | O produto da ANP (cProdANP) a que a alíquota se aplica. |
+| **ID_Unidade_Medida** | *referência (Cad_Unidade_Medida)* | A unidade do valor ad rem: litro ou quilograma (coluna uTrib da tabela). |
+| **Valor_Ad_Rem_Icms** | *número* | adRemICMS: reais por unidade, com quatro casas (arredondamento pela ABNT NBR 5891, NT 2023.01, pergunta 20). |
+| **Exige_Percentual_Mistura** | *booleano* | Marca pBio da tabela: o item informa o percentual de mistura obrigatória (`Combustivel_Percentual_Biodiesel`). |
+| **Exige_Origem_Combustivel** | *booleano* | Marca origComb da tabela: o item informa a origem em registros que somam 100% (tabela filha do item); no GLP e no GLGN o 100% vale em separado para o nacional e para o importado. |
+| **Fundamento_Legal** | *texto, opcional* | O convênio e a cláusula da janela de vigência. A tabela do Portal não traz o ato de cada janela; o contador informa. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Combustivel_Mistura_Obrigatoria
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): O percentual de mistura obrigatória do biocombustível por produto da ANP e por vigência (hoje o anidro na gasolina C: 32% desde 01/08/2026, 30% de 01/08/2025 a 31/07/2026 e 27% antes; tabela de índice da IT 2025.004 v1.20). O ERP confere o pBio do item e só avisa.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Combustivel_Mistura_Obrigatoria** | *identificador* | --- |
+| **ID_Combustivel_Mistura_Obrigatoria_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Combustivel_Mistura_Obrigatoria_Versao). ID_Combustivel_Mistura_Obrigatoria é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Produto_Anp** | *referência (Cad_Produto_Anp) --- identidade* | O produto da ANP a que a mistura se aplica (por exemplo, gasolina C comum ou aditivada). |
+| **Percentual_Mistura** | *número* | Percentual obrigatório do biocombustível no produto (32 significa 32%). A tabela publica a fração (0,32); a carga converte. |
+| **Fundamento_Legal** | *texto, opcional* | O ato que fixa o percentual; o contador informa. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Fcp_Aliquota_Uf
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): A alíquota do Fundo de Combate à Pobreza por UF (tabela do Portal da NF-e): até três alíquotas possíveis por UF, e UF com teto em vez de alíquota fixa. Serve ao DIFAL e à ST; os valores calculados continuam nos movimentos.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Fcp_Aliquota_Uf** | *identificador* | --- |
+| **ID_Fcp_Aliquota_Uf_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Fcp_Aliquota_Uf_Versao). ID_Fcp_Aliquota_Uf é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | A UF. |
+| **Ordem_Aliquota** | *número --- identidade* | 1 a 3: a ordem em que a tabela lista as alíquotas possíveis da UF. |
+| **Tipo_Aliquota** | *enumeração {fixa, maxima}* | fixa = a alíquota; maxima = teto (RJ até 4%; GO, MT e RR trazem "máxima 2%, padrão"). UF sem FCP (AC, AP, PA e SC) tem uma linha fixa de 0%. |
+| **Percentual** | *número* | Percentual do FCP (2 significa 2%). |
+| **Observacao_Tabela** | *texto, opcional* | A observação da tabela do Portal (por exemplo, "UF com até 3 Alíquotas possíveis"). |
+| **Fundamento_Legal** | *texto, opcional* | A lei estadual; a tabela do Portal não a traz e o contador informa. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Gtin_Prefixo_Gs1
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): As faixas de prefixo da GS1 (tabela do Portal da NF-e), para o ERP validar o GTIN informado no produto (a faixa do Brasil é 789 a 790).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Gtin_Prefixo_Gs1** | *identificador* | --- |
+| **ID_Gtin_Prefixo_Gs1_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Gtin_Prefixo_Gs1_Versao). ID_Gtin_Prefixo_Gs1 é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Prefixo_Inicial** | *código (até 3) --- identidade* | Primeiro prefixo da faixa, como publicado. |
+| **Prefixo_Final** | *código (até 3)* | Último prefixo da faixa; igual ao inicial quando a faixa tem um só prefixo. |
+| **Prefixo_Especial_Sem_Pais** | *booleano* | Verdadeiro nas faixas de uso restrito, cupom, publicação e outras que não identificam país. |
+| **Entidade_Uso** | *texto* | A organização GS1 do país ou o uso da faixa, como na tabela. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Veiculo_Tipo_Especie
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): Os pares de tipo e espécie de veículo do grupo veicProd da NF-e (tabela do Portal desde 12/03/2020), para validar `tpVeic` e `espVeic`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Veiculo_Tipo_Especie** | *identificador* | --- |
+| **ID_Veiculo_Tipo_Especie_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Veiculo_Tipo_Especie_Versao). ID_Veiculo_Tipo_Especie é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo_Tipo_Veiculo** | *código (até 2) --- identidade* | tpVeic. |
+| **Codigo_Especie_Veiculo** | *código (até 2) --- identidade* | espVeic. |
+| **Descricao_Tipo** | *texto* | Nome do tipo (por exemplo, Ciclomotor). |
+| **Descricao_Especie** | *texto* | Nome da espécie (por exemplo, Passageiro). |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Regime_Especial_Padrao_Numero_Processo
+
+Revisão 45 (documento 222; D-N588: Q221-10 e Q221-11): O padrão do número do processo de regime especial por UF (tabela do Portal da NF-e; hoje só o Paraná, `NNNNN/AAAA`), com a expressão regular da validação.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Regime_Especial_Padrao** | *identificador* | --- |
+| **ID_Regime_Especial_Padrao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Regime_Especial_Padrao_Numero_Processo_Versao). ID_Regime_Especial_Padrao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Estado** | *referência (Cad_Estado) --- identidade* | A UF que publica o padrão. |
+| **Padrao** | *texto* | O padrão em letras, como publicado (por exemplo, NNNNN/AAAA). |
+| **Expressao_Regular** | *texto* | A expressão regular da validação, como publicada. |
+| **Exemplos** | *texto, opcional* | Os exemplos válidos da tabela. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+58.2. Prazo de guarda do arquivo transmitido e retenção por fiscalização (documento 222, Q188-7)
+
+Cad_Obrigacao_Guarda_Arquivo
+
+Revisão 45 (documento 222; D-N584: Q188-7): O prazo de guarda do arquivo transmitido de cada obrigação (resposta do contador à C27, aprovada na Q188-7): 5 anos contados da última transmissão, reiniciados a cada retificação, e retenção por tempo indeterminado enquanto o arquivo estiver em fiscalização. É outro prazo que o da decadência do tributo (`Cad_Obrigacao_Decadencia`), que fica como está. O fundamento legal segue aberto com o contador.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Guarda_Arquivo** | *identificador* | --- |
+| **ID_Guarda_Arquivo_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Obrigacao_Guarda_Arquivo_Versao). ID_Guarda_Arquivo é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Obrigacao** | *referência (Cad_Obrigacao_Acessoria), opcional --- identidade* | A obrigação a que o prazo se aplica; vazio vale para todas as obrigações sem linha própria. |
+| **Anos_Guarda** | *número* | 5 na resposta do contador. |
+| **Base_Contagem** | *enumeração {ultima_transmissao}* | A data a partir da qual o prazo corre: a transmissão aceita mais recente da escrituração do período. |
+| **Reinicia_Na_Retificacao** | *booleano* | Verdadeiro: a retificadora reinicia a contagem para o período inteiro, inclusive para as versões anteriores. |
+| **Suspende_Em_Fiscalizacao** | *booleano* | Verdadeiro: o arquivo fica retido, sem prazo, até o fim da fiscalização (`Mov_Escrituracao_Retencao_Fiscalizacao`). |
+| **Fundamento_Legal** | *texto, opcional* | O contador informa; a resposta à C27 não cita norma. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Escrituracao_Retencao_Fiscalizacao
+
+Revisão 45 (documento 222; D-N584: Q188-7): A retenção dos arquivos transmitidos por fiscalização: enquanto uma linha está em curso, os arquivos da empresa, da obrigação e dos períodos que ela cobre não podem ser descartados, e o ERP marca `Mov_Escrituracao_Arquivo.Retido_Por_Fiscalizacao`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Retencao_Fiscalizacao** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | A empresa sob fiscalização. |
+| **ID_Obrigacao** | *referência (Cad_Obrigacao_Acessoria), opcional* | A obrigação coberta; vazio cobre todas. |
+| **Periodo_Inicio** | *data, opcional* | Primeiro dia dos períodos cobertos; vazio cobre desde o primeiro. |
+| **Periodo_Fim** | *data, opcional* | Último dia dos períodos cobertos; vazio cobre até o último. |
+| **Data_Inicio_Retencao** | *data* | Quando a empresa foi notificada da fiscalização. |
+| **Data_Fim_Retencao** | *data, opcional* | Quando a fiscalização terminou; vazio = em curso, e a retenção vale. |
+| **Numero_Procedimento** | *código (até 40), opcional* | O número do procedimento fiscal, quando houver. |
+| **Orgao_Fiscalizador** | *texto, opcional* | Quem fiscaliza. |
+| **ID_Usuario** | *referência (Cad_Usuario)* | Quem registrou a retenção. |
+| **Observacao** | *texto, opcional* | --- |
+
+**Cargas de partida da revisão 45 (linhas de tabela, não campos)**
+
+| **Carga** | **Conteúdo** |
+|---|---|
+| Cad_Nbs (1.282 nós) | Hierarquia da NBS 2.0: 26 capítulos, 146 posições (45 derivadas), 130 subposições de 6 posições, 50 de 7, 10 itens e os 920 códigos de 9 posições; provisória (Q220-1 e Q220-5) |
+| Cad_Cst, Cad_Cclasstrib, Cad_Credito_Presumido_Ibs_Cbs | 18 CST do IBS/CBS em 36 linhas (uma por tributo), 173 cClassTrib e 13 cCredPres da IT 2025.002 v1.70 e v1.71; provisórias (Q221-1 a Q221-3, Q221-5 e Q221-7) |
+| Cad_Modelo_Documento_Fiscal (17 linhas) e Cad_Cclasstrib_Modelo (2.941 marcas) | Os 17 indicadores de modelo da tabela; as quatro marcas de entrega do arquivo ficam vazias (a lista por modelo é sua e do contador) e o modelo DIR entra com descrição provisória (Q221-4) |
+| Cad_CFOP (619), Cad_Municipio (5.571), Cad_Pais (261), Cad_Unidade_Medida (68), Cad_Produto_Anp (1.031) | Tabelas do Portal da NF-e; provisórias (Q221-6, Q221-9) |
+| Cad_Classificacao_Mercadoria (NCM, 15.428 linhas, com `Unidade_Estatistica` em 10.516) | NCM do Portal Único (Gecex 926/2026) e uTrib de 01/10/2026 (Q221-8) |
+| Cad_Icms_Monofasico_Aliquota (151: 111 janelas encerradas e 40 vigentes), Cad_Combustivel_Mistura_Obrigatoria (23), Cad_Fcp_Aliquota_Uf (30), Cad_Gtin_Prefixo_Gs1 (127), Cad_Veiculo_Tipo_Especie (39), Cad_Regime_Especial_Padrao_Numero_Processo (1) | Entidades novas da revisão 45; provisórias (Q221-10 e Q221-11) |
+| Cad_Classe_Sistema (`bandeira_cartao_dfe`, 28 valores; `forma_pagamento_dfe`, 23; `meio_pagamento_vinculo_dfe`, 6 atualizados) | Provisórios |
+| Cad_Obrigacao_Guarda_Arquivo (1 linha) | Prazo geral de 5 anos da última transmissão, retificação reinicia, fiscalização suspende; provisório (Q188-7, C27) |
+| Avisos do Motor (texto: 13, A222-1 a A222-13) | Em CSV de leitura |
+
+**Avisos do Motor da revisão 45 (documento 222)**
+
+| **N** | **Aviso** | **Quando** |
+|---|---|---|
+| A222-1 | Arquivo com descarte previsto em até 90 dias | `Data_Descarte_Prevista` a menos de 90 dias, sem retenção por fiscalização. Só avisa; descartar é decisão do usuário (Q188-7). |
+| A222-2 | Retificadora reinicia a contagem | Ao criar a retificadora, o ERP recalcula `Data_Descarte_Prevista` de todas as versões do período (Q188-7). |
+| A222-3 | Filial sem movimento na escrituração individualizada | EFD-Contribuições com `Forma_Escrituracao` = individualizada e filial sem documento no período: a filial entra no arquivo com a marca de sem movimento e o ERP avisa (Q188-8, C33). |
+| A222-4 | NFC-e consolidada sem limite de tamanho | Escrituração consolidada da empresa e `Limite_Tamanho_Arquivo_Mb` vazio: a regra do Guia só permite consolidar a NFC-e se o arquivo individualizado passasse de 1 GB. |
+| A222-5 | Origem do combustível não fecha 100% | A soma de `Percentual_Origem` do item é diferente de 100 (no GLP e no GLGN, a soma é conferida em separado para o nacional e para o importado; Q221-12). |
+| A222-6 | Alíquota ad rem diverge da tabela | O adRem do item é diferente do valor vigente em `Cad_Icms_Monofasico_Aliquota` na data do documento (Q221-10). Só avisa. |
+| A222-7 | Mistura diverge da obrigatória | O `Combustivel_Percentual_Biodiesel` do item é diferente do percentual vigente em `Cad_Combustivel_Mistura_Obrigatoria` (Q221-10). Só avisa. |
+| A222-8 | cClassTrib 620003 sem grupo monofásico | A tabela traz as três marcas do grupo monofásico zeradas para o 620003, embora o CST 620 exija o grupo; o ERP usa a tabela como veio e avisa (C358). |
+| A222-9 | CFOP de combustível sem produto ANP | `Cad_CFOP.Tipo_Combustivel` 1 ou 2 e item sem `Combustivel_Codigo_Anp` (Q221-6). |
+| A222-10 | GTIN fora das faixas da GS1 | O prefixo do GTIN do produto não está em `Cad_Gtin_Prefixo_Gs1` (Q221-11). Só avisa. |
+| A222-11 | Tipo e espécie de veículo inexistentes | O par `tpVeic` e `espVeic` não está em `Cad_Veiculo_Tipo_Especie` (Q221-11). |
+| A222-12 | Número do processo de regime especial fora do padrão | O número não casa com a expressão regular da UF em `Cad_Regime_Especial_Padrao_Numero_Processo` (Q221-11). |
+| A222-13 | FCP fora das alíquotas da UF | O percentual do FCP do documento não está entre as alíquotas de `Cad_Fcp_Aliquota_Uf` da UF (Q221-11). |

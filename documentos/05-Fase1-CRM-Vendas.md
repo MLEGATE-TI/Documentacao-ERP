@@ -6,6 +6,8 @@
 pedido de venda com histórico de status por item, reserva de estoque,
 nota fiscal de saída e devolução de cliente*
 
+*Revisão 25 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 1 entidades novas (anexo, seção 15); 1 entidades existentes alteradas; origem do combustível na tabela filha (Q221-12).*
+
 *Revisão 24 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 2 entidades existentes alteradas; campos de destinação de autopeça no pedido e na nota de saída e ID_Veiculo_Versao na nota de saída (documentos 204 e 209).*
 
 *Revisão 23 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 2 entidades existentes alteradas; campos da nota de saída para o cupom e a Redução Z, o bilhete de passagem, o RMD e a energia (C460, C465, C470, D400, D500 e 1510), e as descrições do valor líquido (documentos 175 e 176).*
@@ -1374,9 +1376,6 @@ Uma linha da nota fiscal de saída.
 | **Combustivel_Encerrante_Inicial** | *número, opcional* | Novo na revisão 3 (documento 34). comb/encerrante/vEncIni: valor do encerrante no início do abastecimento. |
 | **Combustivel_Encerrante_Final** | *número, opcional* | Novo na revisão 3 (documento 34). comb/encerrante/vEncFin: valor do encerrante no fim do abastecimento. |
 | **Combustivel_Percentual_Biodiesel** | *número, opcional* | Novo na revisão 3 (documento 34). comb/pBio: percentual de mistura do biodiesel (B100) no óleo diesel B. |
-| **Combustivel_Indicador_Importado** | *booleano, opcional* | Novo na revisão 3 (documento 34). comb/origComb/indImport: 0 nacional, 1 importado. |
-| **ID_Estado_Origem_Combustivel** | *referência (Cad_Estado, opcional)* | Novo na revisão 3 (documento 34). comb/origComb/cUFOrig: UF de origem do produtor ou do importador. |
-| **Combustivel_Percentual_Origem** | *número, opcional* | Novo na revisão 3 (documento 34). comb/origComb/pOrig: percentual originário para a UF. |
 | **Natureza_Operacao** | *texto, opcional* | Novo na revisão 3 (documento 44). Natureza da operação do item (C170.COD_NAT); o 0400 sai dos textos distintos. Substitui o ID_Natureza_Operacao do doc 44 (ver notes). |
 | **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil, opcional)* | Novo na revisão 3 (documento 44). Conta contábil de receita do item (COD_CTA). |
 | **ID_Tipo_Receita_Comunicacao** | *referência (Cad_Classe_Sistema, domínio = tipo_receita_comunicacao_efd, opcional)* | Novo na revisão 3 (documento 44). Tipo de receita de comunicação (D600.IND_REC); sugerido automaticamente pelos campos da NFCom. |
@@ -1411,6 +1410,8 @@ Uma linha da nota fiscal de saída.
 *Revisão 32 --- campos novos: Indicador_Receita_Energia, ID_Participante_Receita_Terceiro, Quantidade_Cancelada, Medicamento_Indicador_Base_Calculo, Medicamento_Tipo_Produto, ID_Classe_Enquadramento_Ipi; campos alterados: Valor_Total_Liquido, Valor_Unitario_Liquido.*
 
 *Revisão 40 --- campos novos: ID_Veiculo_Versao, ID_Destinacao_Autopeca, Origem_Destinacao_Autopeca, ID_Documento_Declaracao.*
+
+*Revisão 45 --- campos que saem: Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem.*
 
 *Comportamento de aplicação (não é um campo novo de dados): emitir a
 nota (Status=emitida) gera, para cada linha COM ID_Item_Pedido
@@ -2122,3 +2123,25 @@ consolidar.*
 14\. Anexo --- Entidades e domínios da revisão 3 (documentos 33 a 46)
 
 Revisão 3 do dicionário: este documento não ganha entidades novas; as alterações em entidades existentes aparecem nas próprias tabelas (campos marcados "Novo na revisão 3" ou "Alterado na revisão 3").
+
+
+
+15\. Anexo --- Documento 222: origem do combustível repetida no item da nota de saída (entidade nova da revisão 45)
+
+Revisão 45 do dicionário (consolidação de 16/11/2026): 1 entidade nova neste módulo (documento 222, Q221-12). Os três campos do conjunto único de origem saíram de `Mov_Nota_Fiscal_Saida_Item`.
+
+15.1. Origem do combustível repetida no item da nota (origComb; documento 222, Q221-12)
+
+Mov_Nota_Fiscal_Saida_Item_Origem_Combustivel
+
+Revisão 45 (documento 222; D-N588: Q221-12): A origem do combustível do item da nota de saída, em quantos registros forem necessários (origComb). Substitui o conjunto único de três campos do item (`Combustivel_Indicador_Importado`, `ID_Estado_Origem_Combustivel` e `Combustivel_Percentual_Origem`), que não comportava a origem repetida da NT 2023.01.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item_Origem_Combustivel** | *identificador* | --- |
+| **ID_Item** | *referência (Mov_Nota_Fiscal_Saida_Item) --- identidade* | O item da nota com combustível. |
+| **Indicador_Importado** | *booleano --- identidade* | indImport: falso = nacional, verdadeiro = importado. |
+| **ID_Estado_Origem** | *referência (Cad_Estado) --- identidade* | cUFOrig: a UF de origem do produtor ou do importador. |
+| **Percentual_Origem** | *número* | pOrig: o percentual originário da UF. A soma dos registros do item é 100% (no GLP e no GLGN, 100% para o nacional e 100% para o importado, em separado; NT 2023.01, perguntas 6 e 16); o ERP avisa quando não fecha. |

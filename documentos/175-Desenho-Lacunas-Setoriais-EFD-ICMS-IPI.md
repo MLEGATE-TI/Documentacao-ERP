@@ -19,7 +19,7 @@ As lacunas G15 a G19 do documento 167 reuniam os registros da EFD-ICMS/IPI que s
 **Nove achados que você precisa ler.**
 
 1. **A tabela 5.1.2 é a da CPRB, e o documento 172 a citou errado.** Você disse que ela preenche o P100 e o P110. Confirmei no documento 43: `COD_DETALHAM` é a Tabela 5.1.2 do Guia da EFD-Contribuições (detalhamento da CPRB, P110, cinco linhas) e já tem desenho. O Guia da EFD-ICMS/IPI v3.2.4 **não tem Bloco P e não tem tabela 5.1.2**. O catálogo de ajustes de benefício do validador (`AJ_BENEF_INCENTIVO`, 3.376 linhas) que o documento 172 chamou de "5.1.2" **não tem número no Guia**. A correção é só de texto (seção 9.4; Q175-7).
-2. **O Bloco 1 de combustíveis e usina (1300 a 1391) ficou de fora, como você decidiu**, e com ele o que depende dele: `Mov_Nota_Fiscal_Entrada_Item_Tanque` guarda o tanque por **código** até esse bloco ser desenhado (Q175-E4).
+2. **O Bloco 1 de combustíveis e usina (1300 a 1391) ficou de fora, como você decidiu**, e com ele o que depende dele: `Mov_Nota_Fiscal_Entrada_Item_Tanque` guarda o tanque por **código** até esse bloco ser desenhado (Q175-E4). *(Atualização de 16/11/2026: o bloco foi desenhado no documento 218 e entrou na revisão 44; a entidade nasceu lá, com o tanque por referência.)*
 3. **Os indicadores do registro 1010 não se guardam.** São derivados: o 1010 diz se o estabelecimento tem exportação, crédito, combustível e os demais, e isso sai de existir ou não o registro correspondente no mês. Só entra a habilitação por empresa, que decide **se o ERP gera** o registro.
 4. **O ICMS da Redução Z não estava em lugar nenhum.** `Mov_Ecf_Reducao_Z_Tributo` só tem PIS e Cofins. O registro C420 (totalizadores parciais) e o C490 (analítico por CST, CFOP e alíquota) precisam de entidade. O C490 não se deriva de documentos, porque a fonte é a Redução Z, e o CST e o CFOP de cada totalizador dependem do cadastro do produto **no dia**; guardar evita reescrever a história.
 5. **O C591 (FCP) já sai por derivação.** O documento 167 disse que não havia campo; havia: `Mov_Apuracao_Tributo_Item_Parcela_Icms` guarda o FCP por item. Corrijo o documento 167 (Anexo C).
@@ -447,7 +447,7 @@ Os dados de transporte da nota de combustível (registro C165): passe fiscal, te
 
 ## 5.6 Entidade nova: `Mov_Nota_Fiscal_Entrada_Item_Tanque`
 
-O armazenamento do combustível recebido por tanque (registro C171, exigência do livro de movimentação de combustíveis, Ajuste SINIEF 01/92): o item recebido pode ir a vários tanques. O tanque é por ora um código; vira referência quando o Bloco 1 de combustíveis for desenhado (Q167-6).
+O armazenamento do combustível recebido por tanque (registro C171, exigência do livro de movimentação de combustíveis, Ajuste SINIEF 01/92): o item recebido pode ir a vários tanques. O tanque é por ora um código; vira referência quando o Bloco 1 de combustíveis for desenhado (Q167-6). **Atualização de 16/11/2026 (revisão 44):** esta entidade nasceu no documento 218 (seção 6.4), já com o tanque por referência a `Cad_Lmc_Tanque` (Q175-E4 e D-N482); o desenho desta seção, com o tanque por código, nunca entrou no dicionário e fica como histórico.
 
 *Tipo: fato (sem vigência). Mestre: não. Vigência: não. Campos: 4.*
 

@@ -35,9 +35,17 @@ Mlegate · Alberto Beyeler · Novembro de 2026
 | 15    | Documento 209: autopeças por destinação (Lei 10.485, IPI, ICMS ST e estoque de 2027)                                                | 8         | C278 a C285 |
 | 16    | Lista de autopeças não produzidas (Resolução Gecex 368/2022)                                                                        | 1         | C286        |
 | 17    | Plataformas digitais e marketplace (LC 214, arts. 22 e 23)                                                                          | 9         | C287 a C295 |
-|       | **Total**                                                                                                                           | **295**   | C1 a C295   |
+| 18    | Material, equipamento e gênero alimentício na base das retenções (INSS e IN 1.234; documento 210)                                   | 7         | C296 a C302 |
+| 19    | Documento 207: alíquota de IPI de 31/12/2025 (8702 a 8704) e Notas Complementares                                                   | 5         | C303 a C307 |
+| 20    | Documento 215: Protocolo ICMS 41/2008 e variações por UF (DF, MVA de AL, BA, MT, PR e PI, história anterior a 2023, uso automotivo, alíquota sobre a base, autorização, Prot. 93/26, mesmo titular, operação interna, Prot. 97/10, SP, BA, AL, PA e MG)| 16        | C308 a C323 |
+| 21    | Documento 216: Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos (álcool etílico e mostos, fumígenos 24.01 e 24.04, valor de referência, IPCA, prognósticos, pequeno produtor, gás natural, minerais, importação, bebidas açucaradas e embalagem primária) | 11        | C324 a C334 |
+| 22    | Documento 218: Bloco 1 de combustíveis e usina (Ajuste SINIEF 14/2025, norma da ANP, perda e ganho, estoque de abertura, data do recebido, tanques interligados, número do bico e da bomba, intervenção, contador no máximo, produtos do 1300, bombas e lacres, usina: produto, balanço e resíduos; versão 2: limite de 0,6%, fornecedor do posto, distribuidor, grande consumidor, cupom, venda a outro revendedor, versão 2.1: Anexo da 884, transferência entre tanques, termos; versão 2.2: Diário Oficial e SC Cosit 223/2023) | 23        | C335 a C357 |
+| 23    | Documento 221: tabelas do Portal da NF-e (cClassTrib 620003 sem marca de grupo monofásico; valores 1 e 2 do indComb da tabela de CFOP)                                                                                                                                                                                                                                                                                                                                                                                              | 2         | C358 a C359 |
+|       | **Total**                                                                                                                           | **359**   | C1 a C359   |
 
 **Respondida:** C1 (limites da ECF), por Alberto em 09/11/2026 (duas mensagens), com a parte (3) ainda aberta; C4 (NFTS: número, série e data não se alteram quando vêm de XML; vale para toda nota importada de XML), respondida por Alberto em 09/11/2026 (D-N506 e D-N510), com a conferência final do contador aberta; C3 (quem declara a vinculação), procedimento confirmado por Alberto em 09/11/2026 (D-N505), com a segunda parte aberta; e C65 (Y520 acima do que o manual exige), decidida por Alberto em 09/11/2026 (D-N504: respeitar o manual; aplicação aprovada na D-N507), com o contador só confirmando. Os números não mudam: a pergunta respondida e aplicada sai daqui só depois do “consolidar”.
+
+**Respostas parciais do contador, de 16/11/2026 (D-N583):** 32 perguntas com resposta no arquivo que Alberto enviou. **Respondidas:** C7, C10, C11, C20, C21, C32, C207, C226, C256, C258, C279. **Respondidas em parte:** C6, C8, C14, C22, C25, C28, C29, C208, C209, C227, C232, C249, C261, C262, C324, C325. **Resposta que não resolve:** C9, C13, C281. **Respondidas, com divergência do provisório (decisão de Alberto):** C27, C33. Cada bloco traz a resposta como veio, a minha leitura e o que resta. As respostas coladas de pesquisa (C22(b), C208 e C209) não valem como confirmação por fonte oficial. Alberto aprovou em 16/11/2026 as Q188-7, Q188-8 e Q188-9 (D-N584); a Q188-6 segue com ele no documento 38 (seção 1.42). Os números não mudam e nada foi aplicado ao dicionário.
 
 **Evidência recebida:** C5 e C6 (Y520), com uma ECF de 2025 com Y520 enviada por Alberto em 09/11/2026 (D-N508); no C5, Alberto confirmou que o arquivo foi validado e transmitido (D-N509), e a parte (2) segue com o contador; o C6 segue sem resposta. C161, C165, C166 e C168 (combustíveis), com a Portaria MF 3.074/2026 e a Portaria Conjunta MF/CGIBS 14/2026, que Alberto enviou em 09/11/2026 (documento 194); o C168 fica respondido pelo texto, à espera da confirmação do contador, e o C225 é novo.
 
@@ -179,9 +187,13 @@ Pergunta: o Y520 é obrigatório nesse caso? Se for, o ERP deve **exigir** o Y52
 
 **Evidência recebida:** o arquivo de dezembro/2025 enviado por Alberto em 09/11/2026 (D-N508) tem `IND_REC_EXT` e `IND_PGTO_EXT` em “S” e Y520 dos dois tipos; **não traz o caso desta pergunta** (indicador “S” sem Y520), então a pergunta segue aberta.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Se o usuário selecionou esta opção e o sistema não conseguiu preencher automaticamente, manter sim para o usuário preencher manualmente ou no sistema ou no PVA da receita."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O contador manda manter o indicador em "S" e deixar o usuário completar o Y520, no ERP ou no PVA. Leitura minha: o ERP **avisa e não bloqueia** (D-N284).
+>
+> **Ainda aberto:** Se o Y520 é **obrigatório** quando `IND_PGTO_EXT` = "S" sem Y520 (o manual e a planilha se contradizem; pergunta 6 do documento 98, à Receita).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C7 · Q93-4 · Funções da fórmula da ECF: `CREDITO`, variantes e versões de 2026
 
@@ -195,9 +207,11 @@ Pergunta: confirmar a leitura de cada função usada nas fórmulas, em especial 
 
 **O que o ERP faz enquanto isso:** O cálculo para nas linhas em dúvida e não inventa o valor.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Sim Correto, usar os testes de 2025 como base para 2026, tem poucas variações de ano para ano."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Leituras das funções (inclusive `CREDITO`) confirmadas, e as fórmulas de 2026 seguem a mesma leitura do teste de 2025. O ERP pode **liberar as linhas paradas só por esta dúvida**, marcando-as como validadas.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C8 · Q93-7 · Quais linhas da ECF são o “imposto devido”
 
@@ -211,9 +225,13 @@ Pergunta: de cada uma das abas N630, N670, N620 e N660, qual linha é o imposto 
 
 **O que o ERP faz enquanto isso:** Parâmetro indicado pelo contador; sem a resposta o ERP não preenche o item.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "N 630 – Linha 26 para IR e N 670 Linha 21 para CSLL"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Imposto devido: **N630A linha 26** (IRPJ) e **N670 linha 21** (CSLL), o que bate com a leitura da própria planilha (documento 98, seção 5). Leitura minha: "N 630 linha 26" é a aba N630A.
+>
+> **Ainda aberto:** N620 linha 26, N660 linha 18 e N630B e N630C linha 23 (a resposta não os cita) e se "N 630" é mesmo a N630A.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C9 · Q118-2 · Linha `16.001` inexistente na N630A linha 18 (2026)
 
@@ -227,9 +245,13 @@ Pergunta: qual é a leitura certa da fórmula? Ou a Receita já corrigiu a plani
 
 **O que o ERP faz enquanto isso:** O motor acusa a linha e não calcula até a resposta.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Não existe na planilha pois ela é uma linha resultante de calculo"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** A resposta diz só que a linha `16.001` não existe na planilha por ser **resultado de cálculo**; não diz como ler a fórmula da N630A linha 18. O motor continua parando nessa linha.
+>
+> **Ainda aberto:** Qual é a leitura certa da fórmula (que linha, soma ou resultado substitui a `16.001`), ou se a Receita já corrigiu a planilha.
+>
+> **Data:** 16/11/2026 · **Situação:** resposta recebida (contador, 16/11/2026), mas não resolve a pergunta; segue aberta
 
 ### C10 · Q118-3 · Conferir as 11 fórmulas de 2026 contra a lei
 
@@ -243,9 +265,11 @@ Pergunta: conferir contra a lei dois pontos: (a) a soma de volta das deduções 
 
 **O que o ERP faz enquanto isso:** Cálculo parado nas linhas em dúvida.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Todas estão de acordo com a lei"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** As 11 fórmulas de 2026 estão de acordo com a lei (a soma de volta das deduções e o fator 0,90 incluídos). O ERP pode marcá-las como validadas.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C11 · Q122-1 · M350R linha 345: qual é a leitura certa
 
@@ -261,9 +285,11 @@ Pergunta: a leitura certa é `M350(170)`? (Leitura minha, por simetria: a M350A 
 
 **O que o ERP faz enquanto isso:** A carga deixa a fórmula como publicada.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Leitura esta correta"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** A leitura `M350(170)` na M350R linha 345 está correta. O ERP passa a carregá-la assim e marca a linha como validada.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C12 · Q130-4 · CSLL na apuração anual do lucro real em 2026: rateio entre períodos
 
@@ -293,9 +319,13 @@ Pergunta: qual valor ou fórmula entra nessas quatro linhas? Se o contador não 
 
 **O que o ERP faz enquanto isso:** O ERP para a linha e espera o valor do usuário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "N670 2 – Este é calculado em outro bloco e transferido para este bloco, a origem é o L300 que caiu na conta 3.02.01.01.01.01, que foi a CSLL pago no período este mesmo raciocínio acontece no calculo do imposto de renda, pode usar o mesmo racional da N660 3, que é a apuração mensal. Isto também vale para o T181, que é o arbitrado e a mesma U182 para empresas imunes"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** A resposta descreve **de onde sai a CSLL contabilizada** (L300, conta 3.02.01.01.01.01) e manda usar o mesmo racional da N660 3 nas outras linhas. A pergunta era outra: **qual alíquota ou fórmula** entra para os códigos 7 e 8 (12% e 17,5%, LC 224/2025), que a planilha não trata em N660 3, N670 2, T181 6 e U182 2 (documento 98, pergunta 3). Não consigo transformar a resposta em fórmula.
+>
+> **Ainda aberto:** A alíquota ou a fórmula dos códigos 7 e 8 nas quatro linhas; ou confirmar que a linha deve trazer a CSLL contabilizada (L300) e não a calculada pela alíquota. A pergunta 3 do documento 98 segue com a Receita.
+>
+> **Data:** 16/11/2026 · **Situação:** resposta recebida (contador, 16/11/2026), mas não resolve a pergunta; segue aberta
 
 # Parte 2. Listas antigas: tributos federais, vencimentos, EFD-Contribuições, DES-IF, DeSTDA e SUP
 
@@ -316,9 +346,23 @@ O `Cad_Regra_Vencimento` tem valores iniciais já levantados, provisórios: cont
 
 **O que o ERP faz enquanto isso:** Valores iniciais provisórios; as periodicidades sem valor ficam em “a definir”.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** a) Correto, mas estas datas podem variar, não são fixada e ficam eternas
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> b) IRRF é o dia 20 do mês subsequente ao Pagamento, IOF e o CIDE é descontado diretamente na conta bancaria conforme o resgate de investimento
+>
+> c) Dia 20 do mês subsequente ao fato gerador;
+>
+> d) Isto é uma tabela que varia de empresa para empresa, não é um valor fixo para todas as empresas
+>
+> e) O Item 85 é especifico para órgãos públicos, que indica “Ente Federativo, Órgãos da União, Autarquias e Fundações Públicas”
+>
+> f) É postergado para o primeiro dia útil após a data.
+>
+> **Leitura do ERP (minha):** **(a)** valores iniciais validados, mas as datas podem variar: seguem como parâmetros com vigência. **(b)** IRRF: dia 20 do mês seguinte ao pagamento; IOF e CIDE descontados direto na conta bancária no resgate, sem guia própria nesse caso. **(c)** o dia 20 do mês seguinte ao fato gerador confirma o "financeiras: dia 20, a confirmar" que o dicionário já trazia para PIS e Cofins. **(d)** percentuais de retenção, alíquotas, RAT, Senar e CPRB variam de empresa para empresa: **não há valor fixo na carga** (ficam em parâmetro por empresa). **(e)** a classificação 85 do R-4020 é "Ente Federativo, Órgãos da União, Autarquias e Fundações Públicas". **(f)** **não aplico**: "postergado para o primeiro dia útil" contradiz a coluna "dia não útil" do dicionário, que **antecipa** a contribuição previdenciária, PIS e Cofins, IPI e FGTS Digital e **prorroga** só o DAS.
+>
+> **Ainda aberto:** (b) IRRF diário, decendial, quinzenal e semanal, e o IOF de crédito, câmbio e seguro; (c) exceções do IPI; (d) prazos da Reinf; (f) a resposta vale para todos os tributos ou só para algum? Esclarecimento pedido: por tributo, antecipa ou prorroga (lista acima)?
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C15 · P-31, P-32 · Contas e regras da provisão de INSS e IRRF e da DCTFWeb
 
@@ -412,9 +456,13 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 
 **O que o ERP faz enquanto isso:** Aplicada na revisão 3 com a recomendação.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Com relação ao PIS e Cofins retido na Fonte o credito é na liquidação financeiras que entra no Bloco F600, no caso dos créditos referentes a notas fiscias de aquisição de produtos ou serviços e na competência, Data de entrada da nota fiscal."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Crédito de PIS e Cofins de **aquisição** (nota de produto ou serviço): nasce na **competência**, que é a **data de entrada da nota** (campo `Competencia_Apuracao`). **PIS e Cofins retidos na fonte:** o crédito nasce na **liquidação financeira** (bloco F600). Confirma a regra do documento 44 e acrescenta a exceção da retenção.
+>
+> **Ainda aberto:** Conferir, na consolidação, se a competência do crédito da aquisição já é a data de entrada (e não a de emissão) e se a retenção na fonte segue a liquidação.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C21 · Limite anual da CSLL no lucro presumido e MP 1.303/2025
 
@@ -424,9 +472,11 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 
 **O que o ERP faz enquanto isso:** Parâmetro provisório com vigência.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Hoje é este limite que esta vigente, pode ser alterado para 2027."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O limite de R$ 3,75 milhões está **vigente hoje** e pode mudar para 2027. O ERP tira o "provisório" para 2026 e mantém a vigência com fim em aberto. A resposta não cita a MP 1.303/2025; leitura minha, **não conferida na fonte**: sem efeito sobre o limite.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C22 · ISS fixo da SUP: o valor da faixa multiplica por profissional?
 
@@ -439,9 +489,13 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 
 **O que o ERP faz enquanto isso:** Sem regra definida até a resposta.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** *(texto longo de pesquisa colado pelo contador, com exemplos numéricos e a tabela de São Paulo; resumido na leitura abaixo, o texto inteiro está no arquivo que Alberto enviou em 16/11/2026)*
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** **(a)** o valor da faixa é **por profissional habilitado**, multiplicado pela quantidade (salvo município que use faixa de receita bruta presumida, em que o valor da tabela é o total); isso **confirma** o que o dicionário já faz (`Valor_Devido` = quantidade × valor, D-N130). **(b)** o texto colado diz que "uso restrito" é atividade que **não pode mais usar** o regime da SUP em São Paulo e deve pagar ISS pela alíquota geral. **Não tomo (b) como confirmação:** o texto é de pesquisa (não cita ato), traz R$ 46.408,19 na faixa de 51 a 100 profissionais, e a tabela de 2026 do documento 55 traz base mensal de R$ 48.387,19 (ISS trimestral a 5% de R$ 7.258,07); e as duas linhas "uso restrito" do documento 55 (03380, advocacia, e 04112, medicina) trazem **valor único por profissional** (base mensal de R$ 2.656,48), o que parece o oposto.
+>
+> **Ainda aberto:** (b): o que "uso restrito" significa na tabela da SUP de São Paulo, com o ato da Prefeitura que o diz (o contador responde com as palavras dele ou cita a norma).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C23 · P43-02 · Indicadores do Contribuições sem definição: `OBRIGA_DET`, letras P/R, P/N e S/N
 
@@ -489,9 +543,15 @@ Pergunta: há ato oficial que fixe até quando a EFD-Contribuições é exigida 
 
 **O que o ERP faz enquanto isso:** Nenhuma tabela é desativada por data fixa (D-N80); vale a vigência de cada linha.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** A Principio com o Fim do PIS e Cofins no final 2026 e inclusão do CBS em janeiro de 2027, a EFD contribuições para de existir, porém existe a possibilidade disto ser prorrogado.
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> E para empresa que o regime de apuração do PIS e Cofins é caixa, para itens com competência de 2026 com recebimento a partir de 2027 até a ultima parcela recebida, devera enviar a EFD contribuições.
+>
+> **Leitura do ERP (minha):** Com o fim do PIS e da Cofins no fim de 2026 e a CBS em janeiro de 2027, a EFD-Contribuições deixa de existir, mas o prazo pode ser prorrogado. Para a empresa no **regime de caixa**, o item com competência de 2026 e recebimento a partir de 2027 obriga a EFD-Contribuições **até a última parcela recebida**. Leitura minha: o ERP não desativa tabela por data fixa (D-N80) e mantém a obrigação gerável enquanto houver parcela de 2026 a receber no caixa.
+>
+> **Ainda aberto:** Se há **ato oficial** que fixe até quando a EFD-Contribuições é exigida (a resposta é "a princípio", sem norma citada).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C26 · P43-12 · CSOSN 300, 400 e 500 e CST do ICMS com origem embutida
 
@@ -521,9 +581,13 @@ Pergunta: qual é o **fundamento legal** e a **base de contagem** correta (ano d
 
 **O que o ERP faz enquanto isso:** Provisório: 5 anos, contados do ano do prazo de entrega.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "O prazo é de 5 anos após o envio da obrigação, se o arquivo e referente a janeiro de 2020, foi transmitido em março de 2020 começa a contar a partir de março de 2020, porém foi retificado em abril de 2022, a nova data para descarte começa a partir de abril de 2022, porém se a empresa entrar em processo de fiscalização, estes arquivos ficam retidos até o final da fiscalização por tempo indeterminado."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O prazo é de **5 anos do envio** do arquivo; se foi retificado, **conta da última transmissão**; em fiscalização, os arquivos ficam retidos até o fim, sem prazo. O contador descreve o prazo de **guarda do arquivo transmitido**, não a decadência do tributo (CTN), que o ERP guarda em `Cad_Obrigacao_Decadencia` e que, hoje, conta do ano do prazo de entrega. Fundamento legal **não citado**.
+>
+> **Ainda aberto:** O fundamento legal. Alberto decidiu na Q188-7 guardar os dois prazos, e o prazo de guarda do arquivo transmitido entrou no dicionário na revisão 45 (`Cad_Obrigacao_Guarda_Arquivo`, `Mov_Escrituracao_Retencao_Fiscalizacao` e os campos de descarte de `Mov_Escrituracao_Arquivo`; documento 222), provisório e sem fundamento legal.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); diverge do provisório, decisão de Alberto; **aprovado por Alberto em 16/11/2026 (Q188-7: guardar os dois prazos; D-N584); aplicado na revisão 45 (D-N589)**
 
 ### C28 · P43-15 · Feriados bancários no cálculo do prazo
 
@@ -537,9 +601,13 @@ Pergunta: o contador confirma essa contagem e que a carga de `Cad_Feriado` de 20
 
 **O que o ERP faz enquanto isso:** Usa a regra calculada onde o arquivo oficial não tem a competência.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Só entra os feriados nacionais, feriados locais não mudam nada na data, exemplo feriado de são Paulo 25 de janeiro, se a obrigação cair nesta data tem que ser entregue independente se é feriado no município ou do estado."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Só **feriados nacionais** mudam a data; feriado estadual ou municipal não muda (o contador dá o exemplo de 25 de janeiro em São Paulo). Leitura minha: `Cad_Feriado` para tributo federal usa só os nacionais, o que o dicionário já diz.
+>
+> **Ainda aberto:** Se **Carnaval e Corpus Christi** (pontos facultativos, que o calendário bancário do Banco Central traz) contam na regra dos dez dias úteis da EFD-Contribuições, que só acerta 147 das 150 competências com eles; e se a carga de 2014 a 2026 está completa.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C29 · Q-0A9-1 · Classificar a receita: tributada, não tributada, exportação ou cumulativa
 
@@ -553,9 +621,13 @@ Pergunta: como classificar cada linha de receita (tributada, não tributada, exp
 
 **O que o ERP faz enquanto isso:** Regras no Motor de Regras por CST, CFOP, conta e contribuição, com vigência; carga inicial provisória até o contador validar.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "A tributação é se o produto for consumido ou o resultado do serviço for no território brasileiro tem tributação, mas se o produto ou serviço for externo não tributa, se a venda for indireta mas com a destinação exterior não se tributa."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Regra geral: há tributação quando o produto é **consumido** ou o resultado do serviço ocorre **no território brasileiro**; produto ou serviço no exterior não tributa; a **venda indireta com destinação ao exterior** também não. Serve de conceito para a exportação (direta e indireta).
+>
+> **Ainda aberto:** A tabela por linha de receita (CFOP, CST, conta) e **quais receitas não são receita bruta**. A resposta dá o conceito, não a tabela.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"
 
 ### C30 · Q-0A9-2 · Receita bruta do 0145: com ou sem ajuste a valor presente
 
@@ -597,9 +669,13 @@ Pergunta: entrada e saída aceitam esses modelos sem chave? Em que casos?
 
 **O que o ERP faz enquanto isso:** `Chave_Acesso` condicional ao modelo (parâmetro por modelo); exporta 44 posições quando existe.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Sim existem notas que não tem chave e são notas validas tem que aceitar."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** Existem notas **válidas sem chave de acesso** e o ERP **tem de aceitá-las**. Confirma `Chave_Acesso` condicional ao modelo (parâmetro por modelo), na entrada e na saída.
+>
+> **Ainda aberto:** Os casos em que cada modelo sem chave é aceito (a resposta não os separa).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C33 · Q-C-2 · Escrituração consolidada ou individualizada no PIS/Cofins
 
@@ -609,9 +685,13 @@ Pergunta: entrada e saída aceitam esses modelos sem chave? Em que casos?
 
 **O que o ERP faz enquanto isso:** Parâmetro por filial e grupo de documento, padrão individualizada.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Se a empresa optar por escrituração consolidada este é um parâmetro geral, tem que valer para companhia inteira, e se é individualizada, todas as filiais vai ser obrigadas a entregar sua escrituração, mesmo sem movimento, indicando que naquela filial não teve movimento."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** A escrituração **consolidada** é parâmetro **geral**, para a **empresa inteira**; na **individualizada**, todas as filiais entregam a escrituração, **mesmo sem movimento**, informando que não houve. Hoje o ERP guarda o parâmetro **por filial e grupo de documento**.
+>
+> **Ainda aberto:** Nada: Alberto aprovou na Q188-8 o parâmetro por empresa, e `Cad_Efd_Contribuicoes_Opcao_Escrituracao` passou a ser por empresa na revisão 45 (documento 222), com o aviso A222-3 para filial sem movimento.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); diverge do provisório, decisão de Alberto; **aprovado por Alberto em 16/11/2026 (Q188-8: parâmetro por empresa; D-N584); aplicado na revisão 45 (D-N589)**
 
 ### C34 · Q-DIP-3 · NFCom (modelo 62) nos registros D500 e D600
 
@@ -2860,9 +2940,11 @@ Pergunta: para cada uma das demais obrigações acessórias (**DCTFWeb, EFD-Rein
 
 **O que o ERP faz enquanto isso:** O campo `ID_Valor_Centro_Custo` fica opcional; vazio vale para qualquer centro de custo
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "O Registro I051 só tem centro de custo se parte da conta estiver referenciada a uma linha do plano de contas de referencia e outra parte para outra, no caso da conta for 100% para uma conta de referencia não se indica o Centro de custo no I051"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O I051 só leva centro de custo quando **parte** da conta é referenciada a uma linha do plano referencial e **outra parte** a outra; conta 100% numa linha referencial **não** informa centro de custo. Não é automático por obra no RET. `ID_Valor_Centro_Custo` continua opcional; o texto passa a dizer que só se preenche quando a conta se divide entre linhas referenciais.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ## Documento 184 (ECD: moeda funcional, AVP e mapa da NFGás)
 
@@ -2876,9 +2958,13 @@ Pergunta: para cada uma das demais obrigações acessórias (**DCTFWeb, EFD-Rein
 
 **O que o ERP faz enquanto isso:** Registrar a regra e o contador valida
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** *(texto longo de pesquisa colado pelo contador, com tabela e ressalvas; resumido na leitura abaixo, o texto inteiro está no arquivo que Alberto enviou em 16/11/2026)*
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O texto colado (de pesquisa, com marcas de citação soltas) diz que a conversão segue o **CPC 02 (R2)**: ativo e passivo pela taxa de **fechamento**; receitas e despesas pela taxa **média** do período (aproximação, e pela taxa da data de cada transação se a taxa oscilar muito; há quem use a média mensal); patrimônio líquido pela taxa **histórica**; a diferença vai ao patrimônio líquido (ajuste acumulado de conversão); os valores convertidos vão nos campos adicionais do I020. **O próprio texto diz** que não achou no Manual da ECD critério próprio nem a taxa exata (PTAX de compra ou de venda). Difere da leitura da pergunta só no resultado: a taxa média do período é admitida no lugar da taxa do dia.
+>
+> **Ainda aberto:** Qual taxa exata (PTAX) o Manual da ECD ou a Receita exige nesses campos e se o resultado pode usar a média; o contador confirma com as palavras dele.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"
 
 ### C209 · Q184-C2 · Em que naturezas o AVP entra como subconta do I053
 
@@ -2890,9 +2976,13 @@ Pergunta: para cada uma das demais obrigações acessórias (**DCTFWeb, EFD-Rein
 
 **O que o ERP faz enquanto isso:** A confirmar
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** *(texto longo de pesquisa colado pelo contador, com tabelas do I053; resumido na leitura abaixo, o texto inteiro está no arquivo que Alberto enviou em 16/11/2026)*
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** O texto colado diz, do Manual da ECD (leiaute 9, janeiro de 2026): as naturezas do AVP no I053 são **75** (vinculada ao ativo), **76** (depreciação acumulada), **77** (amortização acumulada) e **78** (exaustão acumulada), todas de **ativo**; **não há natureza de AVP para passivo**; 70 a 73 são do AVJ e 90 a 93 da adoção inicial; se a própria conta serve de subconta correlata, não se informa o I053. Leitura minha: o 75 vale para qualquer conta de ativo (inclusive contas a receber), e não só para imobilizado e intangível.
+>
+> **Ainda aberto:** Como se registra o AVP de **passivo** (contas a pagar), que o manual consultado não traz; o texto manda validar no PVA ou no manual vigente.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"
 
 ### C210 · Q184-C3 · Mapa provisório dos grupos da NFGás para os campos do C500
 
@@ -3166,9 +3256,11 @@ Pergunta: (a) enquanto o regulamento não sair, a tela deve avisar que a hipóte
 
 **O que o ERP faz enquanto isso:** Proposta do documento 159 (Q159-4, opção A): o ERP só registra o percentual de redução que o pagamento aplicou e avisa se difere do parâmetro; a decisão de qual percentual vale é do contador; nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Sim, hoje não há um critério pratico"
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** (b) **hoje não há critério prático** para "bons antecedentes fiscais". Em (a), "Sim" não escolhe entre as duas opções; leitura minha: a tela **avisa** que a hipótese pode valer, e o ERP só registra o percentual aplicado e avisa se difere (Q159-4, opção A), sem mudar nada.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C227 · LC 214, arts. 29, § 2º, e 341-D · Multa de mora e multa punitiva depois da notificação
 
@@ -3182,9 +3274,13 @@ Pergunta: (a) depois da notificação, a multa de mora volta a correr junto com 
 
 **O que o ERP faz enquanto isso:** Proposta do documento 157, já aprovada: o parâmetro vale até a notificação e o ERP só registra e avisa; o documento 159 não muda nada nele.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "Sim confirmo."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** "Sim confirmo": (a) **depois da notificação a multa de mora volta a correr** junto com a multa punitiva; (b) os juros do art. 29, § 2º, **incidem também sobre a multa punitiva** desde a LC 227.
+>
+> **Ainda aberto:** A **data inicial** dos juros sobre a multa punitiva (a resposta não a diz).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C228 · LC 214, art. 323-C · Efeitos da consulta protocolada depois do vencimento da obrigação
 
@@ -3262,9 +3358,13 @@ Pergunta: (a) na industrialização por encomenda (o encomendante fornece a mat�
 
 **O que o ERP faz enquanto isso:** Proposta do documento 196 (Q196-7 e Q196-9): o ERP guarda a hipótese e a base do art. 414 em Cad_Is_Hipotese_Base e o valor de referência é informado no item, com aviso; o contador decide quem é o fabricante; nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "No caso de industrialização em terceiros, o terceiro não esta vendendo o produto, esta cobrando a industrialização com isto no serviço que ele prestou não incide o IS, só na venda od encomentante."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** (a) Na industrialização por encomenda o executor **cobra serviço**, e sobre o serviço **não incide** Imposto Seletivo; o IS recai **na venda do encomendante**. Leitura minha: o contribuinte é o encomendante, no primeiro fornecimento.
+>
+> **Ainda aberto:** (b) de onde vem o valor de referência dos fumígenos e quem o informa enquanto não houver ato; (c) se o IS misto é lançado em duas linhas.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 # Parte 8. Documento 198: regimes específicos de serviços financeiros, seguro e plano de saúde (B4)
 
@@ -3542,9 +3642,13 @@ Pergunta: (a) o IPI destacado na venda sai da base do crédito, como "imposto in
 
 **O que o ERP faz enquanto isso:** Proposta do documento 202 (Q202-5): parâmetro por empresa \`credito_auto_ipi_fora_da_base\`, padrão provisório falso (o IPI fica na base, como o Decreto), com aviso quando o item tem IPI destacado; nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "A) Fica como o decreto Sugere. B) sim, c) Do IPI não entram."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** (a) "Fica como o decreto sugere": o IPI **fica na base** do crédito. (b) "Sim": o projeto da Lei 9.826 segue a mesma regra. (c) "Do IPI não entram": **contradiz** (a), a menos que (c) fale de outras parcelas.
+>
+> **Ainda aberto:** **Esclarecimento pedido:** (a) o IPI destacado entra ou sai da base do crédito? (c) frete, seguro e outras despesas acessórias da nota entram na base? A resposta (c) diz "do IPI não entram" e (a) diz "fica", e os dois não podem valer juntos.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"
 
 ### C250 · LC 214, art. 313, § 2º, e Decreto 12.955, art. 523, §§ 2º e 3º · Crédito presumido automotivo: débitos próprios, fração e limite mensal
 
@@ -3656,9 +3760,11 @@ Pergunta: (a) a alíquota final do veículo se arredonda, e em quantas casas? (b
 
 **O que o ERP faz enquanto isso:** Proposta do documento 204: parâmetro por empresa \`is_veiculo_arredondamento_casas\`, padrão provisório "sem arredondar" (duas contas guardadas na memória do item); o resultado do cálculo segue sem arredondamento até a resposta. Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** "A) as alíquotas arredonda com 4 casas, b) Exato, C) antes do arredondamento."
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> **Leitura do ERP (minha):** (a) as alíquotas se arredondam em **4 casas**; (b) o fator 1,21 multiplica a alíquota inicial **exata**; (c) na importação, o fator 1,17 entra **antes** do arredondamento. O padrão provisório de `is_veiculo_arredondamento_casas` passa de "sem arredondar" para 4 casas, com as duas contas na memória do item. Sem norma citada. Leitura minha: 4 casas na mesma unidade da alíquota guardada (percentual).
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C257 · MP 1.399/2026, Anexo II, critério 4, e Decreto 12.549/2025, Anexo IV, itens 2, 5 e 6 · Desempenho estrutural: item 2 ou item 5
 
@@ -3688,9 +3794,17 @@ Pergunta: (a) quem atesta os kW (fabricante, Senatran, Inmetro) e em que documen
 
 **O que o ERP faz enquanto isso:** Proposta do documento 204: kW sempre na ficha da versão, com a norma de medição; o Motor compara kW × 1,35962 com os cv da nota e avisa se a diferença passa de 2%; parâmetro \`is_veiculo_kw_derivado_do_cv\`, padrão "não deriva". Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** A. quem afere isto é o Inmetro
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> B. Não tem que pedir para engenharia definir o valor
+>
+> C. Este valor deverá ser definido pela engenharia,
+>
+> D. Sim
+>
+> **Leitura do ERP (minha):** (a) quem aferirá a potência é o **Inmetro**; (b) **não** se deriva kW de cv: a engenharia define o valor; (c) o valor do sistema (híbrido e elétrico de motores múltiplos) é definido pela engenharia; (d) "Sim": a nota fiscal deverá trazer kW (leitura minha: expectativa do contador; **não li** nota técnica que a confirme). Confirma `is_veiculo_kw_derivado_do_cv` = "não deriva"; o kW fica na ficha da versão, e a comparação com o cv da nota continua só como aviso.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C259 · MP 1.399/2026, Anexos I a III, e Decreto 12.549/2025, NC (87-13) e NC (87-14) · Posições fora das listas de códigos
 
@@ -3738,9 +3852,15 @@ Pergunta: (a) "combustível de origem renovável" é só etanol e biodiesel, ou 
 
 **O que o ERP faz enquanto isso:** Proposta do documento 204: a conferência \`Atende_Motorizacao_Taxi\` lê a propulsão da ficha (elétrico; etanol; flex-fuel; qualquer híbrido) e a cilindrada de até 2.000 cm³; sem outras regras; o usuário registra a decisão do responsável. Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** a) Etanol ou Flex. biodiesel não entra na regra para taxi. B) Pode ser Flex-fuel e/ou veículos adaptados para GNV. C) Qualquer hibrido que seja flex ou álcool. D) Sim limite de 2000 cm3 do motor a combustão, e) sim entram.
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> Tem um adendo importante aqui, só para veículos produzidos no país, veículos importados não tem isenção, além de tudo isto tem que ter regulamentado pelo DTP ou SMT. picapes ou utilitários mesmo híbridos não isenção.
+>
+> **Leitura do ERP (minha):** (a) etanol ou flex; **biodiesel não** entra no táxi; (b) o sistema reversível pode ser flex-fuel ou veículo adaptado para GNV; (c) híbrido só se flex ou a etanol (não vale híbrido leve a gasolina ou diesel); (d) sim, os 2.000 cm³ são do motor a combustão; (e) GNV e gás por adaptação entram. **Adendo do contador:** só vale para veículo **produzido no país** (importado não tem isenção), com regulamentação do **DTP ou da SMT**, e **picape ou utilitário não** têm isenção, mesmo híbridos. A conferência `Atende_Motorizacao_Taxi` passa a ler: elétrico; etanol; flex-fuel; GNV adaptado; híbrido flex ou a etanol; cilindrada de até 2.000 cm³. O adendo vira **aviso**, sem regra, até haver norma.
+>
+> **Ainda aberto:** **Esclarecimento pedido** sobre o adendo: em qual dispositivo da LC 214 (arts. 149 e 153) ou ato do DTP ou da SMT estão a exigência de fabricação nacional e a exclusão de picapes e utilitários, e a que município ou estado o ato se refere.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C262 · MP 1.399/2026, arts. 12 e 18, e LC 214/2025, art. 412 e seguintes · Obrigação acessória e escrituração do IS
 
@@ -3754,9 +3874,17 @@ Pergunta: (a) qual a obrigação acessória e o código de receita do IS? (b) o 
 
 **O que o ERP faz enquanto isso:** Proposta do documento 204: o IS do item fica em \`Mov_Apuracao_Tributo_Item\` e na memória do veículo; sem obrigação acessória definida, os efeitos em ECD, ECF e DCTFWeb ficam sem documentação até a resposta. Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** A) não entendi a pergunta
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> B) Faz parte da nota fiscal e do cadastro do produto
+>
+> c) O IS é registrado na contabilidade este registro entra na ECD que consequentemente enta na ECF, pela escrituração contabil
+>
+> **Leitura do ERP (minha):** (a) "não entendi a pergunta"; (b) a potência e a propulsão fazem parte **da nota fiscal e do cadastro do produto**; (c) o IS é registrado na contabilidade, entra na **ECD** e, por ela, na **ECF**, pela escrituração contábil (sem registro próprio).
+>
+> **Ainda aberto:** **Esclarecimento pedido, em outras palavras (a):** em qual declaração ou apuração o contribuinte do IS informa o imposto e em que guia (DARF) e prazo o recolhe? Hoje o ERP só guarda o IS por item e na apuração do veículo.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
 
 ### C263 · MP 1.399/2026, art. 6º, III · Notas Complementares da Tipi 87-2, 88-1, 88-2 e 89-1 (alíquota zero transitória)
 
@@ -4036,9 +4164,17 @@ Pergunta: (a) a declaração do comprador (por pedido, por contrato ou permanent
 
 **O que o ERP faz enquanto isso:** Proposta do documento 209: o ERP guarda a declaração em \`ID_Documento_Declaracao\` e a validade em \`Cad_Autopecas_Perfil.Data_Validade\`, avisa quando falta ou vence, e \*\*não valida\*\* nem bloqueia (D-N284). Leitura provisória: a declaração do comprador basta. Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** a) Sim
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> b) Quem fez a venda;
+>
+> c) Sim precisa
+>
+> d) Pode
+>
+> **Leitura do ERP (minha):** (a) **sim**, a declaração do comprador basta como prova; (b) **quem fez a venda** recolhe a diferença quando a peça é revendida; (c) **sim**, a declaração permanente precisa de prazo de validade; (d) **pode** haver destinação mista no mesmo pedido. Confirma a leitura provisória do documento 209 (declaração em `ID_Documento_Declaracao`, validade em `Data_Validade`); o aviso do ERP, quando falta ou vence a declaração, passa a citar o **vendedor** como responsável; (d) pede que a destinação se registre **por item** do pedido.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
 
 ### C280 · Lei 10.485/2002, arts. 3º e 5º · CST e natureza da receita de cada caso na EFD-Contribuições
 
@@ -4068,9 +4204,15 @@ Pergunta: (a) quem são as pessoas jurídicas do art. 17, § 5º, da MP 2.189-49
 
 **O que o ERP faz enquanto isso:** Proposta do documento 209: R4 vale para todo atacadista e varejista, sem a exceção; se o contador responder que a exceção alcança as autopeças, entra um valor novo em \`tipo_perfil_autopecas\`. Nada aplicado ao dicionário.
 
-> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> **Resposta do contador (recebida em 16/11/2026):** a) Pessoas com CNPJ
 >
-> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+> b) Vale para tudo
+>
+> **Leitura do ERP (minha):** A resposta ("pessoas com CNPJ"; "vale para tudo") **não identifica** quem são as pessoas jurídicas do art. 17, § 5º, da MP 2.189-49/2001; toda pessoa jurídica tem CNPJ. Não li a MP. O ERP segue sem a exceção e sem marcador.
+>
+> **Ainda aberto:** Quem são essas pessoas jurídicas (nome do regime ou da atividade) e se o marcador no perfil é necessário. "Vale para tudo" lido como: a ressalva alcança as autopeças do art. 3º e os veículos do art. 1º; **confirmar**.
+>
+> **Data:** 16/11/2026 · **Situação:** resposta recebida (contador, 16/11/2026), mas não resolve a pergunta; segue aberta
 
 ### C282 · Convênio ICMS 142/18, cláusula nona, I e III · "Não comercializa o mesmo bem": teste pelo estabelecimento ou pela operação
 
@@ -4297,6 +4439,1064 @@ Pergunta: (a) como se prova o "exclusivamente" (declaração da plataforma, veri
 **O que o ERP faz enquanto isso:** Proposta do documento 212: a operação guarda só o marcador \`Recolhido_Pelo_Cambio\` e a diferença do adquirente ou importador; não há campo para a dispensa do § 3º. Nada aplicado ao dicionário.
 
 > **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 18. Documento 210: material, equipamento e gênero alimentício na base das retenções (INSS, IN RFB 2.110, e IR, CSLL, PIS e Cofins, IN RFB 1.234)
+
+### C296 · IN RFB 2.110/2022, arts. 116 e 117, e SC Cosit 220/2026 · Copeiragem com gêneros alimentícios: art. 116 sem valor no contrato e o piso de 50%
+
+**De onde vem:** Documento 210, seção 4 (item 2) e Anexo B
+
+**Contexto e pergunta:**
+
+A SC Cosit 220/2026 manda deduzir da base da retenção previdenciária os gêneros alimentícios fornecidos pela contratada de copeiragem, "observado o art. 116". O art. 116 exige o valor discriminado no contrato e na nota; se o contrato prevê o fornecimento sem valores, a leitura é o art. 117, que tem piso (50% nos "demais casos", IV).
+
+Pergunta: (a) quando o contrato de copeiragem prevê o gênero sem valor, vale o art. 117 e o piso de 50%, ou a copeiragem tem outro percentual? (b) o gênero alimentício é "material" também para o art. 117, ou só para o art. 116? (c) a solução vale para outros serviços com fornecimento de alimentos (refeitório, cozinha industrial)?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: a regra R6 trata o gênero alimentício como material do art. 116 (ou do art. 117, sem valor) e a copeiragem entra na hipótese ART117_IV (50%), leitura minha. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C297 · IN RFB 2.110/2022, arts. 117 e 118, e SC Cosit 170/2026, itens 17.2, 18.2 e 18.3 · Piso global e combinação dos artigos na mesma nota
+
+**De onde vem:** Documento 210, seção 4 (itens 6 a 8) e 5.4
+
+**Contexto e pergunta:**
+
+A SC Cosit 170/2026 diz que o piso de 50% do art. 117, IV é global do documento e que, quando o art. 118 e o art. 117 incidem em parcelas diferentes da mesma nota, a base é o maior entre (i) o piso da parcela mais as parcelas que entram inteiras e (ii) 50% do bruto. O texto foi lido na reprodução de um site de terceiros, não na publicação oficial.
+
+Pergunta: (a) a fórmula "maior entre dois valores" está correta e vale também para o art. 117 sozinho? (b) como se rateia a base final entre os tipos de serviço do R-2010 (proporcional ao bruto de cada tipo ou à base)? (c) na nota com limpeza (80%) e outros serviços (50%), cada percentual vale para a sua parcela ou o maior vale para o todo (art. 118, § 1º, e art. 117)?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: as regras R7 e R9 aplicam a fórmula como li e o rateio é proporcional ao bruto de cada tipo (leitura minha); a apuração guarda a base pelos valores, o piso e a base final. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C298 · IN RFB 2.110/2022, art. 116, §§ 1º e 2º · Prova do material e custo de aquisição
+
+**De onde vem:** Documento 210, seção 5.2 (\`Mov_Nota_Material_Discriminado\`) e avisos 3 e 4
+
+**Contexto e pergunta:**
+
+O valor do material que sai da base não pode passar do custo de aquisição ou de locação, e a contratada guarda os documentos que o comprovam.
+
+Pergunta: (a) que documentos valem (nota de compra, contrato de locação, recibo, rateio de estoque comum a vários contratos)? (b) quando o material sai do estoque da própria contratada, o custo de aquisição é o custo médio, o da última compra ou outro? (c) o que vale para material produzido pela contratada? (d) por quanto tempo a prova deve ser guardada e o tomador pode exigi-la?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: a linha da nota guarda \`Valor_Comprovado\`, a nota de compra e uma referência de texto, sem validar a prova; sem comprovação nada sai da base e o aviso 4 diz isso. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C299 · IN RFB 2.110/2022, art. 120 · Dedução de alimentação e de transporte da mão de obra
+
+**De onde vem:** Documento 210, seção 4 (item 11) e Q210-12
+
+**Contexto e pergunta:**
+
+O art. 120 da IN 2.110 (texto oficial, lido) permite deduzir da base da retenção, **se a nota discrimina**, o custo da alimentação *in natura* e do auxílio-alimentação (não pago em dinheiro) e o vale-transporte (mesmo em dinheiro, até o necessário ao transporte coletivo); a taxa de administração não deduz. O texto **não diz** como a dedução se combina com o piso dos arts. 117 e 118.
+
+Pergunta: (a) a dedução incide **depois** do piso (base = máximo entre a base pelos valores e o piso, menos a dedução) ou o piso é calculado sobre o valor bruto já sem a dedução? (b) a nota precisa discriminar as parcelas uma a uma, e como se prova o limite do vale-transporte? (c) a dedução vale também quando a nota não tem material discriminado?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210 (regra R13, provisória): a dedução é subtraída da base final dos arts. 116 a 119, com mínimo zero, e só quando a nota discrimina a parcela. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C300 · SC Cosit 220/2026 e IN RFB 1.234/2012, art. 2º, § 7º, I · Material essencial, planilha integrante e verificação a cada pagamento
+
+**De onde vem:** Documento 210, seção 5.5 e 4 (item 4)
+
+**Contexto e pergunta:**
+
+O § 7º, I, da IN 1.234 (lido no DOU de 12/01/2012 e na versão multivigente de 2019) exige o fornecimento de materiais pelo contratado, discriminados no contrato ou em planilhas à parte integrante do contrato, e na nota fiscal ou fatura. **O texto da IN não usa a palavra "essenciais"**; ela aparece na SC Cosit 220/2026, que fala em materiais essenciais ao serviço e em "planilhas anexas". Os comentários que li dizem que os requisitos são cumulativos e valem a cada pagamento.
+
+Pergunta: (a) a essencialidade é exigência da lei ou só da SC 220, e o que torna o material "essencial" (gêneros da copeiragem, insumos de limpeza, uniformes)? (b) "planilhas anexas" (SC 220) e "planilhas integrantes" (IN 1.234) são a mesma coisa, e basta a planilha estar anexa? (c) a verificação vale a cada pagamento ou uma vez por contrato? (d) um contrato que não discriminava pode ser corrigido por aditivo, com efeito daí em diante?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: a essencialidade é marcação do usuário na linha do contrato (\`Eh_Essencial_Ao_Servico\`) e o enquadramento é verificado e gravado por pagamento (\`Enquadramento_Emprego_Materiais\`). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C301 · IN RFB 1.234/2012, art. 2º, § 6º, e IN RFB 2.110/2022, arts. 116 e 117 · O que o prestador informa na nota e a responsabilidade dele
+
+**De onde vem:** Documento 210, seção 5.1 e aviso 11
+
+**Contexto e pergunta:**
+
+O § 6º manda o fornecedor informar na nota o valor do IR e das contribuições a reter. Para a base do INSS e para a linha 6147, a nota precisa discriminar o material; sem isso o tomador retém sobre o valor bruto e à linha de 9,45%.
+
+Pergunta: (a) o que o prestador deve informar na nota para o órgão reter o INSS pela base reduzida e o IR pela linha 6147? (b) se a nota não discrimina, o prestador pode pedir restituição ou compensação do excesso retido? (c) o tomador pode glosar a nota que discrimina material sem previsão no contrato, e o que acontece com a retenção?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: o aviso 11 diz, antes da emissão, que a nota sem discriminação perde a base reduzida e a linha 6147; a base que o tomador informa fica em \`Base_Informada_Pelo_Tomador\`, só para conferência. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C302 · IN RFB 2.110/2022, arts. 116 a 120 · Alterações posteriores e contratos anteriores
+
+**De onde vem:** Documento 210, Anexo B e seção 9
+
+**Contexto e pergunta:**
+
+O texto oficial (DOU de 19/10/2022) mostra que a IN 2.110 **vigora desde 01/11/2022** (art. 277) e **revogou a IN 971/2009** (art. 276, I); os pisos dos arts. 117 e 118 conferem com os que eu tinha. O texto que li é o **original**, sem a história das alterações. A IN RFB 2.185/2024 (DOU de 09/04/2024) atualizou a IN 2.110 e, pelo que li num site de terceiros, não mexe nos arts. 112 a 125; as alterações posteriores a abril de 2024 não foram verificadas.
+
+Pergunta: (a) houve alteração dos arts. 116 a 120 ou dos percentuais depois de 19/10/2022? (b) notas de contratos anteriores a 01/11/2022 mantêm as regras da IN 971, revogada?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 210: a carga dos 10 pisos sai provisória (\`Situacao_Dado\` = provisório), com vigência inicial 01/11/2022. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 19. Documento 207: alíquota de IPI de 31/12/2025 das posições 8702 a 8704 e as Notas Complementares (Lei 9.826)
+
+### C303 · Decreto 12.549/2025, arts. 7º e 8º · Rota 2030 em 31/12/2025: as NC (87-4) a (87-12) e as reduções do Decreto 9.557
+
+**De onde vem:** Documento 207, seção 4 (item 5) e Q207-2
+
+**Contexto e pergunta:**
+
+O art. 7º do Decreto 12.549 revoga as Notas Complementares NC (87-4) a (87-12) da Tipi (a NC 87-7 a 87-12 são as reduções da Rota 2030). O art. 8º, II dá efeito de 01/11/2025 aos dispositivos que não são o art. 4º e a NC (87-15). O parágrafo único do art. 7º diz que, "enquanto não vigorar a revogação" das NC (87-7) a (87-12), aplicam-se as reduções dos itens 3 e 4 do Anexo III e do item 6 do Anexo IV do Decreto 9.557.
+
+Pergunta: (a) as NC (87-4) a (87-12) estão revogadas desde 01/11/2025, ou o parágrafo único mantém as reduções da Rota 2030 até outra data (qual)? (b) se mantém, elas somam com os critérios da NC (87-13) e (87-14), que repetem a eficiência (2 e 1 pontos) e o desempenho estrutural (1 ponto)? (c) para a \`Al\` da Lei 9.826, vale a alíquota de 31/12/2025 com qual dos dois conjuntos?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 207: as NC (87-4) a (87-12) estão revogadas em 31/12/2025 e não somam com a NC (87-13) e (87-14); a \`Al\` usa só as notas do decreto. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C304 · Decreto 12.549/2025, Anexo I · "Ex" da Tipi que o decreto não cita
+
+**De onde vem:** Documento 207, seção 4 (item 6) e Q207-3
+
+**Contexto e pergunta:**
+
+A Tipi enviada traz o "Ex 01" dos códigos 8703.23.10 e 8703.23.90 (cilindrada de 1.500 a 2.000 cm³, 9,78%). O Anexo I fixa 6,30% nesses códigos e não cita os Ex. Também não cita o Ex 01 de 8704.23.90 e de 8704.43.00 (3,25%, trator florestal), que o documento carregou pela Tipi.
+
+Pergunta: (a) os Ex 01 de 8703.23.10 e 8703.23.90 foram extintos pelo decreto (valem os 6,30% do código) ou continuam com 9,78%? (b) os Ex de 8704.23.90 e 8704.43.00 continuam com 3,25%? (c) há outro Ex da Tipi nas posições 8702 a 8704 que o decreto alterou sem citar?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 207: os Ex 01 de 8703.23.x não entram na carga (valem os 6,30%); os de 8704.23.90 e 8704.43.00 entram com 3,25%. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C305 · Notas Complementares NC (87-2), (87-3) e (87-13) · Convivência e ordem
+
+**De onde vem:** Documento 207, seção 4 (item 7) e Q207-4
+
+**Contexto e pergunta:**
+
+A NC (87-2) zera ambulâncias, carros celulares e carros funerários da 87.03; a NC (87-3) fixa 6,02% no 8703.22.90 com habitáculo acima de 6 m³ (com manifestação da RFB); a NC (87-13) soma ajustes à alíquota-base dos códigos 8703.21.00 a 8703.80.00. O decreto não revoga a NC (87-2) nem a NC (87-3) e não diz como elas convivem com a NC (87-13). A NC (87-3) fixa uma alíquota menor que os 6,30% novos.
+
+Pergunta: (a) a NC (87-2) prevalece sobre os critérios da NC (87-13)? (b) a NC (87-3) fixa 6,02% e os critérios da NC (87-13) se aplicam sobre esse valor, ou a NC (87-3) exclui a NC (87-13)? (c) a NC (87-15) (versão sustentável, zero) prevalece sobre a NC (87-2) e a NC (87-3)?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 207: a ordem do Motor é NC (87-15), NC (87-2), NC (87-3), NC (87-13) ou (87-14) e, por fim, a alíquota-base (a mais específica primeiro); a NC (87-3) exclui os critérios. Leitura minha, que o contador confirma. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C306 · LC 214, art. 312, II · \`Al\` por ficha de veículo e crédito zero da versão sustentável (liga-se à C252)
+
+**De onde vem:** Documento 207, seção 4 (itens 3, 4 e 10) e Q207-4 a Q207-6
+
+**Contexto e pergunta:**
+
+A LC 214, art. 312, II, manda usar a alíquota de IPI de 31/12/2025 "conforme a Tipi, inclusive Notas Complementares", "para cada posição na Tipi". As NC (87-13) e (87-14) alteram a alíquota conforme o veículo (propulsão, eficiência, potência, desempenho estrutural e reciclabilidade). Se a \`Al\` for do veículo, a fórmula \`V × Al × (1 − Al) × F\` é calculada em cada grupo de \`Al\` igual. Com a NC (87-15), a \`Al\` é zero e o crédito é zero.
+
+Pergunta: (a) a \`Al\` do crédito é a da posição na Tipi (alíquota-base) ou a do veículo com as Notas Complementares? (b) o veículo com versão sustentável registrada (\`Al\` zero) tem crédito zero na Lei 9.826? (c) a linha de apuração por NCM e por \`Al\` está de acordo com a lei?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 207: a \`Al\` é a do veículo, com as Notas Complementares, calculada pelo Motor e confirmada pelo usuário; o crédito do veículo de \`Al\` zero é zero. Leitura minha, que o contador confirma. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C307 · Tipi, posições 87.02 a 87.04 · Alterações de 2025 além do Decreto 12.549
+
+**De onde vem:** Documento 207, seção 4 (item 9) e Q207-7
+
+**Contexto e pergunta:**
+
+A Tipi enviada (atualizada até o ADE RFB 1/2026) não incorpora o Decreto 12.549 no capítulo 87. A 87.02 e os códigos de 87.04 que o decreto não cita foram carregados pela Tipi enviada. Pode haver alteração de 2025 que não vi. A edição do DOU de 11/07/2025 (edição 129) que você enviou traz só o Decreto 12.549 sobre esse assunto; os atos dos outros dias de 2025 não li. A Tipi tem na lista de atualizações o Decreto 12.665/2025 (10/10/2025), que pelo que li em fontes secundárias trata de ex-tarifários de descartáveis de plástico e papel, sem relação com o capítulo 87.
+
+Pergunta: (a) houve outro ato de 2025 (decreto, resolução Gecex ou ADE) que alterou a alíquota de 87.02, 8703.10.00 ou dos códigos de 87.04 não citados no Anexo I? (b) como a Receita não publica Tipi consolidada com o Decreto 12.549 (informação de Alberto, 11/11/2026), as 85 linhas se apoiam no decreto e na Tipi enviada: você confirma que a \`Al\` das posições que o decreto não cita (87.02 e os códigos de 87.04) é a da Tipi atualizada até o ADE RFB 1/2026?
+
+**O que o ERP faz enquanto isso:** Proposta do documento 207: a carga sai provisória, com a marca em \`Motivo_Vigencia\`, até a sua resposta, já que não há Tipi consolidada com o decreto. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 20. Documento 215: Protocolo ICMS 41/2008 e as variações por UF da substituição tributária de autopeças
+
+### C308 · Protocolo ICMS 41/08, cabeçalho · Distrito Federal: denúncia de 2008 e adesão de 2011
+
+**De onde vem:** Documento 215, seção 5 (item 8) e Anexo B
+
+**Contexto e pergunta:**
+
+O cabeçalho do protocolo diz "Denunciado pelo DF, conforme Despacho 88/08" e também "adesão do DF com efeitos em data prevista em ato do Poder Executivo para o Distrito Federal, pelo Prot. ICMS 5/11". O caput da cláusula primeira, na redação do Prot. 93/26, lista o DF entre os destinos.
+
+Pergunta: (a) a ST do protocolo vale hoje nas remessas para o DF? (b) desde que data (a do ato do Poder Executivo do DF)? (c) o Despacho 30/08 (aplicação no AP e no DF) ainda tem efeito?
+
+**O que o ERP faz enquanto isso:** O DF fica para a carga, com a regra provisória e o aviso 10. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C309 · Protocolo ICMS 41/08, cláusula 2ª, § 6º · MVA original da legislação interna de AL, BA, MT, PR e PI
+
+**De onde vem:** Documento 215, seção 5 (item 4), Anexo B e Q215-5
+
+**Contexto e pergunta:**
+
+Desde 01/02/2023 (BA desde 01/06/2023) a MVA original nas operações para AL, MT, PR e PI é a da legislação interna dessas UFs, e não a do protocolo. Não li a legislação de MT, de PR, da BA atual nem o Decreto 90.309/2023 de AL.
+
+Pergunta: (a) qual a MVA original de cada UF para as peças do Anexo II, por CEST ou NCM, por perfil do remetente, e a vigência? (b) há MVA diferente para o fabricante com fidelidade? (c) vale a fórmula da MVA ajustada nessas UFs, ou há tabela publicada? (d) a MVA de RS e SP, nas notas até a saída delas, é a mesma?
+
+**Atualização de 12/11/2026:** o MT não implementou a MVA de fidelidade do 41/08 (Consulta 18/2024) e o DF registra que, para MT, PR, PI, RS e SP, vale a MVA do destino (item 28.17); o PR tem 36,56% e 71,78% na Resolução SEFA 20/2017, art. 5º (texto de 2018).
+
+**O que o ERP faz enquanto isso:** As linhas dessas UFs ficam, na carga, com \`Origem_Valor\` = \`legislacao_uf\`; sem percentual carregado, o Motor calcula o que a lei fecha e dá o aviso 3. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C310 · Protocolo ICMS 41/08, Anexo Único (revogado em 01/02/2023) · História anterior
+
+**De onde vem:** Documento 215, seção 5 (item 9) e aviso 11
+
+**Contexto e pergunta:**
+
+Até 31/01/2023 valia o Anexo Único de 124 itens, com outra lista de UFs e adesões escalonadas (AL e RJ em 2009, AC, PB e RR em 2013, entre outras) e, antes de 01/12/2015, MVAs diferentes. O desenho só prevê carga a partir de 01/02/2023.
+
+Pergunta: (a) a empresa precisa recalcular ou reemitir ST de notas de 2021 a janeiro de 2023 (prazo decadencial)? (b) se sim, a carga do Anexo Único e das adesões entra? (c) há ação em curso que dependa dessa história?
+
+**O que o ERP faz enquanto isso:** A história anterior a 01/02/2023 não entra; o aviso 11 lembra. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C311 · Protocolo ICMS 41/08, cláusula 1ª, § 1º · "Uso especificamente automotivo" e ST interna no destino
+
+**De onde vem:** Documento 215, seção 4 e aviso 9
+
+**Contexto e pergunta:**
+
+O § 1º limita o protocolo às peças "de uso especificamente automotivo", adquiridas ou revendidas por indústria ou comércio do setor, e só quando a mercadoria está sujeita à ST nas operações internas do destino. O Anexo II do Convênio 142 lista por CEST e NCM, sem esse recorte; MG (art. 73) e RR (consulta de 2015) deixam de fora o uso não automotivo.
+
+Pergunta: (a) quem comprova o uso automotivo e como (declaração do comprador, CNAE, perfil)? (b) peça do Anexo II vendida a quem não é do setor automotivo sai com ST? (c) como se confirma que a UF de destino tem ST interna para o CEST?
+
+**O que o ERP faz enquanto isso:** O ERP aplica a ST pela lista e avisa (aviso 9) quando o destinatário não tem perfil automotivo; não bloqueia. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C312 · Protocolo ICMS 41/08, cláusulas 2ª e 3ª · Alíquota aplicada à base, definição da ALQ intra e FCP da ST
+
+**De onde vem:** Documento 215, seção 5 (itens 6 e 14) e \`Definicao_Alq_Intra\`
+
+**Contexto e pergunta:**
+
+O protocolo diz como formar a base e que o imposto retido é a diferença para a operação própria, mas não diz qual alíquota se aplica à base. O 41/08 e a BA (art. 289, § 14, III) falam em alíquota interna ou carga efetiva, se menor; o Protocolo 97/10, em alíquota "praticada pelo contribuinte substituto" no destino; o 129/10, em alíquota "prevista para as operações substituídas". PB e RJ publicam a MVA ajustada calculada com interna de 20%; PI, MA e AP, com 17%.
+
+Pergunta: (a) em cada UF, qual definição de ALQ intra vale e qual a alíquota sobre a base? (b) o adicional do Fundo de Combate à Pobreza entra, e como? (c) o ICMS da operação própria que se deduz é o destacado na nota, mesmo com frete? (d) a tabela de MVA ajustada que a UF publica prevalece sobre a fórmula?
+
+**O que o ERP faz enquanto isso:** ALQ intra pela \`Definicao_Alq_Intra\` da regra da UF, lida em \`Cad_Aliquota\`; a tabela publicada pela UF é guardada junto com a alíquota interna que ela usou, e o Motor confere. Leitura minha, que o contador confirma. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C313 · Protocolo ICMS 41/08, cláusula 1ª, § 4º, II, e cláusula 2ª, § 8º; RICMS-BA, art. 289, § 21 · Autorização do fisco de destino
+
+**De onde vem:** Documento 215, seção 5 (item 5), aviso 5 e R17
+
+**Contexto e pergunta:**
+
+A MVA de 36,56% para distribuição exclusiva por contrato de fidelidade depende de autorização por acordo com o fisco do destino (cláusula 1ª, § 4º, II), e a UF pode exigir a autorização prévia (cláusula 2ª, § 8º). A BA exige a autorização do titular da inspetoria do domicílio fiscal do destinatário (art. 289, § 21, texto de 2020). O texto não diz nas outras UFs, em que formato nem por quanto tempo.
+
+Pergunta: (a) quais UFs exigem a autorização prévia? (b) qual o documento e o prazo de validade? (c) sem autorização, vale a MVA de 71,78%?
+
+**O que o ERP faz enquanto isso:** O ERP guarda o documento (\`ID_Documento_Autorizacao_Fisco\`) e avisa quando falta (aviso 5); sem autorização, a regra R17 usa o perfil \`demais\`. Não valida. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C314 · Protocolos ICMS 93/26, 32/24 e 85/25 · Data de efeitos e § 2º-A
+
+**De onde vem:** Documento 215, seção 5 (item 3)
+
+**Contexto e pergunta:**
+
+A linha de efeitos do Prot. 93/26 sobre o caput da cláusula 1ª diz "01.10.24"; as redações anteriores dizem "efeitos de 01.11.24 até 30.09.26" e o cabeçalho diz "01.10.26". O Prot. 85/25 inseriu o § 2º-A (CEST 01.015.00 com origem ou destino em SP, de 01/01/2026 a 30/09/2026) e o 93/26 o revogou.
+
+Pergunta: (a) confirma 01/10/2026 como início do caput atual e da saída de SP? (b) o § 2º-A, no período de 01/01/2026 a 30/09/2026, afastou a ST do CEST 01.015.00 em operações com SP e deixou efeito para notas daquele período?
+
+**O que o ERP faz enquanto isso:** SP sai em 30/09/2026 (fim da linha de vigência) e o § 2º-A não vira regra. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C315 · Protocolo ICMS 41/08, cláusula 1ª, § 2º, II · Remessa ao mesmo titular não varejista e outras hipóteses por UF
+
+**De onde vem:** Documento 215, seção 4 e \`Cad_Icms_St_Uf_Nao_Aplicacao\`
+
+**Contexto e pergunta:**
+
+O § 2º afasta o protocolo nas remessas a estabelecimento industrial e a outro estabelecimento do mesmo titular, desde que não varejista, "salvo se a unidade federada de destino dispuser de forma diferente em sua legislação". MG (art. 18) lista sete hipóteses e exige a indicação do dispositivo no documento; SP (art. 313-O, § 3º) afasta a saída para fabricante de veículo ou de autopeças.
+
+Pergunta: (a) em quais UFs a legislação dispõe diferente do protocolo? (b) nessas UFs, a ST se aplica à remessa entre estabelecimentos do mesmo titular, com a mesma base e MVA? (c) quais UFs exigem indicar o dispositivo no documento fiscal?
+
+**O que o ERP faz enquanto isso:** Cada hipótese vira uma linha da UF, com efeito \`afasta_st\` ou \`mantem_st\`; o aviso 4 lembra. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C316 · Protocolo ICMS 41/08, cláusulas 4ª e 5ª · Operação interna, prazo e código de receita por UF
+
+**De onde vem:** Documento 215, seção 4 (R12 e R14) e \`Cad_Icms_Obrigacao_Recolher\`
+
+**Contexto e pergunta:**
+
+A cláusula 4ª fixa o dia 9 do mês seguinte à saída; a cláusula 5ª manda as UFs signatárias adotarem a ST também nas operações internas, com as mesmas MVAs e o mesmo prazo. O PI fixa o dia 15 para a interna; SP usa o período de apuração da entrada ou o art. 426-A; AL, o dia 15 do mês seguinte ao desembaraço na importação. O texto não dá o código de receita nem a guia de cada UF.
+
+Pergunta: (a) cada UF signatária adotou a ST interna de autopeças e com que MVA? (b) o dia 9 vale em todas, ou há prazo diferente por UF e por tipo de operação? (c) qual o código de receita e a guia da ST de autopeças em cada UF?
+
+**O que o ERP faz enquanto isso:** Prazo, guia e código de receita ficam por UF e por tipo de operação em \`Cad_Icms_St_Uf_Recolhimento\`, provisórios, com carga depois. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C317 · Protocolos ICMS 97/10 e 129/10 · Segundo acordo de autopeças
+
+**De onde vem:** Documento 215, seção 4.2 (V1 e V6) e seção 5 (itens 12 e 13)
+
+**Contexto e pergunta:**
+
+O Protocolo 97/10 tem 18 UFs no preâmbulo (AC, AL, AP, BA, GO, MA, MT, PA, PB, PR, PE, PI, RJ, RN, RR, SC, SE e TO) e não tem SP. Os RICMS de BA, MA, PA, PB e RJ citam o 41/08 e o 97/10. O 129/10 (PE e SP) e o 22/08 (SP e CE) foram revogados pelos Protocolos 96/26 e 94/26 (noticiados). Li cópias truncadas de portais privados.
+
+Pergunta: (a) quais UFs estão em vigor hoje em cada um dos protocolos? (b) o que o 94/26 e o 96/26 mudam além de revogar? (c) a lista de itens do 97/10 ainda é a do Anexo Único ou a do Convênio 142? (d) quando o item está nos dois protocolos, qual vale?
+
+**O que o ERP faz enquanto isso:** O acordo é uma linha por UF e por acordo em \`Cad_Icms_St_Acordo_Regra\`, com \`Prioridade_Aplicacao\`; o aviso 13 diz qual regra valeu. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C318 · Portaria SRE 34/2026 · São Paulo depois de 01/10/2026
+
+**De onde vem:** Documento 215, seção 5 (item 13) e seção 10
+
+**Contexto e pergunta:**
+
+A Portaria SRE 34/2026 revoga, com efeitos de 01/10/2026, o Anexo XIV da Portaria CAT 68/19 e a Portaria SRE 16/23 (IVA-ST). O Protocolo 93/26 tira SP do 41/08 na mesma data. Não encontrei o que SP aplica às autopeças depois disso; os arts. 313-O e 313-P do RICMS/SP li em parte.
+
+Pergunta: (a) a ST de autopeças continua em SP por outra portaria, com qual lista, qual IVA-ST ou MVA e qual prazo? (b) a saída para fabricante de veículo ou de autopeças (art. 313-O, § 3º) continua? (c) como ficam as notas de 2024 a setembro de 2026?
+
+**O que o ERP faz enquanto isso:** SP fica sem regra carregada depois de 01/10/2026 e o aviso 8 manda conferir a regra própria. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C319 · RICMS-BA, art. 289 e Anexo 1 · Bahia
+
+**De onde vem:** Documento 215, seção 4.2 (V7, V12 e V15) e Anexo B
+
+**Contexto e pergunta:**
+
+O texto que li é de 29/12/2020. O art. 289, § 16, manda publicar as entradas e saídas de UF dos acordos e a MVA ajustada no portal da SEFAZ; o § 21 exige a autorização da inspetoria do destinatário; o art. 295, § 3º, manda o remetente do Simples usar a MVA original; o § 2º exige GNRE específica por protocolo. O Anexo 1 não estava no arquivo e a BA tem MVA própria de autopeças desde 01/06/2023.
+
+Pergunta: (a) qual a MVA vigente de autopeças na BA, por CEST ou NCM? (b) o que mudou no art. 289 e no art. 295 desde 2020? (c) onde está a tabela de MVA ajustada hoje?
+
+**Atualização de 12/11/2026:** li o item 1.0 do Anexo 1 de 2026 (listas de 15 UFs para o 41/08 e o 97/10; MVA ajustada com interna de 20,5%); os valores por CEST ainda não foram transcritos.
+
+**O que o ERP faz enquanto isso:** A regra da BA entra na carga com \`Fonte_Publicacao\` = \`portal_sefaz\` e o aviso 18 manda conferir a publicação vigente. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C320 · Decreto 99.605/2024 e Decreto 90.309/2023 de Alagoas · Credenciamento e ST geral
+
+**De onde vem:** Documento 215, seção 4.2 (V4 e V16) e Anexo B
+
+**Contexto e pergunta:**
+
+O Decreto 99.605/2024 cria o credenciamento de atacadistas de peças de motos (CNAE 4541-2/02): 10,79% sobre o valor da nota de entrada, 14% em pneus, FECOEP de 1% e adicional de 5,39% quando mais de 20% das saídas vão para uma mesma empresa; é opcional, o fisco pode negar e excluir de ofício. Li cópia de portal privado e não li o Decreto 90.309/2023 (ST geral, Anexo I).
+
+Pergunta: (a) a quais empresas o credenciamento se aplica e como o contribuinte o pede? (b) o que é o adicional de 5,39% e quando incide? (c) qual a ST geral de autopeças de AL (lista, MVA, prazo)?
+
+**O que o ERP faz enquanto isso:** AL entra como método \`aliquota_fixa_sobre_documento_entrada\` e o credenciamento como regime em \`Cad_Filial_Regime_Icms\`; o adicional de 5,39% vai em \`Observacao_Regra\` e gera o aviso 17. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C321 · Decreto 3.637/2024 do Pará · Percentuais por alíquota interestadual (MVA ajustada)
+
+**De onde vem:** Documento 215, achado 19 e Anexo B (atualizado em 12/11/2026, D-N572)
+
+**Contexto e pergunta:**
+
+O Pará traz os percentuais 92,48% e 82,13% (decreto de 2022) e 103,59%, 97,23% e 86,63% (lista de 2024), sem rótulo de coluna, e uma lista interna com MVA de 71,78%. Ao conferir com a fórmula do protocolo, os números batem com a **MVA ajustada** da MVA original de 71,78%: 82,13% (12%) e 92,48% (7%) com alíquota interna de 17%; 86,63% (12%), 97,23% (7%) e 103,59% (4%) com interna de 19%. Eu havia lido como antecipação na entrada; a leitura estava errada.
+
+Pergunta: (a) confirma que são MVA ajustada, por alíquota interestadual, e que a interna do PA passou de 17% para 19%? (b) existe alguma antecipação na entrada de autopeças no PA, além da ST? (c) quais itens da lista (42, 56, 63, 85, 90, 105 e 106) têm regra diferente?
+
+**O que o ERP faz enquanto isso:** Os percentuais entram, na carga, como `Tipo_Percentual` = `mva_st` com a alíquota interestadual e a interna usadas, provisórios. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C322 · RICMS/MG, Anexo VII, arts. 13, 15, 71 e 73; demais UFs · Remessas, montadora, regime especial e ordem dos preços
+
+**De onde vem:** Documento 215, seção 4.2 (V2, V5 e V13) e Anexo B
+
+**Contexto e pergunta:**
+
+Em MG, o item 1.1 vale para as UFs do protocolo e o item 1.2 só para o interno; o art. 71 dá MVAs próprias à montadora conforme a combinação de alíquotas (36,56%, 46,55%, 59,88% e 48,97%); o art. 73, § 1º, dispensa a ST por regime especial com percentual mínimo de revenda a estabelecimentos automotivos. Nas demais UFs, a ordem dos preços da base (PMPF, preço sugerido, preço praticado) é leitura minha de textos de terceiros (MT: PMPF primeiro, e o preço praticado com MVA se maior que o PMPF, art. 6º, § 4º).
+
+Pergunta: (a) como tratar as remessas de UF fora da lista do item 1.1 (arts. 13 e 15)? (b) o art. 71 vale só para fabricante de veículos com contrato de fidelidade? (c) qual regime especial do art. 73, § 1º a empresa tem ou pode ter? (d) em cada UF, qual a ordem e a condição dos critérios da base?
+
+**O que o ERP faz enquanto isso:** A ordem dos preços entra por UF em \`Cad_Icms_St_Uf_Base_Criterio\`; a MVA da montadora, no perfil \`distribuicao_exclusiva_contrato\`; o regime especial, em \`Cad_Filial_Regime_Icms\`. Tudo provisório, na carga. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C323 · RICMS/AC, Anexo I, Tabela I, item 2, e RICMS/MT · Valor da tabela e MVA do MT
+
+**De onde vem:** Documento 215, achados 20 e 22 e Anexo B (12/11/2026, D-N572)
+
+**Contexto e pergunta:**
+
+No AC, a tabela de autopeças traz, para a MVA de 36,56% com alíquota interestadual de 4% e interna de 17%, o valor de 53,90%; a fórmula dá 57,95% (os outros cinco valores da tabela conferem). No MT, a Resposta à Consulta 18/2024 diz que a MVA de fidelidade do Protocolo 41/08 não foi implementada, e que a MVA vale a da Portaria 195/2019 ou, na falta, a do convênio ou protocolo.
+
+Pergunta: (a) no AC, vale o valor publicado (53,90%) ou o da fórmula (57,95%)? (b) no MT, qual a MVA da Portaria 195/2019 por CEST para as peças da Tabela II do Apêndice do Anexo X, e a fidelidade continua sem vigência?
+
+**O que o ERP faz enquanto isso:** Carrega o valor publicado e avisa a diferença com a fórmula; no MT, a fidelidade fica em `Cad_Icms_St_Uf_Nao_Aplicacao`. Tudo provisório, na carga. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 21. Documento 216: Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos
+
+### C324 · LC 214, art. 409 e Anexo XVII; MP 1.399, Anexo IV · Álcool etílico e mostos de uva
+
+**De onde vem:** Documento 216, seção 5 (itens 2 e 7)
+
+**Contexto e pergunta:**
+
+O Anexo IV da MP põe "demais bebidas alcoólicas da posição 22.08" a 24% (19,5 × 1,23) e não exclui o álcool etílico (2208.90.00 Ex 01), que a Tipi tributa a 5,2%. A linha de 8% da posição 22.04 alcança também os mostos de uva (2204.22.20, 2204.29.20 e 2204.30.00), que não são bebida pronta.
+
+Pergunta: (a) o álcool etílico do Ex 01 paga 24% de IS ou fica fora, como a Tipi sugere? (b) os mostos de uva pagam 8%? (c) a Receita pretende corrigir o Anexo IV?
+
+**O que o ERP faz enquanto isso:** Carrega o texto literal da MP (24% e 8%) com o aviso 16 (dado provisório) e a pergunta registrada. Nada aplicado ao dicionário.
+
+> **Resposta do contador (recebida em 16/11/2026):** a) álcool etílico mencionado se refere a produto de limpeza que não se encaixa como bebida, com isto não tem o IS.
+>
+> B) se tiver enquadrado como bebida sim;
+>
+> c) este anexo é sempre revisado periodicamente.
+>
+> **Leitura do ERP (minha):** (a) o "álcool etílico" citado é **produto de limpeza**, não bebida, e por isso **sem IS**; (b) os mostos pagam se estiverem **enquadrados como bebida**; (c) o anexo é revisado periodicamente (não responde se a Receita pretende corrigi-lo).
+>
+> **Ainda aberto:** (b) se os mostos de uva (2204.22.20, 2204.29.20 e 2204.30.00) estão ou não enquadrados como bebida para o Anexo IV; (c) se há correção prevista do Anexo IV.
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; **aprovado por Alberto em 16/11/2026 (Q188-9: manter o literal da MP; D-N584)**
+
+### C325 · MP 1.399, Anexo IV; LC 214, art. 422, § 1º, I · Fumígenos: 24.01, 24.04 e cigarro sem tabaco
+
+**De onde vem:** Documento 216, seção 5 (itens 3 a 6)
+
+**Contexto e pergunta:**
+
+A Tipi tem NT em 2401.10.xx e 2401.30.00, 0%, 10% e 30% na 24.04 e 300% no cigarro sem tabaco (2402.90.00 Ex 01). O Anexo IV põe 30 × 1,25 = 37,5% em todas as posições 24.01 a 24.04, exceto os cigarros e cigarrilhas do art. 3º, § 1º, II. O art. 422, § 1º, I, da LC 214 exige alíquota ad valorem **e específica** para toda a 24.02, e a MP só traz a específica (R$ 3,50 por vintena) dos cigarros e das cigarrilhas.
+
+Pergunta: (a) fumo em folha e desperdícios, que a Tipi não tributa, pagam 37,5% de IS? (b) a 24.04 paga 37,5% em todos os códigos? (c) o cigarro sem tabaco tem específica? (d) os cigarros feitos à mão (2402.20.00 Ex 01) ficam em 37,5%?
+
+**O que o ERP faz enquanto isso:** Carrega o texto literal (37,5% em toda a posição) com o aviso 16. A decisão de seguir o literal é da Q216-5. Nada aplicado ao dicionário.
+
+> **Resposta do contador (recebida em 16/11/2026):** A) se o Tipi não tributa não teria IS, pois pode ter outro destino que não seja fabricação de Tabaco;
+>
+> b) Sim este grupo sim;
+>
+> c) Tem;
+>
+> d) sim
+>
+> **Leitura do ERP (minha):** (a) o que a Tipi não tributa **não paga IS** (fumo em folha e desperdícios podem ter outro destino); (b) a 24.04 paga 37,5% em todos os códigos ("este grupo sim"); (c) o cigarro sem tabaco **tem** alíquota específica; (d) os cigarros feitos à mão ficam em 37,5%.
+>
+> **Ainda aberto:** (c) **o valor** da alíquota específica do cigarro sem tabaco (a resposta só diz "tem").
+>
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; **aprovado por Alberto em 16/11/2026 (Q188-9: manter o literal da MP; D-N584)**
+
+### C326 · MP 1.399, art. 6º, I; LC 214, art. 414, III, c e § 2º; Decreto 7.212, art. 220-A · Valor de referência dos fumígenos
+
+**De onde vem:** Documento 216, seção 4.5 e Anexo B
+
+**Contexto e pergunta:**
+
+Até 31/12/2027 o valor de referência dos fumígenos é 15% do preço de venda a varejo tabelado, ou o valor líquido da primeira operação entre partes não relacionadas, sem ICMS, CBS e IBS. O art. 17 da MP mantém o preço mínimo de venda a varejo de cigarros do art. 220-A do Decreto 7.212. O ato do art. 414, § 2º, que define a metodologia definitiva, não foi publicado.
+
+Pergunta: (a) qual é o preço de venda a varejo tabelado de cada produto (o preço mínimo do art. 220-A? outra tabela?) e onde se consulta? (b) como o ERP prova a primeira operação entre partes não relacionadas? (c) o que vale depois de 31/12/2027?
+
+**O que o ERP faz enquanto isso:** Usa a regra de `Cad_Is_Valor_Referencia_Regra` quando há preço tabelado na ficha; sem preço, usa o valor informado no item e avisa (aviso 6; Q216-6). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C327 · LC 214, art. 436; MP 1.399, art. 3º, § 1º, II · Atualização das alíquotas específicas pelo IPCA
+
+**De onde vem:** Documento 216, seção 4.5
+
+**Contexto e pergunta:**
+
+As alíquotas específicas "serão atualizadas pelo IPCA uma vez ao ano, nos termos da lei ordinária". A MP usa o R$ 3,50 por vintena dos cigarros e das cigarrilhas, apurado na forma do art. 212-B do Decreto 7.212 vigente na publicação.
+
+Pergunta: (a) qual é o índice (IPCA acumulado de que período) e a data-base da primeira atualização? (b) o R$ 3,50 é valor de 2026? (c) a atualização vale a partir de 1º de janeiro ou de outra data?
+
+**O que o ERP faz enquanto isso:** Guarda a série do IPCA em `Cad_Serie_Cotacao` e cada valor atualizado como nova versão da linha da NCM (`Atualiza_Pelo_Ipca`); sem a regra, não atualiza e avisa (aviso 2). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C328 · LC 214, arts. 244 a 250; MP 1.399, art. 7º · Prognósticos e fantasy sport
+
+**De onde vem:** Documento 216, seção 4.7
+
+**Contexto e pergunta:**
+
+O art. 250 faz do serviço de concurso de prognóstico prestado por meio virtual a residente no exterior uma exportação **imune ao IBS e à CBS**. O texto não fala do IS. O art. 248 exige que a obrigação acessória identifique o apostador no meio virtual. O art. 244, parágrafo único, estende o regime ao *fantasy sport*.
+
+Pergunta: (a) a exportação do art. 250 também afasta o IS (a CF diz que o IS não incide em exportação de bens e serviços)? (b) como se apura a receita própria do *fantasy sport*? (c) a alíquota de 0,5% da MP continua em 2028?
+
+**O que o ERP faz enquanto isso:** Prevê `Prestado_A_Residente_Exterior` em `Mov_Prognostico_Receita_Periodo`, sem rotina (nenhum cliente opera hoje). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C329 · MP 1.399, art. 6º, IV, § 1º e Anexo VI; LC 214, art. 422, §§ 7º e 8º · Pequeno produtor de bebida alcoólica
+
+**De onde vem:** Documento 216, seção 5 (item 8)
+
+**Contexto e pergunta:**
+
+O art. 6º, IV, mede o pequeno produtor pelo volume total de **fornecimento** de álcool (teor alcoólico × volume de cada bebida, limite de 250.000 litros). O cabeçalho do Anexo VI fala em volume de **produção** acumulado no ano-calendário anterior. O art. 422, § 8º, I, da LC 214 também fala em produção. O § 1º do art. 6º soma estabelecimentos e partes relacionadas e define cervejaria, vinícola, produtor de licores, destilaria, associação e cooperativa.
+
+Pergunta: (a) vale o volume de fornecimento ou de produção? (b) como somar partes relacionadas (LC 214, art. 5º, §§ 2º a 5º)? (c) a associação ou cooperativa soma os volumes dos associados? (d) quem comprova o enquadramento?
+
+**O que o ERP faz enquanto isso:** Guarda o critério usado em `Mov_Is_Pequeno_Produtor_Volume.Criterio_Volume` e o aviso 11. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C330 · LC 214, art. 423 · Declaração do gás natural
+
+**De onde vem:** Documento 216, seção 4.6
+
+**Contexto e pergunta:**
+
+A alíquota zero do gás natural destinado a insumo industrial e a combustível para transporte depende da **declaração** do adquirente ou do importador, na forma do regulamento. Destino diverso obriga a recolher o IS pela alíquota do art. 422, § 2º, com multa e juros do art. 29, § 2º, o adquirente como responsável e o importador como contribuinte.
+
+Pergunta: (a) qual é a forma, o prazo e o conteúdo da declaração? (b) como se prova a destinação efetiva? (c) a declaração vale por operação ou por período? (d) como se calcula a multa e o juro do destino diverso?
+
+**O que o ERP faz enquanto isso:** Guarda a declaração, a destinação efetiva e o valor a recolher em `Mov_Is_Gas_Natural_Declaracao`; sem declaração, avisa (avisos 14 e 15). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C331 · LC 214, art. 422, § 2º; MP 1.399, art. 6º, III, a, 3 e art. 15 · Bens minerais
+
+**De onde vem:** Documento 216, seção 4.6 e Anexo B
+
+**Contexto e pergunta:**
+
+Os bens minerais extraídos (2601, 2709.00.10, 2711.11.00 e 2711.21.00) têm teto de 0,25% e, na MP, alíquota zero até 31/12/2027. A alíquota de 2028 em diante depende de projeto de lei do Executivo até 31/05/2027. O valor de referência da extração depende do ato do art. 414, § 2º.
+
+Pergunta: (a) qual será a alíquota de 2028 e como se chega ao valor de referência de cada mineral (cotação de bolsa ou de agência)? (b) a extração destinada à exportação paga IS? (c) o petróleo e o gás natural seguem a mesma regra do minério de ferro?
+
+**O que o ERP faz enquanto isso:** Carrega só a alíquota zero de 2027 e o teto de 0,25% (`Aliquota_Maxima_Percentual`); o valor de referência é o informado no item. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C332 · LC 214, art. 434; MP 1.399, art. 8º · Importação
+
+**De onde vem:** Documento 216, seção 4.2 e 4.3
+
+**Contexto e pergunta:**
+
+Na importação, a base ad valorem é o valor aduaneiro mais o Imposto de Importação (nos fumígenos, a maior entre essa soma e o valor de referência), o IS se paga no registro da declaração e o fator de ajuste do art. 8º (1,45 nas bebidas) é cumulativo com o de conversão (1,23). Nos fumígenos de base "a maior" o fator é 1,00.
+
+Pergunta: (a) a multiplicação 19,5 × 1,23 × 1,45 é feita sem arredondar intermediário? (b) como fica o IS em regime aduaneiro suspenso e na loja franca? (c) o fator 1,00 dos fumígenos vale mesmo se a base do valor de referência for menor que a aduaneira?
+
+**O que o ERP faz enquanto isso:** Multiplica os três fatores e usa o arredondamento do parâmetro da empresa (C256); avisa no aviso 13. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C333 · MP 1.399, art. 3º, § 4º, V, b, e Anexo IV; LC 214, Anexo XVII · Bebidas açucaradas
+
+**De onde vem:** Documento 216, seção 5 (item 14)
+
+**Contexto e pergunta:**
+
+O Anexo XVII da LC 214 lista só o código 2202.10.00 como bebida açucarada. O Anexo IV da MP dá 2,6% e fator 1,00. A Nota Complementar 22-1 da Tipi aparece no cálculo das estimativas dos fatores (art. 3º, § 4º, V, b), como percentual de redução.
+
+Pergunta: (a) existe conceito legal de bebida açucarada além do código 2202.10.00 (teor de açúcar, por exemplo)? (b) a Nota Complementar 22-1 da Tipi só serve às estimativas ou também reduz a alíquota? (c) o escalonamento de 2029 a 2033 do art. 422, § 5º, muda a regra?
+
+**O que o ERP faz enquanto isso:** Calcula só pelo código 2202.10.00, com a alíquota do Anexo IV; o campo `Atributos_Complementares` da ficha espera atributo futuro (aviso 17). Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C334 · LC 214, art. 409, § 2º · Embalagem primária
+
+**De onde vem:** Documento 216, seção 4.1 e aviso 5
+
+**Contexto e pergunta:**
+
+O IS sobre fumígenos e bebidas alcoólicas só incide na embalagem primária, a que está em contato direto com o produto e destinada ao consumidor final. Há fornecimento de bebida a granel, de cigarro avulso e de produto fora da embalagem primária.
+
+Pergunta: (a) qual é o tratamento do fornecimento a granel (barril, tanque, contêiner), do cigarro avulso e do fornecimento a outro industrial? (b) o IS incide na venda do granel ou só na embalagem primária final? (c) quem é o contribuinte quando o envase é de terceiro?
+
+**O que o ERP faz enquanto isso:** Marca `Embalagem_Primaria` na ficha e avisa (aviso 5), sem bloquear. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 22. Documento 218: Bloco 1 de combustíveis e usina (livro de movimentação, bombas, bicos, leituras, produção da usina, cadeia de comercialização e distribuidor)
+
+### C335 · Ajuste SINIEF 14/2025 (item VIII do § 3º da cláusula primeira do Ajuste SINIEF 2/2009) · LMC na EFD-ICMS/IPI
+
+**De onde vem:** Documento 218, seção 1 (achado 1) e seção 3
+
+**Contexto e pergunta:**
+
+O Guia 3.2.4 traz os registros 1300 a 1370 para o posto, mas não diz de que norma vem a obrigação. Li, em site não oficial e em notas das secretarias do RS e do ES, que o Ajuste SINIEF 14/2025 (04/07/2025, publicado em 08/07/2025) incluiu o livro de movimentação de combustíveis (LMC) entre as informações da EFD, com efeitos a partir de 01/09/2025, e que a EFD passa a substituir o LMC para fins estaduais, mantida a obrigação perante a ANP. Não li o ato no CONFAZ nem no Diário Oficial.
+
+Pergunta: (a) o texto do Ajuste confere com isso? (b) quais UF exigem o 1300 a 1370 e desde quando; há UF que dispensa? (c) o posto continua obrigado a manter o LMC perante a ANP e a UF? (d) a obrigação alcança todo posto revendedor ou só alguns?
+
+**O que o ERP faz enquanto isso:** Gera os registros para a filial com a habilitação `efd_combustivel_lmc_1300` ligada, em qualquer UF; nenhuma habilitação vem ligada por padrão. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C336 · Resolução ANP 884/2022 (Diário Oficial de 08/09/2022); Portaria DNC 26/1992; Cartilha do Posto Revendedor (ANP, maio de 2026) · Norma da ANP sobre o LMC e limite de variação
+
+**De onde vem:** Documento 218, seção 1 (achado 2), seção 13 (itens 3 e 11) e seção 14.5
+
+**Contexto e pergunta:**
+
+O Guia cita a Portaria DNC 26/1992 como a que instituiu o LMC. A **Resolução ANP 884**, assinada em **05/09/2022** e publicada no **Diário Oficial da União de 08/09/2022** (edição 171, seção 1, página 62; texto que Alberto enviou, impresso do site da Imprensa Nacional, que ressalva não substituir a versão certificada), instituiu o LMC e **revogou a Portaria DNC 26/1992 e a Resolução ANP 23/2004** (art. 7º); vigência em 03/10/2022 (art. 8º). Art. 1º: o LMC é do **revendedor varejista**, com registro diário, mesmo sem movimentação. Art. 3º: os dados vão à ANP **quando notificado**. Art. 4º: o LMC dos seis últimos meses fica no posto, com a documentação fiscal. Art. 5º: variação do estoque físico acima de **0,6%**, sem comprovação de movimentação, obriga a apurar as causas, medida pelo **campo 8 do Anexo**, com a justificativa em "13) Observações"; vazamento ou infiltração: tanque esvaziado e retirado de operação. Art. 6º: manter o LMC da Portaria 26/1992 de modo que, com o novo, **os cinco anos anteriores** estejam cobertos. O cabeçalho do Anexo diz "8 de setembro de 2022", o que parece erro do próprio texto. A cartilha manda elaborar **Termos de Abertura e de Fechamento** "conforme tabela do Anexo", e o Anexo do Diário Oficial **não os traz** (C356).
+
+Pergunta: (a) há alteração posterior da Resolução 884? (b) o limite de 0,6% vale para todo posto e todo produto, e o que o posto deve fazer além de justificar em "Observações"? (c) os prazos são seis meses do livro no posto e cinco anos do livro anterior, e a documentação fiscal vai junto só nos seis meses? (d) o envio à ANP é só quando notificado ou há envio periódico?
+
+**O que o ERP faz enquanto isso:** O limite é um campo do tanque (`Limite_Variacao_Percentual`) que o posto preenche; o ERP não traz 0,6% pronto. Com o campo preenchido, avisa (A22) sem bloquear. Não desenha o envio nem a guarda. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C337 · Guia EFD-ICMS/IPI 3.2.4, registros 1300 e 1310, campos VAL_AJ_PERDA e VAL_AJ_GANHO · Fórmula da perda e do ganho
+
+**De onde vem:** Documento 218, seção 6.1 (leitura minha)
+
+**Contexto e pergunta:**
+
+O Guia chama os campos de "Valor da Perda" e "Valor do ganho", em litros, sem dar a fórmula. **Leitura minha, que o contador confirma:** a perda é o estoque escritural menos o físico quando o físico é menor; o ganho é o físico menos o escritural quando o físico é maior; vale por tanque e o 1300 soma os tanques do produto, sem compensar perda de um tanque com ganho de outro. O **campo 8 do Anexo da 884** (perdas e ganhos) é **um número só por produto**, fechamento menos escritural, e o aviso A22 usa esse saldo líquido.
+
+Pergunta: (a) a fórmula está certa? (b) a aferição, a evaporação ou a variação de temperatura entram no cálculo ou já estão no escritural? (c) no 1300, perda e ganho são a soma separada dos tanques ou o saldo líquido?
+
+**O que o ERP faz enquanto isso:** Calcula assim, só como cálculo (aviso, nunca bloqueio), grava no fechamento do dia e soma sem compensar. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C338 · Guia EFD-ICMS/IPI 3.2.4, registros 1300 e 1310, campo ESTQ_ABERT · Estoque do início do dia
+
+**De onde vem:** Documento 218, seção 6.1 (leitura minha)
+
+**Contexto e pergunta:**
+
+O Guia manda informar o estoque do início do dia "mesmo que tenha ocorrido intervenção posterior", sem dizer de onde ele vem. **Leitura minha:** é o estoque físico do fechamento do dia anterior, do mesmo tanque.
+
+Pergunta: (a) o estoque de abertura é o físico do dia anterior, e não o escritural? (b) no primeiro dia do livro (implantação) ou depois de um período sem movimento, de onde parte: inventário ou outra fonte? (c) o primeiro dia de um período da EFD parte do último dia do período anterior?
+
+**O que o ERP faz enquanto isso:** Herda o físico do dia anterior; no primeiro dia a pessoa digita (pode partir do inventário); avisa (A9) quando o de abertura difere do físico anterior. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C339 · Guia EFD-ICMS/IPI 3.2.4, registro 1300 (VOL_ENTR) e C171 · Data e quantidade do volume recebido
+
+**De onde vem:** Documento 218, seção 6.4
+
+**Contexto e pergunta:**
+
+O 1300 e o 1310 pedem o "volume recebido no dia", vindo dos C171. A nota de entrada tem data de emissão, data de entrada e data e hora de saída ou entrada, e o combustível pode chegar de madrugada ou com nota do dia anterior.
+
+Pergunta: (a) vale a data de entrada da nota, a data da descarga no tanque ou outra? (b) a quantidade do C171 é a faturada, a recebida à temperatura ambiente ou a convertida a 20 °C? (c) quando a soma dos C171 do item difere da quantidade da nota (sobra ou falta na descarga), o que se informa e onde se lança a diferença?
+
+**O que o ERP faz enquanto isso:** Usa a `Data_Entrada` da nota; a quantidade é a que a pessoa informa por tanque; avisa (A2) quando a soma difere da nota. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C340 · Guia EFD-ICMS/IPI 3.2.4, registros 1310 e 1370 · Tanques interligados e tanque sem bico
+
+**De onde vem:** Documento 218, seção 5.1 e seção 7
+
+**Contexto e pergunta:**
+
+Quando dois ou mais tanques são interligados, o Guia manda somá-los em um único 1310, com o número de um deles, que o 1370 referencia. O tanque que só serve de reservatório entra no 1370 com número de bico de 990 em diante, mas o 1370 é filho da bomba (1350).
+
+Pergunta: (a) no grupo interligado, o 1310 soma abertura, entrada, saídas, perda, ganho e físico, e a capacidade (`CAP_TANQUE`) é a soma das capacidades? (b) o número do grupo pode ser o de qualquer tanque dele? (c) o reservatório sem bico fica sob qual bomba no 1370? (d) ele tem 1320?
+
+**O que o ERP faz enquanto isso:** Soma tudo, inclusive a capacidade; aceita qualquer tanque do grupo como representante; coloca o reservatório (990, 991…) sob a primeira bomba do posto, com aviso; não gera 1320 para ele. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C341 · Guia EFD-ICMS/IPI 3.2.4, registros 1320, 1350 e 1370; NF-e (encerrante) · Número do bico e número da bomba
+
+**De onde vem:** Documento 218, seções 5.2 e 5.4
+
+**Contexto e pergunta:**
+
+O 1320 identifica o bico só pelo número. A nota de saída leva o número do bico, da bomba (até 3 posições) e do tanque, e o 1350 identifica a bomba pela série.
+
+Pergunta: (a) o número do bico é único no estabelecimento ou só dentro da bomba? (b) o número da bomba da nota tem correspondência oficial com a série do 1350? (c) quando um bico passa a servir outro tanque ou outro produto, ele mantém o número?
+
+**O que o ERP faz enquanto isso:** Trata o número do bico como único por filial; guarda o número da bomba da nota como campo à parte, sem relação automática com a série; mantém o número. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C342 · Guia EFD-ICMS/IPI 3.2.4, registro 1320 (campos 03 a 07) · Intervenção na bomba
+
+**De onde vem:** Documento 218, seção 6.2
+
+**Contexto e pergunta:**
+
+O Guia descreve `MOT_INTERV` ("Motivo da Intervenção") como "nome da empresa responsável pela intervenção", o que parece cópia do campo seguinte. A numeração da intervenção vem "do órgão competente ou, na falta deste, de um número sequencial do declarante". O CNPJ e o CPF são os dois "OC".
+
+Pergunta: (a) `MOT_INTERV` é o motivo da intervenção? (b) quando o órgão não numera, o posto usa sequência própria: por ano, por bomba ou por posto? (c) o CNPJ e o CPF saem sempre os dois, ou um deles basta? (d) a intervenção na bomba abre um trecho novo em todos os bicos dela?
+
+**O que o ERP faz enquanto isso:** Trata o campo como motivo; usa sequencial do posto; deixa CNPJ e CPF opcionais; abre trecho em todos os bicos da bomba. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C343 · Guia EFD-ICMS/IPI 3.2.4, registro 1320 (observação e campo VOL_AFERI) · Contador no valor máximo e aferição
+
+**De onde vem:** Documento 218, seções 6.3 e 7
+
+**Contexto e pergunta:**
+
+Quando o contador atinge o valor máximo de leitura, o Guia manda informar dois 1320: o primeiro da leitura inicial até o valor máximo e o segundo de zero até a leitura final. A aferição (`VOL_AFERI`) é subtraída da venda no cálculo do 1320.
+
+Pergunta: (a) o "valor máximo" é o que o contador mostra (por exemplo 999.999,999) ou o ponto de rolagem? (b) a aferição vai no primeiro registro, no segundo ou se divide? (c) o volume aferido volta ao tanque: basta subtraí-lo da venda, como o Guia, sem outro lançamento?
+
+**O que o ERP faz enquanto isso:** Divide o 1320 na geração com o valor máximo do cadastro do bico; põe a aferição no primeiro; subtrai como o Guia. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C344 · Guia EFD-ICMS/IPI 3.2.4, registro 1300 e 0000 (IND_COMB) · Produtos do 1300, IND_COMB e comparação com as notas
+
+**De onde vem:** Documento 218, seções 7 e 10 (aviso A11)
+
+**Contexto e pergunta:**
+
+O Guia cita gasolinas, óleo diesel, querosene iluminante, álcool etílico hidratado carburante e a mistura diesel/biodiesel, e diz que não há previsão para o GNV. O `IND_COMB` é `S` quando há movimentação e/ou estoque no período. A venda pelo contador não é igual à venda pelas notas (aferição, abastecimento cancelado).
+
+Pergunta: (a) quais produtos entram no 1300 (gasolina comum, aditivada e premium; diesel S10 e S500; etanol; mistura com biodiesel; querosene)? Lubrificantes, arla e GLP ficam fora? O GNV fica fora? (b) o `IND_COMB` é `N` no período sem movimento nem estoque? (c) a diferença entre venda do contador e venda das notas tem tolerância ou tratamento?
+
+**O que o ERP faz enquanto isso:** Entra o produto com código da ANP (menos o GNV); `IND_COMB` = `S` com linha de tanque no período; compara com as notas só como informação (A11), sem tolerância. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C345 · Guia EFD-ICMS/IPI 3.2.4, registros 1350 e 1360 · Bombas e lacres do período
+
+**De onde vem:** Documento 218, seções 5.2, 5.3 e 7
+
+**Contexto e pergunta:**
+
+O 1350 lista as bombas "pertencentes ao varejista" e o 1360 traz "um registro para cada lacre existente na bomba". O Guia não diz em que data a existência é medida nem trata do lacre retirado.
+
+Pergunta: (a) o 1350 traz as bombas que existiram no período ou as que existem no último dia? (b) o 1360 traz os lacres que existiram no período ou os do último dia? (c) o lacre retirado ou trocado sai? Com que data? (d) a bomba cedida em comodato pela distribuidora é "pertencente ao varejista"?
+
+**O que o ERP faz enquanto isso:** Gera as bombas e os lacres que existiram em algum dia do período, inclusive os retirados; considera a bomba em comodato como do posto. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C346 · Guia EFD-ICMS/IPI 3.2.4, registros 1390 e 1391; tabela 5.8 · Usina: produto, insumo e 1390
+
+**De onde vem:** Documento 218, seções 3 e 8
+
+**Contexto e pergunta:**
+
+O `COD_PROD` do 1390 vem da tabela 5.8 da UF do declarante ou, sem ela, da genérica; o registro só vale para períodos posteriores a julho de 2012. O 1391 pede o insumo (`COD_ITEM`) e não admite dois registros com o mesmo insumo na mesma data.
+
+Pergunta: (a) a ordem é a tabela 5.8 da UF e, se não houver, a genérica? (b) o 1390 sai só para o produto com 1391 no período, ou também para o produto que só tem estoque? (c) o `COD_ITEM` do 1391 é o insumo (cana, milho) ou o produto? (d) a usina com mais de um insumo no dia informa um 1391 por insumo?
+
+**O que o ERP faz enquanto isso:** Usa a linha da UF e depois a genérica; gera o 1390 para os produtos com 1391; trata o `COD_ITEM` como o insumo e gera um 1391 por insumo. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C347 · Guia EFD-ICMS/IPI 3.2.4, registro 1391 (campos 04 a 16) · Usina: balanço de estoque, transformação e mel residual
+
+**De onde vem:** Documento 218, seção 8.2 (leitura minha)
+
+**Contexto e pergunta:**
+
+O Guia não traz a equação do estoque do 1391. **Leitura minha:** estoque final = estoque inicial + produzida + entrada por transformação + outras entradas − perda − consumo − saída por transformação − saídas. O mel residual (kg) e a produção a partir dele só valem para o açúcar.
+
+Pergunta: (a) a equação está certa? (b) a produção a partir do mel residual (`PROD_ALC_MEL`) já está em `QTD_PRODUZ` ou é à parte? (c) como separar a produção de mel residual das demais entradas de mel em `PROD_DIA_MEL`? (d) álcool em litros e açúcar em kg: há conversão a informar?
+
+**O que o ERP faz enquanto isso:** Confere a equação só como aviso (A16); trata `PROD_ALC_MEL` como valor à parte; não converte unidades. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C348 · Guia EFD-ICMS/IPI 3.2.4, registro 1391 (campos 17 a 23) e tabela de ocorrências · Usina: resíduos e campos obrigatórios
+
+**De onde vem:** Documento 218, seção 8.2 e seção 13 (item 6)
+
+**Contexto e pergunta:**
+
+O 1391 traz um tipo de resíduo (`TP_RESIDUO`: 01 bagaço, 02 DDG, 03 WDG, 04 DDG + WDG) e uma quantidade (`QTD_RESIDUO`), e mais três quantidades separadas (DDG, WDG e bagaço). O Guia marca vários campos como obrigatórios e dá a ocorrência do 1391 como 1:1 numa tabela e 1:N em outra.
+
+Pergunta: (a) como derivar `TP_RESIDUO` e `QTD_RESIDUO` das três quantidades? (b) bagaço junto com DDG ou WDG no mesmo dia gera dois 1391 ou um só? (c) o 1391 é 1:1 ou 1:N com o 1390? (d) campo obrigatório sem valor sai vazio ou com zero (o validador aceita)?
+
+**O que o ERP faz enquanto isso:** Deriva pela tabela da seção 8.2 e deixa em branco, com aviso, o caso do bagaço com DDG ou WDG; não preenche zero sozinho. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C349 · Resolução ANP 884/2022, art. 5º e Anexo, campo 8 (lida em cópias não oficiais); Cartilha do Posto Revendedor (ANP, maio de 2026), item 12 · Base e período do limite de 0,6%
+
+**De onde vem:** Documento 218, seções 5.1 e 14.5 (aviso A22; leitura minha)
+
+**Contexto e pergunta:**
+
+O art. 5º da 884 diz que a variação do estoque físico **acima de 0,6%**, sem comprovação de movimentação, obriga o revendedor a apurar as causas, e que a variação se mede **pelo campo 8** do Anexo (perdas e ganhos, saldo líquido do produto). Fala em "0,6% do estoque físico" sem dizer se é o de abertura ou o de fechamento. A minuta falava em variações "nas avaliações acumuladas"; a ANP não acatou torná-las mensais, respondendo que o registro é diário. **Leitura minha:** saldo líquido do produto no dia, dividido pelo estoque físico de fechamento do produto.
+
+Pergunta: (a) o 0,6% é sobre o estoque físico de abertura ou de fechamento? (b) a avaliação é por produto (como o campo 8), por tanque ou pelo posto, por dia ou acumulada? (c) vale para o ganho também? (d) a justificativa em "Observações" é exigida por dia?
+
+**O que o ERP faz enquanto isso:** Calcula por produto e por dia, o saldo líquido sobre o estoque físico de fechamento, só se o posto preencheu o limite; avisa (A22) quando passa do limite ou quando falta texto em `Observacao`. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C350 · Cartilha do Posto Revendedor (ANP, maio de 2026), item 3 e seção da amostra-testemunha; Lei 14.292/2022 · Quem pode fornecer combustível ao posto
+
+**De onde vem:** Documento 218, seções 14.2 e 14.4 (aviso A25; leitura minha)
+
+**Contexto e pergunta:**
+
+A cartilha diz que o posto só adquire combustível a granel de **distribuidor autorizado** (item 3) e, na seção da amostra-testemunha, nomeia o "distribuidor/fornecedor de etanol/transportador-revendedor-retalhista". A venda direta de etanol da usina ao posto, pela Lei 14.292/2022, só li em cartilha estadual. **Leitura minha:** podem fornecer o distribuidor, o comercializador de etanol, o produtor de biocombustíveis e o TRR.
+
+Pergunta: (a) quais agentes podem vender gasolina, diesel e etanol ao posto? (b) a usina vende etanol direto ao posto, e com que autorização? (c) o TRR vende ao posto ou só ao consumidor? (d) o importador vende ao posto?
+
+**O que o ERP faz enquanto isso:** Avisa (A25) quando o emitente da nota de entrada de combustível não tem autorização vigente de distribuidor, comercializador de etanol, produtor de biocombustíveis ou TRR. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C351 · Convênio ICMS 199/2022 (lido só em site não oficial); Guia EFD-ICMS/IPI 3.2.4 (C165 e 0206); Resolução ANP 729/2018 (citada pelo IBP) · Distribuidor: obrigações fiscais e da ANP
+
+**De onde vem:** Documento 218, seção 14.4
+
+**Contexto e pergunta:**
+
+O distribuidor compra da usina e revende ao posto ou ao grande consumidor. O dicionário já gera o C165 e o 0206 para quem tem a habilitação `efd_combustivel_c165`. O LMC da ANP é da revenda varejista, então o distribuidor não informa o 1300. Li, em site não oficial, que o Convênio ICMS 199/2022 cobre óleo diesel, biodiesel e GLP/GLGN e exige do distribuidor um relatório mensal de movimentação (programa COTEPE, Anexo I-A) e a indicação do ICMS monofásico anterior no documento. Uma contribuição do IBP à consulta pública cita a Resolução ANP 729/2018 como o procedimento de envio de dados dos demais elos da cadeia; não a li.
+
+Pergunta: (a) quais obrigações o distribuidor tem, por UF e por produto: EFD (C165, 0206), relatório do Convênio 199, outras? (b) o Convênio 199 alcança etanol e gasolina? (c) o distribuidor envia dados à ANP por outra norma? (d) o distribuidor mantém estoque por base e tanque que a EFD peça?
+
+**O que o ERP faz enquanto isso:** Gera só o C165 e o 0206, por habilitação; nenhum registro novo para o distribuidor. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C352 · Documento 218, seção 14.2 (leitura minha) · Grande consumidor
+
+**De onde vem:** Documento 218, seção 14.2
+
+**Contexto e pergunta:**
+
+O grande consumidor é o consumidor final que compra combustível a granel do distribuidor, sem revender. **Leitura minha:** não tem autorização de combustível na ANP e não informa o 1300, mesmo com tanque próprio.
+
+Pergunta: (a) o grande consumidor tem autorização ou registro na ANP, e de que tipo? (b) com tanque próprio, ele informa o 1300 ou algum registro de combustível na EFD? (c) a venda a ele leva alguma indicação especial no documento?
+
+**O que o ERP faz enquanto isso:** Trata como consumidor, sem autorização de combustível e sem 1300. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C353 · Documento 218, seção 14.3 · Cupom fiscal na venda de combustível
+
+**De onde vem:** Documento 218, seção 14.3 e limite 12
+
+**Contexto e pergunta:**
+
+Alberto lembrou que a venda pode ser por nota fiscal ou por cupom fiscal. O dicionário grava o cupom (ECF, CF-e-ECF e SAT) em `Mov_Nota_Fiscal_Saida` com itens, e a Redução Z do ECF traz a quantidade por produto. Não conferi se o leiaute do cupom admite bico e encerrante, nem quais UF ainda aceitam cupom para combustível.
+
+Pergunta: (a) quais UF ainda admitem cupom fiscal (ECF ou SAT) para a venda de combustível no posto? (b) o cupom pode trazer bico e encerrante? (c) a comparação entre o contador da bomba e as vendas, por produto e por dia, serve ao contador quando o cupom não traz o bico?
+
+**O que o ERP faz enquanto isso:** Compara por bico quando todos os itens trazem o bico e, nos demais casos, por produto e por dia, contando o cupom pelos documentos ou pela Redução Z, nunca pelos dois (A11); sem tolerância. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C354 · Cartilha do Posto Revendedor (ANP, maio de 2026), vedações · Venda do posto a outro revendedor
+
+**De onde vem:** Documento 218, seção 14.4 (aviso A24)
+
+**Contexto e pergunta:**
+
+A cartilha veda ao posto "alienar, emprestar, transferir, permutar ou comercializar combustíveis automotivos com outro revendedor varejista, ainda que o outro estabelecimento pertença à mesma pessoa jurídica".
+
+Pergunta: (a) a vedação tem exceções (devolução, venda a distribuidor, empréstimo emergencial, transferência entre filiais)? (b) quais CFOP ficam fora do aviso?
+
+**O que o ERP faz enquanto isso:** Avisa (A24) quando o posto emite saída de combustível a participante com autorização vigente de posto revendedor, em qualquer CFOP. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C355 · Resolução ANP 884/2022, Anexo, item "e." entre 13.4 e 13.5 (Diário Oficial de 08/09/2022) · Transferência de produto entre tanques
+
+**De onde vem:** Documento 218, seções 6.1 e 14.7 (Q218-15)
+
+**Contexto e pergunta:**
+
+O Anexo da 884 manda registrar em "Observações" a **transferência de produto entre tanques do mesmo revendedor, sem passar pela bomba medidora**. No livro ela **não é entrada nem venda**. No produto o efeito é zero, mas **por tanque** o escritural (abertura mais entrada menos saídas) fica errado e gera perda num tanque e ganho no outro. O Guia não diz como o 1310 trata a transferência. O item vem rotulado "e." entre 13.4 e 13.5, **também no Diário Oficial**. **Leitura minha:** dois campos opcionais no tanque e no dia (recebida e enviada), que o escritural soma e subtrai.
+
+Pergunta: (a) a transferência entra no 1310 como entrada e saída do tanque, como ajuste, ou fica fora do EFD? (b) o escritural do tanque deve somá-la e subtraí-la?
+
+**O que o ERP faz enquanto isso:** Guarda `Volume_Transferencia_Recebida` e `_Enviada` (opcionais) e as usa só no escritural por tanque; no 1300 o efeito é zero. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C356 · Cartilha do Posto Revendedor (ANP, maio de 2026), item 9; Resolução ANP 884/2022 (Diário Oficial de 08/09/2022) · Termos de Abertura e de Fechamento do LMC
+
+**De onde vem:** Documento 218, seção 14.5 (Q218-12)
+
+**Contexto e pergunta:**
+
+A cartilha manda elaborar Termos de Abertura e de Fechamento do LMC "conforme tabela constante do Anexo" da 884, e o FAQ da ANP, que só li em resumo de ferramenta, diz que o representante legal os assina. O **Anexo da 884 no Diário Oficial não traz** essa tabela (nem as duas cópias que li antes).
+
+Pergunta: (a) qual é o modelo dos termos e onde ele está? (b) quem assina e quando (abertura de cada livro, fechamento ao fim)? (c) o termo entra na EFD ou só no livro?
+
+**O que o ERP faz enquanto isso:** Não desenha. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C357 · Solução de Consulta Cosit nº 223/2023 (DOU de 29/09/2023, edição 187, seção 1, p. 122); Resolução ANP 884/2022 · Perda de até 0,6% da gasolina como custo no lucro real
+
+**De onde vem:** Documento 218, seção 14.8 (Q218-18; leitura minha)
+
+**Contexto e pergunta:**
+
+A Solução de Consulta Cosit 223, de 22/09/2023, diz que as perdas **iguais ou inferiores a 0,6%**, relativas à **evaporação de gasolina**, "nos termos da Resolução ANP nº 884", podem **integrar o custo das mercadorias** no **lucro real**, para o IRPJ e para a CSLL (art. 46, V, da Lei 4.506/1964), **sem outro meio de comprovação**, e que a Resolução é "elemento probatório idôneo". Diz-se "parcialmente vinculada" à SC Cosit 76/2021, que **não li**. A solução **não trata** do que passa de 0,6%, de outros combustíveis, do período nem da base (a 884 diz estoque físico e mede pelo campo 8, saldo do produto no dia). **Leitura minha:** o ERP mostra a perda dentro e fora do limite, e o contador decide a adição.
+
+Pergunta: (a) vale para outros combustíveis (etanol, diesel)? (b) sobre qual base e período se mede o 0,6% para o imposto? (c) a parte acima do limite é indedutível, ou depende de prova e justificativa, e entra como adição na Parte A do e-Lalur (com qual conta e código de ajuste)? (d) a solução vale para quem não a consultou? (e) a SC Cosit 76/2021 muda algo?
+
+**O que o ERP faz enquanto isso:** Nada automático: relatório do LMC com a perda dentro e fora do limite, por produto e por dia (Q218-18); sem lançamento e sem adição ao e-Lalur. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+# Parte 23. Documento 221: tabelas do Portal da NF-e (cClassTrib 620003 e indComb da tabela de CFOP)
+
+### C358 · IT 2025.002 v1.71, tabela de cClassTrib · cClassTrib 620003 sem marca de grupo monofásico
+
+**De onde vem:** Documento 221, seção 3, item (3)
+
+**Contexto e pergunta:**
+
+Na tabela da v1.71, o **620003** (monofásica com responsabilidade de retenção de tributos por terceiros) pertence ao CST 620, que exige o grupo monofásico, mas vem com **`ind_gMonoPadrao`, `ind_gMonoReten` e `ind_gMonoRet` todos zerados**. Os demais cClassTrib do CST 620 (exceto o **620007**, perecimento, que não tem marca por ser evento) têm uma das marcas. **Leitura minha:** pode ser erro da tabela, ou a marca do grupo de retenção por terceiros deveria ser a `ind_gMonoReten`.
+
+Pergunta: (a) a tabela está certa e o 620003 não exige nenhum grupo monofásico? (b) se há erro, qual marca vale (`ind_gMonoReten`)? (c) há nota técnica ou errata da Receita sobre o 620003?
+
+**O que o ERP faz enquanto isso:** A carga traz as marcas **como a tabela veio** (zeradas) e o aviso do Motor lista o 620003 como "sem grupo monofásico definido"; nada é bloqueado. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C359 · IT 2023.002 v2.10 (tabela de CFOP, coluna indComb) · Valores 1 e 2 do indicador de combustível
+
+**De onde vem:** Documento 221, seção 3, item (9) (Q221-6)
+
+**Contexto e pergunta:**
+
+O IT define `indComb` como "permitido em operação com combustível ou lubrificante" (sim ou não), mas a tabela de CFOP usa **0 (556 CFOP), 1 (16) e 2 (47)**. O **1** reúne armazenagem, retorno e venda a consumidor final (1663, 1664, 5663 a 5667, 6663 a 6665) e compras do exterior (3651 a 3653); o **2** reúne compra, transferência e venda dentro do país (1651 a 1659 e semelhantes). O IT **não explica** a diferença. **Não consegui deduzir o sentido** só pelo agrupamento dos CFOP.
+
+Pergunta: (a) o que significam o 1 e o 2, e como a nota reage a cada um (exige `origComb`, `pBio`, grupo monofásico)? (b) algum CFOP com `indComb` = 0 pode, mesmo assim, carregar combustível?
+
+**O que o ERP faz enquanto isso:** A carga guarda o valor bruto (0, 1 ou 2) e marca `Indicador_Combustivel` = sim para 1 e 2; a regra de preenchimento do item de combustível **não depende** da diferença. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 >
 > **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
 

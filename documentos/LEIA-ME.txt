@@ -1,0 +1,100 @@
+POSICAO ATUAL: revisao 45 (16/11/2026), documentos ate o 223. A lista abaixo e a da revisao 41 (11/11/2026); o que mudou desde entao:
+  Alterados desde a revisao 41 (substituem os do repo): 01-Fase0-Dicionario-Dados.md, 03-Fase1-Compras.md, 05-Fase1-CRM-Vendas.md, 10-Fase2-Contabilidade-Fiscal.md, 12-Fase6-Gestao-Contratos.md, 14-Historico-de-Decisoes.md, 29-Auditoria-Reconstruida-Dicionario.md, 31-Plano-de-Implementacao.md, 38-Pendencias-e-Perguntas-em-Aberto.md, 167-Cobertura-EFD-ICMS-IPI-v3.2.4.md, 175-Desenho-Lacunas-Setoriais-EFD-ICMS-IPI.md, 188-Perguntas-e-Pendencias-do-Contador.md
+  Novos desde a revisao 41: 207, 210, 214, 215, 216, 217, 218, 219, 220, 221, 222 e 223 (a pasta tem os .md deles; o 222 e o desenho em campos e o 223 o relatorio da revisao 45; o 220 e o 221 sao as cargas da NCM, da NBS e do Portal, que agora estao na Carga45)
+  Os arquivos documentos_01-... e documentos_10-... sao copias com o prefixo "documentos_" e podem ser ignorados.
+
+PASTA PARA ARRASTAR AO REPOSITORIO MLEGATE-TI/Documentacao-ERP (pasta documentos/) - posicao da revisao 41 (11/11/2026)
+
+Substituem arquivos que ja existem no repo (13):
+  01-Fase0-Dicionario-Dados.md
+  03-Fase1-Compras.md
+  04-Fase1-Estoque.md
+  05-Fase1-CRM-Vendas.md
+  06-Fase1-Producao.md
+  08-Fase2-Contas-Pagar-Receber.md
+  10-Fase2-Contabilidade-Fiscal.md
+  11-Fase5-Folha-RH.md
+  14-Historico-de-Decisoes.md
+  21-Fase8-Juridico.md
+  29-Auditoria-Reconstruida-Dicionario.md
+  31-Plano-de-Implementacao.md
+  38-Pendencias-e-Perguntas-em-Aberto.md
+
+Arquivos novos (63):
+  138-Conferencia-da-LC-227-Respostas-Q137-e-Q116-e-Medicamentos-do-Art-146.md
+  140-LC-225-Codigo-de-Defesa-do-Contribuinte-Decreto-13133-e-o-B0b.md
+  150-Desenho-B5-Regimes-Setoriais.md
+  152-Respostas-de-29-10-2026-Pergunta-9-da-Consulta-e-Listas-do-Contador.md
+  153-Desenho-do-Adiantamento-de-Clientes-IBS-e-CBS.md
+  154-Consolidacao-Revisao-28.md
+  155-Desenho-dos-Parametros-por-Obrigacao-Centralizados.md
+  156-Desenho-Arts-5-57-12-LC214.md
+  157-Desenho-B0a-Fato-Gerador-Ajuste-Transicao.md
+  158-Desenho-B3-Compras-Governamentais-ZFM-ALC.md
+  159-Artigos-LC-227-Consulta-Multas-Ordem-de-Aplicacao-e-PNCT.md
+  160-Parametros-das-Outras-Obrigacoes-Linhas-do-Catalogo.md
+  161-Alteracoes-nas-Notas-Fiscais-Ato-Tecnico-10-e-IT-2025-002-v1-71.md
+  162-Informes-Tecnicos-Meios-de-Pagamento-CFOP-NCM-e-NFe-ABI.md
+  163-NT-2026-005-Simples-Nacional-na-NFe-e-NT-2026-004-CNPJ-Alfanumerico.md
+  164-Desenho-do-BP-e-Modelo-63.md
+  165-Entrada-de-NFGas-e-NF3e-Conferencia-NFAg-NFCom-e-NT-2026-005-SN-do-CTe.md
+  166-Consolidacao-Revisao-29.md
+  167-Cobertura-EFD-ICMS-IPI-v3.2.4.md
+  168-Desenho-Lacunas-EFD-ICMS-IPI.md
+  169-Consolidacao-Revisao-30.md
+  170-Desenho-Combustiveis.md
+  171-Desenho-Programas-Apoio-Combustiveis.md
+  172-Desenho-Tabelas-Validador-EFD-ICMS-IPI.md
+  173-Desenho-Programas-Apoio-Combustiveis-Revisao.md
+  174-Consolidacao-Revisao-31.md
+  175-Desenho-Lacunas-Setoriais-EFD-ICMS-IPI.md
+  176-FAQ-Receita-EFD-ICMS-IPI-v7.8-Confronto-com-o-Dicionario.md
+  177-Transacao-de-Cartao-e-as-Sete-Datas.md
+  178-Consolidacao-Revisao-32.md
+  179-Consulta-a-Receita-Todas-as-Duvidas.md
+  180-Detalhamento-Q140-5-e-Q140-6-Bonus-de-Adimplencia-da-CSLL.md
+  181-Bonus-da-CSLL-na-Baixa-do-Titulo-Respostas-da-Q140-5.md
+  182-Consolidacao-Revisao-33.md
+  183-Conferencia-do-Dicionario-com-o-Manual-da-ECD-Leiaute-9.md
+  184-Respostas-da-Q183-e-o-Desenho-que-Elas-Pedem.md
+  185-IN-RFB-2316-2026-Sintonia-e-o-Bonus-de-Adimplencia-da-CSLL.md
+  186-Consolidacao-Revisao-34.md
+  187-LC-225-Texto-dos-Arts-40-a-47-e-o-Desenho-do-Bonus.md
+  188-Perguntas-e-Pendencias-do-Contador.md
+  189-Conferencia-de-Cinco-Normas-IN-2324-2308-2333-2119-e-LC-225.md
+  190-Carga-dos-Anexos-IN-2333-Lei-10485-e-IN-2324.md
+  191-Respostas-189-190-Liga-Desliga-IPI-IN-2295-Confia-e-REIDI.md
+  192-Registro-0000-da-ECF-Situacao-de-Inicio-Especial-e-Eventos-da-SCP.md
+  193-Planilha-das-Tabelas-Dinamicas-Leiaute-12-Conferencia-e-Pergunta-10.md
+  194-Portaria-MF-3074-e-Conjunta-14-Conferencia-da-Carga-dos-Combustiveis.md
+  195-Consolidacao-Revisao-35.md
+  196-Multas-Documento-Consolidado-e-Imposto-Seletivo-Detalhamento-da-Q159.md
+  197-Consolidacao-Revisao-36.md
+  198-Desenho-B4-Regimes-Especificos-Financeiro-Seguro-Saude.md
+  199-Consolidacao-Revisao-37.md
+  200-Credito-do-Tomador-do-Servico-Financeiro-Arrendamento-Antecipacao-e-Plano-de-Saude-B0b-2.md
+  201-Documentacao-dos-Parametros-do-B0b-2-Efeito-e-Obrigacao.md
+  202-Regime-Automotivo-Credito-Presumido-da-CBS-dos-Projetos-Habilitados-B6.md
+  203-Consolidacao-Revisao-38.md
+  204-Tributacao-do-Veiculo-por-Combustivel-e-Potencia-IS-IPI-e-Art-149.md
+  205-Conferencia-das-Normas-do-Automotivo-Documentos-202-e-204.md
+  206-Programa-Mover-e-Rota-2030-Ato-Habilitacao-PeD-e-Autopecas.md
+  208-Consolidacao-Revisao-39.md
+  209-Autopecas-Tributacao-por-Destinacao-Fabricacao-e-Reposicao.md
+  211-Consolidacao-Revisao-40.md
+  212-Marketplace-e-Plataformas-Digitais-B7.md
+  213-Consolidacao-Revisao-41.md
+
+Identicos aos do repo (7), nao precisam ser arrastados:
+  02-Fase1-Planejamento-Orcamento.md
+  07-Fase1-Expedicao.md
+  09-Fase2-Tesouraria.md
+  115-Detalhamento-Q94-1-Ordem-de-Desenho-dos-Blocos-da-CBS.md
+  12-Fase6-Gestao-Contratos.md
+  13-Fase7-Portal-Cliente.md
+  94-Perfis-Previstos-e-Fila-de-Desenho.md
+
+Observacoes:
+- Os documentos 138, 140, 152, 153, 154, 155 e 188 so existiam em Word na minha sessao; os .md deles foram convertidos do .docx (tabelas e formatacao podem variar um pouco).
+- Nao tenho os .md dos documentos 129 a 137, 139, 141 a 144, 146 a 149 e 151 (os numeros 207 e 210 estao reservados).
+- Os arquivos do repo que nao estao nesta pasta (00, 00b, 32 a 57, 89 a 128 etc.) continuam como estao.

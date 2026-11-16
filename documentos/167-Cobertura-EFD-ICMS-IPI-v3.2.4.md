@@ -783,6 +783,8 @@ D12. Mov_Saldo_Estoque é único por (local, posição, produto, lote, competên
 
 # Anexo F — Bloco 1
 
+> **Atualização de 16/11/2026 (revisão 44):** os registros 1300, 1310, 1320, 1350, 1360, 1370, 1390 e 1391 e o C171 foram desenhados no documento 218 e entraram no dicionário na revisão 44 (9 entidades; habilitação `efd_combustivel_lmc_1300` e `efd_usina_1390`). Os vereditos abaixo são os da conferência de 05/10/2026 e ficam como histórico; a cobertura campo a campo está no Anexo A do documento 218.
+
 
 Método: li as descrições do guia_bloco_1.txt e comparei com o guia completo (/tmp/efd324.txt) e com dict_dump.txt.
 Aviso sobre o guia_bloco_1.txt: a extração compacta perdeu campos que existem no guia completo. Conferi contra o guia completo: 1200.07 SLD_CRED_FIM, 1210.05 CHV_DOCe, 1391.11 SAÍDAS, 1923.10 CHV_DOCe e 1926.10 MES_REF. Os campos deste aviso já entram nos vereditos abaixo.
