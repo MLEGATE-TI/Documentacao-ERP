@@ -5,6 +5,8 @@
 *Cadastro único, vigência, motor de regras, régua de aprovação,
 dimensões contábeis, GED e usuários/permissões*
 
+*Revisão 92 --- consolidação da revisão 46 do dicionário (documento 224 (aplicação das 21 respostas do contador de 16/11/2026, Q188-6, D-N590, e Q224-1 a Q224-3, D-N591)): 2 entidades existentes alteradas; tabela de valores iniciais de vencimento (C14) e feriados (C28).*
+
 *Revisão 91 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 5 entidades existentes alteradas; Cad_NBS com hierarquia (Q220-1); Cad_CFOP com Tipo_Combustivel (Q221-6); Cad_Unidade_Medida com Origem_Tabela (Q221-9); domínio novo bandeira_cartao_dfe (Q221-11).*
 
 *Revisão 90 --- consolidação da revisão 44 do dicionário (documento 218 (Bloco 1 de combustíveis e usina, versão 2.2), com as respostas de Alberto de 12/11/2026 (Q218-1 a Q218-17)): 2 valores novos em modulo_fiscal_opcional (efd_combustivel_lmc_1300 e efd_usina_1390; documento 218).*
@@ -1072,48 +1074,20 @@ abrangência, estado e município.
 
 *Vigência: não --- cada linha é um dia; um feriado revogado é excluído da lista.*
 
-  ---------------------- -------------------------------------- ----------------------------------------------
-  **Campo**              **Tipo lógico**                        **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Feriado** | *identificador* | --- |
+| **Data** | *data* | O dia do feriado. |
+| **Descricao** | *texto (100)* | Nome do feriado. |
+| **Abrangencia** | *enumeração {nacional, estadual, municipal}* | Nacional vale para todo o país. Revisão 46 (documento 224; D-N590: C28): no cálculo de prazo de obrigação e tributo federal só vale `nacional`. |
+| **ID_Estado** | *referência (Cad_Estado, opcional)* | Obrigatório quando Abrangencia = estadual. |
+| **ID_Municipio** | *referência (Cad_Municipio, opcional)* | Obrigatório quando Abrangencia = municipal. |
+| **Feriado_Bancario** | *booleano* | Verdadeiro quando não há expediente bancário no dia. Só os feriados bancários tornam o dia não útil para pagamento de tributo. Revisão 46 (documento 224; D-N590: C28): para obrigação e tributo federal conta **só feriado nacional**; feriado estadual ou municipal não muda a data (exemplo do contador: 25 de janeiro em São Paulo). Seguem abertos Carnaval e Corpus Christi na regra dos dez dias úteis e a carga de 2014 a 2026. |
+| **Natureza** | *enumeração {civil, religioso}, opcional* | Adicionado na revisão 51. Obrigatório quando Vale_Descanso_Trabalhista é verdadeiro. Civil: lei federal, data magna do estado ou centenário do município (Lei 9.093/1995, art. 1º). Religioso: dia de guarda declarado em lei municipal, até quatro por município, incluída a Sexta-Feira da Paixão (art. 2º); passar de quatro gera aviso, sem bloqueio. |
+| **Vale_Descanso_Trabalhista** | ** | Adicionado na revisão 51. Verdadeiro quando o dia é feriado para o descanso semanal remunerado e para a folha (Lei 605/1949). Não é o mesmo que Feriado_Bancario: o Carnaval, por exemplo, é dia sem expediente bancário e não é feriado trabalhista. Para a Folha, o feriado municipal só conta para o vínculo cujo município de trabalho é o do feriado (Folha & RH, seção 6). |
+| **Fonte** | *texto, opcional* | Calendário do Banco Central, ato legal ou lançamento manual. |
 
-  **ID_Feriado**         *identificador*                        ---
-
-  **Data**               *data*                                 O dia do feriado.
-
-  **Descricao**          *texto (100)*                          Nome do feriado.
-
-  **Abrangencia**        *enumeração {nacional, estadual,       Nacional vale para todo o país.
-                         municipal}*
-
-  **ID_Estado**          *referência (Cad_Estado, opcional)*    Obrigatório quando Abrangencia = estadual.
-
-  **ID_Municipio**       *referência (Cad_Municipio, opcional)* Obrigatório quando Abrangencia = municipal.
-
-  **Feriado_Bancario**   *booleano*                             Verdadeiro quando não há expediente bancário
-                                                                no dia. Só os feriados bancários tornam o dia
-                                                                não útil para pagamento de tributo.
-
-  **Natureza**           *enumeração {civil, religioso},        Adicionado na revisão 51. Obrigatório quando
-                         opcional*                              Vale_Descanso_Trabalhista é verdadeiro. Civil:
-                                                                lei federal, data magna do estado ou
-                                                                centenário do município (Lei 9.093/1995, art.
-                                                                1º). Religioso: dia de guarda declarado em lei
-                                                                municipal, até quatro por município, incluída
-                                                                a Sexta-Feira da Paixão (art. 2º); passar de
-                                                                quatro gera aviso, sem bloqueio.
-
-  **Vale_Descanso_Trabalhista** *booleano*                             Adicionado na revisão 51. Verdadeiro quando o
-                                                                dia é feriado para o descanso semanal
-                                                                remunerado e para a folha (Lei 605/1949). Não
-                                                                é o mesmo que Feriado_Bancario: o Carnaval,
-                                                                por exemplo, é dia sem expediente bancário e
-                                                                não é feriado trabalhista. Para a Folha, o
-                                                                feriado municipal só conta para o vínculo cujo
-                                                                município de trabalho é o do feriado (Folha &
-                                                                RH, seção 6).
-
-  **Fonte**              *texto, opcional*                      Calendário do Banco Central, ato legal ou
-                                                                lançamento manual.
-  ---------------------- -------------------------------------- ----------------------------------------------
+*Revisão 46 --- campos alterados: Feriado_Bancario, Abrangencia.*
 
 
 Os campos Codigo_Receita já existentes (Mov_Titulo_Retencao e
@@ -1258,8 +1232,8 @@ ID_Instancia_Aprovacao). Os valores iniciais que já tenho:
   **IRPJ e CSLL, ajuste anual (lucro     Último dia útil de março do ano seguinte             *Já é dia útil.*
   real)**
 
-  **PIS/Pasep e Cofins**                 Dia 25 do mês seguinte (financeiras: dia 20, a       *Antecipa.*
-                                         confirmar)
+  **PIS/Pasep e Cofins**                 Dia 25 do mês seguinte (financeiras: dia 20,         *Antecipa.*
+                                         confirmado pelo contador, C14(c))
 
   **IPI**                                Dia 25 do mês seguinte (exceções por produto, a      *Antecipa.*
                                          confirmar)
@@ -1276,10 +1250,17 @@ ID_Instancia_Aprovacao). Os valores iniciais que já tenho:
   **Entrega: Espetáculo Desportivo e     Segundo dia útil após o evento; último dia útil do   *Já é dia útil.*
   Aferição**                             mês da aferição
 
-  **IRRF (mensal, diário, decendial,     *Sem valor inicial: a tabela completa depende do     *A definir.*
-  quinzenal e semanal), IOF, CIDE e      contador.*
-  demais**
+  **IRRF (geral, mensal)**               Dia 20 do mês seguinte ao pagamento (C14(b))         *A confirmar.*
+
+  **IOF (resgate) e CIDE**               Descontados direto na conta bancária no resgate,     *Não se aplica.*
+                                         sem guia própria nesse caso (C14(b))
+
+  **IRRF diário, decendial, quinzenal    *Sem valor inicial: a tabela completa depende do     *A definir.*
+  e semanal; IOF de crédito, câmbio e    contador.*
+  seguro; demais**
   -------------------------------------- ---------------------------------------------------- ----------------------
+
+Revisão 46 (documento 224; D-N590: C14, resposta do contador de 16/11/2026): os valores de contribuição previdenciária, PIS e Cofins, IPI, IRPJ e CSLL, FGTS Digital e DAS foram **validados**, mas o contador avisa que as datas podem variar e não ficam eternas: seguem como parâmetros com vigência. O ajuste anual (março) e as entregas não estavam na pergunta e ficam provisórios. O vencimento do IRRF é o dia 20 do mês seguinte ao pagamento; o do PIS e da Cofins de instituição financeira, o dia 20 do mês seguinte ao fato gerador (confirmado). IOF e CIDE são descontados direto na conta bancária no resgate, sem guia própria nesse caso. Os percentuais do empregador (alíquota de contribuição previdenciária, RAT, Senar e CPRB) variam de empresa para empresa e **não têm valor fixo na carga**; a tabela de retenção do Mafon (`Cad_Retencao_Federal_Parametro`) é legal e não muda (dúvida ao contador: C360). A regra do dia não útil por tributo (C14 f) **não foi aplicada** e voltou ao contador; até lá o dia não útil do IRRF fica "a confirmar". Seguem em "a definir": IRRF diário, decendial, quinzenal e semanal, IOF de crédito, câmbio e seguro, exceções do IPI e prazos da Reinf.
 
 Cad_Regra_Vencimento
 
@@ -9959,7 +9940,7 @@ Revisão 36 (documento 196, seção 5.4; D-N526: Q196-7 e Q196-8): para cada fat
 | **ID_Is_Hipotese_Base_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Is_Hipotese_Base_Versao). ID_Is_Hipotese_Base é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
 | **ID_Hipotese_Fato_Gerador_Is** | *referência (Cad_Classe_Sistema, domínio = hipotese_fato_gerador_is) --- identidade* | Qual momento do art. 412: primeiro fornecimento, arrematação, transferência não onerosa, incorporação ao ativo imobilizado, extração de bem mineral, consumo pelo fabricante, fornecimento ou pagamento do serviço, importação. Domínio novo, 8 valores. |
 | **ID_Grupo_Produto_Is** | *referência (Cad_Classe_Sistema, domínio = grupo_produto_is), opcional --- identidade* | O grupo do art. 409, § 1º, que vem do **NCM** do produto (`Cad_NCM_Imposto_Seletivo.ID_Grupo_Produto_Is`). Vazio = linha padrão, que vale para todos os grupos; a linha com grupo vale sobre a linha sem grupo (por exemplo, fumígenos: art. 414, III, c, e art. 434, § 2º-A). |
-| **ID_Contribuinte_Tipo** | *referência (Cad_Classe_Sistema, domínio = tipo_contribuinte_is)* | Quem é o contribuinte nesta hipótese (art. 424): fabricante, importador, arrematante, produtor-extrativista, fornecedor do serviço. Domínio novo, 5 valores. |
+| **ID_Contribuinte_Tipo** | *referência (Cad_Classe_Sistema, domínio = tipo_contribuinte_is)* | Quem é o contribuinte nesta hipótese (art. 424): fabricante, importador, arrematante, produtor-extrativista, fornecedor do serviço. Domínio novo, 5 valores. Revisão 46 (documento 224; D-N590: C232): na **industrialização por encomenda** o executor cobra serviço e **sobre o serviço não incide IS**; o IS recai na **venda do encomendante** (contador, 16/11/2026). Leitura minha: o contribuinte é o encomendante, no primeiro fornecimento. Seguem abertos o valor de referência dos fumígenos e o IS misto em duas linhas. |
 | **ID_Base_Calculo_Tipo** | *referência (Cad_Classe_Sistema, domínio = tipo_base_calculo_is)* | A base do art. 414: valor de venda, valor de arremate, valor de referência, valor contábil de incorporação ao ativo, receita própria da entidade, valor de mercado; e, na importação, valor aduaneiro mais o Imposto de Importação (art. 434, § 2º). Domínio novo, 7 valores. |
 | **ID_Base_Calculo_Tipo_Alternativa** | *referência (Cad_Classe_Sistema, domínio = tipo_base_calculo_is), opcional* | Só na importação de fumígenos com alíquota ad valorem: a base é a **maior** entre esta e a principal (art. 434, § 2º-A). |
 | **Base_Minima_Valor_Mercado_Parte_Relacionada** | *booleano* | Verdadeiro quando a comercialização entre partes relacionadas, com alíquota ad valorem e sem valor de referência, não pode ter base inferior ao valor de mercado (art. 416). O valor de mercado usa `Mov_Valor_Mercado_Apuracao`. |
@@ -9970,6 +9951,8 @@ Revisão 36 (documento 196, seção 5.4; D-N526: Q196-7 e Q196-8): para cada fat
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 46 --- campos alterados: ID_Contribuinte_Tipo.*
 
 **Cargas de partida da revisão 36 na Fase 0 (linhas de tabela, não campos)**
 

@@ -1,6 +1,6 @@
-POSICAO ATUAL: revisao 45 (16/11/2026), documentos ate o 223. A lista abaixo e a da revisao 41 (11/11/2026); o que mudou desde entao:
+POSICAO ATUAL: revisao 46 (16/11/2026), documentos ate o 225. A lista abaixo e a da revisao 41 (11/11/2026); o que mudou desde entao:
   Alterados desde a revisao 41 (substituem os do repo): 01-Fase0-Dicionario-Dados.md, 03-Fase1-Compras.md, 05-Fase1-CRM-Vendas.md, 10-Fase2-Contabilidade-Fiscal.md, 12-Fase6-Gestao-Contratos.md, 14-Historico-de-Decisoes.md, 29-Auditoria-Reconstruida-Dicionario.md, 31-Plano-de-Implementacao.md, 38-Pendencias-e-Perguntas-em-Aberto.md, 167-Cobertura-EFD-ICMS-IPI-v3.2.4.md, 175-Desenho-Lacunas-Setoriais-EFD-ICMS-IPI.md, 188-Perguntas-e-Pendencias-do-Contador.md
-  Novos desde a revisao 41: 207, 210, 214, 215, 216, 217, 218, 219, 220, 221, 222 e 223 (a pasta tem os .md deles; o 222 e o desenho em campos e o 223 o relatorio da revisao 45; o 220 e o 221 sao as cargas da NCM, da NBS e do Portal, que agora estao na Carga45)
+  Novos desde a revisao 41: 207, 210, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224 e 225 (a pasta tem os .md deles; o 222 e o desenho em campos e o 223 o relatorio da revisao 45; o 224 e o desenho da aplicacao das 21 respostas do contador e o 225 o relatorio da revisao 46, com a Carga46; o 220 e o 221 sao as cargas da NCM, da NBS e do Portal, que agora estao na Carga45)
   Os arquivos documentos_01-... e documentos_10-... sao copias com o prefixo "documentos_" e podem ser ignorados.
 
 PASTA PARA ARRASTAR AO REPOSITORIO MLEGATE-TI/Documentacao-ERP (pasta documentos/) - posicao da revisao 41 (11/11/2026)

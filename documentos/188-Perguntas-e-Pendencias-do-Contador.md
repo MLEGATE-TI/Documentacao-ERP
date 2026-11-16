@@ -41,7 +41,8 @@ Mlegate · Alberto Beyeler · Novembro de 2026
 | 21    | Documento 216: Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos (álcool etílico e mostos, fumígenos 24.01 e 24.04, valor de referência, IPCA, prognósticos, pequeno produtor, gás natural, minerais, importação, bebidas açucaradas e embalagem primária) | 11        | C324 a C334 |
 | 22    | Documento 218: Bloco 1 de combustíveis e usina (Ajuste SINIEF 14/2025, norma da ANP, perda e ganho, estoque de abertura, data do recebido, tanques interligados, número do bico e da bomba, intervenção, contador no máximo, produtos do 1300, bombas e lacres, usina: produto, balanço e resíduos; versão 2: limite de 0,6%, fornecedor do posto, distribuidor, grande consumidor, cupom, venda a outro revendedor, versão 2.1: Anexo da 884, transferência entre tanques, termos; versão 2.2: Diário Oficial e SC Cosit 223/2023) | 23        | C335 a C357 |
 | 23    | Documento 221: tabelas do Portal da NF-e (cClassTrib 620003 sem marca de grupo monofásico; valores 1 e 2 do indComb da tabela de CFOP)                                                                                                                                                                                                                                                                                                                                                                                              | 2         | C358 a C359 |
-|       | **Total**                                                                                                                           | **359**   | C1 a C359   |
+| 24    | Documento 224: aplicação das respostas do contador (a C14(d) vale para a tabela de retenção do Mafon?)                                                                                                                                                  | 1         | C360        |
+|       | **Total**                                                                                                                           | **360**   | C1 a C360   |
 
 **Respondida:** C1 (limites da ECF), por Alberto em 09/11/2026 (duas mensagens), com a parte (3) ainda aberta; C4 (NFTS: número, série e data não se alteram quando vêm de XML; vale para toda nota importada de XML), respondida por Alberto em 09/11/2026 (D-N506 e D-N510), com a conferência final do contador aberta; C3 (quem declara a vinculação), procedimento confirmado por Alberto em 09/11/2026 (D-N505), com a segunda parte aberta; e C65 (Y520 acima do que o manual exige), decidida por Alberto em 09/11/2026 (D-N504: respeitar o manual; aplicação aprovada na D-N507), com o contador só confirmando. Os números não mudam: a pergunta respondida e aplicada sai daqui só depois do “consolidar”.
 
@@ -193,7 +194,7 @@ Pergunta: o Y520 é obrigatório nesse caso? Se for, o ERP deve **exigir** o Y52
 >
 > **Ainda aberto:** Se o Y520 é **obrigatório** quando `IND_PGTO_EXT` = "S" sem Y520 (o manual e a planilha se contradizem; pergunta 6 do documento 98, à Receita).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C7 · Q93-4 · Funções da fórmula da ECF: `CREDITO`, variantes e versões de 2026
 
@@ -211,7 +212,7 @@ Pergunta: confirmar a leitura de cada função usada nas fórmulas, em especial 
 >
 > **Leitura do ERP (minha):** Leituras das funções (inclusive `CREDITO`) confirmadas, e as fórmulas de 2026 seguem a mesma leitura do teste de 2025. O ERP pode **liberar as linhas paradas só por esta dúvida**, marcando-as como validadas.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C8 · Q93-7 · Quais linhas da ECF são o “imposto devido”
 
@@ -231,7 +232,7 @@ Pergunta: de cada uma das abas N630, N670, N620 e N660, qual linha é o imposto 
 >
 > **Ainda aberto:** N620 linha 26, N660 linha 18 e N630B e N630C linha 23 (a resposta não os cita) e se "N 630" é mesmo a N630A.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C9 · Q118-2 · Linha `16.001` inexistente na N630A linha 18 (2026)
 
@@ -269,7 +270,7 @@ Pergunta: conferir contra a lei dois pontos: (a) a soma de volta das deduções 
 >
 > **Leitura do ERP (minha):** As 11 fórmulas de 2026 estão de acordo com a lei (a soma de volta das deduções e o fator 0,90 incluídos). O ERP pode marcá-las como validadas.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C11 · Q122-1 · M350R linha 345: qual é a leitura certa
 
@@ -289,7 +290,7 @@ Pergunta: a leitura certa é `M350(170)`? (Leitura minha, por simetria: a M350A 
 >
 > **Leitura do ERP (minha):** A leitura `M350(170)` na M350R linha 345 está correta. O ERP passa a carregá-la assim e marca a linha como validada.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C12 · Q130-4 · CSLL na apuração anual do lucro real em 2026: rateio entre períodos
 
@@ -362,7 +363,7 @@ O `Cad_Regra_Vencimento` tem valores iniciais já levantados, provisórios: cont
 >
 > **Ainda aberto:** (b) IRRF diário, decendial, quinzenal e semanal, e o IOF de crédito, câmbio e seguro; (c) exceções do IPI; (d) prazos da Reinf; (f) a resposta vale para todos os tributos ou só para algum? Esclarecimento pedido: por tributo, antecipa ou prorroga (lista acima)?
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592), salvo o item (f), que voltou ao contador
 
 ### C15 · P-31, P-32 · Contas e regras da provisão de INSS e IRRF e da DCTFWeb
 
@@ -462,7 +463,7 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 >
 > **Ainda aberto:** Conferir, na consolidação, se a competência do crédito da aquisição já é a data de entrada (e não a de emissão) e se a retenção na fonte segue a liquidação.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C21 · Limite anual da CSLL no lucro presumido e MP 1.303/2025
 
@@ -476,7 +477,7 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 >
 > **Leitura do ERP (minha):** O limite de R$ 3,75 milhões está **vigente hoje** e pode mudar para 2027. O ERP tira o "provisório" para 2026 e mantém a vigência com fim em aberto. A resposta não cita a MP 1.303/2025; leitura minha, **não conferida na fonte**: sem efeito sobre o limite.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C22 · ISS fixo da SUP: o valor da faixa multiplica por profissional?
 
@@ -495,7 +496,7 @@ Pergunta: o contador confirma que, para PIS e Cofins, o crédito nasce na compet
 >
 > **Ainda aberto:** (b): o que "uso restrito" significa na tabela da SUP de São Paulo, com o ato da Prefeitura que o diz (o contador responde com as palavras dele ou cita a norma).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592), salvo o item (b), que voltou ao contador
 
 ### C23 · P43-02 · Indicadores do Contribuições sem definição: `OBRIGA_DET`, letras P/R, P/N e S/N
 
@@ -551,7 +552,7 @@ Pergunta: há ato oficial que fixe até quando a EFD-Contribuições é exigida 
 >
 > **Ainda aberto:** Se há **ato oficial** que fixe até quando a EFD-Contribuições é exigida (a resposta é "a princípio", sem norma citada).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C26 · P43-12 · CSOSN 300, 400 e 500 e CST do ICMS com origem embutida
 
@@ -607,7 +608,7 @@ Pergunta: o contador confirma essa contagem e que a carga de `Cad_Feriado` de 20
 >
 > **Ainda aberto:** Se **Carnaval e Corpus Christi** (pontos facultativos, que o calendário bancário do Banco Central traz) contam na regra dos dez dias úteis da EFD-Contribuições, que só acerta 147 das 150 competências com eles; e se a carga de 2014 a 2026 está completa.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C29 · Q-0A9-1 · Classificar a receita: tributada, não tributada, exportação ou cumulativa
 
@@ -675,7 +676,7 @@ Pergunta: entrada e saída aceitam esses modelos sem chave? Em que casos?
 >
 > **Ainda aberto:** Os casos em que cada modelo sem chave é aceito (a resposta não os separa).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C33 · Q-C-2 · Escrituração consolidada ou individualizada no PIS/Cofins
 
@@ -2944,7 +2945,7 @@ Pergunta: para cada uma das demais obrigações acessórias (**DCTFWeb, EFD-Rein
 >
 > **Leitura do ERP (minha):** O I051 só leva centro de custo quando **parte** da conta é referenciada a uma linha do plano referencial e **outra parte** a outra; conta 100% numa linha referencial **não** informa centro de custo. Não é automático por obra no RET. `ID_Valor_Centro_Custo` continua opcional; o texto passa a dizer que só se preenche quando a conta se divide entre linhas referenciais.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ## Documento 184 (ECD: moeda funcional, AVP e mapa da NFGás)
 
@@ -3260,7 +3261,7 @@ Pergunta: (a) enquanto o regulamento não sair, a tela deve avisar que a hipóte
 >
 > **Leitura do ERP (minha):** (b) **hoje não há critério prático** para "bons antecedentes fiscais". Em (a), "Sim" não escolhe entre as duas opções; leitura minha: a tela **avisa** que a hipótese pode valer, e o ERP só registra o percentual aplicado e avisa se difere (Q159-4, opção A), sem mudar nada.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C227 · LC 214, arts. 29, § 2º, e 341-D · Multa de mora e multa punitiva depois da notificação
 
@@ -3280,7 +3281,7 @@ Pergunta: (a) depois da notificação, a multa de mora volta a correr junto com 
 >
 > **Ainda aberto:** A **data inicial** dos juros sobre a multa punitiva (a resposta não a diz).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C228 · LC 214, art. 323-C · Efeitos da consulta protocolada depois do vencimento da obrigação
 
@@ -3364,7 +3365,7 @@ Pergunta: (a) na industrialização por encomenda (o encomendante fornece a mat�
 >
 > **Ainda aberto:** (b) de onde vem o valor de referência dos fumígenos e quem o informa enquanto não houver ato; (c) se o IS misto é lançado em duas linhas.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 # Parte 8. Documento 198: regimes específicos de serviços financeiros, seguro e plano de saúde (B4)
 
@@ -3764,7 +3765,7 @@ Pergunta: (a) a alíquota final do veículo se arredonda, e em quantas casas? (b
 >
 > **Leitura do ERP (minha):** (a) as alíquotas se arredondam em **4 casas**; (b) o fator 1,21 multiplica a alíquota inicial **exata**; (c) na importação, o fator 1,17 entra **antes** do arredondamento. O padrão provisório de `is_veiculo_arredondamento_casas` passa de "sem arredondar" para 4 casas, com as duas contas na memória do item. Sem norma citada. Leitura minha: 4 casas na mesma unidade da alíquota guardada (percentual).
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C257 · MP 1.399/2026, Anexo II, critério 4, e Decreto 12.549/2025, Anexo IV, itens 2, 5 e 6 · Desempenho estrutural: item 2 ou item 5
 
@@ -3804,7 +3805,7 @@ Pergunta: (a) quem atesta os kW (fabricante, Senatran, Inmetro) e em que documen
 >
 > **Leitura do ERP (minha):** (a) quem aferirá a potência é o **Inmetro**; (b) **não** se deriva kW de cv: a engenharia define o valor; (c) o valor do sistema (híbrido e elétrico de motores múltiplos) é definido pela engenharia; (d) "Sim": a nota fiscal deverá trazer kW (leitura minha: expectativa do contador; **não li** nota técnica que a confirme). Confirma `is_veiculo_kw_derivado_do_cv` = "não deriva"; o kW fica na ficha da versão, e a comparação com o cv da nota continua só como aviso.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C259 · MP 1.399/2026, Anexos I a III, e Decreto 12.549/2025, NC (87-13) e NC (87-14) · Posições fora das listas de códigos
 
@@ -3860,7 +3861,7 @@ Pergunta: (a) "combustível de origem renovável" é só etanol e biodiesel, ou 
 >
 > **Ainda aberto:** **Esclarecimento pedido** sobre o adendo: em qual dispositivo da LC 214 (arts. 149 e 153) ou ato do DTP ou da SMT estão a exigência de fabricação nacional e a exclusão de picapes e utilitários, e a que município ou estado o ato se refere.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C262 · MP 1.399/2026, arts. 12 e 18, e LC 214/2025, art. 412 e seguintes · Obrigação acessória e escrituração do IS
 
@@ -3884,7 +3885,7 @@ Pergunta: (a) qual a obrigação acessória e o código de receita do IS? (b) o 
 >
 > **Ainda aberto:** **Esclarecimento pedido, em outras palavras (a):** em qual declaração ou apuração o contribuinte do IS informa o imposto e em que guia (DARF) e prazo o recolhe? Hoje o ERP só guarda o IS por item e na apuração do veículo.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C263 · MP 1.399/2026, art. 6º, III · Notas Complementares da Tipi 87-2, 88-1, 88-2 e 89-1 (alíquota zero transitória)
 
@@ -4174,7 +4175,7 @@ Pergunta: (a) a declaração do comprador (por pedido, por contrato ou permanent
 >
 > **Leitura do ERP (minha):** (a) **sim**, a declaração do comprador basta como prova; (b) **quem fez a venda** recolhe a diferença quando a peça é revendida; (c) **sim**, a declaração permanente precisa de prazo de validade; (d) **pode** haver destinação mista no mesmo pedido. Confirma a leitura provisória do documento 209 (declaração em `ID_Documento_Declaracao`, validade em `Data_Validade`); o aviso do ERP, quando falta ou vence a declaração, passa a citar o **vendedor** como responsável; (d) pede que a destinação se registre **por item** do pedido.
 >
-> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicação na Q188-6 (Alberto)
+> **Data:** 16/11/2026 · **Situação:** respondida (contador, 16/11/2026); aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
 ### C280 · Lei 10.485/2002, arts. 3º e 5º · CST e natureza da receita de cada caso na EFD-Contribuições
 
@@ -5497,6 +5498,22 @@ Pergunta: (a) o que significam o 1 e o 2, e como a nota reage a cada um (exige `
 **O que o ERP faz enquanto isso:** A carga guarda o valor bruto (0, 1 ou 2) e marca `Indicador_Combustivel` = sim para 1 e 2; a regra de preenchimento do item de combustível **não depende** da diferença. Nada aplicado ao dicionário.
 
 > **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C360 · Documento 224 · C14(d): a tabela de retenção do Mafon varia por empresa?
+
+**De onde vem:** Documento 224, seção 2 (C14, item d)
+
+**Contexto e pergunta:**
+
+Na C14(d) o contador disse que os percentuais de retenção, as alíquotas de contribuição previdenciária, o RAT, o Senar e a CPRB são "uma tabela que varia de empresa para empresa". O dicionário guarda os percentuais de retenção de IR, CSLL, Cofins e PIS na tabela do Mafon (`Cad_Retencao_Federal_Parametro`), que é legal, por código de receita e igual para todas as empresas.
+
+Pergunta: a resposta vale só para as alíquotas do empregador (contribuição previdenciária, RAT, Senar e CPRB), ou também para os percentuais da tabela de retenção do Mafon?
+
+**O que o ERP faz enquanto isso:** Leitura minha: a carga não leva valor fixo das alíquotas do empregador e mantém a tabela do Mafon como está, provisória até o contador validar. Nada aplicado.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 >
 > **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
 

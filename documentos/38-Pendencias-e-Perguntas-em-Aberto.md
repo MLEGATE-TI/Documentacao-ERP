@@ -1,6 +1,6 @@
 # Pendências e Perguntas em Aberto — Documento 38 (arquivo único)
 
-**Este é o único arquivo de pendências do projeto** (regra de Alberto, 23/10/2026) e **guarda só o que está em aberto** (pedidos dele de 26/10/2026 e de 12/11/2026): o que já foi respondido ou aplicado saiu daqui e está no documento 14 (histórico de decisões) e nos relatórios de consolidação. **Estado em 16/11/2026** (em 16/11 você enviou 32 respostas parciais do contador, D-N583, e aprovou as Q188-7 a Q188-9, D-N584; resta a Q188-6, seção 1.42): o documento 218 (Bloco 1 de combustíveis e usina, com a cadeia de comercialização, o distribuidor e o Anexo da Resolução 884) foi **aprovado** nas Q218-1 a Q218-17 (D-N581) e **entrou na revisão 44** (documento 219, D-N585; **1.229 entidades e 14.261 campos**), sobre a revisão 43 (documento 217; 1.220 e 14.154); na **versão 2.2** (D-N582) a Resolução 884 foi conferida no Diário Oficial, que você enviou; a **Q218-18** (Solução de Consulta Cosit 223/2023) você respondeu "Sim" em 16/11/2026 (D-N587; o aviso A22 já estava no desenho) e resta a Q218-8, reduzida ao Ajuste SINIEF (seção 0). As **Q188-7 e Q188-8** (D-N584) e as **Q220-1, Q220-5 e Q221-1 a Q221-13** (D-N588) **entraram na revisão 45** (documentos 222 e 223, D-N589; **1.239 entidades e 14.364 campos**), com o desenho em campos escrito por mim no documento 222. Dos documentos 215 e 216, **só a Q215-5 segue aberta** (seção 1.39) e só trava a carga por UF. As perguntas e pendências do contador ficam somente no documento 188 (**359 perguntas**, C1 a C359). Em 16/11/2026 você também enviou o JSON da NCM, o PDF da NBS 2.0 e o IT 2025.002 v1.70: geradas as **cargas da NCM (15.428 linhas) e da NBS (920 códigos, depois refeita com 1.282 nós na `Carga45`)** e lido o IT (documento 220, D-N586). Depois você enviou 22 tabelas do Portal da NF-e e da Receita, a NT 2023.01 e 12 atos da NBS: geradas a **carga do Portal** (18 CST, 173 cClassTrib, 13 cCredPres, 619 CFOP, 5.571 municípios, 261 países, 68 unidades, 1.031 produtos ANP, 10.516 NCM com unidade estatística e 23 formas de pagamento) e as **propostas** do documento 221 (D-N587). Em 16/11/2026 você respondeu "Q220-1 e Q220-5 - sim para duas" e "Q221-1 a Q221-13 - prosseguir com as recomendações" (D-N588): **aprovadas e consolidadas na revisão 45** (documentos 222 e 223, D-N589; carga na pasta `Carga45-20261116`); resta só a definição de **DIR** (seção 0).
+**Este é o único arquivo de pendências do projeto** (regra de Alberto, 23/10/2026) e **guarda só o que está em aberto** (pedidos dele de 26/10/2026 e de 12/11/2026): o que já foi respondido ou aplicado saiu daqui e está no documento 14 (histórico de decisões) e nos relatórios de consolidação. **Estado em 16/11/2026** (em 16/11 você enviou 32 respostas parciais do contador, D-N583, e aprovou as Q188-7 a Q188-9, D-N584; em 16/11 você também aprovou a Q188-6, aplicar as 21 respostas que confirmam ou ajustam sem conflito, D-N590, desenhada no documento 224; em 16/11 você aprovou também as Q224-1 a Q224-3, D-N591; a aplicação das 21 respostas **entrou na revisão 46**, documentos 224 e 225, D-N592; **1.239 entidades e 14.365 campos**): o documento 218 (Bloco 1 de combustíveis e usina, com a cadeia de comercialização, o distribuidor e o Anexo da Resolução 884) foi **aprovado** nas Q218-1 a Q218-17 (D-N581) e **entrou na revisão 44** (documento 219, D-N585; **1.229 entidades e 14.261 campos**), sobre a revisão 43 (documento 217; 1.220 e 14.154); na **versão 2.2** (D-N582) a Resolução 884 foi conferida no Diário Oficial, que você enviou; a **Q218-18** (Solução de Consulta Cosit 223/2023) você respondeu "Sim" em 16/11/2026 (D-N587; o aviso A22 já estava no desenho) e resta a Q218-8, reduzida ao Ajuste SINIEF (seção 0). As **Q188-7 e Q188-8** (D-N584) e as **Q220-1, Q220-5 e Q221-1 a Q221-13** (D-N588) **entraram na revisão 45** (documentos 222 e 223, D-N589; **1.239 entidades e 14.364 campos**, depois 14.365 na revisão 46), com o desenho em campos escrito por mim no documento 222. Dos documentos 215 e 216, **só a Q215-5 segue aberta** (seção 1.39) e só trava a carga por UF. As perguntas e pendências do contador ficam somente no documento 188 (**360 perguntas**, C1 a C360). Em 16/11/2026 você também enviou o JSON da NCM, o PDF da NBS 2.0 e o IT 2025.002 v1.70: geradas as **cargas da NCM (15.428 linhas) e da NBS (920 códigos, depois refeita com 1.282 nós na `Carga45`)** e lido o IT (documento 220, D-N586). Depois você enviou 22 tabelas do Portal da NF-e e da Receita, a NT 2023.01 e 12 atos da NBS: geradas a **carga do Portal** (18 CST, 173 cClassTrib, 13 cCredPres, 619 CFOP, 5.571 municípios, 261 países, 68 unidades, 1.031 produtos ANP, 10.516 NCM com unidade estatística e 23 formas de pagamento) e as **propostas** do documento 221 (D-N587). Em 16/11/2026 você respondeu "Q220-1 e Q220-5 - sim para duas" e "Q221-1 a Q221-13 - prosseguir com as recomendações" (D-N588): **aprovadas e consolidadas na revisão 45** (documentos 222 e 223, D-N589; carga na pasta `Carga45-20261116`); resta só a definição de **DIR** (seção 0).
 
 Mlegate · Alberto Beyeler · Novembro de 2026
 
@@ -18,7 +18,7 @@ Os outros envios seus estão na seção 3.2.
 
 # 1. Para você responder
 
-**Em aberto para você:** 1.3 (Q132-5), 1.4 (Q130-1 a Q130-3, Q130-5, Q93-3b, Q93-8 e Q118-1), 1.4a (Q139-1 e Q139-2), 1.5b (Q140-5b, 5d e 5e e Q180-3), 1.13 (desenhos adiados), 1.24 (Q179-1 e Q179-3), 1.28 (Q160-8 e Q160-9, sem efeito no dicionário), **1.39 (Q215-5, documento 215)**, **1.42 (Q188-6, respostas do contador)** e os itens avulsos das seções 1.6 e 1.7. A numeração foi mantida para não quebrar as referências dos outros documentos; as seções sem pergunta aberta saíram.
+**Em aberto para você:** 1.3 (Q132-5), 1.4 (Q130-1 a Q130-3, Q130-5, Q93-3b, Q93-8 e Q118-1), 1.4a (Q139-1 e Q139-2), 1.5b (Q140-5b, 5d e 5e e Q180-3), 1.13 (desenhos adiados), 1.24 (Q179-1 e Q179-3), 1.28 (Q160-8 e Q160-9, sem efeito no dicionário), **1.39 (Q215-5, documento 215)** e os itens avulsos das seções 1.6 e 1.7. A numeração foi mantida para não quebrar as referências dos outros documentos; as seções sem pergunta aberta saíram.
 
 ## 1.3 Documentos 99, 125, 126, 127, 128, 131, 132 e 135: lucro presumido da ECF, caixa, atividade de presunção e Refis (Q132-5)
 
@@ -121,43 +121,9 @@ As **Q215-1 a Q215-4** e a **Q215-6** foram aprovadas e entraram na **revisão 4
 |---|---|---|
 | Q215-5 | Quando for dar a carga, envia os textos oficiais que ainda faltam: o Anexo X do RICMS-MT e a Portaria 195/2019, o Anexo 1 do RICMS-BA (para eu transcrever os valores), a lista de itens e o regulamento atual de ST do RICMS-PR (a Resolução SEFA 20/2017, atualizada até a 928/2018, que você enviou em 12/11/2026, confirma 36,56% e 71,78%, mas é de 2018 e não traz a lista de itens), o Decreto 90.309/2023 de AL e os Protocolos 97/10, 93/26, 94/26 e 96/26 em PDF do CONFAZ? (AC, AM e DF já foram lidos.) | Enviar, sem pressa (só trava a carga) |
 
-## 1.42 Documento 188: respostas parciais do contador, de 16/11/2026 (Q188-6)
-
-Você enviou o documento 188 com **32 perguntas respondidas** (D-N583). Em 11 delas a resposta basta; em 16 ela responde só uma parte (o resto fica no próprio bloco, em "Ainda aberto"); em 3 não resolve a pergunta (C9, C13 e C281); e em 4 (C27, C33, C324 e C325) ela divergia do que o ERP tem, o que você decidiu nas Q188-7 a Q188-9. Duas respostas **não aplico**: a C14(f) (dia não útil "postergado") contradiz a regra por tributo do dicionário, e a C249 se contradiz ((a) "fica" e (c) "do IPI não entram"); os dois voltam ao contador como esclarecimento. As respostas coladas de pesquisa (C22(b), C208 e C209) não contam como confirmação por fonte oficial.
-
-**Q188-6 (aplicar as respostas que confirmam ou ajustam sem conflito; 21 perguntas).** Nenhuma cria entidade ou campo; mudam textos, padrões e situação do dado:
-
-| Pergunta | O que muda |
-|---|---|
-| C6 | Y520 faltando com `IND_PGTO_EXT` = "S": aviso, sem bloqueio; o usuário completa no ERP ou no PVA |
-| C7 | Funções e fórmulas de 2026 confirmadas: liberar as linhas paradas pela Q93-4 |
-| C8 | Imposto devido transportado: N630A 26 (IRPJ) e N670 21 (CSLL); os outros quatro seguem abertos |
-| C10 | 11 fórmulas de 2026 conferidas com a lei: marcar como validadas |
-| C11 | M350R 345 lida como `M350(170)`: validada |
-| C14 | Vencimentos: valores iniciais validados; IRRF geral dia 20; financeiras dia 20; percentuais por empresa; classificação 85; regra de dia não útil **não** aplicada |
-| C20 | Crédito de aquisição: competência = data de entrada da nota; retenção na fonte: liquidação (F600) |
-| C21 | Limite de R$ 3,75 milhões: validado para 2026; 2027 pode mudar |
-| C22 | ISS fixo da SUP: valor da faixa multiplica a quantidade de profissionais (já é assim no dicionário) |
-| C25 | EFD-Contribuições: sem fim por data fixa; no caixa, continua até a última parcela de 2026 recebida |
-| C28 | Feriado local não muda o prazo federal (só nacionais) |
-| C32 | Notas sem chave são válidas: manter `Chave_Acesso` condicional ao modelo |
-| C207 | `ID_Valor_Centro_Custo` do I051 só quando a conta se divide entre linhas referenciais |
-| C226 | Bons antecedentes fiscais: sem critério prático; o ERP só registra e avisa |
-| C227 | Multa de mora volta a correr após a notificação; juros sobre a multa punitiva confirmados |
-| C232 | IS na industrialização por encomenda: o executor não é contribuinte pelo serviço; o IS recai na venda do encomendante |
-| C256 | Alíquota do IS do veículo: 4 casas; 1,21 sobre a alíquota exata; 1,17 antes do arredondamento |
-| C258 | Potência: kW na ficha, sem derivar do cv (padrão "não deriva" confirmado) |
-| C261 | Táxi: motorização lida como etanol, flex, GNV adaptado, híbrido flex ou etanol, até 2.000 cm³; adendo vira aviso |
-| C262 | IS: dado de potência e propulsão na nota e no cadastro; efeito em ECD e ECF só pela contabilidade |
-| C279 | Autopeças: declaração do comprador basta; vendedor recolhe a diferença; validade obrigatória; destinação mista por item |
-
-| Id | Pergunta | Recomendação |
-|---|---|---|
-| Q188-6 | Aplicar as respostas da tabela acima? | Sim |
-
 # 2. Para o contador
 
-**Esta seção não guarda mais perguntas.** Por regra de Alberto (09/11/2026, D-N501), **todas as perguntas e pendências do contador ficam somente no documento 188**, com cada pergunta detalhada (de onde vem, texto completo, o que o ERP faz enquanto isso e campos para resposta, data e situação). São **359 perguntas** (C1 a C359). Quando o contador responder, atualizo o 188 e, para o que é de Alberto, esta lista.
+**Esta seção não guarda mais perguntas.** Por regra de Alberto (09/11/2026, D-N501), **todas as perguntas e pendências do contador ficam somente no documento 188**, com cada pergunta detalhada (de onde vem, texto completo, o que o ERP faz enquanto isso e campos para resposta, data e situação). São **360 perguntas** (C1 a C360). Quando o contador responder, atualizo o 188 e, para o que é de Alberto, esta lista.
 
 | Parte do documento 188 | Assunto | Perguntas |
 |---|---|---|
@@ -184,6 +150,7 @@ Você enviou o documento 188 com **32 perguntas respondidas** (D-N583). Em 11 de
 | Parte 21 | Documento 216: Imposto Seletivo de bebidas, fumígenos, minerais e prognósticos (álcool etílico e mostos, fumígenos 24.01 e 24.04, valor de referência, IPCA, prognósticos, pequeno produtor, gás natural, minerais, importação, bebidas açucaradas e embalagem primária) | 11 (C324 a C334) |
 | Parte 22 | Documento 218: Bloco 1 de combustíveis e usina (Ajuste SINIEF 14/2025, norma da ANP, perda e ganho, estoque de abertura, data do volume recebido, tanques interligados, número do bico e da bomba, intervenção, contador no máximo, produtos do 1300, bombas e lacres, usina: produto, balanço e resíduos; versão 2: limite de 0,6%, fornecedor do posto, distribuidor, grande consumidor, cupom, venda a outro revendedor, versão 2.1: Anexo da 884, transferência entre tanques, termos; versão 2.2: Diário Oficial e SC Cosit 223/2023) | 23 (C335 a C357) |
 | Parte 23 | Documento 221: tabelas do Portal da NF-e (`620003` sem marca de grupo monofásico e valores 1 e 2 do `indComb` da tabela de CFOP) | 2 (C358 e C359) |
+| Parte 24 | Documento 224: aplicação das respostas do contador (a C14(d) vale para a tabela de retenção do Mafon, que é legal?) | 1 (C360) |
 
 # 3. Para a equipe e fontes oficiais
 

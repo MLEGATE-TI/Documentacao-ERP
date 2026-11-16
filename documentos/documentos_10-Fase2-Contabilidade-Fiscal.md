@@ -7,6 +7,8 @@ retenções na fonte, provisão para devedores duvidosos, variação cambial
 e obrigações acessórias --- sobre o plano de contas e o lançamento
 contábil já definidos na Fase 0*
 
+*Revisão 64 --- consolidação da revisão 46 do dicionário (documento 224 (aplicação das 21 respostas do contador de 16/11/2026, Q188-6, D-N590, e Q224-1 a Q224-3, D-N591)): 14 entidades existentes alteradas; campo Eh_Imposto_Devido (C8, Q224-2) e textos das respostas C6, C7, C10, C11, C14, C20, C21, C22, C25, C207, C226, C227, C232, C256, C258, C261, C262 e C279.*
+
 *Revisão 63 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 8 entidades novas (anexo, seção 58); 6 entidades existentes alteradas; Cad_Cclasstrib com Tipo_Aliquota e Numero_Anexo_Lc_214 e sem Indicador_Duimp (Q221-2, Q221-3 e Q221-5); crédito presumido com dois valores (Q221-7); opção de escrituração por empresa (Q188-8); campos de descarte no arquivo (Q188-7).*
 
 *Revisão 62 --- consolidação da revisão 44 do dicionário (documento 218 (Bloco 1 de combustíveis e usina, versão 2.2), com as respostas de Alberto de 12/11/2026 (Q218-1 a Q218-17)): 9 entidades novas (anexo, seção 57); 9 entidades novas do documento 218 (Bloco 1 de combustíveis e usina; 107 campos).*
@@ -671,7 +673,7 @@ livre.*
 | **Modalidade_Extincao_Debito** | *enumeração {split_payment, rad, pcont, compensacao, responsavel}, opcional* | Novo na revisão 3 (documento 35). Como o débito do fornecedor foi extinto (Split Payment, recolhimento pelo adquirente ou pagamento do contribuinte): o crédito só é apropriado quando o débito é extinto. Revisão 31 (documento 157, seção 4.6): compensacao (art. 26, I) e responsavel (pagamento pelo responsável, art. 26, V), que o art. 57 trata de forma diferente. |
 | **ID_Dfe_Evento_Origem** | *referência (Mov_Dfe_Evento, opcional)* | Novo na revisão 3 (documento 42). Preenchido só quando Origem=evento_dfe: o evento 211110 homologado (cStat 135) de que o crédito presumido nasce. Revisão 6 (documento 62, D-N148): na NF-e ABI recebida, o evento de pagamento de parcela traz o IBS e a CBS da parcela e o crédito do adquirente nasce dele (Origem=evento_dfe), repartido pelo percentual do evento de apropriação (Mov_Dfe_Evento_Adquirente); a regra de direito e o momento são parâmetros do Motor de Regras, a confirmar com o Anexo I (Q62-3). |
 | **ID_Empresa** | *referência (Cad_Empresa)* | Novo na revisão 3 (documento 44). Titular do crédito; o crédito manual não tem nota, e sem este campo não há titular (1100 e 1500). |
-| **Competencia_Apuracao** | *competência* | Novo na revisão 3 (documento 44). Competência da operação que gerou o crédito (PER_APU_CRED), e não a da liquidação; para PIS e Cofins o crédito nasce nela (D-N86; Q-F-3 e Q-1-2). |
+| **Competencia_Apuracao** | *competência* | Novo na revisão 3 (documento 44). Competência da operação que gerou o crédito (PER_APU_CRED), e não a da liquidação; para PIS e Cofins o crédito nasce nela (D-N86; Q-F-3 e Q-1-2). Revisão 46 (documento 224; D-N590: C20): na aquisição de produto ou serviço (nota fiscal) a competência é a **data de entrada da nota**, e não a de emissão; no PIS e na Cofins **retidos na fonte** o crédito nasce na **liquidação financeira** e entra no bloco F600 da EFD-Contribuições (resposta do contador de 16/11/2026). Segue aberto conferir na consolidação que a data usada é a de entrada. |
 | **ID_Tipo_Credito** | *referência (Cad_Classe_Sistema, domínio = tipo_credito_pis_cofins, opcional)* | Novo na revisão 3 (documento 44). Tipo de crédito da Tabela 4.3.6 (COD_CRED); obrigatório quando o imposto é PIS ou Cofins. |
 | **Origem_Credito_Efd** | *enumeração {operacoes_proprias, sucessao}* | Novo na revisão 3 (documento 44). Origem do crédito na EFD-Contribuições (IND_CRED_ORI): operações próprias ou sucessão (incorporação, cisão ou fusão). |
 | **ID_Origem_Evento** | *referência genérica, opcional* | Novo na revisão 3 (documento 44). Aponta o estoque de abertura (Mov_Credito_Estoque_Abertura) que originou o crédito, quando Origem = estoque_abertura. Revisão 7 (documento 61): com Origem=transicao_cbs aponta a devolução, o direito de crédito do imobilizado (Cad_Ativo_Direito_Credito_Pis_Cofins) ou o Mov_Estoque_Abertura_Cbs. |
@@ -708,6 +710,8 @@ livre.*
 *Revisão 39 --- valores de enumeração novos: Origem (+presumido_automotivo).*
 
 *Revisão 40 --- valores de enumeração novos: Origem (+credito_financeiro_mover).*
+
+*Revisão 46 --- campos alterados: Competencia_Apuracao.*
 
 Mov_Credito_Fiscal_Aplicacao
 
@@ -2026,7 +2030,7 @@ independentes da vigência do código referencial (acima).*
 | **ID_Conta_Contabil** | *referência (Cad_Conta_Contabil, Fase 0)* | --- |
 | **ID_Empresa** | *referência (Cad_Empresa, Fase 0)* | A empresa para a qual este mapeamento vale. |
 | **ID_Codigo_Referencial** | *referência (Cad_Plano_Referencial_Conta)* | Só um código VIGENTE (Vigencia_Fim vazia, ou a data de referência dentro da janela) pode ser escolhido --- mesma regra que o PVA aplica na validação real. Revisão 19 (D-N337, Q91-4): o ERP bloqueia o mapeamento de código que não pertence ao plano referencial da empresa para o período (o plano que a regra do ID_Plano_Referencial de Cad_Ecf_Tabela_Dinamica devolve); não há aviso no lugar do bloqueio. Mais adiante entra uma relação dos itens ainda não referenciados, como consulta, sem campo novo agora. |
-| **ID_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | Revisão 34 (documento 183, seção 4.1; D-N495): Revisão 34 (documento 183, seção 4.1): I051: a chave desde o leiaute 9. Conta e centro de custo mapeiam para um só código referencial. Vazio: o código vale para a conta em qualquer centro de custo. |
+| **ID_Valor_Centro_Custo** | *referência (Cad_Dimensao_Contabil_Valor), opcional* | Revisão 34 (documento 183, seção 4.1; D-N495): Revisão 34 (documento 183, seção 4.1): I051: a chave desde o leiaute 9. Conta e centro de custo mapeiam para um só código referencial. Vazio: o código vale para a conta em qualquer centro de custo. Revisão 46 (documento 224; D-N590: C207): o I051 só leva centro de custo quando **parte** da conta é referenciada a uma linha do plano referencial e **outra parte** a outra; conta 100% numa linha não informa centro de custo. Não é automático por obra no RET. O campo segue opcional e só se preenche quando a conta se divide entre linhas referenciais. |
 | **Vigencia_Inicio** | *data* | Vigência PRÓPRIA do mapeamento --- distinta da vigência do código referencial em si, acima: a empresa pode reclassificar uma conta para outro código sem que o código antigo tenha sido descontinuado. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
@@ -2034,6 +2038,8 @@ independentes da vigência do código referencial (acima).*
 *Revisão 19 --- campos alterados: ID_Codigo_Referencial.*
 
 *Revisão 34 --- campos novos: ID_Valor_Centro_Custo.*
+
+*Revisão 46 --- campos alterados: ID_Valor_Centro_Custo.*
 
 Estrutura de Demonstrativo (Bloco J / I052)
 
@@ -2593,36 +2599,16 @@ com sua própria janela de vigência.
 *Vigência: sim --- o próprio par Vigencia_Inicio/Vigencia_Fim é a
 vigência deste cadastro.*
 
-  --------------------- ----------------- ----------------------------------------
-  **Campo**             **Tipo lógico**   **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Obrigacao** | *identificador* | --- |
+| **Codigo** | *código (até 30)* | SPED_FISCAL, SPED_CONTRIBUICOES, ECD, ECF, REINF, DCTFWEB, MIT, ESCRITURACAO_IBS_CBS, outro --- cadastro aberto, uma nova obrigação (ou uma sucessora ainda sem nome definitivo) é uma linha nova, não uma mudança de estrutura. |
+| **Descricao** | *texto* | --- |
+| **Vigencia_Inicio** | *data* | Para ESCRITURACAO_IBS_CBS, 2026 (início da fase de teste). |
+| **Vigencia_Fim** | *data* | Para SPED_FISCAL e SPED_CONTRIBUICOES, esperado por volta de 2033 --- ainda não cadastrado como data fechada, por falta de confirmação oficial fina o suficiente; campo pronto para quando essa data for publicada. Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. Revisão 46 (documento 224; D-N590: C25): o "por volta de 2033" vale só para o SPED_FISCAL. Para a EFD-Contribuições o contador diz que, a princípio, ela deixa de existir com o fim do PIS e da Cofins em 2026 e a CBS em janeiro de 2027, podendo ser prorrogada; **nenhuma data fixa na carga** (D-N80). No regime de caixa, a competência de 2026 recebida a partir de 2027 obriga a EFD-Contribuições **até a última parcela recebida**: o Motor mantém a obrigação gerável enquanto houver parcela de 2026 a receber. Segue aberto se há ato oficial. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
-  **ID_Obrigacao**      *identificador*   ---
-
-  **Codigo**            *código (até 30)* SPED_FISCAL, SPED_CONTRIBUICOES, ECD,
-                                          ECF, REINF, DCTFWEB, MIT,
-                                          ESCRITURACAO_IBS_CBS, outro --- cadastro
-                                          aberto, uma nova obrigação (ou uma
-                                          sucessora ainda sem nome definitivo) é
-                                          uma linha nova, não uma mudança de
-                                          estrutura.
-
-  **Descricao**         *texto*           ---
-
-  **Vigencia_Inicio**   *data*            Para ESCRITURACAO_IBS_CBS, 2026 (início
-                                          da fase de teste).
-
-  **Vigencia_Fim**      *data*            Para SPED_FISCAL e SPED_CONTRIBUICOES,
-                                          esperado por volta de 2033 --- ainda não
-                                          cadastrado como data fechada, por falta
-                                          de confirmação oficial fina o
-                                          suficiente; campo pronto para quando
-                                          essa data for publicada. Sempre
-                                          preenchida: 31/12/9999 quando o fim é
-                                          indefinido (versão vigente) ---
-                                          convenção da Fase 0, seção 2.
-
-  **Motivo_Vigencia**   *texto, opcional* Por que esta versão foi criada.
-  --------------------- ----------------- ----------------------------------------
+*Revisão 46 --- campos alterados: Vigencia_Fim.*
 
 *Patch construído na Fase 0 revisão 23, neste mesmo \"consolidar\":
 Cad_Conta_Contabil ganha ID_Bloco_Obrigacao (referência a
@@ -3068,11 +3054,11 @@ revisado ano a ano, é uma linha com vigência, e não um valor no código.
 |--------------------|----------------------------|----------------------------------------|
 | **ID_Presuncao_Acrescimo** | *identificador* | --- |
 | **ID_Imposto** | *referência (Cad_Imposto) --- identidade* | Novo na revisão 4 (documento 51). IRPJ ou CSLL. Uma linha por imposto e por vigência: o acréscimo vale desde 01/01/2026 para o IRPJ e desde 01/04/2026 para a CSLL (LC 224, art. 14, I, "a", e III). |
-| **Limite_Receita_Anual** | *número* | A receita bruta anual acima da qual se aplica o acréscimo. Só a parcela que exceder o limite recebe o acréscimo. Carga: IRPJ 5.000.000 desde 01/01/2026; CSLL 3.750.000 de 01/04/2026 a 31/12/2026 (três trimestres de R$ 1,25 milhão; só fonte secundária, provisório) e 5.000.000 desde 01/01/2027. |
+| **Limite_Receita_Anual** | *número* | A receita bruta anual acima da qual se aplica o acréscimo. Só a parcela que exceder o limite recebe o acréscimo. Carga: IRPJ 5.000.000 desde 01/01/2026; CSLL 3.750.000 de 01/04/2026 a 31/12/2026 (três trimestres de R$ 1,25 milhão; validado pelo contador em 16/11/2026 (Revisão 46, documento 224, D-N590: C21): é o limite vigente em 2026 e pode mudar em 2027, por isso a linha de 2027 segue provisória; a resposta não cita a MP 1.303/2025 (leitura minha, não conferida na fonte: sem efeito sobre o limite)) e 5.000.000 desde 01/01/2027. |
 | **Limite_Receita_Trimestral** | *número, opcional* | Novo na revisão 5 (documento 53, D-N125). Limite de receita do trimestre (IN RFB 2.305, art. 15, § 2º, na redação da IN RFB 2.306). Carga: 1.250.000 no IRPJ e, provisório, também na CSLL. |
 | **Percentual_Acrescimo** | *número* | 10, hoje. Incide sobre os percentuais de presunção de IRPJ e CSLL. |
 | **Fundamento_Legal** | *texto, opcional* | --- |
-| **Situacao_Dado** | *enumeração {provisorio, validado}* | Novo na revisão 4 (documento 51). Fase 0, seção 9. Toda a carga entra provisória até o texto oficial das INs RFB 2.305/2025 e 2.306/2026. |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | Novo na revisão 4 (documento 51). Fase 0, seção 9. Toda a carga entra provisória até o texto oficial das INs RFB 2.305/2025 e 2.306/2026. Revisão 46 (documento 224; D-N590: C21): a linha da CSLL de 01/04/2026 a 31/12/2026 (R$ 3.750.000) passa a **validado**; a linha de 2027 (R$ 5.000.000) e o limite trimestral de R$ 1.250.000 na CSLL seguem provisórios (a resposta cobre só o limite anual de 2026). |
 | **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia, opcional)* | Novo na revisão 4 (documento 51). Validação pela régua de aprovação (Fase 0, seção 9). |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
@@ -3081,6 +3067,8 @@ revisado ano a ano, é uma linha com vigência, e não um valor no código.
 *Revisão 5 --- campos novos: Limite_Receita_Trimestral.*
 
 *Revisão 4 --- campos novos (documento 51): ID_Imposto, Situacao_Dado, ID_Instancia_Aprovacao; campos alterados (documento 51): Limite_Receita_Anual.*
+
+*Revisão 46 --- campos alterados: Situacao_Dado, Limite_Receita_Anual.*
 
 Cad_Presuncao_Acrescimo_Periodo
 
@@ -4855,7 +4843,7 @@ e classificação, com o código de receita e a frequência de apuração.
 | **Evento_Reinf** | *enumeração {r4010, r4020, r4040, r4080}* | Revisão 18. O evento a que a linha pertence. |
 | **Tributo** | *enumeração {irpf, rra, irpj, csll, cofins, pis_pasep, agregado}* | Revisão 18. Coluna Tributo das planilhas: irpf e rra no R-4010; irpj, csll, cofins, pis_pasep e agregado no R-4020; irpj nos R-4040 e R-4080. |
 | **Residencia_Fiscal_Exterior** | *booleano* | Revisão 18. Verdadeiro para o pagamento a residente ou domiciliado no exterior. |
-| **Aplica_Classificacao_85** | *enumeração {nao_se_aplica, declarante_classificacao_85, demais_declarantes}, opcional* | Revisão 18, só R-4020. Coluna Classificação Tributária 85: declarante_classificacao_85 para Sim, demais_declarantes para Não, conforme o texto acima. |
+| **Aplica_Classificacao_85** | *enumeração {nao_se_aplica, declarante_classificacao_85, demais_declarantes}, opcional* | Revisão 18, só R-4020. Coluna Classificação Tributária 85: declarante_classificacao_85 para Sim, demais_declarantes para Não, conforme o texto acima. Revisão 46 (documento 224; D-N590: C14(e)): a classificação tributária 85 do declarante é "Ente Federativo, Órgãos da União, Autarquias e Fundações Públicas" (contador, 16/11/2026): `declarante_classificacao_85` vale quando o declarante é órgão público. |
 | **Codigo_Receita** | *código (6)* | Código de receita do DARF com a extensão, zeros à esquerda preservados. Revisão 18: passou de 4 para 6 posições. |
 | **Periodo_Apuracao** | *enumeração {mensal, decendial, semanal, quinzenal, diario}* | Revisão 18. Coluna Frequência de Apuração. O pagamento a residente no exterior é diário. |
 | **Aliquota_Padrao** | *número, opcional* | Sugestão de alíquota. |
@@ -4865,6 +4853,8 @@ e classificação, com o código de receita e a frequência de apuração.
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 4 --- campos novos (documento 51): Aliquota_Padrao_Tributacao_Favorecida.*
+
+*Revisão 46 --- campos alterados: Aplica_Classificacao_85.*
 
 21.2.3. Atividades da CPRB (Tabela 09)
 
@@ -12721,12 +12711,14 @@ A apuração trimestral do ISS fixo de uma sociedade uniprofissional: quantidade
 | **ID_Iss_Fixo_Tabela** | *referência (Cad_Iss_Fixo_Tabela)* | A linha da tabela usada: rastreabilidade. |
 | **Quantidade_Profissionais** | *número* | Contagem de profissionais habilitados do trimestre. |
 | **Valor_Por_Profissional** | *número* | Gravado, nunca recalculado. |
-| **Valor_Devido** | *número* | Quantidade de profissionais vezes o valor por profissional. |
+| **Valor_Devido** | *número* | Quantidade de profissionais vezes o valor por profissional. Revisão 46 (documento 224; D-N590: C22(a)): o contador confirmou em 16/11/2026 que o valor da faixa é **por profissional habilitado**, multiplicado pela quantidade. O significado de "uso restrito" (C22 b) segue aberto: `Cad_Iss_Fixo_Tabela.Uso_Restrito` não muda. |
 | **Data_Vencimento** | *data* | Vem do calendário de prazos (Cad_Regra_Vencimento: dia 10 depois do fim do trimestre). |
 | **Situacao** | *enumeração {calculada, guia_emitida, paga, retificada, cancelada}* | Etapa da apuração. |
 | **Numero_Guia** | *código (até 30), opcional* | Número do DUC (Demonstrativo Unificado do Contribuinte). |
 | **ID_Titulo** | *referência (Mov_Titulo, opcional)* | Título a pagar que liga ao Contas a Pagar. |
 | **Observacao** | *texto, opcional* | Anotação do contador. |
+
+*Revisão 46 --- campos alterados: Valor_Devido.*
 
 Mov_Iss_Fixo_Apuracao_Profissional
 
@@ -14785,7 +14777,7 @@ Perfil anual de operações com o exterior da empresa para a ECF: uma linha por 
 | **ID_Perfil_Indicador** | *identificador* | --- |
 | **ID_Empresa** | *referência (Cad_Empresa)* | A empresa. Parte da identidade, com o ano e o indicador. |
 | **Ano_Calendario** | *número* | O ano da ECF. |
-| **ID_Indicador** | *referência (Cad_Classe_Sistema, domínio = indicador_perfil_ecf)* | Qual indicador, num domínio fechado. Revisão 17 (D-N307, D-N308): o domínio tem 28 valores, um por indicador de sim ou não do registro 0020 do leiaute 12 (campos 4 a 31), com o nome do campo do manual na descrição de cada valor; indicador novo da Receita é linha nova do domínio. O ERP calcula operacao_exterior (documentos e participante estrangeiro), operacao_vinculada_ou_favorecida (contraparte relacionada, país de Cad_Jurisdicao_Tributacao_Favorecida ou regime de Cad_Regime_Fiscal_Privilegiado, todos com vigência) e, em parte, participacao_exterior; os demais, o contador confirma. A interposta pessoa só entra por confirmação do contador. O ERP repete em aviso as regras entre indicadores do programa da Receita: IND_OP_VINC só pode ser sim se IND_OP_EXT for sim; entidade imune ou isenta tem IND_OP_EXT e IND_PART_EXT não; lucro presumido sem Refis tem IND_PART_EXT não. |
+| **ID_Indicador** | *referência (Cad_Classe_Sistema, domínio = indicador_perfil_ecf)* | Qual indicador, num domínio fechado. Revisão 17 (D-N307, D-N308): o domínio tem 28 valores, um por indicador de sim ou não do registro 0020 do leiaute 12 (campos 4 a 31), com o nome do campo do manual na descrição de cada valor; indicador novo da Receita é linha nova do domínio. O ERP calcula operacao_exterior (documentos e participante estrangeiro), operacao_vinculada_ou_favorecida (contraparte relacionada, país de Cad_Jurisdicao_Tributacao_Favorecida ou regime de Cad_Regime_Fiscal_Privilegiado, todos com vigência) e, em parte, participacao_exterior; os demais, o contador confirma. A interposta pessoa só entra por confirmação do contador. O ERP repete em aviso as regras entre indicadores do programa da Receita: IND_OP_VINC só pode ser sim se IND_OP_EXT for sim; entidade imune ou isenta tem IND_OP_EXT e IND_PART_EXT não; lucro presumido sem Refis tem IND_PART_EXT não. Revisão 46 (documento 224; D-N590: C6): com `IND_PGTO_EXT` (ou `IND_REC_EXT`) em "S" e sem Y520, o Motor avisa o contador e **não bloqueia** o fechamento nem a geração; o indicador fica "S" e o usuário completa o Y520 no ERP ou no PVA da Receita (resposta do contador de 16/11/2026). Segue aberto se o Y520 é obrigatório nesse caso (pergunta 6 do documento 98, à Receita). |
 | **Indicador_Calculado** | *booleano, opcional* | O que o ERP encontrou nos documentos do ano. Vazio quando o ERP não tem fonte (por exemplo, câmbio). |
 | **Indicador_Confirmado** | *booleano, opcional* | O que o contador confirmou. Quando difere do calculado, a observação é obrigatória. |
 | **ID_Usuario_Confirmacao** | *referência (Cad_Usuario, opcional)* | Quem confirmou. |
@@ -14793,6 +14785,8 @@ Perfil anual de operações com o exterior da empresa para a ECF: uma linha por 
 | **Observacao** | *texto, opcional* | Motivo da correção ou da divergência. |
 
 *Revisão 17 --- campos alterados: ID_Indicador.*
+
+*Revisão 46 --- campos alterados: ID_Indicador.*
 
 Cad_Ecf_Parametro
 
@@ -14935,10 +14929,11 @@ As linhas das tabelas dinâmicas de linhas da ECF (M300, M350, N500 a N670, P130
 | **Descricao** | *texto* | --- |
 | **Tipo_Linha** | *enumeração {rotulo, editavel, calculo_alteravel, calculo_nao_alteravel}, opcional* | R, E, CA e CNA do manual; vazio na tabela padrão da Parte B. |
 | **Formato** | *código (até 3), opcional* | Como publicado: N, NS, LD, T, TD, D; o significado de cada um é conferido na carga com o manual. |
-| **Formula** | *texto, opcional* | A fórmula publicada, como texto, sem interpretação nem execução. Revisão 24 (D-N365, documentos 93 e 118, Q93-1 e Q93-2, respondidas por Alberto em 22/10/2026): as 11 linhas da cadeia do lucro real cuja fórmula trazia duas versões no mesmo texto (N610 linhas 10, 15 e 50; N620 18, 19 e 26; N630A 17, 18 e 26; N630B 23; N630C 23) estão **divididas na carga em duas linhas** (até 31/12/2025 e a partir de 01/01/2026), cada uma com a sua vigência: 22 linhas no lugar de 11, e a carga de linhas vai de 4.475 para 4.486. Nada muda na estrutura: a divisão usa Vigencia_Inicio, Vigencia_Fim e Motivo_Vigencia, que já existiam. M350A linha 171 e M350R linha 345 trazem M(344) no manual da Receita; a leitura M350(344) está confirmada e a fórmula é tratada assim, com nota. Revisão 25 (D-N372 e D-N373, documentos 99 e 126, Q99-6, respondida por Alberto em 27/10/2026): as funções novas do presumido (ARRED, CASO, PERIODO_PRIMEIRO, PERIODO_ULTIMO, CONTAR, ANO, COD_NAT e a referência a outro período) são **leitura provisória** até a Receita responder (documento 98, pergunta 5). O teste com uma ECF real de presumido de 2025 (documento 126) reproduziu 108 de 108 linhas calculadas do P200, P300, P400 e P500, desde que cada linha calculada seja arredondada a 2 casas antes de alimentar a seguinte; P130, P230 e LC 224 seguem sem prova. Revisão 28 (documento 139, Q139-3 e Q139-4, respondidas por Alberto em 29/10/2026): na N670 linha 21 o motor lê "20.99" onde a carga traz "20:99" e avisa o contador; a carga fica como a Receita publicou. As regras podem mudar de um ano para outro: o ERP guarda uma versão por anocalendário, e o contador confere qual regra vale para 2024 nas N620 18 e 19 e na N630A 18 (carga das três fórmulas de 2024: Q152-4, aberta). |
+| **Formula** | *texto, opcional* | A fórmula publicada, como texto, sem interpretação nem execução. Revisão 24 (D-N365, documentos 93 e 118, Q93-1 e Q93-2, respondidas por Alberto em 22/10/2026): as 11 linhas da cadeia do lucro real cuja fórmula trazia duas versões no mesmo texto (N610 linhas 10, 15 e 50; N620 18, 19 e 26; N630A 17, 18 e 26; N630B 23; N630C 23) estão **divididas na carga em duas linhas** (até 31/12/2025 e a partir de 01/01/2026), cada uma com a sua vigência: 22 linhas no lugar de 11, e a carga de linhas vai de 4.475 para 4.486. Nada muda na estrutura: a divisão usa Vigencia_Inicio, Vigencia_Fim e Motivo_Vigencia, que já existiam. M350A linha 171 e M350R linha 345 trazem M(344) no manual da Receita; a leitura M350(344) está confirmada e a fórmula é tratada assim, com nota. Revisão 25 (D-N372 e D-N373, documentos 99 e 126, Q99-6, respondida por Alberto em 27/10/2026): as funções novas do presumido (ARRED, CASO, PERIODO_PRIMEIRO, PERIODO_ULTIMO, CONTAR, ANO, COD_NAT e a referência a outro período) são **leitura provisória** até a Receita responder (documento 98, pergunta 5). O teste com uma ECF real de presumido de 2025 (documento 126) reproduziu 108 de 108 linhas calculadas do P200, P300, P400 e P500, desde que cada linha calculada seja arredondada a 2 casas antes de alimentar a seguinte; P130, P230 e LC 224 seguem sem prova. Revisão 28 (documento 139, Q139-3 e Q139-4, respondidas por Alberto em 29/10/2026): na N670 linha 21 o motor lê "20.99" onde a carga traz "20:99" e avisa o contador; a carga fica como a Receita publicou. As regras podem mudar de um ano para outro: o ERP guarda uma versão por anocalendário, e o contador confere qual regra vale para 2024 nas N620 18 e 19 e na N630A 18 (carga das três fórmulas de 2024: Q152-4, aberta). Revisão 46 (documento 224; D-N590: C7, C10 e C11): o contador confirmou em 16/11/2026 (a) a leitura das funções `T_DRE`, `DEBITO`, `CREDITO`, `MESES_PERIODO` e `BAL_RED` e que as fórmulas de 2026 seguem a mesma leitura do teste de 2025; (b) que as 11 fórmulas de 2026 (N610 10, 15 e 50; N620 18, 19 e 26; N630A 17, 18 e 26; N630B 23; N630C 23) estão de acordo com a lei, inclusive a soma de volta das deduções e o fator 0,90; (c) que a leitura da M350R linha 345 é `M350(343) - M350(344) + M350(170)` (a Receita publicou `M(170)`; a carga traz a leitura confirmada, como na M350A 171). O Motor passa a calcular essas linhas. A tabela não tem `Situacao_Dado`: a conferência fica registrada em `Motivo_Vigencia` de cada linha. Os efeitos de ECD e ECF do Imposto Seletivo seguem só pela contabilidade (C262). |
 | **Tipo_Lancamento** | *enumeração {adicao, exclusao, compensacao_prejuizo, lucro}, opcional* | Só nas M300 e M350 (A, E, P e L). O valor antigo compensacao de Cad_Lalur_Tabela_Dinamica corresponde a compensacao_prejuizo. |
 | **Indicador_Relacao** | *código (até 20), opcional* | Os valores de IND_RELACAO que a linha aceita (1 a 4), como publicado (1 ou 3). |
 | **Tributo** | *enumeração {irpj, csll, ambos}, opcional* | Na tabela padrão da Parte B (I, C, A) e onde a aba traz. |
+| **Eh_Imposto_Devido** | *booleano* | Revisão 46 (documento 224; D-N590): C8, Q224-2: marca a linha que traz o **imposto devido** da aba, que o Motor transporta para `Mov_Apuracao_Irpj_Csll_Item`: N630A linha 26 (IRPJ) e N670 linha 21 (CSLL), resposta do contador de 16/11/2026. Padrão falso. N620 26, N660 18, N630B 23 e N630C 23 ficam sem marca (a resposta não os cita) e o Motor avisa. O campo acompanha a vigência da linha: se o leiaute 13 mudar a numeração, entra versão nova da linha. |
 | **Orientacoes** | *texto, opcional* | O texto de orientação publicado. |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
@@ -14949,6 +14944,8 @@ As linhas das tabelas dinâmicas de linhas da ECF (M300, M350, N500 a N670, P130
 *Revisão 25 --- campos novos: Codigo_Referencia; campos alterados: Formula.*
 
 *Revisão 28 --- campos alterados: Formula.*
+
+*Revisão 46 --- campos novos: Eh_Imposto_Devido; campos alterados: Formula.*
 
 Cad_Ecf_Parte_B_Relacionamento
 
@@ -15129,13 +15126,15 @@ Auto de infração e procedimento fiscal (D-N284; documento 90, seção 5.1). O 
 | **Reincidencia_Especifica** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O auto aplicou a majoração de 50% do art. 341-G, § 1º. |
 | **Em_Regime_Especial_Fiscalizacao** | *booleano, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): A infração foi cometida durante o regime especial de fiscalização; a multa de ofício do IBS e da CBS fica duplicada (art. 341, § 1º). |
 | **ID_Hipotese_Reducao** | *referência (Cad_Classe_Sistema, domínio = hipotese_reducao_multa), opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): A hipótese do art. 341-H em que a multa foi paga com redução: pagamento ou parcelamento, antes ou depois do prazo de impugnação. Domínio novo, quatro valores. |
-| **Percentual_Reducao_Aplicado** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O percentual da redução, como o pagamento a aplicou. O ERP compara com o valor de Cad_Parametro_Legal_Ibs_Cbs (50, 40, 30 e 20; ou 60, 50, 40 e 30 com PNCT ou bons antecedentes) e avisa se diferir. |
+| **Percentual_Reducao_Aplicado** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O percentual da redução, como o pagamento a aplicou. O ERP compara com o valor de Cad_Parametro_Legal_Ibs_Cbs (50, 40, 30 e 20; ou 60, 50, 40 e 30 com PNCT ou bons antecedentes) e avisa se diferir. Revisão 46 (documento 224; D-N590: C226): hoje **não há critério prático** para "bons antecedentes fiscais" (contador, 16/11/2026): o ERP só registra o percentual aplicado e avisa se difere do parâmetro (documento 159, Q159-4, opção A), e a tela avisa que a hipótese pode valer enquanto não houver regulamento. |
 | **Valor_Penalidade_Paga** | *número, opcional* | Revisão 36 (documento 159, seção 4; D-N524 e D-N525: Q159-2, Q159-4 e Q196-1): O valor efetivamente pago da penalidade, depois da redução. |
 | **Ente_Federativo_Lancamento** | *enumeração {uniao, estado, distrito_federal, municipio}, opcional* | Revisão 36 (documento 196, seção 3.3; D-N526: Q196-3): Art. 330, § 1º, VII: o auto de infração do IBS traz o ente federativo responsável pelo lançamento. Quem autuou (nome do órgão) continua em Orgao_Autuante. |
 
 *Revisão 31 --- campos novos: Regime_Suprimento_2026, Data_Intimacao_Suprimento, Data_Atendimento_Suprimento, Penalidade_Extinta.*
 
 *Revisão 36 --- campos novos: ID_Tipo_Penalidade, Percentual_Multa_Aplicado, Valor_Penalidade, Reincidencia_Especifica, Em_Regime_Especial_Fiscalizacao, ID_Hipotese_Reducao, Percentual_Reducao_Aplicado, Valor_Penalidade_Paga, Ente_Federativo_Lancamento.*
+
+*Revisão 46 --- campos alterados: Percentual_Reducao_Aplicado.*
 
 Cad_Regra_Operacao_Equiparada_Cbs
 
@@ -18274,15 +18273,17 @@ Revisão 31 (documento 157, Q157-3 e Q157-7, "Sim para todas" de Alberto em 04/1
 | **ID_Serie_Cotacao_Juros** | *referência (Cad_Serie_Cotacao)* | A série da Selic (acumulada no mês). A fonte e o arredondamento vão ao contador e à equipe (Q157-C7 e Q157-E4). |
 | **Meses_Defasagem_Inicio_Juros** | *número* | 1: os juros contam do primeiro dia do mês seguinte ao vencimento (§ 2º, II). |
 | **Percentual_Juros_Mes_Pagamento** | *número* | 1 (§ 2º, II, parte final). |
-| **Juros_Incidem_Sobre_Multa_Punitiva** | *booleano* | Verdadeiro desde a LC 227 (§ 5º). |
+| **Juros_Incidem_Sobre_Multa_Punitiva** | *booleano* | Verdadeiro desde a LC 227 (§ 5º). Revisão 46 (documento 224; D-N590: C227): confirmado pelo contador em 16/11/2026; a data inicial segue aberta. |
 | **Multa_Punitiva_Apos_Juros** | *booleano* | Verdadeiro: a multa punitiva se calcula depois dos juros (Decreto, art. 572). |
-| **Multa_Mora_Afastada_Com_Multa_Punitiva** | *booleano* | Verdadeiro até a notificação do lançamento de ofício (art. 574, parágrafo único). |
+| **Multa_Mora_Afastada_Com_Multa_Punitiva** | *booleano* | Verdadeiro até a notificação do lançamento de ofício (art. 574, parágrafo único). Revisão 46 (documento 224; D-N590: C227): confirmado pelo contador em 16/11/2026: **depois da notificação a multa de mora volta a correr** junto com a multa punitiva sobre o mesmo tributo. A `Situacao_Dado` da linha segue provisória, porque a linha carrega outros parâmetros sem resposta. |
 | **Fundamento_Legal** | *texto* | Decreto, art. 27, §§ 2º a 5º; LC, art. 29, §§ 2º a 5º. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar. |
 | **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal). |
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 46 --- campos alterados: Juros_Incidem_Sobre_Multa_Punitiva, Multa_Mora_Afastada_Com_Multa_Punitiva.*
 
 Cad_Acrescimo_Legal_Hipotese
 
@@ -20778,8 +20779,8 @@ Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A ficha téc
 | **Codigo_Versao_Cat** | *código (até 20), opcional* | A versão no CAT/Renavam (Decreto 12.549, Anexo IV, itens 4 e 5: o critério vale para o código de marca/modelo/versão). |
 | **Numero_Cat** | *código (até 30), opcional* | Número do Certificado de Adequação à Legislação de Trânsito. |
 | **ID_Categoria_Veiculo_Eficiencia** | *referência (Cad_Classe_Sistema, domínio = categoria_veiculo_eficiencia)* | A categoria do Anexo III do Decreto 12.549 (item 1), que decide qual fórmula de consumo energético vale (itens 5, 6 e 7). |
-| **ID_Tecnologia_Propulsao** | *referência (Cad_Classe_Sistema, domínio = tecnologia_propulsao_veiculo)* | A fonte de energia e tecnologia de propulsão (critério 1): 14 valores, com as definições da ABNT NBR 16567 (Decreto 12.549, Anexo II). |
-| **Potencia_Kw** | *número* | A potência do sistema de propulsão, em quilowatts, medida pela norma de `Norma_Medicao_Potencia`. Com dois combustíveis vale a mais alta (ISO 1585:2020). |
+| **ID_Tecnologia_Propulsao** | *referência (Cad_Classe_Sistema, domínio = tecnologia_propulsao_veiculo)* | A fonte de energia e tecnologia de propulsão (critério 1): 14 valores, com as definições da ABNT NBR 16567 (Decreto 12.549, Anexo II). Revisão 46 (documento 224; D-N590: C262): a potência e a propulsão fazem parte **da nota fiscal e do cadastro do produto** (contador, 16/11/2026). O IS é registrado na contabilidade, entra na ECD e, por ela, na ECF, sem registro próprio. A obrigação acessória em que o IS é declarado segue aberta. |
+| **Potencia_Kw** | *número* | A potência do sistema de propulsão, em quilowatts, medida pela norma de `Norma_Medicao_Potencia`. Com dois combustíveis vale a mais alta (ISO 1585:2020). Revisão 46 (documento 224; D-N590: C258): quem afere a potência é o **Inmetro**; **não se deriva** kW de cv (a engenharia define o valor, também no sistema de motores múltiplos); o kW fica na ficha. O parâmetro `is_veiculo_kw_derivado_do_cv` tem padrão "não deriva", validado, e a comparação com o cv da nota continua só como aviso. O contador espera que a nota fiscal passe a trazer kW (não li nota técnica que o confirme). |
 | **Norma_Medicao_Potencia** | *enumeração {iso_1585_2020, unece_r85, gtr_21, metodologia_mdic}* | Combustão interna: ISO 1585:2020; elétrico de motor único: UNECE R85; elétrico ou híbrido de motores múltiplos: UN GTR 21 ou metodologia do MDIC. |
 | **Cilindrada_Cc** | *número, opcional* | Cilindrada do motor a combustão, em cm³. Entra na condição do táxi (art. 149, § 2º, I: até 2.000 cm³). |
 | **Numero_Portas** | *número, opcional* | Número de portas, contando a de acesso ao bagageiro (art. 149, caput: no mínimo quatro). |
@@ -20798,6 +20799,8 @@ Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A ficha téc
 | **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
 | **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 46 --- campos alterados: Potencia_Kw, ID_Tecnologia_Propulsao.*
 
 Cad_Veiculo_Versao_Sustentavel
 
@@ -20876,13 +20879,15 @@ Revisão 40 (documento 204, seção 5.2 e documento 205, B1; D-N548: Q204-1 a Q2
 | **Aliquota_Inicial** | *número* | Base mais ajustes, com o piso de zero (Decreto 12.549, art. 3º, parágrafo único, por remissão da MP, art. 3º, § 2º, I). |
 | **Fator_Conversao** | *número* | O fator do Anexo V (1,21 nos veículos). |
 | **Fator_Ajuste_Importacao** | *número, opcional* | O fator do art. 8º (1,17), cumulativo com o de conversão. Vazio na saída do fabricante. |
-| **Aliquota_Final_Aplicada** | *número* | Inicial × conversão × importação, com o arredondamento do parâmetro da empresa (C256). |
+| **Aliquota_Final_Aplicada** | *número* | Inicial × conversão × importação, com o arredondamento do parâmetro da empresa (C256). Revisão 46 (documento 224; D-N590: C256): o arredondamento é de **4 casas**, na unidade da alíquota guardada (percentual; leitura minha); o fator 1,21 multiplica a alíquota inicial **exata** e, na importação, o fator 1,17 entra **antes** do arredondamento; as duas contas ficam em `Memoria_Calculo`. O parâmetro `is_veiculo_arredondamento_casas` tem padrão 4, validado. |
 | **Potencia_Kw_Usada** | *número* | A potência que escolheu a faixa, copiada da ficha. |
 | **Hipotese_Excecao** | *enumeração {nenhuma, aliquota_zero_pcd_tea, aliquota_zero_taxi, aliquota_zero_versao_sustentavel, aliquota_zero_nota_complementar_tipi, reducao_50_nota_complementar_tipi, nao_incide_caminhao, nao_incide_uso_operacional}* | Quando diferente de `nenhuma`, a alíquota final é zero (ou 50% na nota 88-2) ou o imposto não incide, e o item guarda o motivo. |
 | **Condicao_Nota_Complementar** | *enumeração {nc_87_2_ambulancia_carro_celular_funerario, nc_88_1_a_concessionaria_linha_regular, nc_88_1_b_aerofotogrametria, nc_88_1_c_aviao_agricola, nc_88_2_taxi_aereo, nc_89_1_empresa_turismo}, opcional* | A nota complementar da Tipi em que a venda se enquadra. Preenchido quando `Hipotese_Excecao` é `aliquota_zero_nota_complementar_tipi` ou `reducao_50_nota_complementar_tipi`. O Motor só aceita a hipótese com este campo preenchido, confere a NCM (87.03 para a NC 87-2; 88.02, exceto 8802.60.00, para a NC 88-1 e a NC 88-2; 8903.2 e 8903.3 para a NC 89-1) e só vale na data da venda até 31/12/2027 (MP 1.399, art. 6º); a NC 88-2 reduz em 50% e as demais zeram. A NC 88-3 não tem valor na lista até o complemento da C267/C263 (documento 205, B1, Q205-2). |
 | **ID_Documento_Condicao** | *referência (Cad_Documento), opcional* | O documento que prova a condição do adquirente: concessão de linha aérea, autorização da Defesa, inscrição no RAB, cadastro de turismo ou laudo do tipo de veículo (documento 205, B1, Q205-2). |
 | **Dados_Provisorios** | *booleano* | Verdadeiro se alguma linha usada está `provisorio`: o relatório avisa. |
 | **Memoria_Calculo** | *texto* | O texto da conta, para auditoria. |
+
+*Revisão 46 --- campos alterados: Aliquota_Final_Aplicada.*
 
 Cad_Beneficio_Veiculo_Reconhecimento
 
@@ -20928,7 +20933,7 @@ Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A compra com
 | **Atende_Preco_Maximo** | *booleano, opcional* | Preço de venda até R$ 200.000,00 (PcD e TEA). |
 | **Atende_Quatro_Portas** | *booleano* | No mínimo quatro portas, com a de acesso ao bagageiro. |
 | **Atende_Fabricacao_Nacional** | *booleano* | Automóvel de passageiros de fabricação nacional. |
-| **Atende_Motorizacao_Taxi** | *booleano, opcional* | Elétrico, ou cilindrada até 2.000 cm³ e combustível renovável, sistema reversível ou híbrido (art. 149, § 2º, I). Só táxi. |
+| **Atende_Motorizacao_Taxi** | *booleano, opcional* | Lido da ficha do veículo: elétrico; etanol; flex-fuel; GNV adaptado; híbrido flex ou a etanol; cilindrada de até 2.000 cm³ do motor a combustão (art. 149, § 2º, I). Só táxi. Revisão 46 (documento 224; D-N590: C261): biodiesel não entra e híbrido leve a gasolina ou diesel não vale. O adendo do contador (só veículo produzido no País, regulamentação do DTP ou da SMT, picape e utilitário sem isenção) vira **aviso, sem regra**, até haver norma. |
 | **Atende_Intervalo_Minimo** | *booleano* | Passou o intervalo desde a compra anterior com o benefício. |
 | **Perda_Total_Furto_Roubo** | *booleano* | Perda total, furto ou roubo do automóvel anterior: o benefício vale a qualquer tempo (art. 152, parágrafo único). |
 | **Valor_Ibs_Cbs_Dispensado** | *número* | IBS e CBS que seriam devidos sem o benefício. |
@@ -20938,6 +20943,8 @@ Revisão 40 (documento 204, seção 5.2; D-N548: Q204-1 a Q204-10): A compra com
 | **Excecao_Alienacao** | *enumeração {nenhuma, seguradora_perda_total, falecimento_beneficiario, alienacao_fiduciaria}, opcional* | Os casos do art. 155, § 2º, em que não se cobra. |
 | **Valor_Tributo_A_Recolher_Alienante** | *número, opcional* | Os tributos dispensados, atualizados, mais multa e juros (art. 155, caput e § 1º). |
 | **Observacao** | *texto, opcional* | Livre. |
+
+*Revisão 46 --- campos alterados: Atende_Motorizacao_Taxi.*
 
 53.2. Programa Mover, grupo 1: ato de registro de compromissos (documento 206, seção 5.2)
 
@@ -21375,8 +21382,8 @@ Revisão 40 (documento 209, seção 5.2; D-N548: Q209-1 a Q209-11): O perfil de 
 | **Estabelecimento_Industrial** | *booleano* | O estabelecimento é industrial ou equiparado (condição da suspensão do IPI e da inaplicabilidade da ST). |
 | **Comercializa_Mesmo_Item** | *booleano* | O estabelecimento também vende, sem industrializar, o mesmo bem (Lei 10.485, art. 3º, § 6º; Convênio 142, cláusula nona, III). O padrão é falso e o aviso 8 lembra de conferir. |
 | **Origem_Declaracao** | *enumeração {declaracao_do_comprador, consulta_cadastral, informado_pelo_usuario}* | De onde veio a informação. |
-| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | A declaração do comprador sobre o uso das peças. O ERP guarda e não valida. |
-| **Data_Validade** | *data, opcional* | Até quando a declaração vale; depois disso, o Motor avisa. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | A declaração do comprador sobre o uso das peças. O ERP guarda e não valida. Revisão 46 (documento 224; D-N590: C279): a declaração do comprador **basta** como prova para o vendedor; **quem fez a venda** recolhe a diferença quando a peça é revendida (o aviso do Motor cita o vendedor); a destinação mista no mesmo pedido pode, registrada **por item**. |
+| **Data_Validade** | *data, opcional* | Até quando a declaração vale; depois disso, o Motor avisa. Revisão 46 (documento 224; D-N590: C279): a declaração permanente tem **prazo de validade obrigatório**: o Motor exige a data quando a declaração é permanente. |
 | **Fundamento_Legal** | *texto, opcional* | A norma ou o documento que sustenta o perfil. |
 | **ID_Usuario_Registro** | *referência (Cad_Usuario), opcional* | Quem registrou. |
 | **Situacao_Dado** | *enumeração {provisorio, validado}* | Provisório até o contador ou o usuário validar. |
@@ -21388,6 +21395,8 @@ Revisão 40 (documento 209, seção 5.2; D-N548: Q209-1 a Q209-11): O perfil de 
 | **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
 
 *Revisão 43 --- campos novos: Regime_Fidelidade_Distribuicao, Papel_Substituto_St, ID_Documento_Autorizacao_Fisco.*
+
+*Revisão 46 --- campos alterados: ID_Documento_Declaracao, Data_Validade.*
 
 **Cargas de partida da revisão 40 (linhas de tabela, não campos)**
 
