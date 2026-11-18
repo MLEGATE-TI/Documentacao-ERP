@@ -42,7 +42,15 @@ Mlegate · Alberto Beyeler · Novembro de 2026
 | 22    | Documento 218: Bloco 1 de combustíveis e usina (Ajuste SINIEF 14/2025, norma da ANP, perda e ganho, estoque de abertura, data do recebido, tanques interligados, número do bico e da bomba, intervenção, contador no máximo, produtos do 1300, bombas e lacres, usina: produto, balanço e resíduos; versão 2: limite de 0,6%, fornecedor do posto, distribuidor, grande consumidor, cupom, venda a outro revendedor, versão 2.1: Anexo da 884, transferência entre tanques, termos; versão 2.2: Diário Oficial e SC Cosit 223/2023) | 23        | C335 a C357 |
 | 23    | Documento 221: tabelas do Portal da NF-e (cClassTrib 620003 sem marca de grupo monofásico; valores 1 e 2 do indComb da tabela de CFOP)                                                                                                                                                                                                                                                                                                                                                                                              | 2         | C358 a C359 |
 | 24    | Documento 224: aplicação das respostas do contador (a C14(d) vale para a tabela de retenção do Mafon?)                                                                                                                                                  | 1         | C360        |
-|       | **Total**                                                                                                                           | **360**   | C1 a C360   |
+| 25    | Documento 226: NT 13/2026 da EFD-Contribuições (código 7 da tabela de descrição do estoque de abertura)                                                                                                                                                 | 1         | C361|
+| 26    | Documento 227: NFS-e Via (o adquirente toma crédito de IBS e CBS do pedágio, e com que condição)                                                                                                                                                        | 1         | C362|
+| 27    | Documento 230: NF-e denegada com a rejeição 307 (emitente bloqueado pela UF de destino em venda interestadual a consumidor final): efeito na escrituração e na numeração, e regularização | 1         | C363|
+| 28    | Documento 236: importado sem similar nacional (Resolução do Senado 13/2012 e Gecex 553/2024): origem 6 ou 7 e alíquota interestadual de ICMS | 1         | C364|
+| 29    | Documento 247: depreciação do ativo (cota cheia e início, F120 e acelerada por turnos, incentivada rural e química, pausas, redução ao valor recuperável, reavaliação e outras acelerações) | 7         | C365 a C371 |
+| 30    | Documento 248: Anexo III da IN 1.700 (vigência da tabela de vidas úteis e as notas (1) a (3)) | 2         | C372 e C373 |
+|       | **Total**                                                                                                                           | **373**   | C1 a C373   |
+
+**Respondidas por Alberto em 18/11/2026 (D-N634, D-N635 e D-N637):** C365 a C371 (documento 247, depreciação do ativo) e C372 e C373 (documento 248, Anexo III), com a confirmação do contador aberta.
 
 **Respondida:** C1 (limites da ECF), por Alberto em 09/11/2026 (duas mensagens), com a parte (3) ainda aberta; C4 (NFTS: número, série e data não se alteram quando vêm de XML; vale para toda nota importada de XML), respondida por Alberto em 09/11/2026 (D-N506 e D-N510), com a conferência final do contador aberta; C3 (quem declara a vinculação), procedimento confirmado por Alberto em 09/11/2026 (D-N505), com a segunda parte aberta; e C65 (Y520 acima do que o manual exige), decidida por Alberto em 09/11/2026 (D-N504: respeitar o manual; aplicação aprovada na D-N507), com o contador só confirmando. Os números não mudam: a pergunta respondida e aplicada sai daqui só depois do “consolidar”.
 
@@ -550,7 +558,7 @@ Pergunta: há ato oficial que fixe até quando a EFD-Contribuições é exigida 
 >
 > **Leitura do ERP (minha):** Com o fim do PIS e da Cofins no fim de 2026 e a CBS em janeiro de 2027, a EFD-Contribuições deixa de existir, mas o prazo pode ser prorrogado. Para a empresa no **regime de caixa**, o item com competência de 2026 e recebimento a partir de 2027 obriga a EFD-Contribuições **até a última parcela recebida**. Leitura minha: o ERP não desativa tabela por data fixa (D-N80) e mantém a obrigação gerável enquanto houver parcela de 2026 a receber no caixa.
 >
-> **Ainda aberto:** Se há **ato oficial** que fixe até quando a EFD-Contribuições é exigida (a resposta é "a princípio", sem norma citada).
+> **Ainda aberto:** Nada sobre o ato oficial: a conferência do documento 226 (D-N593) achou a **NT EFD-Contribuições 011/2026** e a **NT 13/2026**, da Receita, que dizem que a EFD-Contribuições **continua em 2027** (regime de caixa, saldos credores e créditos presumidos da CBS), sem data de fim: a resposta "a princípio deixa de existir" não confere com elas. O contador pode confirmar se o escritório conhece a NT 13/2026.
 >
 > **Data:** 16/11/2026 · **Situação:** respondida em parte (contador, 16/11/2026); o que resta está em "Ainda aberto"; aplicada na revisão 46 (documentos 224 e 225; D-N590 e D-N592)
 
@@ -4293,6 +4301,11 @@ Pergunta: (a) o ERP deve tratar a redução (284) e a isenção (285) como dois 
 
 **O que o ERP faz enquanto isso:** Proposta do documento 206 (D-N549 e Q206-13): dois instrumentos (\`autopecas_isencao\` e \`autopecas_reducao\`) no tipo de lista e no tipo de habilitação; cada ex-tarifário uma linha de \`Cad_Lista_Legal_Item\` com vigência própria; aviso de vencimento em 90 dias; contrapartida só na isenção até a resposta. A carga fica vazia até haver a lista oficial. Nada aplicado ao dicionário.
 
+
+**Atualização de 18/11/2026 (documentos 235 e 236):** Alberto enviou a lista oficial do MDIC (foto de outubro de 2026, com o histórico desde 2020) e, no mesmo dia, 12 resoluções Gecex do Diário Oficial. **Resolve a letra (d)** (a fonte é a planilha do MDIC por foto) e **corrige** duas coisas acima: o Anexo II é "autopeças grafadas na Nomenclatura Comum do Mercosul" (não bens de capital) e são **10.717 ex-tarifários em 438 NCM** (não 9.658 em 422). **Resolução 545/2023 lida:** exclui 18 Ex do Anexo I e 2 do Anexo II da 284, inclui os 739 e os 141 Ex da antiga lista da 285 nos Anexos I e II da 284 e **revoga a 285 a partir de 01/01/2024**; ou seja, hoje há **uma lista só** (Anexos I e II da 284), e a letra (b) fica respondida no que toca à 285. A 545 e a lista não trazem o regime, mas **li a 284, a 285 e o Decreto 12.515/2025** (documento 236, seção 2A): a **284** reduz a **2%** o imposto das autopeças sem produção nacional (Anexo I: importadas para produção; Anexo II: "grafadas como BK ou BIT"); a **285** (revogada) era a **isenção** da Lei 13.755/2018, com habilitação no Siscomex e dispêndio de 2% do valor aduaneiro; o **46º Protocolo do ACE 14** (Decreto 12.515/2025, art. 2º) mantém **2%** e permite **isenção ou 0%** mediante dispêndio de 2%, "na forma estabelecida por cada Parte". **Correção:** o Anexo II é de autopeças grafadas como **BK ou BIT** (art. 2º da 284); a minha "correção" anterior estava errada. **Resolução 982/2026 (DOU 16/11/2026, em vigor em 23/11/2026):** prorroga 878 Ex para 30/06/2027 (642 que venciam em 31/12/2026, 232 de 31/03/2027 e 4 sem fim) e inclui 739 até 31/10/2028; **ficam 3.071 Ex vencendo em 31/12/2026** (eram 3.713) e dois sem fim. **Perguntas que continuam:** (a) **qual ato brasileiro vigente regula hoje o dispêndio de 2% e a isenção ou 0%** depois que a 545 revogou a 285 (o protocolo remete a "cada Parte"; a Lei 14.902/2024, art. 27, e o Mover são os candidatos), e quem comprova o dispêndio na importação? (b) a contrapartida vale para os Anexos I e II? (c) o Ex com vencimento em 31/12/2026 que não foi prorrogado deixa de valer em 01/01/2027 e a alíquota passa a ser a da NCM?
+
+**O que o ERP faz enquanto isso (proposta do documento 235):** um só tipo de lista (`autopecas_nao_produzidas`) com o regime vindo da habilitação; cada ex uma linha de `Cad_Lista_Legal_Item` com vigência própria; sem benefício depois do fim da vigência; aviso 90 dias antes. Nada aplicado ao dicionário.
+
 > **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 >
 > **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
@@ -5517,6 +5530,232 @@ Pergunta: a resposta vale só para as alíquotas do empregador (contribuição p
 >
 > **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
 
+### C361 · Documento 226 · NT 13/2026 da EFD-Contribuições: código 7 da tabela de descrição do estoque de abertura
+
+**De onde vem:** Documento 226, seção 5 (item 1) e seção 7
+
+**Contexto e pergunta:**
+
+A Nota Técnica EFD-Contribuições 13/2026 (Receita, novembro de 2026) cria a tabela "Descrição do Estoque de Abertura da CBS" para o campo 13 do registro F150, com 10 códigos (1, 2, 21, 3, 4, 41, 5, 6, 7 e 8). Os códigos 5 a 8 cobrem bens com substituição tributária ou monofasia no art. 381, II, da LC 214. O código 7 aparece no anexo como "Motocicletas" (art. 43 da MP 2.158-35), mas no texto do F150 da mesma nota o mesmo artigo é descrito como máquinas e implementos agrícolas.
+
+Pergunta: qual descrição é a certa para o código 7 (motocicletas ou máquinas e implementos agrícolas) e a qual alínea do art. 381, II, da LC 214 ele corresponde?
+
+**O que o ERP faz enquanto isso:** Leitura minha: o domínio `descricao_estoque_abertura_cbs` (proposto no documento 226, Q226-1) entra provisório e o código 7 fica com as duas descrições até a resposta. Nada aplicado.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C362 · Documento 227 · NFS-e Via: o adquirente toma crédito de IBS e CBS do pedágio?
+
+**De onde vem:** Documento 227, seção 3.1 e seção 7 (Q227-1)
+
+**Contexto e pergunta:**
+
+O schema da NFS-e Via (v1.01, exploração de via com pedágio) traz o serviço com código de tributação nacional `220101`, NBS `106042100`, CST do IBS e da CBS `000`, classificação tributária `000002` e indicador da operação `080101`, todos como valores fixos, além de ISSQN, PIS, COFINS, IBS e CBS na nota. O ERP proposto (Q227-1) recebe a nota como adquirente e apropria o custo por veículo (placa). O Recibo de Passagem Veicular da concessionária diz, no modelo do Manual para Emissão da NFS-e Via v1.0, que a manifestação do tomador no ambiente da NFS-e Via "pode gerar direito a crédito de impostos, conforme a lei", sem citar a norma (leitura do documento 227, revisão 2).
+
+Pergunta: a empresa com frota que paga o pedágio toma crédito de IBS e CBS dessa nota? Com que condição (uso e consumo, atividade, tipo de veículo, comprovação da passagem pelo aceite da manifestação do adquirente) e há vedação ou rateio?
+
+**O que o ERP faz enquanto isso:** Leitura minha: guarda os valores do IBS e da CBS da nota e **não gera crédito** até o contador responder; a apropriação do custo por veículo não depende da resposta. O desenho do adquirente entrou na revisão 47 (documento 229: `Mov_Nfse_Via_Passagem` e a manifestação), sem regra de crédito.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C363 · Documento 230 · NF-e denegada com a rejeição 307: efeito e regularização
+
+**De onde vem:** Documento 230, seção 3 (regra 1C17-50 da NT 2020.005 v1.20, rejeição 307)
+
+**Contexto e pergunta:**
+
+A NT 2020.005 v1.20 (junho de 2021) traz a regra 1C17-50: em saída interestadual a consumidor final não contribuinte (indFinal = 1 e indIEDest = 9), a SEFAZ consulta o Cadastro Centralizado de Contribuintes da UF do destinatário e **denega** a NF-e quando o emitente está bloqueado por essa UF (cSitCNPJ = 10), por irregularidade fiscal ligada à diferença entre a alíquota interna e a interestadual (Ajuste SINIEF 33/19). A regra é opcional por UF e não vale para UF não signatária do Ajuste SINIEF 07/05.
+
+Pergunta: se uma NF-e da Mlegate for denegada com a rejeição 307, (a) a nota denegada gera escrituração ou crédito de algum tributo, e a numeração fica consumida? (b) como se regulariza o bloqueio na UF de destino, e a venda pode ser refeita por nota nova ou só depois do desbloqueio? (c) vale lançar o DIFAL por guia, fora da nota, enquanto durar o bloqueio?
+
+**O que o ERP faz enquanto isso:** Leitura minha: carrega o código 307 como denegação (natureza denegado, ação nenhuma), marca o documento como denegado, não escritura a nota e avisa o fiscal; não reemite sozinho. Nada aplicado: é proposta do documento 230 (Q230-4).
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C364 · Resolução do Senado 13/2012, art. 1º, § 4º, I, e Resolução Gecex 553/2024 · Importado sem similar nacional: origem 6 ou 7 e alíquota interestadual de ICMS
+
+**De onde vem:** Documento 236, seção 5 (Q236-3)
+
+**Contexto e pergunta:**
+
+A Resolução Gecex 553/2024 (alterada pelas Res. 575/2024, 645/2024, 708/2025, 785/2025, 813/2025 e 822/2025; li o texto principal compilado, não o Anexo atual) define a lista de bens sem similar nacional para o inciso I do § 4º do art. 1º da Resolução do Senado 13/2012: o NCM precisa estar no Anexo Único (7.156 NCM) **e** o bem tem de estar sujeito a imposto de importação de até 2% por uma das listas do art. 1º, I (entre elas a Resolução 284, de autopeças), ou ter a inexistência de similar atestada pela Secex, ou estar em elevação gradual das listas V, VI e X da TEC; as listas do inciso I incluem hoje também o Anexo X da Res. 272 e as Res. 780/2025 e 781/2025 (alterações de 2025). O dicionário tem os códigos de origem 6 e 7 ("sem similar nacional, constante em lista de Resolução CAMEX"), mas não tinha a lista.
+
+Pergunta: (a) a autopeça importada com Ex vigente da Resolução 284 e NCM no Anexo Único da 553 se enquadra no inciso I, "c", e portanto usa origem 6 (importação direta) ou 7 (adquirida no mercado interno) e a alíquota interestadual diferente da de 4%? (b) quem confere o enquadramento: o importador, na saída da mercadoria, ou há ato do fisco? (c) a lista consolidada que o art. 2º manda publicar no site é a referência para a auditoria?
+
+**O que o ERP faz enquanto isso:** Aprovado por Alberto em 18/11/2026 (documento 236, Q236-3, D-N611; nada aplicado até o "consolidar"): os 7.128 NCM vigentes entram como lista (`sem_similar_nacional_senado13`); o Motor só **sugere** o código 6 ou 7 quando o NCM está na lista e o item tem Ex vigente da 284, e avisa o fiscal; o usuário confirma. Nada aplicado ao dicionário.
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
+
+### C365 · IN RFB 1.700/2017, art. 123, § 2º · Depreciação: convenção do mês de início
+
+**De onde vem:** Documento 247, seção 4.3 (R3)
+
+**Contexto e pergunta:**
+
+A IN 1.700 diz que a depreciação pode ser apropriada em quotas mensais, **dispensado o ajuste da taxa** para os bens postos em funcionamento ou baixados no curso do mês (art. 123, § 2º), e que a quota é dedutível a partir de quando o bem é instalado, posto em serviço ou em condições de produzir (art. 121, § 2º). O desenho usa **quota cheia no mês**, a partir do mês da data de início da depreciação do cadastro do ativo. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) na depreciação fiscal, a cota cheia no mês de início e a regra do mês da baixa estão corretas? (b) na societária vale o mesmo? (c) a edificação conta da conclusão e do início de uso (art. 122, I, "a")?
+
+**O que o ERP faz enquanto isso:** Cota cheia no mês, a partir do mês da data de início da depreciação do ativo; o mês da baixa fica para o documento da baixa e, até lá, sem quota.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Usar cotas cheias no mês, porém tem que usar o parametro do cadastro de imobilizado que é depreciar a partir de"
+>
+> **Leitura do ERP (minha):** A resposta chegou cortada em "depreciar a partir de"; li como o campo **Data_Inicio_Depreciacao** do cadastro do ativo (o mês em que o bem entra em uso, que pode ser meses depois da compra). **Cota cheia no mês**, sem proporção por dia. O mês da baixa não foi dito; segue a regra provisória de nenhuma quota até o documento da baixa do ativo (Q247-8). Se a frase tinha outro final, me diga.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C366 · EFD-Contribuições, registros F120 e F130 · Depreciação: qual tipo gera o crédito e o efeito da acelerada por turnos
+
+**De onde vem:** Documento 247, seção 4.5
+
+**Contexto e pergunta:**
+
+O documento 10 diz que o F120 e o F130 leem a depreciação em `Mov_Ativo_Depreciacao`. O desenho tem n tipos de depreciação e o ERP precisa saber qual deles é o encargo de depreciação do F120. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) o encargo de depreciação do F120 vem da quota **fiscal**, e não da societária? (b) com a acelerada por turnos, o crédito do F120 usa a quota normal ou a acelerada? (c) no F130 (aquisição para o ativo imobilizado), o encargo mensal segue a mesma quota fiscal?
+
+**O que o ERP faz enquanto isso:** F120 e F130 leem o tipo marcado como fiscal principal do grupo de bem, qualquer que seja.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "O F200, vem com base na depreciação Fiscal, com isto se a depreciação fiscal tiver selecionada por turno é esta que será usada, o credito de pis e cofins se torna proporcionais a esta"
+>
+> **Leitura do ERP (minha):** O F120 (encargo de depreciação do ativo) lê o **tipo marcado como fiscal principal do grupo de bem do ativo**; se o fiscal selecionado for o por turnos, é a quota dele que vale, e o crédito de PIS e Cofins fica proporcional a ela. Você escreveu "F200"; o F200 é o registro da atividade imobiliária, e li como **F120**: me diga se era outro registro. Esta regra substitui o provisório que eu tinha (F120 pelo fiscal normal, sem a acelerada).
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C367 · RIR/2018, art. 323, e Solução de Consulta Cosit 152/2019 · Depreciação acelerada por turnos, bem usado e e-Lalur
+
+**De onde vem:** Documento 247, seções 4.1 e 4.2
+
+**Contexto e pergunta:**
+
+O desenho tem **n tipos de depreciação cadastrados pela empresa, com a contabilização parametrizada por tipo**; no catálogo inicial a depreciação acelerada por turnos é **controle fiscal, sem lançamento contábil**, com os coeficientes 1,5 (dois turnos) e 2,0 (três turnos), e só a gerencial lança na contabilidade; a diferença para a fiscal vai ao e-Lalur por lançamento do contador (Parte A e Parte B). O bem de pequeno valor (art. 120 da IN 1.700: valor unitário até R$ 1.200,00 ou vida útil de até 1 ano, salvo conjunto) iria direto à despesa pela Destinação na compra. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) confirmar que a acelerada por turnos **não** tem lançamento contábil e que a diferença é tratada na Parte B do e-Lalur e do e-Lacs; (b) confirmar os coeficientes de 1,5 e 2,0 e que normal mais acelerada nunca passa do custo; (c) como tratar o **bem de pequeno valor** no e-Lalur (o limite de R$ 1.200,00 ou vida de até 1 ano está no art. 120 da IN 1.700, e o § 1º exclui o conjunto de bens); (d) o bem usado usa o maior prazo entre metade da vida útil e o restante, e o contador informa o prazo no ativo?
+
+**O que o ERP faz enquanto isso:** Só o tipo gerencial lança (parâmetro `Gera_Lancamento`); a fiscal e a acelerada ficam como controle (`ID_Lancamento` vazio); o limite do bem de pequeno valor fica como parâmetro por empresa, com padrão de R$ 1.200,00 e vigência; a vida útil fiscal do bem usado é informada no ativo.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Sim correto"
+>
+> **Leitura do ERP (minha):** Confirmados os quatro itens (a) a (d), como estavam no desenho: acelerada por turnos sem lançamento contábil e com a diferença na Parte B, coeficientes 1,5 e 2,0 com teto no custo, bem de pequeno valor pela Destinação (limite de R$ 1.200,00) e prazo do bem usado informado no ativo.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C368 · IN RFB 1.700/2017, art. 260 e nota (2) do Anexo III · Depreciação acelerada incentivada: usina de cana e indústria química
+
+**De onde vem:** Documento 247, seção 4.7 (Alberto enviou a IN 1.700 e pediu para prever a acelerada das usinas de cana e das empresas químicas, 18/11/2026)
+
+**Contexto e pergunta:**
+
+O art. 260 da IN 1.700 permite depreciar integralmente no próprio ano da aquisição os bens do imobilizado, exceto a terra nua, adquiridos por pessoa jurídica rural para uso na atividade rural; a depreciação normal fica na escrituração comercial e o complemento é exclusão na Parte B do e-Lalur e do e-Lacs (§§ 1º a 8º). Um comentário sobre decisão do CARF (Acórdão 1101-001.476, decisão isolada) estende o benefício à agroindústria canavieira verticalizada (art. 6º da MP 2.159-70/2001). A nota (2) do Anexo III diz que as máquinas, equipamentos e instalações industriais da tabela, usados na indústria química, são depreciados em 5 anos, à taxa de 20%. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) Usina de cana: o benefício do art. 260 vale para quais bens da Mlegate (lavoura e maquinário agrícola; também a parte industrial)? (b) Indústria química: a nota (2) do Anexo III (5 anos, 20%) é a regra aplicável, e existe outra depreciação acelerada para ela? (c) Com a incentivada, o crédito de PIS e Cofins do F120 continua pela quota normal? (d) Quota integral no **mês de início**, dentro do ano da aquisição, está bem? (e) Quando o bem sai da atividade rural ou é alienado, quem lança a adição do saldo da Parte B (art. 260, §§ 5º a 7º)?
+
+**O que o ERP faz enquanto isso:** Tipo INCENTIVADA_RURAL criado no catálogo, ligado só aos grupos de bem que a empresa indicar; a química usa a vida fiscal de 60 meses no grupo; o ERP mostra o saldo da Parte B e o contador lança.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "A) Trabalhe pelo grupo de bem e deixe isto no grupo de bem, e no grupo que especifica este parametro b) sim, pois também deixe isto no grupo de bens, mesmo na empresa quimica tem itens que são permitido depreciação acelerada e outros não. c) use como base no F200 o que esta marcado como fiscal, idependente se é incenditivada ou não d) Cota integral a partir do mês especificado para inicio da depreciação, pode ser comprado e ser usado de pois de X meses, a depreciação começa a partir do inicio de sua atividade, A depreciação de um bem pode ser pausada por um periodo, considerar as pausas de depreciação"
+>
+> **Leitura do ERP (minha):** (a) e (b): os parâmetros ficam **por grupo de bem**: o grupo diz quais tipos valem (inclusive a incentivada e a acelerada), a vida útil e o residual de cada um, e qual é o tipo principal; na química, um grupo pode ter acelerada e outro não. Por isso o campo `Principal` saiu do catálogo e foi para a linha do grupo. (c) a base do F120 é o tipo marcado como fiscal principal do grupo, seja ele incentivado ou não (li "F200" como F120, como na C366). (d) a quota integral vale a partir do mês da data de início da depreciação do cadastro do ativo, que pode ser meses depois da compra; e **a depreciação pode ser pausada por um período**: nova entidade de pausas (documento 247, seção 4.9), com a pergunta ao contador C369. Ficou sem resposta a (e) (quem lança a adição da Parte B): fica como está, o ERP mostra o saldo e o contador lança.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C369 · IN RFB 1.700/2017, art. 121, § 6º · Pausa da depreciação: efeito na depreciação fiscal e no crédito de PIS e Cofins
+
+**De onde vem:** Documento 247, seção 4.9 (Alberto pediu para considerar as pausas de depreciação, 18/11/2026)
+
+**Contexto e pergunta:**
+
+O desenho registra períodos em que o bem fica sem depreciar (pausas): meses inteiros sem quota, vida útil que não corre e valor que não se recupera depois (a IN 1.700, art. 121, § 6º, proíbe deduzir acumuladamente fora do período). A pausa pode valer para todos os tipos ou só para um. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) quando o bem fica parado ou sem uso, a depreciação **fiscal** também pode pausar, ou só a societária? (b) a pausa afeta o crédito de PIS e Cofins do F120 do mesmo mês? (c) existe limite de tempo ou condição para o bem parado, e a regra muda se ele fica em reforma?
+
+**O que o ERP faz enquanto isso:** Pausa em todos os tipos, salvo se o usuário indicar um tipo; o contador confirma o efeito fiscal.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Sim fica parada"
+>
+> **Leitura do ERP (minha):** A pausa vale também para a depreciação **fiscal**: o bem parado não deprecia em nenhum tipo (o campo do tipo, na pausa, fica vazio, que é todos). Sem quota fiscal no mês, o F120 não tem encargo de depreciação do bem e, por isso, **não há crédito de PIS e Cofins dele** naquele mês. Esse último efeito é leitura minha; a pergunta (c) (limite de tempo e reforma) não foi respondida e fica sem regra especial.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C370 · IN RFB 1.700/2017, arts. 129 e 130 e arts. 97, 98, 102 e 103 · Redução ao valor recuperável (CPC 01) e reavaliação do ativo imobilizado
+
+**De onde vem:** Documento 247, seção 4.8 (Alberto pediu para considerar a redução ao valor recuperável e a reavaliação, 18/11/2026)
+
+**Contexto e pergunta:**
+
+O desenho registra cada ajuste do valor contábil do ativo (redução ao valor recuperável, reversão, reavaliação para mais ou para menos), com o valor informado do teste ou do laudo, e a nova quota da depreciação gerencial vale daí para frente; a fiscal segue o custo. Pela IN 1.700: a perda por redução ao valor recuperável só é reconhecida no lucro real na alienação ou baixa, é adicionada na Parte A quando contabilizada e registrada na Parte B para a exclusão, e a reversão não é computada (arts. 129 e 130); o ganho de valor justo não é tributado se evidenciado em subconta vinculada ao ativo, e é tributado à medida que o ativo se realiza (arts. 97 e 98), com a perda tratada de forma parecida (arts. 102 e 103). Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: (a) confirmar o tratamento acima para a redução ao valor recuperável e para a reavaliação; (b) a Mlegate usa reavaliação (valor justo) em algum grupo de bens? (c) a baixa da subconta acompanha a depreciação do ativo, e como separar a parte da quota que realiza a subconta? (d) numa unidade geradora de caixa, o rateio do art. 129, § 1º, usa o valor contábil na data do teste?
+
+**O que o ERP faz enquanto isso:** O ERP só registra o valor informado, mostra o saldo da Parte B e a parte da quota que realiza a subconta; o contador lança.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Sim correto"
+>
+> **Leitura do ERP (minha):** Confirmado o tratamento do documento 247: a perda por redução ao valor recuperável só é reconhecida na baixa ou alienação (adição na Parte A e registro na Parte B), sem computar a reversão; o ganho ou a perda de valor justo na subconta vinculada realiza-se com a depreciação. A pergunta (b) (se a Mlegate usa reavaliação e em quais grupos) **não foi respondida literalmente**: o ERP fica preparado e nenhum grupo de bem é ligado à reavaliação até Alberto dizer.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C371 · RIR/2018, art. 313, e outras normas · Outras acelerações incentivadas que a Mlegate pode usar
+
+**De onde vem:** Documento 247, seção 4.7 (Alberto pediu para considerar outras acelerações incentivadas, 18/11/2026)
+
+**Contexto e pergunta:**
+
+O catálogo de tipos aceita qualquer aceleração incentivada sem mudar estrutura: o tipo diz como calcula (integral no ano, por turnos ou com multiplicador sobre a quota normal), a norma em que se baseia e a vigência do período de aquisição; o grupo de bem diz a que bens vale. A IN 1.700 só cita a "depreciação acelerada incentivada de que trata o art. 313 do RIR" (art. 200, § 4º), sem trazer o texto. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto; desenho do documento 247 (versão 6). As regras da IN RFB 1.700/2017 (arts. 89, 97, 98, 102, 103, 120 a 124, 129, 130 e 260 e as notas do Anexo III) foram lidas no texto do DOU que Alberto enviou (o Anexo III em tabela não carregou no PDF); as do RIR/2018 (arts. 313 e 317 a 324) só em fontes secundárias (boletim da Lefisc de janeiro de 2025 e artigo da Tributo Devido sobre a Solução de Consulta Cosit 152/2019), sem o texto oficial.
+
+Pergunta: Quais outras acelerações incentivadas a Mlegate pode usar (norma, tipo de bem, atividade, prazo de aquisição, forma de cálculo, se há limite e como se controla na Parte B)?
+
+**O que o ERP faz enquanto isso:** Nenhuma carregada; só a rural (art. 260) e a por turnos ficam no catálogo inicial.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Ok deixe preparado para receber outras, mas não precisa preencher agora"
+>
+> **Leitura do ERP (minha):** O catálogo de tipos fica preparado para receber outras acelerações incentivadas (tipo com multiplicador, norma e vigência na linha do grupo), **sem carregar nenhuma**. Quando o contador ou Alberto indicarem a norma, entra como linha, sem mudar estrutura.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C372 · IN RFB 1.700/2017, Anexo III · Vigência da tabela de vidas úteis fiscais
+
+**De onde vem:** Documento 248, seção 4.1 (Alberto enviou o Anexo III da IN em texto, 18/11/2026)
+
+**Contexto e pergunta:**
+
+O Anexo III que recebemos é uma **transcrição do site COSIF** (impressa em 18/11/2026, com nota bibliográfica de 13/05/2020), não o texto do Diário Oficial, que traz a tabela em imagens. O Anexo I do Decreto 12.955/2026 (DOU de abril de 2026) reproduz a mesma lista, com os mesmos 220 itens, a mesma vida útil e a mesma taxa. A carga proposta usa vigência desde 16/03/2017, a publicação da IN no DOU. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto.
+
+Pergunta: (a) O Anexo III da IN 1.700 sofreu alguma alteração de vida útil ou taxa depois de 2017, ou a tabela vigente em 2026 é esta? (b) A data de início da vigência da carga (16/03/2017) está correta para a depreciação fiscal?
+
+**O que o ERP faz enquanto isso:** Carga provisória de 222 linhas, vigência desde 16/03/2017; o contador confirma ou corrige as vidas.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "Correto pode colocar esta carga provisoria"
+>
+> **Leitura do ERP (minha):** Carga das 222 linhas do Anexo III (e 2 linhas de correção do Anexo I do decreto, itens 1 e 2; a proposta inicial era de 12, mas 10 foram decisão da Q239-3), provisória, para o contador confirmar. Alberto não falou da data de início (16/03/2017); li "correto" como valendo para a carga inteira.
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+### C373 · IN RFB 1.700/2017, Anexo III, notas (1), (2) e (3) · Fornos de vidro, indústria química e partes e acessórios
+
+**De onde vem:** Documento 248, seções 4.1 e 4.3 (R14 e R15)
+
+**Contexto e pergunta:**
+
+A nota (1) diz que os fornos para a indústria de vidro, da posição 8417, são depreciados em **3 anos, à taxa de 33,3%** (a linha 8417 comum é de 10 anos). A nota (2) diz que as máquinas, equipamentos e instalações industriais do anexo, usados na indústria química, são depreciados em **5 anos, à taxa de 20%**. A nota (3) diz que os acessórios e as partes dos aparelhos, equipamentos e máquinas do anexo **não são depreciados enquanto não incorporados** a eles e **integram a base da quota** do aparelho a partir da incorporação. O desenho guarda as notas (1) e (2) como linhas da tabela com condição de uso, escolhidas pelo grupo de bem, e faz o componente sem data de início não depreciar. Aplicado ao dicionário na revisão 55 (documento 249), com o "consolidar" de Alberto.
+
+Pergunta: (a) Nota (2): quais bens contam como máquinas, equipamentos e instalações industriais do anexo usados na indústria química (todas as linhas dos capítulos de máquinas usadas na produção)? (b) Nota (1): vale só para fornos da posição 8417 usados na indústria de vidro? (c) Nota (3): a parte ou o acessório avulso realmente não deprecia até a incorporação, e depois deprecia pelo restante da vida do bem principal?
+
+**O que o ERP faz enquanto isso:** O grupo de bem decide as linhas das notas; o componente sem data de início da depreciação não deprecia.
+
+> **Resposta de Alberto (recebida em 18/11/2026):** "A) Deixar isto no grupo de imobilizado, com isto o que esta no grupo já esta classificado, não deixar no item que dificulta alterações, prever sempre isto no grupo e quem esta no grupo herda a parametrizacao do grupo b) não se preocupar com isto, deixar pamatrizados e definirmos isto no grupo c) A parte avulsa, Só começa a depreciar na incorporação"
+>
+> **Leitura do ERP (minha):** (a) as notas ficam **no grupo de bem**, que o ativo herda; o ERP não decide por NCM quais bens são "máquinas industriais". (b) a nota (1) (fornos de vidro) é uma linha da tabela; quem usa é o grupo, sem conferência do NCM 8417. (c) a parte avulsa só deprecia a partir da incorporação, e depois pelo restante da vida do bem principal (R15).
+>
+> **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
 # Apêndice A. Prazos de calendário que dependem do contador
 
 Estas datas vêm do documento 38, seção 4, e **não foram reconferidas nas fontes oficiais**. Só as linhas em que o contador decide ou age.
@@ -5526,7 +5765,7 @@ Estas datas vêm do documento 38, seção 4, e **não foram reconferidas nas fon
 | **10/11/2026** | DES-IF, Módulo 2 de outubro (se houver cliente instituição financeira equiparada em São Paulo; Q80-5)                                                                                                                                                      | Alberto e contador |
 | 20/12/2026     | Receita e folha de 12/2025 a 11/2026 de quem ingressa no Simples em 01/01/2027 ou vem do MEI: conferir, alterar ou completar no módulo “Receitas Anteriores à Opção” (Resolução CGSN 190, art. 144-E; condicional a haver cliente nessa situação, P-R4-01) | Alberto e contador |
 | 30/12/2026     | D-SUP (declaração da sociedade uniprofissional de São Paulo): entrega de 27/07 a 30/12/2026                                                                                                                                                                | Contador           |
-| 31/12/2026     | Fim anunciado da apuração de PIS e Cofins e, por fonte secundária, da EFD-Contribuições como escrituração corrente; as fontes divergem (ver P43-11); inventário do estoque em 31/12/2026 (D-N172)                                                          | Contador           |
+| 31/12/2026     | Fim anunciado da apuração de PIS e Cofins e, por fonte secundária, da EFD-Contribuições como escrituração corrente; as fontes divergem (ver P43-11); a NT 13/2026 da Receita diz que a EFD-Contribuições continua em 2027 (documento 226); inventário do estoque em 31/12/2026 (D-N172)                                                          | Contador           |
 | 10/01/2027     | ISS fixo trimestral da SUP, 4º trimestre (guia no DUC)                                                                                                                                                                                                     | Contador           |
 | 20/01/2027     | Receita e folha de 12/2026 das mesmas empresas do prazo de 20/12/2026 (Resolução CGSN 190, art. 144-E, II)                                                                                                                                                 | Alberto e contador |
 | 31/03/2027     | Informações socioeconômicas anuais dentro do PGDAS-D; fecha a opção pelo regime regular para o 2º semestre de 2027                                                                                                                                         | Contador           |

@@ -6,6 +6,14 @@
 pedido de venda com histórico de status por item, reserva de estoque,
 nota fiscal de saída e devolução de cliente*
 
+*Revisão 29 --- consolidação da revisão 54 do dicionário (documento 243 (D-N624 a D-N626: valor aproximado dos tributos, Lei 12.741)): 1 entidades existentes alteradas; Mov_Nota_Fiscal_Saida_Item com Valor_Tributos_Aproximados e Percentual_Tributos_Aproximados (Q243-1 a Q243-3).*
+
+*Revisão 28 --- consolidação da revisão 50 do dicionário (documento 234 (D-N604: Q231-2, o desenho do emitente sem IE, da NA01-20 e 3BA02, do DFeReferenciado na devolução e do fim da denegação do emitente)): 2 entidades existentes alteradas; indicador de emitente exclusivo do IBS/CBS na nota de saída (Q231-2 a), devolução com DFeReferenciado e 3BA02 (Q231-2 b e c).*
+
+*Revisão 27 --- consolidação da revisão 47 do dicionário (documento 227 (conferência do pacote da NFS-e Nacional, da NFS-e Via, do ADN v1.1 e da NT 2020.005; Q227-1 a Q227-5, D-N595)): 1 entidades existentes alteradas; código de barras comercial e tributável no item da nota de saída (Q227-4, NT 2020.005).*
+
+*Revisão 26 --- consolidação da revisão 46 do dicionário (documento 224 (aplicação das 21 respostas do contador de 16/11/2026, Q188-6, D-N590, e Q224-1 a Q224-3, D-N591)): 2 entidades existentes alteradas; Chave_Acesso opcional na nota de saída (C32, Q224-1) e destinação por item (C279).*
+
 *Revisão 25 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 1 entidades novas (anexo, seção 15); 1 entidades existentes alteradas; origem do combustível na tabela filha (Q221-12).*
 
 *Revisão 24 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 2 entidades existentes alteradas; campos de destinação de autopeça no pedido e na nota de saída e ID_Veiculo_Versao na nota de saída (documentos 204 e 209).*
@@ -1172,7 +1180,7 @@ O cabeçalho da nota fiscal de saída.
 | **ID_Participante_Cliente** | *referência (Cad_Participante, opcional)* | Alterado na revisão 3 (documento 33). Vazio na NFC-e sem cadastro do consumidor, que usa Documento_Consumidor e Nome_Consumidor. |
 | **Numero** | *código (até 15)* | Identificação fiscal da nota emitida. Desmembrado na revisão 10. |
 | **Serie** | *código (até 5)* | Revisão 14 (Bloco 4): passou de 3 para 5 posições, porque o campo serie da EFD-Reinf aceita até 5 caracteres (nota fiscal, fatura ou Recibo Provisório de Serviço). |
-| **Chave_Acesso** | *código (até 50)* | Adicionado nesta revisão, princípio geral pedido por Alberto: toda referência a nota fiscal no dicionário precisa carregar a chave de acesso da NFe --- identifica o documento nacionalmente (DV mod 11). Alterado na revisão 3: tipo atualizado. |
+| **Chave_Acesso** | *código (até 50), opcional* | Adicionado nesta revisão, princípio geral pedido por Alberto: toda referência a nota fiscal no dicionário precisa carregar a chave de acesso da NFe --- identifica o documento nacionalmente (DV mod 11). Alterado na revisão 3: tipo atualizado. Revisão 46 (documento 224; D-N590: C32, Q224-1): passa a **opcional**: existem notas válidas sem chave de acesso (modelos 01, 1B, 04, 02, 2D, 2E, 06, 28 e 29) e o ERP tem de aceitá-las (contador, 16/11/2026). O Motor exige a chave quando `Cad_Modelo_Documento_Fiscal.Eletronico` é verdadeiro e aceita a nota sem chave nos demais; os casos de cada modelo seguem abertos. |
 | **Data_Emissao** | *data* | --- |
 | **Valor_Total** | *número* | O valor total tal como emitido --- nunca recalculado a partir da soma dos itens (ver princípio acima). |
 | **Valor_Frete** | *número, opcional* | Adicionado nesta revisão (3), pedido por Alberto: o valor de frete definitivo, confirmado no instante da emissão da nota --- cobre tanto a confirmação do que já era valor_fixo negociado na venda (Mov_Pedido_Venda_Item_Entrega_Programada.Valor_Frete_Negociado) quanto a apuração real de frete quando a modalidade era a_apurar_no_envio (Alberto: \"se estima um valor no momento da venda e o valor vai ser apurado realmente na hora do envio, com isto é ajustado na hora da emissão da nota fiscal\"). Vazio quando Modalidade_Cobranca_Frete=sem_cobranca em todas as entregas programadas do pedido faturado por esta nota. |
@@ -1234,6 +1242,7 @@ O cabeçalho da nota fiscal de saída.
 | **ID_Municipio_Origem_Servico** | *referência (Cad_Municipio), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_MUN_ORIG do bilhete de passagem (modelos 13 a 16), para o D310 e o D420 quando o bilhete é nota. |
 | **ID_Participante_Agencia** | *referência (Cad_Participante), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): COD_PART do D400: a agência, filial ou posto do resumo de movimento diário (modelo 18). A nota só tinha o cliente. |
 | **ID_Nota_Rmd** | *referência (Mov_Nota_Fiscal_Saida), opcional* | Revisão 32 (documento 175, seção 5.3; D-N480; Q175-1 a Q175-9 pela recomendação): O RMD (modelo 18) que reúne o bilhete (D410). O bilhete do D400 não pode repetir no D300. |
+| **Indicador_Emitente_Exclusivo_Ibs_Cbs** | *booleano, opcional* | Revisão 50 (documento 234; D-N604): Q231-2 (a), NT 2026.007 v1.11: cópia, na emissão, de `Cad_Filial_Perfil_Fiscal.Contribuinte_Exclusivo_Ibs_Cbs` (a nota guarda o que valeu na emissão, como em `ID_Destinacao_Autopeca`): verdadeiro quando a NF-e saiu sem emit/IE. Decide a rota (SVRS), o destino dos eventos da nota (1P10-40) e as regras N01-10, UB12-11 e I08-191. Só no modelo 55; vazio vale falso. |
 
 *Revisão 3 --- campos novos (documento 33): ID_Documento_Fiscal, Tipo_Operacao, Documento_Consumidor, Nome_Consumidor, ID_Expedicao; campos novos (documento 34): Data_Previsao_Entrega, ID_Tipo_Nota_Debito, ID_Tipo_Nota_Credito, Indicador_Intermediador, ID_Participante_Intermediador, Identificador_Cadastro_Intermediador, ID_Participante_Transportadora, Informacoes_Complementares, Informacoes_Fisco, Numero_Nota_Empenho, Numero_Pedido_Compra, Numero_Contrato, ID_Estado_Saida_Pais, Local_Exportacao, Local_Despacho, ID_Indicador_Operacao, Safra_Cana, Competencia_Cana, Quantidade_Total_Mes_Cana, Quantidade_Total_Anterior_Cana, Quantidade_Total_Geral_Cana, Valor_Fornecimentos_Cana, Valor_Total_Deducoes_Cana, Valor_Liquido_Fornecimentos_Cana; campos novos (documento 35): Indicador_Destinatario; campos novos (documento 44): ID_Entidade_Ligada, Valor_Abatimento_Nao_Tributado, Subserie, ID_Equipamento_Fiscal; campos alterados (documento 33): ID_Participante_Cliente; campos alterados (documento ?): Chave_Acesso; campos alterados (documento 43): ID_Modelo_Documento; campos alterados (documento 41): Finalidade, Protocolo_Autorizacao.*
 
@@ -1242,6 +1251,10 @@ O cabeçalho da nota fiscal de saída.
 *Revisão 31 --- campos novos: Indicador_Fornecimento_Sob_Contrato.*
 
 *Revisão 32 --- campos novos: Numero_Contador_Cupom_Fiscal, ID_Reducao_Z, ID_Tipo_Assinante, ID_Municipio_Origem_Servico, ID_Participante_Agencia, ID_Nota_Rmd.*
+
+*Revisão 46 --- campos alterados: Chave_Acesso.*
+
+*Revisão 50 --- campos novos: Indicador_Emitente_Exclusivo_Ibs_Cbs.*
 
 *Comportamento de aplicação (não é um campo novo de dados): pelo mesmo
 motor transversal da Fase 0 (seção 10), nenhuma Mov_Nota_Fiscal_Saida
@@ -1393,7 +1406,11 @@ Uma linha da nota fiscal de saída.
 | **ID_Veiculo_Versao** | *referência (Cad_Veiculo_Versao), opcional* | Revisão 40 (documento 204, seção 5.3; D-N548: Q204-1 a Q204-10): A ficha do veículo do item. A nota continua levando os campos do XML (cv, cm³, combustível); o Motor confere kW contra cv e avisa. |
 | **ID_Destinacao_Autopeca** | *referência (Cad_Classe_Sistema, domínio = destinacao_autopeca_venda), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Copiado do pedido; a nota guarda o que valeu na emissão. |
 | **Origem_Destinacao_Autopeca** | *enumeração {perfil_do_comprador, declaracao_do_item, informado_pelo_usuario}, opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Idem. |
-| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Idem. |
+| **ID_Documento_Declaracao** | *referência (Cad_Documento), opcional* | Revisão 40 (documento 209, seção 5.3; D-N548: Q209-1 a Q209-11): Idem. Revisão 46 (documento 224; D-N590: C279): a destinação de uma peça pode ser mista no mesmo pedido e se registra por item, com a declaração de cada um. |
+| **Codigo_Barras_Comercial** | *código (até 30), opcional* | Revisão 47 (documento 227; D-N595): Q227-4: cBarra (I03a, NT 2020.005 v1.20): código de barras da unidade comercial que **não é GTIN**, de 3 a 30 caracteres, sem validação de dígito. `Gtin` guarda só o GTIN. A regra que combina `cBarra` com o GTIN não foi conferida. |
+| **Codigo_Barras_Tributavel** | *código (até 30), opcional* | Revisão 47 (documento 227; D-N595): Q227-4: cBarraTrib (I12a, NT 2020.005 v1.20): código de barras da unidade tributável que não é GTIN, de 3 a 30 caracteres, sem validação de dígito. `Gtin_Tributavel` guarda só o GTIN. |
+| **Valor_Tributos_Aproximados** | *número, opcional* | Revisão 54 (documento 243; D-N624 a D-N626): Q243-1 (D-N624): valor aproximado dos tributos do item (Lei 12.741; `vTotTrib` de `det/imposto` na NF-e e na NFC-e), **como foi declarado na emissão**. É declaratório: a SEFAZ não o valida contra os tributos destacados, e ele vem da tabela `Cad_Percentual_Tributos_Aproximados` (que vale para produto, pela NCM, e para serviço, pela NBS do item), não das linhas de tributo da nota. O total da nota (`ICMSTot/vTotTrib`) é derivado: soma dos itens. O nome da fonte vai em `Informacoes_Complementares`, onde a lei manda dizer. |
+| **Percentual_Tributos_Aproximados** | *número, opcional* | Revisão 54 (documento 243; D-N624 a D-N626): Q243-2 e Q243-3 (D-N625 e D-N626): o percentual da tabela `Cad_Percentual_Tributos_Aproximados` que foi usado na emissão (NCM ou NBS do item e filial emissora, na data da emissão). Fica como cópia no item: explica o `Valor_Tributos_Aproximados` mesmo depois de a linha da tabela mudar de vigência. |
 
 *Revisão 3 --- campos novos (documento 33): ID_Imovel; campos novos (documento 34): ID_Unidade_Tributavel, Quantidade_Tributavel, Valor_Unitario_Tributavel, Gtin_Tributavel, Indicador_Bem_Movel_Usado, Numero_Pedido_Cliente, Item_Pedido_Cliente, Numero_Fci, Indicador_Doacao, Informacoes_Adicionais_Item, Percentual_Devolvido, Valor_Ipi_Devolvido, Valor_Unitario_Liquido, Valor_Total_Liquido, Codigo_Tipo_Credito_Presumido_Zfm, Numero_Recopi, Veiculo_Tipo_Operacao, Veiculo_Chassi, Veiculo_Codigo_Cor, Veiculo_Descricao_Cor, Veiculo_Potencia_Cv, Veiculo_Cilindrada_Cc, Veiculo_Peso_Liquido, Veiculo_Peso_Bruto, Veiculo_Numero_Serie, Veiculo_Codigo_Combustivel, Veiculo_Numero_Motor, Veiculo_Capacidade_Tracao, Veiculo_Distancia_Eixos, Veiculo_Ano_Modelo, Veiculo_Ano_Fabricacao, Veiculo_Tipo_Pintura, Veiculo_Codigo_Tipo, Veiculo_Codigo_Especie, Veiculo_Vin_Remarcado, Veiculo_Condicao, Veiculo_Codigo_Marca_Modelo, Veiculo_Codigo_Cor_Denatran, Veiculo_Lotacao, Veiculo_Restricao, Medicamento_Registro_Anvisa, Medicamento_Motivo_Isencao, Medicamento_Preco_Maximo_Consumidor, Arma_Tipo, Arma_Numero_Serie, Arma_Numero_Cano, Arma_Descricao, Combustivel_Codigo_Anp, Combustivel_Descricao_Anp, Combustivel_Percentual_Glp, Combustivel_Percentual_Gas_Natural_Nacional, Combustivel_Percentual_Gas_Natural_Importado, Combustivel_Valor_Partida, Combustivel_Codigo_Codif, Combustivel_Quantidade_Temperatura_Ambiente, ID_Estado_Consumo_Combustivel, Combustivel_Cide_Base, Combustivel_Cide_Aliquota, Combustivel_Cide_Valor, Combustivel_Numero_Bico, Combustivel_Numero_Bomba, Combustivel_Numero_Tanque, Combustivel_Encerrante_Inicial, Combustivel_Encerrante_Final, Combustivel_Percentual_Biodiesel, Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem; campos novos (documento 41): ID_Indicador_Operacao; campos novos (documento 44): Natureza_Operacao, ID_Conta_Contabil, ID_Tipo_Receita_Comunicacao, ID_Classificacao_Item_Utilidade; campos alterados (documento 41): ID_CFOP_Saida.*
 
@@ -1412,6 +1429,12 @@ Uma linha da nota fiscal de saída.
 *Revisão 40 --- campos novos: ID_Veiculo_Versao, ID_Destinacao_Autopeca, Origem_Destinacao_Autopeca, ID_Documento_Declaracao.*
 
 *Revisão 45 --- campos que saem: Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem.*
+
+*Revisão 46 --- campos alterados: ID_Documento_Declaracao.*
+
+*Revisão 47 --- campos novos: Codigo_Barras_Comercial, Codigo_Barras_Tributavel.*
+
+*Revisão 54 --- campos novos: Valor_Tributos_Aproximados, Percentual_Tributos_Aproximados.*
 
 *Comportamento de aplicação (não é um campo novo de dados): emitir a
 nota (Status=emitida) gera, para cada linha COM ID_Item_Pedido
@@ -1502,26 +1525,15 @@ nota.
 
 *Vigência: não.*
 
-  -------------------------- ------------------------------- ----------------------------------------
-  **Campo**                  **Tipo lógico**                 **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item** | *identificador* | --- |
+| **ID_Devolucao** | *referência (Mov_Devolucao_Venda)* | --- |
+| **ID_Nota_Item** | *referência (Mov_Nota_Fiscal_Saida_Item)* | Revisão 50 (documento 234; D-N604: Q231-2 (b) e (c)): ao emitir a NF-e de devolução (finNFe = 4), o Motor grava neste item o `DFeReferenciado` do item emitido (`Mov_Nota_Fiscal_Saida_Item_Referencia`) com a chave da nota original e o `nItem` do item original, ou, na devolução de uma única nota, a referência do cabeçalho (`Mov_Nota_Fiscal_Saida_Referenciada`). As regras 3BA02-50, 54, 58, 64 e 68 (rejeições 545, 546, 566, 567 e 581) comparam o total da devolução com o das notas referenciadas no cabeçalho, com tolerância de R$ 1,00. |
+| **Quantidade_Devolvida** | *número* | Pode ser menor que a Quantidade do item na nota original --- devolução parcial. |
+| **Valor_Devolvido** | *número* | O valor tal como emitido na nota fiscal de devolução --- nunca recalculado a partir de Quantidade_Devolvida (mesmo princípio de fidelidade à nota, seção 7). |
 
-  **ID_Item**                *identificador*                 ---
-
-  **ID_Devolucao**           *referência                     ---
-                             (Mov_Devolucao_Venda)*          
-
-  **ID_Nota_Item**           *referência                     ---
-                             (Mov_Nota_Fiscal_Saida_Item)*   
-
-  **Quantidade_Devolvida**   *número*                        Pode ser menor que a Quantidade do item
-                                                             na nota original --- devolução parcial.
-
-  **Valor_Devolvido**        *número*                        O valor tal como emitido na nota fiscal
-                                                             de devolução --- nunca recalculado a
-                                                             partir de Quantidade_Devolvida (mesmo
-                                                             princípio de fidelidade à nota, seção
-                                                             7).
-  -------------------------- ------------------------------- ----------------------------------------
+*Revisão 50 --- campos alterados: ID_Nota_Item.*
 
 *Uma devolução aceita apensa devolvido_parcial ou devolvido_total em
 Mov_Pedido_Venda_Item_Status_Historico (seção 5), pelo mesmo critério de

@@ -7,6 +7,12 @@ contrato de fornecimento contínuo, aprovação, vínculo com o orçamento,
 nota fiscal de entrada via Motor de Regras, devolução e recusa de
 recebimento*
 
+*Revisão 33 --- consolidação da revisão 50 do dicionário (documento 234 (D-N604: Q231-2, o desenho do emitente sem IE, da NA01-20 e 3BA02, do DFeReferenciado na devolução e do fim da denegação do emitente)): 1 entidades existentes alteradas; devolução de compra e o DFeReferenciado (Q231-2 c).*
+
+*Revisão 32 --- consolidação da revisão 49 do dicionário (documentos 226 e 229 (D-N600: Q226-1 a Q226-5 e Q229-1) e documento 232 revisão 2 (Q232-1 a Q232-11 lidas como Sim; D-N602 e D-N603)): 1 entidades existentes alteradas; código de barras comercial e tributável no item da nota de entrada (Q229-1).*
+
+*Revisão 31 --- consolidação da revisão 46 do dicionário (documento 224 (aplicação das 21 respostas do contador de 16/11/2026, Q188-6, D-N590, e Q224-1 a Q224-3, D-N591)): 1 entidades existentes alteradas; Chave_Acesso opcional na nota de entrada (C32, Q224-1).*
+
 *Revisão 30 --- consolidação da revisão 45 do dicionário (documento 222 (desenho em campos de tudo o que Alberto aprovou e ainda não estava no dicionário), com as respostas de 16/11/2026 (Q188-7 e Q188-8, D-N584; Q220-1, Q220-5 e Q221-1 a Q221-13, D-N588)): 1 entidades novas (anexo, seção 13); 1 entidades existentes alteradas; origem do combustível na tabela filha (Q221-12).*
 
 *Revisão 29 --- consolidação da revisão 40 do dicionário (documentos 204, 206 e 209 e B1 do documento 205, com as respostas de Alberto de 11/11/2026): 1 entidades existentes alteradas; campo ID_Veiculo_Versao em Mov_Nota_Fiscal_Entrada_Item (documento 204).*
@@ -687,7 +693,7 @@ O cabeçalho da nota fiscal de entrada.
 | **ID_Filial** | *referência (Cad_Filial)* | A filial que recebeu a nota. |
 | **Numero** | *código (até 15)* | Identificação fiscal da nota, conforme emitida pelo fornecedor. Desmembrado na revisão 15. |
 | **Serie** | *código (até 5)* | Revisão 19 (Bloco 4): passou de 3 para 5 posições, porque o campo serie da EFD-Reinf aceita até 5 caracteres (nota fiscal, fatura ou Recibo Provisório de Serviço). Revisão 16 (documento 82, D-N247): o R-2010 e o R-2020 pedem série de 1 a 5 posições e "0" (zero) quando o documento não tem série; nota sem série (fatura, Recibo Provisório de Serviço ou outro documento) grava 0. |
-| **Chave_Acesso** | *código (até 50)* | Adicionado nesta revisão (6), pedido por Alberto como princípio geral: toda referência a nota fiscal no dicionário precisa carregar a chave de acesso da NFe --- identifica o documento nacionalmente (DV mod 11). Alterado na revisão 3: tipo atualizado. |
+| **Chave_Acesso** | *código (até 50), opcional* | Adicionado nesta revisão (6), pedido por Alberto como princípio geral: toda referência a nota fiscal no dicionário precisa carregar a chave de acesso da NFe --- identifica o documento nacionalmente (DV mod 11). Alterado na revisão 3: tipo atualizado. Revisão 46 (documento 224; D-N590: C32, Q224-1): passa a **opcional**: existem notas válidas sem chave de acesso (modelos 01, 1B, 04, 02, 2D, 2E, 06, 28 e 29) e o ERP tem de aceitá-las (contador, 16/11/2026). O Motor exige a chave quando `Cad_Modelo_Documento_Fiscal.Eletronico` é verdadeiro e aceita a nota sem chave nos demais; os casos de cada modelo seguem abertos. |
 | **Data_Emissao** | *data* | A data de emissão pelo fornecedor. Desmembrado na revisão 15. |
 | **Data_Entrada** | *data* | A data de entrada na empresa --- pode ser diferente da emissão, relevante para prazo de escrituração. |
 | **Valor_Total** | *número* | O valor total tal como emitido na nota --- nunca recalculado a partir da soma dos itens (ver princípio acima). |
@@ -744,6 +750,8 @@ O cabeçalho da nota fiscal de entrada.
 *Revisão 19 --- campos alterados: Natureza_Operacao.*
 
 *Revisão 30 --- campos novos: Escriturada_Como_Saida; valores de enumeração novos: Finalidade (+credito, debito).*
+
+*Revisão 46 --- campos alterados: Chave_Acesso.*
 
 *Comportamento de aplicação (não é um campo novo de dados): pelo mesmo
 motor transversal da Fase 0 (seção 10), nenhuma Mov_Nota_Fiscal_Entrada
@@ -824,6 +832,8 @@ Motor de Regras e o CFOP tratado por conversão.
 | **Quantidade_Tributavel** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/qTrib: quantidade tributável (0 a 4 decimais). |
 | **Valor_Unitario_Tributavel** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/vUnTrib: valor unitário de tributação (até 10 decimais). |
 | **Gtin_Tributavel** | *código (até 14), opcional* | Novo na revisão 3 (documento 34). det/prod/cEANTrib: GTIN da unidade tributável, diferente de Gtin (cEAN); a NT 2021.003 valida os dois contra o Cadastro Centralizado (grupo V a partir de 01/09/2027). |
+| **Codigo_Barras_Comercial** | *código (até 30), opcional* | Revisão 49 (documento 229; D-N600): Q229-1: cBarra (NT 2020.005 v1.20): código de barras da unidade comercial que **não é GTIN**, de 3 a 30 caracteres, sem validação de dígito. `Gtin` guarda só o GTIN. Segue o campo de mesmo nome de `Mov_Nota_Fiscal_Saida_Item` (revisão 47). |
+| **Codigo_Barras_Tributavel** | *código (até 30), opcional* | Revisão 49 (documento 229; D-N600): Q229-1: cBarraTrib (NT 2020.005 v1.20): código de barras da unidade tributável que não é GTIN, de 3 a 30 caracteres, sem validação de dígito. `Gtin_Tributavel` guarda só o GTIN. |
 | **Indicador_Bem_Movel_Usado** | *booleano, opcional* | Novo na revisão 3 (documento 34). det/prod/indBemMovelUsado: fornecimento de bem móvel usado (RTC). |
 | **Numero_Pedido_Cliente** | *código (até 15), opcional* | Novo na revisão 3 (documento 34). det/prod/xPed: pedido de compra do cliente, para controle do B2B. |
 | **Item_Pedido_Cliente** | *número, opcional* | Novo na revisão 3 (documento 34). det/prod/nItemPed: número do item do pedido de compra do cliente. |
@@ -911,6 +921,8 @@ Motor de Regras e o CFOP tratado por conversão.
 *Revisão 40 --- campos novos: ID_Veiculo_Versao.*
 
 *Revisão 45 --- campos que saem: Combustivel_Indicador_Importado, ID_Estado_Origem_Combustivel, Combustivel_Percentual_Origem.*
+
+*Revisão 49 --- campos novos: Codigo_Barras_Comercial, Codigo_Barras_Tributavel.*
 
 *Comportamento de aplicação (não é um campo novo de dados): toda vez que
 o usuário confirma ou corrige a sugestão de ID_CFOP_Entrada, essa
@@ -1172,27 +1184,15 @@ nota.
 
 *Vigência: não.*
 
-  -------------------------- --------------------------------- ----------------------------------------
-  **Campo**                  **Tipo lógico**                   **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item** | *identificador* | --- |
+| **ID_Devolucao** | *referência (Mov_Devolucao_Compra)* | --- |
+| **ID_Nota_Item** | *referência (Mov_Nota_Fiscal_Entrada_Item)* | Revisão 50 (documento 234; D-N604: Q231-2 (c)): na devolução de compra o `DFeReferenciado` aponta para a chave e o `nItem` da nota do fornecedor (a nota de entrada); em toda a devolução o emitente referenciado é o mesmo (CNPJ base ou CPF) em todos os itens (VC02-40, rejeição 1193). |
+| **Quantidade_Devolvida** | *número* | Pode ser menor que a Quantidade do item na nota original --- é isso que permite devolução parcial. |
+| **Valor_Devolvido** | *número* | O valor tal como emitido na nota fiscal de devolução --- nunca recalculado a partir de Quantidade_Devolvida (mesmo princípio de fidelidade à nota, seção 6). |
 
-  **ID_Item**                *identificador*                   ---
-
-  **ID_Devolucao**           *referência                       ---
-                             (Mov_Devolucao_Compra)*           
-
-  **ID_Nota_Item**           *referência                       ---
-                             (Mov_Nota_Fiscal_Entrada_Item)*   
-
-  **Quantidade_Devolvida**   *número*                          Pode ser menor que a Quantidade do item
-                                                               na nota original --- é isso que permite
-                                                               devolução parcial.
-
-  **Valor_Devolvido**        *número*                          O valor tal como emitido na nota fiscal
-                                                               de devolução --- nunca recalculado a
-                                                               partir de Quantidade_Devolvida (mesmo
-                                                               princípio de fidelidade à nota, seção
-                                                               6).
-  -------------------------- --------------------------------- ----------------------------------------
+*Revisão 50 --- campos alterados: ID_Nota_Item.*
 
 9\. Como este módulo se conecta com a Fase 0 e com Planejamento &
 Orçamento
