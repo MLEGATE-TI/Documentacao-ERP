@@ -4,6 +4,12 @@
 
 *Conta bancária, extrato, conciliação, remessa/retorno bancário (CNAB, API, Open Finance), painel de gestão de caixa, aging, devedores duvidosos e régua de cobrança*
 
+*Revisão 15 --- consolidação da revisão 59 do dicionário (documento 250, versão 44 (D-N680, D-N688 e D-N689: meio de transmissão no canal, layout por carteira e convênio de folha em parâmetro, aprovados por Alberto)): 2 entidades existentes alteradas; o campo Meio_Transmissao no canal da conta (portal_manual, host_a_host, api, van) e o campo Layout_Cnab na carteira, que troca o layout padrão da conta (documento 250, Q250-67 e Q250-63).*
+
+*Revisão 14 --- consolidação da revisão 58 do dicionário (documento 250, versão 34 (D-N666 e D-N675: boleto com ou sem Pix em parâmetro global e débito veicular do Bradesco)): 1 entidade nova (anexo, seção 16); 2 entidades existentes alteradas; o parâmetro global do boleto com ou sem Pix (`Cad_Cobranca_Parametro`, com vigência) e o valor `debito_veicular` em `Produto` da matriz de capacidades e do canal da conta (documento 250, D-N666 e D-N675).*
+
+*Revisão 13 --- consolidação da revisão 56 do dicionário (documento 250, versão 16 (D-N639 a D-N658: motor de envio bancário para qualquer banco, pelas recomendações; sem o estoque proativo do documento 251)): 15 entidades novas (anexo, seção 15); 5 entidades existentes alteradas; o motor de envio bancário para qualquer banco: 15 entidades novas (driver, capacidades, canal, webhook, mensagem, histórico, mapa de ocorrências, DDA, Pix Automático, dados de tributo e de cobrança do item e certificados dos bancos) e 53 campos novos na remessa, no item de remessa, no retorno, no item de retorno e no extrato (documento 250).*
+
 *Revisão 12 --- consolidação da revisão 25 do dicionário (documentos 94, 99, 107, 116, 120, 123 a 129 e 132, com as respostas de Alberto de 26 e 27/10/2026): 1 entidades novas (anexo, seção 14); 3 entidades existentes alteradas; a ordem de pagamento ao exterior, o retorno com contrato, taxa e valor do câmbio e o indicador da conta bancária (documentos 124 e 129).*
 
 *Revisão 11 --- consolidação da revisão 23 do dicionário (documentos 113 e 114, com as respostas de Alberto de 26/10/2026 (Q113-6 e Q114-1 a Q114-4)): 1 entidades existentes alteradas; valor boleto na forma de lançamento da remessa bancária (documento 113).*
@@ -118,21 +124,33 @@ Uma linha de movimento bancário, como informado pelo próprio banco.
 
 |                                   |                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Campo**                         | **Tipo lógico**                                                                   | **Descrição / regra**                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **ID_Linha_Extrato**              | *identificador*                                                                   | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **ID_Conta_Bancaria**             | *referência (Cad_Conta_Bancaria)*                                                 | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Data_Movimento**                | *data*                                                                            | A data em que o banco processou o movimento — não necessariamente a data de importação deste registro no sistema.                                                                                                                                                                                                                                                                                                                                                   |
-| **Tipo**                          | *enumeração {credito, debito}*                                                    | Mesma lógica já usada em Mov_Conta_Contabil_Evento e Mov_Titulo (Contas a Pagar/Receber): puramente estrutural, decide o sinal do Valor.                                                                                                                                                                                                                                                                                                                            |
-| **Valor**                         | *número*                                                                          | Sempre positivo — o sinal vem de Tipo, nunca do próprio valor.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Historico_Banco**               | *texto*                                                                           | A descrição literal enviada pelo banco — texto livre, nunca reinterpretado ou editado por este sistema.                                                                                                                                                                                                                                                                                                                                                             |
-| **Documento_Banco**               | *código (até 30), opcional*                                                       | O identificador que o próprio banco atribui ao movimento (nosso número, código de transação, id de PIX), quando informado.                                                                                                                                                                                                                                                                                                                                          |
-| **Origem_Importacao**             | *enumeração {cnab_retorno, api_banco, api_open_finance, manual}*                  | Como esta linha chegou ao sistema. api_open_finance, adicionado nesta revisão (3): a linha veio da API de Dados Cadastrais e Transacionais do Open Finance (extrato/saldo em near-real-time, defasagem regulatória de até 5 minutos), diferente de api_banco (API proprietária do próprio banco onde a Mlegate já tem conta) e de cnab_retorno (arquivo em lote).                                                                                                   |
-| **ID_Retorno_Item**               | *referência (Mov_Retorno_Bancario_Item, opcional)*                                | Preenchido quando Origem_Importacao=cnab_retorno — de qual item do arquivo de retorno (seção 6) esta linha de extrato nasceu.                                                                                                                                                                                                                                                                                                                                       |
-| **Data_Importacao**               | *data/hora*                                                                       | Quando este registro entrou no sistema — pode ser bem depois de Data_Movimento, em importação em lote; em near-real-time quando Origem_Importacao=api_open_finance ou api_banco.                                                                                                                                                                                                                                                                                    |
-| **ID_Classificacao**              | *referência (Cad_Classe_Sistema, domínio = tipo_classificacao_extrato, opcional)* | Muitas vezes só o Historico_Banco (texto livre do banco) não permite identificar do que se trata a linha — este campo dá uma categoria de triagem (ex.: tarifa, pix_recebido, pix_enviado, ted, boleto_pago, rendimento, emprestimo, transferencia_entre_contas, outro), independente/anterior à conciliação (seção 4, o vínculo estrutural com o registro interno específico). Domínio aberto, mesmo padrão de Cad_Classe_Sistema já usado no resto do dicionário. |
-| **Tipo_Classificacao**            | *enumeração {automatica, manual}, opcional*                                       | Automática quando o sistema sugere a classificação reaproveitando o Motor de Regras (Fase 0) — ver critério abaixo —, manual quando um usuário classifica diretamente.                                                                                                                                                                                                                                                                                              |
-| **ID_Participante_Classificacao** | *referência (Cad_Participante, opcional)*                                         | Quem confirmou a classificação — preenchido mesmo quando Tipo_Classificacao=automatica, porque Alberto foi explícito que a classificação automática precisa de validação do operador, não é aplicada sem revisão humana.                                                                                                                                                                                                                                            |
-| **Data_Classificacao**            | *data, opcional*                                                                  | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Linha_Extrato** | *identificador* | — |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | — |
+| **Data_Movimento** | *data* | A data em que o banco processou o movimento — não necessariamente a data de importação deste registro no sistema. |
+| **Tipo** | *enumeração {credito, debito}* | Mesma lógica já usada em Mov_Conta_Contabil_Evento e Mov_Titulo (Contas a Pagar/Receber): puramente estrutural, decide o sinal do Valor. |
+| **Valor** | *número* | Sempre positivo — o sinal vem de Tipo, nunca do próprio valor. |
+| **Historico_Banco** | *texto* | A descrição literal enviada pelo banco — texto livre, nunca reinterpretado ou editado por este sistema. |
+| **Documento_Banco** | *código (até 30), opcional* | O identificador que o próprio banco atribui ao movimento (nosso número, código de transação, id de PIX), quando informado. |
+| **Origem_Importacao** | *enumeração {cnab_retorno, api_banco, api_open_finance, manual}* | Como esta linha chegou ao sistema. api_open_finance, adicionado nesta revisão (3): a linha veio da API de Dados Cadastrais e Transacionais do Open Finance (extrato/saldo em near-real-time, defasagem regulatória de até 5 minutos), diferente de api_banco (API proprietária do próprio banco onde a Mlegate já tem conta) e de cnab_retorno (arquivo em lote). |
+| **ID_Retorno_Item** | *referência (Mov_Retorno_Bancario_Item, opcional)* | Preenchido quando Origem_Importacao=cnab_retorno — de qual item do arquivo de retorno (seção 6) esta linha de extrato nasceu. |
+| **Data_Importacao** | *data/hora* | Quando este registro entrou no sistema — pode ser bem depois de Data_Movimento, em importação em lote; em near-real-time quando Origem_Importacao=api_open_finance ou api_banco. |
+| **ID_Classificacao** | *referência (Cad_Classe_Sistema, domínio = tipo_classificacao_extrato, opcional)* | Muitas vezes só o Historico_Banco (texto livre do banco) não permite identificar do que se trata a linha — este campo dá uma categoria de triagem (ex.: tarifa, pix_recebido, pix_enviado, ted, boleto_pago, rendimento, emprestimo, transferencia_entre_contas, outro), independente/anterior à conciliação (seção 4, o vínculo estrutural com o registro interno específico). Domínio aberto, mesmo padrão de Cad_Classe_Sistema já usado no resto do dicionário. |
+| **Tipo_Classificacao** | *enumeração {automatica, manual}, opcional* | Automática quando o sistema sugere a classificação reaproveitando o Motor de Regras (Fase 0) — ver critério abaixo —, manual quando um usuário classifica diretamente. |
+| **ID_Participante_Classificacao** | *referência (Cad_Participante, opcional)* | Quem confirmou a classificação — preenchido mesmo quando Tipo_Classificacao=automatica, porque Alberto foi explícito que a classificação automática precisa de validação do operador, não é aplicada sem revisão humana. |
+| **Data_Classificacao** | *data, opcional* | — |
+| **Codigo_Lancamento_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O código do lançamento como o banco manda (o `codigoLancamento` do Bradesco tem 5 posições; a FAQ de tributos cita 907 tributos, 978 gás, 982 água, 983 luz e 984 telefone). O mapa de ocorrências (R10) o traduz em tipo de lançamento; sem mapa, alerta |
+| **Saldo_Apos_Lancamento** | *número, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O saldo da conta logo depois do lançamento, como o banco devolve; serve para conferir o extrato importado, linha a linha, contra o saldo do banco |
+| **Situacao_Lancamento** | *enumeração {definitivo, do_dia, futuro, em_processamento}, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Valor `em_processamento` na 7: {definitivo, do_dia, futuro, em_processamento}: o extrato do Bradesco traz D-1 e o histórico (definitivos) e também o **D0** e os **lançamentos futuros** (provisórios); vazio = definitivo (R49). `em_processamento` é o tipo 3 do extrato do BB (R57) |
+| **Categoria_Febraban_Lancamento** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, extrato em CNAB 240 v5, campo E012: a categoria padrão FEBRABAN do lançamento, de 3 dígitos: débitos 101 a 122 e créditos 201 a 223 (por exemplo 120 e 209, transferência interbancária; 223, crédito de Pix por QR Code). Serve à conciliação entre bancos sem depender do texto do histórico (R103) |
+| **Documento_Contrapartida** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O CPF ou CNPJ da outra parte do lançamento, quando o banco informa (BB: até 15 posições, com o indicador de pessoa física ou jurídica); serve à conciliação por pagador |
+| **Codigo_Banco_Contrapartida** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O banco da outra parte (BB: o código de compensação, e também o ISPB) |
+| **Agencia_Contrapartida** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A agência da outra parte |
+| **Conta_Contrapartida** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A conta da outra parte, com o dígito (BB: até 20 posições mais o dígito); o ERP guarda como veio, sem validar |
+| **Identificador_Unico_Transacao** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O identificador único da transação (BB: até 64 posições; no Pix, o `E2eid`, de 32). `Documento_Banco` tem 30 posições e **não comporta** o `E2eid`; este campo evita cortá-lo e casa a linha do extrato com o Pix do retorno |
+
+*Revisão 56 --- campos novos: Codigo_Lancamento_Banco, Saldo_Apos_Lancamento, Situacao_Lancamento, Categoria_Febraban_Lancamento, Documento_Contrapartida, Codigo_Banco_Contrapartida, Agencia_Contrapartida, Conta_Contrapartida, Identificador_Unico_Transacao.*
 
 *Critério da sugestão automática de classificação, precisado por Alberto nesta revisão: como o extrato traz pouca informação estruturada, a sugestão do Motor de Regras precisa cruzar banco (Cad_Conta_Bancaria.ID_Instituicao_Financeira, via ID_Conta_Bancaria), Historico_Banco (o texto livre) e Tipo (crédito/débito) — o mesmo texto de histórico pode significar coisas diferentes conforme o banco que o emite e conforme o valor for entrada ou saída. Os três campos já existem na estrutura acima; nenhum campo novo foi necessário — é uma regra de configuração do Motor de Regras, não uma mudança de dados.*
 
@@ -165,7 +183,7 @@ O casamento entre uma linha de extrato e um evento interno, total ou parcial.
 
 5\. Remessa Bancária (Cobrança e Pagamento)
 
-O envio ao banco — registrando um título a receber para cobrança (boleto/Pix cobrança) ou uma ordem de pagamento a um fornecedor (título a pagar). Cabeçalho e item, mesmo padrão já usado em outras entidades deste dicionário (cotação e seus itens, em CRM & Vendas; empréstimo e suas parcelas, em Contas a Pagar/Receber). Renomeado nesta revisão (3) de Mov_Cnab_Remessa/Item para Mov_Remessa_Bancaria/Item: Alberto confirmou que quer ter todas as informações prontas tanto para atender o arquivo CNAB quanto uma API (Pix API ou Open Finance) a partir da mesma estrutura — quando o motor de envio for construído, ele já deve ter os dados necessários para transmitir por qualquer um dos canais — e pediu um nome genérico que funcione para os dois.
+O envio ao banco — registrando um título a receber para cobrança (boleto/Pix cobrança) ou uma ordem de pagamento a um fornecedor (título a pagar). Cabeçalho e item, mesmo padrão já usado em outras entidades deste dicionário (cotação e seus itens, em CRM & Vendas; empréstimo e suas parcelas, em Contas a Pagar/Receber). Renomeado nesta revisão (3) de Mov_Cnab_Remessa/Item para Mov_Remessa_Bancaria/Item: Alberto confirmou que quer ter todas as informações prontas tanto para atender o arquivo CNAB quanto uma API (Pix API ou Open Finance) a partir da mesma estrutura — quando o motor de envio for construído, ele já deve ter os dados necessários para transmitir por qualquer um dos canais — e pediu um nome genérico que funcione para os dois. **Revisão 56 (documento 250):** o motor de envio foi desenhado e consolidado: cada envio passa pelo **driver** do banco e do canal da conta (`Cad_Banco_Driver` e `Cad_Conta_Bancaria_Canal`), com o histórico em `Mov_Banco_Mensagem` e `Mov_Remessa_Bancaria_Evento`, e a remessa ganha o canal, o estado de processamento, o lote e a chave de idempotência; os dados que só alguns produtos usam ficam em `Mov_Remessa_Bancaria_Item_Cobranca` e `Mov_Remessa_Bancaria_Item_Tributo` (seção 15). Primeiro entram cobrança, recebimento, folha e pagamentos; DDA e Pix Automático estão desenhados e ficam desligados até a fase 2 (R115).
 
 Mov_Remessa_Bancaria
 
@@ -175,16 +193,27 @@ O cabeçalho de um envio ao banco — um arquivo CNAB (lote) ou um agrupador ló
 
 |                               |                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Campo**                     | **Tipo lógico**                                                                          | **Descrição / regra**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **ID_Remessa**                | *identificador*                                                                          | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **ID_Conta_Bancaria**         | *referência (Cad_Conta_Bancaria)*                                                        | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Tipo**                      | *enumeração {cobranca, pagamento}*                                                       | Cobrança: títulos a receber (Mov_Titulo, Tipo=receber) registrados para o banco cobrar do cliente. Pagamento: títulos a pagar (Mov_Titulo, Tipo=pagar) ordenados ao banco para pagamento a fornecedor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Canal_Transmissao**         | *enumeração {arquivo_cnab, api, open_finance}*                                           | Adicionado nesta revisão (3): decide se Numero_Sequencial_Arquivo/Nome_Arquivo se aplicam (só quando arquivo_cnab) ou se cada item é enviado individualmente em tempo real (quando api ou open_finance, esses dois campos ficam vazios — esta entidade passa a ser só um agrupador lógico por Data_Geracao). Os três valores fazem sentido tanto para Tipo=cobranca quanto para Tipo=pagamento: open_finance cobre tanto a iniciação de pagamento a fornecedor quanto o fluxo "Pay by Bank" de recebimento, em que o próprio cliente autoriza o pagamento à Mlegate no banco dele.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **ID_Provedor_Integracao**    | *referência (Cad_Classe_Sistema, domínio = tipo_provedor_integracao_bancaria, opcional)* | Adicionado nesta revisão (3), a pedido de Alberto: qual provedor técnico processou este envio, quando não é o banco diretamente — ex.: um agregador/BaaS como a Celcoin, que pode operar como conta digital própria ou como camada de intermediação sobre a conta em banco tradicional. Domínio aberto (celcoin, banco_direto, outro); vazio quando Canal_Transmissao=arquivo_cnab, já que aí o "provedor" é sempre o próprio banco.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Data_Geracao**              | *data*                                                                                   | —                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Numero_Sequencial_Arquivo** | *número, opcional*                                                                       | O sequencial exigido pelo layout CNAB do banco — controlado por conta bancária. Só quando Canal_Transmissao=arquivo_cnab.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Nome_Arquivo**              | *texto, opcional*                                                                        | Só quando Canal_Transmissao=arquivo_cnab.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **ID_Tipo_Servico_Lote**      | *referência (Cad_Classe_Sistema, domínio = tipo_servico_lote_cnab, opcional)*            | Adicionado nesta revisão (5), pesquisado a pedido de Alberto ("tem layoutes no CNAB e nas APIs bancárias específicas para pagamento de colaboradores, verificar estas regras"): só quando Tipo=pagamento — o tipo de serviço do lote exigido pelo header de lote do CNAB 240 (campo distinto do tipo de serviço do arquivo), que classifica a NATUREZA do pagamento — fornecedor (código 20), salários (código 30, com suporte específico a crédito em conta e a cartão-salário), diversos (código 98) ou, quando o pagamento é de um tributo com código de barras (INSS, FGTS via GRF/GRRF), tributos (código 22, Segmento O do CNAB, layout distinto do Segmento A/B usado para fornecedor/salário). Domínio aberto, mesmo padrão já usado para os demais códigos oficiais deste dicionário. Um mesmo Mov_Remessa_Bancaria (um lote) reúne itens do mesmo tipo de serviço — a folha gera lotes separados por Mov_Titulo.Natureza_Titulo_Folha (Contas a Pagar/Receber, Fase 5) quando a natureza exige um tipo de serviço de lote diferente (ex.: líquido do colaborador em código 30, INSS/FGTS em código 22), decisão de agrupamento de aplicação, não estrutura nova aqui. |
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Remessa** | *identificador* | — |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | — |
+| **Tipo** | *enumeração {cobranca, pagamento}* | Cobrança: títulos a receber (Mov_Titulo, Tipo=receber) registrados para o banco cobrar do cliente. Pagamento: títulos a pagar (Mov_Titulo, Tipo=pagar) ordenados ao banco para pagamento a fornecedor. |
+| **Canal_Transmissao** | *enumeração {arquivo_cnab, api, open_finance}* | Adicionado nesta revisão (3): decide se Numero_Sequencial_Arquivo/Nome_Arquivo se aplicam (só quando arquivo_cnab) ou se cada item é enviado individualmente em tempo real (quando api ou open_finance, esses dois campos ficam vazios — esta entidade passa a ser só um agrupador lógico por Data_Geracao). Os três valores fazem sentido tanto para Tipo=cobranca quanto para Tipo=pagamento: open_finance cobre tanto a iniciação de pagamento a fornecedor quanto o fluxo "Pay by Bank" de recebimento, em que o próprio cliente autoriza o pagamento à Mlegate no banco dele. |
+| **ID_Provedor_Integracao** | *referência (Cad_Classe_Sistema, domínio = tipo_provedor_integracao_bancaria, opcional)* | Adicionado nesta revisão (3), a pedido de Alberto: qual provedor técnico processou este envio, quando não é o banco diretamente — ex.: um agregador/BaaS como a Celcoin, que pode operar como conta digital própria ou como camada de intermediação sobre a conta em banco tradicional. Domínio aberto (celcoin, banco_direto, outro); vazio quando Canal_Transmissao=arquivo_cnab, já que aí o "provedor" é sempre o próprio banco. |
+| **Data_Geracao** | *data* | — |
+| **Numero_Sequencial_Arquivo** | *número, opcional* | O sequencial exigido pelo layout CNAB do banco — controlado por conta bancária. Só quando Canal_Transmissao=arquivo_cnab. |
+| **Nome_Arquivo** | *texto, opcional* | Só quando Canal_Transmissao=arquivo_cnab. |
+| **ID_Tipo_Servico_Lote** | *referência (Cad_Classe_Sistema, domínio = tipo_servico_lote_cnab, opcional)* | Adicionado nesta revisão (5), pesquisado a pedido de Alberto ("tem layoutes no CNAB e nas APIs bancárias específicas para pagamento de colaboradores, verificar estas regras"): só quando Tipo=pagamento — o tipo de serviço do lote exigido pelo header de lote do CNAB 240 (campo distinto do tipo de serviço do arquivo), que classifica a NATUREZA do pagamento — fornecedor (código 20), salários (código 30, com suporte específico a crédito em conta e a cartão-salário), diversos (código 98) ou, quando o pagamento é de um tributo com código de barras (INSS, FGTS via GRF/GRRF), tributos (código 22, Segmento O do CNAB, layout distinto do Segmento A/B usado para fornecedor/salário). Domínio aberto, mesmo padrão já usado para os demais códigos oficiais deste dicionário. Um mesmo Mov_Remessa_Bancaria (um lote) reúne itens do mesmo tipo de serviço — a folha gera lotes separados por Mov_Titulo.Natureza_Titulo_Folha (Contas a Pagar/Receber, Fase 5) quando a natureza exige um tipo de serviço de lote diferente (ex.: líquido do colaborador em código 30, INSS/FGTS em código 22), decisão de agrupamento de aplicação, não estrutura nova aqui. |
+| **ID_Conta_Bancaria_Canal** | *referência (Cad_Conta_Bancaria_Canal), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O canal usado (opcional, porque a remessa já existente não o tem) |
+| **Status** | *enumeração {gerada, aguardando_envio, enviada, recebida_pelo_banco, aguardando_aprovacao_no_banco, aguardando_liberacao, parcialmente_processada, processada, rejeitada, cancelada}* | Revisão 56 (documento 250; D-N639 a D-N658): `aguardando_liberacao` (versão 7 do documento 250) é a espera pela **liberação que o próprio ERP dá por API** (PagBB do BB, R58), diferente de `aguardando_aprovacao_no_banco` |
+| **Quantidade_Itens** | *número* | Revisão 56 (documento 250; D-N639 a D-N658): Total de itens |
+| **Valor_Total_Remessa** | *número* | Revisão 56 (documento 250; D-N639 a D-N658): Soma dos valores (conferida com o trailer do arquivo) |
+| **Data_Hora_Envio** | *data/hora, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Quando saiu |
+| **Hash_Arquivo** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Impressão do arquivo, para detectar reenvio |
+| **ID_Documento_Arquivo** | *referência (Cad_Documento), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O arquivo gerado (`Cad_Documento`) |
+| **Id_Lote_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): BB, PagBB: o identificador do lote como o **cliente** o escolhe e o banco usa em toda consulta e no cancelamento (`idLote`, inteiro). O banco debita **o valor total do lote** de uma vez, por isso é a chave para conciliar essa linha do extrato (R58) |
+
+*Revisão 56 --- campos novos: ID_Conta_Bancaria_Canal, Status, Quantidade_Itens, Valor_Total_Remessa, Data_Hora_Envio, Hash_Arquivo, ID_Documento_Arquivo, Id_Lote_Banco.*
 
 Mov_Remessa_Bancaria_Item
 
@@ -229,14 +258,31 @@ Cada título incluído no envio — de cobrança ou de pagamento, conforme Mov_R
 | **Valor_IOF_Pagamento** | *número, opcional* | Adicionado nesta revisão (3) — só quando Tipo=pagamento — Segmento C. O lançamento contábil da retenção em si fica como gancho para a futura Contabilidade & Fiscal, mesmo padrão já usado para PECLD/devedores duvidosos (seção 8). |
 | **ID_Autorizacao_Api** | *texto, opcional* | Adicionado nesta revisão (3) — só quando Canal_Transmissao=open_finance: o identificador de consentimento devolvido pela API, tanto para Tipo=pagamento (a Mlegate autoriza, no próprio banco, uma iniciação de pagamento ao fornecedor) quanto para Tipo=cobranca (o cliente autoriza, no banco dele, um pagamento direto à Mlegate — fluxo "Pay by Bank") — o campo Tipo já indica de qual dos dois fluxos se trata, não precisa de um campo de fluxo separado. |
 | **Status_Autorizacao_Api** | *enumeração {aguardando_autorizacao, autorizado, recusado}, opcional* | Adicionado nesta revisão (3) — só quando Canal_Transmissao=open_finance: o estado do consentimento, do lado do banco/pagador — armazenado como veio, porque é um estado externo, não derivado de eventos internos (diferente da filosofia geral de "status nunca armazenado" deste dicionário). |
+| **Status_Item** | *enumeração {incluido, enviado, confirmado, rejeitado, pago, devolvido, cancelado}* | Revisão 56 (documento 250; D-N639 a D-N658): {incluido, enviado, confirmado, rejeitado, pago, devolvido, cancelado} |
+| **ID_Codigo_Movimento_Remessa** | *referência (Cad_Classe_Sistema, domínio = tipo_movimento_remessa_bancaria), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O comando de cobrança (`Cad_Classe_Sistema`, domínio novo `tipo_movimento_remessa_bancaria`: entrada, baixa, alteração de vencimento, protesto etc.) |
+| **Seu_Numero** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Número do documento no sistema do cliente (texto até 25). O banco corta no limite dele: o Itaú aceita **10** e exige o campo quando há protesto; outras fontes falam em 15 a 20. O casamento do retorno usa o nosso número e o `txid`, não este campo (R26) |
+| **Txid_Pix** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): `txid` do Pix ligado ao boleto ou ao pagamento |
+| **Id_Externo_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O identificador que o banco dá ao título ao registrá-lo e que as instruções seguintes exigem (no Itaú, o `id_boleto`, um UUID de 36 posições; R33) |
+| **Id_Location_Pix** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, boleto híbrido: o `idLoc` da **location reservada** antes do registro, para emitir o boleto sem internet na hora (só QR dinâmico com vencimento; R50) |
+| **Codigo_Finalidade_Ted** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, TED por API: o código de finalidade da transferência (até 5 posições; a tabela do banco vai de 1 = tributos a 13 = tarifas de convênio e continua, e muda com o tipo de transferência). Leitura minha: o segmento A do CNAB 240 tem o mesmo conceito; conferir no manual |
+| **Motivo_Baixa_Pedida** | *enumeração {cancelamento_do_titulo, recebido_por_fora, renegociacao, substituicao_do_boleto, outro}, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Quando o item é um **pedido de baixa**, por que o ERP pede: {cancelamento_do_titulo, recebido_por_fora, renegociacao, substituicao_do_boleto, outro}. O banco só conhece «baixa» (Itaú: movimento 02, pedido de baixa; Celcoin: baixa pedida pelo cedente ou pela destinatária); o motivo fica no ERP, para a contabilidade e para conferir o retorno (R107) |
+| **Numero_Lista_Debito** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, Multipag, segmento 5: o número (9 dígitos, só numérico) da **lista de débito**, o grupo de pagamentos que o cliente **autoriza no canal do banco** antes do débito. Uma lista tem **uma modalidade e uma data**, e o número não se repete (R98) |
+| **Horario_Debito** | *hora, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Segmento 5: o horário em que o cliente quer o débito do pagamento (6 posições, HHMMSS) |
+| **Codigo_Lancamento_Especifico_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Segmento 5: o código (5 dígitos) que o banco usa para **contabilizar** o pagamento; define a mensagem da primeira linha do extrato (R103) |
+| **Codigo_Mensagem_Segunda_Linha_Extrato** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Segmento 5: o código (5 dígitos) do histórico complementar da segunda linha do extrato |
+| **Codigo_Camara_Ted** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Multipag: a câmara centralizadora da TED e do DOC (018, 700 ou 888, como o banco manda); vem de regra do driver, não de digitação |
+| **Valor_Atualizado_Banco** | *número, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O valor total que o banco **calculou na consulta antes de pagar**, já com juros, multa e descontos até a data (Santander: `totalValue`; é o `paymentValue` que a confirmação manda de volta). Fica separado do valor do título: a diferença entre os dois é o que o ERP trata antes de confirmar (R87 e R11) |
+| **Tipo_Destino_Ted** | *enumeração {entre_clientes, para_instituicao_financeira}, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Santander, TED por API: {entre_clientes, para_instituicao_financeira}: os dois destinos do banco, `STR0008` (entre contas de clientes) e `STR0006` (para conta de instituição financeira; a mesma escolha que o CNAB faz pela finalidade). O banco exige o campo (R90) |
 
 *Revisão 23 --- valores de enumeração novos: Forma_Lancamento (+boleto).*
 
 *Revisão 25 --- campos alterados: Valor_Principal_Remessa, Codigo_Banco_Favorecido; valores de enumeração novos: Forma_Lancamento (+transferencia_internacional).*
 
+*Revisão 56 --- campos novos: Status_Item, ID_Codigo_Movimento_Remessa, Seu_Numero, Txid_Pix, Id_Externo_Banco, Id_Location_Pix, Codigo_Finalidade_Ted, Motivo_Baixa_Pedida, Numero_Lista_Debito, Horario_Debito, Codigo_Lancamento_Especifico_Banco, Codigo_Mensagem_Segunda_Linha_Extrato, Codigo_Camara_Ted, Valor_Atualizado_Banco, Tipo_Destino_Ted.*
+
 6\. Retorno Bancário e Baixa Automática
 
-O que o banco informa de volta sobre cada envio (ou sobre movimentos que nem passaram por remessa, como um Pix avulso) — liquidação, rejeição, entrada confirmada, entre outros, conforme o código de ocorrência que o próprio banco define, ou um evento de webhook individual quando o canal é API/Open Finance. Renomeado nesta revisão (3) de Mov_Cnab_Retorno/Item para Mov_Retorno_Bancario/Item, mesmo critério da remessa (seção 5).
+O que o banco informa de volta sobre cada envio (ou sobre movimentos que nem passaram por remessa, como um Pix avulso) — liquidação, rejeição, entrada confirmada, entre outros, conforme o código de ocorrência que o próprio banco define, ou um evento de webhook individual quando o canal é API/Open Finance. Renomeado nesta revisão (3) de Mov_Cnab_Retorno/Item para Mov_Retorno_Bancario/Item, mesmo critério da remessa (seção 5). **Revisão 56 (documento 250):** o retorno guarda o código **como o banco mandou** e a ocorrência que o ERP entendeu pelo mapa (`Cad_Banco_Ocorrencia_Mapa`, seção 15), inclusive o **motivo da baixa**: só o pagamento baixa o título, e a baixa sem pagamento (caducidade, cancelamento, protesto) encerra a cobrança e mantém o título em aberto (R107 e R108).
 
 Mov_Retorno_Bancario
 
@@ -246,13 +292,20 @@ O cabeçalho de um retorno recebido do banco — um arquivo CNAB (lote) ou o agr
 
 |                            |                                                                                          |                                                                                                                                                                                                                                           |
 |----------------------------|------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Campo**                  | **Tipo lógico**                                                                          | **Descrição / regra**                                                                                                                                                                                                                     |
-| **ID_Retorno**             | *identificador*                                                                          | —                                                                                                                                                                                                                                         |
-| **ID_Conta_Bancaria**      | *referência (Cad_Conta_Bancaria)*                                                        | —                                                                                                                                                                                                                                         |
-| **Canal_Transmissao**      | *enumeração {arquivo_cnab, api, open_finance}*                                           | Adicionado nesta revisão (3), mesmo critério do cabeçalho de remessa (seção 5): quando api ou open_finance, cada "retorno" corresponde a um evento de webhook individual em tempo real, não um arquivo em lote processado periodicamente. |
-| **ID_Provedor_Integracao** | *referência (Cad_Classe_Sistema, domínio = tipo_provedor_integracao_bancaria, opcional)* | Mesmo campo e mesmo critério do cabeçalho de remessa (seção 5) — qual provedor técnico processou este retorno.                                                                                                                            |
-| **Data_Recebimento**       | *data*                                                                                   | —                                                                                                                                                                                                                                         |
-| **Nome_Arquivo**           | *texto, opcional*                                                                        | Só quando Canal_Transmissao=arquivo_cnab.                                                                                                                                                                                                 |
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Retorno** | *identificador* | — |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | — |
+| **Canal_Transmissao** | *enumeração {arquivo_cnab, api, open_finance}* | Adicionado nesta revisão (3), mesmo critério do cabeçalho de remessa (seção 5): quando api ou open_finance, cada "retorno" corresponde a um evento de webhook individual em tempo real, não um arquivo em lote processado periodicamente. |
+| **ID_Provedor_Integracao** | *referência (Cad_Classe_Sistema, domínio = tipo_provedor_integracao_bancaria, opcional)* | Mesmo campo e mesmo critério do cabeçalho de remessa (seção 5) — qual provedor técnico processou este retorno. |
+| **Data_Recebimento** | *data* | — |
+| **Nome_Arquivo** | *texto, opcional* | Só quando Canal_Transmissao=arquivo_cnab. |
+| **ID_Conta_Bancaria_Canal** | *referência (Cad_Conta_Bancaria_Canal), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O canal |
+| **ID_Banco_Mensagem** | *referência (Mov_Banco_Mensagem), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A mensagem que trouxe o retorno |
+| **Hash_Arquivo** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Impressão do arquivo, para recusar o mesmo retorno duas vezes |
+| **ID_Documento_Arquivo** | *referência (Cad_Documento), opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O arquivo recebido (`Cad_Documento`) |
+
+*Revisão 56 --- campos novos: ID_Conta_Bancaria_Canal, ID_Banco_Mensagem, Hash_Arquivo, ID_Documento_Arquivo.*
 
 Mov_Retorno_Bancario_Item
 
@@ -286,8 +339,27 @@ Cada ocorrência informada pelo banco.
 | **ID_Participante_Tratamento** | *referência (Cad_Participante, opcional)* | Adicionado nesta revisão (3): preenchido quando um operador resolve manualmente, pela tela de consistência (abaixo), um item que não casou automaticamente. |
 | **Data_Tratamento** | *data, opcional* | Adicionado nesta revisão (3) — junto de ID_Participante_Tratamento. |
 | **Tipo_Tratamento** | *enumeração {baixa_manual, reclassificado, descartado}, opcional* | Adicionado nesta revisão (3): o que foi feito para tratar o item — baixa_manual quando o operador gerou uma Mov_Titulo_Baixa manual (Origem_Tipo=manual) para ele; reclassificado quando o valor era, na verdade, outra coisa (ex.: rendimento/tarifa, via Mov_Conta_Contabil_Evento); descartado quando o item não correspondia a nada e foi simplesmente arquivado. Estrutura fixa do próprio mecanismo, mesmo critério de Codigo_Multa/Tipo_Ocorrencia — não domínio aberto. |
+| **Codigo_Bruto_Banco** | *código (até 30)* | Revisão 56 (documento 250; D-N639 a D-N658): O código como o banco mandou, antes de traduzir (texto até 30; o webhook do Itaú manda palavras como `BAIXA_OPERACIONAL`, de 17 posições) |
+| **Id_Externo_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O identificador do título ou do pagamento no banco (API) |
+| **Codigo_Canal_Pagamento** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Por onde o pagador pagou, como o banco manda (código de até 3 posições). No webhook do Bradesco são os valores de 1 a 9, entre eles 4 = Pix e 8 = DDA; os significados dos demais não constam nos arquivos e ficam no mapa de ocorrências (R10) |
+| **Codigo_Banco_Recebedor** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O banco que recebeu o pagamento (código de 3 posições; no Bradesco, 237 também quando o pagamento foi por Pix) |
+| **Hora_Ocorrencia** | *hora, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A hora da ocorrência, que o webhook traz (o Bradesco manda data e hora do pagamento; o Pix manda o horário). Serve para ordenar eventos do mesmo dia e conferir com o extrato |
+| **Numero_Autenticacao_Bancaria** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O número que o banco dá ao pagamento efetivado (o Bradesco, no tributo e na conta de consumo: 9 posições, "usado nos comprovantes"); é o que prova o pagamento junto ao órgão e entra no comprovante |
+| **Motivo_Baixa** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O motivo da baixa, **copiado do mapa** no momento do retorno (mesmo domínio de `Cad_Banco_Ocorrencia_Mapa`). Fica no item para que uma troca futura do mapa não reescreva o que o banco disse (R107) |
+| **Codigo_Complementar_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): O código complementar como o banco mandou (Itaú: agência cobradora 7744, 7788, 7777 ou 9999, R109) |
+| **Motivos_Bruto_Banco** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, cobrança 400: até **5 motivos** de 2 posições que acompanham a ocorrência, guardados como vieram. Na ocorrência 28 (débito de tarifas) o motivo diz **qual** tarifa (R104) |
+| **Valor_Tarifa_Banco** | *número, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A tarifa cobrada na ocorrência. Na cobrança 400 do Bradesco o registro traz **só a primeira** tarifa; o total se confere com o extrato (R104) |
+| **Credito_Disponivel** | *booleano, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, cobrança 400: {sim, nao}: se o crédito do pagamento já está **disponível** ou ainda **indisponível** para a empresa (motivos 00 e 15 do retorno). Alimenta o fluxo de caixa, junto com `Data_Credito` |
+| **Codigo_Liquidacao_Pix** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): Bradesco, Pix recebimentos em CNAB 750: o código de liquidação do Pix (2 posições, de 01 a 05), como o banco manda; o mapa de ocorrências traduz (R102) |
+| **Revisao_Cobranca_Pix** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): CNAB 750: a **revisão** da cobrança Pix (4 dígitos), que muda quando a cobrança é alterada e deve casar com a que o ERP enviou |
+| **Codigo_Forma_Pagamento** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): BB: **como** o pagador pagou, separado do canal: 1 espécie, 2 débito em conta, 3 cartão de crédito e 4 cheque, como o banco manda (o webhook do BB traz `formaPagamento` e `canalLiquidacao`, e os dois juntos dizem como o boleto foi liquidado). Código bruto de até 3 posições; a tradução vai ao mapa (R10) |
+| **Data_Credito** | *data, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): A data em que o banco **credita** o valor ao beneficiário (`dataCredito` no webhook do BB; no CNAB, a data de crédito do segmento U). É a data que o fluxo de caixa e a conciliação com o extrato usam, diferente de `Data_Ocorrencia` (quando o pagamento aconteceu) |
+| **Documento_Portador** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): BB: o CPF ou CNPJ de **quem pagou** o boleto (`identidadePortador`), que pode não ser o cliente do título (um terceiro, a matriz); serve à conciliação e à auditoria |
+| **Nome_Portador** | *texto, opcional* | Revisão 56 (documento 250; D-N639 a D-N658): BB: o nome de quem pagou (`nomePortador`) |
 
 *Revisão 25 --- campos novos: Numero_Contrato_Cambio, Taxa_Cambio_Ocorrencia, Valor_Reais_Ocorrencia; campos alterados: Valor_Total_Ocorrencia.*
+
+*Revisão 56 --- campos novos: Codigo_Bruto_Banco, Id_Externo_Banco, Codigo_Canal_Pagamento, Codigo_Banco_Recebedor, Hora_Ocorrencia, Numero_Autenticacao_Bancaria, Motivo_Baixa, Codigo_Complementar_Banco, Motivos_Bruto_Banco, Valor_Tarifa_Banco, Credito_Disponivel, Codigo_Liquidacao_Pix, Revisao_Cobranca_Pix, Codigo_Forma_Pagamento, Data_Credito, Documento_Portador, Nome_Portador.*
 
 *Tela de consistência, a pedido de Alberto: todo item de retorno que não tem referência em Contas a Pagar/Receber deve cair numa tela para tratamento manual do operador. Mesmo padrão "nenhuma entidade nova para a tela em si" já usado no painel de gestão e no aging (seção 7): a tela é uma CONSULTA sobre Mov_Retorno_Bancario_Item filtrando ID_Item_Remessa nulo e/ou ID_Baixa_Gerada nulo. Um item está pendente na tela enquanto Data_Tratamento for nula — mesma filosofia "status nunca armazenado, sempre derivado" do resto do dicionário —, e o que foi decidido fica registrado em Tipo_Tratamento, para que casos parecidos no futuro já possam ser tratados de forma consistente. Reaproveitar o Motor de Regras para sugerir automaticamente o tratamento (por analogia ao critério já definido para o extrato, seção 3 — banco e o código de ocorrência que o banco informou) é um caminho natural, mas não foi confirmado por Alberto nestes termos; fica como observação técnica, não como estrutura decidida.*
 
@@ -528,3 +600,463 @@ A ordem de pagamento ao exterior (D-N371; documentos 107 e 124, Q107-1 a Q107-6 
 | **Conta_Intermediaria** | *código (34), opcional* | A conta do favorecido (ou do banco dele) no intermediário. |
 | **Numero_Contrato_Cambio_Previo** | *código (40), opcional* | O contrato de câmbio **já fechado antes** da ordem, quando houver. Vazio quando o banco abre o contrato ao executar. |
 | **Taxa_Cambio_Contrato_Previo** | *número, opcional (8 casas)* | A taxa do contrato fechado antes (Q107-1a), obrigatória quando Numero_Contrato_Cambio_Previo está preenchido. Serve de **taxa sugerida** na baixa quando o retorno não a traz; quando o retorno traz a taxa, **vale a do retorno**. |
+
+
+
+15\. Anexo --- Documento 250: motor de envio bancário (entidades novas da revisão 56)
+
+Revisão 56 do dicionário (consolidação de 23/11/2026, pelas recomendações): 15 entidades novas neste módulo, do documento 250 (versão 16; D-N639 a D-N658): o motor de envio bancário (motor nº 35), que serve a qualquer banco por **drivers** (um plugin por banco e canal, como o `Cad_Dfe_Driver` dos documentos fiscais), com a **matriz de capacidades** que mostra ou esconde cada operação, o canal da conta (ambiente e referência ao cofre, nunca o segredo), as carteiras de cobrança cadastradas em cada banco (D-N655), a mensagem e o histórico de cada envio, o mapa de ocorrências (o código do banco vira a ação do ERP, inclusive o **motivo da baixa**), o webhook, o DDA, o Pix Automático, os dados de tributo e de cobrança do item e os certificados de confiança dos bancos. **A carga de drivers e de mapas só vem quando houver o manual de cada banco**; DDA e Pix Automático estão desenhados e ficam desligados na matriz até a fase 2 do produto (R115). Os 53 campos novos de 5 entidades existentes (remessa, item de remessa, retorno, item de retorno e extrato) estão nas próprias entidades, e os 2 domínios novos, na Fase 0.
+
+15.1. Núcleo do motor de envio bancário: driver, matriz de capacidades, canal da conta, webhook, mensagem, histórico e mapa de ocorrências (documento 250)
+
+Cad_Banco_Driver
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O driver: um canal de um banco (ou de um agregador).** Espelha o `Cad_Dfe_Driver` (o registro de plugins dos documentos fiscais): cada combinação de **banco e canal** é um plugin com versão e vigência. Trocar a versão do layout ou da API é uma nova versão do registro, não uma alteração de código dos módulos.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Banco_Driver** | *identificador* | --- |
+| **ID_Banco_Driver_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Banco_Driver_Versao). ID_Banco_Driver é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Codigo** | *código (até 40) --- identidade* | Código único do plugin (ex.: CNAB240_COBRANCA_033, API_COBRANCA_001, AGREGADOR_X); campo de identidade |
+| **Nome** | *texto* | Nome para tela e log |
+| **ID_Instituicao_Financeira** | *referência (Cad_Instituicao_Financeira), opcional* | O banco a que o plugin pertence; vazio no agregador, que atende vários bancos |
+| **Tipo_Canal** | *enumeração {cnab_150, cnab_240, cnab_400, cnab_500, cnab_750, api_rest, api_soap, open_finance, agregador}* | `api_soap` (versão 8 do documento 250) é o webservice SOAP/XML da cobrança da Caixa, com envelope XML no lugar do JSON (R62); `cnab_500` (versão 11 do documento 250) é o **PAGFOR** do Bradesco, de 500 posições, que leva o Pix no cabeçalho (R101); `cnab_150` (versão 12 do documento 250) é o CNAB de **150 posições** do Pix Automático da Caixa, trocado por VAN (R110) |
+| **Versao_Layout** | *texto, opcional* | A versão do manual ou da API que o plugin implementa (ex.: "Febraban 10.11", "API 2.10.0"); texto livre, porque cada banco numera de um jeito |
+| **Versao_Driver** | *texto* | Versão do plugin |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Banco_Driver_Capacidade
+
+Revisão 56 (documento 250; D-N639 a D-N658): **A matriz de capacidades: o que cada driver faz.** Cada banco oferece um conjunto diferente de produtos e de formas de retorno (seção 3.8 do documento 250). Em vez de código com "se for o banco X", o ERP lê esta matriz e **mostra ou esconde** a operação (por exemplo, "baixar título" só aparece se o driver da conta tem o produto cobrança).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Banco_Driver_Capacidade** | *identificador* | --- |
+| **ID_Banco_Driver** | *referência (Cad_Banco_Driver)* | O driver |
+| **Produto** | *enumeração {cobranca_boleto, boleto_com_pix, cobranca_pix, pagamento, tributo, pix_pagamento, extrato, posicao_cobranca, dda, pix_automatico, validacao_conta, fgts_saldo_rescisorio, debito_veicular}* | {cobranca_boleto, boleto_com_pix, cobranca_pix, pagamento, tributo, pix_pagamento, extrato, posicao_cobranca, dda, pix_automatico, validacao_conta, fgts_saldo_rescisorio, debito_veicular} Revisão 58 (documento 250; D-N675 e R137): novo valor `debito_veicular`, o débito veicular que a Mlegate paga (Bradesco, por API, PR e MG; outro estado por guia com código de barras, pelo produto `tributo`). Um driver à parte; sem canal, o produto fica desligado. Os valores do SISDEB (débito automático) só entram com contrato, na fase 2. |
+| **Retorno_Por** | *enumeração {arquivo, webhook, consulta, webhook_e_consulta}* | Como o resultado volta |
+| **Ambiente_Teste** | *enumeração {sim, nao, parcial}* | O Itaú tem sandbox no portal (sem certificado, com token de 5 minutos) e a emissão do boleto tem uma etapa `simulacao` que só valida; o Santander tem fontes que divergem (seção 3.5 do documento 250) |
+| **Limite_Itens_Por_Mensagem** | *número, opcional* | Teto de itens por chamada ou lote (a Senior cita 100 pagamentos por chamada de Pix; o extrato do Bradesco devolve no máximo 5.000 transações por consulta; o PagBB do BB aceita 500 lançamentos por lote, o retorno do BB por API 10.000 boletos por chamada e o extrato do BB 120 registros por página, no mínimo 30) |
+| **Janela_Maxima_Consulta_Dias** | *número, opcional* | O maior período que o banco aceita **numa só consulta** (o extrato do BB: 31 dias; o do Bradesco: 1 ano). O driver divide períodos maiores. É diferente de `Dias_Retroativos_Consulta`, que diz até onde dá para voltar |
+| **Liberacao_Do_Lote** | *enumeração {pelo_erp_por_api, pelo_erp_por_arquivo, no_portal_do_banco, nao_exige}, opcional* | {pelo_erp_por_api, pelo_erp_por_arquivo, no_portal_do_banco, nao_exige}: quem dá a **liberação** que o banco pede depois de receber o lote. No PagBB do BB é o próprio cliente, por API, e a liberação não se desfaz (R58); no Itaú e no Bradesco a aprovação pós-autorizada é feita no portal do banco (`aguardando_aprovacao_no_banco`) |
+| **Horario_Abertura** | *hora, opcional* | Hora em que o banco começa a aceitar o produto no dia (a TED do Bradesco abre às 06h30 e fecha às 17h, só em dia útil, R47) |
+| **Horario_Corte** | *hora, opcional* | Hora limite do dia para o banco processar no mesmo dia |
+| **Operacoes_Da_Linha** | *enumeração {todas, registro, alteracao_baixa_consulta}, opcional* | {todas, registro, alteracao_baixa_consulta}: quais operações do produto esta linha cobre, quando o banco dá **janelas diferentes por operação**. Na cobrança por webservice da Caixa o registro vale 24 horas e a alteração, a baixa e a consulta têm horário comercial; o driver cadastra **duas linhas** do mesmo produto. Vazio = todas (R64) |
+| **Horario_Corte_Fim_De_Semana** | *hora, opcional* | A hora de fechamento aos sábados, domingos e feriados, quando difere da dos dias úteis (Caixa: 20h, contra 22h nos dias úteis; a abertura é às 8h nos dois casos) (R64) |
+| **Periodicidade_Retorno_Minutos** | *número, opcional* | De quanto em quanto tempo o banco publica o retorno **em lote** quando há retorno "online": o do CNAB da Caixa sai a cada 15 minutos, além do consolidado do dia. Define a frequência da consulta do ERP e o que o painel chama de atraso do retorno (R24 e R67) |
+| **Intervalo_Minimo_Entre_Chamadas_Segundos** | *número, opcional* | O intervalo mínimo que o driver deixa entre duas chamadas ao banco. O manual do Pix Automático da Caixa **proíbe rajada** de chamadas e a listagem da base sem consentimento do cliente, **sem dar o limite em número**; o valor é do canal e fica configurável, e o driver nunca dispara os itens de uma remessa em paralelo sem espaçamento (R72) |
+| **Indisponivel_De** | *hora, opcional* | Início da janela diária em que a API **sai do ar** (a cobrança e o boleto híbrido do Bradesco: 00h00) |
+| **Indisponivel_Ate** | *hora, opcional* | Fim dessa janela (03h00 no Bradesco). Dentro dela o driver não envia nem consulta e a fila do ERP espera (R40) |
+| **Dias_Maximos_Agendamento** | *número, opcional* | Até quantos dias à frente o banco aceita agendar (a MUFG cita 30 dias corridos; no Pix Automático, 10 dias corridos antes da data, versão 9 do documento 250) |
+| **Dias_Minimos_Antecedencia_Agendamento** | *número, opcional* | O mínimo de dias corridos **antes** da data em que o banco aceita receber a instrução de cobrança (Pix Automático: 2; o máximo, 10, fica em `Dias_Maximos_Agendamento`). Fora da faixa o banco rejeita (R79) |
+| **Horario_Limite_Cancelamento_Recebedor** | *hora, opcional* | A hora limite, no **dia anterior** à liquidação, para o recebedor cancelar uma cobrança agendada (Pix Automático da Caixa: 22h; o pagador cancela pelo app dele até 23h59 e o ERP só recebe o aviso) (R81) |
+| **Confirmacao_Apos_Consulta** | *booleano, opcional* | {sim, nao}: se o produto de pagamento tem **duas etapas**, uma que **consulta e valida** (e devolve os valores atualizados) e outra que **confirma** o pagamento. É assim no Santander (todos os produtos de pagamento) e no tributo e na conta de consumo do Bradesco (`tipoRegistro` 0 e 1). `sim` faz o ERP guardar o valor da consulta, conferir com o título e só então confirmar (R86 e R87). Vazio = uma etapa só |
+| **Janela_Sequencia_Arquivo** | *número, opcional* | Bradesco, cobrança em CNAB 400: quantos números **acima** do último o banco aceita no número sequencial da remessa (**10**). Número **menor** que o último **rejeita o arquivo inteiro**; até 10 acima o banco aceita, e os números pulados podem ser usados no mesmo dia. O ERP numera em sequência por canal e nunca reaproveita número (R96) |
+| **Cancelamento_Pagamento_Por** | *enumeração {arquivo, api, portal, nao_ha}, opcional* | {arquivo, api, portal, nao_ha}: por onde o ERP **cancela ou altera** um pagamento já enviado. No Multipag do Bradesco é por **arquivo** (exclusão, alteração de valor e de data, bloqueio e liberação, `pelo_erp_por_arquivo` em `Liberacao_Do_Lote`); no Santander a API não traz cancelamento (R97) |
+| **Dias_Retroativos_Consulta** | *número, opcional* | Até quantos dias para trás o banco deixa consultar (o Itaú: 2 anos nas consultas de Pix); define até onde dá para recuperar um webhook ou um arquivo perdido (R24). Bradesco: liquidados 60 dias a partir do pagamento; extrato até 10 anos (1 ano por consulta, por desempenho); pagamento de tributo 5 anos. BB: extrato até 5 anos; consulta de baixa operacional até 5 dias depois do pagamento (R56) |
+| **Nosso_Numero_Gerado_Por** | *enumeração {banco, empresa}, opcional* | Só nos produtos de cobrança. Onde a empresa numera o título (o Itaú, na carteira 109), o ERP gera o nosso número em sequência por conta e carteira (R25). No BB também é a empresa que numera (20 posições, sequência por convênio; R54) |
+| **Validade_Token_Minutos** | *número, opcional* | Quanto tempo vale o token que o banco emite (o Bradesco: 60 minutos; o sandbox do Itaú: 5). O ERP guarda o token e o reutiliza até perto do fim; pedir token a cada chamada pode bloquear a credencial no Bradesco (R39) |
+| **Observacao** | *texto, opcional* | Particularidade do banco que não cabe em campo |
+
+*Revisão 58 --- campos alterados: Produto; valores de enumeração novos: Produto (+debito_veicular).*
+
+Cad_Conta_Bancaria_Canal
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O canal da conta: credencial, ambiente e retorno.** Uma conta pode usar canais diferentes por produto (cobrança por API e pagamento por CNAB, por exemplo) e ambientes diferentes (homologação e produção). Segue o padrão do `Cad_Autoridade_Fiscal_Credencial`: **o ERP guarda só a referência ao cofre**, nunca o segredo.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Conta_Bancaria_Canal** | *identificador* | --- |
+| **ID_Conta_Bancaria_Canal_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Conta_Bancaria_Canal_Versao). ID_Conta_Bancaria_Canal é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | A conta (`Cad_Conta_Bancaria`) |
+| **ID_Banco_Driver** | *referência (Cad_Banco_Driver)* | O plugin usado |
+| **Produto** | *enumeração {cobranca_boleto, boleto_com_pix, cobranca_pix, pagamento, tributo, pix_pagamento, extrato, posicao_cobranca, dda, pix_automatico, validacao_conta, fgts_saldo_rescisorio, debito_veicular}* | {cobranca_boleto, boleto_com_pix, cobranca_pix, pagamento, tributo, pix_pagamento, extrato, posicao_cobranca, dda, pix_automatico, validacao_conta, fgts_saldo_rescisorio, debito_veicular} Revisão 58 (documento 250; D-N675 e R137): novo valor `debito_veicular`, o débito veicular que a Mlegate paga (Bradesco, por API, PR e MG; outro estado por guia com código de barras, pelo produto `tributo`). Um driver à parte; sem canal, o produto fica desligado. Os valores do SISDEB (débito automático) só entram com contrato, na fase 2. |
+| **Ambiente** | *enumeração {homologacao, sandbox, producao}* | `sandbox` (versão 10 do documento 250) existe porque o Santander lista **três** ambientes na API de pagamentos (sandbox, homologação e produção); o Itaú também tem sandbox (R6) |
+| **Tipo_Autenticacao** | *enumeração {nenhuma, oauth_client_credentials, oauth_mtls, jwt_bearer, oauth_senha_internet_banking, consentimento_open_finance, hash_na_mensagem}* | Os sete modos vistos nas fontes (seção 3.5 do documento 250); `nenhuma` é o CNAB por arquivo; `hash_na_mensagem` (versão 8 do documento 250) é o da cobrança da Caixa, em que o ERP calcula um hash SHA-256 que vai dentro do XML e **não há segredo nem token** (R63) |
+| **ID_Certificado** | *referência (Cad_Certificado_Digital), opcional* | Certificado (`Cad_Certificado_Digital`) quando o banco exige mTLS. O Itaú pede, no portal oficial, um **certificado dinâmico** ativo para todas as APIs e um certificado mTLS no webhook de Pix (uma fonte secundária diz que o de NF-e não serve); o Santander aceita o A1 da NF-e; o Inter gera o certificado junto com a credencial |
+| **Client_Id** | *texto, opcional* | Identificador público da aplicação no banco |
+| **Referencia_Cofre_Segredo** | *texto, opcional* | Onde está o segredo (client secret, senha); o ERP não o grava |
+| **Escopos** | *texto, opcional* | Escopos pedidos ao banco (o BB recusa o token se o escopo tiver API não habilitada) |
+| **Url_Base_Api** | *texto, opcional* | Endereço base da API no ambiente do canal. O Itaú usa endereços diferentes para boleto, Pix e Pix Automático e já avisou que os do Pix mudam; por isso o endereço é dado do canal, não do código |
+| **Url_Token_Autenticacao** | *texto, opcional* | Endereço de quem emite o token do banco (o Itaú usa um endereço por produto, por exemplo emissão de boleto e SISPAG, e outro, do portal, no sandbox). O webhook que o banco chama no ERP fica na entidade da seção 4.16 do documento 250 |
+| **Codigo_Convenio** | *texto, opcional* | Convênio do canal; vazio = vale o `Convenio_Cobranca` da conta **D-N655:** com carteiras cadastradas (`Cad_Conta_Bancaria_Carteira`), vale a da carteira do título; este campo serve só à conta que não cadastrou carteira. |
+| **Data_Expiracao_Credencial** | *data, opcional* | Vencimento da credencial ou do certificado (o do Inter vale 1 ano); alimenta o aviso |
+| **Dias_Aviso_Vencimento** | *número, opcional* | Quantos dias antes avisar (mesmo padrão de `Cad_Certificado_Digital`) |
+| **Referencia_Cofre_Chave_Aplicacao** | *texto, opcional* | Onde está a **chave da aplicação** que o BB exige em toda chamada (`gw-dev-app-key`, **na URL**; R53). Não é o segredo do token, mas identifica a aplicação e **não pode aparecer em log**; o ERP só guarda a referência ao cofre. Versão 8 do documento 250: na Caixa é o `apikey` do Pix Automático, que vai em **cabeçalho** de toda chamada, ao lado do token (R71) |
+| **Codigo_Variacao_Carteira** | *texto, opcional* | A variação da carteira de cobrança (BB: obrigatória no registro, na consulta e no retorno por API; vazio = vale a da conta, que **não tem** esse campo). Convênio e carteira já existem (`Codigo_Convenio` e `Carteira_Cobranca`) **D-N655:** com carteiras cadastradas (`Cad_Conta_Bancaria_Carteira`), vale a da carteira do título; este campo serve só à conta que não cadastrou carteira. |
+| **Modalidade_Cobranca** | *enumeração {simples_com_registro, simples_sem_registro, vinculada, descontada, financiada_vendor}, opcional* | A modalidade do convênio no BB: {simples_com_registro, simples_sem_registro, vinculada, descontada, financiada_vendor} (códigos 1, 2, 4, 6 e 8 do BB; o registro pela API só aceita simples e vinculada). Define quais comandos o banco aceita no convênio **D-N655:** com carteiras cadastradas (`Cad_Conta_Bancaria_Carteira`), vale a da carteira do título; este campo serve só à conta que não cadastrou carteira. |
+| **Identificacao_Cliente_Http** | *texto, opcional* | O texto que o ERP envia no cabeçalho `User-Agent`. O manual do Pix Automático da Caixa avisa que um `User-Agent` genérico pode ser tratado como robô e bloqueado; o ERP envia um nome próprio e fixo, por canal (R72) |
+| **Data_Validacao_Boleto_Impresso** | *data, opcional* | A data em que o banco validou as amostras do boleto que o **ERP imprime** neste convênio (Caixa: de 10 a 20 amostras entregues à agência centralizadora, R74). **Vazio = o ERP não gera o PDF do boleto desse banco para o convênio.** Não vale para o boleto que o próprio banco emite |
+| **Padrao_Nome_Arquivo** | *texto, opcional* | O padrão do nome do arquivo que o banco exige (Bradesco: cobrança `CBDDMM??.REM`, PAGFOR `PGDDMMX.REM`; no teste a extensão é `TST` e o retorno vem como `RST`). No mesmo dia **não** se envia dois arquivos com o mesmo nome (R95) |
+| **Id_Workspace_Banco** | *texto, opcional* | Santander: o identificador (UUID) do **workspace** no banco, que vai na **URL de toda chamada** de pagamento e de DDA. O workspace reúne a conta de débito principal, as adicionais e as chaves de cada produto (boleto, conta de consumo e tributo, Pix, TED, tributo por campo, DDA); é dado do canal, não da conta (R84) |
+| **Meio_Transmissao** | *enumeração {portal_manual, host_a_host, api, van}, opcional* | Revisão 59 (documento 250; Q250-67, D-N680 e R139): Revisão 59 (documento 250; Q250-67, D-N680): **por onde o arquivo ou a chamada vai ao banco**, para o ERP saber se envia sozinho ou se gera o arquivo para o usuário enviar. `portal_manual`: o ERP **gera o arquivo** e o usuário o sobe no portal do banco (Net Empresa/WebTA do Bradesco, Itaú Empresas e o aplicativo web do Itaú para o CNAB 400), e o ERP espera o retorno; `host_a_host`: o ERP **envia e busca sozinho** pelo canal dedicado; `api`: chamada de API do banco; `van`: rede de valor agregado (por exemplo, a Caixa). Vazio = não informado. Cada combinação de layout e meio é **um canal** da conta (R138 e R139). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 58 --- campos alterados: Produto; valores de enumeração novos: Produto (+debito_veicular).*
+
+*Revisão 59 --- campos novos: Meio_Transmissao.*
+
+Mov_Banco_Mensagem
+
+Revisão 56 (documento 250; D-N639 a D-N658): **A mensagem: o registro de tudo que vai e volta do banco.** É a trilha de integração, no padrão de `Mov_Dfe_Transmissao` e `Mov_Dfe_Tarefa`: toda chamada de API, todo arquivo enviado ou recebido e todo webhook viram uma linha. É ela que dá **idempotência** (não enviar duas vezes), **nova tentativa** e **prova** do que o banco respondeu.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Banco_Mensagem** | *identificador* | --- |
+| **ID_Conta_Bancaria_Canal** | *referência (Cad_Conta_Bancaria_Canal)* | O canal usado |
+| **Direcao** | *enumeração {envio, retorno}* | {envio, retorno} |
+| **Tipo_Mensagem** | *enumeração {remessa, retorno_arquivo, registro_titulo, simulacao_titulo, instrucao_titulo, consulta, webhook, pagamento, extrato, dda}* | {remessa, retorno_arquivo, registro_titulo, simulacao_titulo, instrucao_titulo, consulta, webhook, pagamento, extrato, dda} |
+| **Chave_Idempotencia** | *texto* | Código único por intenção (ex.: remessa + item + comando); o mesmo envio repetido não gera segunda linha efetiva. Onde o banco tem cabeçalho de idempotência (o `idempotency-key` do SISPAG do Itaú), é este valor |
+| **Id_Correlacao_Banco** | *texto, opcional* | O identificador que o banco devolve ou exige. O Itaú exige o `x-itau-correlationID` em toda chamada e quem o gera é o ERP; o Pix usa `txid` e `E2eid` |
+| **ID_Remessa** | *referência (Mov_Remessa_Bancaria), opcional* | A remessa de origem, quando houver |
+| **ID_Retorno** | *referência (Mov_Retorno_Bancario), opcional* | O retorno gerado, quando houver |
+| **Status** | *enumeração {pendente, enviada, aceita, rejeitada, erro_transiente, erro_definitivo, duplicada}* | {pendente, enviada, aceita, rejeitada, erro_transiente, erro_definitivo, duplicada} |
+| **Tentativa** | *número* | Número da tentativa |
+| **Proxima_Tentativa** | *data/hora, opcional* | Quando tentar de novo (só `erro_transiente`) |
+| **Codigo_Retorno** | *texto, opcional* | Código HTTP ou do banco e o texto (2 campos) |
+| **Descricao_Retorno** | *texto, opcional* | Código HTTP ou do banco e o texto (2 campos) |
+| **Data_Hora_Envio** | *data/hora* | Quando saiu (ou quando chegou, no retorno) |
+| **Data_Hora_Resposta** | *data/hora, opcional* | Quando o banco respondeu |
+| **ID_Documento_Corpo_Envio** | *referência (Cad_Documento), opcional* | O corpo enviado e o recebido, guardados como documento (`Cad_Documento`, o mesmo destino que `Mov_Dfe_Transmissao` usa para o XML), para auditoria (2 campos) |
+| **ID_Documento_Corpo_Retorno** | *referência (Cad_Documento), opcional* | O corpo enviado e o recebido, guardados como documento (`Cad_Documento`, o mesmo destino que `Mov_Dfe_Transmissao` usa para o XML), para auditoria (2 campos) |
+
+Mov_Remessa_Bancaria_Evento
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O histórico de situação da remessa.** A remessa hoje não tem situação. Cada mudança vira uma linha, e o campo `Status` da remessa (seção 4.12 do documento 250) guarda só o valor atual.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Remessa_Evento** | *identificador* | --- |
+| **ID_Remessa** | *referência (Mov_Remessa_Bancaria)* | A remessa |
+| **Status** | *enumeração {gerada, aguardando_envio, enviada, recebida_pelo_banco, aguardando_aprovacao_no_banco, aguardando_liberacao, parcialmente_processada, processada, rejeitada, cancelada}* | `aguardando_liberacao` (versão 7 do documento 250) é a espera pela **liberação que o próprio ERP dá por API** (PagBB do BB, R58), diferente de `aguardando_aprovacao_no_banco` |
+| **Data_Hora_Evento** | *data/hora* | Quando mudou |
+| **ID_Participante_Responsavel** | *referência (Cad_Participante), opcional* | Quem causou a mudança (vazio quando foi o retorno do banco) |
+| **ID_Banco_Mensagem** | *referência (Mov_Banco_Mensagem), opcional* | A mensagem que causou a mudança |
+| **Observacao** | *texto, opcional* | Texto livre |
+
+Cad_Banco_Ocorrencia_Mapa
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O mapa de ocorrências: o código do banco vira ação do ERP.** O mesmo código tem significado diferente por banco e por versão (o código `BD` é «inclusão efetuada com sucesso» no Bradesco e na Caixa e «pagamento agendado» no SISPAG do Itaú; nos três, o pagamento foi **aceito e ainda não foi pago**, e o ERP não o baixa). O mapa traduz o código que o banco mandou para a **ocorrência padrão** do ERP (`tipo_ocorrencia_retorno_bancario`) e diz o que o ERP faz.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Banco_Ocorrencia_Mapa** | *identificador* | --- |
+| **ID_Banco_Ocorrencia_Mapa_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Banco_Ocorrencia_Mapa_Versao). ID_Banco_Ocorrencia_Mapa é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Banco_Driver** | *referência (Cad_Banco_Driver)* | O driver cujo código está sendo traduzido |
+| **Tipo_Mensagem** | *enumeração {retorno_cobranca, retorno_pagamento, webhook}* | {retorno_cobranca, retorno_pagamento, webhook} |
+| **Codigo_Banco** | *código (até 30)* | O código como o banco manda (texto até 30; pode ser alfanumérico, como `BD`, `ZI`, `5A`, ou uma palavra, como `BAIXA_EFETIVA` e `BAIXA_OPERACIONAL` no webhook do Itaú) |
+| **Descricao_Banco** | *texto* | O texto do manual do banco |
+| **ID_Codigo_Ocorrencia** | *referência (Cad_Classe_Sistema, domínio = tipo_ocorrencia_retorno_bancario)* | A ocorrência padrão do ERP (`Cad_Classe_Sistema`, domínio `tipo_ocorrencia_retorno_bancario`) |
+| **Acao_Erp** | *enumeração {baixar_titulo, confirmar_registro, rejeitar, informativo, lancar_tarifa, reapresentar, alertar, estornar_baixa, encerrar_sem_pagamento}* | `estornar_baixa` (versão 7 do documento 250) desfaz uma baixa já feita, como o código 10 do webhook do BB, o cancelamento da baixa operacional (R56); `encerrar_sem_pagamento` (versão 12 do documento 250) encerra a cobrança **sem pagar** o título: cancelamento, decurso de prazo, baixa pelo banco, protesto ou transferência para desconto. O título continua em aberto e abre tratamento (R107) |
+| **Motivo_Baixa** | *enumeração {pagamento, pagamento_em_cartorio, cancelamento_pelo_beneficiario, cancelamento_pelo_pagador, decurso_de_prazo, baixa_pelo_banco, baixa_por_protesto, transferencia_para_desconto, outro}, opcional* | O **motivo** da baixa, quando a ocorrência é de baixa: {pagamento, pagamento_em_cartorio, cancelamento_pelo_beneficiario, cancelamento_pelo_pagador, decurso_de_prazo, baixa_pelo_banco, baixa_por_protesto, transferencia_para_desconto, outro} (domínio `motivo_baixa_titulo_bancario`). Só `pagamento` e `pagamento_em_cartorio` permitem `baixar_titulo`; os demais usam `encerrar_sem_pagamento` (R107) |
+| **Codigo_Complementar_Banco** | *texto, opcional* | O código que **complementa** a ocorrência e muda o seu significado, como o banco manda (texto até 30). No Itaú é a **agência cobradora** do retorno de cobrança: 7744 (pedido de baixa do beneficiário), 7788 (baixa automática) e 7777 (baixa pelo banco). A linha do mapa passa a ser a **dupla** código e complemento (R109) |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Cad_Conta_Bancaria_Canal_Webhook
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O webhook do canal: onde e como o banco avisa o ERP.** Acréscimo da versão 3 do documento 250, a partir da API de boletos do Itaú: o banco cadastra, **por conta e por tipo de aviso**, o endereço do ERP, a forma como o banco se autentica ao chamá-lo e o valor mínimo para avisar. Substitui o campo `Url_Retorno_Webhook` que a versão 2 do documento 250 colocava no canal. Segue o padrão do `Cad_Autoridade_Fiscal_Credencial`: o segredo só no cofre.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Canal_Webhook** | *identificador* | --- |
+| **ID_Conta_Bancaria_Canal** | *referência (Cad_Conta_Bancaria_Canal)* | O canal a que o aviso pertence |
+| **Tipo_Notificacao** | *enumeração {baixa_efetiva, baixa_operacional, pix_recebido, pix_devolucao, pix_automatico_recorrencia, pix_automatico_solicitacao, pix_automatico_cobranca, outro}* | O Itaú cadastra a baixa efetiva e a operacional em separado; o aviso de devolução de Pix só por pedido ao contato comercial; o Pix Automático tem um webhook para a recorrência e outro para a cobrança |
+| **Url_Callback** | *texto* | Endereço HTTPS do ERP que o banco chama; no Itaú não pode ser um endereço IP, e no aviso de Pix o banco acrescenta o sufixo `/pix` ao endereço cadastrado |
+| **Tipo_Autenticacao_Callback** | *enumeração {nenhuma, oauth_client_credentials, mtls}* | Como o banco se identifica ao chamar o ERP. No Itaú, o aviso de boleto usa OAuth (o ERP expõe um endereço de token) e o de Pix e os de Pix Automático usam certificado mTLS (o ERP confia na autoridade certificadora do próprio Itaú) |
+| **Url_Autenticacao_Callback** | *texto, opcional* | Endereço do ERP onde o banco pega o token antes de chamar (só HTTPS) |
+| **Escopo_Callback** | *texto, opcional* | Escopo que o banco pede ao pegar o token |
+| **Client_Id_Callback** | *texto, opcional* | O identificador que o ERP deu ao banco para pegar o token |
+| **Referencia_Cofre_Callback** | *texto, opcional* | Onde está o segredo que o ERP deu ao banco; o ERP não o grava |
+| **Valor_Minimo_Notificacao** | *número, opcional* | Valor abaixo do qual o banco não avisa (no Itaú, o padrão é R$ 0,10; liquidação de valor menor não gera aviso, e a consulta continua sendo a rede de segurança, R24) |
+| **Chave_Pix** | *texto, opcional* | A chave Pix a que o webhook de Pix pertence (até 77 posições): no Itaú o cadastro é **por chave**, e só o Pix recebido por chave é avisado |
+| **Id_Registro_Banco** | *texto, opcional* | O identificador do cadastro no banco (no Itaú: agência, conta, DAC e o código do tipo de aviso) |
+| **Situacao** | *enumeração {pendente_cadastro, aguardando_banco, ativo, inativo, com_erro}* | `aguardando_banco` é a espera depois do envio do certificado público por e-mail, onde o banco cadastra o aviso à mão (o Bradesco leva até 5 dias úteis; R40) |
+| **Data_Hora_Cadastro** | *data/hora, opcional* | Quando o banco confirmou o cadastro |
+
+Cad_Conta_Bancaria_Carteira
+
+Revisão 56 (documento 250; D-N639 a D-N658): **As carteiras de cobrança registradas em cada banco.** Pedido de Alberto (23/11/2026): "em todos os bancos tem que abrir para criar o número da carteira; deixar cadastrado para cada banco as carteiras registradas neles". Uma linha por **conta bancária e carteira**, com a variação, o convênio e a modalidade, **criada pelo usuário em qualquer banco**: nada é fixo no ERP nem no driver. O item de cobrança aponta para a carteira (`ID_Carteira_Cobranca`); sem escolha, vale a carteira marcada como padrão da conta. Os campos `Codigo_Convenio`, `Codigo_Variacao_Carteira` e `Modalidade_Cobranca` do canal passam a valer só para a conta que não cadastrou carteira. **Leitura minha:** o convênio mora na carteira (o mesmo banco pode ter vários convênios, um por carteira). Chave de negócio: conta bancária, número da carteira, variação e `Vigencia_Inicio`. **A Caixa (versão 16 do documento 250):** o campo de carteira do CNAB 240 tem 1 posição e o retorno traz o `1` para cobrança simples; o convênio tem 7 posições e **não há campo de variação**; o nosso número leva 2 posições de modalidade mais 15 de identificação.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Conta_Bancaria_Carteira** | *identificador* | --- |
+| **ID_Conta_Bancaria_Carteira_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Conta_Bancaria_Carteira_Versao). ID_Conta_Bancaria_Carteira é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | A conta no banco a que a carteira pertence (o banco vem da conta) |
+| **Numero_Carteira** | *código (até 10) --- identidade* | O número da carteira como o banco o identifica, escrito pelo usuário; cada banco usa um código e o ERP não os fixa; campo de identidade |
+| **Codigo_Variacao_Carteira** | *código (até 10), opcional* | A variação da carteira, quando o banco a exige (o BB) |
+| **Codigo_Convenio** | *código (até 20), opcional* | O convênio de cobrança desta carteira, quando o banco trabalha por convênio (BB, Caixa, Bradesco e outros); vazio usa o `Convenio_Cobranca` da conta |
+| **Modalidade_Cobranca** | *enumeração {simples_com_registro, simples_sem_registro, vinculada, descontada, caucionada, cessao, financiada_vendor}, opcional* | A modalidade da carteira no banco |
+| **Descricao** | *texto, opcional* | Nome para a tela (por exemplo, "Cobrança simples registrada") |
+| **Padrao** | *booleano* | Verdadeiro na carteira que vale quando o título não escolhe uma; uma só por conta (aviso do Motor se houver mais de uma) |
+| **Situacao_Carteira** | *enumeração {ativa, suspensa, encerrada}* | A situação da carteira no banco; só a ativa recebe título novo |
+| **Data_Habilitacao_Banco** | *data, opcional* | Quando o banco habilitou a carteira (conferência com o contrato) |
+| **Layout_Cnab** | *enumeração {240, 400}, opcional* | Revisão 59 (documento 250; Q250-63, D-N688 e R150): Revisão 59 (documento 250; Q250-63, D-N688, R150): o layout do CNAB **desta carteira**, quando for **diferente** do padrão da conta. **Vazio = usa o `Layout_Cnab` da conta** (`Cad_Conta_Bancaria`), que é o padrão dos registros novos. Vale só para registros **novos**; o título guarda o layout em que foi registrado (R132). A carteira com layout próprio exige canal ativo daquele layout na conta (`Cad_Conta_Bancaria_Canal`); senão o ERP recusa o registro. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+*Revisão 59 --- campos novos: Layout_Cnab.*
+
+15.2. DDA: boletos que o banco entrega ao pagador (documento 250; desenhado agora, implementado na fase 2 do produto)
+
+Mov_Dda_Titulo
+
+Revisão 56 (documento 250; D-N639 a D-N658): **DDA: o boleto emitido contra a empresa.** O Débito Direto Autorizado entrega ao ERP, antes do vencimento, os boletos emitidos contra o CNPJ da empresa. Serve para o contas a pagar **achar** o título e para **não pagar duas vezes**.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Dda_Titulo** | *identificador* | --- |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | A conta cujo DDA entregou o boleto |
+| **ID_Banco_Mensagem** | *referência (Mov_Banco_Mensagem), opcional* | A mensagem de origem |
+| **Chave_Titulo** | *texto* | Banco mais o campo livre do código de barras (posições 20 a 44), como na fonte do layout DDA |
+| **Codigo_Barras** | *texto, opcional* | Código de barras |
+| **ID_Participante_Beneficiario** | *referência (Cad_Participante), opcional* | O fornecedor, quando o CNPJ já está cadastrado |
+| **Documento_Beneficiario** | *texto* | CPF ou CNPJ do beneficiário |
+| **Nome_Beneficiario** | *texto* | Nome do beneficiário |
+| **Data_Vencimento** | *data* | Vencimento |
+| **Valor_Nominal** | *número* | Valor |
+| **Numero_Documento** | *texto, opcional* | Número do documento do beneficiário |
+| **Status** | *enumeração {recebido, vinculado, pago, baixado_pelo_beneficiario, alterado, ignorado}* | {recebido, vinculado, pago, baixado_pelo_beneficiario, alterado, ignorado} |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a pagar vinculado (`Mov_Titulo`) |
+| **Data_Hora_Recebimento** | *data/hora* | Quando o ERP recebeu |
+| **Data_Hora_Vinculo** | *data/hora, opcional* | Quando foi vinculado a um título |
+| **Identificador_Dda_Banco** | *texto, opcional* | Santander: o identificador do boleto no DDA (`authorizedDirectDebitId`, 17 posições no exemplo) que a consulta de detalhe pede, junto com o código e o CPF ou CNPJ do pagador |
+| **Documento_Pagador** | *texto, opcional* | O CPF ou CNPJ de **quem** o boleto foi emitido contra, quando o DDA devolve (o do Santander cobre também os CNPJ agregados, como as filiais). Liga o boleto à filial certa (R15) |
+| **Data_Limite_Pagamento** | *data, opcional* | A data limite para pagar, diferente do vencimento (`paymentLimitDate`). Depois dela o banco não aceita o pagamento do boleto |
+| **Valor_Minimo** | *número, opcional* | O menor valor aceito, quando o boleto permite pagamento parcial (`minimumValue`) |
+| **Codigo_Situacao_Banco** | *texto, opcional* | A situação **como o banco manda** (Santander: aberto a vencer, aberto vencido, agendado, pago, emitido e oculto, mais o código e a descrição do detalhe); o ERP guarda o bruto e o `Status` é a tradução (R10) |
+
+15.3. Pix Automático: recorrência, cobrança e tentativa (documento 250; desenhado agora, implementado na fase 2 do produto)
+
+Mov_Pix_Recorrencia
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Pix Automático: a recorrência autorizada.** Para cobrar mensalidades e parcelas de contrato por débito autorizado pelo cliente. A recorrência nasce "pendente de confirmação" e só aceita cobrança depois de confirmada pelo pagador.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Pix_Recorrencia** | *identificador* | --- |
+| **ID_Conta_Bancaria** | *referência (Cad_Conta_Bancaria)* | A conta recebedora |
+| **ID_Participante_Pagador** | *referência (Cad_Participante)* | O cliente |
+| **ID_Gestao_Contrato** | *referência (Cad_Gestao_Contrato), opcional* | O contrato que gera as cobranças (`Cad_Gestao_Contrato`) |
+| **Id_Recorrencia** | *texto* | O identificador de 29 posições do arranjo (padrão "RR", "RN", "CR" ou "CN" + 8 do agente + data + sequencial de 11); o segundo caractere diz se permite nova tentativa |
+| **Id_Solicitacao** | *texto, opcional* | Identificador da solicitação de confirmação (29 posições), necessário para cancelar a solicitação enviada ao app do cliente |
+| **Jornada** | *enumeração {sem_qr_notificacao_app, qr_so_recorrencia, qr_com_cobranca_imediata, qr_com_pagamento_ou_agendamento, aguardando_definicao}* | As quatro jornadas do guia do BCB, na ordem em que o Itaú as numera (`JORNADA_1` a `JORNADA_4`, mais `AGUARDANDO_DEFINICAO`; a correspondência é leitura minha) |
+| **Status** | *enumeração {pendente_confirmacao, aprovada, rejeitada, cancelada, expirada}* | (no Itaú: CRIADA, APROVADA, REJEITADA, CANCELADA e EXPIRADA) |
+| **Status_Solicitacao** | *enumeração {criada, enviada, recebida, rejeitada, aceita, expirada, cancelada}, opcional* | A solicitação de confirmação enviada ao app do cliente (jornada sem QR) tem ciclo próprio no Itaú; a recorrência fica `pendente_confirmacao` até a solicitação ser `aceita` |
+| **Periodicidade** | *enumeração {anual, semestral, trimestral, mensal, semanal}* | (os mesmos cinco valores da API do Itaú) |
+| **Politica_Retentativa** | *enumeração {nao_permite, permite_ate_3_em_7_dias}* | (no Itaú: `NAO_PERMITE` e `PERMITE_3R_7D`) |
+| **Valor_Fixo** | *número, opcional* | Quando a parcela é fixa (`valorRec` no Itaú) |
+| **Valor_Maximo** | *número, opcional* | Teto autorizado pelo cliente, quando o valor varia |
+| **Valor_Minimo_Recebedor** | *número, opcional* | Valor mínimo que o recebedor define quando o valor varia; **a API do Itaú não aceita ao mesmo tempo o valor fixo e o mínimo** (R30) |
+| **Chave_Pix_Recebedor** | *texto* | A chave Pix (DICT) da conta que recebe, copiada no envio (até 77 posições): a conta pode ter mais de uma chave e a API pede a usada |
+| **Contrato_Vinculo** | *texto* | Número do contrato que a recorrência paga, como foi transmitido (até 35 posições); obrigatório na API do Itaú |
+| **Objeto_Vinculo** | *texto* | Descrição do contrato, como foi transmitida (até 35 posições); obrigatória na API do Itaú |
+| **Id_Location_Recorrencia** | *texto, opcional* | Identificador numérico da location da recorrência no banco; a API do Itaú pede na criação da cobrança |
+| **Data_Inicio** | *data, opcional* | Vigência da recorrência (2 campos) |
+| **Data_Fim** | *data, opcional* | Vigência da recorrência (2 campos) |
+| **Location** | *texto, opcional* | URL do payload (até 77 posições) |
+| **Data_Hora_Criacao** | *data/hora* | Quando o ERP criou |
+| **Data_Hora_Confirmacao** | *data/hora, opcional* | Quando o cliente confirmou |
+| **Solicitante_Encerramento** | *enumeração {psp_pagador, usuario_pagador, psp_recebedor, usuario_recebedor}, opcional* | Quem cancelou a recorrência (os quatro solicitantes da API do Itaú) |
+| **Codigo_Encerramento** | *texto, opcional* | O código bruto do cancelamento ou da rejeição, como o banco mandou (até 4 posições; por exemplo `AP13` a `AP15` na rejeição e `ACCL`, `CPCL`, `DCSD`, `FRUD`, `SLCR` e `SLDB` no cancelamento; o arquivo marca `ERSL` e `PCFD` como obsoletos); a tradução vai ao mapa de ocorrências (R35) |
+| **Ispb_Psp_Pagador** | *texto, opcional* | ISPB do banco do cliente (8 posições), que o Itaú entrega na consulta dos dados do pagador; a agência e a conta, do escopo complementar, ficam só no corpo da mensagem (R21) |
+| **Motivo_Cancelamento** | *texto, opcional* | Texto livre quando cancelada ou rejeitada |
+| **ID_Pix_Recorrencia_Anterior** | *referência (Mov_Pix_Recorrencia), opcional* | A recorrência cancelada que esta substitui. Pela regra geral do convênio da Caixa, **alterar** uma recorrência confirmada (valor, periodicidade, vigência) é **cancelar e criar outra**, que o cliente precisa confirmar de novo; o vínculo guarda a cadeia e impede cobrar nas duas (R82) |
+
+Mov_Pix_Recorrencia_Agendamento
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Pix Automático: cada cobrança da recorrência.** Cada parcela é uma **cobrança** da recorrência, enviada ao banco do cliente entre 2 e 10 dias antes da data. O `txid` identifica a cobrança até a conciliação. **A versão 4 do documento 250 passou o estado para o do Itaú** (criada, ativa, concluída, expirada, rejeitada, cancelada) e tirou daqui a tentativa e o `E2eid`, que agora vivem em `Mov_Pix_Recorrencia_Tentativa` (seção 4.18 do documento 250): a mesma cobrança pode ter até 4 tentativas.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Pix_Agendamento** | *identificador* | --- |
+| **ID_Pix_Recorrencia** | *referência (Mov_Pix_Recorrencia)* | A recorrência |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título a receber que esta cobrança quita |
+| **Txid** | *texto* | Identificador da cobrança (até 35 posições), usado para cancelar, pedir nova tentativa e conciliar |
+| **Data_Prevista_Liquidacao** | *data* | A data da cobrança |
+| **Ajuste_Dia_Util** | *booleano, opcional* | {sim, nao}: se a cobrança marcada para um dia que não é útil passa ao dia útil seguinte. No convênio da Caixa o padrão é **sim** e o recebedor pode desligar em cada agendamento (`ajusteDiaUtil` da API do arranjo). Vazio = o padrão do convênio |
+| **Valor** | *número* | Valor |
+| **Status** | *enumeração {criada, ativa, concluida, expirada, rejeitada, cancelada}* | (os seis estados da cobrança no Itaú) |
+| **Solicitante_Encerramento** | *texto, opcional* | Quem cancelou a cobrança, quando cancelada (a lista de solicitantes da cobrança é a mesma da recorrência) |
+| **Codigo_Encerramento** | *texto, opcional* | O código bruto do cancelamento ou da rejeição, como o banco mandou (até 4 posições; por exemplo `ACCT`, `BLCK`, `CCLD`, `FAIL`, `OTHR`, `SLBD` e `SLCR` no cancelamento, e 19 códigos na rejeição); a tradução vai ao mapa (R35) |
+| **Data_Hora_Status** | *data/hora* | Quando o status mudou pela última vez |
+
+Mov_Pix_Recorrencia_Tentativa
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Pix Automático: cada tentativa de cobrança.** Acréscimo da versão 4 do documento 250, a partir da API completa do Pix Automático do Itaú: a cobrança traz uma **lista de tentativas**, cada uma com tipo, estado, data de liquidação e `endToEndId`. A primeira é a instrução original; a nova tentativa (até 3, em até 7 dias corridos, só com a política `PERMITE_3R_7D`) é um pedido novo sobre a mesma cobrança.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Pix_Tentativa** | *identificador* | --- |
+| **ID_Pix_Agendamento** | *referência (Mov_Pix_Recorrencia_Agendamento)* | A cobrança |
+| **Numero_Tentativa** | *número* | 1 na instrução original; 2 a 4 nas novas tentativas |
+| **Tipo_Tentativa** | *texto* | O código bruto do banco (no Itaú: `AGND`, `NTAG` e `RIFL`; o arquivo não explica os três, Q250-16) |
+| **Data_Liquidacao_Prevista** | *data* | A data prevista para esta tentativa |
+| **Status** | *enumeração {solicitada, agendada, paga, cancelada, rejeitada, expirada}* | (os seis estados da tentativa no Itaú) |
+| **E2eid** | *texto, opcional* | Identificador fim a fim do Pix, quando paga |
+| **Codigo_Rejeicao** | *texto, opcional* | O código bruto quando a tentativa é rejeitada; a tradução vai ao mapa (R35) |
+| **Data_Hora_Status** | *data/hora* | Quando o status mudou pela última vez |
+
+15.4. Dados do item de remessa que só alguns bancos e produtos usam: tributo e cobrança (documento 250)
+
+Mov_Remessa_Bancaria_Item_Tributo
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Item de pagamento de tributo (guia sem título comum).** Os segmentos de tributo do CNAB 240 (N e O) e os pagamentos de tributo por API pedem dados que o item de remessa não tem. **A estrutura é mínima e provisória:** as posições de cada tributo só foram vistas em parte (seção 3.3 do documento 250) e fecham quando você trouxer o manual do banco.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item_Remessa_Tributo** | *identificador* | --- |
+| **ID_Item_Remessa** | *referência (Mov_Remessa_Bancaria_Item)* | O item de remessa a que pertence |
+| **Tipo_Tributo** | *enumeração {gps, darf, darf_simples, gare, fgts, dae, outro_com_codigo_de_barras}* | {gps, darf, darf_simples, gare, fgts, dae, outro_com_codigo_de_barras} |
+| **Codigo_Receita** | *texto, opcional* | Código da receita |
+| **Tipo_Identificacao_Contribuinte** | *enumeração {cnpj, cpf, pis, cei, numero_beneficio, titulo, debcad, referencia}, opcional* | A lista de identificações vista no layout |
+| **Identificacao_Contribuinte** | *texto, opcional* | O número do contribuinte |
+| **Periodo_Apuracao** | *texto, opcional* | Competência ou período |
+| **Numero_Referencia** | *texto, opcional* | Número de referência da guia |
+| **Data_Vencimento_Tributo** | *data, opcional* | Vencimento da guia |
+| **Valor_Principal_Tributo** | *número* | Principal |
+| **Valor_Multa_Tributo** | *número, opcional* | Acréscimos (2 campos) |
+| **Valor_Juros_Tributo** | *número, opcional* | Acréscimos (2 campos) |
+| **Subtipo_Gare** | *enumeração {icms, itcmd}, opcional* | Santander: {icms, itcmd}: a GARE tem **dois leiautes** na API do Santander, com campos diferentes (a do ICMS pede inscrição estadual e auto de infração; a do ITCMD, o número da declaração, em `Numero_Referencia`). Só vale com `Tipo_Tributo` = `gare` (R91) |
+| **Numero_Divida_Ativa_Ou_Etiqueta** | *texto, opcional* | Santander, GARE: o número da inscrição em dívida ativa ou da etiqueta da guia |
+| **Numero_Auto_Infracao_Ou_Parcela** | *texto, opcional* | Santander, GARE do ICMS: o número do AIIM, do DEICMEME ou da parcela (o banco aceita um só, até 9 dígitos) |
+| **Valor_Acrescimo_Financeiro_Tributo** | *número, opcional* | Santander, GARE: o acréscimo financeiro, que não é juros nem multa |
+| **Valor_Honorarios_Advocaticios_Tributo** | *número, opcional* | Santander, GARE: os honorários advocatícios da guia |
+| **Receita_Bruta_Acumulada_Tributo** | *número, opcional* | Bradesco, Multipag, DARF Simples, segmento N3: a receita bruta acumulada que o DARF do Simples pede |
+| **Percentual_Receita_Bruta_Tributo** | *número, opcional* | DARF Simples, N3: o percentual sobre a receita bruta |
+| **Valor_Atualizacao_Monetaria_Tributo** | *número, opcional* | GPS, segmento N1: a atualização monetária, separada de juros e multa |
+| **Observacao_Tributo** | *texto, opcional* | Santander: o texto livre da guia (até 30 posições na GARE) |
+| **Valor_Outras_Entidades** | *número, opcional* | Valor de outras entidades (GPS) |
+| **Identificador_Fgts** | *texto, opcional* | Identificador do recolhimento do FGTS |
+
+Mov_Remessa_Bancaria_Item_Cobranca
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Dados de cobrança do item: protesto, negativação, descontos, juros, bonificação, validade e pagamento divergente.** Acréscimo da versão 3 do documento 250, ampliado na versão 5 do documento 250 com o que o Bradesco pede (15 campos: negativação, prazo em dias úteis, juros em percentual, descontos 2 e 3, bonificação, pagamento parcial e decurso de prazo) na versão 6 do documento 250 com a validade do Pix no boleto híbrido (1 campo) na versão 7 do documento 250 com o que o BB pede (4 campos: tipo de Pix no boleto, location da recorrência, órgão negativador e pagamento depois do vencimento) e na versão 8 do documento 250 com o que a Caixa pede (3 campos) e com os dados do boleto que o banco devolve (5 campos). O item de cobrança do dicionário tem multa, juros, desconto e abatimento, mas **não tem** os dados que o registro do boleto pede além disso: protesto, negativação, data-limite de pagamento, aceitação de valor divergente e mensagens. A API de boleto do Itaú pede todos; o segmento Y-53 do Banrisul (seção 3.2 do documento 250) traz o pagamento divergente. Uma linha por item de cobrança, no padrão de `Mov_Remessa_Bancaria_Item_Exterior` (o item já tem campos demais para receber mais opcionais). **As instruções de cobrança do Itaú** (uma lista de até **4** códigos na emissão; a consulta de detalhe mostra 3) **saem destes campos**: o driver monta a lista e o banco descarta o excedente.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Item_Cobranca** | *identificador* | --- |
+| **ID_Item_Remessa** | *referência (Mov_Remessa_Bancaria_Item)* | O item de cobrança a que pertence (um item, no máximo uma linha) |
+| **Protestar** | *booleano, opcional* | Se o banco deve protestar o título depois do vencimento; no Itaú, o bloco de protesto só vai quando for sim |
+| **Dias_Protesto** | *número, opcional* | Dias depois do vencimento para protestar (no Itaú, de 1 a 99); só quando `Protestar` for sim |
+| **Negativar** | *booleano, opcional* | Se o banco deve negativar o pagador; fontes secundárias dizem que o Itaú aceita só um entre protesto e negativação (regra do driver) |
+| **Data_Limite_Pagamento** | *data, opcional* | Data depois da qual o boleto não pode mais ser pago (no Itaú, no máximo 10 anos; sem data, vale 10 anos) |
+| **Tipo_Recebimento_Divergente** | *enumeração {qualquer_valor, faixa_de_valores, nao_aceita, a_partir_do_minimo}, opcional* | O boleto aceita pagamento de valor diferente do calculado? São os quatro códigos do Itaú |
+| **Valor_Minimo_Recebimento** | *número, opcional* | Menor valor aceito, quando o tipo pede |
+| **Valor_Maximo_Recebimento** | *número, opcional* | Maior valor aceito, quando o tipo pede |
+| **Mensagens_Boleto** | *texto, opcional* | Texto impresso no boleto (segmentos R e S do CNAB; no Itaú, uma lista de mensagens) |
+| **Texto_Uso_Beneficiario** | *texto, opcional* | Texto livre do beneficiário, devolvido no retorno (25 posições no Itaú; o `controleParticipante` do Bradesco também tem 25 e o banco não o confere) |
+| **Dias_Negativacao** | *número, opcional* | Bradesco: dias para negativar, quando `Negativar` for sim. O Bradesco aceita **um** comando de protesto ou de negativação por título, com prazo mínimo de 3 dias corridos ou 1 dia útil na negativação e de 5 corridos ou 3 úteis no protesto, conforme o contrato |
+| **Tipo_Dia_Prazo** | *enumeração {corridos, uteis}, opcional* | Bradesco: {corridos, uteis}, a unidade de `Dias_Protesto` e de `Dias_Negativacao` e, na versão 8 do documento 250 (Caixa), dos dias do desconto por antecipação |
+| **Tipo_Juros_Mora** | *enumeração {valor_dia, percentual_mes, isento}, opcional* | Bradesco: {valor_dia, percentual_mes, isento}. O item só tinha o valor por dia (`Valor_Juros_Mora_Dia`). Leitura minha: o segmento P do CNAB 240 também traz o código de juros; conferir no manual de cada banco. Valor ou percentual, **nunca os dois** |
+| **Percentual_Juros_Mora_Mes** | *número, opcional* | O percentual ao mês, quando `Tipo_Juros_Mora` for `percentual_mes`. O Bradesco calcula o juro diário como valor do título × percentual mensal ÷ 30 |
+| **Tipo_Desconto** | *enumeração {valor, percentual, por_dia_antecipacao}, opcional* | {valor, percentual, por_dia_antecipacao}, vale para os três descontos; `por_dia_antecipacao` é o tipo 3 do BB (versão 7 do documento 250) e, na Caixa (versão 8 do documento 250), vem com `Base_Desconto_Antecipacao`. Valor e percentual nunca vão juntos (regra do Bradesco) |
+| **Valor_Desconto_2_Remessa** | *número, opcional* | Bradesco, CNAB 240: segmento R: o segundo desconto. O Bradesco aceita até 3, com datas em sequência e a soma menor que o valor do título |
+| **Data_Limite_Desconto_2** | *data, opcional* | Até quando vale o segundo desconto; depois da data do primeiro |
+| **Valor_Desconto_3_Remessa** | *número, opcional* | O terceiro desconto |
+| **Data_Limite_Desconto_3** | *data, opcional* | Até quando vale o terceiro desconto; depois da data do segundo |
+| **Valor_Bonificacao_Dia** | *número, opcional* | Bradesco: a redução **por dia** no valor do título até o vencimento, o inverso dos juros (R$ 1,00 por dia num título emitido 20 dias antes dá R$ 20,00 se pago no primeiro dia). Só uma bonificação por título |
+| **Percentual_Bonificacao_Dia** | *número, opcional* | A mesma bonificação em percentual ao dia. Valor e percentual nunca vão juntos |
+| **Data_Limite_Bonificacao** | *data, opcional* | Até quando vale a bonificação |
+| **Permite_Pagamento_Parcial** | *booleano, opcional* | Bradesco: se o boleto aceita pagamento em partes (sim ou não). Para o Itaú, ver `Tipo_Recebimento_Divergente`; o de-para entre os dois é regra do driver |
+| **Quantidade_Pagamentos_Parciais** | *número, opcional* | Quantos pagamentos parciais o banco aceita (até 3 posições), só quando `Permite_Pagamento_Parcial` for sim |
+| **Dias_Decurso_Prazo** | *número, opcional* | Bradesco, decurso de prazo: dias depois do vencimento em que o título ainda pode ser pago. É a alternativa **em dias** de `Data_Limite_Pagamento`; só vale se o contrato de cobrança estiver com o indicador correspondente zerado. Versão 12 do documento 250: serve também de **prazo de baixa automática** quando `Instrucao_Baixa_Automatica` for `baixar_apos_dias` (Itaú e Santander); é o dia em que a cobrança **caduca** (R108) |
+| **Dias_Validade_Pix_Apos_Vencimento** | *número, opcional* | Bradesco, boleto híbrido com QR Code: quantos dias **depois do vencimento** o QR Code do Pix ainda vale (`validadeAposVencimento`, até 4 posições). É regra do **Pix**, separada de `Data_Limite_Pagamento` e de `Dias_Decurso_Prazo`, que valem para o boleto |
+| **Tipo_Pix_Boleto** | *enumeração {sem_pix, qr_dinamico, qr_dinamico_recorrencia_numerado_pelo_banco, qr_dinamico_recorrencia_numerado_pelo_cliente, qr_location_recorrencia}, opcional* | BB: o Pix que o boleto leva: {sem_pix, qr_dinamico, qr_dinamico_recorrencia_numerado_pelo_banco, qr_dinamico_recorrencia_numerado_pelo_cliente, qr_location_recorrencia} (os códigos N, S, A, B e C do `indicadorPix`; um caractere inválido vira N **no banco**, por isso o driver só envia estes cinco). No Itaú e no Bradesco o Pix é **outro produto** (R32 e R50); no BB é um campo do registro e também pode ser gerado ou cancelado depois (R54) |
+| **Id_Location_Recorrencia_Pix** | *texto, opcional* | BB: o `idLocationRecorrencia`, a location da recorrência (cobrança com vencimento do Pix), só quando o tipo for `qr_location_recorrencia`; fica ao lado de `Id_Location_Pix` do item de remessa |
+| **Orgao_Negativador** | *enumeração {serasa, quod}, opcional* | BB: {serasa, quod}, o órgão da negativação (códigos 10 e 11; o registro lista só o 10, a alteração lista os dois). Só quando `Negativar` for sim |
+| **Aceita_Pagamento_Apos_Vencimento** | *enumeração {sim, nao, conforme_convenio}, opcional* | BB: {sim, nao, conforme_convenio}: se o boleto pode ser pago depois do vencimento (`indicadorAceiteTituloVencido`). `nao` = só até o vencimento ou o próximo dia útil; `sim` com `Dias_Decurso_Prazo` define os dias corridos (`numeroDiasLimiteRecebimento`); `conforme_convenio` deixa valer o limite do convênio |
+| **Tipo_Carteira_Titulo** | *enumeração {simples, caucionada, cessao, descontada}, opcional* | Caixa: {simples, caucionada, cessao, descontada}: a carteira do **título** no registro por webservice (padrão simples). `cessao` exige convênio com garantia de crédito e `descontada`, o produto contratado. Não é a carteira da conta (`Carteira_Cobranca`), que é o código numérico do CNAB |
+| **Base_Desconto_Antecipacao** | *enumeração {valor, percentual}, opcional* | Caixa: {valor, percentual}: com `Tipo_Desconto` = `por_dia_antecipacao`, se o desconto por dia é em reais ou em percentual; os dias, corridos ou úteis, ficam em `Tipo_Dia_Prazo`. A Caixa aceita **um** desconto por dia de antecipação por título, ou até três de data fixa |
+| **ID_Participante_Sacador_Avalista** | *referência (Cad_Participante), opcional* | Caixa: referência a `Cad_Participante`. O sacador avalista, no boleto de **terceiro habilitado** e no depósito e aporte (grupo próprio do XML da Caixa); no depósito e aporte os dados são os do pagador e **não mudam depois do registro**. A Caixa exige que o CPF ou CNPJ do pagador seja **diferente** do beneficiário (erro 0090); o ERP confere antes de enviar |
+| **Linha_Digitavel_Banco** | *texto, opcional* | A linha digitável **como o banco devolveu** no registro e na alteração (Caixa: só vem quando o título está EM ABERTO). O desenho das versões 3 a 7 **não tinha onde guardar** os dados do boleto que o banco devolve, e o boleto impresso, o e-mail e o portal do cliente precisam deles; leitura minha, a conferir nos arquivos dos outros bancos. O ERP guarda como veio e **não recalcula** |
+| **Codigo_Barras_Banco** | *texto, opcional* | O código de barras do boleto, como o banco devolveu (44 posições). Não é o `Codigo_Barras` do item de tributo, que é o do documento a pagar |
+| **Url_Boleto_Banco** | *texto, opcional* | O endereço do boleto no banco (Caixa: devolvido no registro). Pode expirar; o ERP não o trata como documento, só como atalho |
+| **Pix_Copia_E_Cola_Banco** | *texto, opcional* | O texto do Pix "copia e cola" do boleto híbrido (Caixa: `QRCODE`). Guardado como veio, sem interpretar |
+| **Url_Qr_Code_Pix_Banco** | *texto, opcional* | O endereço da imagem do QR Code do Pix (Caixa: `URL_QRCODE`) |
+| **Condicao_Emissao_Boleto** | *enumeração {banco, cliente}, opcional* | Bradesco, CNAB 400 e 240: {banco, cliente}: quem emite e imprime o boleto. Emitido pelo banco, ele imprime no processo autoenvelopável e entrega pelos Correios, sem comprovante de recebimento; emitido pelo cliente, o arquivo só registra o título (R105) |
+| **ID_Carteira_Cobranca** | *referência (Cad_Conta_Bancaria_Carteira), opcional* | D-N655: a carteira registrada no banco em que o título é cobrado (`Cad_Conta_Bancaria_Carteira`, seção 4.20 do documento 250); vazio usa a carteira padrão da conta. Quem cadastrou carteiras escolhe a carteira por aqui; o `Tipo_Carteira_Titulo` segue como o campo que a Caixa pede no registro |
+| **ID_Documento_Boleto_Pdf** | *referência (Cad_Documento), opcional* | D-N655: o **PDF do boleto em A4**, no padrão do banco, guardado como documento (`Cad_Documento`). A Mlegate emite o boleto **sempre em PDF A4**, para todos os bancos, e o envia ao cliente por **e-mail ou WhatsApp**; o PDF é o que o ERP gera no padrão do banco ou o que o banco devolve (Caixa: `Url_Boleto_Banco`), e é o mesmo arquivo que o portal do cliente mostra (R123) |
+| **Instrucao_Baixa_Automatica** | *enumeração {sem_instrucao, baixar_apos_dias, baixar_apos_365_dias, padrao_do_banco}, opcional* | {sem_instrucao, baixar_apos_dias, baixar_apos_365_dias, padrao_do_banco}: o que o banco faz com o título vencido e não pago. `baixar_apos_dias` usa `Dias_Decurso_Prazo` (Itaú: código de baixa 1 e prazo de 2 posições; Santander: `writeOffQuantityDays`); `baixar_apos_365_dias` é o código 2 do Itaú; `padrao_do_banco` é o que vale sem instrução (Itaú: **120 dias** depois do vencimento) (R108) |
+
+15.5. Certificados de confiança dos bancos (documento 250)
+
+Cad_Banco_Certificado_Confianca
+
+Revisão 56 (documento 250; D-N639 a D-N658): **Os certificados públicos do banco em que o ERP confia.** Versão 6 do documento 250. O Bradesco publica, no portal, os certificados dos seus servidores (e dos que chamam o ERP no webhook), **renova-os periodicamente** e pede que o cliente adicione o novo como confiável **antes** da troca. Esta tabela guarda **só o que é público** (o certificado do banco, nunca o do ERP, que continua em `Cad_Certificado_Digital`, nem chave privada) e alimenta o aviso de vencimento e a lista de confiança do cliente HTTP do driver. Os sete arquivos recebidos na versão 6 do documento 250 têm validades de 16/01/2027 a 07/10/2027 (seção 3.12.2 do documento 250); os 16 do BB, na versão 7 do documento 250, de 27/12/2026 a 19/10/2027 (seção 3.13.2 do documento 250), e acrescentaram dois campos.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Banco_Certificado_Confianca** | *identificador* | --- |
+| **ID_Banco_Driver** | *referência (Cad_Banco_Driver)* | O driver (banco e canal) a que o certificado pertence |
+| **Ambiente** | *enumeração {homologacao, sandbox, producao}* | {homologacao, sandbox, producao} |
+| **Finalidade** | *enumeração {servidor_api, servidor_token, origem_webhook}* | `servidor_api` é o servidor que o ERP chama; `origem_webhook` é o servidor do banco que chama o ERP (leitura minha, a confirmar na Q250-24: o ERP valida quem chama) |
+| **Nome_Servidor** | *texto* | O nome do servidor no certificado (ex.: `openapi.bradesco.com.br`, `boletosliquidados.bradesco.com.br`) |
+| **Papel_Na_Cadeia** | *enumeração {servidor, intermediario, raiz}* | O banco entrega servidor, autoridade intermediária e raiz, e a cadeia do webhook de cobrança (ICP-Brasil) difere da das demais (GlobalSign e DigiCert) |
+| **Emissor** | *texto* | Quem emitiu o certificado (texto) |
+| **Impressao_Digital_Sha256** | *texto* | Impressão do certificado, para o ERP saber que é exatamente o que o banco publicou |
+| **Valido_Ate** | *data* | Vencimento do certificado; alimenta o aviso |
+| **Dias_Aviso_Antes** | *número, opcional* | Quantos dias antes avisar (padrão sugerido: 60; o primeiro vencimento recebido é 16/01/2027). Mesmo padrão de `Dias_Aviso_Vencimento` do canal |
+| **Situacao** | *enumeração {ativo, aguardando_troca, substituido, vencido}* | `aguardando_troca` é o certificado novo já publicado, **confiado antes** da data de troca do banco |
+| **ID_Documento_Certificado** | *referência (Cad_Documento), opcional* | O arquivo público do certificado (`Cad_Documento`) |
+| **Data_Inicio_Uso_Banco** | *data, opcional* | A data em que o **banco** passa a apresentar este certificado, que **não é** a do início da validade dele: os arquivos do BB vêm em pastas "válido a partir de 26/10" e "até 25/10", e o certificado novo já tinha sido emitido em setembro. É esta data que diz quando o antigo deixa de valer na prática; o ERP confia nos dois até lá (R61) |
+| **Origem_Da_Cadeia** | *enumeração {autoridade_publica, pki_do_banco}, opcional* | {autoridade_publica, pki_do_banco}: o BB trocou o certificado do webhook de produção, em 04/11/2026, de uma autoridade pública (GeoTrust e DigiCert) para a **autoridade do próprio banco** (AC Banco do Brasil v3), que não consta das listas de confiança dos sistemas; a de homologação já era assim. A raiz do banco entra **só** na lista de quem chama o webhook, nunca na lista geral (R61) |
+
+
+
+16\. Anexo --- Documento 250: boleto com ou sem Pix em parâmetro (entidade nova da revisão 58)
+
+Revisão 58 do dicionário (consolidação de 24/11/2026, «consolidar» de Alberto): 1 entidade nova neste módulo, do documento 250 (versão 33; D-N666): o **parâmetro global** que diz se o boleto novo sai com Pix ou sem Pix (R129). O produto `debito_veicular` entrou também nos campos `Produto` da matriz de capacidades e do canal da conta (D-N675, R137).
+
+16.1. Parâmetro global da cobrança: boleto com ou sem Pix (documento 250)
+
+Cad_Cobranca_Parametro
+
+Revisão 58 (documento 250; D-N666 e D-N675): **O parâmetro global do boleto com ou sem Pix.** Resposta de Alberto à Q250-16 (a): a opção de o boleto aceitar Pix ou não é **do usuário e vale para todos os boletos**; não é escolhida boleto a boleto. Um parâmetro global **com vigência** (a mudança fica registrada), sem empresa nem conta (se um dia a Mlegate quiser por empresa ou por conta, entra um campo opcional, como no parâmetro do vencimento do FGTS). Ligado, todo boleto **novo** sai com Pix (produto `boleto_com_pix` do banco); desligado, sai **sem Pix**; os boletos já registrados não mudam (R129). Se a conta ou o banco não tem o canal do boleto com Pix, o boleto sai sem Pix e o ERP avisa, sem nunca deixar de emitir. Os campos técnicos do item de cobrança (`Tipo_Pix_Boleto`, `Pix_Copia_E_Cola_Banco` e `Url_Qr_Code_Pix_Banco`) são preenchidos pelo motor a partir deste parâmetro e da resposta do banco. Chave de negócio: `Vigencia_Inicio`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Cobranca_Parametro** | *identificador* | --- |
+| **ID_Cobranca_Parametro_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Cobranca_Parametro_Versao). ID_Cobranca_Parametro é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **Boleto_Com_Pix** | *booleano* | Verdadeiro: todo boleto **novo** sai com Pix (o produto `boleto_com_pix` do banco). Falso: sai **sem Pix** (R129). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |

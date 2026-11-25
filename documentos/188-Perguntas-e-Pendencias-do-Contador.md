@@ -48,7 +48,8 @@ Mlegate · Alberto Beyeler · Novembro de 2026
 | 28    | Documento 236: importado sem similar nacional (Resolução do Senado 13/2012 e Gecex 553/2024): origem 6 ou 7 e alíquota interestadual de ICMS | 1         | C364|
 | 29    | Documento 247: depreciação do ativo (cota cheia e início, F120 e acelerada por turnos, incentivada rural e química, pausas, redução ao valor recuperável, reavaliação e outras acelerações) | 7         | C365 a C371 |
 | 30    | Documento 248: Anexo III da IN 1.700 (vigência da tabela de vidas úteis e as notas (1) a (3)) | 2         | C372 e C373 |
-|       | **Total**                                                                                                                           | **373**   | C1 a C373   |
+| 31    | Documento 250: FGTS Digital (vencimento do dia 20 e multa de 40% da rescisão) | 1         | C374        |
+|       | **Total**                                                                                                                           | **374**   | C1 a C374   |
 
 **Respondidas por Alberto em 18/11/2026 (D-N634, D-N635 e D-N637):** C365 a C371 (documento 247, depreciação do ativo) e C372 e C373 (documento 248, Anexo III), com a confirmação do contador aberta.
 
@@ -5755,6 +5756,24 @@ Pergunta: (a) Nota (2): quais bens contam como máquinas, equipamentos e instala
 > **Leitura do ERP (minha):** (a) as notas ficam **no grupo de bem**, que o ativo herda; o ERP não decide por NCM quais bens são "máquinas industriais". (b) a nota (1) (fornos de vidro) é uma linha da tabela; quem usa é o grupo, sem conferência do NCM 8417. (c) a parte avulsa só deprecia a partir da incorporação, e depois pelo restante da vida do bem principal (R15).
 >
 > **Data:** 18/11/2026 · **Situação:** respondida por Alberto (18/11/2026); o contador confirma; aplicada na revisão 55 (D-N638)
+
+# Parte 31. Documento 250: FGTS Digital (vencimento e multa de 40% da rescisão)
+
+### C374 · Manual do FGTS Digital (versão 1.70, 12/06/2026); Lei 8.036/1990, art. 18 · Vencimento do FGTS (dia 20 ou dia 7) e base da multa de 40% na rescisão
+
+**De onde vem:** Documento 250, seção 4.21 e Q250-47 (a) e (c) (R100)
+
+**Contexto e pergunta:**
+
+O manual do FGTS Digital (versão 1.70, de 12/06/2026) diz que o recolhimento vence no **dia 20 do mês seguinte** à competência (ou no dia útil anterior, quando o dia 20 não é útil). O documento 01 do dicionário tinha o **dia 7**. O desenho guarda o vencimento como **parâmetro com vigência** (`Cad_Rh_Parametro_Vencimento_Encargo`), com carga provisória no dia 20, até o contador confirmar. Sobre a multa de 40% na rescisão sem justa causa, o ERP precisa saber se a base da multa inclui os depósitos **devidos da própria rescisão** (o mês da rescisão e o mês anterior ainda não recolhido), além do saldo já depositado.
+
+Pergunta: (a) o vencimento do FGTS é mesmo o **dia 20 do mês seguinte**, com antecipação para o dia útil anterior, para todos os vínculos da Mlegate? Há **exceção** (por exemplo, o FGTS da rescisão, o do contrato de aprendiz, ou a competência de dezembro e a do 13º salário)? (b) a **multa de 40%** incide sobre o saldo depositado **mais os depósitos devidos da própria rescisão** (mês da rescisão e mês anterior)?
+
+**O que o ERP faz enquanto isso:** O vencimento do FGTS sai do parâmetro com vigência, provisório no dia 20; a multa de 40% é calculada sobre o saldo **mais** os depósitos devidos da rescisão (leitura minha: o art. 18 da Lei 8.036/1990 manda depositar os valores devidos na rescisão e calcula a multa sobre o total dos depósitos), marcada como provisória até a resposta. Aprovado por Alberto em 24/11/2026 («seguir a recomendação», Q250-47, D-N678).
+
+> **Resposta do contador:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> **Data:** \_\_\_\_/\_\_\_\_/\_\_\_\_\_\_\_\_ · **Situação:** aberta
 
 # Apêndice A. Prazos de calendário que dependem do contador
 

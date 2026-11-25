@@ -9,6 +9,12 @@ risco e segurança do trabalho, compliance eSocial (envio de eventos e
 caixa de mensagens), transparência salarial (Lei 14.611/2023), categoria
 sindical e benefícios, portal do colaborador e tabela salarial*
 
+*Revisão 32 --- consolidação da revisão 60 do dicionário (documento 252, versão 8 (D-N697, D-N702, D-N704 e D-N705: FGTS, retorno do eSocial, guia, histórico, rescisão e lote da folha externa, aprovados por Alberto)): 9 entidades novas (anexo, seção 32); o FGTS: retorno do eSocial (Mov_Esocial_Retorno_Fgts e Mov_Esocial_Retorno_Fgts_Valor), guia (Mov_Fgts_Guia e Mov_Fgts_Guia_Debito), histórico de remunerações (Mov_Rh_Fgts_Historico_Remuneracao e Mov_Rh_Fgts_Arquivo_Historico), rescisão (Mov_Rh_Fgts_Rescisao) e o lote da folha externa (Mov_Rh_Folha_Externa_Lote e Mov_Rh_Folha_Externa_Lote_Ocorrencia) (documento 252).*
+
+*Revisão 31 --- consolidação da revisão 59 do dicionário (documento 250, versão 44 (D-N680, D-N688 e D-N689: meio de transmissão no canal, layout por carteira e convênio de folha em parâmetro, aprovados por Alberto)): 1 entidades novas (anexo, seção 31); o convênio de folha em parâmetro com vigência: Cad_Rh_Parametro_Pagamento_Folha (documento 250, Q250-73 e D-N689).*
+
+*Revisão 30 --- consolidação da revisão 56 do dicionário (documento 250, versão 16 (D-N639 a D-N658: motor de envio bancário para qualquer banco, pelas recomendações; sem o estoque proativo do documento 251)): 1 entidades novas (anexo, seção 30); o vencimento do FGTS e de outros encargos em parâmetro com vigência: Cad_Rh_Parametro_Vencimento_Encargo (documento 250, D-N658).*
+
 *Revisão 29 --- consolidação da revisão 38 do dicionário (documentos 200 e 201, com as respostas de Alberto de 10/11/2026): 2 entidades novas (anexo, seção 29); 2 entidades novas do B0b-2 (plano de saúde dos empregados; documento 200).*
 
 *Revisão 28 --- consolidação da revisão 19 do dicionário (documento 90 aprovado por Alberto em 21/10/2026 e decisões do documento 91 respondidas): 2 entidades novas (anexo, seção 28); 3 entidades existentes alteradas; ocorrências do eSocial, indicador da prorrogação noturna e saída do modo de composição da hora extra noturna (documento 90, D-N335 e D-N339).*
@@ -8061,3 +8067,266 @@ Revisão 38 (documento 200, seção 5.2; D-N533 e D-N534: Q200-8): O crédito me
 | **ID_Credito_Servico** | *referência (Mov_Credito_Servico_Regime_Especifico), opcional* | O registro de crédito que o Motor gerou. |
 | **Situacao** | *enumeração {calculado, sem_credito}* | sem_credito quando falta acordo com cláusula compulsória, o mês está fora da janela ou a operadora não informou. |
 | **Motivo_Sem_Credito** | *texto, opcional* | Por que o crédito é zero. |
+
+
+
+30\. Anexo --- Documento 250: vencimento do FGTS em parâmetro (entidade nova da revisão 56)
+
+Revisão 56 do dicionário (consolidação de 23/11/2026): 1 entidade nova neste módulo, por pedido de Alberto (D-N658): o **vencimento do FGTS** (e de outros encargos) deixa de ser um dia escrito no documento e passa a ser um **parâmetro com vigência**, que o título do FGTS e o motor de envio bancário leem (documento 250, Q250-46). A carga é provisória, de uma linha, até o contador confirmar a data (C374).
+
+30.1. Parâmetro do vencimento do FGTS e de outros encargos da folha (documento 250, D-N658)
+
+Cad_Rh_Parametro_Vencimento_Encargo
+
+Revisão 56 (documento 250; D-N639 a D-N658): **O vencimento do FGTS (e de outros encargos) como parâmetro.** Pedido de Alberto (23/11/2026): «deixar a data de vencimento do FGTS em parâmetro, pois hoje é uma data mas pode mudar a qualquer momento». O vencimento deixa de ser texto do documento da Folha e passa a ser uma **linha com vigência**: quando a regra mudar, entra uma versão nova, sem mudar programa. O título do FGTS (e a data que o motor bancário paga) lê **este parâmetro** (Q250-46). **Carga provisória de uma linha, do FGTS:** o manual do FGTS Digital (versão 1 do documento 250.70, 12/06/2026) diz **dia 20 do mês seguinte, antecipando se não for dia útil**, e o documento 11 diz dia 7: **a carga leva o dia 20, provisório, até o contador confirmar (C374)**. Chave de negócio: empresa (ou todas), tipo de encargo e `Vigencia_Inicio`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Parametro_Vencimento_Encargo** | *identificador* | --- |
+| **ID_Parametro_Vencimento_Encargo_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Rh_Parametro_Vencimento_Encargo_Versao). ID_Parametro_Vencimento_Encargo é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa), opcional* | A empresa a que a regra vale; vazio vale para todas |
+| **Tipo_Encargo** | *enumeração {fgts, inss, irrf, outro}* | O encargo; a carga inicial só tem o `fgts`, e os outros entram quando o documento da Folha os ligar a este parâmetro |
+| **Regra_Vencimento** | *enumeração {dia_fixo_mes_seguinte, dia_util_n_mes_seguinte}* | O dia fixo do mês seguinte à competência, ou o enésimo dia útil do mês seguinte |
+| **Dia_Vencimento** | *texto* | O dia (de 1 a 31) ou o número do dia útil, conforme a regra |
+| **Ajuste_Dia_Nao_Util** | *enumeração {antecipa, posterga}* | O que fazer quando a data cai em dia sem expediente bancário (no FGTS Digital, antecipa) |
+| **Ato_Legal** | *texto, opcional* | A norma ou o manual que fundamenta a regra (por exemplo, "Manual do FGTS Digital 1.70, 12/06/2026") |
+| **Situacao_Dado** | *enumeração {provisorio, validado}* | A carga sai provisória até o contador validar |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia), opcional* | A validação do contador (área validacao_dado_legal) |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+
+
+31\. Anexo --- Documento 250: convênio de folha em parâmetro (entidade nova da revisão 59)
+
+Revisão 59 do dicionário (consolidação de 24/11/2026, «consolidar» de Alberto): 1 entidade nova neste módulo, do documento 250 (versão 44; Q250-73, D-N689): o **parâmetro do convênio de folha**, que diz por **quais canais bancários** a folha pode ser paga, com vigência, vários canais vigentes e um padrão (R148 e R151). O convênio de folha **não fica escrito em programa**: a troca de banco vale para as folhas novas, a qualquer momento.
+
+31.1. Parâmetro do convênio de folha: canais de pagamento da folha por banco, com vigência (documento 250)
+
+Cad_Rh_Parametro_Pagamento_Folha
+
+Revisão 59 (documento 250; Q250-73, D-N689, R148 e R151): **O convênio de folha como parâmetro.** Resposta de Alberto: a Mlegate tem convênio com os bancos para o envio da folha, isso é **parâmetro** e **pode trocar de banco a qualquer momento**; a folha **pode ser paga por qualquer banco** e, quando houver mais de um canal (por exemplo, no Bradesco, **Multipag e Folha**), **o usuário escolhe qual usar a cada folha**. Uma linha por canal de folha vigente, com vigência: diz **qual canal** (banco, conta, convênio e produto `pagamento`, em `Cad_Conta_Bancaria_Canal`) a folha pode usar, com **vários canais vigentes** se a folha for dividida entre bancos e **um canal padrão**, que o ERP **sugere** ao processar. A troca de banco é uma **versão nova com a data de início**; as folhas novas passam a sair pelo novo canal e as **remessas já enviadas não mudam** (R8). O RH processa e aprova a folha e o **Financeiro transmite** (R147 e R149); a escolha do canal fica **gravada na remessa**. Banco sem canal de folha ativo paga por Pix ou TED comuns (R146). Chave de negócio: `ID_Empresa`, `ID_Conta_Bancaria_Canal` e `Vigencia_Inicio`.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Parametro_Pagamento_Folha** | *identificador* | --- |
+| **ID_Parametro_Pagamento_Folha_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Rh_Parametro_Pagamento_Folha_Versao). ID_Parametro_Pagamento_Folha é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Empresa** | *referência (Cad_Empresa), opcional* | A empresa a que a regra vale; vazio vale para todas. |
+| **ID_Conta_Bancaria_Canal** | *referência (Cad_Conta_Bancaria_Canal)* | O **canal** (banco, conta, convênio e produto `pagamento`) que a folha pode usar; é ele que diz qual driver, qual convênio e qual layout. |
+| **Padrao** | *booleano* | Verdadeiro = o canal que o ERP **sugere** ao processar a folha; podem existir **vários** canais vigentes (para dividir a folha entre bancos ou para o usuário escolher, como Multipag e Folha no Bradesco) e **um** é o padrão. O usuário pode trocar o canal sem editar o parâmetro. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+
+
+32\. Anexo --- Documento 252: FGTS e folha externa (entidades novas da revisão 60)
+
+Revisão 60 do dicionário (consolidação de 24/11/2026, «consolidar» de Alberto): 9 entidades novas neste módulo, do documento 252 (versão 8; D-N697, D-N702, D-N704 e D-N705): o **retorno do eSocial do FGTS** (S-5003 e S-5013, com as linhas por tipo de valor), a **guia do FGTS Digital** e os seus débitos, o **histórico de remunerações** e o **arquivo do Anexo I**, a **rescisão** (método da multa, base da Caixa, multa estimada contra a oficial) e o **lote importado da folha processada fora do ERP** com as suas ocorrências. **O título do FGTS passa a nascer do valor oficial**, por integração da folha (ou do lote importado), com a folha lançando só a provisão (R1, R14 e R15). O valor `folha_externa` entrou também em `Mov_Titulo.Origem_Tipo` (Contas a Pagar/Receber). **Nenhuma destas entidades tem vigência.**
+
+32.1. FGTS: retorno do eSocial (S-5003 e S-5013), cabeçalho e linhas por tipo de valor (documento 252)
+
+Mov_Esocial_Retorno_Fgts
+
+Revisão 60 (documento 252; Q252-2, Q252-5, Q252-9 e Q252-10; D-N696, D-N701, D-N702 e D-N705; R14, R15, R17 e R18): **O retorno do eSocial do FGTS.** Um registro por retorno recebido: o **S-5003** (por trabalhador, estabelecimento e lotação, depois de cada evento de remuneração ou desligamento, sem depender do fechamento) ou o **S-5013** (consolidado do período, depois do fechamento, S-1299). Segue o padrão do `Mov_Esocial_Retorno`: o retorno novo da mesma chave **substitui** o anterior (`Situacao_Vigencia`), sem apagá-lo. Guarda o **XML inteiro** como recebido e a comparação com a provisão da folha; as linhas por tipo de valor ficam em `Mov_Esocial_Retorno_Fgts_Valor`. O retorno volta à folha pelo evento enviado (`ID_Evento_Esocial`, `Mov_Esocial_Evento.Origem_Tipo` = `mov_rh_folha_apuracao`), e vem por download (R17) ou por importação do XML ou do CSV da folha externa (R15). **O eSocial não informa o vencimento** no FGTS Digital: o `dtVenc` só vale para período anterior a ele (`Data_Vencimento_Fgts`).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Retorno_Fgts** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | O empregador (matriz) |
+| **ID_Tipo_Evento** | *referência (Cad_Classe_Sistema, domínio = tipo_evento_esocial)* | S-5003 ou S-5013 (dois valores novos do domínio, que é aberto: a Mlegate só cadastra o valor, não cria tabela). |
+| **Periodo_Apuracao** | *competência* | PerApur |
+| **Indicador_Apuracao** | *enumeração {mensal, anual}* | O `indApuracao` do evento: mensal (competência AAAA-MM) ou anual (ano AAAA). |
+| **Existencia_Informacao** | *enumeração {com_informacao, movimento_sem_fgts, sem_movimento}, opcional* | O `indExistInfo`, **só no S-5013**: com informação, movimento sem FGTS ou sem movimento. Vazio no S-5003. |
+| **ID_Vinculo** | *referência (Cad_Vinculo_Emprego), opcional* | Só no S-5003 (um por contrato); vazio no S-5013 |
+| **ID_Estabelecimento_Esocial** | *referência (Cad_Rh_Estabelecimento_Esocial), opcional* | O estabelecimento do S-5003; vazio no S-5013 consolidado |
+| **Numero_Recibo_Base** | *texto (60), opcional* | O recibo do evento de origem (`nrRecArqBase`), como veio. Vazio só quando o retorno veio de **CSV sem recibo** (folha externa, R15 e R20). |
+| **ID_Evento_Esocial** | *referência (Mov_Esocial_Evento), opcional* | O evento enviado que originou o retorno, achado pelo recibo |
+| **Situacao_Vigencia** | *enumeração {vigente, substituido}* | Substituido quando chega retorno posterior da mesma chave |
+| **ID_Retorno_Anterior** | *referência (Mov_Esocial_Retorno_Fgts), opcional* | Autorreferência: o retorno que este substitui (o anterior fica `substituido`, nunca é apagado). |
+| **Valor_Base_Fgts** | *número* | Base de cálculo do FGTS informada pelo eSocial |
+| **Valor_Deposito_Fgts** | *número* | O depósito (FGTS devido) informado pelo eSocial |
+| **Data_Vencimento_Fgts** | *data, opcional* | O dtVenc do S-5003, que o eSocial só informa para períodos anteriores ao FGTS Digital (dia 7); vazio nos demais e no S-5013 (versão 4; o vencimento vem do parâmetro e da guia) |
+| **Valor_Provisao_Folha** | *número, opcional* | A provisão de FGTS que a folha lançou para a mesma chave. Calculada na conciliação, não digitada |
+| **Valor_Diferenca_Provisao** | *número, opcional* | O valor oficial menos a provisão; acima da tolerância marca o retorno como divergente |
+| **Origem_Recebimento** | *enumeração {consulta_webservice, importacao_manual, importacao_csv}* | Como o retorno chegou (igual ao `Mov_Esocial_Retorno`): `consulta_webservice` (download por ID, R17); `importacao_manual` (XML importado); `importacao_csv` (CSV derivado do S-5003 da folha externa, seção 3.8 do documento 252). |
+| **ID_Lote_Folha_Externa** | *referência (Mov_Rh_Folha_Externa_Lote), opcional* | De qual lote importado o retorno veio (folha processada fora do ERP, R15). Vazio quando o retorno veio da folha do ERP. |
+| **Data_Hora_Recebimento** | *data/hora* | --- |
+| **Xml_Retorno** | *texto* | O retorno inteiro, como recebido (as bases por categoria e por lotação ficam aqui, e não em colunas) |
+| **Situacao_Conciliacao** | *enumeração {nao_conferido, conferido, divergente}* | Resultado da comparação com a folha |
+| **Data_Hora_Conciliacao** | *data/hora, opcional* | --- |
+
+Mov_Esocial_Retorno_Fgts_Valor
+
+Revisão 60 (documento 252; Q252-9; D-N702; R18): **O retorno do FGTS por tipo de valor.** Uma linha por **estabelecimento, lotação, tipo de valor, incidência e período anterior** do retorno: sem este detalhe o ERP só conferiria o total e não saberia dizer **qual débito** da guia diverge (mensal, 13º ou rescisório). A conferência é por `Categoria_Valor` contra a provisão e contra os débitos da guia (R18); o cabeçalho (`Valor_Base_Fgts`, `Valor_Deposito_Fgts`) é a soma das linhas.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Retorno_Fgts_Valor** | *identificador* | --- |
+| **ID_Retorno_Fgts** | *referência (Mov_Esocial_Retorno_Fgts)* | O retorno (S-5003 ou S-5013) a que a linha pertence. |
+| **ID_Estabelecimento_Esocial** | *referência (Cad_Rh_Estabelecimento_Esocial), opcional* | O estabelecimento (`ideEstab`) da linha. |
+| **Codigo_Lotacao** | *texto (30), opcional* | A lotação tributária (`codLotacao`) da linha. |
+| **Codigo_Tipo_Valor** | *número* | O `tpValor` (ou `tpValorE`, no período anterior) da Tabela 23 do eSocial: 11 e 15 mensal; 12 e 16 13º; 21 e 27 mês da rescisão; 22 e 28 13º rescisório; 23 e 29 aviso prévio; 13, 14, 17, 18, 24, 25, 26, 30, 31 e 32 períodos anteriores; 41 a 50 indenização do empregado doméstico; 19 avulso não portuário (só no S-5013). |
+| **Categoria_Valor** | *enumeração {mensal, decimo_terceiro, rescisao, decimo_terceiro_rescisorio, aviso_previo_indenizado, indenizacao_domestico, avulso_nao_portuario}* | Calculada do código (`Codigo_Tipo_Valor`); é por ela que o ERP compara o retorno com a provisão e com cada débito da guia (R18). |
+| **Periodo_Anterior** | *booleano* | Verdadeiro quando a linha vem de `infoBasePerAntE` (período anterior; `tpAcConv` E, H ou I). |
+| **Periodo_Referencia** | *competência, opcional* | O `perRef` (AAAA-MM) a que a remuneração do período anterior se refere. Vazio fora do período anterior. |
+| **Tipo_Instrumento_Periodo_Anterior** | *enumeração {conversao_licenca_acidente, base_anterior_fgts_digital, sentenca_judicial}, opcional* | O `tpAcConv` do período anterior: E conversão de licença-saúde em acidente, H base anterior ao FGTS Digital, I sentença judicial. |
+| **Indicativo_Incidencia** | *enumeração {normal, suspensa_decisao_judicial}* | O `indIncid`: 1 incidência normal, 9 suspensa por decisão judicial. |
+| **Valor_Base** | *número* | A remuneração-base de cálculo do FGTS (`remFGTS`, `remFGTSE` ou `baseFGTS`). |
+| **Valor_Deposito** | *número* | O depósito (`dpsFGTS`, `dpsFGTSE` ou `vrFGTS`); **zero** quando o XML não traz o valor. É o que forma o título (R20). |
+
+32.2. FGTS: guia do FGTS Digital e os débitos que ela agrupa (documento 252)
+
+Mov_Fgts_Guia
+
+Revisão 60 (documento 252; Q250-46, Q252-2 e Q252-7; D-N692, D-N696 e D-N697; R2, R3, R5 e R16): **A guia do FGTS Digital.** A Guia Rápida (mensal, rescisória, consignado e mista) e a Guia Parametrizada saem do portal; **não há API** (manual 1.70), então a guia entra por **importação do relatório (CSV)** ou por **digitação conferida**. Traz o **vencimento oficial** (manda sobre o parâmetro, R3), o valor com atualização e o **Pix copia e cola**, que o motor bancário paga (documento 250). A guia se liga ao título que a folha entregou ao contas a pagar (R16) e agrupa débitos (`Mov_Fgts_Guia_Debito`); não admite pagamento parcial do que agrupa. Chave de negócio: `ID_Empresa` e `Numero_Guia` (R2). Guia refeita marca a anterior `substituida` e bloqueia o pagamento dela (R5).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Fgts_Guia** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | --- |
+| **Tipo_Guia** | *enumeração {rapida_mensal, rapida_rescisoria, rapida_consignado, rapida_mista, parametrizada}* | O tipo que o FGTS Digital emitiu |
+| **Numero_Guia** | *texto (40)* | O número da guia, como veio; único por empresa (R2) |
+| **Data_Hora_Emissao** | *data/hora* | --- |
+| **Data_Vencimento** | *data* | O vencimento da guia (manda sobre o parâmetro, R3) |
+| **Valor_Total** | *número* | O valor integral a pagar |
+| **Valor_Atualizacao_Mora** | *número, opcional* | A parte de atualização, multa e juros de mora, quando a guia é paga em atraso (a contabilização depende do contador, seção 7) |
+| **Pix_Copia_E_Cola** | *texto* | O Pix copia e cola da guia (ou o texto do QR Code); é o que o motor bancário paga (R89 e R100) |
+| **Url_Payload_Pix** | *texto, opcional* | O endereço do payload, quando a guia traz |
+| **Situacao_Guia** | *enumeração {emitida, paga, vencida, substituida, cancelada}* | Substituida quando a guia foi refeita (por exemplo, desligamento com saque entre os dias 1 e 9): o ERP não paga a guia substituída (R5) |
+| **ID_Fgts_Guia_Substituida** | *referência (Mov_Fgts_Guia), opcional* | Autorreferência: a guia que esta refez (a anterior fica `substituida` e o pagamento dela é bloqueado, R5). |
+| **Origem_Importacao** | *enumeração {relatorio_csv, digitacao}* | Como a guia entrou no ERP (não há API, seção 1) |
+| **ID_Remessa_Bancaria_Item** | *referência (Mov_Remessa_Bancaria_Item), opcional* | O item de Pix que pagou a guia |
+| **Situacao_Conciliacao** | *enumeração {nao_conferido, conferido, divergente}* | Guia contra retorno do eSocial, provisão e pago |
+| **Data_Hora_Importacao** | *data/hora* | Quando a guia entrou no ERP |
+
+Mov_Fgts_Guia_Debito
+
+Revisão 60 (documento 252; Q252-7; D-N697; R16 e R18): **Os débitos que a guia agrupa.** Uma linha por débito: mensal, 13º, rescisório, indenização compensatória (a multa de 40%), consignado ou outro, com a competência, o colaborador (nos débitos rescisórios) e o valor. É a linha que se liga ao **título** (`ID_Titulo`) e ao **retorno do eSocial** (`ID_Retorno_Fgts`) que a sustenta, e onde a conferência por categoria (R18) aponta a divergência. `Situacao_Multa` reproduz como o FGTS Digital marca a multa (completo, incompleto ou saldo rescisório).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Fgts_Guia_Debito** | *identificador* | --- |
+| **ID_Fgts_Guia** | *referência (Mov_Fgts_Guia)* | --- |
+| **Tipo_Debito** | *enumeração {mensal, decimo_terceiro, rescisorio, indenizacao_compensatoria, consignado, outro}* | A natureza do débito agrupado |
+| **Competencia** | *competência, opcional* | Vazio na multa rescisória sem competência |
+| **ID_Vinculo** | *referência (Cad_Vinculo_Emprego), opcional* | O colaborador, nos débitos rescisórios e na multa; vazio no mensal consolidado |
+| **Valor_Debito** | *número* | O valor do débito dentro da guia |
+| **Situacao_Multa** | *enumeração {completo, incompleto, saldo_rescisorio}, opcional* | Só em indenizacao_compensatoria: como o FGTS Digital marca a multa (completa, incompleta ou saldo rescisório, conforme o método) |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título do FGTS ao qual este débito se liga (seção 3.1 e R16) |
+| **ID_Retorno_Fgts** | *referência (Mov_Esocial_Retorno_Fgts), opcional* | O retorno do eSocial que sustenta o débito, quando houver |
+
+32.3. FGTS: histórico de remunerações e arquivo do Anexo I (documento 252)
+
+Mov_Rh_Fgts_Historico_Remuneracao
+
+Revisão 60 (documento 252; Q252-3; D-N697, D-N703; R9 e R19): **O histórico de remunerações do FGTS por competência.** Para os admitidos **antes de 03/2024** com desligamento, o FGTS Digital só calcula a multa se o empregador informar **todas as remunerações** (Método 1, o padrão) ou a base rescisória (Método 2, exceção). Esta tabela guarda a remuneração de cada competência de cada vínculo, vinda da folha do ERP (`folha_erp`), da **migração do sistema anterior** (`migracao`, desde a contratação, R19) ou de digitação. Só competências anteriores a 03/2024 vão ao Anexo I; a conferência da migração (sem buraco de competência) acontece antes do primeiro envio.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Historico_Remuneracao** | *identificador* | --- |
+| **ID_Vinculo** | *referência (Cad_Vinculo_Emprego)* | --- |
+| **Competencia** | *competência* | Só anteriores a 03/2024 vão ao Anexo I |
+| **Valor_Remuneracao_Fgts** | *número* | A remuneração da competência, na moeda vigente nela (URV de março a junho de 1994) |
+| **Origem_Historico** | *enumeração {folha_erp, migracao, digitacao}* | Folha_erp: tirada da folha do ERP; migracao: do sistema anterior; digitacao: lançada à mão |
+| **ID_Apuracao** | *referência (Mov_Rh_Folha_Apuracao), opcional* | A apuração de origem, quando folha_erp |
+| **ID_Arquivo_Historico** | *referência (Mov_Rh_Fgts_Arquivo_Historico), opcional* | O arquivo do Anexo I em que a linha foi enviada |
+
+Mov_Rh_Fgts_Arquivo_Historico
+
+Revisão 60 (documento 252; Q252-3 e Q252-6; D-N697; R9 e R13): **O arquivo do Anexo I (versão 1.2, de 03/10/2025) gerado para o FGTS Digital.** TXT ou CSV com ponto e vírgula, **até 5.000 linhas ou 130 KB**, linha tipo 1 (trabalhador) e tipo 2 (remuneração por competência). Guarda o conteúdo gerado para reenviar e a situação (o usuário marca o envio ao portal; não há API). **Um erro em qualquer trabalhador rejeita o arquivo inteiro**, e o motivo devolvido fica em `Mensagem_Rejeicao`.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Arquivo_Historico** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | --- |
+| **Data_Hora_Geracao** | *data/hora* | --- |
+| **Quantidade_Trabalhadores** | *número* | Linhas tipo 1 |
+| **Quantidade_Linhas** | *número* | Todas as linhas (limite de 5.000) |
+| **Tamanho_Bytes** | *número* | Limite de 130 KB |
+| **Conteudo_Arquivo** | *texto* | O arquivo gerado, para reenviar |
+| **Situacao_Arquivo** | *enumeração {gerado, enviado_ao_portal, aceito, rejeitado}* | O usuário marca o envio ao portal (não há API) |
+| **Mensagem_Rejeicao** | *texto, opcional* | O motivo que o portal devolveu |
+
+32.4. FGTS: rescisão, método da multa, base da Caixa e multa estimada contra a oficial (documento 252)
+
+Mov_Rh_Fgts_Rescisao
+
+Revisão 60 (documento 252; Q252-3 e Q252-4; D-N697 e D-N703; R9, R10, R11 e R19): **A rescisão do FGTS.** Um registro por **desligamento**: junta o **método da multa** (automático, histórico ou base pedida à Caixa), o que o RH pediu à Caixa, a **multa estimada pelo ERP** (`Percentual_Multa_Fgts` do motivo do desligamento, sempre rotulada **estimativa**, R11) e a **multa oficial** do FGTS Digital, trazida pela guia, com a conferência entre as duas. Para os admitidos a partir de 03/2024 o método é automático; para os anteriores, o Método 1 (histórico) é o padrão e o Método 2 só entra se faltar competência (R19).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Fgts_Rescisao** | *identificador* | --- |
+| **ID_Vinculo** | *referência (Cad_Vinculo_Emprego)* | O contrato desligado; um registro por desligamento |
+| **Metodo_Multa** | *enumeração {automatico, metodo_1_historico, metodo_2_base_caixa}* | Pela data de admissão e pelo histórico (tabela acima) |
+| **Valor_Base_Rescisoria_Caixa** | *número, opcional* | Método 2: a base integral pedida à Caixa; não pode ser menor que o FGTS devido atualizado desde 03/2024 (validação) |
+| **Data_Base_Rescisoria** | *data, opcional* | A data a que a base se refere |
+| **Data_Pedido_Caixa** | *data, opcional* | Quando o RH pediu |
+| **Referencia_Pedido_Caixa** | *texto (200), opcional* | Protocolo, e-mail ou nome do arquivo recebido |
+| **ID_Arquivo_Historico** | *referência (Mov_Rh_Fgts_Arquivo_Historico), opcional* | Método 1: o arquivo em que o histórico do contrato foi enviado |
+| **Valor_Multa_Estimada** | *número, opcional* | A estimativa do ERP (Percentual_Multa_Fgts do motivo do desligamento); sempre rotulada estimativa |
+| **Valor_Multa_Fgts_Digital** | *número, opcional* | A multa oficial, quando a guia traz |
+| **ID_Fgts_Guia_Debito** | *referência (Mov_Fgts_Guia_Debito), opcional* | O débito de indenização compensatória que a guia trouxe |
+| **Situacao_Conferencia** | *enumeração {nao_conferido, conferido, divergente}* | Estimativa contra multa oficial |
+| **Data_Hora_Conferencia** | *data/hora, opcional* | --- |
+
+32.5. Folha processada fora do ERP: lote importado (XML do S-5003 ou CSV derivado) e ocorrências (documento 252)
+
+Mov_Rh_Folha_Externa_Lote
+
+Revisão 60 (documento 252; Q252-2, Q252-8 e Q252-10; D-N696, D-N704 e D-N705; R15 e R20): **O lote importado da folha processada fora do ERP.** Quando a folha é feita fora, o ERP **não envia** o eSocial, mas **recebe o retorno por importação**: o **XML do S-5003** que a folha externa recebeu ou, sem o XML, um **CSV com 14 colunas derivadas do esquema do S-5003** (seção 3.8 do documento 252). Cada arquivo é um lote: guarda o **hash** (o mesmo arquivo não entra duas vezes), os totais, o usuário e a situação. A conferência é **tudo ou nada** (R20): com ocorrência nada vira retorno nem título; sem ocorrência e confirmado, o ERP grava os retornos (`Mov_Esocial_Retorno_Fgts`, com `ID_Lote_Folha_Externa`) e gera **um título `fgts` por empresa e competência** com a soma de `Valor_Deposito` (`Mov_Titulo.Origem_Tipo` = `folha_externa`). Nesse modo não há provisão da folha do ERP: a conferência é retorno contra guia (R16 e R18).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lote_Folha_Externa** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa)* | O empregador (matriz), achado pela raiz do CNPJ do arquivo. |
+| **Competencia** | *competência* | A competência escolhida na importação; o arquivo tem de bater com ela (R20). |
+| **Formato_Arquivo** | *enumeração {xml_s5003, csv_leiaute_s5003}* | `xml_s5003`: XML do eSocial (um por trabalhador, ou pasta compactada); `csv_leiaute_s5003`: CSV de 14 colunas derivado do esquema do S-5003 (seção 3.8 do documento 252). |
+| **Nome_Arquivo** | *texto (200)* | O nome do arquivo (ou da pasta compactada) importado. |
+| **Hash_Arquivo** | *texto (64)* | O SHA-256 do arquivo; o mesmo hash já importado e não cancelado **barra** a importação (R20 a). |
+| **Quantidade_Registros** | *número* | Linhas do CSV ou eventos do XML lidos. |
+| **Valor_Total_Base** | *número* | Soma de `Valor_Base` do lote. |
+| **Valor_Total_Deposito** | *número* | Soma de `Valor_Deposito` do lote: o valor do título do FGTS (R20 d). |
+| **Situacao** | *enumeração {importado, com_ocorrencia, conferido, titulo_gerado, cancelado}* | `com_ocorrencia`: nada vira retorno nem título (tudo ou nada, R20 c); `conferido`: sem ocorrência, esperando a confirmação do usuário; `titulo_gerado`: o título nasceu e o `ID_Titulo` está preenchido. |
+| **ID_Titulo** | *referência (Mov_Titulo), opcional* | O título do FGTS que nasceu do lote (`Origem_Tipo` = `folha_externa`). Vazio até o lote ser confirmado. |
+| **ID_Usuario_Importacao** | *referência (Cad_Usuario)* | Quem importou o arquivo (perfil do Financeiro, R13). |
+| **Data_Hora_Importacao** | *data/hora* | Quando o arquivo entrou no ERP. |
+| **Data_Hora_Conferencia** | *data/hora, opcional* | Quando a conferência terminou sem ocorrência. |
+
+Mov_Rh_Folha_Externa_Lote_Ocorrencia
+
+Revisão 60 (documento 252; Q252-10; D-N705; R20): **As ocorrências da conferência do lote importado.** Uma linha por problema (hash já importado, empresa ou competência divergentes, CPF sem vínculo, vínculo ambíguo, `tpValor` inválido, valor inválido, chave repetida, estabelecimento desconhecido ou XML fora do esquema), com a linha e o campo, para o usuário corrigir o arquivo e importar de novo, ou tratar a ocorrência pela R7 (nunca ajuste silencioso).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Lote_Ocorrencia** | *identificador* | --- |
+| **ID_Lote_Folha_Externa** | *referência (Mov_Rh_Folha_Externa_Lote)* | O lote em que o problema foi achado. |
+| **Numero_Linha** | *número, opcional* | A linha do CSV; no XML, a ordem do arquivo dentro do lote. |
+| **Codigo_Ocorrencia** | *enumeração {arquivo_duplicado, empresa_divergente, competencia_divergente, cpf_nao_encontrado, vinculo_ambiguo, tipo_valor_invalido, valor_invalido, chave_repetida, estabelecimento_nao_encontrado, xml_fora_do_esquema}* | O tipo do problema (R20 b): hash já importado, empresa ou competência diferentes da escolhida, CPF sem vínculo na competência, mais de um vínculo sem matrícula, `tpValor` fora da lista, valor negativo ou ausente, chave repetida no arquivo, estabelecimento desconhecido ou XML que não confere com o esquema S-1.3. |
+| **Nome_Campo** | *texto (60), opcional* | A coluna do CSV (ou a tag do XML) em que o problema está. |
+| **Valor_Informado** | *texto (100), opcional* | O valor que veio no arquivo. |
+| **Mensagem** | *texto (255)* | O texto da ocorrência, para o usuário corrigir o arquivo. |
+| **Situacao_Tratamento** | *enumeração {aberta, tratada}* | `aberta` enquanto o problema não foi corrigido ou tratado; o tratamento segue a R7 do documento 252 (nunca ajuste silencioso). |

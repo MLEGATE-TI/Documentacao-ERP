@@ -4,6 +4,8 @@
 
 *Estrutura de produto, ordem de produção, áreas e drivers de custo, apuração de custo por rateio, terceirização/industrialização por encomenda e assistência técnica sobre máquinas próprias*
 
+*Revisão 17 --- consolidação da revisão 57 do dicionário (documento 251, versão 5 (D-N640, D-N661 e D-N662: estoque proativo, com a fila de produção, aprovado por Alberto)): 1 entidades novas (anexo, seção 14); 1 entidades existentes alteradas; a fila de produção (`Mov_Ordem_Producao_Fila`) e 2 campos de substituição de componente em `Mov_Ordem_Producao_Item` (documento 251).*
+
 *Revisão 16 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 1 entidades existentes alteradas; o texto da seção 8.2 sobre o material de terceiros corrigido e a saída física do componente do encomendante no item da ordem (documento 168, G10).*
 
 *Revisão 15 --- consolidação da revisão 3 do dicionário (documentos 33 a 46, aprovada por Alberto em 12/10/2026): 6 entidades novas (anexo, seção 13); 3 entidades existentes alteradas. O dicionário passa de 543 para 829 entidades, construída junto com a Fase 0 e os demais módulos alterados.*
@@ -469,8 +471,12 @@ Um componente desta ordem — o que a estrutura previa (ou o que foi digitado, s
 | **ID_Nota_Fiscal_Entrada_Item_Retorno** | *referência (Mov_Nota_Fiscal_Entrada_Item, Fase 1 — Compras, opcional)* | A nota de retorno (mercadoria industrializada) e/ou a nota de serviço de industrialização, quando Terceirizado=verdadeiro (seção 8.1). |
 | **ID_Nota_Fiscal_Entrada_Item_Origem_Terceiro** | *referência (Mov_Nota_Fiscal_Entrada_Item, Fase 1 — Compras, opcional)* | NOVO nesta revisão, sentido inverso do anterior — preenchido quando Mov_Ordem_Producao.Tipo_Ordem=industrializacao_terceiro e este componente é o material recebido do encomendante: a origem passa a ser esta nota, não um Mov_Estoque_Movimento (seção 8.2), porque a Mlegate nunca é dona desse material. |
 | **Data_Consumo_Terceiro** | *data, opcional* | Revisão 30 (documento 168, seção 3.10, G10; D-N460 e D-N461): DT_CONS do K255: data em que o terceiro consumiu o insumo da Mlegate. Obrigatório (aviso) quando Terceirizado é verdadeiro. |
+| **ID_Produto_Servico_Componente_Estrutura** | *referência (Cad_Produto_Servico), opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): O componente que a estrutura mestre previa, preenchido só quando houve troca na OP (substituição, Q251-7). ID_Produto_Servico_Componente passa a ser, sem ambiguidade, o que **de fato foi usado**; a estrutura mestre (Cad_Estrutura_Producao_Item) não muda: a troca é um desvio da OP, destacado no painel de Produção. |
+| **Motivo_Substituicao** | *texto, opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): Por que o componente foi trocado (por exemplo, falta do previsto); preenchido junto com ID_Produto_Servico_Componente_Estrutura. |
 
 *Revisão 30 --- campos novos: Data_Consumo_Terceiro; campos alterados: ID_Movimento_Estoque_Item_Saida.*
+
+*Revisão 57 --- campos novos: ID_Produto_Servico_Componente_Estrutura, Motivo_Substituicao.*
 
 Mov_Ordem_Producao_Subproduto
 
@@ -491,6 +497,8 @@ NOVO na Revisão 3 — o subproduto físico realmente gerado nesta ordem, espelh
 | **Eh_Coproduto** | *booleano* | Novo na revisão 3 (documento 37). Verdadeiro quando o item é coproduto (K290/K291, K300/K301); falso é subproduto, que vai nos K230/K250 e fora da produção conjunta. |
 
 *Revisão 3 --- campos novos (documento 37): Eh_Coproduto.*
+
+*Revisão 57 (documento 251): a OP entra na **fila de produção** (`Mov_Ordem_Producao_Fila`, anexo) quando é aberta, e a entrada empenha todos os componentes; se faltar produto para iniciar uma etapa, o ERP avisa o operador antes de ele começar.*
 
 *Comportamento de aplicação — liberação de material (não são campos novos): quando a ordem usa fases (existe ao menos um Mov_Ordem_Producao_Fase associado à OP), abrir a ordem NÃO dispara mais, de uma vez, a saída de todos os componentes — em vez disso, cada fase só pode passar para em_andamento (Data_Inicio_Real preenchida) quando TODAS as suas predecessoras declaradas em Mov_Ordem_Producao_Fase_Precedencia (acima) estiverem com Status=concluida — cobre tanto a sequência simples (uma predecessora cada) quanto convergência (mais de uma predecessora, só libera quando todas terminarem) e paralelismo (uma fase que alimenta mais de uma sucessora libera vários caminhos ao mesmo tempo). Quando uma fase não tem nenhuma predecessora declarada, o início não fica travado por este mecanismo — cai no comportamento mais simples, com Ordem_Sequencia como sugestão de ordem, sem travar. Ao iniciar, cada fase dispara a saída física (mesmo mecanismo de Mov_Estoque_Movimento descrito abaixo) só dos Mov_Ordem_Producao_Item cujo ID_Fase_OP aponta para aquela fase — fechando o pedido de Alberto de que a matéria-prima fique disponível por fase, por organização de fábrica, não tudo de uma vez ao lado da máquina desde o início. Quando a ordem NÃO usa fases (nenhum Mov_Ordem_Producao_Fase associado — caso degenerado, compatível com o comportamento de toda ordem já aberta antes desta revisão), a liberação de material da Revisão 1 se mantém integralmente: abrir a ordem libera todos os componentes de uma vez. A conclusão da ordem (Status=em_producao → concluida) continua dependendo só do cabeçalho, não exige que todas as fases estejam com Status=concluida — a fase é informativa/Gantt, não uma trava de fechamento (ver Notas).*
 
@@ -883,3 +891,31 @@ Insumo consumido ou retornado num reprocesso (K265): item diferente do reprocess
 | **Quantidade_Consumida** | *número, opcional* | QTD_CONS: quantidade consumida; ao menos uma das duas quantidades é preenchida. |
 | **Quantidade_Retornada** | *número, opcional* | QTD_RET: quantidade que retorna ao estoque; ao menos uma das duas quantidades é preenchida. |
 | **ID_Movimento_Estoque_Item** | *referência (Mov_Estoque_Movimento_Item, opcional)* | Movimento de estoque do consumo ou do retorno. |
+
+
+
+14\. Anexo --- Documento 251: fila de produção (entidade nova da revisão 57)
+
+Revisão 57 do dicionário (consolidação de 23/11/2026): 1 entidade nova neste módulo, do documento 251 (versão 5; D-N661 e D-N662): a **fila de produção** da filial. A OP entra no fim da fila quando é aberta e a entrada gera o empenho de todos os componentes (`Mov_Estoque_Reserva`, módulo 05); a posição na fila decide quem recebe o material quando falta. A OP também ganha 2 campos de substituição de componente (`Mov_Ordem_Producao_Item`).
+
+14.1. Fila de produção: a ordem das OPs na filial, que decide o empenho e a prioridade do material (documento 251)
+
+Mov_Ordem_Producao_Fila
+
+Revisão 57 (documento 251; D-N640, D-N661 e D-N662): **A fila de produção.** O dicionário não tinha fila de produção: a OP tem só Status e as fases têm Ordem_Sequencia, que é a ordem das fases dentro de uma OP. A OP entra **automaticamente no fim da fila da filial quando é aberta** (Q251-8 a) e **nesse momento todos os componentes dela ficam empenhados** (Mov_Estoque_Reserva, R4). Uma fila por filial (Q251-8 b); o perfil de produção troca a ordem, com motivo opcional, e o ERP guarda quem trocou e quando, só a última troca nesta fase (Q251-8 c e d). A posição decide a prioridade dentro da produção (R11). Não há agendamento automático por capacidade: a ordem é a do operador.
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Fila_Producao** | *identificador* | --- |
+| **ID_OP** | *referência (Mov_Ordem_Producao)* | A OP. No máximo uma linha ativa (na_fila ou em_producao) por OP (R16). |
+| **ID_Filial** | *referência (Cad_Filial)* | A fila a que a OP pertence: uma fila por filial. |
+| **Posicao** | *número* | 1 é a próxima a ser produzida. Única por fila; a troca da ordem recalcula as posições das demais e a cobertura dos empenhos (R16 e R17). |
+| **Situacao_Fila** | *enumeração {na_fila, em_producao, encerrada}* | na_fila empenha; em_producao quando a primeira fase começa; encerrada se a OP é concluída ou cancelada. |
+| **Data_Hora_Entrada** | *data/hora* | Quando a OP entrou na fila (nasce o empenho). |
+| **Data_Hora_Saida** | *data/hora, opcional* | Quando saiu da fila. |
+| **Motivo_Saida** | *texto, opcional* | Por exemplo, "OP cancelada". |
+| **ID_Usuario_Ultima_Reordenacao** | *referência (Cad_Usuario), opcional* | Quem trocou a ordem por último. |
+| **Data_Hora_Ultima_Reordenacao** | *data/hora, opcional* | Quando. |
+| **Motivo_Reordenacao** | *texto, opcional* | Por que o operador trocou (opcional, Q251-8 c). |

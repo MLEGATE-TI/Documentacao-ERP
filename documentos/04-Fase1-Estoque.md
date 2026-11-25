@@ -5,6 +5,8 @@
 *Locais de estoque, tipos de movimento parametrizáveis, movimentação,
 posição física, custo médio (diário/mensal) e inventário*
 
+*Revisão 19 --- consolidação da revisão 57 do dicionário (documento 251, versão 5 (D-N640, D-N661 e D-N662: estoque proativo, com a fila de produção, aprovado por Alberto)): 2 entidades novas (anexo, seção 18); o estoque proativo: política de reposição (`Cad_Estoque_Politica_Reposicao`) e sugestão de reposição (`Mov_Estoque_Sugestao`), com o disponível sempre derivado, FEFO e FIFO por produto e compra automática só em rascunho (documento 251).*
+
 *Revisão 18 --- consolidação da revisão 32 do dicionário (documentos 172, 175 e 176, com as respostas de Alberto de 05/11/2026): 2 entidades existentes alteradas; texto e conta contábil do item do inventário (H010) e os quatro motivos novos da reclassificação do K220 (documentos 175 e 176).*
 
 *Revisão 17 --- consolidação da revisão 30 do dicionário (documentos 156, 161, 164 e 168 e a Q138-3, com as respostas de Alberto de 03/11/2026): 3 entidades existentes alteradas; material de terceiros sem valor: Propriedade_Movimento no tipo de movimento, Propriedade e participante proprietário no movimento e no saldo (documento 168, G10; Q168-2).*
@@ -1414,6 +1416,8 @@ está travada.
     participa só das bordas (saída para produção, entrada de produto
     acabado).
 
+-   **Revisão 57 (documento 251):** a reserva passa a ser também **empenho de produção**, na mesma tabela `Mov_Estoque_Reserva` (módulo 05), e o **disponível** continua derivado: físico na condição "disponível" menos as reservas ativas (venda e empenho). Estoque mínimo, segurança, sugestão de reposição, FEFO e FIFO entram na seção do anexo desta revisão.
+
 -   Reserva de estoque para pedido de venda (evitar vender o que já está
     comprometido por outro pedido) continua fora deste módulo --- o
     módulo de CRM & Vendas, agora especificado, modela a reserva como um
@@ -1679,3 +1683,68 @@ Reclassificação de item em estoque, quando o código muda por pedido do client
 | **ID_Movimento_Estoque_Item_Entrada** | *referência (Mov_Estoque_Movimento_Item, opcional)* | Entrada do item de destino. |
 
 *Revisão 32 --- valores de enumeração novos: Motivo_Reclassificacao (+deterioracao, obsolescencia_reaproveitamento, estoque_por_cliente, aglutinacao_insumo).*
+
+
+
+18\. Anexo --- Documento 251: estoque proativo (entidades novas da revisão 57)
+
+Revisão 57 do dicionário (consolidação de 23/11/2026, "consolidar" de Alberto): 2 entidades novas neste módulo, do documento 251 (versão 5; D-N640, D-N661 e D-N662): a **política de reposição** por produto (com vigência) e a **sugestão de reposição**. O **disponível continua sempre derivado** (físico na condição "disponível" menos as reservas ativas); reserva de venda e empenho de produção são a mesma tabela (`Mov_Estoque_Reserva`, módulo 05), com duas origens; a ordem de atendimento é venda, depois produção (pela posição na fila), depois as demais áreas (R11). Compra automática só em **rascunho**, dentro da régua de aprovação. Os avisos usam o domínio aberto `tipo_notificacao_sistema`, com 5 valores novos (dados, não estrutura).
+
+18.1. Estoque proativo: política de reposição por produto e sugestão de reposição (documento 251)
+
+Cad_Estoque_Politica_Reposicao
+
+Revisão 57 (documento 251; D-N640, D-N661 e D-N662): **A política de reposição por produto.** Um registro por produto e filial (e, se quiser, por local), com a história de cada mudança de parâmetro. Quem **não** tem política não gera sugestão nem aviso de mínimo: o estoque proativo é opt-in por produto (R15). A mudança de mínimo fica registrada, e as sugestões antigas continuam apontando para a política vigente na época (R14).
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Politica_Reposicao** | *identificador* | --- |
+| **ID_Politica_Reposicao_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Estoque_Politica_Reposicao_Versao). ID_Politica_Reposicao é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico)* | O produto (só produtos de estoque). |
+| **ID_Filial** | *referência (Cad_Filial)* | A filial a que a política vale. |
+| **ID_Local_Estoque** | *referência (Cad_Local_Estoque), opcional* | Vazio = soma dos locais "disponíveis" da filial. |
+| **Estoque_Minimo** | *número, opcional* | O ponto de pedido: abaixo dele (já contado o "a receber"), o ERP propõe repor (R5). |
+| **Estoque_Seguranca** | *número, opcional* | O colchão: abaixo dele (só com o físico disponível) o aviso é crítico (R5). |
+| **Estoque_Maximo** | *número, opcional* | O teto da reposição; a quantidade sugerida chega até ele, quando houver (R6). |
+| **Lote_Minimo_Reposicao** | *número, opcional* | Arredondamento da quantidade proposta: nunca abaixo deste lote (R6). |
+| **Multiplo_Reposicao** | *número, opcional* | A quantidade proposta é arredondada para cima a um múltiplo deste valor (R6). |
+| **Lead_Time_Dias** | *número, opcional* | Prazo de reposição informado à mão; se vazio, vale a média real lida do histórico de pedidos e recebimentos (janela de 12 meses, a ajustar) (R7). |
+| **Origem_Reposicao** | *enumeração {compra, producao, transferencia}* | Como o produto é reposto: compra (rascunho de pedido), produção (OP) ou transferência entre filiais (movimento com o local "transito", R13). |
+| **ID_Participante_Fornecedor_Padrao** | *referência (Cad_Participante), opcional* | Fornecedor sugerido no rascunho de compra. |
+| **ID_Filial_Origem_Transferencia** | *referência (Cad_Filial), opcional* | Filial que abastece, quando a origem é transferência. |
+| **Regra_Saida_Lote** | *enumeração {fefo, fifo, manual}* | Como o ERP escolhe o lote ao reservar: FEFO (vence primeiro, sai primeiro) para quem tem validade, FIFO para o resto, manual quando o operador escolhe. |
+| **Dias_Aviso_Validade** | *número, opcional* | Quantos dias antes do vencimento do lote (Cad_Lote_Produto.Data_Validade) o ERP avisa. O ERP avisa; não baixa lote vencido sozinho. |
+| **Modo_Reposicao** | *enumeração {somente_sugerir, gerar_rascunho}* | somente_sugerir: nasce só a sugestão. gerar_rascunho: o ERP também cria o pedido em rascunho (ou a OP em rascunho, ou o movimento de transferência pendente), que só sai pela régua de aprovação (R8). |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
+
+Mov_Estoque_Sugestao
+
+Revisão 57 (documento 251; D-N640, D-N661 e D-N662): **A sugestão de reposição.** O registro do evento: cada vez que o ERP propõe uma reposição, nasce uma linha que guarda por que, quanto, para quando, o que o usuário decidiu e qual documento saiu dali. Nunca é saldo: o disponível é sempre derivado (R1). No máximo uma sugestão pendente por produto, filial e tipo (R9).
+
+*Vigência: não.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Sugestao** | *identificador* | --- |
+| **ID_Politica_Reposicao** | *referência (Cad_Estoque_Politica_Reposicao), opcional* | A política que disparou; vazio quando o gatilho é a falta de material de uma OP. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico)* | O produto a repor. |
+| **ID_Filial** | *referência (Cad_Filial)* | A filial. |
+| **ID_Local_Estoque** | *referência (Cad_Local_Estoque), opcional* | O local, quando a política é por local. |
+| **Tipo_Sugestao** | *enumeração {compra, producao, transferencia}* | O que o ERP propõe fazer. |
+| **Quantidade_Sugerida** | *número* | Já com mínimo, máximo, lote mínimo e múltiplo aplicados (R6). |
+| **Data_Necessidade** | *data* | Quando o material faz falta. |
+| **Data_Limite_Pedido** | *data* | Data de necessidade menos o prazo de reposição: o último dia para pedir (R7). |
+| **Motivo** | *enumeração {abaixo_minimo, abaixo_seguranca, necessidade_producao, necessidade_venda}* | O gatilho da sugestão (R5 e R10). |
+| **Disponivel_No_Calculo** | *número* | O disponível usado na conta, **congelado como evidência do evento**: não é saldo, ninguém lê o disponível daqui; serve para o usuário ver "por que o ERP sugeriu isso" mesmo depois de o saldo mudar. |
+| **A_Receber_No_Calculo** | *número* | O "a receber" (pedidos de compra abertos, OPs abertas e transferências em trânsito) usado na conta, congelado como evidência. |
+| **Status** | *enumeração {pendente, aceita, descartada, expirada}* | Pendente que perde a condição (chegou mercadoria, o saldo subiu) vira expirada sozinha (R9). |
+| **Tipo_Documento_Gerado** | *enumeração {pedido_compra, ordem_producao, movimento_transferencia}, opcional* | O tipo do documento que saiu da sugestão (sempre em rascunho ou pendente, R8). |
+| **ID_Documento_Gerado** | *identificador do registro de origem, opcional* | Referência genérica ao pedido em rascunho, à OP ou ao movimento de transferência, conforme Tipo_Documento_Gerado. |
+| **ID_Usuario_Decisao** | *referência (Cad_Usuario), opcional* | Quem aceitou ou descartou. |
+| **Data_Hora_Decisao** | *data/hora, opcional* | Quando decidiu. |
+| **Motivo_Decisao** | *texto, opcional* | Obrigatório ao descartar (R9). |
+| **Data_Hora_Geracao** | *data/hora* | Quando o ERP gerou a sugestão. |

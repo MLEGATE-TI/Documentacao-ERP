@@ -6,6 +6,8 @@
 pedido de venda com histórico de status por item, reserva de estoque,
 nota fiscal de saída e devolução de cliente*
 
+*Revisão 30 --- consolidação da revisão 57 do dicionário (documento 251, versão 5 (D-N640, D-N661 e D-N662: estoque proativo, com a fila de produção, aprovado por Alberto)): 1 entidades existentes alteradas; `Mov_Estoque_Reserva` passa a cobrir também o empenho de produção: 5 campos novos, `ID_Entrega_Programada` opcional e o status `expirada` (documento 251).*
+
 *Revisão 29 --- consolidação da revisão 54 do dicionário (documento 243 (D-N624 a D-N626: valor aproximado dos tributos, Lei 12.741)): 1 entidades existentes alteradas; Mov_Nota_Fiscal_Saida_Item com Valor_Tributos_Aproximados e Percentual_Tributos_Aproximados (Q243-1 a Q243-3).*
 
 *Revisão 28 --- consolidação da revisão 50 do dicionário (documento 234 (D-N604: Q231-2, o desenho do emitente sem IE, da NA01-20 e 3BA02, do DFeReferenciado na devolução e do fim da denegação do emitente)): 2 entidades existentes alteradas; indicador de emitente exclusivo do IBS/CBS na nota de saída (Q231-2 a), devolução com DFeReferenciado e 3BA02 (Q231-2 b e c).*
@@ -1107,34 +1109,23 @@ própria data, quantidade e local, e cada uma reserva separadamente.
 
 *Vigência: não.*
 
-  --------------------------- --------------------------------------------- -----------------------------------------------------------------
-  **Campo**                   **Tipo lógico**                               **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Reserva** | *identificador* | --- |
+| **ID_Entrega_Programada** | *referência (Mov_Pedido_Venda_Item_Entrega_Programada), opcional* | Adicionado nesta revisão, substituindo a referência direta a Mov_Pedido_Venda_Item da Revisão 1 --- permite refletir a divisão por data/quantidade/local pedida por Alberto (seção 5). Revisão 57 (documento 251; D-N640, D-N661 e D-N662): o campo passa a ser **opcional**, porque a reserva de produção (empenho) não tem entrega programada; vale a regra R3 (exatamente uma origem). |
+| **ID_Local_Estoque** | *referência (Cad_Local_Estoque, Fase 1 --- Estoque)* | Copiado de Mov_Pedido_Venda_Item_Entrega_Programada.ID_Local_Estoque --- a escolha explícita do vendedor para aquela entrega, não mais um default de \"local principal da filial\" assumido pelo sistema (comportamento da Revisão 1). |
+| **Quantidade_Reservada** | *número* | Copiada de Mov_Pedido_Venda_Item_Entrega_Programada.Quantidade_Programada. |
+| **Data_Hora_Reserva** | *data/hora* | --- |
+| **Status** | *enumeração {ativa, baixada, cancelada, expirada}* | \"baixada\" quando a saída física real for lançada para esta entrega (Mov_Estoque_Movimento, Origem_Tipo=pedido_venda, seção 7) --- a partir daí a quantidade já está refletida no saldo real, e a reserva para de contar no cálculo de Disponível, pelo próprio Status, sem precisar apagar o registro. \"cancelada\" quando o pedido, o item ou a entrega programada específica é cancelada antes de faturar. Revisão 57 (documento 251; D-N640, D-N661 e D-N662): novo valor `expirada`, gravado quando a reserva de venda é encerrada por vencimento (Data_Expiracao; R12). A reserva de produção é baixada pelo movimento de "envio para a produção" e encerrada, com motivo, se a OP ou o item for cancelado ou se a OP sair da fila. |
+| **ID_Item_Ordem_Producao** | *referência (Mov_Ordem_Producao_Item), opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): A origem "produção" (empenho): o item de componente da OP que foi empenhado quando a OP entrou na fila de produção. **Exatamente uma** das duas origens preenchida: esta ou ID_Entrega_Programada (R3, regra de validação, não chave condicional). A data de necessidade é o início planejado da fase do item (ID_Fase_OP); sem início planejado, vale a data de entrada na fila. |
+| **ID_Lote** | *referência (Cad_Lote_Produto), opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): O lote reservado, quando a regra de saída do produto exige (FEFO ou FIFO, Cad_Estoque_Politica_Reposicao.Regra_Saida_Lote). A saída física deve usar o mesmo lote ou justificar a troca. |
+| **Data_Expiracao** | *data/hora, opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): Quando a reserva deixa de valer sem decisão: a de venda herda o prazo da proposta e gera aviso ao vendedor, que renova ou encerra (Status = expirada, R12); a de OP não tem prazo. |
+| **Data_Hora_Encerramento** | *data/hora, opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): Quando a reserva saiu de "ativa" (baixa, cancelamento ou vencimento). |
+| **Motivo_Encerramento** | *texto, opcional* | Revisão 57 (documento 251; D-N640, D-N661 e D-N662): Texto livre, por exemplo "OP cancelada", "cliente desistiu" ou "vencida". |
 
-  **ID_Reserva**              *identificador*                               ---
+*Revisão 57 --- campos novos: ID_Item_Ordem_Producao, ID_Lote, Data_Expiracao, Data_Hora_Encerramento, Motivo_Encerramento; campos alterados: ID_Entrega_Programada; valores de enumeração novos: Status (+expirada).*
 
-  **ID_Entrega_Programada**   *referência                                   Adicionado nesta revisão, substituindo a referência direta a
-                              (Mov_Pedido_Venda_Item_Entrega_Programada)*   Mov_Pedido_Venda_Item da Revisão 1 --- permite refletir a divisão
-                                                                            por data/quantidade/local pedida por Alberto (seção 5).
-
-  **ID_Local_Estoque**        *referência (Cad_Local_Estoque, Fase 1 ---    Copiado de
-                              Estoque)*                                     Mov_Pedido_Venda_Item_Entrega_Programada.ID_Local_Estoque --- a
-                                                                            escolha explícita do vendedor para aquela entrega, não mais um
-                                                                            default de \"local principal da filial\" assumido pelo sistema
-                                                                            (comportamento da Revisão 1).
-
-  **Quantidade_Reservada**    *número*                                      Copiada de
-                                                                            Mov_Pedido_Venda_Item_Entrega_Programada.Quantidade_Programada.
-
-  **Data_Hora_Reserva**       *data/hora*                                   ---
-
-  **Status**                  *enumeração {ativa, baixada, cancelada}*      \"baixada\" quando a saída física real for lançada para esta
-                                                                            entrega (Mov_Estoque_Movimento, Origem_Tipo=pedido_venda, seção
-                                                                            7) --- a partir daí a quantidade já está refletida no saldo real,
-                                                                            e a reserva para de contar no cálculo de Disponível, pelo próprio
-                                                                            Status, sem precisar apagar o registro. \"cancelada\" quando o
-                                                                            pedido, o item ou a entrega programada específica é cancelada
-                                                                            antes de faturar.
-  --------------------------- --------------------------------------------- -----------------------------------------------------------------
+*Revisão 57 (documento 251): `Mov_Estoque_Reserva` passa a ter duas origens, a entrega programada (venda) e o item de OP (empenho de produção); a prioridade quando o disponível não cobre tudo é venda, depois produção, depois as demais áreas (derivada, sem campo).*
 
 *Nasce junto com o pedido: a aceitação da cotação, que faz nascer o
 Mov_Pedido_Venda (seção 5), gera automaticamente uma Mov_Estoque_Reserva

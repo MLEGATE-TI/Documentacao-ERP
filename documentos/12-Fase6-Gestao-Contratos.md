@@ -7,6 +7,8 @@
 quantidade garantida apurada após o período), aditivos com dupla
 aprovação e apuração periódica gerando título a pagar/receber*
 
+*Revisão 9 --- consolidação da revisão 42 do dicionário (documentos 210 (dedução de material na base das retenções, IN RFB 2.110 e 1.234) e 207 (alíquota de IPI de 31/12/2025 das posições 8702 a 8704), com as respostas de Alberto de 11/11/2026): 1 entidades novas (anexo, seção 9); 1 entidades existentes alteradas; Cad_Gestao_Contrato com 2 campos novos (Preve_Fornecimento_Material e Planilha_Material_Integra_Contrato; documento 210).*
+
 *Revisão 8 --- consolidação da revisão 31 do dicionário (documentos 150, 157, 170 e 173, com as respostas de Alberto de 04/11/2026): 1 entidades existentes alteradas; Data_Exigibilidade em Mov_Gestao_Contrato_Apuracao, para o fato gerador da execução continuada (documento 157, Q157-1).*
 
 *Revisão 7 --- Bloco 3 da validação geral do dicionário (folha e
@@ -167,152 +169,37 @@ aditivo mais recente aplicável até a data de referência.
 registradas por Cad_Gestao_Contrato_Aditivo (seção 3), nunca editando
 estes campos diretamente.*
 
-  ------------------------------- ------------------------------------ -----------------------------------------------------
-  **Campo**                       **Tipo lógico**                      **Descrição / regra**
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Contrato** | *identificador* | --- |
+| **ID_Empresa** | *referência (Cad_Empresa, Fase 0)* | A empresa do grupo Mlegate parte do contrato. |
+| **ID_Participante** | *referência (Cad_Participante, Fase 0)* | O cliente OU o fornecedor do contrato --- mesmo cadastro único de participante usado em todo o dicionário. O papel (cliente ou fornecedor) é dado pela classe já existente do participante (Cad_Participante_Classe.Classe=cliente/fornecedor, Fase 0), nunca por um campo de papel próprio nesta entidade. |
+| **Objeto** | *texto* | Descrição do objeto contratual --- texto livre. |
+| **Data_Inicio** | *data* | --- |
+| **Data_Fim** | *data* | A vigência original contratada --- pode ser estendida por aditivo (Novo_Data_Fim, seção 3), sem editar este campo. |
+| **Modelo_Valor** | *enumeração {fixo, fixo_mais_variavel, quantidade_garantida}* | Estrutural: decide quais dos campos de valor abaixo se aplicam. fixo: valor fechado por período. fixo_mais_variavel: uma parte fixa mais uma parte calculada por fórmula livre. quantidade_garantida: cobrança apurada depois do período, sobre o maior valor entre o uso real e um mínimo garantido. |
+| **Valor_Fixo** | *número, opcional* | Preenchido quando Modelo_Valor=fixo ou fixo_mais_variavel --- o valor fixo cobrado a cada período. |
+| **Formula_Variavel** | *texto livre, opcional* | Preenchido quando Modelo_Valor=fixo_mais_variavel --- reaproveita o MESMO motor de fórmula livre já usado em Cad_Rh_Verba.Formula (Fase 5 --- Folha & RH, seção 5), em vez de um motor de cálculo próprio deste módulo. Para contrato por hora corrida, a fórmula referencia Mov_Apontamento_Tempo.Horas_Efetivas (Produção, Fase 1, seção 4), somando os apontamentos cujo ID_Contrato aponta para este contrato no período apurado. |
+| **Quantidade_Garantida** | *número, opcional* | Preenchida junto com Valor_Unitario quando Modelo_Valor=quantidade_garantida --- o mínimo de quantidade garantido por período, cobrado mesmo que o uso real fique abaixo dele. |
+| **Valor_Unitario** | *número, opcional* | Preenchido junto com Quantidade_Garantida quando Modelo_Valor=quantidade_garantida --- o valor unitário aplicado tanto ao mínimo garantido quanto à diferença apurada acima dele. |
+| **ID_Serie_Cotacao_Reajuste** | *referência (Cad_Serie_Cotacao, Fase 0 seção 15, opcional)* | O índice financeiro de reajuste do contrato, sempre com Cad_Serie_Cotacao.Tipo=indice_financeiro --- reaproveita a série de índices/cotações da Fase 0 em vez de um cadastro de índice próprio deste módulo. Vazio para contrato sem cláusula de reajuste. |
+| **Periodicidade_Reajuste** | *enumeração {mensal, anual}, opcional* | Preenchida junto com ID_Serie_Cotacao_Reajuste --- a periodicidade em que o reajuste pelo índice é aplicado. Enumeração fechada dentro da própria entidade, não domínio aberto: conjunto pequeno e estável, mesmo critério já usado para outras enumerações estruturais deste dicionário (ex.: Periodicidade_Taxa, Contas a Pagar/Receber). |
+| **Status** | *enumeração {rascunho, em_aprovacao, vigente, suspenso, encerrado, cancelado}* | Estrutural --- armazenado, e não puramente derivado de Data_Fim, porque um contrato pode ser encerrado ou cancelado antes do prazo (rescisão, distrato), o que Data_Fim sozinha não capturaria. Harmonizado nesta Revisão 3 com o enum que existia em Compras (Cad_Contrato_Fornecimento, agora aposentado): \"em_aprovacao\" enquanto a instância de ID_Instancia_Aprovacao (abaixo) está pendente; \"suspenso\" cobre paralisação temporária do contrato sem encerrá-lo. |
+| **Modelo_Faturamento** | *enumeração {periodico, por_entregavel}* | NOVO na Revisão 2 --- periodico (padrão) usa a apuração periódica já existente (Mov_Gestao_Contrato_Apuracao, seção 4.1); por_entregavel usa a nova entidade Mov_Gestao_Contrato_Faturamento_Entregavel (seção 5.1), disparada quando um entregável do projeto (Mov_Ordem_Producao_Entregavel, Produção, Fase 1) é concluído --- confirmado por Alberto: \"sim tem contratos que são faturamento periódico e outros por entregáveis\". |
+| **ID_Filial** | *referência (Cad_Filial, Fase 0), opcional* | NOVO na Revisão 3 --- migrado do módulo Compras (Cad_Contrato_Fornecimento, agora aposentado, revisão 12 daquele documento). Generalizado na Revisão 4: a filial responsável/executora do contrato --- vale nas duas posições (Contratante: filial que faz a aquisição; Contratado: filial que executa o serviço prestado, ex. uma obra de construção civil, ver Cad_Obra, Fase 0). |
+| **Forma_Compromisso** | *enumeração {integral, mensal}, opcional* | NOVO na Revisão 3 --- idem, migrado de Compras --- só relevante na posição Contratante. \"integral\" gera um único compromisso orçamentário (Mov_Compromisso_Orcamentario, Planejamento & Orçamento) pelo valor total do período vigente do contrato; \"mensal\" gera um compromisso por mês, conforme ele ocorre. Confirmado por Alberto: \"no caso de venda não tem compromisso orçamentario só na aquisição\" --- na posição Contratado este campo fica vazio e nenhum compromisso é gerado. |
+| **ID_Instancia_Aprovacao** | *referência (Mov_Aprovacao_Instancia, Fase 0 seção 9), opcional* | NOVO na Revisão 3 --- a aprovação do CONTRATO EM SI (não só do aditivo, que já tinha a sua própria desde a Revisão 1, seção 3): Origem_Tipo=contrato_aquisicao quando o contrato está na posição Contratante (alçada por valor comprometido/orçamento, herdando o espírito da régua que já aprova pedido de compra em Compras) ou Origem_Tipo=contrato_venda quando Contratado (alçada por desconto/condição comercial em relação à tabela, herdando o espírito da régua que já aprova cotação de venda em CRM & Vendas, Origem_Tipo=cotacao_venda). O papel (Contratante/Contratado) é sempre derivado da classe do participante (acima), nunca um campo de papel próprio nesta entidade. |
+| **Forma_Assinatura** | *enumeração {manuscrita, eletronica_simples, eletronica_avancada, eletronica_qualificada_icp_brasil, nao_assinado}* | Lei 14.063/2020. Decide se o contrato é título executivo sem testemunhas (Código de Processo Civil, art. 784, III e §4º). |
+| **Data_Assinatura** | *data, opcional* | Adicionado na revisão 7 (Bloco 3). |
+| **Quantidade_Testemunhas** | *número, opcional* | Dispensadas quando a assinatura é eletrônica verificada. |
+| **Renovacao_Automatica** | *booleano* | Adicionado na revisão 7 (Bloco 3). |
+| **Prazo_Aviso_Denuncia_Dias** | *número, opcional* | Antecedência com que uma das partes avisa que não renova ou denuncia o contrato. |
+| **ID_Municipio_Foro** | *referência (Cad_Municipio, opcional)* | Foro eleito. |
+| **Clausula_Arbitral** | *booleano* | Adicionado na revisão 7 (Bloco 3). |
+| **Preve_Fornecimento_Material** | *booleano* | Revisão 42 (documento 210, seção 5.3; D-N561): O contrato prevê que a contratada fornece material, equipamento ou gênero alimentício (IN 2.110, arts. 116 a 119; IN 1.234, art. 2º, § 7º, I). Vale mesmo sem a lista de `Cad_Gestao_Contrato_Material` (art. 117: previsão sem valor). Padrão falso. |
+| **Planilha_Material_Integra_Contrato** | *booleano* | Revisão 42 (documento 210, seção 5.3; D-N561): O contrato diz, em cláusula expressa, que a planilha de materiais o integra (IN 2.110, art. 116, § 3º). Padrão falso. |
 
-  **ID_Contrato**                 *identificador*                      ---
-
-  **ID_Empresa**                  *referência (Cad_Empresa, Fase 0)*   A empresa do grupo Mlegate parte do contrato.
-
-  **ID_Participante**             *referência (Cad_Participante, Fase  O cliente OU o fornecedor do contrato --- mesmo
-                                  0)*                                  cadastro único de participante usado em todo o
-                                                                       dicionário. O papel (cliente ou fornecedor) é dado
-                                                                       pela classe já existente do participante
-                                                                       (Cad_Participante_Classe.Classe=cliente/fornecedor,
-                                                                       Fase 0), nunca por um campo de papel próprio nesta
-                                                                       entidade.
-
-  **Objeto**                      *texto*                              Descrição do objeto contratual --- texto livre.
-
-  **Data_Inicio**                 *data*                               ---
-
-  **Data_Fim**                    *data*                               A vigência original contratada --- pode ser estendida
-                                                                       por aditivo (Novo_Data_Fim, seção 3), sem editar este
-                                                                       campo.
-
-  **Modelo_Valor**                *enumeração {fixo,                   Estrutural: decide quais dos campos de valor abaixo
-                                  fixo_mais_variavel,                  se aplicam. fixo: valor fechado por período.
-                                  quantidade_garantida}*               fixo_mais_variavel: uma parte fixa mais uma parte
-                                                                       calculada por fórmula livre. quantidade_garantida:
-                                                                       cobrança apurada depois do período, sobre o maior
-                                                                       valor entre o uso real e um mínimo garantido.
-
-  **Valor_Fixo**                  *número, opcional*                   Preenchido quando Modelo_Valor=fixo ou
-                                                                       fixo_mais_variavel --- o valor fixo cobrado a cada
-                                                                       período.
-
-  **Formula_Variavel**            *texto livre, opcional*              Preenchido quando Modelo_Valor=fixo_mais_variavel ---
-                                                                       reaproveita o MESMO motor de fórmula livre já usado
-                                                                       em Cad_Rh_Verba.Formula (Fase 5 --- Folha & RH, seção
-                                                                       5), em vez de um motor de cálculo próprio deste
-                                                                       módulo. Para contrato por hora corrida, a fórmula
-                                                                       referencia Mov_Apontamento_Tempo.Horas_Efetivas
-                                                                       (Produção, Fase 1, seção 4), somando os apontamentos
-                                                                       cujo ID_Contrato aponta para este contrato no período
-                                                                       apurado.
-
-  **Quantidade_Garantida**        *número, opcional*                   Preenchida junto com Valor_Unitario quando
-                                                                       Modelo_Valor=quantidade_garantida --- o mínimo de
-                                                                       quantidade garantido por período, cobrado mesmo que o
-                                                                       uso real fique abaixo dele.
-
-  **Valor_Unitario**              *número, opcional*                   Preenchido junto com Quantidade_Garantida quando
-                                                                       Modelo_Valor=quantidade_garantida --- o valor
-                                                                       unitário aplicado tanto ao mínimo garantido quanto à
-                                                                       diferença apurada acima dele.
-
-  **ID_Serie_Cotacao_Reajuste**   *referência (Cad_Serie_Cotacao, Fase O índice financeiro de reajuste do contrato, sempre
-                                  0 seção 15, opcional)*               com Cad_Serie_Cotacao.Tipo=indice_financeiro ---
-                                                                       reaproveita a série de índices/cotações da Fase 0 em
-                                                                       vez de um cadastro de índice próprio deste módulo.
-                                                                       Vazio para contrato sem cláusula de reajuste.
-
-  **Periodicidade_Reajuste**      *enumeração {mensal, anual},         Preenchida junto com ID_Serie_Cotacao_Reajuste --- a
-                                  opcional*                            periodicidade em que o reajuste pelo índice é
-                                                                       aplicado. Enumeração fechada dentro da própria
-                                                                       entidade, não domínio aberto: conjunto pequeno e
-                                                                       estável, mesmo critério já usado para outras
-                                                                       enumerações estruturais deste dicionário (ex.:
-                                                                       Periodicidade_Taxa, Contas a Pagar/Receber).
-
-  **Status**                      *enumeração {rascunho, em_aprovacao, Estrutural --- armazenado, e não puramente derivado
-                                  vigente, suspenso, encerrado,        de Data_Fim, porque um contrato pode ser encerrado ou
-                                  cancelado}*                          cancelado antes do prazo (rescisão, distrato), o que
-                                                                       Data_Fim sozinha não capturaria. Harmonizado nesta
-                                                                       Revisão 3 com o enum que existia em Compras
-                                                                       (Cad_Contrato_Fornecimento, agora aposentado):
-                                                                       \"em_aprovacao\" enquanto a instância de
-                                                                       ID_Instancia_Aprovacao (abaixo) está pendente;
-                                                                       \"suspenso\" cobre paralisação temporária do contrato
-                                                                       sem encerrá-lo.
-
-  **Modelo_Faturamento**          *enumeração {periodico,              NOVO na Revisão 2 --- periodico (padrão) usa a
-                                  por_entregavel}*                     apuração periódica já existente
-                                                                       (Mov_Gestao_Contrato_Apuracao, seção 4.1);
-                                                                       por_entregavel usa a nova entidade
-                                                                       Mov_Gestao_Contrato_Faturamento_Entregavel (seção
-                                                                       5.1), disparada quando um entregável do projeto
-                                                                       (Mov_Ordem_Producao_Entregavel, Produção, Fase 1) é
-                                                                       concluído --- confirmado por Alberto: \"sim tem
-                                                                       contratos que são faturamento periódico e outros por
-                                                                       entregáveis\".
-
-  **ID_Filial**                   *referência (Cad_Filial, Fase 0),    NOVO na Revisão 3 --- migrado do módulo Compras
-                                  opcional*                            (Cad_Contrato_Fornecimento, agora aposentado, revisão
-                                                                       12 daquele documento). Generalizado na Revisão 4: a
-                                                                       filial responsável/executora do contrato --- vale nas
-                                                                       duas posições (Contratante: filial que faz a
-                                                                       aquisição; Contratado: filial que executa o serviço
-                                                                       prestado, ex. uma obra de construção civil, ver
-                                                                       Cad_Obra, Fase 0).
-
-  **Forma_Compromisso**           *enumeração {integral, mensal},      NOVO na Revisão 3 --- idem, migrado de Compras --- só
-                                  opcional*                            relevante na posição Contratante. \"integral\" gera
-                                                                       um único compromisso orçamentário
-                                                                       (Mov_Compromisso_Orcamentario, Planejamento &
-                                                                       Orçamento) pelo valor total do período vigente do
-                                                                       contrato; \"mensal\" gera um compromisso por mês,
-                                                                       conforme ele ocorre. Confirmado por Alberto: \"no
-                                                                       caso de venda não tem compromisso orçamentario só na
-                                                                       aquisição\" --- na posição Contratado este campo fica
-                                                                       vazio e nenhum compromisso é gerado.
-
-  **ID_Instancia_Aprovacao**      *referência                          NOVO na Revisão 3 --- a aprovação do CONTRATO EM SI
-                                  (Mov_Aprovacao_Instancia, Fase 0     (não só do aditivo, que já tinha a sua própria desde
-                                  seção 9), opcional*                  a Revisão 1, seção 3): Origem_Tipo=contrato_aquisicao
-                                                                       quando o contrato está na posição Contratante (alçada
-                                                                       por valor comprometido/orçamento, herdando o espírito
-                                                                       da régua que já aprova pedido de compra em Compras)
-                                                                       ou Origem_Tipo=contrato_venda quando Contratado
-                                                                       (alçada por desconto/condição comercial em relação à
-                                                                       tabela, herdando o espírito da régua que já aprova
-                                                                       cotação de venda em CRM & Vendas,
-                                                                       Origem_Tipo=cotacao_venda). O papel
-                                                                       (Contratante/Contratado) é sempre derivado da classe
-                                                                       do participante (acima), nunca um campo de papel
-                                                                       próprio nesta entidade.
-
-  **Forma_Assinatura**            *enumeração {manuscrita,             Lei 14.063/2020. Decide se o contrato é título
-                                  eletronica_simples,                  executivo sem testemunhas (Código de Processo Civil,
-                                  eletronica_avancada,                 art. 784, III e §4º).
-                                  eletronica_qualificada_icp_brasil,   
-                                  nao_assinado}*                       
-
-  **Data_Assinatura**             *data, opcional*                     Adicionado na revisão 7 (Bloco 3).
-
-  **Quantidade_Testemunhas**      *número, opcional*                   Dispensadas quando a assinatura é eletrônica
-                                                                       verificada.
-
-  **Renovacao_Automatica**        *booleano*                           Adicionado na revisão 7 (Bloco 3).
-
-  **Prazo_Aviso_Denuncia_Dias**   *número, opcional*                   Antecedência com que uma das partes avisa que não
-                                                                       renova ou denuncia o contrato.
-
-  **ID_Municipio_Foro**           *referência (Cad_Municipio,          Foro eleito.
-                                  opcional)*                           
-
-  **Clausula_Arbitral**           *booleano*                           Adicionado na revisão 7 (Bloco 3).
-  ------------------------------- ------------------------------------ -----------------------------------------------------
+*Revisão 42 --- campos novos: Preve_Fornecimento_Material, Planilha_Material_Integra_Contrato.*
 
 Garantias e penalidades do contrato (revisão 7)
 
@@ -1329,3 +1216,39 @@ antes de consolidar.*
 *Revisão 7 --- Bloco 3 consolidado junto com a Fase 0 (revisão 45). O
 prazo de guarda dos contratos (10 anos a partir do encerramento, a
 confirmar pelo jurídico) está em Cad_Documento_Classe na Fase 0.*
+
+
+
+9\. Anexo --- Material previsto no contrato (documento 210)
+
+Revisão 42 do dicionário (consolidação de 11/11/2026): 1 entidade nova neste módulo (documento 210, seção 5.2; D-N561), a lista de material, equipamento e gênero alimentício que o contrato prevê, com vigência (o aditivo muda a lista pela vigência), e 2 campos novos em Cad_Gestao_Contrato (seção 5.3 do documento 210).
+
+9.1. Material, equipamento e gênero alimentício na base das retenções (documento 210, seção 5.2)
+
+Cad_Gestao_Contrato_Material
+
+Revisão 42 (documento 210, seção 5.2; D-N561: Q210-1 a Q210-12): O que o contrato diz que a contratada fornece junto com o serviço: material, equipamento ou gênero alimentício, com ou sem valor, na cláusula ou na planilha. Serve às duas pontas: a empresa que **presta** o serviço (e precisa discriminar na nota para reduzir a base) e a que **toma** (e retém). Tem vigência porque o aditivo muda a lista.
+
+*Vigência: sim.*
+
+| **Campo** | **Tipo lógico** | **Descrição / regra** |
+|--------------------|----------------------------|----------------------------------------|
+| **ID_Contrato_Material** | *identificador* | --- |
+| **ID_Contrato_Material_Versao** | *identificador da versão* | Chave primária da versão (tabela física Cad_Gestao_Contrato_Material_Versao). ID_Contrato_Material é a identidade, única e referenciada pelas outras tabelas; cada versão guarda a sua janela de vigência --- Fase 0, seção 2. |
+| **ID_Contrato** | *referência (Cad_Gestao_Contrato) --- identidade* | O contrato que prevê o fornecimento. |
+| **Numero_Linha** | *número --- identidade* | A linha na cláusula ou na planilha do contrato. |
+| **Tipo_Material** | *enumeração {material, equipamento, genero_alimenticio}* | O que a contratada fornece. O gênero alimentício tem o tratamento do material (SC Cosit 220/2026); o valor separado serve para rastrear e relatar. |
+| **ID_Produto_Servico** | *referência (Cad_Produto_Servico), opcional* | O cadastro do bem fornecido, quando houver. |
+| **Descricao** | *texto* | O que o contrato diz que é fornecido. |
+| **Forma_Previsao** | *enumeração {com_valor, sem_valor}* | `com_valor`: o contrato ou a planilha traz o valor (art. 116). `sem_valor`: o contrato só prevê o fornecimento (art. 117). |
+| **Origem_Previsao** | *enumeração {clausula, planilha}* | Onde a previsão está. A planilha só vale se `Cad_Gestao_Contrato.Planilha_Material_Integra_Contrato` for verdadeiro (art. 116, § 3º). |
+| **Valor_Previsto** | *número, opcional* | O valor do contrato ou da planilha. Obrigatório quando `Forma_Previsao` é `com_valor`. |
+| **Base_Valor_Previsto** | *enumeração {por_mes, por_unidade, total_do_contrato}, opcional* | A que o valor se refere. Preenchido junto com `Valor_Previsto`. |
+| **Eh_Essencial_Ao_Servico** | *booleano* | O material é essencial à prestação do serviço (SC Cosit 220/2026; **a palavra "essenciais" não está no texto do § 7º, I da IN 1.234**). O usuário marca; o ERP não decide. Padrão falso. |
+| **Eh_Equipamento_Manual** | *booleano* | Equipamento manual não sai da base nos arts. 116 e 117. Só se aplica a `Tipo_Material` = `equipamento`. Padrão falso. |
+| **Eh_Inerente_Ao_Servico** | *booleano* | O uso do equipamento é inerente à execução do serviço (art. 118). Padrão falso. |
+| **ID_Aditivo_Origem** | *referência (Cad_Gestao_Contrato_Aditivo), opcional* | O aditivo que criou ou mudou a linha. |
+| **Observacao** | *texto, opcional* | A cláusula, a página da planilha ou o que for útil. |
+| **Vigencia_Inicio** | *data* | Primeiro dia em que esta versão vale. |
+| **Vigencia_Fim** | *data* | Último dia em que esta versão vale (inclusive). Sempre preenchida: 31/12/9999 quando o fim é indefinido (versão vigente) --- convenção da Fase 0, seção 2. |
+| **Motivo_Vigencia** | *texto, opcional* | Por que esta versão foi criada. |
